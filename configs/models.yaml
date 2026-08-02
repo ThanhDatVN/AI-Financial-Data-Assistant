@@ -1,28 +1,28 @@
 models:
   nlu:
-    id: Qwen/Qwen2.5-7B-Instruct-AWQ
-    base_id: Qwen/Qwen2.5-7B-Instruct
-    revision: null  # compliance blocker: resolve and pin before a final run
-    parameters: 7.61B
+    id: Qwen/Qwen3-8B-AWQ
+    base_id: Qwen/Qwen3-8B
+    revision: 4da05a8edb55c6046cce958586c33b61da07bb79
+    parameters: 8.2B
     quantization: AWQ-4bit
     license: apache-2.0
     released_before_cutoff: true
   ir:
-    id: Qwen/Qwen2.5-Coder-7B-Instruct-AWQ
-    base_id: Qwen/Qwen2.5-Coder-7B-Instruct
-    revision: null  # compliance blocker: resolve and pin before a final run
-    parameters: 7.61B
+    id: Qwen/Qwen3-8B-AWQ
+    base_id: Qwen/Qwen3-8B
+    revision: 4da05a8edb55c6046cce958586c33b61da07bb79
+    parameters: 8.2B
     quantization: AWQ-4bit
     license: apache-2.0
     released_before_cutoff: true
   embedding:
     id: BAAI/bge-m3
-    revision: null
+    revision: 5617a9f61b028005a4858fdac845db406aefb181
     parameters: 568M
     license: mit
   reranker:
     id: BAAI/bge-reranker-v2-m3
-    revision: null
+    revision: 953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e
     parameters: 568M
     license: apache-2.0
 

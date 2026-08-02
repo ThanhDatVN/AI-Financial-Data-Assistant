@@ -13,6 +13,24 @@ def test_target_unit_prefers_longest_phrase() -> None:
     assert detect_target_unit("Có bao nhiêu triệu cổ phiếu?").name == "MILLION_SHARES"
 
 
+def test_target_unit_uses_answer_clause_instead_of_filter_percent() -> None:
+    cases = {
+        "Các công ty có biên lợi nhuận trên 10%, tổng doanh thu là bao nhiêu nghìn tỷ đồng?": (
+            "TRILLION_VND"
+        ),
+        "Nếu doanh thu giảm 10%, có bao nhiêu đơn vị có hệ số dưới 1,5 lần?": "COUNT",
+        "Nếu EBIT giảm 15%, hệ số thanh toán lãi vay là bao nhiêu lần?": "RATIO",
+        "Nếu VND biến động 5%, mức giảm lợi nhuận là bao nhiêu tỷ đồng?": "BILLION_VND",
+        "Năm nào có tỷ trọng chi phí lãi (%) cao nhất?": "YEAR",
+        "Biên lợi nhuận sau khi doanh thu giảm 5% là bao nhiêu phần trăm?": "PERCENT",
+        "Tỷ lệ tiền gửi bằng VND trên tổng tiền gửi là bao nhiêu %?": "PERCENT",
+        "Tính tăng trưởng (%) của số dư bằng VND giữa hai năm.": "PERCENT",
+        "Cổ phiếu ABC có số năm dòng tiền âm là bao nhiêu trong giai đoạn 2020-2024?": ("COUNT"),
+    }
+    for question, expected in cases.items():
+        assert detect_target_unit(question).name == expected
+
+
 def test_scope_is_not_defaulted_when_unspecified() -> None:
     assert detect_scope_intent("Tổng tài sản của VNM năm 2024?").scope is None
     assert detect_scope_intent("Tổng tài sản công ty mẹ VNM năm 2024?").scope == "separate"

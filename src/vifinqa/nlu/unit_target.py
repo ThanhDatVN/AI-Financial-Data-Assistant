@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from vifinqa.parsing.normalize import ascii_compact
+from vifinqa.parsing.normalize import ascii_compact, ascii_words
 
 
 @dataclass(frozen=True, slots=True)
@@ -26,21 +26,31 @@ _TARGET_PATTERNS: tuple[tuple[str, float, tuple[str, ...]], ...] = (
 )
 
 
-def detect_target_unit(question: str) -> TargetUnit:
-    compact = ascii_compact(question)
-    if "%" in question:
-        return TargetUnit("PERCENT", 1.0, 1.0)
+def _match_explicit_unit(compact: str) -> TargetUnit | None:
     for name, divisor, patterns in _TARGET_PATTERNS:
         if any(pattern in compact for pattern in patterns):
             return TargetUnit(name, divisor, 1.0)
+    return None
+
+
+def _target_tail(question: str) -> str | None:
+    normalized = ascii_words(question)
+    marker = "bao nhieu"
+    marker_index = normalized.rfind(marker)
+    return ascii_compact(normalized[marker_index:]) if marker_index >= 0 else None
+
+
+def _detect_semantic_unit(compact: str) -> TargetUnit | None:
     if "namnao" in compact:
         return TargetUnit("YEAR", 1.0, 0.98)
-    if any(marker in compact for marker in ("cophieu", "cophan")):
+    if any(marker in compact for marker in ("baonhieucophieu", "baonhieucophan")):
         return TargetUnit("SHARES", 1.0, 0.98)
     count_markers = (
         "baonhieucongty",
         "baonhieudoanhnghiep",
         "baonhieunganhang",
+        "baonhieudonvi",
+        "baonhieuma",
         "baonhieunam",
         "tongsocongty",
         "sonam",
@@ -54,13 +64,37 @@ def detect_target_unit(question: str) -> TargetUnit:
         "maylan",
         "baonhieuvong",
         "gapbaonhieu",
-        "tinh tyle",
         "tinhtyle",
-        "tinh tyso",
         "tinhtyso",
         "tyletrungbinh",
         "tytrong",
     )
     if any(marker in compact for marker in ratio_markers):
         return TargetUnit("RATIO", 1.0, 0.95)
+    return None
+
+
+def detect_target_unit(question: str) -> TargetUnit:
+    compact = ascii_compact(question)
+    tail = _target_tail(question)
+    if tail is not None:
+        explicit_tail = _match_explicit_unit(tail)
+        if explicit_tail is not None:
+            return explicit_tail
+        semantic_tail = _detect_semantic_unit(tail)
+        if semantic_tail is not None:
+            return semantic_tail
+
+    semantic = _detect_semantic_unit(compact)
+    if semantic is not None and semantic.name == "YEAR":
+        return semantic
+    if "%" in question:
+        return TargetUnit("PERCENT", 1.0, 1.0)
+    explicit = _match_explicit_unit(compact)
+    if explicit is not None:
+        return explicit
+    if semantic is not None:
+        return semantic
+    if any(marker in compact for marker in ("cophieu", "cophan")):
+        return TargetUnit("SHARES", 1.0, 0.98)
     return TargetUnit("UNKNOWN", 1.0, 0.0)

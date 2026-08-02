@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -20,6 +21,7 @@ from vifinqa.generation.prompt import CandidateSchema, build_program_prompt  # n
 from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
 from vifinqa.programs.grounding import prepare_program, validate_query_coverage  # noqa: E402
+from vifinqa.programs.ir import Dimension  # noqa: E402
 from vifinqa.programs.serde import PROGRAM_JSON_SCHEMA, expression_from_dict  # noqa: E402
 
 SEED = 20260802
@@ -33,6 +35,12 @@ def _load_jsonl(path: Path) -> list[dict[str, object]]:
 def _append_jsonl(path: Path, row: dict[str, object]) -> None:
     with path.open("a", encoding="utf-8", newline="\n") as handle:
         handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
+def _write_jsonl(path: Path, rows: list[dict[str, object]]) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        for row in rows:
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
 def _as_int(value: object, *, field: str) -> int:
@@ -64,6 +72,29 @@ def _candidate_limit(row: dict[str, object], *, minimum: int) -> int:
     return max(minimum, max(1, len(tickers)) * max(1, len(years)))
 
 
+def _select_rows(
+    rows: list[dict[str, object]],
+    *,
+    question_ids: list[int] | None,
+    limit: int | None,
+) -> list[dict[str, object]]:
+    row_ids = [_as_int(row["id"], field="id") for row in rows]
+    if len(row_ids) != len(set(row_ids)):
+        raise ValueError("Retrieval rows must have unique IDs")
+    selected = rows
+    if question_ids is not None:
+        if len(question_ids) != len(set(question_ids)):
+            raise ValueError("--id values must be unique")
+        rows_by_id = dict(zip(row_ids, rows, strict=True))
+        missing = [question_id for question_id in question_ids if question_id not in rows_by_id]
+        if missing:
+            raise ValueError(f"Unknown question IDs: {missing}")
+        selected = [rows_by_id[question_id] for question_id in question_ids]
+    if limit is not None:
+        selected = selected[:limit]
+    return selected
+
+
 def _sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
@@ -82,6 +113,8 @@ def _fingerprint(
     max_tokens: int,
     execution_timeout: float,
     memory_limit_mb: int | None,
+    thinking_mode: str,
+    max_attempts: int,
 ) -> dict[str, object]:
     schema_bytes = json.dumps(PROGRAM_JSON_SCHEMA, sort_keys=True).encode()
     return {
@@ -94,6 +127,8 @@ def _fingerprint(
         "max_tokens": max_tokens,
         "execution_timeout": execution_timeout,
         "memory_limit_mb": memory_limit_mb,
+        "thinking_mode": thinking_mode,
+        "max_attempts": max_attempts,
         "seed": SEED,
     }
 
@@ -108,8 +143,14 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=ROOT / "outputs/generation")
     parser.add_argument("--base-url", default="http://127.0.0.1:8000/v1")
     parser.add_argument("--api-key-env", default="VLLM_API_KEY")
-    parser.add_argument("--model", default="Qwen/Qwen2.5-Coder-7B-Instruct-AWQ")
+    parser.add_argument("--model", default="Qwen/Qwen3-8B-AWQ")
     parser.add_argument("--model-revision")
+    parser.add_argument(
+        "--thinking-mode",
+        choices=("disabled", "auto"),
+        default="disabled",
+        help="Disable Qwen3 thinking for deterministic schema-constrained generation",
+    )
     parser.add_argument(
         "--final-run",
         action="store_true",
@@ -122,20 +163,41 @@ def main() -> None:
         help="Minimum schemas per question; route coverage can increase this value",
     )
     parser.add_argument("--max-tokens", type=int, default=1024)
+    parser.add_argument(
+        "--max-attempts",
+        type=int,
+        default=3,
+        help="Retry failed generation/grounding/execution with validator feedback",
+    )
     parser.add_argument("--execution-timeout", type=float, default=10.0)
     parser.add_argument("--memory-limit-mb", type=int)
     parser.add_argument("--limit", type=int)
+    parser.add_argument(
+        "--id",
+        dest="question_ids",
+        action="append",
+        type=int,
+        help="Generate only this question ID; repeat the flag for a fixed smoke set",
+    )
     args = parser.parse_args()
-    if args.final_run and not args.model_revision:
-        parser.error("--final-run requires --model-revision with a pre-cutoff commit SHA")
+    if args.final_run and (
+        not args.model_revision or re.fullmatch(r"[0-9a-fA-F]{40}", args.model_revision) is None
+    ):
+        parser.error("--final-run requires --model-revision with a full 40-character commit SHA")
     if args.candidate_tables <= 0 or args.max_tokens <= 0 or args.execution_timeout <= 0:
         parser.error("candidate tables, max tokens, and execution timeout must be positive")
     if args.memory_limit_mb is not None and args.memory_limit_mb <= 0:
         parser.error("--memory-limit-mb must be positive")
+    if args.limit is not None and args.limit <= 0:
+        parser.error("--limit must be positive")
+    if args.max_attempts <= 0:
+        parser.error("--max-attempts must be positive")
 
-    rows = _load_jsonl(args.retrieval)
-    if args.limit is not None:
-        rows = rows[: args.limit]
+    rows = _select_rows(
+        _load_jsonl(args.retrieval),
+        question_ids=args.question_ids,
+        limit=args.limit,
+    )
     candidate_refs = {
         ref
         for row in rows
@@ -149,6 +211,7 @@ def main() -> None:
     data_dir.mkdir(exist_ok=True)
     checkpoint = args.output / "predictions.jsonl"
     errors = args.output / "errors.jsonl"
+    error_attempts = args.output / "error_attempts.jsonl"
     traces = args.output / "program_traces.jsonl"
     metadata_path = args.output / "run_metadata.json"
     fingerprint = _fingerprint(
@@ -160,6 +223,8 @@ def main() -> None:
         max_tokens=args.max_tokens,
         execution_timeout=args.execution_timeout,
         memory_limit_mb=args.memory_limit_mb,
+        thinking_mode=args.thinking_mode,
+        max_attempts=args.max_attempts,
     )
     if metadata_path.exists():
         existing = json.loads(metadata_path.read_text(encoding="utf-8"))
@@ -177,6 +242,11 @@ def main() -> None:
         if checkpoint.exists()
         else set()
     )
+    unresolved_errors = (
+        {_as_int(row["id"], field="id"): row for row in _load_jsonl(errors)}
+        if errors.exists()
+        else {}
+    )
     trace_rows = _load_jsonl(traces) if traces.exists() else []
     trace_ids = [_as_int(row["id"], field="id") for row in trace_rows]
     if len(trace_ids) != len(set(trace_ids)) or set(trace_ids) != completed:
@@ -191,6 +261,7 @@ def main() -> None:
         if question_id in completed:
             continue
         candidate_limit = args.candidate_tables
+        attempt_failures: list[dict[str, object]] = []
         try:
             candidate_limit = _candidate_limit(row, minimum=args.candidate_tables)
             refs = _as_str_list(row["fused"], field="fused")[:candidate_limit]
@@ -217,58 +288,100 @@ def main() -> None:
                 target_unit=str(spec["target_unit"]),
                 target_divisor=float(spec["target_divisor"]),
             )
-            response = client.chat.completions.create(
-                model=args.model,
-                messages=[
-                    {"role": "system", "content": system},
-                    {"role": "user", "content": user},
-                ],
-                temperature=0.0,
-                seed=SEED,
-                max_tokens=args.max_tokens,
-                response_format={
-                    "type": "json_schema",
-                    "json_schema": {
-                        "name": "pandas_program",
-                        "strict": True,
-                        "schema": PROGRAM_JSON_SCHEMA,
-                    },
-                },
-            )
-            content = response.choices[0].message.content
-            if not content:
-                raise ValueError("Model returned empty content")
-            program = json.loads(content)
-            if not isinstance(program, dict):
-                raise ValueError("Model output must be an object")
-            selected = _as_str_list(program.get("selected_variables"), field="selected_variables")
-            if any(variable not in frames for variable in selected):
-                raise ValueError(f"Model selected an unknown variable: {selected}")
-            selected_frames = {variable: frames[variable] for variable in selected}
-            expression = expression_from_dict(program.get("program"))
             required_tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
             required_years = _as_int_list(spec.get("years"), field="query_spec.years")
-            prepared, inferred_dimension = prepare_program(
-                expression,
-                selected_variables=selected,
-                frames=selected_frames,
-                target_unit=str(spec["target_unit"]),
-                target_divisor=float(spec["target_divisor"]),
-            )
-            validate_query_coverage(
-                expression,
-                frames=selected_frames,
-                required_tickers=required_tickers,
-                required_years=required_years,
-            )
-            query = compile_expression(prepared)
-            answer = execute_expression_isolated(
-                query,
-                selected_frames,
-                timeout_seconds=args.execution_timeout,
-                memory_limit_mb=args.memory_limit_mb,
-            )
-            selected_refs = [table_refs[variable] for variable in selected]
+            successful: (
+                tuple[dict[str, object], list[str], Dimension, str, float, list[str]] | None
+            ) = None
+            for attempt in range(1, args.max_attempts + 1):
+                attempt_user = user
+                if attempt_failures:
+                    previous = attempt_failures[-1]
+                    feedback = f"{previous['error_type']}: {previous['error']}"[:800]
+                    attempt_user += (
+                        "\n\nThe previous candidate failed deterministic validation. "
+                        f"Correct it and return a complete replacement JSON. Feedback: {feedback}"
+                    )
+                try:
+                    extra_body: dict[str, object] = {"top_k": 20}
+                    if args.thinking_mode == "disabled":
+                        extra_body["chat_template_kwargs"] = {"enable_thinking": False}
+                    response = client.chat.completions.create(
+                        model=args.model,
+                        messages=[
+                            {"role": "system", "content": system},
+                            {"role": "user", "content": attempt_user},
+                        ],
+                        temperature=0.0 if attempt == 1 else 0.7,
+                        top_p=1.0 if attempt == 1 else 0.8,
+                        seed=SEED + attempt - 1,
+                        max_tokens=args.max_tokens,
+                        response_format={
+                            "type": "json_schema",
+                            "json_schema": {
+                                "name": "pandas_program",
+                                "strict": True,
+                                "schema": PROGRAM_JSON_SCHEMA,
+                            },
+                        },
+                        extra_body=extra_body,
+                    )
+                    content = response.choices[0].message.content
+                    if not content:
+                        raise ValueError("Model returned empty content")
+                    program = json.loads(content)
+                    if not isinstance(program, dict):
+                        raise ValueError("Model output must be an object")
+                    selected = _as_str_list(
+                        program.get("selected_variables"), field="selected_variables"
+                    )
+                    if any(variable not in frames for variable in selected):
+                        raise ValueError(f"Model selected an unknown variable: {selected}")
+                    selected_frames = {variable: frames[variable] for variable in selected}
+                    expression = expression_from_dict(program.get("program"))
+                    prepared, inferred_dimension = prepare_program(
+                        expression,
+                        selected_variables=selected,
+                        frames=selected_frames,
+                        target_unit=str(spec["target_unit"]),
+                        target_divisor=float(spec["target_divisor"]),
+                    )
+                    validate_query_coverage(
+                        expression,
+                        frames=selected_frames,
+                        required_tickers=required_tickers,
+                        required_years=required_years,
+                    )
+                    query = compile_expression(prepared)
+                    answer = execute_expression_isolated(
+                        query,
+                        selected_frames,
+                        timeout_seconds=args.execution_timeout,
+                        memory_limit_mb=args.memory_limit_mb,
+                    )
+                    selected_refs = [table_refs[variable] for variable in selected]
+                    successful = (
+                        program,
+                        selected,
+                        inferred_dimension,
+                        query,
+                        answer,
+                        selected_refs,
+                    )
+                    break
+                except Exception as attempt_exc:  # noqa: BLE001 - bounded model retry
+                    attempt_failures.append(
+                        {
+                            "attempt": attempt,
+                            "error_type": type(attempt_exc).__name__,
+                            "error": str(attempt_exc),
+                        }
+                    )
+                    if attempt == args.max_attempts:
+                        raise
+            if successful is None:
+                raise RuntimeError("Generation retry loop ended without a result")
+            program, selected, inferred_dimension, query, answer, selected_refs = successful
             prediction: dict[str, object] = {
                 "id": question_id,
                 "question": str(row["question"]),
@@ -281,6 +394,7 @@ def main() -> None:
                 "pandas_query": query,
             }
             _append_jsonl(checkpoint, prediction)
+            unresolved_errors.pop(question_id, None)
             _append_jsonl(
                 traces,
                 {
@@ -289,24 +403,27 @@ def main() -> None:
                     "generated_program": program["program"],
                     "inferred_dimension": inferred_dimension,
                     "compiled_pandas_query": query,
+                    "generation_attempts": len(attempt_failures) + 1,
+                    "failed_attempts": attempt_failures,
                 },
             )
         except Exception as exc:  # noqa: BLE001 - batch runner records per-question failures
-            _append_jsonl(
-                errors,
-                {
-                    "id": question_id,
-                    "stage": "generation_or_execution",
-                    "error_type": type(exc).__name__,
-                    "error": str(exc),
-                    "candidate_refs": _as_str_list(row.get("fused", []), field="fused")[
-                        :candidate_limit
-                    ],
-                    "model": args.model,
-                    "model_revision": args.model_revision,
-                    "run_fingerprint": fingerprint,
-                },
-            )
+            error_row: dict[str, object] = {
+                "id": question_id,
+                "stage": "generation_or_execution",
+                "error_type": type(exc).__name__,
+                "error": str(exc),
+                "candidate_refs": _as_str_list(row.get("fused", []), field="fused")[
+                    :candidate_limit
+                ],
+                "model": args.model,
+                "model_revision": args.model_revision,
+                "thinking_mode": args.thinking_mode,
+                "failed_attempts": attempt_failures,
+                "run_fingerprint": fingerprint,
+            }
+            unresolved_errors[question_id] = error_row
+            _append_jsonl(error_attempts, error_row)
 
     predictions = sorted(
         _load_jsonl(checkpoint),
@@ -316,6 +433,14 @@ def main() -> None:
         _as_int(item["id"], field="id") for item in (_load_jsonl(traces) if traces.exists() else [])
     }
     prediction_ids = {_as_int(item["id"], field="id") for item in predictions}
+    _write_jsonl(
+        errors,
+        [
+            error
+            for question_id, error in sorted(unresolved_errors.items())
+            if question_id not in prediction_ids
+        ],
+    )
     if final_trace_ids != prediction_ids:
         raise ValueError("Every prediction must have exactly one program trace")
     (args.output / "submission.json").write_text(
