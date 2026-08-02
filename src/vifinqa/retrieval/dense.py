@@ -4,6 +4,7 @@ import hashlib
 import json
 import time
 from dataclasses import asdict, dataclass
+from importlib.metadata import version
 from pathlib import Path
 from typing import Any, Literal
 
@@ -109,6 +110,22 @@ class DenseIndex:
             np.save(handle, values, allow_pickle=False)
         temporary.replace(path)
 
+    @staticmethod
+    def _token_lengths(
+        model: SentenceTransformer,
+        texts: list[str],
+        *,
+        chunk_size: int = 512,
+    ) -> list[int]:
+        lengths: list[int] = []
+        for start in range(0, len(texts), chunk_size):
+            tokenized = model.tokenize(texts[start : start + chunk_size])
+            attention_mask = tokenized.get("attention_mask")
+            if attention_mask is None:
+                raise ValueError("SentenceTransformer tokenizer did not return an attention mask")
+            lengths.extend(int(value) for value in attention_mask.sum(dim=1).tolist())
+        return lengths
+
     @classmethod
     def build(
         cls,
@@ -151,14 +168,16 @@ class DenseIndex:
         model_revision: str | None = None,
         batch_size: int = 16,
         checkpoint_size: int = 256,
-        max_seq_length: int = 2_048,
+        max_seq_length: int = 8_192,
+        max_batch_tokens: int = 8_192,
+        sort_by_length: bool = False,
         device: str | list[str] | None = None,
         use_fp16: bool = False,
     ) -> DenseIndex:
         if not records:
             raise ValueError("Cannot build a dense index over an empty manifest")
-        if batch_size <= 0 or checkpoint_size <= 0 or max_seq_length <= 0:
-            raise ValueError("Batch, checkpoint, and sequence sizes must be positive")
+        if batch_size <= 0 or checkpoint_size <= 0 or max_seq_length <= 0 or max_batch_tokens <= 0:
+            raise ValueError("Batch, checkpoint, sequence, and token-budget sizes must be positive")
         devices = [device] if isinstance(device, str) else (device or [])
         model_device = "cpu" if len(devices) > 1 else (devices[0] if devices else None)
         model = SentenceTransformer(model_id, revision=model_revision, device=model_device)
@@ -168,15 +187,29 @@ class DenseIndex:
         dimension = model.get_sentence_embedding_dimension()
         if dimension is None:
             raise ValueError(f"Model {model_id} did not report an embedding dimension")
+        token_lengths = cls._token_lengths(model, [record.retrieval_text for record in records])
+        if sort_by_length:
+            ordered = sorted(
+                zip(token_lengths, records, strict=True),
+                key=lambda item: (item[0], item[1].table_ref),
+                reverse=True,
+            )
+            token_lengths = [length for length, _record in ordered]
+            records = [record for _length, record in ordered]
         expected_config = {
             "format_version": 1,
             "model_id": model_id,
             "model_revision": model_revision,
             "max_seq_length": max_seq_length,
+            "max_batch_tokens": max_batch_tokens,
             "use_fp16": use_fp16,
             "dimension": dimension,
             "tables": len(records),
             "corpus_sha256": cls._corpus_sha256(records),
+            "runtime_versions": {
+                distribution: version(distribution)
+                for distribution in ("sentence-transformers", "torch", "transformers")
+            },
         }
         checkpoint_config = checkpoint_dir / "config.json"
         if checkpoint_config.exists():
@@ -201,14 +234,18 @@ class DenseIndex:
             for start in range(0, len(records), checkpoint_size)
         ]
         missing_rows = sum(stop - start for start, stop, path in shards if not path.exists())
+        missing_tokens = sum(
+            sum(token_lengths[start:stop]) for start, stop, path in shards if not path.exists()
+        )
         print(
             f"dense checkpoints: {len(shards)} shards, "
             f"{len(records) - missing_rows}/{len(records)} rows already persisted"
         )
         started_at = time.monotonic()
         encoded_rows = 0
+        encoded_tokens = 0
         pool: dict[Literal["input", "output", "processes"], Any] | None = None
-        if len(devices) > 1:
+        if len(devices) > 1 and missing_rows:
             pool = model.start_multi_process_pool(target_devices=devices)
         try:
             for start, stop, shard_path in shards:
@@ -220,9 +257,15 @@ class DenseIndex:
                     print(f"reusing dense checkpoint {shard_path.name}")
                     continue
                 texts = [record.retrieval_text for record in records[start:stop]]
+                longest = max(token_lengths[start:stop])
+                effective_batch_size = min(batch_size, max(1, max_batch_tokens // longest))
+                print(
+                    f"encoding rows {start}:{stop}; longest={longest} tokens, "
+                    f"batch_size={effective_batch_size}"
+                )
                 encoded = model.encode(
                     texts,
-                    batch_size=batch_size,
+                    batch_size=effective_batch_size,
                     normalize_embeddings=True,
                     convert_to_numpy=True,
                     show_progress_bar=True,
@@ -232,13 +275,16 @@ class DenseIndex:
                     raise ValueError(f"Invalid embeddings for rows {start}:{stop}: {encoded.shape}")
                 cls._save_array_atomic(shard_path, encoded)
                 encoded_rows += stop - start
+                encoded_tokens += sum(token_lengths[start:stop])
                 elapsed = max(time.monotonic() - started_at, 1e-9)
                 rows_per_second = encoded_rows / elapsed
-                remaining_rows = missing_rows - encoded_rows
-                eta_hours = remaining_rows / rows_per_second / 3_600
+                tokens_per_second = encoded_tokens / elapsed
+                remaining_tokens = missing_tokens - encoded_tokens
+                eta_hours = remaining_tokens / tokens_per_second / 3_600
                 print(
                     f"saved dense checkpoint {shard_path.name} ({stop}/{len(records)}); "
-                    f"{rows_per_second:.1f} rows/s, ETA {eta_hours:.2f} h"
+                    f"{rows_per_second:.1f} rows/s, {tokens_per_second:.0f} tokens/s, "
+                    f"token-weighted ETA {eta_hours:.2f} h"
                 )
         finally:
             if pool is not None:

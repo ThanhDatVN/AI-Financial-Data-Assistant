@@ -77,6 +77,8 @@ def _select_rows(
     *,
     question_ids: list[int] | None,
     limit: int | None,
+    shard_count: int = 1,
+    shard_index: int = 0,
 ) -> list[dict[str, object]]:
     row_ids = [_as_int(row["id"], field="id") for row in rows]
     if len(row_ids) != len(set(row_ids)):
@@ -92,7 +94,9 @@ def _select_rows(
         selected = [rows_by_id[question_id] for question_id in question_ids]
     if limit is not None:
         selected = selected[:limit]
-    return selected
+    if shard_count <= 0 or not 0 <= shard_index < shard_count:
+        raise ValueError("shard_index must be in [0, shard_count)")
+    return [row for position, row in enumerate(selected) if position % shard_count == shard_index]
 
 
 def _sha256(path: Path) -> str:
@@ -115,6 +119,9 @@ def _fingerprint(
     memory_limit_mb: int | None,
     thinking_mode: str,
     max_attempts: int,
+    project_revision: str | None = None,
+    shard_count: int = 1,
+    shard_index: int = 0,
 ) -> dict[str, object]:
     schema_bytes = json.dumps(PROGRAM_JSON_SCHEMA, sort_keys=True).encode()
     return {
@@ -129,6 +136,9 @@ def _fingerprint(
         "memory_limit_mb": memory_limit_mb,
         "thinking_mode": thinking_mode,
         "max_attempts": max_attempts,
+        "project_revision": project_revision,
+        "shard_count": shard_count,
+        "shard_index": shard_index,
         "seed": SEED,
     }
 
@@ -172,6 +182,9 @@ def main() -> None:
     parser.add_argument("--execution-timeout", type=float, default=10.0)
     parser.add_argument("--memory-limit-mb", type=int)
     parser.add_argument("--limit", type=int)
+    parser.add_argument("--shard-count", type=int, default=1)
+    parser.add_argument("--shard-index", type=int, default=0)
+    parser.add_argument("--project-revision")
     parser.add_argument(
         "--id",
         dest="question_ids",
@@ -184,6 +197,10 @@ def main() -> None:
         not args.model_revision or re.fullmatch(r"[0-9a-fA-F]{40}", args.model_revision) is None
     ):
         parser.error("--final-run requires --model-revision with a full 40-character commit SHA")
+    if args.final_run and (
+        not args.project_revision or re.fullmatch(r"[0-9a-fA-F]{40}", args.project_revision) is None
+    ):
+        parser.error("--final-run requires --project-revision with the exact Git commit SHA")
     if args.candidate_tables <= 0 or args.max_tokens <= 0 or args.execution_timeout <= 0:
         parser.error("candidate tables, max tokens, and execution timeout must be positive")
     if args.memory_limit_mb is not None and args.memory_limit_mb <= 0:
@@ -192,11 +209,15 @@ def main() -> None:
         parser.error("--limit must be positive")
     if args.max_attempts <= 0:
         parser.error("--max-attempts must be positive")
+    if args.shard_count <= 0 or not 0 <= args.shard_index < args.shard_count:
+        parser.error("--shard-index must be in [0, --shard-count)")
 
     rows = _select_rows(
         _load_jsonl(args.retrieval),
         question_ids=args.question_ids,
         limit=args.limit,
+        shard_count=args.shard_count,
+        shard_index=args.shard_index,
     )
     candidate_refs = {
         ref
@@ -225,6 +246,9 @@ def main() -> None:
         memory_limit_mb=args.memory_limit_mb,
         thinking_mode=args.thinking_mode,
         max_attempts=args.max_attempts,
+        project_revision=args.project_revision,
+        shard_count=args.shard_count,
+        shard_index=args.shard_index,
     )
     if metadata_path.exists():
         existing = json.loads(metadata_path.read_text(encoding="utf-8"))

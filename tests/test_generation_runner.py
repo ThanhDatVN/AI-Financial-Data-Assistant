@@ -41,6 +41,22 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
     assert first["retrieval_sha256"] == runner._sha256(retrieval)
     assert first["thinking_mode"] == "disabled"
     assert first["max_attempts"] == 3
+    assert first["project_revision"] is None
+
+    pinned_project = runner._fingerprint(
+        retrieval=retrieval,
+        manifest=manifest,
+        model="open/model",
+        model_revision="abc123",
+        candidate_tables=10,
+        max_tokens=1024,
+        execution_timeout=10.0,
+        memory_limit_mb=None,
+        thinking_mode="disabled",
+        max_attempts=3,
+        project_revision="1" * 40,
+    )
+    assert pinned_project != first
 
     retrieval.write_text(json.dumps({"id": 2}) + "\n", encoding="utf-8")
     third = runner._fingerprint(
@@ -84,6 +100,23 @@ def test_select_rows_uses_stable_requested_ids_without_changing_run_identity() -
     rows = [{"id": 1}, {"id": "2"}, {"id": 3}]
     assert runner._select_rows(rows, question_ids=[3, 1], limit=None) == [rows[2], rows[0]]
     assert runner._select_rows(rows, question_ids=[3, 1], limit=1) == [rows[2]]
+
+
+def test_select_rows_partitions_into_stable_disjoint_shards() -> None:
+    rows = [{"id": index} for index in range(1, 8)]
+    shards = [
+        runner._select_rows(
+            rows,
+            question_ids=None,
+            limit=None,
+            shard_count=2,
+            shard_index=index,
+        )
+        for index in range(2)
+    ]
+    assert shards[0] == rows[::2]
+    assert shards[1] == rows[1::2]
+    assert {int(row["id"]) for shard in shards for row in shard} == set(range(1, 8))
 
 
 def test_select_rows_rejects_duplicate_and_missing_ids() -> None:

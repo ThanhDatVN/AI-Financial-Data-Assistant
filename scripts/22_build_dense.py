@@ -33,8 +33,27 @@ def main() -> None:
         default=256,
         help="Persist this many embeddings per resume-safe shard",
     )
-    parser.add_argument("--max-seq-length", type=int, default=2_048)
+    parser.add_argument(
+        "--checkpoint-dir",
+        type=Path,
+        help="Store resume shards outside the final dense artifact directory",
+    )
+    parser.add_argument("--max-seq-length", type=int, default=8_192)
+    parser.add_argument(
+        "--max-batch-tokens",
+        type=int,
+        default=8_192,
+        help="Adapt batch size so its longest padded batch stays within this token budget",
+    )
     parser.add_argument("--fp16", action="store_true")
+    parser.add_argument(
+        "--sort-by-length",
+        action="store_true",
+        help=(
+            "Group similarly sized texts before sharding to reduce padding without "
+            "truncating content"
+        ),
+    )
     parser.add_argument(
         "--device",
         action="append",
@@ -52,12 +71,14 @@ def main() -> None:
         devices = args.device[0]
     index = DenseIndex.build_checkpointed(
         records,
-        checkpoint_dir=args.output / "checkpoints",
+        checkpoint_dir=args.checkpoint_dir or args.output / "checkpoints",
         model_id=args.model,
         model_revision=args.model_revision,
         batch_size=args.batch_size,
         checkpoint_size=args.checkpoint_size,
         max_seq_length=args.max_seq_length,
+        max_batch_tokens=args.max_batch_tokens,
+        sort_by_length=args.sort_by_length,
         device=devices,
         use_fp16=args.fp16,
     )
