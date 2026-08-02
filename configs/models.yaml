@@ -1,0 +1,34 @@
+models:
+  nlu:
+    id: Qwen/Qwen2.5-7B-Instruct-AWQ
+    base_id: Qwen/Qwen2.5-7B-Instruct
+    revision: null  # compliance blocker: resolve and pin before a final run
+    parameters: 7.61B
+    quantization: AWQ-4bit
+    license: apache-2.0
+    released_before_cutoff: true
+  ir:
+    id: Qwen/Qwen2.5-Coder-7B-Instruct-AWQ
+    base_id: Qwen/Qwen2.5-Coder-7B-Instruct
+    revision: null  # compliance blocker: resolve and pin before a final run
+    parameters: 7.61B
+    quantization: AWQ-4bit
+    license: apache-2.0
+    released_before_cutoff: true
+  embedding:
+    id: BAAI/bge-m3
+    revision: null
+    parameters: 568M
+    license: mit
+  reranker:
+    id: BAAI/bge-reranker-v2-m3
+    revision: null
+    parameters: 568M
+    license: apache-2.0
+
+policy:
+  max_parameters: 14B
+  release_cutoff: 2026-06-01T00:00:00+07:00
+  closed_models_allowed: false
+  pin_huggingface_revision_before_submission: true
+  submission_blocked_while_any_used_revision_is_null: true

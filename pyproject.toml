@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vifinqa-assistant"
+version = "0.1.0"
+description = "Evidence-grounded Vietnamese financial table retrieval and Text-to-Pandas pipeline"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers --basetemp=.pytest_tmp"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["integration: tests against the optional local ViFinQA corpus"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src/vifinqa"]
+
+[[tool.mypy.overrides]]
+module = [
+  "lxml", "lxml.*",
+  "bm25s", "bm25s.*",
+  "faiss", "faiss.*",
+  "pandas", "pandas.*",
+  "pyarrow", "pyarrow.*",
+]
+ignore_missing_imports = true

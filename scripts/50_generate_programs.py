@@ -1,0 +1,328 @@
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import sys
+from pathlib import Path
+
+import pandas as pd
+from openai import OpenAI
+
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame  # noqa: E402
+from vifinqa.generation.prompt import CandidateSchema, build_program_prompt  # noqa: E402
+from vifinqa.programs.compiler import compile_expression  # noqa: E402
+from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
+from vifinqa.programs.grounding import prepare_program, validate_query_coverage  # noqa: E402
+from vifinqa.programs.serde import PROGRAM_JSON_SCHEMA, expression_from_dict  # noqa: E402
+
+SEED = 20260802
+
+
+def _load_jsonl(path: Path) -> list[dict[str, object]]:
+    with path.open(encoding="utf-8") as handle:
+        return [json.loads(line) for line in handle if line.strip()]
+
+
+def _append_jsonl(path: Path, row: dict[str, object]) -> None:
+    with path.open("a", encoding="utf-8", newline="\n") as handle:
+        handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
+def _as_int(value: object, *, field: str) -> int:
+    if not isinstance(value, int | str):
+        raise TypeError(f"{field} must be an integer or string")
+    return int(value)
+
+
+def _as_str_list(value: object, *, field: str) -> list[str]:
+    if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
+        raise TypeError(f"{field} must be a list of strings")
+    return value
+
+
+def _as_int_list(value: object, *, field: str) -> list[int]:
+    if not isinstance(value, list) or not all(
+        isinstance(item, int) and not isinstance(item, bool) for item in value
+    ):
+        raise TypeError(f"{field} must be a list of integers")
+    return value
+
+
+def _candidate_limit(row: dict[str, object], *, minimum: int) -> int:
+    spec = row.get("query_spec")
+    if not isinstance(spec, dict):
+        raise ValueError("query_spec must be an object")
+    tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
+    years = _as_int_list(spec.get("years"), field="query_spec.years")
+    return max(minimum, max(1, len(tickers)) * max(1, len(years)))
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _fingerprint(
+    *,
+    retrieval: Path,
+    manifest: Path,
+    model: str,
+    model_revision: str | None,
+    candidate_tables: int,
+    max_tokens: int,
+    execution_timeout: float,
+    memory_limit_mb: int | None,
+) -> dict[str, object]:
+    schema_bytes = json.dumps(PROGRAM_JSON_SCHEMA, sort_keys=True).encode()
+    return {
+        "retrieval_sha256": _sha256(retrieval),
+        "manifest_sha256": _sha256(manifest),
+        "program_schema_sha256": hashlib.sha256(schema_bytes).hexdigest(),
+        "model": model,
+        "model_revision": model_revision,
+        "candidate_tables": candidate_tables,
+        "max_tokens": max_tokens,
+        "execution_timeout": execution_timeout,
+        "memory_limit_mb": memory_limit_mb,
+        "seed": SEED,
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Generate and execute grounded Pandas expressions")
+    parser.add_argument("--retrieval", type=Path, default=ROOT / "outputs/retrieval.jsonl")
+    parser.add_argument(
+        "--manifest", type=Path, default=ROOT / "data/processed/table_manifest.parquet"
+    )
+    parser.add_argument("--data-root", type=Path, default=ROOT / "data/raw/ViFinQA")
+    parser.add_argument("--output", type=Path, default=ROOT / "outputs/generation")
+    parser.add_argument("--base-url", default="http://127.0.0.1:8000/v1")
+    parser.add_argument("--api-key-env", default="VLLM_API_KEY")
+    parser.add_argument("--model", default="Qwen/Qwen2.5-Coder-7B-Instruct-AWQ")
+    parser.add_argument("--model-revision")
+    parser.add_argument(
+        "--final-run",
+        action="store_true",
+        help="Refuse generation unless the served model revision is pinned",
+    )
+    parser.add_argument(
+        "--candidate-tables",
+        type=int,
+        default=10,
+        help="Minimum schemas per question; route coverage can increase this value",
+    )
+    parser.add_argument("--max-tokens", type=int, default=1024)
+    parser.add_argument("--execution-timeout", type=float, default=10.0)
+    parser.add_argument("--memory-limit-mb", type=int)
+    parser.add_argument("--limit", type=int)
+    args = parser.parse_args()
+    if args.final_run and not args.model_revision:
+        parser.error("--final-run requires --model-revision with a pre-cutoff commit SHA")
+    if args.candidate_tables <= 0 or args.max_tokens <= 0 or args.execution_timeout <= 0:
+        parser.error("candidate tables, max tokens, and execution timeout must be positive")
+    if args.memory_limit_mb is not None and args.memory_limit_mb <= 0:
+        parser.error("--memory-limit-mb must be positive")
+
+    rows = _load_jsonl(args.retrieval)
+    if args.limit is not None:
+        rows = rows[: args.limit]
+    candidate_refs = {
+        ref
+        for row in rows
+        for ref in _as_str_list(row["fused"], field="fused")[
+            : _candidate_limit(row, minimum=args.candidate_tables)
+        ]
+    }
+    store = TableStore.from_parquet(args.data_root, args.manifest, candidate_refs)
+    args.output.mkdir(parents=True, exist_ok=True)
+    data_dir = args.output / "data"
+    data_dir.mkdir(exist_ok=True)
+    checkpoint = args.output / "predictions.jsonl"
+    errors = args.output / "errors.jsonl"
+    traces = args.output / "program_traces.jsonl"
+    metadata_path = args.output / "run_metadata.json"
+    fingerprint = _fingerprint(
+        retrieval=args.retrieval,
+        manifest=args.manifest,
+        model=args.model,
+        model_revision=args.model_revision,
+        candidate_tables=args.candidate_tables,
+        max_tokens=args.max_tokens,
+        execution_timeout=args.execution_timeout,
+        memory_limit_mb=args.memory_limit_mb,
+    )
+    if metadata_path.exists():
+        existing = json.loads(metadata_path.read_text(encoding="utf-8"))
+        if existing != fingerprint:
+            raise ValueError(
+                "Output directory belongs to a different retrieval/manifest/model/schema run"
+            )
+    else:
+        metadata_path.write_text(
+            json.dumps(fingerprint, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+    completed = (
+        {_as_int(row["id"], field="id") for row in _load_jsonl(checkpoint)}
+        if checkpoint.exists()
+        else set()
+    )
+    trace_rows = _load_jsonl(traces) if traces.exists() else []
+    trace_ids = [_as_int(row["id"], field="id") for row in trace_rows]
+    if len(trace_ids) != len(set(trace_ids)) or set(trace_ids) != completed:
+        raise ValueError("Prediction/program trace checkpoints are inconsistent")
+    client = OpenAI(
+        base_url=args.base_url,
+        api_key=os.environ.get(args.api_key_env, "local-vllm"),
+    )
+
+    for row in rows:
+        question_id = _as_int(row["id"], field="id")
+        if question_id in completed:
+            continue
+        candidate_limit = args.candidate_tables
+        try:
+            candidate_limit = _candidate_limit(row, minimum=args.candidate_tables)
+            refs = _as_str_list(row["fused"], field="fused")[:candidate_limit]
+            schemas: list[CandidateSchema] = []
+            frames: dict[str, pd.DataFrame] = {}
+            csv_paths: dict[str, str] = {}
+            table_refs: dict[str, str] = {}
+            for index, table_ref in enumerate(refs, start=1):
+                variable = f"df{index}"
+                record, table = store.load(str(table_ref))
+                frame = parsed_table_to_long_frame(record, table)
+                relative = f"data/q{question_id}_{variable}.csv"
+                frame.to_csv(args.output / relative, index=False, encoding="utf-8")
+                schemas.append(CandidateSchema(variable, record, table))
+                frames[variable] = frame
+                csv_paths[variable] = relative
+                table_refs[variable] = record.table_ref
+            spec = row["query_spec"]
+            if not isinstance(spec, dict):
+                raise ValueError("query_spec must be an object")
+            system, user = build_program_prompt(
+                str(row["question"]),
+                schemas,
+                target_unit=str(spec["target_unit"]),
+                target_divisor=float(spec["target_divisor"]),
+            )
+            response = client.chat.completions.create(
+                model=args.model,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                temperature=0.0,
+                seed=SEED,
+                max_tokens=args.max_tokens,
+                response_format={
+                    "type": "json_schema",
+                    "json_schema": {
+                        "name": "pandas_program",
+                        "strict": True,
+                        "schema": PROGRAM_JSON_SCHEMA,
+                    },
+                },
+            )
+            content = response.choices[0].message.content
+            if not content:
+                raise ValueError("Model returned empty content")
+            program = json.loads(content)
+            if not isinstance(program, dict):
+                raise ValueError("Model output must be an object")
+            selected = _as_str_list(program.get("selected_variables"), field="selected_variables")
+            if any(variable not in frames for variable in selected):
+                raise ValueError(f"Model selected an unknown variable: {selected}")
+            selected_frames = {variable: frames[variable] for variable in selected}
+            expression = expression_from_dict(program.get("program"))
+            required_tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
+            required_years = _as_int_list(spec.get("years"), field="query_spec.years")
+            prepared, inferred_dimension = prepare_program(
+                expression,
+                selected_variables=selected,
+                frames=selected_frames,
+                target_unit=str(spec["target_unit"]),
+                target_divisor=float(spec["target_divisor"]),
+            )
+            validate_query_coverage(
+                expression,
+                frames=selected_frames,
+                required_tickers=required_tickers,
+                required_years=required_years,
+            )
+            query = compile_expression(prepared)
+            answer = execute_expression_isolated(
+                query,
+                selected_frames,
+                timeout_seconds=args.execution_timeout,
+                memory_limit_mb=args.memory_limit_mb,
+            )
+            selected_refs = [table_refs[variable] for variable in selected]
+            prediction: dict[str, object] = {
+                "id": question_id,
+                "question": str(row["question"]),
+                "answer": answer,
+                "relevant_docs": list(dict.fromkeys(ref.split("|", 1)[0] for ref in selected_refs)),
+                "relevant_tables": selected_refs,
+                "evidence": [
+                    {"variable": variable, "csv_path": csv_paths[variable]} for variable in selected
+                ],
+                "pandas_query": query,
+            }
+            _append_jsonl(checkpoint, prediction)
+            _append_jsonl(
+                traces,
+                {
+                    "id": question_id,
+                    "selected_variables": selected,
+                    "generated_program": program["program"],
+                    "inferred_dimension": inferred_dimension,
+                    "compiled_pandas_query": query,
+                },
+            )
+        except Exception as exc:  # noqa: BLE001 - batch runner records per-question failures
+            _append_jsonl(
+                errors,
+                {
+                    "id": question_id,
+                    "stage": "generation_or_execution",
+                    "error_type": type(exc).__name__,
+                    "error": str(exc),
+                    "candidate_refs": _as_str_list(row.get("fused", []), field="fused")[
+                        :candidate_limit
+                    ],
+                    "model": args.model,
+                    "model_revision": args.model_revision,
+                    "run_fingerprint": fingerprint,
+                },
+            )
+
+    predictions = sorted(
+        _load_jsonl(checkpoint),
+        key=lambda item: _as_int(item["id"], field="id"),
+    )
+    final_trace_ids = {
+        _as_int(item["id"], field="id") for item in (_load_jsonl(traces) if traces.exists() else [])
+    }
+    prediction_ids = {_as_int(item["id"], field="id") for item in predictions}
+    if final_trace_ids != prediction_ids:
+        raise ValueError("Every prediction must have exactly one program trace")
+    (args.output / "submission.json").write_text(
+        json.dumps(predictions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
+    print(f"completed={len(predictions)}/{len(rows)}; output={args.output}")
+
+
+if __name__ == "__main__":
+    main()

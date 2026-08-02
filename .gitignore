@@ -1,0 +1,46 @@
+# ---- Python ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.pytest_tmp/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- Env / secrets ----
+.env
+.env.*
+!.env.example
+
+# ---- Dữ liệu (KHÔNG commit: ~380MB corpus + artefact sinh ra) ----
+data/raw/
+data/interim/
+data/processed/
+data/index/
+data/cache/
+models/
+outputs/
+submissions/*.zip
+submissions/*/data/
+
+# giữ lại cấu trúc thư mục
+!data/**/.gitkeep
+
+# ---- Logs / runs ----
+logs/
+runs/*
+!runs/20260802_RUN012_local_preflight/
+runs/20260802_RUN012_local_preflight/*
+!runs/20260802_RUN012_local_preflight/handoff_manifest.json
+wandb/
+*.log
+
+# ---- OS / IDE ----
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
