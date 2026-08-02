@@ -29,12 +29,15 @@ submissions/*/data/
 # giữ lại cấu trúc thư mục
 !data/**/.gitkeep
 
+# ---- Tài liệu nghiên cứu/artefact nội bộ (giữ local, không đẩy Git) ----
+docs/
+annotations/
+cuoc-thi-text-to-pandas-bctc.md
+notebooks/README.md
+
 # ---- Logs / runs ----
 logs/
-runs/*
-!runs/20260802_RUN012_local_preflight/
-runs/20260802_RUN012_local_preflight/*
-!runs/20260802_RUN012_local_preflight/handoff_manifest.json
+runs/
 wandb/
 *.log
 
