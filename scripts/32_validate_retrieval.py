@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -102,6 +103,33 @@ def _route_matches(
     )
 
 
+def _reranker_error(row: dict[str, object]) -> str | None:
+    if "reranked" not in row:
+        return None
+    reranked = _str_list(row.get("reranked"), field="reranked")
+    hybrid = _str_list(row.get("hybrid"), field="hybrid")
+    fused = _str_list(row.get("fused"), field="fused")
+    scores = row.get("reranker_scores")
+    if not isinstance(scores, list) or not all(isinstance(item, dict) for item in scores):
+        return "reranker_scores must be a list of objects"
+    try:
+        score_refs = [str(item["table_ref"]) for item in scores]
+        score_values = [float(item["score"]) for item in scores]
+    except (KeyError, TypeError, ValueError):
+        return "reranker_scores entries require table_ref and numeric score"
+    if fused != reranked:
+        return "fused must equal reranked"
+    if len(reranked) != len(set(reranked)) or not set(reranked).issubset(hybrid):
+        return "reranked refs must be unique and drawn from hybrid"
+    if len(score_refs) != len(set(score_refs)) or set(score_refs) != set(hybrid):
+        return "reranker scores must cover every hybrid ref exactly once"
+    if not all(math.isfinite(score) for score in score_values):
+        return "reranker scores must be finite"
+    if score_values != sorted(score_values, reverse=True):
+        return "reranker scores must be ordered descending"
+    return None
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Fail-closed retrieval artefact validation")
     parser.add_argument(
@@ -142,6 +170,7 @@ def main() -> None:
         "unknown_refs": [],
         "wrong_metadata": [],
         "available_routes_missing": [],
+        "reranker_integrity": [],
     }
     unavailable_routes: list[dict[str, object]] = []
     short_candidates: list[dict[str, int]] = []
@@ -166,6 +195,9 @@ def main() -> None:
             raise TypeError("query_spec.scope must be a string or null")
         scope = raw_scope
         fused = _str_list(row.get("fused"), field="fused")
+        reranker_error = _reranker_error(row)
+        if reranker_error is not None:
+            failures["reranker_integrity"].append({"id": question_id, "error": reranker_error})
         if len(tickers) > 1:
             multi_entity += 1
         if not fused:

@@ -26,6 +26,10 @@ retrieval:
   metadata_policy: safe
   dense_model: BAAI/bge-m3
   reranker_model: BAAI/bge-reranker-v2-m3
+  reranker_candidate_k: 100
+  reranker_final_k: 20
+  reranker_max_length: 8192
+  reranker_batch_size_per_t4: 4
 
 evaluation:
   beta: 2.0

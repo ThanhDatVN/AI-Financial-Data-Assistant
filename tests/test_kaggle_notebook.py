@@ -31,6 +31,9 @@ def test_kaggle_dense_builder_is_full_quality_resumable_and_multi_gpu() -> None:
     assert '"--checkpoint-dir"' in code
     assert 'INPUT_ROOT.rglob("dense-checkpoints/bge_m3/config.json")' in code
     assert '"artifact_type": "vifinqa_bge_m3_dense_index"' in code
+    assert '"--max-runtime-minutes"' in code
+    assert '"artifact_type": "vifinqa_bge_m3_dense_checkpoint"' in code
+    assert "completed_shards" in code
 
 
 def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
@@ -45,9 +48,17 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert code.count("--max-attempts") == 2
     assert 'dense_config.get("model_revision") == DENSE_REVISION' in code
     assert "scripts/22_build_dense.py" not in code
+    assert "BAAI/bge-reranker-v2-m3" in code
+    assert "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e" in code
+    assert '"scripts/33_rerank_retrieval.py"' in code
+    assert '"scripts/34_merge_retrieval_shards.py"' in code
+    assert '"--candidate-tables", "100"' in code
+    assert '"--max-length", "8192"' in code
+    assert '"--max-batch-tokens", "8192"' in code
+    assert "retrieval_rerank_shards/shard_0/run_metadata.json" in code
     assert '"--data-parallel-size"' in code
     assert '"--shard-count"' in code
-    assert code.count('"--project-revision"') == 2
+    assert code.count('"--project-revision"') == 4
     assert '"scripts/51_merge_generation_shards.py"' in code
     assert 'INPUT_ROOT.rglob("generation_qwen3_8b_awq_shards/shard_0/run_metadata.json")' in code
     assert "VLLM_CONFIG" in code

@@ -6,6 +6,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 
 import pandas as pd
@@ -16,6 +17,11 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
+from vifinqa.checkpoints.jsonl import (  # noqa: E402
+    JsonlRowCheckpoint,
+    write_json_atomic,
+    write_jsonl_atomic,
+)
 from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame  # noqa: E402
 from vifinqa.generation.prompt import CandidateSchema, build_program_prompt  # noqa: E402
 from vifinqa.programs.compiler import compile_expression  # noqa: E402
@@ -35,12 +41,6 @@ def _load_jsonl(path: Path) -> list[dict[str, object]]:
 def _append_jsonl(path: Path, row: dict[str, object]) -> None:
     with path.open("a", encoding="utf-8", newline="\n") as handle:
         handle.write(json.dumps(row, ensure_ascii=False) + "\n")
-
-
-def _write_jsonl(path: Path, rows: list[dict[str, object]]) -> None:
-    with path.open("w", encoding="utf-8", newline="\n") as handle:
-        for row in rows:
-            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
 def _as_int(value: object, *, field: str) -> int:
@@ -230,7 +230,7 @@ def main() -> None:
     args.output.mkdir(parents=True, exist_ok=True)
     data_dir = args.output / "data"
     data_dir.mkdir(exist_ok=True)
-    checkpoint = args.output / "predictions.jsonl"
+    predictions_path = args.output / "predictions.jsonl"
     errors = args.output / "errors.jsonl"
     error_attempts = args.output / "error_attempts.jsonl"
     traces = args.output / "program_traces.jsonl"
@@ -257,33 +257,49 @@ def main() -> None:
                 "Output directory belongs to a different retrieval/manifest/model/schema run"
             )
     else:
-        metadata_path.write_text(
-            json.dumps(fingerprint, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-        )
-    completed = (
-        {_as_int(row["id"], field="id") for row in _load_jsonl(checkpoint)}
-        if checkpoint.exists()
-        else set()
+        write_json_atomic(metadata_path, fingerprint)
+    completed_checkpoint = JsonlRowCheckpoint(
+        args.output / "completed",
+        fingerprint=fingerprint,
     )
+    state_rows = completed_checkpoint.load()
+    if not state_rows and predictions_path.exists() and traces.exists():
+        legacy_predictions = _load_jsonl(predictions_path)
+        legacy_traces = _load_jsonl(traces)
+        predictions_by_id = {_as_int(row["id"], field="id"): row for row in legacy_predictions}
+        traces_by_id = {_as_int(row["id"], field="id"): row for row in legacy_traces}
+        if len(predictions_by_id) != len(legacy_predictions) or set(predictions_by_id) != set(
+            traces_by_id
+        ):
+            raise ValueError("Legacy prediction/program trace checkpoints are inconsistent")
+        for question_id in sorted(predictions_by_id):
+            completed_checkpoint.write(
+                {
+                    "id": question_id,
+                    "prediction": predictions_by_id[question_id],
+                    "trace": traces_by_id[question_id],
+                }
+            )
+        state_rows = completed_checkpoint.load()
+    completed = {_as_int(row["id"], field="id") for row in state_rows}
     unresolved_errors = (
         {_as_int(row["id"], field="id"): row for row in _load_jsonl(errors)}
         if errors.exists()
         else {}
     )
-    trace_rows = _load_jsonl(traces) if traces.exists() else []
-    trace_ids = [_as_int(row["id"], field="id") for row in trace_rows]
-    if len(trace_ids) != len(set(trace_ids)) or set(trace_ids) != completed:
-        raise ValueError("Prediction/program trace checkpoints are inconsistent")
     client = OpenAI(
         base_url=args.base_url,
         api_key=os.environ.get(args.api_key_env, "local-vllm"),
     )
 
-    for row in rows:
+    pending_rows = [row for row in rows if _as_int(row["id"], field="id") not in completed]
+    print(
+        f"generation shard {args.shard_index}: {len(completed)}/{len(rows)} "
+        "rows already checkpointed"
+    )
+    started_at = time.monotonic()
+    for position, row in enumerate(pending_rows, start=1):
         question_id = _as_int(row["id"], field="id")
-        if question_id in completed:
-            continue
         candidate_limit = args.candidate_tables
         attempt_failures: list[dict[str, object]] = []
         try:
@@ -417,20 +433,23 @@ def main() -> None:
                 ],
                 "pandas_query": query,
             }
-            _append_jsonl(checkpoint, prediction)
-            unresolved_errors.pop(question_id, None)
-            _append_jsonl(
-                traces,
+            trace: dict[str, object] = {
+                "id": question_id,
+                "selected_variables": selected,
+                "generated_program": program["program"],
+                "inferred_dimension": inferred_dimension,
+                "compiled_pandas_query": query,
+                "generation_attempts": len(attempt_failures) + 1,
+                "failed_attempts": attempt_failures,
+            }
+            completed_checkpoint.write(
                 {
                     "id": question_id,
-                    "selected_variables": selected,
-                    "generated_program": program["program"],
-                    "inferred_dimension": inferred_dimension,
-                    "compiled_pandas_query": query,
-                    "generation_attempts": len(attempt_failures) + 1,
-                    "failed_attempts": attempt_failures,
-                },
+                    "prediction": prediction,
+                    "trace": trace,
+                }
             )
+            unresolved_errors.pop(question_id, None)
         except Exception as exc:  # noqa: BLE001 - batch runner records per-question failures
             error_row: dict[str, object] = {
                 "id": question_id,
@@ -448,16 +467,32 @@ def main() -> None:
             }
             unresolved_errors[question_id] = error_row
             _append_jsonl(error_attempts, error_row)
+        if position == 1 or position % 10 == 0 or position == len(pending_rows):
+            elapsed = max(time.monotonic() - started_at, 1e-9)
+            remaining = len(pending_rows) - position
+            eta_hours = remaining / (position / elapsed) / 3_600
+            print(
+                f"generation shard {args.shard_index}: {position}/{len(pending_rows)} new rows; "
+                f"{position / elapsed:.3f} questions/s; ETA {eta_hours:.2f} h"
+            )
 
-    predictions = sorted(
-        _load_jsonl(checkpoint),
-        key=lambda item: _as_int(item["id"], field="id"),
-    )
-    final_trace_ids = {
-        _as_int(item["id"], field="id") for item in (_load_jsonl(traces) if traces.exists() else [])
-    }
+    state_rows = completed_checkpoint.load()
+    predictions = []
+    trace_rows = []
+    for state in state_rows:
+        prediction = state.get("prediction")
+        trace = state.get("trace")
+        if not isinstance(prediction, dict) or not isinstance(trace, dict):
+            raise TypeError("Completed state must contain prediction and trace objects")
+        predictions.append(prediction)
+        trace_rows.append(trace)
+    predictions.sort(key=lambda item: _as_int(item["id"], field="id"))
+    trace_rows.sort(key=lambda item: _as_int(item["id"], field="id"))
+    write_jsonl_atomic(predictions_path, predictions)
+    write_jsonl_atomic(traces, trace_rows)
+    final_trace_ids = {_as_int(item["id"], field="id") for item in trace_rows}
     prediction_ids = {_as_int(item["id"], field="id") for item in predictions}
-    _write_jsonl(
+    write_jsonl_atomic(
         errors,
         [
             error
@@ -467,9 +502,7 @@ def main() -> None:
     )
     if final_trace_ids != prediction_ids:
         raise ValueError("Every prediction must have exactly one program trace")
-    (args.output / "submission.json").write_text(
-        json.dumps(predictions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    write_json_atomic(args.output / "submission.json", predictions)
     print(f"completed={len(predictions)}/{len(rows)}; output={args.output}")
 
 

@@ -47,6 +47,11 @@ def main() -> None:
     )
     parser.add_argument("--fp16", action="store_true")
     parser.add_argument(
+        "--max-runtime-minutes",
+        type=float,
+        help="Pause safely after this wall-time budget and resume from checkpoint shards",
+    )
+    parser.add_argument(
         "--sort-by-length",
         action="store_true",
         help=(
@@ -63,6 +68,8 @@ def main() -> None:
     args = parser.parse_args()
     if args.final_run and not args.model_revision:
         parser.error("--final-run requires --model-revision with a pre-cutoff commit SHA")
+    if args.max_runtime_minutes is not None and args.max_runtime_minutes <= 0:
+        parser.error("--max-runtime-minutes must be positive")
     records = list(iter_manifest(args.manifest))
     if args.limit is not None:
         records = records[: args.limit]
@@ -81,7 +88,13 @@ def main() -> None:
         sort_by_length=args.sort_by_length,
         device=devices,
         use_fp16=args.fp16,
+        max_runtime_seconds=(
+            args.max_runtime_minutes * 60 if args.max_runtime_minutes is not None else None
+        ),
     )
+    if index is None:
+        print("dense build paused with all completed work stored in --checkpoint-dir")
+        return
     index.save(args.output)
     print(f"wrote dense index with {len(records)} tables to {args.output}")
 

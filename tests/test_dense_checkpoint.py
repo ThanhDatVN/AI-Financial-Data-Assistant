@@ -182,3 +182,32 @@ def test_checkpointed_dense_build_rejects_changed_settings(
             checkpoint_size=1,
             max_seq_length=1_024,
         )
+
+
+def test_checkpointed_dense_build_pauses_only_after_an_atomic_shard(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr(dense_module, "SentenceTransformer", FakeSentenceTransformer)
+    clock = iter(range(20))
+    monkeypatch.setattr(dense_module.time, "monotonic", lambda: float(next(clock)))
+    records = [_record(index) for index in range(5)]
+    checkpoints = tmp_path / "checkpoints"
+
+    paused = DenseIndex.build_checkpointed(
+        records,
+        checkpoint_dir=checkpoints,
+        model_id="fake/model",
+        checkpoint_size=2,
+        max_runtime_seconds=1.5,
+    )
+
+    assert paused is None
+    assert len(list(checkpoints.glob("embeddings_*.npy"))) == 1
+    resumed = DenseIndex.build_checkpointed(
+        records,
+        checkpoint_dir=checkpoints,
+        model_id="fake/model",
+        checkpoint_size=2,
+    )
+    assert resumed is not None
+    assert resumed.index.ntotal == 5

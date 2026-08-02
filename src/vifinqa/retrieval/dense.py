@@ -173,11 +173,14 @@ class DenseIndex:
         sort_by_length: bool = False,
         device: str | list[str] | None = None,
         use_fp16: bool = False,
-    ) -> DenseIndex:
+        max_runtime_seconds: float | None = None,
+    ) -> DenseIndex | None:
         if not records:
             raise ValueError("Cannot build a dense index over an empty manifest")
         if batch_size <= 0 or checkpoint_size <= 0 or max_seq_length <= 0 or max_batch_tokens <= 0:
             raise ValueError("Batch, checkpoint, sequence, and token-budget sizes must be positive")
+        if max_runtime_seconds is not None and max_runtime_seconds <= 0:
+            raise ValueError("max_runtime_seconds must be positive")
         devices = [device] if isinstance(device, str) else (device or [])
         model_device = "cpu" if len(devices) > 1 else (devices[0] if devices else None)
         model = SentenceTransformer(model_id, revision=model_revision, device=model_device)
@@ -256,6 +259,16 @@ class DenseIndex:
                         raise ValueError(f"Invalid dense checkpoint shard: {shard_path}")
                     print(f"reusing dense checkpoint {shard_path.name}")
                     continue
+                if (
+                    max_runtime_seconds is not None
+                    and encoded_rows
+                    and time.monotonic() - started_at >= max_runtime_seconds
+                ):
+                    print(
+                        "dense time budget reached after an atomic shard; "
+                        "save the checkpoint directory and resume in another session"
+                    )
+                    break
                 texts = [record.retrieval_text for record in records[start:stop]]
                 longest = max(token_lengths[start:stop])
                 effective_batch_size = min(batch_size, max(1, max_batch_tokens // longest))
@@ -289,6 +302,14 @@ class DenseIndex:
         finally:
             if pool is not None:
                 model.stop_multi_process_pool(pool)
+
+        remaining_shards = [path for _start, _stop, path in shards if not path.exists()]
+        if remaining_shards:
+            print(
+                f"dense build paused safely: {len(shards) - len(remaining_shards)}/"
+                f"{len(shards)} shards persisted"
+            )
+            return None
 
         index = faiss.IndexFlatIP(dimension)
         for _start, _stop, shard_path in shards:
