@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import hashlib
 import json
+import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
+from typing import Any, Literal
 
 import faiss
 import numpy as np
@@ -32,12 +35,18 @@ class DenseIndex:
         model_id: str,
         model_revision: str | None = None,
         model: SentenceTransformer | None = None,
+        device: str | None = None,
+        max_seq_length: int | None = None,
+        use_fp16: bool = False,
     ) -> None:
         self.index = index
         self.records = records
         self.model_id = model_id
         self.model_revision = model_revision
         self._model = model
+        self.device = device
+        self.max_seq_length = max_seq_length
+        self.use_fp16 = use_fp16
         groups: dict[tuple[str, int, str], list[int]] = {}
         for index, record in enumerate(records):
             groups.setdefault((record.ticker, record.report_year, record.scope), []).append(index)
@@ -64,8 +73,41 @@ class DenseIndex:
 
     def _encoder(self) -> SentenceTransformer:
         if self._model is None:
-            self._model = SentenceTransformer(self.model_id, revision=self.model_revision)
+            self._model = SentenceTransformer(
+                self.model_id,
+                revision=self.model_revision,
+                device=self.device,
+            )
+            if self.max_seq_length is not None:
+                self._model.max_seq_length = self.max_seq_length
+            if self.use_fp16 and str(self._model.device).startswith("cuda"):
+                self._model.half()
         return self._model
+
+    @staticmethod
+    def _corpus_sha256(records: list[ManifestRecord]) -> str:
+        digest = hashlib.sha256()
+        for record in records:
+            for value in (record.table_ref, record.retrieval_text):
+                encoded = value.encode("utf-8")
+                digest.update(len(encoded).to_bytes(8, "big"))
+                digest.update(encoded)
+        return digest.hexdigest()
+
+    @staticmethod
+    def _write_json_atomic(path: Path, payload: dict[str, Any]) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        temporary = path.with_name(path.name + ".tmp")
+        temporary.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+        temporary.replace(path)
+
+    @staticmethod
+    def _save_array_atomic(path: Path, values: npt.NDArray[np.float32]) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        temporary = path.with_name(path.name + ".tmp")
+        with temporary.open("wb") as handle:
+            np.save(handle, values, allow_pickle=False)
+        temporary.replace(path)
 
     @classmethod
     def build(
@@ -96,6 +138,130 @@ class DenseIndex:
             model_id=model_id,
             model_revision=model_revision,
             model=model,
+            device=device,
+        )
+
+    @classmethod
+    def build_checkpointed(
+        cls,
+        records: list[ManifestRecord],
+        *,
+        checkpoint_dir: Path,
+        model_id: str = "BAAI/bge-m3",
+        model_revision: str | None = None,
+        batch_size: int = 16,
+        checkpoint_size: int = 256,
+        max_seq_length: int = 2_048,
+        device: str | list[str] | None = None,
+        use_fp16: bool = False,
+    ) -> DenseIndex:
+        if not records:
+            raise ValueError("Cannot build a dense index over an empty manifest")
+        if batch_size <= 0 or checkpoint_size <= 0 or max_seq_length <= 0:
+            raise ValueError("Batch, checkpoint, and sequence sizes must be positive")
+        devices = [device] if isinstance(device, str) else (device or [])
+        model_device = "cpu" if len(devices) > 1 else (devices[0] if devices else None)
+        model = SentenceTransformer(model_id, revision=model_revision, device=model_device)
+        model.max_seq_length = max_seq_length
+        if use_fp16 and any(value.startswith("cuda") for value in devices):
+            model.half()
+        dimension = model.get_sentence_embedding_dimension()
+        if dimension is None:
+            raise ValueError(f"Model {model_id} did not report an embedding dimension")
+        expected_config = {
+            "format_version": 1,
+            "model_id": model_id,
+            "model_revision": model_revision,
+            "max_seq_length": max_seq_length,
+            "use_fp16": use_fp16,
+            "dimension": dimension,
+            "tables": len(records),
+            "corpus_sha256": cls._corpus_sha256(records),
+        }
+        checkpoint_config = checkpoint_dir / "config.json"
+        if checkpoint_config.exists():
+            actual_config = json.loads(checkpoint_config.read_text(encoding="utf-8"))
+            if actual_config != expected_config:
+                raise ValueError(
+                    "Dense checkpoint settings or corpus changed; use a new checkpoint directory."
+                )
+        else:
+            cls._write_json_atomic(checkpoint_config, expected_config)
+
+        shards = [
+            (
+                start,
+                min(start + checkpoint_size, len(records)),
+                checkpoint_dir
+                / (
+                    f"embeddings_{start:06d}_"
+                    f"{min(start + checkpoint_size, len(records)):06d}.npy"
+                ),
+            )
+            for start in range(0, len(records), checkpoint_size)
+        ]
+        missing_rows = sum(stop - start for start, stop, path in shards if not path.exists())
+        print(
+            f"dense checkpoints: {len(shards)} shards, "
+            f"{len(records) - missing_rows}/{len(records)} rows already persisted"
+        )
+        started_at = time.monotonic()
+        encoded_rows = 0
+        pool: dict[Literal["input", "output", "processes"], Any] | None = None
+        if len(devices) > 1:
+            pool = model.start_multi_process_pool(target_devices=devices)
+        try:
+            for start, stop, shard_path in shards:
+                expected_shape = (stop - start, dimension)
+                if shard_path.exists():
+                    existing = np.load(shard_path, mmap_mode="r", allow_pickle=False)
+                    if existing.shape != expected_shape or existing.dtype != np.float32:
+                        raise ValueError(f"Invalid dense checkpoint shard: {shard_path}")
+                    print(f"reusing dense checkpoint {shard_path.name}")
+                    continue
+                texts = [record.retrieval_text for record in records[start:stop]]
+                encoded = model.encode(
+                    texts,
+                    batch_size=batch_size,
+                    normalize_embeddings=True,
+                    convert_to_numpy=True,
+                    show_progress_bar=True,
+                    pool=pool,
+                ).astype(np.float32)
+                if encoded.shape != expected_shape or not np.isfinite(encoded).all():
+                    raise ValueError(f"Invalid embeddings for rows {start}:{stop}: {encoded.shape}")
+                cls._save_array_atomic(shard_path, encoded)
+                encoded_rows += stop - start
+                elapsed = max(time.monotonic() - started_at, 1e-9)
+                rows_per_second = encoded_rows / elapsed
+                remaining_rows = missing_rows - encoded_rows
+                eta_hours = remaining_rows / rows_per_second / 3_600
+                print(
+                    f"saved dense checkpoint {shard_path.name} ({stop}/{len(records)}); "
+                    f"{rows_per_second:.1f} rows/s, ETA {eta_hours:.2f} h"
+                )
+        finally:
+            if pool is not None:
+                model.stop_multi_process_pool(pool)
+
+        index = faiss.IndexFlatIP(dimension)
+        for _start, _stop, shard_path in shards:
+            shard = np.load(shard_path, mmap_mode="r", allow_pickle=False)
+            index.add(np.asarray(shard, dtype=np.float32))
+        if index.ntotal != len(records):
+            raise ValueError(
+                f"Dense checkpoint produced {index.ntotal} vectors for {len(records)} rows"
+            )
+        primary_device = devices[0] if devices else None
+        return cls(
+            index,
+            records,
+            model_id=model_id,
+            model_revision=model_revision,
+            model=model if len(devices) <= 1 else None,
+            device=primary_device,
+            max_seq_length=max_seq_length,
+            use_fp16=use_fp16,
         )
 
     def search(
@@ -170,6 +336,8 @@ class DenseIndex:
                 {
                     "model_id": self.model_id,
                     "model_revision": self.model_revision,
+                    "max_seq_length": self.max_seq_length,
+                    "use_fp16": self.use_fp16,
                     "tables": len(self.records),
                 },
                 indent=2,
@@ -182,7 +350,7 @@ class DenseIndex:
                 handle.write(json.dumps(asdict(record), ensure_ascii=False) + "\n")
 
     @classmethod
-    def load(cls, path: Path) -> DenseIndex:
+    def load(cls, path: Path, *, device: str | None = None) -> DenseIndex:
         config = json.loads((path / "config.json").read_text(encoding="utf-8"))
         records: list[ManifestRecord] = []
         with (path / "records.jsonl").open(encoding="utf-8") as handle:
@@ -198,4 +366,9 @@ class DenseIndex:
             records,
             model_id=str(config["model_id"]),
             model_revision=str(revision) if revision is not None else None,
+            device=device,
+            max_seq_length=(
+                int(config["max_seq_length"]) if config.get("max_seq_length") is not None else None
+            ),
+            use_fp16=bool(config.get("use_fp16", False)),
         )

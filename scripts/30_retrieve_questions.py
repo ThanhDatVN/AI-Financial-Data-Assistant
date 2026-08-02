@@ -41,6 +41,7 @@ def main() -> None:
     parser.add_argument("--companies", type=Path, default=ROOT / "data/raw/ViFinQA/code_stock.csv")
     parser.add_argument("--bm25", type=Path, default=ROOT / "data/index/bm25")
     parser.add_argument("--dense", type=Path)
+    parser.add_argument("--dense-device")
     parser.add_argument("--output", type=Path, default=ROOT / "outputs/retrieval.jsonl")
     parser.add_argument(
         "--top-k",
@@ -63,7 +64,7 @@ def main() -> None:
         questions = questions[: args.limit]
     resolver = CompanyResolver.from_csv(args.companies)
     bm25 = BM25Index.load(args.bm25)
-    dense = DenseIndex.load(args.dense) if args.dense else None
+    dense = DenseIndex.load(args.dense, device=args.dense_device) if args.dense else None
     args.output.parent.mkdir(parents=True, exist_ok=True)
 
     with args.output.open("w", encoding="utf-8", newline="\n") as handle:

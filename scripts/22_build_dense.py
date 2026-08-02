@@ -27,7 +27,19 @@ def main() -> None:
         help="Refuse an unpinned model revision for a submission-candidate index",
     )
     parser.add_argument("--batch-size", type=int, default=16)
-    parser.add_argument("--device")
+    parser.add_argument(
+        "--checkpoint-size",
+        type=int,
+        default=256,
+        help="Persist this many embeddings per resume-safe shard",
+    )
+    parser.add_argument("--max-seq-length", type=int, default=2_048)
+    parser.add_argument("--fp16", action="store_true")
+    parser.add_argument(
+        "--device",
+        action="append",
+        help="Repeat to distribute encoding over multiple GPUs",
+    )
     parser.add_argument("--limit", type=int)
     args = parser.parse_args()
     if args.final_run and not args.model_revision:
@@ -35,12 +47,19 @@ def main() -> None:
     records = list(iter_manifest(args.manifest))
     if args.limit is not None:
         records = records[: args.limit]
-    index = DenseIndex.build(
+    devices: str | list[str] | None = args.device
+    if args.device and len(args.device) == 1:
+        devices = args.device[0]
+    index = DenseIndex.build_checkpointed(
         records,
+        checkpoint_dir=args.output / "checkpoints",
         model_id=args.model,
         model_revision=args.model_revision,
         batch_size=args.batch_size,
-        device=args.device,
+        checkpoint_size=args.checkpoint_size,
+        max_seq_length=args.max_seq_length,
+        device=devices,
+        use_fp16=args.fp16,
     )
     index.save(args.output)
     print(f"wrote dense index with {len(records)} tables to {args.output}")
