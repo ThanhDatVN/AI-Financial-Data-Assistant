@@ -79,3 +79,10 @@ def test_kaggle_runtime_pins_are_dependency_compatible() -> None:
     assert "faiss-cpu==1.9.0.post1" in dense_requirements
     assert "Unidecode==1.3.8" in dense_requirements
     assert "ftfy==6.3.1" in dense_requirements
+
+
+def test_dense_notebook_bootstraps_and_probes_backend_import() -> None:
+    code = _compiled_code(BUILDER_NOTEBOOK)
+    assert '"bm25s==0.2.6"' in code
+    assert "from vifinqa.retrieval.dense import DenseIndex" in code
+    assert "DenseIndex.__name__ == 'DenseIndex'" in code
