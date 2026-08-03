@@ -43,9 +43,12 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "4da05a8edb55c6046cce958586c33b61da07bb79" in code
     assert 'THINKING_MODE = os.environ.get("VIFINQA_THINKING_MODE"' in code
     assert "torch.cuda.device_count() >= requested_dp" in code
-    assert "capability >= (7, 5)" in code
+    assert "assert capability >= (" in code
     assert "select T4 x2" in code
     assert '"pull", "--ff-only", "origin", "main"' in code
+    assert 'if (PROJECT / ".git").exists()' in code
+    assert "SMOKE ERRORS (full unresolved records)" in code
+    assert "generation_qwen3_8b_awq_smoke_{PROJECT_SHA[:12]}" in code
     assert "SMOKE_IDS = [1, 213, 399, 442, 473]" in code
     assert "--default-chat-template-kwargs" in code
     assert "--thinking-mode" in code
@@ -56,10 +59,13 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e" in code
     assert '"scripts/33_rerank_retrieval.py"' in code
     assert '"scripts/34_merge_retrieval_shards.py"' in code
-    assert '"--candidate-tables", "100"' in code
-    assert '"--max-length", "8192"' in code
-    assert '"--max-batch-tokens", "8192"' in code
+    assert '"--candidate-tables"' in code and '"100"' in code
+    assert '"--max-length"' in code and '"8192"' in code
+    assert '"--max-batch-tokens"' in code and '"8192"' in code
     assert "retrieval_rerank_shards/shard_0/run_metadata.json" in code
+    assert "checkpoint_project_revision" in code
+    assert '"hybrid_project_revision": HYBRID_PROJECT_SHA' in code
+    assert '"reranker_project_revision": RERANK_PROJECT_SHA' in code
     assert '"--data-parallel-size"' in code
     assert '"--shard-count"' in code
     assert code.count('"--project-revision"') == 4

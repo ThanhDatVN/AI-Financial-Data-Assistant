@@ -5,7 +5,11 @@ import pytest
 
 from vifinqa.programs.compiler import compile_expression
 from vifinqa.programs.ir import BinaryExpr, CellExpr
-from vifinqa.programs.serde import PROGRAM_JSON_SCHEMA, expression_from_dict
+from vifinqa.programs.serde import (
+    PROGRAM_GRAMMAR_SCHEMA,
+    PROGRAM_JSON_SCHEMA,
+    expression_from_dict,
+)
 
 
 def _sample_program() -> dict[str, object]:
@@ -38,6 +42,23 @@ def test_recursive_program_schema_and_parser_accept_typed_tree() -> None:
     assert isinstance(expression, BinaryExpr)
     assert isinstance(expression.left, CellExpr)
     assert "df1.loc" in compile_expression(expression)
+
+
+def test_vllm_grammar_schema_omits_only_backend_unsupported_uniqueness() -> None:
+    properties = PROGRAM_JSON_SCHEMA["properties"]
+    grammar_properties = PROGRAM_GRAMMAR_SCHEMA["properties"]
+    assert isinstance(properties, dict)
+    assert isinstance(grammar_properties, dict)
+    canonical_variables = properties["selected_variables"]
+    grammar_variables = grammar_properties["selected_variables"]
+    assert isinstance(canonical_variables, dict)
+    assert isinstance(grammar_variables, dict)
+    assert canonical_variables["uniqueItems"] is True
+    assert "uniqueItems" not in grammar_variables
+
+    restored = dict(grammar_variables)
+    restored["uniqueItems"] = True
+    assert restored == canonical_variables
 
 
 def test_program_parser_rejects_extra_fields_and_unequal_arg_extremum() -> None:

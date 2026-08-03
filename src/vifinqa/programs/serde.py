@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import math
 import re
 from typing import Literal, cast
@@ -148,6 +149,17 @@ PROGRAM_JSON_SCHEMA: dict[str, object] = {
         },
     },
 }
+
+# vLLM 0.19.1 rejects the otherwise valid JSON Schema keyword
+# ``uniqueItems`` when compiling a structured-output grammar. Preserve the
+# canonical schema and send a backend-compatible copy to constrained decoding;
+# the generation runner enforces uniqueness after decoding.
+PROGRAM_GRAMMAR_SCHEMA: dict[str, object] = copy.deepcopy(PROGRAM_JSON_SCHEMA)
+selected_variables_schema = cast(
+    dict[str, object],
+    cast(dict[str, object], PROGRAM_GRAMMAR_SCHEMA["properties"])["selected_variables"],
+)
+selected_variables_schema.pop("uniqueItems", None)
 
 
 def _object(

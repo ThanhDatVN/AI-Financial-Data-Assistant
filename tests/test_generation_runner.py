@@ -96,6 +96,19 @@ def test_candidate_limit_expands_to_entity_year_routes() -> None:
     assert runner._candidate_limit(row, minimum=10) == 10
 
 
+def test_selected_variables_remain_unique_after_grammar_compatibility_filter() -> None:
+    assert runner._as_unique_str_list(["df1", "df2"], field="selected_variables") == [
+        "df1",
+        "df2",
+    ]
+    try:
+        runner._as_unique_str_list(["df1", "df1"], field="selected_variables")
+    except ValueError as exc:
+        assert "must not contain duplicates" in str(exc)
+    else:
+        raise AssertionError("Expected duplicate selected variables to fail")
+
+
 def test_select_rows_uses_stable_requested_ids_without_changing_run_identity() -> None:
     rows = [{"id": 1}, {"id": "2"}, {"id": 3}]
     assert runner._select_rows(rows, question_ids=[3, 1], limit=None) == [rows[2], rows[0]]

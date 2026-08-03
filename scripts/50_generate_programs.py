@@ -10,7 +10,7 @@ import time
 from pathlib import Path
 
 import pandas as pd
-from openai import OpenAI
+from openai import BadRequestError, OpenAI
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
@@ -28,7 +28,11 @@ from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
 from vifinqa.programs.grounding import prepare_program, validate_query_coverage  # noqa: E402
 from vifinqa.programs.ir import Dimension  # noqa: E402
-from vifinqa.programs.serde import PROGRAM_JSON_SCHEMA, expression_from_dict  # noqa: E402
+from vifinqa.programs.serde import (  # noqa: E402
+    PROGRAM_GRAMMAR_SCHEMA,
+    PROGRAM_JSON_SCHEMA,
+    expression_from_dict,
+)
 
 SEED = 20260802
 
@@ -53,6 +57,13 @@ def _as_str_list(value: object, *, field: str) -> list[str]:
     if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
         raise TypeError(f"{field} must be a list of strings")
     return value
+
+
+def _as_unique_str_list(value: object, *, field: str) -> list[str]:
+    items = _as_str_list(value, field=field)
+    if len(items) != len(set(items)):
+        raise ValueError(f"{field} must not contain duplicates")
+    return items
 
 
 def _as_int_list(value: object, *, field: str) -> list[int]:
@@ -361,7 +372,7 @@ def main() -> None:
                             "json_schema": {
                                 "name": "pandas_program",
                                 "strict": True,
-                                "schema": PROGRAM_JSON_SCHEMA,
+                                "schema": PROGRAM_GRAMMAR_SCHEMA,
                             },
                         },
                         extra_body=extra_body,
@@ -372,7 +383,7 @@ def main() -> None:
                     program = json.loads(content)
                     if not isinstance(program, dict):
                         raise ValueError("Model output must be an object")
-                    selected = _as_str_list(
+                    selected = _as_unique_str_list(
                         program.get("selected_variables"), field="selected_variables"
                     )
                     if any(variable not in frames for variable in selected):
@@ -417,6 +428,8 @@ def main() -> None:
                             "error": str(attempt_exc),
                         }
                     )
+                    if isinstance(attempt_exc, BadRequestError):
+                        raise
                     if attempt == args.max_attempts:
                         raise
             if successful is None:
@@ -477,15 +490,15 @@ def main() -> None:
             )
 
     state_rows = completed_checkpoint.load()
-    predictions = []
-    trace_rows = []
+    predictions: list[dict[str, object]] = []
+    trace_rows: list[dict[str, object]] = []
     for state in state_rows:
-        prediction = state.get("prediction")
-        trace = state.get("trace")
-        if not isinstance(prediction, dict) or not isinstance(trace, dict):
+        stored_prediction = state.get("prediction")
+        stored_trace = state.get("trace")
+        if not isinstance(stored_prediction, dict) or not isinstance(stored_trace, dict):
             raise TypeError("Completed state must contain prediction and trace objects")
-        predictions.append(prediction)
-        trace_rows.append(trace)
+        predictions.append(stored_prediction)
+        trace_rows.append(stored_trace)
     predictions.sort(key=lambda item: _as_int(item["id"], field="id"))
     trace_rows.sort(key=lambda item: _as_int(item["id"], field="id"))
     write_jsonl_atomic(predictions_path, predictions)
