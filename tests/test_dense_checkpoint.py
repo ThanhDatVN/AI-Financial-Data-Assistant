@@ -56,6 +56,25 @@ class FakeSentenceTransformer:
         return values / np.linalg.norm(values, axis=1, keepdims=True)
 
 
+class ModernFakeSentenceTransformer(FakeSentenceTransformer):
+    preprocess_calls = 0
+    dimension_calls = 0
+
+    def preprocess(self, texts: list[str]) -> dict[str, torch.Tensor]:
+        type(self).preprocess_calls += 1
+        return super().tokenize(texts)
+
+    def get_embedding_dimension(self) -> int:
+        type(self).dimension_calls += 1
+        return 3
+
+    def tokenize(self, texts: list[str]) -> dict[str, torch.Tensor]:
+        raise AssertionError("The deprecated tokenizer API must not be called")
+
+    def get_sentence_embedding_dimension(self) -> int:
+        raise AssertionError("The deprecated dimension API must not be called")
+
+
 def _record(index: int) -> ManifestRecord:
     return ManifestRecord(
         table_ref=f"AAA_2024|table_{index}",
@@ -78,6 +97,25 @@ def _record(index: int) -> ManifestRecord:
         source_path="AAA/report.html",
         html_sha256="0" * 64,
     )
+
+
+def test_checkpointed_dense_build_uses_modern_sentence_transformer_api(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    monkeypatch.setattr(dense_module, "SentenceTransformer", ModernFakeSentenceTransformer)
+    ModernFakeSentenceTransformer.preprocess_calls = 0
+    ModernFakeSentenceTransformer.dimension_calls = 0
+
+    built = DenseIndex.build_checkpointed(
+        [_record(1)],
+        checkpoint_dir=tmp_path / "checkpoints",
+        model_id="fake/model",
+        checkpoint_size=1,
+    )
+
+    assert built is not None
+    assert ModernFakeSentenceTransformer.preprocess_calls == 1
+    assert ModernFakeSentenceTransformer.dimension_calls == 1
 
 
 def test_checkpointed_dense_build_resumes_completed_shards(

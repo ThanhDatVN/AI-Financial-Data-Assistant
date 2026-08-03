@@ -119,12 +119,26 @@ class DenseIndex:
     ) -> list[int]:
         lengths: list[int] = []
         for start in range(0, len(texts), chunk_size):
-            tokenized = model.tokenize(texts[start : start + chunk_size])
+            inputs = texts[start : start + chunk_size]
+            preprocess = getattr(model, "preprocess", None)
+            tokenized = preprocess(inputs) if callable(preprocess) else model.tokenize(inputs)
             attention_mask = tokenized.get("attention_mask")
             if attention_mask is None:
                 raise ValueError("SentenceTransformer tokenizer did not return an attention mask")
             lengths.extend(int(value) for value in attention_mask.sum(dim=1).tolist())
         return lengths
+
+    @staticmethod
+    def _embedding_dimension(model: SentenceTransformer) -> int:
+        get_embedding_dimension = getattr(model, "get_embedding_dimension", None)
+        dimension = (
+            get_embedding_dimension()
+            if callable(get_embedding_dimension)
+            else model.get_sentence_embedding_dimension()
+        )
+        if dimension is None:
+            raise ValueError("SentenceTransformer did not report an embedding dimension")
+        return int(dimension)
 
     @classmethod
     def build(
@@ -187,9 +201,7 @@ class DenseIndex:
         model.max_seq_length = max_seq_length
         if use_fp16 and any(value.startswith("cuda") for value in devices):
             model.half()
-        dimension = model.get_sentence_embedding_dimension()
-        if dimension is None:
-            raise ValueError(f"Model {model_id} did not report an embedding dimension")
+        dimension = cls._embedding_dimension(model)
         token_lengths = cls._token_lengths(model, [record.retrieval_text for record in records])
         if sort_by_length:
             ordered = sorted(

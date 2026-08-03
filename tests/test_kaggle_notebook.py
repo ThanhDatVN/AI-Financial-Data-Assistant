@@ -83,6 +83,7 @@ def test_kaggle_runtime_pins_are_dependency_compatible() -> None:
 
 def test_dense_notebook_bootstraps_and_probes_backend_import() -> None:
     code = _compiled_code(BUILDER_NOTEBOOK)
-    assert '"bm25s==0.2.6"' in code
+    assert '"bm25s==0.2.6"' not in code
+    assert '"pull", "--ff-only", "origin", "main"' in code
     assert "from vifinqa.retrieval.dense import DenseIndex" in code
     assert "DenseIndex.__name__ == 'DenseIndex'" in code
