@@ -42,6 +42,10 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "Qwen/Qwen3-8B-AWQ" in code
     assert "4da05a8edb55c6046cce958586c33b61da07bb79" in code
     assert 'THINKING_MODE = os.environ.get("VIFINQA_THINKING_MODE"' in code
+    assert "torch.cuda.device_count() >= requested_dp" in code
+    assert "capability >= (7, 5)" in code
+    assert "select T4 x2" in code
+    assert '"pull", "--ff-only", "origin", "main"' in code
     assert "SMOKE_IDS = [1, 213, 399, 442, 473]" in code
     assert "--default-chat-template-kwargs" in code
     assert "--thinking-mode" in code
