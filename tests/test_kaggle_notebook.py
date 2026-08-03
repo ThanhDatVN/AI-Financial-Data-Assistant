@@ -66,6 +66,11 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert '"scripts/51_merge_generation_shards.py"' in code
     assert 'INPUT_ROOT.rglob("generation_qwen3_8b_awq_shards/shard_0/run_metadata.json")' in code
     assert "VLLM_CONFIG" in code
+    assert "cuda_driver_linker_environment" in code
+    assert 'linker_name = linker_dir / "libcuda.so"' in code
+    assert 'for variable in ("LIBRARY_PATH", "LD_LIBRARY_PATH")' in code
+    assert "env=server_environment" in code
+    assert "[-50_000:]" in code
     assert "Qwen2.5" not in code
 
 
