@@ -150,16 +150,60 @@ PROGRAM_JSON_SCHEMA: dict[str, object] = {
     },
 }
 
-# vLLM 0.19.1 rejects the otherwise valid JSON Schema keyword
-# ``uniqueItems`` when compiling a structured-output grammar. Preserve the
-# canonical schema and send a backend-compatible copy to constrained decoding;
-# the generation runner enforces uniqueness after decoding.
-PROGRAM_GRAMMAR_SCHEMA: dict[str, object] = copy.deepcopy(PROGRAM_JSON_SCHEMA)
-selected_variables_schema = cast(
-    dict[str, object],
-    cast(dict[str, object], PROGRAM_GRAMMAR_SCHEMA["properties"])["selected_variables"],
-)
-selected_variables_schema.pop("uniqueItems", None)
+PROGRAM_MAX_DEPTH = 20
+
+
+def _grammar_ref(name: str) -> dict[str, object]:
+    return {"$ref": f"#/$defs/{name}"}
+
+
+def _replace_expression_refs(value: object, *, depth: int) -> object:
+    if isinstance(value, dict):
+        if value == _EXPRESSION_REF:
+            return _grammar_ref(f"expression_{depth}")
+        return {
+            str(key): _replace_expression_refs(item, depth=depth) for key, item in value.items()
+        }
+    if isinstance(value, list):
+        return [_replace_expression_refs(item, depth=depth) for item in value]
+    return copy.deepcopy(value)
+
+
+def _build_program_grammar_schema() -> dict[str, object]:
+    """Build an acyclic vLLM grammar with the parser's full depth budget."""
+
+    schema = copy.deepcopy(PROGRAM_JSON_SCHEMA)
+    properties = cast(dict[str, object], schema["properties"])
+    selected_variables = cast(dict[str, object], properties["selected_variables"])
+    # vLLM 0.19.1 rejects this valid JSON Schema validation keyword. The
+    # generation runner enforces the same invariant after constrained decoding.
+    selected_variables.pop("uniqueItems", None)
+
+    canonical_defs = cast(dict[str, object], schema["$defs"])
+    grammar_defs: dict[str, object] = {
+        "cell": copy.deepcopy(canonical_defs["cell"]),
+        "literal": copy.deepcopy(canonical_defs["literal"]),
+    }
+    recursive_kinds = ("binary", "aggregate", "count_if", "arg_extremum")
+    for depth in range(PROGRAM_MAX_DEPTH + 1):
+        variants = [_grammar_ref("cell"), _grammar_ref("literal")]
+        if depth:
+            for kind in recursive_kinds:
+                definition_name = f"{kind}_{depth}"
+                grammar_defs[definition_name] = _replace_expression_refs(
+                    canonical_defs[kind], depth=depth - 1
+                )
+                variants.append(_grammar_ref(definition_name))
+        grammar_defs[f"expression_{depth}"] = {"oneOf": variants}
+
+    properties["program"] = _grammar_ref(f"expression_{PROGRAM_MAX_DEPTH}")
+    schema["$defs"] = grammar_defs
+    return schema
+
+
+# Keep the canonical recursive schema for validation and provenance. vLLM gets
+# an equivalent acyclic schema because recursive XGrammar compilation can stall.
+PROGRAM_GRAMMAR_SCHEMA = _build_program_grammar_schema()
 
 
 def _object(
