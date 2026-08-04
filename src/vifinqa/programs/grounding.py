@@ -29,7 +29,7 @@ _UNIT_DIMENSIONS: dict[str, Dimension] = {
     "PERCENT": "PERCENT",
     "SHARES": "SHARES",
 }
-_TARGET_DIMENSIONS: dict[str, Dimension] = {
+TARGET_DIMENSIONS: dict[str, Dimension] = {
     "VND": "VND",
     "THOUSAND_VND": "VND",
     "MILLION_VND": "VND",
@@ -271,7 +271,7 @@ def prepare_program(
     _validate_cells(expression, frames)
     inferred = infer_dimension(expression)
     try:
-        expected = _TARGET_DIMENSIONS[target_unit]
+        expected = TARGET_DIMENSIONS[target_unit]
     except KeyError as exc:
         raise ValueError(f"Unsupported target unit: {target_unit}") from exc
     compatible = inferred == expected or (expected == "PERCENT" and inferred == "RATIO")

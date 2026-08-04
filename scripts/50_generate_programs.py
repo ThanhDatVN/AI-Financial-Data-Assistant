@@ -253,13 +253,9 @@ def main() -> None:
         shard_count=args.shard_count,
         shard_index=args.shard_index,
     )
-    candidate_refs = {
-        ref
-        for row in rows
-        for ref in _as_str_list(row["fused"], field="fused")[
-            : _candidate_limit(row, minimum=args.candidate_tables)
-        ]
-    }
+    # Load the whole ranked list, not the head of it: tables holding no number are skipped
+    # below, and the budget has to be refilled from further down.
+    candidate_refs = {ref for row in rows for ref in _as_str_list(row["fused"], field="fused")}
     store = TableStore.from_parquet(args.data_root, args.manifest, candidate_refs)
     args.output.mkdir(parents=True, exist_ok=True)
     data_dir = args.output / "data"
@@ -343,21 +339,32 @@ def main() -> None:
         attempt_failures: list[dict[str, object]] = []
         try:
             candidate_limit = _candidate_limit(row, minimum=args.candidate_tables)
-            refs = _as_str_list(row["fused"], field="fused")[:candidate_limit]
+            refs: list[str] = []
             schemas: list[CandidateSchema] = []
             frames: dict[str, pd.DataFrame] = {}
             csv_paths: dict[str, str] = {}
             table_refs: dict[str, str] = {}
-            for index, table_ref in enumerate(refs, start=1):
-                variable = f"df{index}"
+            for table_ref in _as_str_list(row["fused"], field="fused"):
+                if len(schemas) >= candidate_limit:
+                    break
                 record, table = store.load(str(table_ref))
                 frame = parsed_table_to_long_frame(record, table)
+                numeric_cells = numeric_cells_of(frame)
+                # About one retrieved table in sixteen parses to no number at all, and a
+                # third of questions are offered one. Every such table is a dead end that
+                # also spends prompt budget, so fill the slot from further down the ranking.
+                if not numeric_cells:
+                    continue
+                variable = f"df{len(schemas) + 1}"
                 relative = f"data/q{question_id}_{variable}.csv"
                 frame.to_csv(args.output / relative, index=False, encoding="utf-8")
-                schemas.append(CandidateSchema(variable, record, table, numeric_cells_of(frame)))
+                schemas.append(CandidateSchema(variable, record, table, numeric_cells))
                 frames[variable] = frame
                 csv_paths[variable] = relative
                 table_refs[variable] = record.table_ref
+                refs.append(record.table_ref)
+            if not schemas:
+                raise ValueError("No retrieved table for this question contains a parsed number")
             spec = row["query_spec"]
             if not isinstance(spec, dict):
                 raise ValueError("query_spec must be an object")
