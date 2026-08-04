@@ -129,6 +129,7 @@ def _fingerprint(
     candidate_tables: int,
     max_tokens: int,
     execution_timeout: float,
+    request_timeout: float,
     memory_limit_mb: int | None,
     thinking_mode: str,
     max_attempts: int,
@@ -146,6 +147,7 @@ def _fingerprint(
         "candidate_tables": candidate_tables,
         "max_tokens": max_tokens,
         "execution_timeout": execution_timeout,
+        "request_timeout": request_timeout,
         "memory_limit_mb": memory_limit_mb,
         "thinking_mode": thinking_mode,
         "max_attempts": max_attempts,
@@ -198,6 +200,12 @@ def main() -> None:
         default=3,
         help="Retry failed generation/grounding/execution with validator feedback",
     )
+    parser.add_argument(
+        "--request-timeout",
+        type=float,
+        default=180.0,
+        help="Seconds to wait for one generation before giving the attempt up",
+    )
     parser.add_argument("--execution-timeout", type=float, default=10.0)
     parser.add_argument("--memory-limit-mb", type=int)
     parser.add_argument("--limit", type=int)
@@ -222,6 +230,8 @@ def main() -> None:
         parser.error("--final-run requires --project-revision with the exact Git commit SHA")
     if args.candidate_tables <= 0 or args.max_tokens <= 0 or args.execution_timeout <= 0:
         parser.error("candidate tables, max tokens, and execution timeout must be positive")
+    if args.request_timeout <= 0:
+        parser.error("request timeout must be positive")
     if args.memory_limit_mb is not None and args.memory_limit_mb <= 0:
         parser.error("--memory-limit-mb must be positive")
     if args.limit is not None and args.limit <= 0:
@@ -262,6 +272,7 @@ def main() -> None:
         candidate_tables=args.candidate_tables,
         max_tokens=args.max_tokens,
         execution_timeout=args.execution_timeout,
+        request_timeout=args.request_timeout,
         memory_limit_mb=args.memory_limit_mb,
         thinking_mode=args.thinking_mode,
         max_attempts=args.max_attempts,
@@ -309,6 +320,10 @@ def main() -> None:
     client = OpenAI(
         base_url=args.base_url,
         api_key=os.environ.get(args.api_key_env, "local-vllm"),
+        # The client default is ten minutes. A question that stalls twice then burns twenty
+        # minutes of a run that has to finish 1,012 of them, so cut losses far sooner.
+        timeout=args.request_timeout,
+        max_retries=0,
     )
 
     pending_rows = [row for row in rows if _as_int(row["id"], field="id") not in completed]

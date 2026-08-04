@@ -7,7 +7,7 @@ from vifinqa.programs.compiler import compile_expression
 from vifinqa.programs.dimensions import infer_dimension
 from vifinqa.programs.executor import execute_expression, execute_expression_isolated
 from vifinqa.programs.grounding import (
-    normalize_value_columns,
+    normalize_cells,
     prepare_program,
     validate_answer_plausibility,
     validate_query_coverage,
@@ -154,9 +154,29 @@ def test_grounding_points_cells_at_the_column_their_unit_dictates() -> None:
     assert execute_expression(compile_expression(prepared), frames) == 7.0
 
     ratio = CellExpr("df2", 0, 1, value_column="base_value", dimension="PERCENT")
-    normalized = normalize_value_columns(ratio, frames)
+    normalized = normalize_cells(ratio, frames)
     assert isinstance(normalized, CellExpr)
     assert normalized.value_column == "numeric_value"
+
+    # A model that labelled a million-VND cell a percentage used to repeat that claim until
+    # its attempts ran out. The source unit already settles the question.
+    mislabelled = CellExpr("df1", 0, 1, value_column="numeric_value", dimension="PERCENT")
+    corrected = normalize_cells(mislabelled, frames)
+    assert isinstance(corrected, CellExpr)
+    assert (corrected.dimension, corrected.value_column) == ("VND", "base_value")
+
+    # Without lineage the claim stands, and validation still refuses a bare currency claim.
+    unknown = pd.DataFrame(
+        {
+            "row_index": [0],
+            "column_index": [1],
+            "source_unit": ["UNKNOWN"],
+            "numeric_value": [3.0],
+            "base_value": [3.0],
+        }
+    )
+    claimed = CellExpr("df3", 0, 1, dimension="COUNT")
+    assert normalize_cells(claimed, {"df3": unknown}) == claimed
 
 
 def test_grounding_refuses_a_multi_cell_program_that_cancels_to_zero() -> None:

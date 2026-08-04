@@ -103,47 +103,50 @@ def _cell_source_unit(cell: CellExpr, frames: Mapping[str, pd.DataFrame]) -> str
     return str(matches.iloc[0]["source_unit"])
 
 
-def normalize_value_columns(
-    expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]
-) -> ScalarExpr:
-    """Point every cell at the column its source unit dictates.
+def normalize_cells(expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]) -> ScalarExpr:
+    """Settle each cell's unit and column from its source lineage.
 
-    Which column carries the truth follows from the unit alone: a scaled currency or share
-    figure only means anything through `base_value`, and a percentage only through
-    `numeric_value`. Deciding that here keeps a model that guessed the other column from
-    losing a question over a detail it was never in a position to choose.
+    Both follow from the source unit with no judgement left over: a scaled currency or share
+    figure only means anything through `base_value`, a percentage only through
+    `numeric_value`, and the dimension is whatever the unit says it is. A model that labels
+    a million-VND cell as a percentage is not proposing a different reading of the evidence,
+    it is guessing at a fact the evidence already fixes, so correct it instead of spending
+    the question's remaining attempts on the same mistake.
+
+    Cells whose source unit is unknown keep the claimed dimension, and `_validate_cells`
+    still refuses a currency or share claim that has no lineage behind it.
     """
     if isinstance(expression, CellExpr):
         dimension = _UNIT_DIMENSIONS.get(_cell_source_unit(expression, frames) or "", "UNKNOWN")
         if dimension in {"VND", "USD", "SHARES"}:
-            return replace(expression, value_column="base_value")
+            return replace(expression, value_column="base_value", dimension=dimension)
         if dimension == "PERCENT":
-            return replace(expression, value_column="numeric_value")
+            return replace(expression, value_column="numeric_value", dimension=dimension)
         return expression
     if isinstance(expression, LiteralExpr):
         return expression
     if isinstance(expression, BinaryExpr):
         return replace(
             expression,
-            left=normalize_value_columns(expression.left, frames),
-            right=normalize_value_columns(expression.right, frames),
+            left=normalize_cells(expression.left, frames),
+            right=normalize_cells(expression.right, frames),
         )
     if isinstance(expression, AggregateExpr):
         return replace(
             expression,
-            operands=tuple(normalize_value_columns(item, frames) for item in expression.operands),
+            operands=tuple(normalize_cells(item, frames) for item in expression.operands),
         )
     if isinstance(expression, CountIfExpr):
         return replace(
             expression,
-            operands=tuple(normalize_value_columns(item, frames) for item in expression.operands),
-            threshold=normalize_value_columns(expression.threshold, frames),
+            operands=tuple(normalize_cells(item, frames) for item in expression.operands),
+            threshold=normalize_cells(expression.threshold, frames),
         )
     if isinstance(expression, ArgExtremumExpr):
         return replace(
             expression,
-            keys=tuple(normalize_value_columns(item, frames) for item in expression.keys),
-            values=tuple(normalize_value_columns(item, frames) for item in expression.values),
+            keys=tuple(normalize_cells(item, frames) for item in expression.keys),
+            values=tuple(normalize_cells(item, frames) for item in expression.values),
         )
     raise TypeError(f"Unsupported expression: {type(expression).__name__}")
 
@@ -264,7 +267,7 @@ def prepare_program(
         )
     if set(frames) != referenced:
         raise ValueError("Loaded frames must exactly match referenced variables")
-    expression = normalize_value_columns(expression, frames)
+    expression = normalize_cells(expression, frames)
     _validate_cells(expression, frames)
     inferred = infer_dimension(expression)
     try:
