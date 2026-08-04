@@ -31,6 +31,7 @@ from vifinqa.generation.prompt import (  # noqa: E402
 from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
 from vifinqa.programs.grounding import (  # noqa: E402
+    cells_in_program,
     prepare_program,
     referenced_variables,
     validate_answer_plausibility,
@@ -382,6 +383,8 @@ def main() -> None:
                         "\n\nThe previous candidate failed deterministic validation. "
                         f"Correct it and return a complete replacement JSON. Feedback: {feedback}"
                     )
+                attempt_started = time.monotonic()
+                completion_tokens: int | None = None
                 try:
                     extra_body: dict[str, object] = {"top_k": 20}
                     if args.thinking_mode == "disabled":
@@ -406,6 +409,8 @@ def main() -> None:
                         },
                         extra_body=extra_body,
                     )
+                    usage = getattr(response, "usage", None)
+                    completion_tokens = getattr(usage, "completion_tokens", None)
                     content = response.choices[0].message.content
                     if not content:
                         raise ValueError("Model returned empty content")
@@ -442,6 +447,7 @@ def main() -> None:
                     )
                     validate_answer_plausibility(answer, expression)
                     selected_refs = [table_refs[variable] for variable in selected]
+                    attempt_latency = round(time.monotonic() - attempt_started, 2)
                     successful = (
                         program,
                         selected,
@@ -452,11 +458,16 @@ def main() -> None:
                     )
                     break
                 except Exception as attempt_exc:  # noqa: BLE001 - bounded model retry
+                    # Latency and emitted tokens are the only way to tell a question that is
+                    # slow from one the model never finishes, and a timeout reports neither
+                    # unless it is measured here.
                     attempt_failures.append(
                         {
                             "attempt": attempt,
                             "error_type": type(attempt_exc).__name__,
                             "error": str(attempt_exc),
+                            "latency_seconds": round(time.monotonic() - attempt_started, 2),
+                            "completion_tokens": completion_tokens,
                         }
                     )
                     if isinstance(attempt_exc, BadRequestError):
@@ -485,6 +496,9 @@ def main() -> None:
                 "compiled_pandas_query": query,
                 "generation_attempts": len(attempt_failures) + 1,
                 "failed_attempts": attempt_failures,
+                "cells_read": len(cells_in_program(expression)),
+                "latency_seconds": attempt_latency,
+                "completion_tokens": completion_tokens,
             }
             completed_checkpoint.write(
                 {

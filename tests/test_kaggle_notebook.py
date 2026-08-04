@@ -58,10 +58,15 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
         in code
     )
     assert "1012 / (DP * wide_rate) / 3_600" in code
+    # The smoke and widest-route sets are both the hard tail; only a seeded random draw can
+    # say what the run scores or how long it takes.
+    assert "random.Random(20260802).sample" in code
+    assert "decode rate: about" in code
+    assert "1012 * per_question / DP / 3600" in code
     assert "--default-chat-template-kwargs" in code
     assert "--thinking-mode" in code
-    # smoke, widest-route gate, full run
-    assert code.count("--max-attempts") == 3
+    # smoke, widest-route gate, representative sample, full run
+    assert code.count("--max-attempts") == 4
     assert 'dense_config.get("model_revision") == DENSE_REVISION' in code
     assert "scripts/22_build_dense.py" not in code
     assert "BAAI/bge-reranker-v2-m3" in code
@@ -77,8 +82,8 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert '"reranker_project_revision": RERANK_PROJECT_SHA' in code
     assert '"--data-parallel-size"' in code
     assert '"--shard-count"' in code
-    # hybrid retrieval, reranking, smoke, widest-route gate, full run
-    assert code.count('"--project-revision"') == 5
+    # hybrid retrieval, reranking, smoke, widest-route gate, sample, full run
+    assert code.count('"--project-revision"') == 6
     assert '"scripts/51_merge_generation_shards.py"' in code
     assert 'iter_input_paths("generation_qwen3_8b_awq_shards/shard_0/run_metadata.json")' in code
     assert "VLLM_CONFIG" in code
