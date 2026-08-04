@@ -183,7 +183,13 @@ def main() -> None:
         default=10,
         help="Minimum schemas per question; route coverage can increase this value",
     )
-    parser.add_argument("--max-tokens", type=int, default=1024)
+    parser.add_argument(
+        "--max-tokens",
+        type=int,
+        # A cohort program over the widest route fan-out spends about 1,300 tokens on its
+        # coordinates alone, so a 1,024 budget truncates exactly the hardest questions.
+        default=2048,
+    )
     parser.add_argument(
         "--max-attempts",
         type=int,

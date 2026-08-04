@@ -10,6 +10,7 @@ from vifinqa.programs.ir import BinaryExpr, CellExpr
 from vifinqa.programs.serde import (
     GRAMMAR_MAX_DEPTH,
     GRAMMAR_MAX_ITEMS,
+    MAX_ROUTE_FAN_OUT,
     PARSER_MAX_DEPTH,
     PARSER_MAX_ITEMS,
     PROGRAM_GRAMMAR_SCHEMA,
@@ -153,16 +154,36 @@ def test_parser_still_enforces_its_own_depth_and_width_budget() -> None:
         )
 
 
+def test_vllm_grammar_admits_the_widest_question_in_the_release() -> None:
+    # Routing fans out to tickers x years, so a cohort program over the widest question
+    # needs one operand per route. Losing those means losing the hardest questions.
+    assert GRAMMAR_MAX_ITEMS >= MAX_ROUTE_FAN_OUT
+    cohort = [_LITERAL] * MAX_ROUTE_FAN_OUT
+    payload = {
+        "selected_variables": ["df1"],
+        "program": {
+            "kind": "arg_extremum",
+            "mode": "argmax",
+            "keys": cohort,
+            "values": cohort,
+        },
+    }
+    jsonschema.validate(payload, PROGRAM_GRAMMAR_SCHEMA)
+    expression_from_dict(payload["program"])
+
+
 def test_vllm_grammar_stays_small_enough_to_compile() -> None:
     # A grammar unrolled to the parser budget reached 103 definitions holding 80 arrays of
     # 100 items, and XGrammar compilation stalled before emitting a single token.
     grammar_defs = PROGRAM_GRAMMAR_SCHEMA["$defs"]
     assert isinstance(grammar_defs, dict)
-    assert len(grammar_defs) <= 32
+    assert len(grammar_defs) <= 40
     serialized = json.dumps(PROGRAM_GRAMMAR_SCHEMA)
-    assert len(serialized) <= 12_000
+    assert len(serialized) <= 16_000
     assert f'"maxItems": {PARSER_MAX_ITEMS}' not in serialized
     assert serialized.count(f'"maxItems": {GRAMMAR_MAX_ITEMS}') == 4 * GRAMMAR_MAX_DEPTH
+    # Bounded repetitions are what the grammar compiler expands, so cap the total.
+    assert 4 * GRAMMAR_MAX_DEPTH * GRAMMAR_MAX_ITEMS <= 1_000
 
 
 def test_program_parser_rejects_extra_fields_and_unequal_arg_extremum() -> None:

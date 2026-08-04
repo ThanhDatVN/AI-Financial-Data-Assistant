@@ -157,11 +157,15 @@ PARSER_MAX_ITEMS = 100
 # What the decoder is allowed to reach. Constrained decoding compiles the schema into a
 # grammar up front, and that cost grows with every unrolled level and every bounded
 # repetition: at the parser budget it becomes 103 definitions containing 80 arrays of 100
-# items, which stalls XGrammar compilation before the first token is sampled. These bounds
-# stay far inside what `--max-tokens` can emit anyway, since one cell node already costs
-# tens of tokens, so no reachable program loses its representation.
-GRAMMAR_MAX_DEPTH = 5
-GRAMMAR_MAX_ITEMS = 16
+# items, which stalls XGrammar compilation before the first token is sampled.
+#
+# The width has to clear the widest question in the release rather than a comfortable round
+# number. Routing fans out to `tickers x years`, which reaches 18 on question 442, so a
+# cohort program there needs 18 operands per array. Depth has room to spare because real
+# programs stay shallow: a ratio of sums is two levels and a growth rate is three.
+MAX_ROUTE_FAN_OUT = 18  # measured across all 1,012 questions of the frozen retrieval
+GRAMMAR_MAX_DEPTH = 6
+GRAMMAR_MAX_ITEMS = 32
 
 
 def _grammar_ref(name: str) -> dict[str, object]:
