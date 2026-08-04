@@ -63,6 +63,45 @@ def test_program_prompt_contains_coordinates_but_hides_source_numbers() -> None:
     assert numeric_cells_of(frame) == frozenset({(0, 1)})
 
 
+def test_program_prompt_states_the_cohort_the_program_has_to_cover() -> None:
+    raw = RawTable(1, 1, 1, 0, "<table><tr><td>Doanh thu</td><td>1</td></tr></table>", (), None)
+    table = parse_table(raw)
+    record = ManifestRecord(
+        "DOC|table_1",
+        "DOC",
+        "VIC",
+        2025,
+        "consolidated",
+        1,
+        1,
+        1,
+        0,
+        None,
+        "VND",
+        1,
+        1,
+        2,
+        table.headers,
+        ("Doanh thu",),
+        "",
+        Path("report.txt").as_posix(),
+        "0" * 64,
+    )
+    _, user = build_program_prompt(
+        "Trong nhóm CEO, DIG và VIC, doanh nghiệp nào có doanh thu cao nhất?",
+        [CandidateSchema("df1", record, table)],
+        target_unit="MILLION_VND",
+        target_divisor=1e6,
+        required_tickers=["CEO", "DIG", "VIC"],
+        required_years=[2024, 2025],
+    )
+    # The resolver already knows the group; a program covering one member is rejected, so
+    # the requirement belongs in the prompt rather than in the Vietnamese sentence alone.
+    assert "CEO, DIG, VIC" in user
+    assert "2024, 2025" in user
+    assert "at least one cell from every one of these tickers" in user
+
+
 def test_program_prompt_shows_the_section_that_separates_restatements() -> None:
     raw = RawTable(
         1,

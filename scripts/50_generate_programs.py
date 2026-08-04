@@ -203,7 +203,11 @@ def main() -> None:
     parser.add_argument(
         "--request-timeout",
         type=float,
-        default=180.0,
+        # A nine-company cohort program is the longest thing the model ever has to write, and
+        # on a T4 it decodes at single-digit tokens per second. Three minutes cut those
+        # questions off mid-program every time; the shorter cell form plus this ceiling gives
+        # them room without letting a genuinely stuck request hold the run for ten minutes.
+        default=360.0,
         help="Seconds to wait for one generation before giving the attempt up",
     )
     parser.add_argument("--execution-timeout", type=float, default=10.0)
@@ -356,14 +360,16 @@ def main() -> None:
             spec = row["query_spec"]
             if not isinstance(spec, dict):
                 raise ValueError("query_spec must be an object")
+            required_tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
+            required_years = _as_int_list(spec.get("years"), field="query_spec.years")
             system, user = build_program_prompt(
                 str(row["question"]),
                 schemas,
                 target_unit=str(spec["target_unit"]),
                 target_divisor=float(spec["target_divisor"]),
+                required_tickers=required_tickers,
+                required_years=required_years,
             )
-            required_tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
-            required_years = _as_int_list(spec.get("years"), field="query_spec.years")
             successful: (
                 tuple[dict[str, object], list[str], Dimension, str, float, list[str]] | None
             ) = None

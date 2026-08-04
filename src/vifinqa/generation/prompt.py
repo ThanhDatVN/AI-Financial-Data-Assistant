@@ -59,6 +59,8 @@ def build_program_prompt(
     *,
     target_unit: str,
     target_divisor: float,
+    required_tickers: list[str] | None = None,
+    required_years: list[int] | None = None,
 ) -> tuple[str, str]:
     system = """You translate a Vietnamese financial question into a typed arithmetic IR tree.
 Each variable is a normalized long pandas DataFrame with columns row_index, column_index,
@@ -74,12 +76,28 @@ repeats the same figure across schedules, often with the opposite sign in a cash
 adding those restatements cancels them to zero instead of confirming the figure. Combine cells only
 when the question genuinely asks for a total, a difference, a ratio, or a comparison.
 selected_variables must list exactly the variables your program reads, and nothing you merely
-consulted. Return only JSON matching the supplied schema; never emit Python/Pandas code or source
-values."""
+consulted. Omit value_column and dimension on a cell whose table declares a source unit; grounding
+fills both from that unit, and leaving them out keeps a wide cohort program short enough to finish.
+Return only JSON matching the supplied schema; never emit Python/Pandas code or source values."""
     rendered = "\n\n".join(_render_candidate(candidate) for candidate in candidates)
+    # A cohort question names its group in Vietnamese prose, and a program that answers for
+    # one member of the group is rejected. The resolver already extracted the group, so state
+    # it as a requirement rather than making the model recover it from the sentence.
+    coverage = ""
+    if required_tickers:
+        coverage += (
+            f"Your program must read at least one cell from every one of these tickers: "
+            f"{', '.join(required_tickers)}.\n"
+        )
+    if required_years:
+        coverage += (
+            "It must also cover every one of these report years: "
+            f"{', '.join(str(year) for year in required_years)}.\n"
+        )
     user = (
         f"Question: {question}\n"
-        f"target_unit={target_unit}; target_divisor={target_divisor}\n\n"
+        f"target_unit={target_unit}; target_divisor={target_divisor}\n"
+        f"{coverage}\n"
         f"Candidate schemas (labels only; no source values):\n{rendered}\n\n"
         "Rows list the coordinates that hold a number as `-> values at c...`; a cell node is "
         "only valid at one of those coordinates.\n"

@@ -28,6 +28,8 @@ DIMENSIONS: tuple[Dimension, ...] = (
     "UNKNOWN",
 )
 _VARIABLE_RE = re.compile(r"^df[1-9][0-9]*$")
+# Grounding derives both from the cell's source unit, so a program need not state them.
+CELL_LINEAGE_FIELDS = frozenset({"value_column", "dimension"})
 
 _EXPRESSION_REF: dict[str, object] = {"$ref": "#/$defs/expression"}
 PROGRAM_JSON_SCHEMA: dict[str, object] = {
@@ -64,14 +66,7 @@ PROGRAM_JSON_SCHEMA: dict[str, object] = {
                 "value_column": {"enum": ["numeric_value", "base_value"]},
                 "dimension": {"enum": list(DIMENSIONS)},
             },
-            "required": [
-                "kind",
-                "variable",
-                "row_index",
-                "column_index",
-                "value_column",
-                "dimension",
-            ],
+            "required": ["kind", "variable", "row_index", "column_index"],
             "additionalProperties": False,
         },
         "literal": {
@@ -231,15 +226,17 @@ def _object(
     *,
     required: set[str],
     depth: int,
+    optional: frozenset[str] = frozenset(),
 ) -> dict[str, object]:
     if depth > PARSER_MAX_DEPTH:
         raise ValueError("Program exceeds maximum nesting depth")
     if not isinstance(raw, dict) or not all(isinstance(key, str) for key in raw):
         raise TypeError("Every program node must be an object")
     node = cast(dict[str, object], raw)
-    if set(node) != required:
+    keys = set(node)
+    if not required <= keys or keys - required - optional:
         raise ValueError(
-            f"Program node fields mismatch; expected={sorted(required)}, actual={sorted(node)}"
+            f"Program node fields mismatch; expected={sorted(required)}, actual={sorted(keys)}"
         )
     return node
 
@@ -278,23 +275,25 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
     if kind == "cell":
         node = _object(
             raw,
-            required={
-                "kind",
-                "variable",
-                "row_index",
-                "column_index",
-                "value_column",
-                "dimension",
-            },
+            required={"kind", "variable", "row_index", "column_index"},
+            optional=CELL_LINEAGE_FIELDS,
             depth=_depth,
         )
         variable = node["variable"]
         if not isinstance(variable, str) or not _VARIABLE_RE.fullmatch(variable):
             raise ValueError("variable must match dfN")
+        # Both fields are settled from the evidence's source unit whenever it has one, so a
+        # cell may leave them out. Emitting them costs about four tokens of every ten a
+        # cohort program spends, and a cohort program is what runs closest to the clock.
         value_column = _enum(
-            node["value_column"], {"numeric_value", "base_value"}, field="value_column"
+            node.get("value_column", "base_value"),
+            {"numeric_value", "base_value"},
+            field="value_column",
         )
-        dimension = cast(Dimension, _enum(node["dimension"], set(DIMENSIONS), field="dimension"))
+        dimension = cast(
+            Dimension,
+            _enum(node.get("dimension", "UNKNOWN"), set(DIMENSIONS), field="dimension"),
+        )
         return CellExpr(
             variable=variable,
             row_index=_integer(node["row_index"], field="row_index"),

@@ -186,6 +186,39 @@ def test_vllm_grammar_stays_small_enough_to_compile() -> None:
     assert 4 * GRAMMAR_MAX_DEPTH * GRAMMAR_MAX_ITEMS <= 1_000
 
 
+def test_cell_may_omit_the_fields_that_lineage_settles() -> None:
+    # Spelling out value_column and dimension costs about four of every ten characters a
+    # cohort program writes, and grounding overrides both from the source unit anyway.
+    short: dict[str, object] = {
+        "kind": "cell",
+        "variable": "df18",
+        "row_index": 12,
+        "column_index": 3,
+    }
+    jsonschema.validate({"selected_variables": ["df18"], "program": short}, PROGRAM_GRAMMAR_SCHEMA)
+    parsed = expression_from_dict(short)
+    assert isinstance(parsed, CellExpr)
+    assert (parsed.value_column, parsed.dimension) == ("base_value", "UNKNOWN")
+
+    spelled_out = dict(short, value_column="numeric_value", dimension="PERCENT")
+    jsonschema.validate(
+        {"selected_variables": ["df18"], "program": spelled_out}, PROGRAM_GRAMMAR_SCHEMA
+    )
+    verbose = expression_from_dict(spelled_out)
+    assert isinstance(verbose, CellExpr)
+    assert (verbose.value_column, verbose.dimension) == ("numeric_value", "PERCENT")
+
+    assert (
+        len(json.dumps(short, separators=(",", ":"))) * 2
+        < len(json.dumps(spelled_out, separators=(",", ":"))) * 1.3
+    )
+
+    with pytest.raises(ValueError, match="fields mismatch"):
+        expression_from_dict(dict(short, unexpected=True))
+    with pytest.raises(ValueError, match="fields mismatch"):
+        expression_from_dict({"kind": "cell", "variable": "df1", "row_index": 0})
+
+
 def test_program_parser_rejects_extra_fields_and_unequal_arg_extremum() -> None:
     cell = _sample_program()["program"]
     assert isinstance(cell, dict)
