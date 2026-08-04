@@ -73,6 +73,16 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e" in code
     assert '"scripts/33_rerank_retrieval.py"' in code
     assert '"scripts/34_merge_retrieval_shards.py"' in code
+    # Reranking is hours of cross-encoding whose value against labels is unmeasured, so the
+    # hybrid ranking has to be usable on its own.
+    assert "retrieval_hybrid_qc.json" in code
+    assert "RETRIEVAL = HYBRID" in code
+    rerank_cell = next(
+        "".join(cell["source"])
+        for cell in json.loads(GENERATION_NOTEBOOK.read_text(encoding="utf-8"))["cells"]
+        if cell["cell_type"] == "code" and "33_rerank_retrieval.py" in "".join(cell["source"])
+    )
+    assert "30_retrieve_questions.py" not in rerank_cell
     assert '"--candidate-tables"' in code and '"100"' in code
     assert '"--max-length"' in code and '"8192"' in code
     assert '"--max-batch-tokens"' in code and '"8192"' in code
