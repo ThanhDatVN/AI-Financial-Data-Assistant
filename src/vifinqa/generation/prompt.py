@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+import pandas as pd
+
 from vifinqa.indexing.manifest import ManifestRecord
 from vifinqa.parsing.models import ParsedTable
 
@@ -11,6 +13,24 @@ class CandidateSchema:
     variable: str
     record: ManifestRecord
     table: ParsedTable
+    # Which coordinates actually hold a parsed number. Roughly two cells in five are blank,
+    # dashes or labels, and without this the model picks coordinates blind and loses the
+    # question to a cell that has no value. The positions are structure, not source values.
+    numeric_cells: frozenset[tuple[int, int]] | None = None
+
+
+def numeric_cells_of(frame: pd.DataFrame) -> frozenset[tuple[int, int]]:
+    if not {"row_index", "column_index", "numeric_value"} <= set(frame.columns):
+        return frozenset()
+    populated = frame.loc[frame["numeric_value"].notna(), ["row_index", "column_index"]]
+    return frozenset((int(row), int(column)) for row, column in populated.itertuples(index=False))
+
+
+def _numeric_columns(candidate: CandidateSchema, row_index: int) -> str:
+    if candidate.numeric_cells is None:
+        return ""
+    columns = sorted(column for row, column in candidate.numeric_cells if row == row_index)
+    return "  -> values at " + ",".join(f"c{column}" for column in columns) if columns else ""
 
 
 def _render_candidate(candidate: CandidateSchema) -> str:
@@ -18,7 +38,8 @@ def _render_candidate(candidate: CandidateSchema) -> str:
         f"  c{index}: {label}" for index, label in enumerate(candidate.table.headers)
     )
     rows = "\n".join(
-        f"  r{index}: {row[0] if row else ''}" for index, row in enumerate(candidate.table.rows)
+        f"  r{index}: {row[0] if row else ''}{_numeric_columns(candidate, index)}"
+        for index, row in enumerate(candidate.table.rows)
     )
     record = candidate.record
     # The section a table sits in is what separates a reported figure from the same number
@@ -60,6 +81,8 @@ values."""
         f"Question: {question}\n"
         f"target_unit={target_unit}; target_divisor={target_divisor}\n\n"
         f"Candidate schemas (labels only; no source values):\n{rendered}\n\n"
+        "Rows list the coordinates that hold a number as `-> values at c...`; a cell node is "
+        "only valid at one of those coordinates.\n"
         "Choose the minimum evidence variables needed and emit selected_variables plus program."
     )
     return system, user

@@ -23,7 +23,11 @@ from vifinqa.checkpoints.jsonl import (  # noqa: E402
     write_jsonl_atomic,
 )
 from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame  # noqa: E402
-from vifinqa.generation.prompt import CandidateSchema, build_program_prompt  # noqa: E402
+from vifinqa.generation.prompt import (  # noqa: E402
+    CandidateSchema,
+    build_program_prompt,
+    numeric_cells_of,
+)
 from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
 from vifinqa.programs.grounding import (  # noqa: E402
@@ -330,7 +334,7 @@ def main() -> None:
                 frame = parsed_table_to_long_frame(record, table)
                 relative = f"data/q{question_id}_{variable}.csv"
                 frame.to_csv(args.output / relative, index=False, encoding="utf-8")
-                schemas.append(CandidateSchema(variable, record, table))
+                schemas.append(CandidateSchema(variable, record, table, numeric_cells_of(frame)))
                 frames[variable] = frame
                 csv_paths[variable] = relative
                 table_refs[variable] = record.table_ref
