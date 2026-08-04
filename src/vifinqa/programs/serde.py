@@ -150,27 +150,43 @@ PROGRAM_JSON_SCHEMA: dict[str, object] = {
     },
 }
 
-PROGRAM_MAX_DEPTH = 20
+# What the parser accepts. Programs are validated against these bounds after decoding.
+PARSER_MAX_DEPTH = 20
+PARSER_MAX_ITEMS = 100
+
+# What the decoder is allowed to reach. Constrained decoding compiles the schema into a
+# grammar up front, and that cost grows with every unrolled level and every bounded
+# repetition: at the parser budget it becomes 103 definitions containing 80 arrays of 100
+# items, which stalls XGrammar compilation before the first token is sampled. These bounds
+# stay far inside what `--max-tokens` can emit anyway, since one cell node already costs
+# tens of tokens, so no reachable program loses its representation.
+GRAMMAR_MAX_DEPTH = 5
+GRAMMAR_MAX_ITEMS = 16
 
 
 def _grammar_ref(name: str) -> dict[str, object]:
     return {"$ref": f"#/$defs/{name}"}
 
 
-def _replace_expression_refs(value: object, *, depth: int) -> object:
+def _grammar_variant(value: object, *, depth: int) -> object:
     if isinstance(value, dict):
         if value == _EXPRESSION_REF:
             return _grammar_ref(f"expression_{depth}")
         return {
-            str(key): _replace_expression_refs(item, depth=depth) for key, item in value.items()
+            str(key): (
+                GRAMMAR_MAX_ITEMS
+                if key == "maxItems" and item == PARSER_MAX_ITEMS
+                else _grammar_variant(item, depth=depth)
+            )
+            for key, item in value.items()
         }
     if isinstance(value, list):
-        return [_replace_expression_refs(item, depth=depth) for item in value]
+        return [_grammar_variant(item, depth=depth) for item in value]
     return copy.deepcopy(value)
 
 
 def _build_program_grammar_schema() -> dict[str, object]:
-    """Build an acyclic vLLM grammar with the parser's full depth budget."""
+    """Build an acyclic vLLM grammar small enough to compile before the first token."""
 
     schema = copy.deepcopy(PROGRAM_JSON_SCHEMA)
     properties = cast(dict[str, object], schema["properties"])
@@ -185,18 +201,18 @@ def _build_program_grammar_schema() -> dict[str, object]:
         "literal": copy.deepcopy(canonical_defs["literal"]),
     }
     recursive_kinds = ("binary", "aggregate", "count_if", "arg_extremum")
-    for depth in range(PROGRAM_MAX_DEPTH + 1):
+    for depth in range(GRAMMAR_MAX_DEPTH + 1):
         variants = [_grammar_ref("cell"), _grammar_ref("literal")]
         if depth:
             for kind in recursive_kinds:
                 definition_name = f"{kind}_{depth}"
-                grammar_defs[definition_name] = _replace_expression_refs(
+                grammar_defs[definition_name] = _grammar_variant(
                     canonical_defs[kind], depth=depth - 1
                 )
                 variants.append(_grammar_ref(definition_name))
         grammar_defs[f"expression_{depth}"] = {"oneOf": variants}
 
-    properties["program"] = _grammar_ref(f"expression_{PROGRAM_MAX_DEPTH}")
+    properties["program"] = _grammar_ref(f"expression_{GRAMMAR_MAX_DEPTH}")
     schema["$defs"] = grammar_defs
     return schema
 
@@ -212,7 +228,7 @@ def _object(
     required: set[str],
     depth: int,
 ) -> dict[str, object]:
-    if depth > 20:
+    if depth > PARSER_MAX_DEPTH:
         raise ValueError("Program exceeds maximum nesting depth")
     if not isinstance(raw, dict) or not all(isinstance(key, str) for key in raw):
         raise TypeError("Every program node must be an object")
@@ -246,8 +262,8 @@ def _number(value: object, *, field: str) -> float:
 
 
 def _items(value: object, *, field: str) -> list[object]:
-    if not isinstance(value, list) or not value or len(value) > 100:
-        raise ValueError(f"{field} must contain 1..100 nodes")
+    if not isinstance(value, list) or not value or len(value) > PARSER_MAX_ITEMS:
+        raise ValueError(f"{field} must contain 1..{PARSER_MAX_ITEMS} nodes")
     return value
 
 
