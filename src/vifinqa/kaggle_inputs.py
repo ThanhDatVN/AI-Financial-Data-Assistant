@@ -36,8 +36,12 @@ def iter_input_paths(
     return sorted(matches, key=str)
 
 
-def describe_inputs(root: Path = Path("/kaggle/input"), max_depth: int = 3) -> str:
-    """Return a compact inventory of mounted inputs so failures name what is actually attached."""
+def describe_inputs(root: Path = Path("/kaggle/input"), max_depth: int = 5) -> str:
+    """Return a compact inventory of mounted inputs so failures name what is actually attached.
+
+    Kaggle spends three levels on `datasets/<owner>/<slug>` before any content, so the
+    default depth has to reach past the mount point itself.
+    """
     if not root.is_dir():
         return f"{root} does not exist"
     lines: list[str] = []
@@ -49,10 +53,15 @@ def describe_inputs(root: Path = Path("/kaggle/input"), max_depth: int = 3) -> s
             continue
         visited.add(real)
         depth = len(Path(parent).parts) - len(root.parts)
+        entries = sorted(filenames)[:4]
+        if len(filenames) > 4:
+            entries.append(f"+{len(filenames) - 4} more files")
         if depth >= max_depth:
+            if directories:
+                entries.append(f"+{len(directories)} more directories")
             directories.clear()
         directories.sort()
-        lines.append(f"{'  ' * depth}{Path(parent).name or root}/ {sorted(filenames)[:4]}")
+        lines.append(f"{'  ' * depth}{Path(parent).name or root}/ {entries}")
         if len(lines) >= 80:
             lines.append("... truncated")
             break

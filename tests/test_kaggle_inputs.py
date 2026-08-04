@@ -75,13 +75,30 @@ def test_iter_input_paths_returns_empty_without_mounts(tmp_path: Path) -> None:
     assert iter_input_paths("questions/questions.jsonl", root=tmp_path / "missing") == []
 
 
-def test_describe_inputs_names_what_is_mounted(tmp_path: Path) -> None:
+def test_describe_inputs_reaches_past_the_kaggle_mount_prefix(tmp_path: Path) -> None:
     mounts = tmp_path / "input"
-    _dataset(mounts, "vifinqa")
+    # Kaggle spends three levels on datasets/<owner>/<slug> before any content.
+    _dataset(mounts / "datasets/lthdatai", "vifinqa")
 
     inventory = describe_inputs(root=mounts)
 
     assert "vifinqa/" in inventory
     assert "ViFinQA/" in inventory
     assert "code_stock.csv" in inventory
+    assert "financial_statements/" in inventory
     assert describe_inputs(root=tmp_path / "missing").endswith("does not exist")
+
+
+def test_describe_inputs_counts_what_it_truncates(tmp_path: Path) -> None:
+    mounts = tmp_path / "input"
+    crowded = mounts / "dataset"
+    crowded.mkdir(parents=True)
+    for index in range(7):
+        (crowded / f"file_{index}.txt").write_text("", encoding="utf-8")
+        (crowded / f"dir_{index}").mkdir()
+
+    inventory = describe_inputs(root=mounts, max_depth=1)
+
+    assert "+3 more files" in inventory
+    assert "+7 more directories" in inventory
+    assert "dir_0/" not in inventory
