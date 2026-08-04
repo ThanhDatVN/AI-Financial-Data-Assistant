@@ -184,9 +184,21 @@ def _validate_cells(expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]) 
             raise ValueError("Currency/share dimension requires explicit source-unit lineage")
         value = matches.iloc[0][cell.value_column]
         if pd.isna(value):
+            # The retry loop only sees this message, so it has to say where the numbers are.
+            # Without that the model re-picks a neighbouring blank and burns every attempt.
+            populated = frame.loc[
+                (frame["row_index"] == cell.row_index) & frame["numeric_value"].notna(),
+                "column_index",
+            ]
+            available = ", ".join(f"c{int(column)}" for column in sorted(populated.unique()))
             raise ValueError(
                 f"Selected cell has no numeric value: {cell.variable} "
-                f"r{cell.row_index}/c{cell.column_index}"
+                f"r{cell.row_index}/c{cell.column_index}. "
+                + (
+                    f"Row r{cell.row_index} holds numbers at {available}."
+                    if available
+                    else f"Row r{cell.row_index} holds no number at all; choose another row."
+                )
             )
 
 
@@ -276,7 +288,17 @@ def prepare_program(
         raise ValueError(f"Unsupported target unit: {target_unit}") from exc
     compatible = inferred == expected or (expected == "PERCENT" and inferred == "RATIO")
     if not compatible:
-        raise ValueError(f"Program dimension {inferred} is incompatible with target {expected}")
+        remedy = ""
+        if expected in {"PERCENT", "RATIO"} and inferred not in {"PERCENT", "RATIO"}:
+            # Repeating "incompatible" three times taught the model nothing. A percentage is
+            # built by dividing, never by relabelling an amount.
+            remedy = (
+                f" The question wants a proportion, so divide one {inferred} cell by another "
+                "instead of returning an amount."
+            )
+        raise ValueError(
+            f"Program dimension {inferred} is incompatible with target {expected}.{remedy}"
+        )
     if not math.isfinite(target_divisor) or target_divisor <= 0:
         raise ValueError("target_divisor must be positive and finite")
     if target_divisor == 1.0:

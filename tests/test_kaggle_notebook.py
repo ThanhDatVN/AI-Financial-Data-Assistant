@@ -61,8 +61,13 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     # The smoke and widest-route sets are both the hard tail; only a seeded random draw can
     # say what the run scores or how long it takes.
     assert "random.Random(20260802).sample" in code
-    assert "decode rate: about" in code
-    assert "1012 * per_question / DP / 3600" in code
+    assert "decode rate per request: about" in code
+    assert "1012 * per_question / 3600" in code
+    # The sample has to shard exactly like the full run or its projection is fiction.
+    assert "SHARDS = DP * int(os.environ.get(" in code
+    assert code.count("str(SHARDS)") == 2
+    # Decode measured 3.7 tokens/s with one sequence per replica; batching is the lever.
+    assert '"--max-num-seqs",\n        "4",' in code
     assert "--default-chat-template-kwargs" in code
     assert "--thinking-mode" in code
     # smoke, widest-route gate, representative sample, full run
