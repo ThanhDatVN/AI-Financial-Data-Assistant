@@ -111,8 +111,8 @@ def main() -> None:
         years = {period.report_year for period in spec.periods} or None
         scope = next((entity.scope for entity in spec.entities if entity.scope), None)
         scopes = {scope, "unknown"} if scope else None
-        route_tickers: list[str | None] = sorted(tickers) if tickers else [None]
-        route_years: list[int | None] = sorted(years) if years else [None]
+        route_tickers: list[str | None] = [*sorted(tickers)] if tickers else [None]
+        route_years: list[int | None] = [*sorted(years)] if years else [None]
         routes = [
             (route_ticker, route_year)
             for route_ticker in route_tickers

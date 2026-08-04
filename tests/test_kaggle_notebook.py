@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BUILDER_NOTEBOOK = ROOT / "notebooks/01_kaggle_build_dense_artifact.ipynb"
 GENERATION_NOTEBOOK = ROOT / "notebooks/02_kaggle_dense_and_generate.ipynb"
+KAGGLE_INPUTS = ROOT / "src/vifinqa/kaggle_inputs.py"
 
 
 def _compiled_code(path: Path) -> str:
@@ -29,7 +30,7 @@ def test_kaggle_dense_builder_is_full_quality_resumable_and_multi_gpu() -> None:
     assert '"--fp16"' not in code
     assert "torch.cuda.device_count() >= 2" in code
     assert '"--checkpoint-dir"' in code
-    assert 'INPUT_ROOT.rglob("dense-checkpoints/bge_m3/config.json")' in code
+    assert 'iter_input_paths("dense-checkpoints/bge_m3/config.json")' in code
     assert '"artifact_type": "vifinqa_bge_m3_dense_index"' in code
     assert '"--max-runtime-minutes"' in code
     assert '"artifact_type": "vifinqa_bge_m3_dense_checkpoint"' in code
@@ -70,7 +71,7 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert '"--shard-count"' in code
     assert code.count('"--project-revision"') == 4
     assert '"scripts/51_merge_generation_shards.py"' in code
-    assert 'INPUT_ROOT.rglob("generation_qwen3_8b_awq_shards/shard_0/run_metadata.json")' in code
+    assert 'iter_input_paths("generation_qwen3_8b_awq_shards/shard_0/run_metadata.json")' in code
     assert "VLLM_CONFIG" in code
     assert "cuda_driver_linker_environment" in code
     assert 'linker_name = linker_dir / "libcuda.so"' in code
@@ -78,6 +79,19 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "env=server_environment" in code
     assert "[-50_000:]" in code
     assert "Qwen2.5" not in code
+
+
+def test_notebooks_discover_inputs_through_symlinked_kaggle_mounts() -> None:
+    module_source = KAGGLE_INPUTS.read_text(encoding="utf-8")
+    helpers = module_source[module_source.index("def iter_input_paths") :].rstrip("\n")
+    for notebook in (BUILDER_NOTEBOOK, GENERATION_NOTEBOOK):
+        code = _compiled_code(notebook)
+        # The bootstrap cell runs before the project is installed, so it carries a verbatim
+        # copy of the module instead of importing it.
+        assert helpers in code, f"{notebook.name} must copy src/vifinqa/kaggle_inputs.py verbatim"
+        assert "rglob" not in code, f"{notebook.name} must not rglob symlinked Kaggle mounts"
+        assert "describe_inputs()" in code
+        assert "INPUT_INVENTORY" in code
 
 
 def test_kaggle_runtime_pins_are_dependency_compatible() -> None:

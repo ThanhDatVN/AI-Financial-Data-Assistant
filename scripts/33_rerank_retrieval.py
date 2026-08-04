@@ -215,9 +215,9 @@ def main() -> None:
             scope = spec.get("scope")
             if scope is not None and not isinstance(scope, str):
                 raise TypeError("query_spec.scope must be a string or null")
-            routes = [
-                (ticker, year) for ticker in (tickers or [None]) for year in (years or [None])
-            ]
+            route_tickers: list[str | None] = [*tickers] if tickers else [None]
+            route_years: list[int | None] = [*years] if years else [None]
+            routes = [(ticker, year) for ticker in route_tickers for year in route_years]
             output_k = coverage_budget(args.top_k, len(routes))
             covered = preserve_route_coverage(
                 hits,
