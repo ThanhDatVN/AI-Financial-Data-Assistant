@@ -51,9 +51,17 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "SMOKE ERRORS (full unresolved records)" in code
     assert "generation_qwen3_8b_awq_smoke_{PROJECT_SHA[:12]}" in code
     assert "SMOKE_IDS = [1, 213, 399, 442, 473]" in code
+    assert "WIDE GATE ERRORS (full unresolved records)" in code
+    assert "def route_fan_out(" in code
+    assert (
+        'wide_ids = sorted(int(row["id"]) for row in retrieval_rows if route_fan_out(row) > 10)'
+        in code
+    )
+    assert "1012 / (DP * wide_rate) / 3_600" in code
     assert "--default-chat-template-kwargs" in code
     assert "--thinking-mode" in code
-    assert code.count("--max-attempts") == 2
+    # smoke, widest-route gate, full run
+    assert code.count("--max-attempts") == 3
     assert 'dense_config.get("model_revision") == DENSE_REVISION' in code
     assert "scripts/22_build_dense.py" not in code
     assert "BAAI/bge-reranker-v2-m3" in code
@@ -69,7 +77,8 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert '"reranker_project_revision": RERANK_PROJECT_SHA' in code
     assert '"--data-parallel-size"' in code
     assert '"--shard-count"' in code
-    assert code.count('"--project-revision"') == 4
+    # hybrid retrieval, reranking, smoke, widest-route gate, full run
+    assert code.count('"--project-revision"') == 5
     assert '"scripts/51_merge_generation_shards.py"' in code
     assert 'iter_input_paths("generation_qwen3_8b_awq_shards/shard_0/run_metadata.json")' in code
     assert "VLLM_CONFIG" in code
