@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import math
 from collections.abc import Mapping
+from dataclasses import replace
 
 import pandas as pd
 
@@ -64,6 +65,11 @@ def referenced_variables(expression: ScalarExpr) -> set[str]:
     raise TypeError(f"Unsupported expression: {type(expression).__name__}")
 
 
+def cells_in_program(expression: ScalarExpr) -> tuple[CellExpr, ...]:
+    """Every cell the program reads, in evaluation order."""
+    return _cells(expression)
+
+
 def _cells(expression: ScalarExpr) -> tuple[CellExpr, ...]:
     if isinstance(expression, CellExpr):
         return (expression,)
@@ -81,6 +87,63 @@ def _cells(expression: ScalarExpr) -> tuple[CellExpr, ...]:
     if isinstance(expression, ArgExtremumExpr):
         return tuple(
             cell for item in (*expression.keys, *expression.values) for cell in _cells(item)
+        )
+    raise TypeError(f"Unsupported expression: {type(expression).__name__}")
+
+
+def _cell_source_unit(cell: CellExpr, frames: Mapping[str, pd.DataFrame]) -> str | None:
+    frame = frames.get(cell.variable)
+    if frame is None or "source_unit" not in frame.columns:
+        return None
+    matches = frame.loc[
+        (frame["row_index"] == cell.row_index) & (frame["column_index"] == cell.column_index)
+    ]
+    if len(matches) != 1:
+        return None
+    return str(matches.iloc[0]["source_unit"])
+
+
+def normalize_value_columns(
+    expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]
+) -> ScalarExpr:
+    """Point every cell at the column its source unit dictates.
+
+    Which column carries the truth follows from the unit alone: a scaled currency or share
+    figure only means anything through `base_value`, and a percentage only through
+    `numeric_value`. Deciding that here keeps a model that guessed the other column from
+    losing a question over a detail it was never in a position to choose.
+    """
+    if isinstance(expression, CellExpr):
+        dimension = _UNIT_DIMENSIONS.get(_cell_source_unit(expression, frames) or "", "UNKNOWN")
+        if dimension in {"VND", "USD", "SHARES"}:
+            return replace(expression, value_column="base_value")
+        if dimension == "PERCENT":
+            return replace(expression, value_column="numeric_value")
+        return expression
+    if isinstance(expression, LiteralExpr):
+        return expression
+    if isinstance(expression, BinaryExpr):
+        return replace(
+            expression,
+            left=normalize_value_columns(expression.left, frames),
+            right=normalize_value_columns(expression.right, frames),
+        )
+    if isinstance(expression, AggregateExpr):
+        return replace(
+            expression,
+            operands=tuple(normalize_value_columns(item, frames) for item in expression.operands),
+        )
+    if isinstance(expression, CountIfExpr):
+        return replace(
+            expression,
+            operands=tuple(normalize_value_columns(item, frames) for item in expression.operands),
+            threshold=normalize_value_columns(expression.threshold, frames),
+        )
+    if isinstance(expression, ArgExtremumExpr):
+        return replace(
+            expression,
+            keys=tuple(normalize_value_columns(item, frames) for item in expression.keys),
+            values=tuple(normalize_value_columns(item, frames) for item in expression.values),
         )
     raise TypeError(f"Unsupported expression: {type(expression).__name__}")
 
@@ -122,6 +185,22 @@ def _validate_cells(expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]) 
                 f"Selected cell has no numeric value: {cell.variable} "
                 f"r{cell.row_index}/c{cell.column_index}"
             )
+
+
+def validate_answer_plausibility(answer: float, expression: ScalarExpr) -> None:
+    """Refuse a multi-cell program that collapses to exactly zero.
+
+    A financial statement repeats the same figure across schedules, once with the opposite
+    sign where it is backed out as an adjustment. Combining those restatements cancels them
+    to a clean zero that satisfies every unit, coverage and execution check, so nothing else
+    in the pipeline can tell that answer apart from a real one.
+    """
+    if answer == 0.0 and len(_cells(expression)) > 1:
+        raise ValueError(
+            "Multi-cell program evaluated to exactly zero, which usually means the same "
+            "figure was combined with its sign-flipped restatement. Use only the cell that "
+            "reports the requested figure."
+        )
 
 
 def validate_query_coverage(
@@ -185,6 +264,7 @@ def prepare_program(
         )
     if set(frames) != referenced:
         raise ValueError("Loaded frames must exactly match referenced variables")
+    expression = normalize_value_columns(expression, frames)
     _validate_cells(expression, frames)
     inferred = infer_dimension(expression)
     try:

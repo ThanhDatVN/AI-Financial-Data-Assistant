@@ -6,7 +6,12 @@ import pytest
 from vifinqa.programs.compiler import compile_expression
 from vifinqa.programs.dimensions import infer_dimension
 from vifinqa.programs.executor import execute_expression, execute_expression_isolated
-from vifinqa.programs.grounding import prepare_program, validate_query_coverage
+from vifinqa.programs.grounding import (
+    normalize_value_columns,
+    prepare_program,
+    validate_answer_plausibility,
+    validate_query_coverage,
+)
 from vifinqa.programs.ir import (
     AggregateExpr,
     ArgExtremumExpr,
@@ -114,6 +119,59 @@ def test_grounding_checks_cell_unit_and_applies_target_divisor() -> None:
     )
     assert dimension == "VND"
     assert execute_expression(compile_expression(prepared), {"df1": frame}) == 2.0
+
+
+def test_grounding_points_cells_at_the_column_their_unit_dictates() -> None:
+    frames = {
+        "df1": pd.DataFrame(
+            {
+                "row_index": [0],
+                "column_index": [1],
+                "source_unit": ["MILLION_VND"],
+                "numeric_value": [7.0],
+                "base_value": [7_000_000.0],
+            }
+        ),
+        "df2": pd.DataFrame(
+            {
+                "row_index": [0],
+                "column_index": [1],
+                "source_unit": ["PERCENT"],
+                "numeric_value": [12.5],
+                "base_value": [12.5],
+            }
+        ),
+    }
+    # A model that guessed numeric_value on a scaled amount used to lose the whole question.
+    scaled = CellExpr("df1", 0, 1, value_column="numeric_value", dimension="VND")
+    prepared, _ = prepare_program(
+        scaled,
+        selected_variables=["df1"],
+        frames={"df1": frames["df1"]},
+        target_unit="MILLION_VND",
+        target_divisor=1_000_000.0,
+    )
+    assert execute_expression(compile_expression(prepared), frames) == 7.0
+
+    ratio = CellExpr("df2", 0, 1, value_column="base_value", dimension="PERCENT")
+    normalized = normalize_value_columns(ratio, frames)
+    assert isinstance(normalized, CellExpr)
+    assert normalized.value_column == "numeric_value"
+
+
+def test_grounding_refuses_a_multi_cell_program_that_cancels_to_zero() -> None:
+    # A statement restates the same figure with the opposite sign, and adding the two passes
+    # every unit, coverage and execution check while answering zero.
+    cancelling = BinaryExpr(
+        "+",
+        CellExpr("df1", 0, 1, dimension="VND"),
+        CellExpr("df2", 5, 2, dimension="VND"),
+    )
+    with pytest.raises(ValueError, match="exactly zero"):
+        validate_answer_plausibility(0.0, cancelling)
+
+    validate_answer_plausibility(0.0, CellExpr("df1", 0, 1, dimension="VND"))
+    validate_answer_plausibility(1.0, cancelling)
 
 
 def test_panel_coverage_requires_entities_and_accepts_labeled_prior_year() -> None:

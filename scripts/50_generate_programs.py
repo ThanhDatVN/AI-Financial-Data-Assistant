@@ -26,7 +26,12 @@ from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame  # noq
 from vifinqa.generation.prompt import CandidateSchema, build_program_prompt  # noqa: E402
 from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
-from vifinqa.programs.grounding import prepare_program, validate_query_coverage  # noqa: E402
+from vifinqa.programs.grounding import (  # noqa: E402
+    prepare_program,
+    referenced_variables,
+    validate_answer_plausibility,
+    validate_query_coverage,
+)
 from vifinqa.programs.ir import Dimension  # noqa: E402
 from vifinqa.programs.serde import (  # noqa: E402
     PROGRAM_GRAMMAR_SCHEMA,
@@ -57,13 +62,6 @@ def _as_str_list(value: object, *, field: str) -> list[str]:
     if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
         raise TypeError(f"{field} must be a list of strings")
     return value
-
-
-def _as_unique_str_list(value: object, *, field: str) -> list[str]:
-    items = _as_str_list(value, field=field)
-    if len(items) != len(set(items)):
-        raise ValueError(f"{field} must not contain duplicates")
-    return items
 
 
 def _as_int_list(value: object, *, field: str) -> list[int]:
@@ -389,13 +387,14 @@ def main() -> None:
                     program = json.loads(content)
                     if not isinstance(program, dict):
                         raise ValueError("Model output must be an object")
-                    selected = _as_unique_str_list(
-                        program.get("selected_variables"), field="selected_variables"
-                    )
-                    if any(variable not in frames for variable in selected):
-                        raise ValueError(f"Model selected an unknown variable: {selected}")
-                    selected_frames = {variable: frames[variable] for variable in selected}
                     expression = expression_from_dict(program.get("program"))
+                    # The tree is the authority on which evidence is read. Taking the model's
+                    # separate declaration at face value only loses questions to bookkeeping.
+                    selected = sorted(referenced_variables(expression))
+                    unknown = [variable for variable in selected if variable not in frames]
+                    if unknown:
+                        raise ValueError(f"Program references unknown variables: {unknown}")
+                    selected_frames = {variable: frames[variable] for variable in selected}
                     prepared, inferred_dimension = prepare_program(
                         expression,
                         selected_variables=selected,
@@ -416,6 +415,7 @@ def main() -> None:
                         timeout_seconds=args.execution_timeout,
                         memory_limit_mb=args.memory_limit_mb,
                     )
+                    validate_answer_plausibility(answer, expression)
                     selected_refs = [table_refs[variable] for variable in selected]
                     successful = (
                         program,

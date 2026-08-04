@@ -4,6 +4,9 @@ import json
 from importlib import import_module
 from pathlib import Path
 
+from vifinqa.programs.grounding import cells_in_program, referenced_variables
+from vifinqa.programs.serde import expression_from_dict
+
 runner = import_module("scripts.50_generate_programs")
 
 
@@ -96,17 +99,32 @@ def test_candidate_limit_expands_to_entity_year_routes() -> None:
     assert runner._candidate_limit(row, minimum=10) == 10
 
 
-def test_selected_variables_remain_unique_after_grammar_compatibility_filter() -> None:
-    assert runner._as_unique_str_list(["df1", "df2"], field="selected_variables") == [
-        "df1",
-        "df2",
-    ]
-    try:
-        runner._as_unique_str_list(["df1", "df1"], field="selected_variables")
-    except ValueError as exc:
-        assert "must not contain duplicates" in str(exc)
-    else:
-        raise AssertionError("Expected duplicate selected variables to fail")
+def test_selected_variables_come_from_the_program_not_the_declaration() -> None:
+    # The model kept declaring every table it had looked at, which cost whole questions to
+    # bookkeeping. The tree it emitted is the only authority on what the program reads.
+    program = {
+        "kind": "binary",
+        "operator": "-",
+        "left": {
+            "kind": "cell",
+            "variable": "df6",
+            "row_index": 0,
+            "column_index": 1,
+            "value_column": "base_value",
+            "dimension": "VND",
+        },
+        "right": {
+            "kind": "cell",
+            "variable": "df1",
+            "row_index": 2,
+            "column_index": 1,
+            "value_column": "base_value",
+            "dimension": "VND",
+        },
+    }
+    expression = expression_from_dict(program)
+    assert sorted(referenced_variables(expression)) == ["df1", "df6"]
+    assert len(cells_in_program(expression)) == 2
 
 
 def test_select_rows_uses_stable_requested_ids_without_changing_run_identity() -> None:

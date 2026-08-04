@@ -21,10 +21,13 @@ def _render_candidate(candidate: CandidateSchema) -> str:
         f"  r{index}: {row[0] if row else ''}" for index, row in enumerate(candidate.table.rows)
     )
     record = candidate.record
+    # The section a table sits in is what separates a reported figure from the same number
+    # restated as an adjustment elsewhere in the statement, so the model has to see it.
+    section = f' section="{record.section_title}"' if record.section_title else ""
     return (
         f'<table variable="{candidate.variable}" table_ref="{record.table_ref}" '
         f'ticker="{record.ticker}" report_year="{record.report_year}" '
-        f'scope="{record.scope}" source_unit="{candidate.table.unit}">\n'
+        f'scope="{record.scope}"{section} source_unit="{candidate.table.unit}">\n'
         f"columns:\n{headers}\nrows:\n{rows}\n</table>"
     )
 
@@ -45,7 +48,13 @@ Use cell nodes with base_value for VND/USD/share amounts and numeric_value for p
 years, or counts. Dimension must describe each operand. Never convert currencies without explicit
 exchange-rate evidence. The deterministic compiler applies target_divisor after validating the tree,
 so do not add target-unit scaling. Use binary, aggregate, count_if, or arg_extremum nodes as needed.
-Return only JSON matching the supplied schema; never emit Python/Pandas code or source values."""
+When the question asks for one reported figure, answer with exactly one cell node. A statement
+repeats the same figure across schedules, often with the opposite sign in a cash-flow adjustment, so
+adding those restatements cancels them to zero instead of confirming the figure. Combine cells only
+when the question genuinely asks for a total, a difference, a ratio, or a comparison.
+selected_variables must list exactly the variables your program reads, and nothing you merely
+consulted. Return only JSON matching the supplied schema; never emit Python/Pandas code or source
+values."""
     rendered = "\n\n".join(_render_candidate(candidate) for candidate in candidates)
     user = (
         f"Question: {question}\n"
