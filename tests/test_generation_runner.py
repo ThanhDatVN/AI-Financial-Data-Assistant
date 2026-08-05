@@ -4,6 +4,8 @@ import json
 from importlib import import_module
 from pathlib import Path
 
+import pandas as pd
+
 from vifinqa.programs.grounding import cells_in_program, referenced_variables
 from vifinqa.programs.serde import expression_from_dict
 
@@ -130,6 +132,40 @@ def test_selected_variables_come_from_the_program_not_the_declaration() -> None:
     expression = expression_from_dict(program)
     assert sorted(referenced_variables(expression)) == ["df1", "df6"]
     assert len(cells_in_program(expression)) == 2
+
+
+def test_fallback_keeps_an_unsolved_question_in_the_submission() -> None:
+    # The organiser discards a submission with any question missing, so a question the model
+    # never solved costs the whole run rather than its own points.
+    frame = pd.DataFrame(
+        {
+            "row_index": [0, 1, 1],
+            "column_index": [0, 1, 2],
+            "source_unit": ["MILLION_VND"] * 3,
+            "numeric_value": [None, 7.0, 9.0],
+            "base_value": [None, 7_000_000.0, 9_000_000.0],
+        }
+    )
+    assert runner._first_numeric_cell(frame) == (1, 1)
+
+    fallback = runner._fallback_program(frames={"df1": frame}, target_divisor=1_000_000.0)
+    assert fallback is not None
+    query, selected, answer = fallback
+    assert selected == ["df1"]
+    assert answer == 7.0
+    assert "base_value" in query and "df1" in query
+
+    blank = pd.DataFrame(
+        {
+            "row_index": [0],
+            "column_index": [0],
+            "source_unit": ["UNKNOWN"],
+            "numeric_value": [None],
+            "base_value": [None],
+        }
+    )
+    assert runner._first_numeric_cell(blank) is None
+    assert runner._fallback_program(frames={"df1": blank}, target_divisor=1.0) is None
 
 
 def test_select_rows_uses_stable_requested_ids_without_changing_run_identity() -> None:

@@ -32,12 +32,19 @@ from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
 from vifinqa.programs.grounding import (  # noqa: E402
     cells_in_program,
+    normalize_cells,
     prepare_program,
     referenced_variables,
     validate_answer_plausibility,
     validate_query_coverage,
 )
-from vifinqa.programs.ir import Dimension  # noqa: E402
+from vifinqa.programs.ir import (  # noqa: E402
+    BinaryExpr,
+    CellExpr,
+    Dimension,
+    LiteralExpr,
+    ScalarExpr,
+)
 from vifinqa.programs.serde import (  # noqa: E402
     PROGRAM_GRAMMAR_SCHEMA,
     PROGRAM_JSON_SCHEMA,
@@ -111,6 +118,44 @@ def _select_rows(
     if shard_count <= 0 or not 0 <= shard_index < shard_count:
         raise ValueError("shard_index must be in [0, shard_count)")
     return [row for position, row in enumerate(selected) if position % shard_count == shard_index]
+
+
+def _first_numeric_cell(frame: pd.DataFrame) -> tuple[int, int] | None:
+    populated = frame.loc[frame["numeric_value"].notna(), ["row_index", "column_index"]]
+    if populated.empty:
+        return None
+    ordered = populated.sort_values(["row_index", "column_index"]).iloc[0]
+    return int(ordered["row_index"]), int(ordered["column_index"])
+
+
+def _fallback_program(
+    *,
+    frames: dict[str, pd.DataFrame],
+    target_divisor: float,
+) -> tuple[str, list[str], float] | None:
+    """Ground a best-effort answer on the highest-ranked evidence.
+
+    A question the model never solved still has to appear in the submission: the organiser
+    discards a file with any question missing, so an unanswered question does not cost its
+    own points, it costs every point in the run. This keeps the entry executable and keeps
+    its retrieval citation, which is scored separately from the number.
+    """
+    for variable, frame in frames.items():
+        coordinate = _first_numeric_cell(frame)
+        if coordinate is None:
+            continue
+        row_index, column_index = coordinate
+        expression = normalize_cells(CellExpr(variable, row_index, column_index), {variable: frame})
+        prepared: ScalarExpr = expression
+        if target_divisor != 1.0:
+            prepared = BinaryExpr("/", expression, LiteralExpr(target_divisor))
+        query = compile_expression(prepared)
+        try:
+            answer = execute_expression_isolated(query, {variable: frame}, timeout_seconds=10.0)
+        except Exception:  # noqa: BLE001 - a fallback must not raise
+            continue
+        return query, [variable], answer
+    return None
 
 
 def _sha256(path: Path) -> str:
@@ -337,13 +382,16 @@ def main() -> None:
         question_id = _as_int(row["id"], field="id")
         candidate_limit = args.candidate_tables
         attempt_failures: list[dict[str, object]] = []
+        # Bound outside the try so the fallback can still cite evidence when the failure
+        # happened after the candidates were loaded.
+        refs: list[str] = []
+        schemas: list[CandidateSchema] = []
+        frames: dict[str, pd.DataFrame] = {}
+        csv_paths: dict[str, str] = {}
+        table_refs: dict[str, str] = {}
+        fallback_divisor = 1.0
         try:
             candidate_limit = _candidate_limit(row, minimum=args.candidate_tables)
-            refs: list[str] = []
-            schemas: list[CandidateSchema] = []
-            frames: dict[str, pd.DataFrame] = {}
-            csv_paths: dict[str, str] = {}
-            table_refs: dict[str, str] = {}
             for table_ref in _as_str_list(row["fused"], field="fused"):
                 if len(schemas) >= candidate_limit:
                     break
@@ -368,6 +416,7 @@ def main() -> None:
             spec = row["query_spec"]
             if not isinstance(spec, dict):
                 raise ValueError("query_spec must be an object")
+            fallback_divisor = float(spec["target_divisor"])
             required_tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
             required_years = _as_int_list(spec.get("years"), field="query_spec.years")
             system, user = build_program_prompt(
@@ -532,6 +581,38 @@ def main() -> None:
             }
             unresolved_errors[question_id] = error_row
             _append_jsonl(error_attempts, error_row)
+            fallback = _fallback_program(frames=frames, target_divisor=fallback_divisor)
+            if fallback is not None:
+                query, selected, answer = fallback
+                selected_refs = [table_refs[variable] for variable in selected]
+                completed_checkpoint.write(
+                    {
+                        "id": question_id,
+                        "prediction": {
+                            "id": question_id,
+                            "question": str(row["question"]),
+                            "answer": answer,
+                            "relevant_docs": list(
+                                dict.fromkeys(ref.split("|", 1)[0] for ref in selected_refs)
+                            ),
+                            "relevant_tables": selected_refs,
+                            "evidence": [
+                                {"variable": variable, "csv_path": csv_paths[variable]}
+                                for variable in selected
+                            ],
+                            "pandas_query": query,
+                        },
+                        "trace": {
+                            "id": question_id,
+                            "fallback": True,
+                            "fallback_reason": f"{type(exc).__name__}: {exc}"[:400],
+                            "selected_variables": selected,
+                            "compiled_pandas_query": query,
+                            "generation_attempts": len(attempt_failures),
+                            "failed_attempts": attempt_failures,
+                        },
+                    }
+                )
         if position == 1 or position % 10 == 0 or position == len(pending_rows):
             elapsed = max(time.monotonic() - started_at, 1e-9)
             remaining = len(pending_rows) - position
