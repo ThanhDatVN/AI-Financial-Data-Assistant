@@ -95,6 +95,9 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "checkpoint_project_revision" in code
     assert '"hybrid_project_revision": HYBRID_PROJECT_SHA' in code
     assert '"reranker_project_revision": RERANK_PROJECT_SHA' in code
+    # A final run may legitimately use the hybrid ranking, but never an unrecorded one.
+    assert "if RETRIEVAL != HYBRID:" in code
+    assert "The retrieval used by a final run must be recorded." in code
     assert '"--data-parallel-size"' in code
     assert '"--shard-count"' in code
     # hybrid retrieval, reranking, smoke, widest-route gate, sample, full run
