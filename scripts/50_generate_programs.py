@@ -121,6 +121,9 @@ def _select_rows(
 
 
 def _first_numeric_cell(frame: pd.DataFrame) -> tuple[int, int] | None:
+    # A table parsed to no cells at all yields a frame with no columns, so ask before reading.
+    if not {"row_index", "column_index", "numeric_value"} <= set(frame.columns):
+        return None
     populated = frame.loc[frame["numeric_value"].notna(), ["row_index", "column_index"]]
     if populated.empty:
         return None
