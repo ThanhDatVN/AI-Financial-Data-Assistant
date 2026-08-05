@@ -13,10 +13,12 @@ from vifinqa.programs.ir import (
     ArgExtremumExpr,
     BinaryExpr,
     CellExpr,
+    Condition,
     CountIfExpr,
     Dimension,
     LiteralExpr,
     ScalarExpr,
+    SelectExpr,
 )
 
 _UNIT_DIMENSIONS: dict[str, Dimension] = {
@@ -62,7 +64,20 @@ def referenced_variables(expression: ScalarExpr) -> set[str]:
         return set().union(
             *(referenced_variables(item) for item in (*expression.keys, *expression.values))
         )
+    if isinstance(expression, SelectExpr):
+        return set().union(*(referenced_variables(item) for item in _select_parts(expression)))
     raise TypeError(f"Unsupported expression: {type(expression).__name__}")
+
+
+def _select_parts(expression: SelectExpr) -> tuple[ScalarExpr, ...]:
+    """Every sub-expression a selection reads: members, ranking keys and both sides of each
+    condition."""
+    parts: list[ScalarExpr] = [*expression.members, *(expression.keys or ())]
+    for condition in expression.conditions:
+        parts.extend(condition.left)
+        right = condition.right
+        parts.extend(right if isinstance(right, tuple) else (right,))
+    return tuple(parts)
 
 
 def cells_in_program(expression: ScalarExpr) -> tuple[CellExpr, ...]:
@@ -88,6 +103,8 @@ def _cells(expression: ScalarExpr) -> tuple[CellExpr, ...]:
         return tuple(
             cell for item in (*expression.keys, *expression.values) for cell in _cells(item)
         )
+    if isinstance(expression, SelectExpr):
+        return tuple(cell for item in _select_parts(expression) for cell in _cells(item))
     raise TypeError(f"Unsupported expression: {type(expression).__name__}")
 
 
@@ -147,6 +164,29 @@ def normalize_cells(expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]) 
             expression,
             keys=tuple(normalize_cells(item, frames) for item in expression.keys),
             values=tuple(normalize_cells(item, frames) for item in expression.values),
+        )
+    if isinstance(expression, SelectExpr):
+        conditions = tuple(
+            Condition(
+                left=tuple(normalize_cells(item, frames) for item in condition.left),
+                comparator=condition.comparator,
+                right=(
+                    tuple(normalize_cells(item, frames) for item in condition.right)
+                    if isinstance(condition.right, tuple)
+                    else normalize_cells(condition.right, frames)
+                ),
+            )
+            for condition in expression.conditions
+        )
+        return replace(
+            expression,
+            members=tuple(normalize_cells(item, frames) for item in expression.members),
+            conditions=conditions,
+            keys=(
+                None
+                if expression.keys is None
+                else tuple(normalize_cells(item, frames) for item in expression.keys)
+            ),
         )
     raise TypeError(f"Unsupported expression: {type(expression).__name__}")
 

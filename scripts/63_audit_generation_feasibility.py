@@ -30,8 +30,8 @@ from vifinqa.programs.serde import GRAMMAR_MAX_ITEMS  # noqa: E402
 # One cell node costs about 65 characters, and roughly three characters make a token.
 TOKENS_PER_CELL = 22
 
-# Question shapes the IR has no operator for. count_if counts a predicate; nothing selects a
-# subset by one, and there is no quantile.
+# Question shapes that need the select node: a subset chosen by a predicate, or a quantile.
+# These are answerable, but only through that one operator, so they are worth counting.
 _NEEDS_SELECTION = re.compile(
     r"trung v[ịi]|ph[âa]n v[ịi]|t[ứu] ph[âa]n"
     r"|trong c[ảa] (?:ba|hai|b[ốo]n|\d)\s*n[ăa]m"
@@ -116,8 +116,6 @@ def _audit_row(
     missing_years = sorted(set(years) - covered_years)
     if missing_years:
         blockers.append("candidates_miss_required_year")
-    if _NEEDS_SELECTION.search(_normalize(str(row["question"]))):
-        blockers.append("ir_cannot_select_or_quantile")
     candidate_units = [str(unit) for unit in candidates["unit"]]
     if _dimension_unreachable(target_unit, candidate_units):
         blockers.append("no_candidate_carries_the_target_dimension")
@@ -130,6 +128,7 @@ def _audit_row(
 
     return {
         "id": int(str(row["id"])),
+        "needs_selection": bool(_NEEDS_SELECTION.search(_normalize(str(row["question"])))),
         "target_unit": target_unit,
         "required_tickers": tickers,
         "required_years": years,
@@ -196,7 +195,10 @@ def main() -> None:
     }
     write_json_atomic(args.output, report)
 
+    needing = sum(1 for record in audited if record["needs_selection"])
+    report["needs_selection"] = needing
     print(f"questions           {report['questions']}")
+    print(f"need select node    {needing}")
     print(f"reachable           {report['reachable']}")
     print(f"blocked             {report['blocked']}")
     for cause, count in causes.most_common():

@@ -10,10 +10,13 @@ from vifinqa.programs.ir import (
     ArgExtremumExpr,
     BinaryExpr,
     CellExpr,
+    Comparator,
+    Condition,
     CountIfExpr,
     Dimension,
     LiteralExpr,
     ScalarExpr,
+    SelectExpr,
 )
 
 DIMENSIONS: tuple[Dimension, ...] = (
@@ -54,6 +57,7 @@ PROGRAM_JSON_SCHEMA: dict[str, object] = {
                 {"$ref": "#/$defs/aggregate"},
                 {"$ref": "#/$defs/count_if"},
                 {"$ref": "#/$defs/arg_extremum"},
+                {"$ref": "#/$defs/select"},
             ]
         },
         "cell": {
@@ -121,6 +125,55 @@ PROGRAM_JSON_SCHEMA: dict[str, object] = {
             "required": ["kind", "operands", "comparator", "threshold"],
             "additionalProperties": False,
         },
+        "condition": {
+            "type": "object",
+            "properties": {
+                "left": {
+                    "type": "array",
+                    "items": _EXPRESSION_REF,
+                    "minItems": 1,
+                    "maxItems": 100,
+                },
+                "comparator": {"enum": ["<", "<=", ">", ">=", "==", "!="]},
+                "right": _EXPRESSION_REF,
+                "right_per_member": {
+                    "type": "array",
+                    "items": _EXPRESSION_REF,
+                    "minItems": 1,
+                    "maxItems": 100,
+                },
+            },
+            "required": ["left", "comparator"],
+            "additionalProperties": False,
+        },
+        "select": {
+            "type": "object",
+            "properties": {
+                "kind": {"const": "select"},
+                "operator": {
+                    "enum": ["sum", "mean", "min", "max", "median", "count", "argmin", "argmax"]
+                },
+                "members": {
+                    "type": "array",
+                    "items": _EXPRESSION_REF,
+                    "minItems": 1,
+                    "maxItems": 100,
+                },
+                "conditions": {
+                    "type": "array",
+                    "items": {"$ref": "#/$defs/condition"},
+                    "maxItems": 8,
+                },
+                "keys": {
+                    "type": "array",
+                    "items": _EXPRESSION_REF,
+                    "minItems": 1,
+                    "maxItems": 100,
+                },
+            },
+            "required": ["kind", "operator", "members"],
+            "additionalProperties": False,
+        },
         "arg_extremum": {
             "type": "object",
             "properties": {
@@ -159,7 +212,7 @@ PARSER_MAX_ITEMS = 100
 # cohort program there needs 18 operands per array. Depth has room to spare because real
 # programs stay shallow: a ratio of sums is two levels and a growth rate is three.
 MAX_ROUTE_FAN_OUT = 18  # measured across all 1,012 questions of the frozen retrieval
-GRAMMAR_MAX_DEPTH = 6
+GRAMMAR_MAX_DEPTH = 5
 GRAMMAR_MAX_ITEMS = 32
 
 
@@ -199,15 +252,24 @@ def _build_program_grammar_schema() -> dict[str, object]:
         "cell": copy.deepcopy(canonical_defs["cell"]),
         "literal": copy.deepcopy(canonical_defs["literal"]),
     }
-    recursive_kinds = ("binary", "aggregate", "count_if", "arg_extremum")
+    recursive_kinds = ("binary", "aggregate", "count_if", "arg_extremum", "select")
     for depth in range(GRAMMAR_MAX_DEPTH + 1):
         variants = [_grammar_ref("cell"), _grammar_ref("literal")]
         if depth:
+            condition_name = f"condition_{depth}"
+            grammar_defs[condition_name] = _grammar_variant(
+                canonical_defs["condition"], depth=depth - 1
+            )
             for kind in recursive_kinds:
                 definition_name = f"{kind}_{depth}"
-                grammar_defs[definition_name] = _grammar_variant(
-                    canonical_defs[kind], depth=depth - 1
+                definition = cast(
+                    dict[str, object], _grammar_variant(canonical_defs[kind], depth=depth - 1)
                 )
+                if kind == "select":
+                    select_properties = cast(dict[str, object], definition["properties"])
+                    conditions = cast(dict[str, object], select_properties["conditions"])
+                    conditions["items"] = _grammar_ref(condition_name)
+                grammar_defs[definition_name] = definition
                 variants.append(_grammar_ref(definition_name))
         grammar_defs[f"expression_{depth}"] = {"oneOf": variants}
 
@@ -266,6 +328,44 @@ def _items(value: object, *, field: str) -> list[object]:
     if not isinstance(value, list) or not value or len(value) > PARSER_MAX_ITEMS:
         raise ValueError(f"{field} must contain 1..{PARSER_MAX_ITEMS} nodes")
     return value
+
+
+def _conditions(value: object) -> list[object]:
+    if value is None:
+        return []
+    if not isinstance(value, list) or len(value) > 8:
+        raise ValueError("conditions must contain at most 8 entries")
+    return value
+
+
+def _condition_from_dict(raw: object, *, member_count: int, depth: int) -> Condition:
+    node = _object(
+        raw,
+        required={"left", "comparator"},
+        optional=frozenset({"right", "right_per_member"}),
+        depth=depth,
+    )
+    left = tuple(
+        expression_from_dict(item, _depth=depth) for item in _items(node["left"], field="left")
+    )
+    if len(left) != member_count:
+        raise ValueError("Condition operands must align with the cohort members")
+    comparator = _enum(node["comparator"], {"<", "<=", ">", ">=", "==", "!="}, field="comparator")
+    shared, per_member = node.get("right"), node.get("right_per_member")
+    if (shared is None) == (per_member is None):
+        raise ValueError("A condition needs exactly one of right or right_per_member")
+    right: ScalarExpr | tuple[ScalarExpr, ...]
+    if per_member is not None:
+        thresholds = tuple(
+            expression_from_dict(item, _depth=depth)
+            for item in _items(per_member, field="right_per_member")
+        )
+        if len(thresholds) != member_count:
+            raise ValueError("Per-member thresholds must align with the cohort members")
+        right = thresholds
+    else:
+        right = expression_from_dict(shared, _depth=depth)
+    return Condition(left, cast(Comparator, comparator), right)
 
 
 def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
@@ -353,6 +453,51 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
             ),
             cast(Literal["<", "<=", ">", ">=", "==", "!="], comparator),
             expression_from_dict(node["threshold"], _depth=_depth + 1),
+        )
+    if kind == "select":
+        node = _object(
+            raw,
+            required={"kind", "operator", "members"},
+            optional=frozenset({"conditions", "keys"}),
+            depth=_depth,
+        )
+        operator = _enum(
+            node["operator"],
+            {"sum", "mean", "min", "max", "median", "count", "argmin", "argmax"},
+            field="operator",
+        )
+        members = tuple(
+            expression_from_dict(item, _depth=_depth + 1)
+            for item in _items(node["members"], field="members")
+        )
+        raw_keys = node.get("keys")
+        keys = (
+            None
+            if raw_keys is None
+            else tuple(
+                expression_from_dict(item, _depth=_depth + 1)
+                for item in _items(raw_keys, field="keys")
+            )
+        )
+        if operator in {"argmin", "argmax"}:
+            if keys is None or len(keys) != len(members):
+                raise ValueError("Ranked selection needs one key per member")
+        elif keys is not None:
+            raise ValueError("Keys are only meaningful for argmin and argmax")
+        conditions = tuple(
+            _condition_from_dict(item, member_count=len(members), depth=_depth + 1)
+            for item in _conditions(node.get("conditions"))
+        )
+        if operator == "median" and conditions:
+            raise ValueError("Median over a filtered cohort is not supported")
+        return SelectExpr(
+            cast(
+                Literal["sum", "mean", "min", "max", "median", "count", "argmin", "argmax"],
+                operator,
+            ),
+            members,
+            conditions,
+            keys,
         )
     if kind == "arg_extremum":
         node = _object(

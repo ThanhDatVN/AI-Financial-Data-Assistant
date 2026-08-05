@@ -17,8 +17,10 @@ from vifinqa.programs.ir import (
     ArgExtremumExpr,
     BinaryExpr,
     CellExpr,
+    Condition,
     CountIfExpr,
     LiteralExpr,
+    SelectExpr,
 )
 
 
@@ -192,6 +194,80 @@ def test_grounding_refuses_a_multi_cell_program_that_cancels_to_zero() -> None:
 
     validate_answer_plausibility(0.0, CellExpr("df1", 0, 1, dimension="VND"))
     validate_answer_plausibility(1.0, cancelling)
+
+
+def _cohort(values: list[list[float]]) -> dict[str, pd.DataFrame]:
+    return {
+        f"df{index}": pd.DataFrame(
+            {
+                "row_index": list(range(len(column))),
+                "column_index": [1] * len(column),
+                "source_unit": ["UNKNOWN"] * len(column),
+                "numeric_value": column,
+                "base_value": column,
+            }
+        )
+        for index, column in enumerate(values, start=1)
+    }
+
+
+def test_selection_sums_only_the_members_that_pass_every_condition() -> None:
+    # "Tổng doanh thu 2022 của các công ty có biên lợi nhuận dương trong cả ba năm."
+    # Counting a predicate was never the hard part; selecting by one was.
+    frames = _cohort([[10.0, 1.0, 1.0, 1.0], [20.0, 1.0, -1.0, 1.0], [30.0, 2.0, 2.0, 2.0]])
+    members = tuple(CellExpr(f"df{index}", 0, 1) for index in (1, 2, 3))
+    conditions = tuple(
+        Condition(
+            left=tuple(CellExpr(f"df{index}", year, 1) for index in (1, 2, 3)),
+            comparator=">",
+            right=LiteralExpr(0.0),
+        )
+        for year in (1, 2, 3)
+    )
+    program = SelectExpr("sum", members, conditions)
+    assert execute_expression(compile_expression(program), frames) == 40.0
+
+    assert execute_expression(compile_expression(SelectExpr("count", members, conditions)), frames)
+    assert infer_dimension(SelectExpr("count", members, conditions)) == "COUNT"
+
+
+def test_selection_ranks_within_the_half_below_the_median() -> None:
+    # "Trong nhóm có D/E dưới trung vị, doanh nghiệp tăng trưởng cao nhất." The median is the
+    # same node with nothing to filter by, so no separate operator is needed.
+    frames = _cohort(
+        [[100.0, 1.0, 5.0], [200.0, 2.0, 9.0], [300.0, 3.0, 1.0], [400.0, 4.0, 2.0]]
+        + [[500.0, 5.0, 3.0]]
+    )
+    leverage = tuple(CellExpr(f"df{index}", 1, 1) for index in range(1, 6))
+    median = SelectExpr("median", leverage)
+    assert execute_expression(compile_expression(median), frames) == 3.0
+
+    program = SelectExpr(
+        "argmax",
+        members=tuple(CellExpr(f"df{index}", 0, 1) for index in range(1, 6)),
+        conditions=(Condition(left=leverage, comparator="<", right=median),),
+        keys=tuple(CellExpr(f"df{index}", 2, 1) for index in range(1, 6)),
+    )
+    assert execute_expression(compile_expression(program), frames) == 200.0
+
+    # Naming shared work once is what keeps this from expanding past a megabyte.
+    compiled = compile_expression(program)
+    assert compiled.startswith("((_v0 :=") and compiled.endswith(")[-1]")
+    assert len(compiled) < 20_000
+
+
+def test_selection_refuses_an_empty_subset_rather_than_inventing_an_extreme() -> None:
+    frames = _cohort([[10.0, 1.0], [20.0, 2.0]])
+    impossible = Condition(
+        left=(CellExpr("df1", 1, 1), CellExpr("df2", 1, 1)),
+        comparator="<",
+        right=LiteralExpr(0.0),
+    )
+    program = SelectExpr(
+        "max", members=(CellExpr("df1", 0, 1), CellExpr("df2", 0, 1)), conditions=(impossible,)
+    )
+    with pytest.raises(ValueError, match="not finite"):
+        execute_expression(compile_expression(program), frames)
 
 
 def test_panel_coverage_requires_entities_and_accepts_labeled_prior_year() -> None:

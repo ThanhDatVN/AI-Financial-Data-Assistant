@@ -70,7 +70,12 @@ source value.
 Use cell nodes with base_value for VND/USD/share amounts and numeric_value for percentages, ratios,
 years, or counts. Dimension must describe each operand. Never convert currencies without explicit
 exchange-rate evidence. The deterministic compiler applies target_divisor after validating the tree,
-so do not add target-unit scaling. Use binary, aggregate, count_if, or arg_extremum nodes as needed.
+so do not add target-unit scaling. Use binary, aggregate, count_if or arg_extremum as needed.
+When a question asks about the members of a group that satisfy something, such as the companies
+whose margin stayed positive or the half of a group below the median, use a select node: one
+member expression per company, one condition per test with one entry per company, and an
+operator among sum, mean, min, max, count, argmin and argmax. A median is a select node with no
+conditions at all.
 When the question asks for one reported figure, answer with exactly one cell node. A statement
 repeats the same figure across schedules, often with the opposite sign in a cash-flow adjustment, so
 adding those restatements cancels them to zero instead of confirming the figure. Combine cells only

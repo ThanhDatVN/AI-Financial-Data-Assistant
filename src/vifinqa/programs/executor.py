@@ -3,6 +3,7 @@ from __future__ import annotations
 import ast
 import math
 import multiprocessing as mp
+import re
 from collections.abc import Mapping
 from multiprocessing.connection import Connection
 
@@ -41,7 +42,14 @@ _ALLOWED_NODES = (
     ast.GtE,
     ast.And,
     ast.Or,
+    # A cohort program reads the same threshold and the same membership test many times
+    # over. Without a way to name a value once, the compiler has to inline it at every use
+    # and a nine-company selection expands to megabytes. Binding is confined to the reserved
+    # names below, which cannot shadow evidence or an allowlisted function.
+    ast.NamedExpr,
+    ast.Store,
 )
+_BINDING_RE = re.compile(r"^_v[0-9]+$")
 _SAFE_FUNCTIONS: dict[str, object] = {
     "abs": abs,
     "float": float,
@@ -54,10 +62,18 @@ _SAFE_FUNCTIONS: dict[str, object] = {
 
 
 def _validate(tree: ast.AST, variables: set[str]) -> None:
+    bound: set[str] = set()
+    for node in ast.walk(tree):
+        if isinstance(node, ast.NamedExpr):
+            if not isinstance(node.target, ast.Name) or not _BINDING_RE.fullmatch(node.target.id):
+                raise ValueError("Only reserved _vN names may be bound")
+            if node.target.id in variables | _SAFE_FUNCTIONS.keys():
+                raise ValueError(f"Binding shadows an existing name: {node.target.id}")
+            bound.add(node.target.id)
     for node in ast.walk(tree):
         if not isinstance(node, _ALLOWED_NODES):
             raise ValueError(f"Disallowed syntax: {type(node).__name__}")
-        if isinstance(node, ast.Name) and node.id not in variables | _SAFE_FUNCTIONS.keys():
+        if isinstance(node, ast.Name) and node.id not in variables | _SAFE_FUNCTIONS.keys() | bound:
             raise ValueError(f"Unknown name: {node.id}")
         if isinstance(node, ast.Attribute) and node.attr.startswith("_"):
             raise ValueError(f"Private/dunder attribute is forbidden: {node.attr}")

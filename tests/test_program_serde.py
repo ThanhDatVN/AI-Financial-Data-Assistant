@@ -177,13 +177,15 @@ def test_vllm_grammar_stays_small_enough_to_compile() -> None:
     # 100 items, and XGrammar compilation stalled before emitting a single token.
     grammar_defs = PROGRAM_GRAMMAR_SCHEMA["$defs"]
     assert isinstance(grammar_defs, dict)
-    assert len(grammar_defs) <= 40
+    assert len(grammar_defs) <= 50
     serialized = json.dumps(PROGRAM_GRAMMAR_SCHEMA)
-    assert len(serialized) <= 16_000
+    assert len(serialized) <= 20_000
     assert f'"maxItems": {PARSER_MAX_ITEMS}' not in serialized
-    assert serialized.count(f'"maxItems": {GRAMMAR_MAX_ITEMS}') == 4 * GRAMMAR_MAX_DEPTH
-    # Bounded repetitions are what the grammar compiler expands, so cap the total.
-    assert 4 * GRAMMAR_MAX_DEPTH * GRAMMAR_MAX_ITEMS <= 1_000
+    # Bounded repetitions are what the grammar compiler expands, so cap the total rather
+    # than assume how many arrays each operator happens to carry.
+    bounded_arrays = serialized.count(f'"maxItems": {GRAMMAR_MAX_ITEMS}')
+    assert bounded_arrays == 8 * GRAMMAR_MAX_DEPTH
+    assert bounded_arrays * GRAMMAR_MAX_ITEMS <= 1_600
 
 
 def test_cell_may_omit_the_fields_that_lineage_settles() -> None:

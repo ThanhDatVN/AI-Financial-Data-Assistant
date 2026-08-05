@@ -9,6 +9,7 @@ from vifinqa.programs.ir import (
     Dimension,
     LiteralExpr,
     ScalarExpr,
+    SelectExpr,
 )
 
 
@@ -61,6 +62,26 @@ def infer_dimension(expression: ScalarExpr) -> Dimension:
         for operand in expression.operands:
             _compatible(infer_dimension(operand), threshold)
         return "COUNT"
+    if isinstance(expression, SelectExpr):
+        if not expression.members:
+            raise ValueError("Select members must not be empty")
+        for condition in expression.conditions:
+            comparand = condition.right
+            bounds = (
+                comparand if isinstance(comparand, tuple) else (comparand,) * len(condition.left)
+            )
+            for operand, bound in zip(condition.left, bounds, strict=True):
+                _compatible(infer_dimension(operand), infer_dimension(bound))
+        if expression.operator == "count":
+            return "COUNT"
+        dimension = infer_dimension(expression.members[0])
+        for member in expression.members[1:]:
+            dimension = _compatible(dimension, infer_dimension(member))
+        if expression.keys:
+            key_dimension = infer_dimension(expression.keys[0])
+            for key in expression.keys[1:]:
+                key_dimension = _compatible(key_dimension, infer_dimension(key))
+        return dimension
     if isinstance(expression, ArgExtremumExpr):
         if not expression.keys or len(expression.keys) != len(expression.values):
             raise ValueError("ArgExtremum keys and values must have the same non-zero length")
