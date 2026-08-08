@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BUILDER_NOTEBOOK = ROOT / "notebooks/01_kaggle_build_dense_artifact.ipynb"
 GENERATION_NOTEBOOK = ROOT / "notebooks/02_kaggle_dense_and_generate.ipynb"
+RESUME_NOTEBOOK = ROOT / "notebooks/03_kaggle_resume_and_submit.ipynb"
 KAGGLE_INPUTS = ROOT / "src/vifinqa/kaggle_inputs.py"
 
 
@@ -122,12 +123,15 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
 def test_notebooks_discover_inputs_through_symlinked_kaggle_mounts() -> None:
     module_source = KAGGLE_INPUTS.read_text(encoding="utf-8")
     helpers = module_source[module_source.index("def iter_input_paths") :].rstrip("\n")
-    for notebook in (BUILDER_NOTEBOOK, GENERATION_NOTEBOOK):
+    for notebook in (BUILDER_NOTEBOOK, GENERATION_NOTEBOOK, RESUME_NOTEBOOK):
         code = _compiled_code(notebook)
         # The bootstrap cell runs before the project is installed, so it carries a verbatim
         # copy of the module instead of importing it.
         assert helpers in code, f"{notebook.name} must copy src/vifinqa/kaggle_inputs.py verbatim"
-        assert "rglob" not in code, f"{notebook.name} must not rglob symlinked Kaggle mounts"
+        # rglob is fine on the working directory; what it cannot do is expand `**` across
+        # the symlinks Kaggle mounts inputs behind.
+        for forbidden in ('Path("/kaggle/input").rglob', "INPUT_ROOT.rglob"):
+            assert forbidden not in code, f"{notebook.name} must not {forbidden}"
         assert "describe_inputs()" in code
         assert "INPUT_INVENTORY" in code
 
@@ -154,3 +158,35 @@ def test_dense_notebook_bootstraps_and_probes_backend_import() -> None:
     assert '"pull", "--ff-only", "origin", "main"' in code
     assert "from vifinqa.retrieval.dense import DenseIndex" in code
     assert "DenseIndex.__name__ == 'DenseIndex'" in code
+
+
+def test_resume_notebook_finishes_a_run_without_rebuilding_its_retrieval() -> None:
+    code = _compiled_code(RESUME_NOTEBOOK)
+
+    # Resuming needs neither the dense index nor the stages that produced the retrieval.
+    assert "22_build_dense.py" not in code
+    assert "30_retrieve_questions.py" not in code
+    assert "33_rerank_retrieval.py" not in code
+
+    # The generation checkpoint is keyed to the retrieval's SHA-256 and to the commit that
+    # wrote it, so both are taken from the checkpoint rather than recomputed or assumed.
+    assert 'iter_input_paths("retrieval_reranked.jsonl")' in code
+    assert (
+        'PROJECT_SHA = json.loads(prior[0].read_text(encoding="utf-8"))["project_revision"]' in code
+    )
+    assert '"checkout", PROJECT_SHA' in code
+    assert "assert checked_out == PROJECT_SHA" in code
+
+    # Kaggle mounts inputs read-only and copytree preserves that.
+    assert "def make_writable(" in code
+    assert "make_writable(GEN_SHARDS)" in code
+
+    # A shard count that disagrees with the checkpoint would silently start over.
+    assert "shard_count == SHARDS" in code
+    assert "resuming with {completed_rows()}/1012 questions already answered" in code
+    assert "if answered < 1012:" in code
+
+    assert "Qwen/Qwen3-8B-AWQ" in code
+    assert "4da05a8edb55c6046cce958586c33b61da07bb79" in code
+    assert '"--final-run"' in code
+    assert '"scripts/41_package_submission.py"' in code
