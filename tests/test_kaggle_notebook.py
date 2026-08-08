@@ -65,6 +65,12 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "1012 * per_question / 3600" in code
     # The sample has to shard exactly like the full run or its projection is fiction.
     assert "SHARDS = DP * int(os.environ.get(" in code
+    # Four sequences per replica is what the server accepts, so four client shards per
+    # replica fill the batch; two left it half empty and doubled the projected run.
+    assert 'os.environ["VIFINQA_SHARDS_PER_REPLICA"] = "4"' in code
+    # A Kaggle session is shorter than the run, so an unfinished one has to say so.
+    assert "resuming with {completed_rows()}/1012 questions already answered" in code
+    assert "if answered < 1012:" in code
     assert code.count("str(SHARDS)") == 2
     # Decode measured 3.7 tokens/s with one sequence per replica; batching is the lever.
     assert '"--max-num-seqs",\n        "4",' in code
