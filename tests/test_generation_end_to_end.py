@@ -15,6 +15,7 @@ import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
+import pandas as pd
 import pytest
 
 from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame
@@ -284,3 +285,63 @@ def test_a_run_that_solves_nothing_still_packages_every_question(tmp_path: Path)
         evidence_root=output,
     )
     assert archive.is_file() and archive.stat().st_size > 0
+
+
+def test_evidence_csvs_rebuild_from_the_rows_that_cite_them(tmp_path: Path) -> None:
+    # Carrying the evidence between sessions costs gigabytes and downloading it defeated the
+    # browser; the tables are a deterministic function of the corpus, so move only the rows.
+    table_ref = "VJC_financial_statements_2018_separate|table_50"
+    shard = tmp_path / "shard_0"
+    (shard / "rows").mkdir(parents=True)
+    (shard / "rows" / "00000001.json").write_text(
+        json.dumps(
+            {
+                "id": 1,
+                "prediction": {
+                    "id": 1,
+                    "relevant_tables": [table_ref],
+                    "evidence": [{"variable": "df1", "csv_path": "data/q1_df1.csv"}],
+                },
+                "trace": {"id": 1},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    completed = subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts/52_restore_evidence_csv.py"),
+            str(shard),
+            "--manifest",
+            str(MANIFEST),
+            "--data-root",
+            str(DATA_ROOT),
+        ],
+        capture_output=True,
+        text=True,
+    )
+    assert completed.returncode == 0, completed.stderr[-4000:]
+
+    restored = shard / "data/q1_df1.csv"
+    assert restored.is_file()
+    frame = pd.read_csv(restored)
+    cell = frame.loc[(frame["row_index"] == 0) & (frame["column_index"] == 1)]
+    assert float(cell["base_value"].iloc[0]) == 208253201298.0
+
+    # A second pass has nothing left to do and must not rewrite what is already there.
+    again = subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "scripts/52_restore_evidence_csv.py"),
+            str(shard),
+            "--manifest",
+            str(MANIFEST),
+            "--data-root",
+            str(DATA_ROOT),
+        ],
+        capture_output=True,
+        text=True,
+    )
+    assert again.returncode == 0, again.stderr[-4000:]
+    assert "missing 0" in again.stdout
