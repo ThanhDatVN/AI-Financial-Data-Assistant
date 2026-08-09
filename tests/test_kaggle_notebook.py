@@ -71,7 +71,12 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert 'os.environ["VIFINQA_SHARDS_PER_REPLICA"] = "4"' in code
     # A Kaggle session is shorter than the run, so an unfinished one has to say so.
     assert "resuming with {completed_rows()}/1012 questions already answered" in code
-    assert "if answered < 1012:" in code
+    assert "elif answered < 1012:" in code
+    # A cancelled version cannot be attached as an input to the notebook that finishes the
+    # run, so a session that will not reach 1,012 in time has to end on purpose instead.
+    assert 'os.environ["VIFINQA_QUESTION_LIMIT"]' in code
+    assert 'common_cmd += ["--limit", QUESTION_LIMIT]' in code
+    assert "partial run finished cleanly" in code
     assert code.count("str(SHARDS)") == 2
     # Decode measured 3.7 tokens/s with one sequence per replica; batching is the lever.
     assert '"--max-num-seqs",\n        "4",' in code
