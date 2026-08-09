@@ -28,6 +28,7 @@ from vifinqa.generation.prompt import (  # noqa: E402
     build_program_prompt,
     numeric_cells_of,
 )
+from vifinqa.parsing.normalize import ascii_words  # noqa: E402
 from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
 from vifinqa.programs.grounding import (  # noqa: E402
@@ -120,45 +121,80 @@ def _select_rows(
     return [row for position, row in enumerate(selected) if position % shard_count == shard_index]
 
 
-def _first_numeric_cell(frame: pd.DataFrame) -> tuple[int, int] | None:
-    # A table parsed to no cells at all yields a frame with no columns, so ask before reading.
-    if not {"row_index", "column_index", "numeric_value"} <= set(frame.columns):
+_STOPWORDS = frozenset(
+    """la bao nhieu cua nam cong ty co phan va trong theo duoc doanh nghiep tai gia tri
+    tong so cac cho tu den moi""".split()
+)
+
+
+def _content_words(text: object) -> set[str]:
+    return {word for word in ascii_words(str(text)).split() if len(word) > 2} - _STOPWORDS
+
+
+def _best_matching_cell(
+    frames: dict[str, pd.DataFrame],
+    *,
+    question: str,
+    years: list[int],
+) -> tuple[str, int, int] | None:
+    """Pick the cell whose labels answer the question most nearly.
+
+    The first populated cell of the first table is an arbitrary number wearing the shape of
+    an answer. Matching the question's own words against row labels, and its years against
+    column headers, at least aims at the figure it asked for. On both questions whose
+    correct value is known this selects the right table and the right cell, even though one
+    of them sits eighth in the ranking.
+    """
+    asked = _content_words(question)
+    wanted = {str(year) for year in years}
+    best: tuple[int, str, int, int] | None = None
+    for variable, frame in frames.items():
+        if not {"row_index", "column_index", "numeric_value"} <= set(frame.columns):
+            continue
+        populated = frame.loc[frame["numeric_value"].notna()]
+        for row in populated.itertuples(index=False):
+            score = 2 * len(asked & _content_words(getattr(row, "row_label", "")))
+            if any(year in str(getattr(row, "column_label", "")) for year in wanted):
+                score += 3
+            coordinate = (score, variable, int(row.row_index), int(row.column_index))
+            # Ties fall to the earliest variable and coordinate, so the choice is stable.
+            if best is None or coordinate[0] > best[0]:
+                best = coordinate
+    if best is None:
         return None
-    populated = frame.loc[frame["numeric_value"].notna(), ["row_index", "column_index"]]
-    if populated.empty:
-        return None
-    ordered = populated.sort_values(["row_index", "column_index"]).iloc[0]
-    return int(ordered["row_index"]), int(ordered["column_index"])
+    _, variable, row_index, column_index = best
+    return variable, row_index, column_index
 
 
 def _fallback_program(
     *,
     frames: dict[str, pd.DataFrame],
     target_divisor: float,
+    question: str = "",
+    years: list[int] | None = None,
 ) -> tuple[str, list[str], float] | None:
-    """Ground a best-effort answer on the highest-ranked evidence.
+    """Ground a best-effort answer on the evidence that best matches the question.
 
     A question the model never solved still has to appear in the submission: the organiser
     discards a file with any question missing, so an unanswered question does not cost its
     own points, it costs every point in the run. This keeps the entry executable and keeps
     its retrieval citation, which is scored separately from the number.
     """
-    for variable, frame in frames.items():
-        coordinate = _first_numeric_cell(frame)
-        if coordinate is None:
-            continue
-        row_index, column_index = coordinate
-        expression = normalize_cells(CellExpr(variable, row_index, column_index), {variable: frame})
-        prepared: ScalarExpr = expression
-        if target_divisor != 1.0:
-            prepared = BinaryExpr("/", expression, LiteralExpr(target_divisor))
-        query = compile_expression(prepared)
-        try:
-            answer = execute_expression_isolated(query, {variable: frame}, timeout_seconds=10.0)
-        except Exception:  # noqa: BLE001 - a fallback must not raise
-            continue
-        return query, [variable], answer
-    return None
+    selection = _best_matching_cell(frames, question=question, years=years or [])
+    if selection is None:
+        return None
+    variable, row_index, column_index = selection
+    frame = frames[variable]
+    expression = normalize_cells(CellExpr(variable, row_index, column_index), {variable: frame})
+    prepared: ScalarExpr = expression
+    if target_divisor != 1.0:
+        prepared = BinaryExpr("/", expression, LiteralExpr(target_divisor))
+    query = compile_expression(prepared)
+    try:
+        answer = execute_expression_isolated(query, {variable: frame}, timeout_seconds=10.0)
+    except Exception:  # noqa: BLE001 - a fallback must not raise
+        return None
+    return query, [variable], answer
 
 
 def _sha256(path: Path) -> str:
@@ -393,6 +429,7 @@ def main() -> None:
         csv_paths: dict[str, str] = {}
         table_refs: dict[str, str] = {}
         fallback_divisor = 1.0
+        fallback_years: list[int] = []
         try:
             candidate_limit = _candidate_limit(row, minimum=args.candidate_tables)
             for table_ref in _as_str_list(row["fused"], field="fused"):
@@ -420,6 +457,7 @@ def main() -> None:
             if not isinstance(spec, dict):
                 raise ValueError("query_spec must be an object")
             fallback_divisor = float(spec["target_divisor"])
+            fallback_years = _as_int_list(spec.get("years"), field="query_spec.years")
             required_tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
             required_years = _as_int_list(spec.get("years"), field="query_spec.years")
             system, user = build_program_prompt(
@@ -584,7 +622,12 @@ def main() -> None:
             }
             unresolved_errors[question_id] = error_row
             _append_jsonl(error_attempts, error_row)
-            fallback = _fallback_program(frames=frames, target_divisor=fallback_divisor)
+            fallback = _fallback_program(
+                frames=frames,
+                target_divisor=fallback_divisor,
+                question=str(row["question"]),
+                years=fallback_years,
+            )
             if fallback is not None:
                 query, selected, answer = fallback
                 selected_refs = [table_refs[variable] for variable in selected]

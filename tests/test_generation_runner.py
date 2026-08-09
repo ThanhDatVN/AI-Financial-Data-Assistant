@@ -146,12 +146,20 @@ def test_fallback_keeps_an_unsolved_question_in_the_submission() -> None:
             "base_value": [None, 7_000_000.0, 9_000_000.0],
         }
     )
-    assert runner._first_numeric_cell(frame) == (1, 1)
+    frame["row_label"] = ["Tổng cộng", "Lãi tiền gửi", "Lãi tiền gửi"]
+    frame["column_label"] = ["2017", "2018", "2017"]
 
-    fallback = runner._fallback_program(frames={"df1": frame}, target_divisor=1_000_000.0)
+    fallback = runner._fallback_program(
+        frames={"df1": frame},
+        target_divisor=1_000_000.0,
+        question="Lãi tiền gửi năm 2018 là bao nhiêu triệu đồng?",
+        years=[2018],
+    )
     assert fallback is not None
     query, selected, answer = fallback
     assert selected == ["df1"]
+    # The question names the row and the year, so the fallback aims at that figure rather
+    # than at whichever cell happens to come first.
     assert answer == 7.0
     assert "base_value" in query and "df1" in query
 
@@ -164,8 +172,7 @@ def test_fallback_keeps_an_unsolved_question_in_the_submission() -> None:
             "base_value": [None],
         }
     )
-    assert runner._first_numeric_cell(blank) is None
-    assert runner._fallback_program(frames={"df1": blank}, target_divisor=1.0) is None
+    assert runner._fallback_program(frames={"df1": blank}, target_divisor=1.0, question="x") is None
 
 
 def test_select_rows_uses_stable_requested_ids_without_changing_run_identity() -> None:

@@ -194,4 +194,10 @@ def test_resume_notebook_finishes_a_run_without_rebuilding_its_retrieval() -> No
     assert "Qwen/Qwen3-8B-AWQ" in code
     assert "4da05a8edb55c6046cce958586c33b61da07bb79" in code
     assert '"--final-run"' in code
+    # A session that stops at a cap must not package a submission that is not finished.
+    assert 'os.environ["VIFINQA_QUESTION_LIMIT"]' in code
+    assert 'common_cmd += ["--limit", QUESTION_LIMIT]' in code
+    assert "skipping merge and packaging" in code
+    # Fetching a bare SHA is a server permission, not a guarantee; a full clone has it.
+    assert '"fetch", "origin", PROJECT_SHA], check=False' in code
     assert '"scripts/41_package_submission.py"' in code
