@@ -50,9 +50,19 @@ def main() -> None:
         "--docs",
         type=int,
         help=(
-            "How many documents to cite, if fewer than the widened tables span. The two fields "
-            "are scored separately, and widening cost documents 0.090 while it earned tables "
-            "0.117, so the depth that suits one need not suit the other."
+            "Cap the documents cited below what the tables span. Measured to be a mistake: "
+            "cutting to one document took the document score from 0.7807 to 0.4521, so this "
+            "exists only to reproduce that finding."
+        ),
+    )
+    parser.add_argument(
+        "--doc-depth",
+        type=int,
+        help=(
+            "Draw documents from this many ranked tables rather than from the cited ones. The "
+            "table score peaks near five citations while the document score was still climbing "
+            "at 3.57 documents, so the two want different depths and only this direction is "
+            "allowed: extra documents are legal, missing ones are not."
         ),
     )
     args = parser.parse_args()
@@ -60,6 +70,11 @@ def main() -> None:
         parser.error("--tables must be at least 1")
     if args.docs is not None and args.docs < 1:
         parser.error("--docs must be at least 1")
+    if args.doc_depth is not None:
+        if args.doc_depth < args.tables:
+            parser.error("--doc-depth must be at least --tables, or a cited table loses its doc")
+        if args.docs is not None:
+            parser.error("--docs and --doc-depth pull in opposite directions; pass one")
 
     ranked = _retrieved(args.retrieval)
     predictions = json.loads(args.submission.read_text(encoding="utf-8"))
@@ -75,7 +90,15 @@ def main() -> None:
                 cited.append(candidate)
         widened += len(cited) - len(prediction["relevant_tables"])
         prediction["relevant_tables"] = cited
-        documents = list(dict.fromkeys(ref.split("|", 1)[0] for ref in cited))
+        sources = cited
+        if args.doc_depth is not None:
+            sources = list(cited)
+            for candidate in ranked.get(question_id, []):
+                if len(sources) >= args.doc_depth:
+                    break
+                if candidate not in sources:
+                    sources.append(candidate)
+        documents = list(dict.fromkeys(ref.split("|", 1)[0] for ref in sources))
         prediction["relevant_docs"] = documents if args.docs is None else documents[: args.docs]
     write_json_atomic(args.output, predictions)
     tables_each = sum(len(row["relevant_tables"]) for row in predictions) / len(predictions)
