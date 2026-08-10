@@ -292,8 +292,9 @@ def test_evidence_csvs_rebuild_from_the_rows_that_cite_them(tmp_path: Path) -> N
     # browser; the tables are a deterministic function of the corpus, so move only the rows.
     table_ref = "VJC_financial_statements_2018_separate|table_50"
     shard = tmp_path / "shard_0"
-    (shard / "rows").mkdir(parents=True)
-    (shard / "rows" / "00000001.json").write_text(
+    # The runner keeps its per-row checkpoint under <shard>/completed/rows.
+    (shard / "completed/rows").mkdir(parents=True)
+    (shard / "completed/rows" / "00000001.json").write_text(
         json.dumps(
             {
                 "id": 1,

@@ -36,7 +36,7 @@ def _shard_predictions(shard: Path) -> list[dict[str, object]]:
             if line.strip()
         ]
     predictions: list[dict[str, object]] = []
-    for row_path in sorted((shard / "rows").glob("*.json")):
+    for row_path in sorted((shard / "completed/rows").glob("*.json")):
         row = json.loads(row_path.read_text(encoding="utf-8"))
         prediction = row.get("prediction")
         if isinstance(prediction, dict):
