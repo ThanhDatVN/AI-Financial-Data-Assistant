@@ -62,7 +62,14 @@ def validate_submission(
                 frames,
                 timeout_seconds=execution_timeout,
             )
-            if not math.isclose(actual, prediction.answer, rel_tol=0.0, abs_tol=abs_tolerance):
+            # An absolute tolerance is the right test near zero and meaningless far from it:
+            # one unit in the last place of 4.8e38 is about 1e22, so a value that survived a
+            # round trip through CSV and back failed a check it reproduced perfectly. Accept
+            # either an absolute or a relative agreement; the relative one is still nine
+            # significant digits, far tighter than any answer tolerance the task implies.
+            if not math.isclose(
+                actual, prediction.answer, rel_tol=1e-9, abs_tol=abs_tolerance
+            ):
                 raise ValueError(
                     f"Execution mismatch for id={question_id}: "
                     f"declared={prediction.answer}, actual={actual}"
