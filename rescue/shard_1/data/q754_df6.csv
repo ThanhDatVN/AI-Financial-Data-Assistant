@@ -1,0 +1,61 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,0,0,Cho vay các tổ chức kinh tế,column_1,Cho vay các tổ chức kinh tế,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,0,1,Cho vay các tổ chức kinh tế,Số cuối năm | Triệu đồng,35.829.682,35829682.0,35829682000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,0,2,Cho vay các tổ chức kinh tế,Số cuối năm | %,"51,93",51.93,51.93,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,0,3,Cho vay các tổ chức kinh tế,Số đầu năm | Triệu đồng,34.070.180,34070180.0,34070180000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,0,4,Cho vay các tổ chức kinh tế,Số đầu năm | %,"53,83",53.83,53.83,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,1,0,Công ty cổ phần khác,column_1,Công ty cổ phần khác,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,1,1,Công ty cổ phần khác,Số cuối năm | Triệu đồng,18.582.941,18582941.0,18582941000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,1,2,Công ty cổ phần khác,Số cuối năm | %,"26,94",26.94,26.94,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,1,3,Công ty cổ phần khác,Số đầu năm | Triệu đồng,17.372.132,17372132.0,17372132000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,1,4,Công ty cổ phần khác,Số đầu năm | %,"27,44",27.44,27.44,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,2,0,Công ty trách nhiệm hữu hạn khác,column_1,Công ty trách nhiệm hữu hạn khác,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,2,1,Công ty trách nhiệm hữu hạn khác,Số cuối năm | Triệu đồng,15.074.275,15074275.0,15074275000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,2,2,Công ty trách nhiệm hữu hạn khác,Số cuối năm | %,"21,85",21.85,21.85,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,2,3,Công ty trách nhiệm hữu hạn khác,Số đầu năm | Triệu đồng,14.194.134,14194134.0,14194134000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,2,4,Công ty trách nhiệm hữu hạn khác,Số đầu năm | %,"22,43",22.43,22.43,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,3,0,Công ty nhà nước,column_1,Công ty nhà nước,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,3,1,Công ty nhà nước,Số cuối năm | Triệu đồng,1.748.046,1748046.0,1748046000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,3,2,Công ty nhà nước,Số cuối năm | %,"2,53",2.53,2.53,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,3,3,Công ty nhà nước,Số đầu năm | Triệu đồng,1.930.535,1930535.0,1930535000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,3,4,Công ty nhà nước,Số đầu năm | %,"3,05",3.05,3.05,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,4,0,Doanh nghiệp có vốn đầu tư nước ngoài,column_1,Doanh nghiệp có vốn đầu tư nước ngoài,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,4,1,Doanh nghiệp có vốn đầu tư nước ngoài,Số cuối năm | Triệu đồng,352.213,352213.0,352213000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,4,2,Doanh nghiệp có vốn đầu tư nước ngoài,Số cuối năm | %,"0,51",0.51,0.51,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,4,3,Doanh nghiệp có vốn đầu tư nước ngoài,Số đầu năm | Triệu đồng,417.460,417460.0,417460000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,4,4,Doanh nghiệp có vốn đầu tư nước ngoài,Số đầu năm | %,"0,66",0.66,0.66,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,5,0,Hợp tác xã và liên hiệp hợp tác xã,column_1,Hợp tác xã và liên hiệp hợp tác xã,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,5,1,Hợp tác xã và liên hiệp hợp tác xã,Số cuối năm | Triệu đồng,23.556,23556.0,23556000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,5,2,Hợp tác xã và liên hiệp hợp tác xã,Số cuối năm | %,"0,03",0.03,0.03,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,5,3,Hợp tác xã và liên hiệp hợp tác xã,Số đầu năm | Triệu đồng,30.365,30365.0,30365000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,5,4,Hợp tác xã và liên hiệp hợp tác xã,Số đầu năm | %,"0,05",0.05,0.05,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,6,0,Doanh nghiệp tư nhân,column_1,Doanh nghiệp tư nhân,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,6,1,Doanh nghiệp tư nhân,Số cuối năm | Triệu đồng,20.582,20582.0,20582000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,6,2,Doanh nghiệp tư nhân,Số cuối năm | %,"0,03",0.03,0.03,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,6,3,Doanh nghiệp tư nhân,Số đầu năm | Triệu đồng,93.308,93308.0,93308000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,6,4,Doanh nghiệp tư nhân,Số đầu năm | %,"0,15",0.15,0.15,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,7,0,"Đơn vị hành chính sự nghiệp, Đằng,Đoàn thể và hiệp hội",column_1,"Đơn vị hành chính sự nghiệp, Đằng,Đoàn thể và hiệp hội",,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,7,1,"Đơn vị hành chính sự nghiệp, Đằng,Đoàn thể và hiệp hội",Số cuối năm | Triệu đồng,-,0.0,0.0,True,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,7,2,"Đơn vị hành chính sự nghiệp, Đằng,Đoàn thể và hiệp hội",Số cuối năm | %,-,0.0,0.0,True,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,7,3,"Đơn vị hành chính sự nghiệp, Đằng,Đoàn thể và hiệp hội",Số đầu năm | Triệu đồng,17.677,17677.0,17677000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,7,4,"Đơn vị hành chính sự nghiệp, Đằng,Đoàn thể và hiệp hội",Số đầu năm | %,"0,03",0.03,0.03,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,8,0,Công ty hợp danh,column_1,Công ty hợp danh,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,8,1,Công ty hợp danh,Số cuối năm | Triệu đồng,14.715,14715.0,14715000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,8,2,Công ty hợp danh,Số cuối năm | %,"0,02",0.02,0.02,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,8,3,Công ty hợp danh,Số đầu năm | Triệu đồng,-,0.0,0.0,True,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,8,4,Công ty hợp danh,Số đầu năm | %,-,0.0,0.0,True,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,9,0,Khác,column_1,Khác,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,9,1,Khác,Số cuối năm | Triệu đồng,13.354,13354.0,13354000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,9,2,Khác,Số cuối năm | %,"0,02",0.02,0.02,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,9,3,Khác,Số đầu năm | Triệu đồng,14.569,14569.0,14569000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,9,4,Khác,Số đầu năm | %,"0,02",0.02,0.02,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,10,0,Cho vay cá nhân,column_1,Cho vay cá nhân,,,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,10,1,Cho vay cá nhân,Số cuối năm | Triệu đồng,33.154.317,33154317.0,33154317000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,10,2,Cho vay cá nhân,Số cuối năm | %,"48,07",48.07,48.07,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,10,3,Cho vay cá nhân,Số đầu năm | Triệu đồng,29.222.971,29222971.0,29222971000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,10,4,Cho vay cá nhân,Số đầu năm | %,"46,17",46.17,46.17,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,11,0,,column_1,,,,False,True
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,11,1,,Số cuối năm | Triệu đồng,68.983.999,68983999.0,68983999000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,11,2,,Số cuối năm | %,"100,00",100.0,100.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,MILLION_VND,11,3,,Số đầu năm | Triệu đồng,63.293.151,63293151.0,63293151000000.0,False,False
+ABB_financial_statements_2021_separate|table_35,ABB_financial_statements_2021_separate,ABB,2021,separate,PERCENT,11,4,,Số đầu năm | %,"100,00",100.0,100.0,False,False

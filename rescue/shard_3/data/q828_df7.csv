@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+ACB_financial_statements_2022_separate|table_23,ACB_financial_statements_2022_separate,ACB,2022,separate,MILLION_VND,0,0,Số dư đầu năm,column_1,Số dư đầu năm,,,False,False
+ACB_financial_statements_2022_separate|table_23,ACB_financial_statements_2022_separate,ACB,2022,separate,MILLION_VND,0,1,Số dư đầu năm,Năm 2022Triệu VND,-,0.0,0.0,True,False
+ACB_financial_statements_2022_separate|table_23,ACB_financial_statements_2022_separate,ACB,2022,separate,MILLION_VND,0,2,Số dư đầu năm,Năm 2021Triệu VND,-,0.0,0.0,True,False
+ACB_financial_statements_2022_separate|table_23,ACB_financial_statements_2022_separate,ACB,2022,separate,MILLION_VND,1,0,Trích lập dự phòng trong năm (Thuyết minh 31),column_1,Trích lập dự phòng trong năm (Thuyết minh 31),,,False,False
+ACB_financial_statements_2022_separate|table_23,ACB_financial_statements_2022_separate,ACB,2022,separate,MILLION_VND,1,1,Trích lập dự phòng trong năm (Thuyết minh 31),Năm 2022Triệu VND,50.000,50000.0,50000000000.0,False,False
+ACB_financial_statements_2022_separate|table_23,ACB_financial_statements_2022_separate,ACB,2022,separate,MILLION_VND,1,2,Trích lập dự phòng trong năm (Thuyết minh 31),Năm 2021Triệu VND,-,0.0,0.0,True,False
+ACB_financial_statements_2022_separate|table_23,ACB_financial_statements_2022_separate,ACB,2022,separate,MILLION_VND,2,0,Số dư cuối năm,column_1,Số dư cuối năm,,,False,False
+ACB_financial_statements_2022_separate|table_23,ACB_financial_statements_2022_separate,ACB,2022,separate,MILLION_VND,2,1,Số dư cuối năm,Năm 2022Triệu VND,50.000,50000.0,50000000000.0,False,False
+ACB_financial_statements_2022_separate|table_23,ACB_financial_statements_2022_separate,ACB,2022,separate,MILLION_VND,2,2,Số dư cuối năm,Năm 2021Triệu VND,-,0.0,0.0,True,False

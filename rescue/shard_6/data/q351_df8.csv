@@ -1,0 +1,43 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,0,0,Ủy thác quản lý danh mục đầu tư,Ủy thác tồn động từ HBB (*),Ủy thác quản lý danh mục đầu tư,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,0,1,Ủy thác quản lý danh mục đầu tư,31/12/2016Triệu VND,651,651.0,651000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,0,2,Ủy thác quản lý danh mục đầu tư,31/12/2015Triệu VND,651,651.0,651000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,1,0,Ủy thác REPO tài sản,Ủy thác tồn động từ HBB (*),Ủy thác REPO tài sản,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,1,1,Ủy thác REPO tài sản,31/12/2016Triệu VND,1.405.398,1405398.0,1405398000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,1,2,Ủy thác REPO tài sản,31/12/2015Triệu VND,1.406.048,1406048.0,1406048000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,2,0,Ủy thác khác,Ủy thác tồn động từ HBB (*),Ủy thác khác,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,2,1,Ủy thác khác,31/12/2016Triệu VND,520.260,520260.0,520260000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,2,2,Ủy thác khác,31/12/2015Triệu VND,520.260,520260.0,520260000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,3,0,,Ủy thác tồn động từ HBB (*),,,,False,True
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,3,1,,31/12/2016Triệu VND,1.926.309,1926309.0,1926309000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,3,2,,31/12/2015Triệu VND,1.926.959,1926959.0,1926959000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,4,0,Tài sản Có khác,Ủy thác tồn động từ HBB (*),Tài sản Có khác,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,4,1,Tài sản Có khác,31/12/2016Triệu VND,,,,False,True
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,4,2,Tài sản Có khác,31/12/2015Triệu VND,,,,False,True
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,5,0,Vật liệu và công cụ,Ủy thác tồn động từ HBB (*),Vật liệu và công cụ,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,5,1,Vật liệu và công cụ,31/12/2016Triệu VND,9.029,9029.0,9029000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,5,2,Vật liệu và công cụ,31/12/2015Triệu VND,8.133,8133.0,8133000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,6,0,Chi phí chờ phân bổ,Ủy thác tồn động từ HBB (*),Chi phí chờ phân bổ,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,6,1,Chi phí chờ phân bổ,31/12/2016Triệu VND,182.979,182979.0,182979000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,6,2,Chi phí chờ phân bổ,31/12/2015Triệu VND,1.256.032,1256032.0,1256032000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,7,0,Tài sản gán nợ chờ xử lý,Ủy thác tồn động từ HBB (*),Tài sản gán nợ chờ xử lý,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,7,1,Tài sản gán nợ chờ xử lý,31/12/2016Triệu VND,1.278.693,1278693.0,1278693000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,7,2,Tài sản gán nợ chờ xử lý,31/12/2015Triệu VND,1.063.259,1063259.0,1063259000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,8,0,Điều chuyển vốn nội bộ - SHB Lào và SHB Campuchia,Ủy thác tồn động từ HBB (*),Điều chuyển vốn nội bộ - SHB Lào và SHB Campuchia,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,8,1,Điều chuyển vốn nội bộ - SHB Lào và SHB Campuchia,31/12/2016Triệu VND,5.337.194,5337194.0,5337194000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,8,2,Điều chuyển vốn nội bộ - SHB Lào và SHB Campuchia,31/12/2015Triệu VND,-,0.0,0.0,True,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,9,0,Các khoản chờ thanh toán liên ngân hàng,Ủy thác tồn động từ HBB (*),Các khoản chờ thanh toán liên ngân hàng,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,9,1,Các khoản chờ thanh toán liên ngân hàng,31/12/2016Triệu VND,2.180.040,2180040.0,2180040000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,9,2,Các khoản chờ thanh toán liên ngân hàng,31/12/2015Triệu VND,554.066,554066.0,554066000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,10,0,Nợ cho vay chờ xử lý của Vinashin,Ủy thác tồn động từ HBB (*),Nợ cho vay chờ xử lý của Vinashin,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,10,1,Nợ cho vay chờ xử lý của Vinashin,31/12/2016Triệu VND,948.584,948584.0,948584000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,10,2,Nợ cho vay chờ xử lý của Vinashin,31/12/2015Triệu VND,1.048.584,1048584.0,1048584000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,11,0,Tài sản Có khác,Ủy thác tồn động từ HBB (*),Tài sản Có khác,,,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,11,1,Tài sản Có khác,31/12/2016Triệu VND,135.000,135000.0,135000000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,11,2,Tài sản Có khác,31/12/2015Triệu VND,224.000,224000.0,224000000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,12,0,,Ủy thác tồn động từ HBB (*),,,,False,True
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,12,1,,31/12/2016Triệu VND,10.071.519,10071519.0,10071519000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,12,2,,31/12/2015Triệu VND,4.154.074,4154074.0,4154074000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,13,0,,Ủy thác tồn động từ HBB (*),,,,False,True
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,13,1,,31/12/2016Triệu VND,11.997.828,11997828.0,11997828000000.0,False,False
+SHB_financial_statements_2016_separate|table_61,SHB_financial_statements_2016_separate,SHB,2016,separate,MILLION_VND,13,2,,31/12/2015Triệu VND,6.081.033,6081033.0,6081033000000.0,False,False

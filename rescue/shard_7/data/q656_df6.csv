@@ -1,0 +1,201 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,0,0,Mãsố,Mãsố,Mãsố,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,0,1,Mãsố,TÀI SẢN,TÀI SẢN,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,0,2,Mãsố,Thuyếtminh,Thuyếtminh,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,0,3,Mãsố,Tại ngày 31 tháng 12 năm,2024VND,2024.0,2024.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,0,4,Mãsố,Tại ngày 31 tháng 12 năm__2,2023VND,2023.0,2023.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,1,0,100,Mãsố,100,100.0,100.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,1,1,100,TÀI SẢN,TÀI SẢN NGẮN HẠN,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,1,2,100,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,1,3,100,Tại ngày 31 tháng 12 năm,13.946.758.610.690,13946758610690.0,13946758610690.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,1,4,100,Tại ngày 31 tháng 12 năm__2,10.124.632.662.935,10124632662935.0,10124632662935.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,2,0,110,Mãsố,110,110.0,110.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,2,1,110,TÀI SẢN,Tiền và các khoản tương đương tiền,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,2,2,110,Thuyếtminh,3,3.0,3.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,2,3,110,Tại ngày 31 tháng 12 năm,430.721.010.534,430721010534.0,430721010534.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,2,4,110,Tại ngày 31 tháng 12 năm__2,274.796.383.783,274796383783.0,274796383783.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,3,0,111,Mãsố,111,111.0,111.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,3,1,111,TÀI SẢN,Tiền,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,3,2,111,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,3,3,111,Tại ngày 31 tháng 12 năm,130.613.741.198,130613741198.0,130613741198.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,3,4,111,Tại ngày 31 tháng 12 năm__2,66.469.696.196,66469696196.0,66469696196.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,4,0,112,Mãsố,112,112.0,112.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,4,1,112,TÀI SẢN,Các khoản tương đương tiền,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,4,2,112,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,4,3,112,Tại ngày 31 tháng 12 năm,300.107.269.336,300107269336.0,300107269336.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,4,4,112,Tại ngày 31 tháng 12 năm__2,208.326.687.587,208326687587.0,208326687587.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,5,0,120,Mãsố,120,120.0,120.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,5,1,120,TÀI SẢN,Đầu tư tài chính ngắn hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,5,2,120,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,5,3,120,Tại ngày 31 tháng 12 năm,10.613.801.695.342,10613801695342.0,10613801695342.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,5,4,120,Tại ngày 31 tháng 12 năm__2,100.000.000,100000000.0,100000000.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,6,0,123,Mãsố,123,123.0,123.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,6,1,123,TÀI SẢN,Đầu tư nắm giữ đến ngày đáo hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,6,2,123,Thuyếtminh,4(a),,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,6,3,123,Tại ngày 31 tháng 12 năm,10.613.801.695.342,10613801695342.0,10613801695342.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,6,4,123,Tại ngày 31 tháng 12 năm__2,100.000.000,100000000.0,100000000.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,7,0,130,Mãsố,130,130.0,130.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,7,1,130,TÀI SẢN,Các khoản phải thu ngắn hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,7,2,130,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,7,3,130,Tại ngày 31 tháng 12 năm,1.725.450.661.525,1725450661525.0,1725450661525.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,7,4,130,Tại ngày 31 tháng 12 năm__2,8.995.506.432.992,8995506432992.0,8995506432992.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,8,0,131,Mãsố,131,131.0,131.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,8,1,131,TÀI SẢN,Phải thu ngắn hạn của khách hàng,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,8,2,131,Thuyếtminh,5,5.0,5.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,8,3,131,Tại ngày 31 tháng 12 năm,1.232.336.875.837,1232336875837.0,1232336875837.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,8,4,131,Tại ngày 31 tháng 12 năm__2,1.840.771.086.214,1840771086214.0,1840771086214.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,9,0,132,Mãsố,132,132.0,132.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,9,1,132,TÀI SẢN,Trả trước cho người bán ngắn hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,9,2,132,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,9,3,132,Tại ngày 31 tháng 12 năm,38.108.655.990,38108655990.0,38108655990.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,9,4,132,Tại ngày 31 tháng 12 năm__2,16.579.788.810,16579788810.0,16579788810.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,10,0,135,Mãsố,135,135.0,135.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,10,1,135,TÀI SẢN,Phải thu về cho vay ngắn hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,10,2,135,Thuyếtminh,6,6.0,6.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,10,3,135,Tại ngày 31 tháng 12 năm,39.218.474.743,39218474743.0,39218474743.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,10,4,135,Tại ngày 31 tháng 12 năm__2,7.054.329.711.180,7054329711180.0,7054329711180.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,11,0,136,Mãsố,136,136.0,136.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,11,1,136,TÀI SẢN,Phải thu ngắn hạn khác,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,11,2,136,Thuyếtminh,7,7.0,7.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,11,3,136,Tại ngày 31 tháng 12 năm,621.410.659.551,621410659551.0,621410659551.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,11,4,136,Tại ngày 31 tháng 12 năm__2,652.578.344.918,652578344918.0,652578344918.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,12,0,137,Mãsố,137,137.0,137.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,12,1,137,TÀI SẢN,Dự phòng phải thu ngắn hạn khó đòi,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,12,2,137,Thuyếtminh,8,8.0,8.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,12,3,137,Tại ngày 31 tháng 12 năm,(205.624.004.596),-205624004596.0,-205624004596.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,12,4,137,Tại ngày 31 tháng 12 năm__2,(568.752.498.130),-568752498130.0,-568752498130.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,13,0,140,Mãsố,140,140.0,140.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,13,1,140,TÀI SẢN,Hàng tồn kho,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,13,2,140,Thuyếtminh,9,9.0,9.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,13,3,140,Tại ngày 31 tháng 12 năm,1.062.689.848.673,1062689848673.0,1062689848673.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,13,4,140,Tại ngày 31 tháng 12 năm__2,728.991.583.619,728991583619.0,728991583619.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,14,0,141,Mãsố,141,141.0,141.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,14,1,141,TÀI SẢN,Hàng tồn kho,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,14,2,141,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,14,3,141,Tại ngày 31 tháng 12 năm,1.079.815.856.329,1079815856329.0,1079815856329.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,14,4,141,Tại ngày 31 tháng 12 năm__2,745.789.067.871,745789067871.0,745789067871.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,15,0,149,Mãsố,149,149.0,149.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,15,1,149,TÀI SẢN,Dự phòng giảm giá hàng tồn kho,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,15,2,149,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,15,3,149,Tại ngày 31 tháng 12 năm,(17.126.007.656),-17126007656.0,-17126007656.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,15,4,149,Tại ngày 31 tháng 12 năm__2,(16.797.484.252),-16797484252.0,-16797484252.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,16,0,150,Mãsố,150,150.0,150.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,16,1,150,TÀI SẢN,Tài sản ngắn hạn khác,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,16,2,150,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,16,3,150,Tại ngày 31 tháng 12 năm,114.095.394.616,114095394616.0,114095394616.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,16,4,150,Tại ngày 31 tháng 12 năm__2,125.238.262.541,125238262541.0,125238262541.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,17,0,151,Mãsố,151,151.0,151.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,17,1,151,TÀI SẢN,Chi phí trả trước ngắn hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,17,2,151,Thuyếtminh,10(a),,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,17,3,151,Tại ngày 31 tháng 12 năm,107.109.003.189,107109003189.0,107109003189.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,17,4,151,Tại ngày 31 tháng 12 năm__2,124.148.018.254,124148018254.0,124148018254.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,18,0,152,Mãsố,152,152.0,152.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,18,1,152,TÀI SẢN,"Thuế giá trị gia tăng (""GTGT"") được khấu trừ",,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,18,2,152,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,18,3,152,Tại ngày 31 tháng 12 năm,6.986.391.427,6986391427.0,6986391427.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,18,4,152,Tại ngày 31 tháng 12 năm__2,999.114.115,999114115.0,999114115.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,19,0,153,Mãsố,153,153.0,153.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,19,1,153,TÀI SẢN,Thuế và các khoản khác phải thu Nhà nước,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,19,2,153,Thuyếtminh,15(a),,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,19,3,153,Tại ngày 31 tháng 12 năm,-,0.0,0.0,True,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,19,4,153,Tại ngày 31 tháng 12 năm__2,91.130.172,91130172.0,91130172.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,20,0,200,Mãsố,200,200.0,200.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,20,1,200,TÀI SẢN,TÀI SẢN DÀI HẠN,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,20,2,200,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,20,3,200,Tại ngày 31 tháng 12 năm,8.514.655.546.430,8514655546430.0,8514655546430.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,20,4,200,Tại ngày 31 tháng 12 năm__2,8.521.254.536.494,8521254536494.0,8521254536494.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,21,0,210,Mãsố,210,210.0,210.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,21,1,210,TÀI SẢN,Các khoản phải thu dài hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,21,2,210,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,21,3,210,Tại ngày 31 tháng 12 năm,9.878.997.007,9878997007.0,9878997007.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,21,4,210,Tại ngày 31 tháng 12 năm__2,9.978.779.471,9978779471.0,9978779471.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,22,0,216,Mãsố,216,216.0,216.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,22,1,216,TÀI SẢN,Phải thu dài hạn khác,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,22,2,216,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,22,3,216,Tại ngày 31 tháng 12 năm,9.878.997.007,9878997007.0,9878997007.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,22,4,216,Tại ngày 31 tháng 12 năm__2,9.978.779.471,9978779471.0,9978779471.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,23,0,220,Mãsố,220,220.0,220.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,23,1,220,TÀI SẢN,Tài sản cố định,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,23,2,220,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,23,3,220,Tại ngày 31 tháng 12 năm,5.554.439.272.889,5554439272889.0,5554439272889.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,23,4,220,Tại ngày 31 tháng 12 năm__2,5.875.573.656.890,5875573656890.0,5875573656890.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,24,0,221,Mãsố,221,221.0,221.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,24,1,221,TÀI SẢN,Tài sản cố định hữu hình,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,24,2,221,Thuyếtminh,11(a),,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,24,3,221,Tại ngày 31 tháng 12 năm,4.948.441.893.026,4948441893026.0,4948441893026.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,24,4,221,Tại ngày 31 tháng 12 năm__2,5.321.152.454.328,5321152454328.0,5321152454328.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,25,0,222,Mãsố,222,222.0,222.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,25,1,222,TÀI SẢN,Nguyên giá,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,25,2,222,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,25,3,222,Tại ngày 31 tháng 12 năm,12.745.956.476.468,12745956476468.0,12745956476468.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,25,4,222,Tại ngày 31 tháng 12 năm__2,12.063.922.190.133,12063922190133.0,12063922190133.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,26,0,223,Mãsố,223,223.0,223.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,26,1,223,TÀI SẢN,Giá trị khấu hao lũy kế,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,26,2,223,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,26,3,223,Tại ngày 31 tháng 12 năm,(7.797.514.583.442),-7797514583442.0,-7797514583442.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,26,4,223,Tại ngày 31 tháng 12 năm__2,(6.742.769.735.805),-6742769735805.0,-6742769735805.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,27,0,227,Mãsố,227,227.0,227.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,27,1,227,TÀI SẢN,Tài sản cố định vô hình,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,27,2,227,Thuyếtminh,11(b),,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,27,3,227,Tại ngày 31 tháng 12 năm,605.997.379.863,605997379863.0,605997379863.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,27,4,227,Tại ngày 31 tháng 12 năm__2,554.421.202.562,554421202562.0,554421202562.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,28,0,228,Mãsố,228,228.0,228.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,28,1,228,TÀI SẢN,Nguyên giá,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,28,2,228,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,28,3,228,Tại ngày 31 tháng 12 năm,1.241.060.095.707,1241060095707.0,1241060095707.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,28,4,228,Tại ngày 31 tháng 12 năm__2,1.119.635.984.536,1119635984536.0,1119635984536.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,29,0,229,Mãsố,229,229.0,229.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,29,1,229,TÀI SẢN,Giá trị khấu hao lũy kế,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,29,2,229,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,29,3,229,Tại ngày 31 tháng 12 năm,(635.062.715.844),-635062715844.0,-635062715844.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,29,4,229,Tại ngày 31 tháng 12 năm__2,(565.214.781.974),-565214781974.0,-565214781974.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,30,0,240,Mãsố,240,240.0,240.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,30,1,240,TÀI SẢN,Tài sản dở dang dài hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,30,2,240,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,30,3,240,Tại ngày 31 tháng 12 năm,116.050.165.931,116050165931.0,116050165931.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,30,4,240,Tại ngày 31 tháng 12 năm__2,170.356.165.578,170356165578.0,170356165578.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,31,0,242,Mãsố,242,242.0,242.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,31,1,242,TÀI SẢN,Chi phí xây dựng cơ bản dở dang,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,31,2,242,Thuyếtminh,12,12.0,12.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,31,3,242,Tại ngày 31 tháng 12 năm,116.050.165.931,116050165931.0,116050165931.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,31,4,242,Tại ngày 31 tháng 12 năm__2,170.356.165.578,170356165578.0,170356165578.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,32,0,250,Mãsố,250,250.0,250.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,32,1,250,TÀI SẢN,Đầu tư tài chính dài hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,32,2,250,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,32,3,250,Tại ngày 31 tháng 12 năm,725.741.317.955,725741317955.0,725741317955.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,32,4,250,Tại ngày 31 tháng 12 năm__2,501.426.317.955,501426317955.0,501426317955.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,33,0,251,Mãsố,251,251.0,251.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,33,1,251,TÀI SẢN,Đầu tư vào công ty con,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,33,2,251,Thuyếtminh,4(b),,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,33,3,251,Tại ngày 31 tháng 12 năm,719.541.317.955,719541317955.0,719541317955.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,33,4,251,Tại ngày 31 tháng 12 năm__2,495.226.317.955,495226317955.0,495226317955.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,34,0,253,Mãsố,253,253.0,253.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,34,1,253,TÀI SẢN,Đầu tư góp vốn vào đơn vị khác,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,34,2,253,Thuyếtminh,4(b),,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,34,3,253,Tại ngày 31 tháng 12 năm,6.000.000.000,6000000000.0,6000000000.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,34,4,253,Tại ngày 31 tháng 12 năm__2,6.000.000.000,6000000000.0,6000000000.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,35,0,255,Mãsố,255,255.0,255.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,35,1,255,TÀI SẢN,Đầu tư nắm giữ đến ngày đáo hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,35,2,255,Thuyếtminh,4(a),,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,35,3,255,Tại ngày 31 tháng 12 năm,200.000.000,200000000.0,200000000.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,35,4,255,Tại ngày 31 tháng 12 năm__2,200.000.000,200000000.0,200000000.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,36,0,260,Mãsố,260,260.0,260.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,36,1,260,TÀI SẢN,Tài sản dài hạn khác,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,36,2,260,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,36,3,260,Tại ngày 31 tháng 12 năm,2.108.545.792.648,2108545792648.0,2108545792648.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,36,4,260,Tại ngày 31 tháng 12 năm__2,1.963.919.616.600,1963919616600.0,1963919616600.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,37,0,261,Mãsố,261,261.0,261.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,37,1,261,TÀI SẢN,Chi phí trả trước dài hạn,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,37,2,261,Thuyếtminh,10(b),,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,37,3,261,Tại ngày 31 tháng 12 năm,2.087.866.013.634,2087866013634.0,2087866013634.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,37,4,261,Tại ngày 31 tháng 12 năm__2,1.944.096.124.543,1944096124543.0,1944096124543.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,38,0,262,Mãsố,262,262.0,262.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,38,1,262,TÀI SẢN,Tài sản thuế thu nhập hoãn lại,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,38,2,262,Thuyếtminh,13,13.0,13.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,38,3,262,Tại ngày 31 tháng 12 năm,20.679.779.014,20679779014.0,20679779014.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,38,4,262,Tại ngày 31 tháng 12 năm__2,19.823.492.057,19823492057.0,19823492057.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,39,0,270,Mãsố,270,270.0,270.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,39,1,270,TÀI SẢN,TỔNG TÀI SẢN,,,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,39,2,270,Thuyếtminh,,,,False,True
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,39,3,270,Tại ngày 31 tháng 12 năm,22.461.414.157.120,22461414157120.0,22461414157120.0,False,False
+FOX_financial_statements_2024_separate|table_9,FOX_financial_statements_2024_separate,FOX,2024,separate,UNKNOWN,39,4,270,Tại ngày 31 tháng 12 năm__2,18.645.887.199.429,18645887199429.0,18645887199429.0,False,False

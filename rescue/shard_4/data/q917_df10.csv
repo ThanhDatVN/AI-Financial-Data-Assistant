@@ -1,0 +1,106 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,0,0,NỘ PHẢI TRẢ (300 = 310 + 350),NGLÔN VÔN,NỘ PHẢI TRẢ (300 = 310 + 350),,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,0,1,NỘ PHẢI TRẢ (300 = 310 + 350),Mã số | NGLÔN VÔN,300,300.0,300.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,0,2,NỘ PHẢI TRẢ (300 = 310 + 350),Thayết m/nh | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,0,3,NỘ PHẢI TRẢ (300 = 310 + 350),31/12/2017 VND | NGLÔN VÔN,23.484.832.353.462,23484832353462.0,23484832353462.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,0,4,NỘ PHẢI TRẢ (300 = 310 + 350),11/2017 VND | NGLÔN VÔN,15.439.746.114.451,15439746114451.0,15439746114451.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,1,0,Nợ ngắc hạn,NGLÔN VÔN,Nợ ngắc hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,1,1,Nợ ngắc hạn,Mã số | NGLÔN VÔN,310,310.0,310.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,1,2,Nợ ngắc hạn,Thayết m/nh | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,1,3,Nợ ngắc hạn,31/12/2017 VND | NGLÔN VÔN,16.340.000.178.511,16340000178511.0,16340000178511.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,1,4,Nợ ngắc hạn,11/2017 VND | NGLÔN VÔN,10.692.674.531.581,10692674531581.0,10692674531581.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,2,0,Phải trả người bán ngắn hạn,NGLÔN VÔN,Phải trả người bán ngắn hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,2,1,Phải trả người bán ngắn hạn,Mã số | NGLÔN VÔN,311,311.0,311.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,2,2,Phải trả người bán ngắn hạn,Thayết m/nh | NGLÔN VÔN,15,15.0,15.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,2,3,Phải trả người bán ngắn hạn,31/12/2017 VND | NGLÔN VÔN,593.067.305.745,593067305745.0,593067305745.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,2,4,Phải trả người bán ngắn hạn,11/2017 VND | NGLÔN VÔN,281.433.708.156,281433708156.0,281433708156.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,3,0,Người minus lẻ liêu trước ag Indo hạn,NGLÔN VÔN,Người minus lẻ liêu trước ag Indo hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,3,1,Người minus lẻ liêu trước ag Indo hạn,Mã số | NGLÔN VÔN,312,312.0,312.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,3,2,Người minus lẻ liêu trước ag Indo hạn,Thayết m/nh | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,3,3,Người minus lẻ liêu trước ag Indo hạn,31/12/2017 VND | NGLÔN VÔN,440.186.208.976,440186208976.0,440186208976.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,3,4,Người minus lẻ liêu trước ag Indo hạn,11/2017 VND | NGLÔN VÔN,291.656.427.709,291656427709.0,291656427709.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,4,0,Thuế phiếu nộp Nhà raínc,NGLÔN VÔN,Thuế phiếu nộp Nhà raínc,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,4,1,Thuế phiếu nộp Nhà raínc,Mã số | NGLÔN VÔN,213,213.0,213.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,4,2,Thuế phiếu nộp Nhà raínc,Thayết m/nh | NGLÔN VÔN,16(p),,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,4,3,Thuế phiếu nộp Nhà raínc,31/12/2017 VND | NGLÔN VÔN,93.692.334.950,93692334950.0,93692334950.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,4,4,Thuế phiếu nộp Nhà raínc,11/2017 VND | NGLÔN VÔN,196.853.480.072,196853480072.0,196853480072.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,5,0,Chi phí phải trả ngắn hạn,NGLÔN VÔN,Chi phí phải trả ngắn hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,5,1,Chi phí phải trả ngắn hạn,Mã số | NGLÔN VÔN,315,315.0,315.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,5,2,Chi phí phải trả ngắn hạn,Thayết m/nh | NGLÔN VÔN,17,17.0,17.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,5,3,Chi phí phải trả ngắn hạn,31/12/2017 VND | NGLÔN VÔN,1.343.336.413.171,1343336413171.0,1343336413171.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,5,4,Chi phí phải trả ngắn hạn,11/2017 VND | NGLÔN VÔN,478.918.435.087,478918435087.0,478918435087.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,6,0,Doanh đều plasma Lợrc hiểm ngắn hạn,NGLÔN VÔN,Doanh đều plasma Lợrc hiểm ngắn hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,6,1,Doanh đều plasma Lợrc hiểm ngắn hạn,Mã số | NGLÔN VÔN,318,318.0,318.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,6,2,Doanh đều plasma Lợrc hiểm ngắn hạn,Thayết m/nh | NGLÔN VÔN,18,18.0,18.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,6,3,Doanh đều plasma Lợrc hiểm ngắn hạn,31/12/2017 VND | NGLÔN VÔN,1.964.462.207.817,1964462207817.0,1964462207817.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,6,4,Doanh đều plasma Lợrc hiểm ngắn hạn,11/2017 VND | NGLÔN VÔN,1.306.856.624.360,1306856624360.0,1306856624360.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,7,0,Đivá trả ngắn hạn khác,NGLÔN VÔN,Đivá trả ngắn hạn khác,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,7,1,Đivá trả ngắn hạn khác,Mã số | NGLÔN VÔN,319,319.0,319.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,7,2,Đivá trả ngắn hạn khác,Thayết m/nh | NGLÔN VÔN,19,19.0,19.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,7,3,Đivá trả ngắn hạn khác,31/12/2017 VND | NGLÔN VÔN,3.582.015.475.690,3582015475690.0,3582015475690.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,7,4,Đivá trả ngắn hạn khác,11/2017 VND | NGLÔN VÔN,690.910.035.875,690910035875.0,690910035875.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,8,0,Vary ngắn hạn,NGLÔN VÔN,Vary ngắn hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,8,1,Vary ngắn hạn,Mã số | NGLÔN VÔN,320,320.0,320.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,8,2,Vary ngắn hạn,Thayết m/nh | NGLÔN VÔN,20(p),,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,8,3,Vary ngắn hạn,31/12/2017 VND | NGLÔN VÔN,6.897.226.897.293,6897226897293.0,6897226897293.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,8,4,Vary ngắn hạn,11/2017 VND | NGLÔN VÔN,6.103.586.845.285,6103586845285.0,6103586845285.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,9,0,Dự phòng phải trả ngắn hạn,NGLÔN VÔN,Dự phòng phải trả ngắn hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,9,1,Dự phòng phải trả ngắn hạn,Mã số | NGLÔN VÔN,321,321.0,321.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,9,2,Dự phòng phải trả ngắn hạn,Thayết m/nh | NGLÔN VÔN,21,21.0,21.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,9,3,Dự phòng phải trả ngắn hạn,31/12/2017 VND | NGLÔN VÔN,1.467.013.337.869,1467013337869.0,1467013337869.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,9,4,Dự phòng phải trả ngắn hạn,11/2017 VND | NGLÔN VÔN,1.243.688.989.137,1243688989137.0,1243688989137.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,10,0,Nợ đài hạn,NGLÔN VÔN,Nợ đài hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,10,1,Nợ đài hạn,Mã số | NGLÔN VÔN,330,330.0,330.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,10,2,Nợ đài hạn,Thayết m/nh | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,10,3,Nợ đài hạn,31/12/2017 VND | NGLÔN VÔN,7.144.823.173.951,7144823173951.0,7144823173951.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,10,4,Nợ đài hạn,11/2017 VND | NGLÔN VÔN,4.247.071.582.870,4247071582870.0,4247071582870.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,11,0,Phải trả đài hạn khấu,NGLÔN VÔN,Phải trả đài hạn khấu,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,11,1,Phải trả đài hạn khấu,Mã số | NGLÔN VÔN,337,337.0,337.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,11,2,Phải trả đài hạn khấu,Thayết m/nh | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,11,3,Phải trả đài hạn khấu,31/12/2017 VND | NGLÔN VÔN,3.995.373.020,3995373020.0,3995373020.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,11,4,Phải trả đài hạn khấu,11/2017 VND | NGLÔN VÔN,5.903.375.020,5903375020.0,5903375020.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,12,0,Vay đài hạn,NGLÔN VÔN,Vay đài hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,12,1,Vay đài hạn,Mã số | NGLÔN VÔN,338,338.0,338.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,12,2,Vay đài hạn,Thayết m/nh | NGLÔN VÔN,20(b),,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,12,3,Vay đài hạn,31/12/2017 VND | NGLÔN VÔN,626.905.284.322,626905284322.0,626905284322.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,12,4,Vay đài hạn,11/2017 VND | NGLÔN VÔN,694.840.399.641,694840399641.0,694840399641.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,13,0,Thuế chu nhập hoạt lại phải trả,NGLÔN VÔN,Thuế chu nhập hoạt lại phải trả,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,13,1,Thuế chu nhập hoạt lại phải trả,Mã số | NGLÔN VÔN,341,341.0,341.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,13,2,Thuế chu nhập hoạt lại phải trả,Thayết m/nh | NGLÔN VÔN,22,22.0,22.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,13,3,Thuế chu nhập hoạt lại phải trả,31/12/2017 VND | NGLÔN VÔN,147.546.321.044,147546321044.0,147546321044.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,13,4,Thuế chu nhập hoạt lại phải trả,11/2017 VND | NGLÔN VÔN,82.471.339.722,82471339722.0,82471339722.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,14,0,Dự phòng phải trả đài hạn,NGLÔN VÔN,Dự phòng phải trả đài hạn,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,14,1,Dự phòng phải trả đài hạn,Mã số | NGLÔN VÔN,342,342.0,342.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,14,2,Dự phòng phải trả đài hạn,Thayết m/nh | NGLÔN VÔN,21,21.0,21.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,14,3,Dự phòng phải trả đài hạn,31/12/2017 VND | NGLÔN VÔN,6.364.465.195.565,6364465195565.0,6364465195565.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,14,4,Dự phòng phải trả đài hạn,11/2017 VND | NGLÔN VÔN,3.963.854.570.484,3963854570484.0,3963854570484.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,15,0,VỐN CHỦ SỐ HỒU (400 = 410),NGLÔN VÔN,VỐN CHỦ SỐ HỒU (400 = 410),,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,15,1,VỐN CHỦ SỐ HỒU (400 = 410),Mã số | NGLÔN VÔN,400,400.0,400.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,15,2,VỐN CHỦ SỐ HỒU (400 = 410),Thayết m/nh | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,15,3,VỐN CHỦ SỐ HỒU (400 = 410),31/12/2017 VND | NGLÔN VÔN,5.680.969.720.546,5680969720546.0,5680969720546.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,15,4,VỐN CHỦ SỐ HỒU (400 = 410),11/2017 VND | NGLÔN VÔN,3.071.972.404.979,3071972404979.0,3071972404979.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,16,0,Vốn chủ sở hữu,NGLÔN VÔN,Vốn chủ sở hữu,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,16,1,Vốn chủ sở hữu,Mã số | NGLÔN VÔN,410,410.0,410.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,16,2,Vốn chủ sở hữu,Thayết m/nh | NGLÔN VÔN,23,23.0,23.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,16,3,Vốn chủ sở hữu,31/12/2017 VND | NGLÔN VÔN,5.688.969.720.546,5688969720546.0,5688969720546.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,16,4,Vốn chủ sở hữu,11/2017 VND | NGLÔN VÔN,3.071.972.404.970,3071972404970.0,3071972404970.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,17,0,Vốn cỡ phân,NGLÔN VÔN,Vốn cỡ phân,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,17,1,Vốn cỡ phân,Mã số | NGLÔN VÔN,411,411.0,411.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,17,2,Vốn cỡ phân,Thayết m/nh | NGLÔN VÔN,24,24.0,24.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,17,3,Vốn cỡ phân,31/12/2017 VND | NGLÔN VÔN,4.513.432.848.099,4513432848099.0,4513432848099.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,17,4,Vốn cỡ phân,11/2017 VND | NGLÔN VÔN,3.600.000.000.003,3600000000003.0,3600000000003.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,18,0,Thăng dư vốn cỡ pião,NGLÔN VÔN,Thăng dư vốn cỡ pião,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,18,1,Thăng dư vốn cỡ pião,Mã số | NGLÔN VÔN,412,412.0,412.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,18,2,Thăng dư vốn cỡ pião,Thayết m/nh | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,18,3,Thăng dư vốn cỡ pião,31/12/2017 VND | NGLÔN VÔN,245.919.192.805,245919192805.0,245919192805.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,18,4,Thăng dư vốn cỡ pião,11/2017 VND | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,19,0,Lợi nhuậnzhou multiples common phân phối,NGLÔN VÔN,Lợi nhuậnzhou multiples common phân phối,,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,19,1,Lợi nhuậnzhou multiples common phân phối,Mã số | NGLÔN VÔN,421,421.0,421.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,19,2,Lợi nhuậnzhou multiples common phân phối,Thayết m/nh | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,19,3,Lợi nhuậnzhou multiples common phân phối,31/12/2017 VND | NGLÔN VÔN,921.587.387.741,921587387741.0,921587387741.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,19,4,Lợi nhuậnzhou multiples common phân phối,11/2017 VND | NGLÔN VÔN,71.972.404.979,71972404979.0,71972404979.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,20,0,TỔNG NGƯƠN VỐN(440 = 300 + 400),NGLÔN VÔN,TỔNG NGƯƠN VỐN(440 = 300 + 400),,,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,20,1,TỔNG NGƯƠN VỐN(440 = 300 + 400),Mã số | NGLÔN VÔN,440,440.0,440.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,20,2,TỔNG NGƯƠN VỐN(440 = 300 + 400),Thayết m/nh | NGLÔN VÔN,,,,False,True
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,20,3,TỔNG NGƯƠN VỐN(440 = 300 + 400),31/12/2017 VND | NGLÔN VÔN,29.165.792.073.008,29165792073008.0,29165792073008.0,False,False
+VJC_financial_statements_2017_separate|table_6,VJC_financial_statements_2017_separate,VJC,2017,separate,VND,20,4,TỔNG NGƯƠN VỐN(440 = 300 + 400),11/2017 VND | NGLÔN VÔN,18.511.718.519.421,18511718519421.0,18511718519421.0,False,False

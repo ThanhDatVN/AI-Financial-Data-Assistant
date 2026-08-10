@@ -1,0 +1,31 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,0,0,Số lượng cổ phiếu đăng ký phát hành,column_1,Số lượng cổ phiếu đăng ký phát hành,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,0,1,Số lượng cổ phiếu đăng ký phát hành,Số cuối năm,365.281.878,365281878.0,365281878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,0,2,Số lượng cổ phiếu đăng ký phát hành,Số đầu năm,365.281.878,365281878.0,365281878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,1,0,Số lượng cổ phiếu đã bán ra công chúng,column_1,Số lượng cổ phiếu đã bán ra công chúng,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,1,1,Số lượng cổ phiếu đã bán ra công chúng,Số cuối năm,365.281.878,365281878.0,365281878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,1,2,Số lượng cổ phiếu đã bán ra công chúng,Số đầu năm,365.281.878,365281878.0,365281878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,2,0,- Cổ phiếu phố thông,column_1,- Cổ phiếu phố thông,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,2,1,- Cổ phiếu phố thông,Số cuối năm,365.281.878,365281878.0,365281878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,2,2,- Cổ phiếu phố thông,Số đầu năm,365.281.878,365281878.0,365281878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,3,0,- Cổ phiếu ưu đãi,column_1,- Cổ phiếu ưu đãi,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,3,1,- Cổ phiếu ưu đãi,Số cuối năm,-,0.0,0.0,True,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,3,2,- Cổ phiếu ưu đãi,Số đầu năm,-,0.0,0.0,True,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,4,0,Số lượng cổ phiếu được mua lại,column_1,Số lượng cổ phiếu được mua lại,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,4,1,Số lượng cổ phiếu được mua lại,Số cuối năm,(3.800.000),-3800000.0,-3800000.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,4,2,Số lượng cổ phiếu được mua lại,Số đầu năm,(3.800.000),-3800000.0,-3800000.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,5,0,- Cổ phiếu phố thông,column_1,- Cổ phiếu phố thông,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,5,1,- Cổ phiếu phố thông,Số cuối năm,(3.800.000),-3800000.0,-3800000.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,5,2,- Cổ phiếu phố thông,Số đầu năm,(3.800.000),-3800000.0,-3800000.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,6,0,- Cổ phiếu ưu đãi,column_1,- Cổ phiếu ưu đãi,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,6,1,- Cổ phiếu ưu đãi,Số cuối năm,-,0.0,0.0,True,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,6,2,- Cổ phiếu ưu đãi,Số đầu năm,-,0.0,0.0,True,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,7,0,Số lượng cổ phiếu đang lưu hành,column_1,Số lượng cổ phiếu đang lưu hành,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,7,1,Số lượng cổ phiếu đang lưu hành,Số cuối năm,361.481.878,361481878.0,361481878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,7,2,Số lượng cổ phiếu đang lưu hành,Số đầu năm,361.481.878,361481878.0,361481878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,8,0,- Cổ phiếu phố thông,column_1,- Cổ phiếu phố thông,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,8,1,- Cổ phiếu phố thông,Số cuối năm,361.481.878,361481878.0,361481878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,8,2,- Cổ phiếu phố thông,Số đầu năm,361.481.878,361481878.0,361481878.0,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,9,0,- Cổ phiếu ưu đãi,column_1,- Cổ phiếu ưu đãi,,,False,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,9,1,- Cổ phiếu ưu đãi,Số cuối năm,-,0.0,0.0,True,False
+KLB_financial_statements_2023_separate|table_40,KLB_financial_statements_2023_separate,KLB,2023,separate,SHARES,9,2,- Cổ phiếu ưu đãi,Số đầu năm,-,0.0,0.0,True,False

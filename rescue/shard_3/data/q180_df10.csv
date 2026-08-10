@@ -1,0 +1,191 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,0,0,Tài sản ngắn hạn(\( 100 = 110 + 120 + 130 + 140 + 150 \)),TÀI SẢN,Tài sản ngắn hạn(\( 100 = 110 + 120 + 130 + 140 + 150 \)),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,0,1,Tài sản ngắn hạn(\( 100 = 110 + 120 + 130 + 140 + 150 \)),Mã số,100,100.0,100.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,0,2,Tài sản ngắn hạn(\( 100 = 110 + 120 + 130 + 140 + 150 \)),Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,0,3,Tài sản ngắn hạn(\( 100 = 110 + 120 + 130 + 140 + 150 \)),31/12/2019 VND,19.600.590.305.525,19600590305525.0,19600590305525.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,0,4,Tài sản ngắn hạn(\( 100 = 110 + 120 + 130 + 140 + 150 \)),1/1/2019 VND,16.727.030.230.311,16727030230311.0,16727030230311.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,1,0,Tiền và các khoản tương đương tiền,TÀI SẢN,Tiền và các khoản tương đương tiền,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,1,1,Tiền và các khoản tương đương tiền,Mã số,110,110.0,110.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,1,2,Tiền và các khoản tương đương tiền,Thuyết minh,5,5.0,5.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,1,3,Tiền và các khoản tương đương tiền,31/12/2019 VND,5.355.816.155.352,5355816155352.0,5355816155352.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,1,4,Tiền và các khoản tương đương tiền,1/1/2019 VND,7.156.359.241.738,7156359241738.0,7156359241738.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,2,0,Tiền,TÀI SẢN,Tiền,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,2,1,Tiền,Mã số,111,111.0,111.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,2,2,Tiền,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,2,3,Tiền,31/12/2019 VND,3.815.637.517.972,3815637517972.0,3815637517972.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,2,4,Tiền,1/1/2019 VND,3.640.399.241.738,3640399241738.0,3640399241738.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,3,0,Các khoản tương đương tiền,TÀI SẢN,Các khoản tương đương tiền,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,3,1,Các khoản tương đương tiền,Mã số,112,112.0,112.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,3,2,Các khoản tương đương tiền,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,3,3,Các khoản tương đương tiền,31/12/2019 VND,1.540.178.637.380,1540178637380.0,1540178637380.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,3,4,Các khoản tương đương tiền,1/1/2019 VND,3.515.960.000.000,3515960000000.0,3515960000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,4,0,Đầu tư tài chính ngắn hạn,TÀI SẢN,Đầu tư tài chính ngắn hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,4,1,Đầu tư tài chính ngắn hạn,Mã số,120,120.0,120.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,4,2,Đầu tư tài chính ngắn hạn,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,4,3,Đầu tư tài chính ngắn hạn,31/12/2019 VND,1.144.756.800.000,1144756800000.0,1144756800000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,4,4,Đầu tư tài chính ngắn hạn,1/1/2019 VND,815.500.000.000,815500000000.0,815500000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,5,0,Chứng khoán kinh doanh,TÀI SẢN,Chứng khoán kinh doanh,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,5,1,Chứng khoán kinh doanh,Mã số,121,121.0,121.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,5,2,Chứng khoán kinh doanh,Thuyết minh,6(a),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,5,3,Chứng khoán kinh doanh,31/12/2019 VND,990.000.000.000,990000000000.0,990000000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,5,4,Chứng khoán kinh doanh,1/1/2019 VND,990.000.000.000,990000000000.0,990000000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,6,0,Dự phòng giảm giá chứng khoán kinh doanh,TÀI SẢN,Dự phòng giảm giá chứng khoán kinh doanh,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,6,1,Dự phòng giảm giá chứng khoán kinh doanh,Mã số,122,122.0,122.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,6,2,Dự phòng giảm giá chứng khoán kinh doanh,Thuyết minh,6(a),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,6,3,Dự phòng giảm giá chứng khoán kinh doanh,31/12/2019 VND,(555.000.000.000),-555000000000.0,-555000000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,6,4,Dự phòng giảm giá chứng khoán kinh doanh,1/1/2019 VND,(174.500.000.000),-174500000000.0,-174500000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,7,0,Đầu tư nắm giữ đến ngày đáo hạn,TÀI SẢN,Đầu tư nắm giữ đến ngày đáo hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,7,1,Đầu tư nắm giữ đến ngày đáo hạn,Mã số,123,123.0,123.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,7,2,Đầu tư nắm giữ đến ngày đáo hạn,Thuyết minh,6(c),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,7,3,Đầu tư nắm giữ đến ngày đáo hạn,31/12/2019 VND,709.756.800.000,709756800000.0,709756800000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,7,4,Đầu tư nắm giữ đến ngày đáo hạn,1/1/2019 VND,-,0.0,0.0,True,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,8,0,Các khoản phải thu ngắn hạn,TÀI SẢN,Các khoản phải thu ngắn hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,8,1,Các khoản phải thu ngắn hạn,Mã số,130,130.0,130.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,8,2,Các khoản phải thu ngắn hạn,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,8,3,Các khoản phải thu ngắn hạn,31/12/2019 VND,11.906.623.124.337,11906623124337.0,11906623124337.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,8,4,Các khoản phải thu ngắn hạn,1/1/2019 VND,7.931.509.214.723,7931509214723.0,7931509214723.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,9,0,Phải thu ngắn hạn của khách hàng,TÀI SẢN,Phải thu ngắn hạn của khách hàng,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,9,1,Phải thu ngắn hạn của khách hàng,Mã số,131,131.0,131.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,9,2,Phải thu ngắn hạn của khách hàng,Thuyết minh,7,7.0,7.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,9,3,Phải thu ngắn hạn của khách hàng,31/12/2019 VND,3.334.187.094.292,3334187094292.0,3334187094292.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,9,4,Phải thu ngắn hạn của khách hàng,1/1/2019 VND,1.220.013.565.836,1220013565836.0,1220013565836.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,10,0,Trả trước cho người bán ngắn hạn,TÀI SẢN,Trả trước cho người bán ngắn hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,10,1,Trả trước cho người bán ngắn hạn,Mã số,132,132.0,132.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,10,2,Trả trước cho người bán ngắn hạn,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,10,3,Trả trước cho người bán ngắn hạn,31/12/2019 VND,186.825.273.966,186825273966.0,186825273966.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,10,4,Trả trước cho người bán ngắn hạn,1/1/2019 VND,129.927.091.931,129927091931.0,129927091931.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,11,0,Phải thu ngắn hạn khác,TÀI SẢN,Phải thu ngắn hạn khác,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,11,1,Phải thu ngắn hạn khác,Mã số,136,136.0,136.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,11,2,Phải thu ngắn hạn khác,Thuyết minh,9(a),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,11,3,Phải thu ngắn hạn khác,31/12/2019 VND,8.385.610.756.079,8385610756079.0,8385610756079.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,11,4,Phải thu ngắn hạn khác,1/1/2019 VND,6.581.568.556.956,6581568556956.0,6581568556956.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,12,0,Hàng tồn kho,TÀI SẢN,Hàng tồn kho,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,12,1,Hàng tồn kho,Mã số,140,140.0,140.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,12,2,Hàng tồn kho,Thuyết minh,10,10.0,10.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,12,3,Hàng tồn kho,31/12/2019 VND,747.898.679.837,747898679837.0,747898679837.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,12,4,Hàng tồn kho,1/1/2019 VND,468.729.305.585,468729305585.0,468729305585.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,13,0,Tài sản ngắn hạn khác,TÀI SẢN,Tài sản ngắn hạn khác,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,13,1,Tài sản ngắn hạn khác,Mã số,150,150.0,150.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,13,2,Tài sản ngắn hạn khác,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,13,3,Tài sản ngắn hạn khác,31/12/2019 VND,445.495.545.999,445495545999.0,445495545999.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,13,4,Tài sản ngắn hạn khác,1/1/2019 VND,354.932.468.265,354932468265.0,354932468265.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,14,0,Chi phí trả trước ngắn hạn,TÀI SẢN,Chi phí trả trước ngắn hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,14,1,Chi phí trả trước ngắn hạn,Mã số,151,151.0,151.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,14,2,Chi phí trả trước ngắn hạn,Thuyết minh,14(a),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,14,3,Chi phí trả trước ngắn hạn,31/12/2019 VND,382.337.666.788,382337666788.0,382337666788.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,14,4,Chi phí trả trước ngắn hạn,1/1/2019 VND,299.977.931.225,299977931225.0,299977931225.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,15,0,Thuế phải thu Nhà nước,TÀI SẢN,Thuế phải thu Nhà nước,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,15,1,Thuế phải thu Nhà nước,Mã số,153,153.0,153.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,15,2,Thuế phải thu Nhà nước,Thuyết minh,16(b),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,15,3,Thuế phải thu Nhà nước,31/12/2019 VND,63.157.879.211,63157879211.0,63157879211.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,15,4,Thuế phải thu Nhà nước,1/1/2019 VND,54.954.537.040,54954537040.0,54954537040.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,16,0,Tài sản dài hạn(\( 200 = 210 + 220 + 240 + 250 + 260 \)),TÀI SẢN,Tài sản dài hạn(\( 200 = 210 + 220 + 240 + 250 + 260 \)),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,16,1,Tài sản dài hạn(\( 200 = 210 + 220 + 240 + 250 + 260 \)),Mã số,200,200.0,200.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,16,2,Tài sản dài hạn(\( 200 = 210 + 220 + 240 + 250 + 260 \)),Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,16,3,Tài sản dài hạn(\( 200 = 210 + 220 + 240 + 250 + 260 \)),31/12/2019 VND,24.341.596.232.410,24341596232410.0,24341596232410.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,16,4,Tài sản dài hạn(\( 200 = 210 + 220 + 240 + 250 + 260 \)),1/1/2019 VND,19.955.201.908.719,19955201908719.0,19955201908719.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,17,0,Các khoản phải thu dài hạn,TÀI SẢN,Các khoản phải thu dài hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,17,1,Các khoản phải thu dài hạn,Mã số,210,210.0,210.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,17,2,Các khoản phải thu dài hạn,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,17,3,Các khoản phải thu dài hạn,31/12/2019 VND,14.964.049.145.778,14964049145778.0,14964049145778.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,17,4,Các khoản phải thu dài hạn,1/1/2019 VND,10.575.666.223.835,10575666223835.0,10575666223835.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,18,0,Trả trước cho người bán dài hạn,TÀI SẢN,Trả trước cho người bán dài hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,18,1,Trả trước cho người bán dài hạn,Mã số,212,212.0,212.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,18,2,Trả trước cho người bán dài hạn,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,18,3,Trả trước cho người bán dài hạn,31/12/2019 VND,-,0.0,0.0,True,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,18,4,Trả trước cho người bán dài hạn,1/1/2019 VND,701.500.000.000,701500000000.0,701500000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,19,0,Phải thu về cho vay dài hạn,TÀI SẢN,Phải thu về cho vay dài hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,19,1,Phải thu về cho vay dài hạn,Mã số,215,215.0,215.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,19,2,Phải thu về cho vay dài hạn,Thuyết minh,8,8.0,8.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,19,3,Phải thu về cho vay dài hạn,31/12/2019 VND,701.500.000.000,701500000000.0,701500000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,19,4,Phải thu về cho vay dài hạn,1/1/2019 VND,-,0.0,0.0,True,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,20,0,Phải thu dài hạn khác,TÀI SẢN,Phải thu dài hạn khác,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,20,1,Phải thu dài hạn khác,Mã số,216,216.0,216.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,20,2,Phải thu dài hạn khác,Thuyết minh,9(b),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,20,3,Phải thu dài hạn khác,31/12/2019 VND,14.262.549.145.778,14262549145778.0,14262549145778.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,20,4,Phải thu dài hạn khác,1/1/2019 VND,9.874.166.223.835,9874166223835.0,9874166223835.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,21,0,Tài sản cố định,TÀI SẢN,Tài sản cố định,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,21,1,Tài sản cố định,Mã số,220,220.0,220.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,21,2,Tài sản cố định,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,21,3,Tài sản cố định,31/12/2019 VND,1.303.160.396.122,1303160396122.0,1303160396122.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,21,4,Tài sản cố định,1/1/2019 VND,1.645.095.006.520,1645095006520.0,1645095006520.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,22,0,Tài sản cố định hữu hình,TÀI SẢN,Tài sản cố định hữu hình,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,22,1,Tài sản cố định hữu hình,Mã số,221,221.0,221.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,22,2,Tài sản cố định hữu hình,Thuyết minh,11,11.0,11.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,22,3,Tài sản cố định hữu hình,31/12/2019 VND,1.301.038.091.839,1301038091839.0,1301038091839.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,22,4,Tài sản cố định hữu hình,1/1/2019 VND,1.642.189.535.533,1642189535533.0,1642189535533.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,23,0,Nguyên giá,TÀI SẢN,Nguyên giá,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,23,1,Nguyên giá,Mã số,222,222.0,222.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,23,2,Nguyên giá,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,23,3,Nguyên giá,31/12/2019 VND,1.687.120.867.140,1687120867140.0,1687120867140.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,23,4,Nguyên giá,1/1/2019 VND,1.934.434.945.327,1934434945327.0,1934434945327.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,24,0,Giá trị hao mòn lũy kế,TÀI SẢN,Giá trị hao mòn lũy kế,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,24,1,Giá trị hao mòn lũy kế,Mã số,223,223.0,223.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,24,2,Giá trị hao mòn lũy kế,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,24,3,Giá trị hao mòn lũy kế,31/12/2019 VND,(386.082.775.301),-386082775301.0,-386082775301.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,24,4,Giá trị hao mòn lũy kế,1/1/2019 VND,(292.245.409.794),-292245409794.0,-292245409794.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,25,0,Tài sản cố định vô hình,TÀI SẢN,Tài sản cố định vô hình,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,25,1,Tài sản cố định vô hình,Mã số,227,227.0,227.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,25,2,Tài sản cố định vô hình,Thuyết minh,12,12.0,12.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,25,3,Tài sản cố định vô hình,31/12/2019 VND,2.122.304.283,2122304283.0,2122304283.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,25,4,Tài sản cố định vô hình,1/1/2019 VND,2.905.470.987,2905470987.0,2905470987.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,26,0,Nguyên giá,TÀI SẢN,Nguyên giá,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,26,1,Nguyên giá,Mã số,228,228.0,228.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,26,2,Nguyên giá,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,26,3,Nguyên giá,31/12/2019 VND,29.907.717.155,29907717155.0,29907717155.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,26,4,Nguyên giá,1/1/2019 VND,29.077.618.155,29077618155.0,29077618155.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,27,0,Giá trị hao mòn lũy kế,TÀI SẢN,Giá trị hao mòn lũy kế,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,27,1,Giá trị hao mòn lũy kế,Mã số,229,229.0,229.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,27,2,Giá trị hao mòn lũy kế,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,27,3,Giá trị hao mòn lũy kế,31/12/2019 VND,(27.785.412.872),-27785412872.0,-27785412872.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,27,4,Giá trị hao mòn lũy kế,1/1/2019 VND,(26.172.147.168),-26172147168.0,-26172147168.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,28,0,Tài sản dở dang dài hạn,TÀI SẢN,Tài sản dở dang dài hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,28,1,Tài sản dở dang dài hạn,Mã số,240,240.0,240.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,28,2,Tài sản dở dang dài hạn,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,28,3,Tài sản dở dang dài hạn,31/12/2019 VND,1.258.338.717.091,1258338717091.0,1258338717091.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,28,4,Tài sản dở dang dài hạn,1/1/2019 VND,1.175.977.845.586,1175977845586.0,1175977845586.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,29,0,Xây dựng cơ bản dở dang,TÀI SẢN,Xây dựng cơ bản dở dang,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,29,1,Xây dựng cơ bản dở dang,Mã số,242,242.0,242.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,29,2,Xây dựng cơ bản dở dang,Thuyết minh,13,13.0,13.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,29,3,Xây dựng cơ bản dở dang,31/12/2019 VND,1.258.338.717.091,1258338717091.0,1258338717091.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,29,4,Xây dựng cơ bản dở dang,1/1/2019 VND,1.175.977.845.586,1175977845586.0,1175977845586.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,30,0,Đầu tư tài chính dài hạn,TÀI SẢN,Đầu tư tài chính dài hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,30,1,Đầu tư tài chính dài hạn,Mã số,250,250.0,250.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,30,2,Đầu tư tài chính dài hạn,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,30,3,Đầu tư tài chính dài hạn,31/12/2019 VND,224.973.206.218,224973206218.0,224973206218.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,30,4,Đầu tư tài chính dài hạn,1/1/2019 VND,77.424.629.818,77424629818.0,77424629818.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,31,0,Đầu tư vào các công ty con,TÀI SẢN,Đầu tư vào các công ty con,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,31,1,Đầu tư vào các công ty con,Mã số,251,251.0,251.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,31,2,Đầu tư vào các công ty con,Thuyết minh,6(b),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,31,3,Đầu tư vào các công ty con,31/12/2019 VND,9.000.000.000,9000000000.0,9000000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,31,4,Đầu tư vào các công ty con,1/1/2019 VND,9.000.000.000,9000000000.0,9000000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,32,0,Đầu tư vào các công ty liên kết,TÀI SẢN,Đầu tư vào các công ty liên kết,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,32,1,Đầu tư vào các công ty liên kết,Mã số,252,252.0,252.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,32,2,Đầu tư vào các công ty liên kết,Thuyết minh,6(b),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,32,3,Đầu tư vào các công ty liên kết,31/12/2019 VND,60.000.000.000,60000000000.0,60000000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,32,4,Đầu tư vào các công ty liên kết,1/1/2019 VND,60.000.000.000,60000000000.0,60000000000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,33,0,Đầu tư góp vốn vào các đơn vị khác,TÀI SẢN,Đầu tư góp vốn vào các đơn vị khác,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,33,1,Đầu tư góp vốn vào các đơn vị khác,Mã số,253,253.0,253.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,33,2,Đầu tư góp vốn vào các đơn vị khác,Thuyết minh,6(b),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,33,3,Đầu tư góp vốn vào các đơn vị khác,31/12/2019 VND,149.417.024.400,149417024400.0,149417024400.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,33,4,Đầu tư góp vốn vào các đơn vị khác,1/1/2019 VND,7.868.448.000,7868448000.0,7868448000.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,34,0,Đầu tư nắm giữ đến ngày đáo hạn,TÀI SẢN,Đầu tư nắm giữ đến ngày đáo hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,34,1,Đầu tư nắm giữ đến ngày đáo hạn,Mã số,255,255.0,255.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,34,2,Đầu tư nắm giữ đến ngày đáo hạn,Thuyết minh,6(c),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,34,3,Đầu tư nắm giữ đến ngày đáo hạn,31/12/2019 VND,6.556.181.818,6556181818.0,6556181818.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,34,4,Đầu tư nắm giữ đến ngày đáo hạn,1/1/2019 VND,556.181.818,556181818.0,556181818.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,35,0,Tài sản dài hạn khác,TÀI SẢN,Tài sản dài hạn khác,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,35,1,Tài sản dài hạn khác,Mã số,260,260.0,260.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,35,2,Tài sản dài hạn khác,Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,35,3,Tài sản dài hạn khác,31/12/2019 VND,6.591.074.767.201,6591074767201.0,6591074767201.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,35,4,Tài sản dài hạn khác,1/1/2019 VND,6.481.038.202.960,6481038202960.0,6481038202960.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,36,0,Chi phí trả trước dài hạn,TÀI SẢN,Chi phí trả trước dài hạn,,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,36,1,Chi phí trả trước dài hạn,Mã số,261,261.0,261.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,36,2,Chi phí trả trước dài hạn,Thuyết minh,14(b),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,36,3,Chi phí trả trước dài hạn,31/12/2019 VND,6.591.074.767.201,6591074767201.0,6591074767201.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,36,4,Chi phí trả trước dài hạn,1/1/2019 VND,6.481.038.202.960,6481038202960.0,6481038202960.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,37,0,TỔNG TÀI SẢN (\( 270 = 100 + 200 \)),TÀI SẢN,TỔNG TÀI SẢN (\( 270 = 100 + 200 \)),,,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,37,1,TỔNG TÀI SẢN (\( 270 = 100 + 200 \)),Mã số,270,270.0,270.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,37,2,TỔNG TÀI SẢN (\( 270 = 100 + 200 \)),Thuyết minh,,,,False,True
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,37,3,TỔNG TÀI SẢN (\( 270 = 100 + 200 \)),31/12/2019 VND,43.942.186.537.935,43942186537935.0,43942186537935.0,False,False
+VJC_financial_statements_2019_separate|table_5,VJC_financial_statements_2019_separate,VJC,2019,separate,VND,37,4,TỔNG TÀI SẢN (\( 270 = 100 + 200 \)),1/1/2019 VND,36.682.232.139.030,36682232139030.0,36682232139030.0,False,False

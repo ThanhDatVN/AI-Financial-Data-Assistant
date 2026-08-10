@@ -1,0 +1,105 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,0,0,Doanh thu thuần,Năm nay,Doanh thu thuần,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,0,1,Doanh thu thuần,Nội địa | VND,5.875.480.552.333,5875480552333.0,5875480552333.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,0,2,Doanh thu thuần,Nước ngoài | VND,1.647.403.882.825,1647403882825.0,1647403882825.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,0,3,Doanh thu thuần,Tổng cộng | VND,7.522.884.435.158,7522884435158.0,7522884435158.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,1,0,Giá vốn hàng bán và cung cấp dịch vụ,Năm nay,Giá vốn hàng bán và cung cấp dịch vụ,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,1,1,Giá vốn hàng bán và cung cấp dịch vụ,Nội địa | VND,(4.731.491.716.815),-4731491716815.0,-4731491716815.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,1,2,Giá vốn hàng bán và cung cấp dịch vụ,Nước ngoài | VND,(1.501.597.460.261),-1501597460261.0,-1501597460261.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,1,3,Giá vốn hàng bán và cung cấp dịch vụ,Tổng cộng | VND,(6.233.089.177.076),-6233089177076.0,-6233089177076.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,2,0,Lợi nhuận kinh doanh theo bộ phận,Năm nay,Lợi nhuận kinh doanh theo bộ phận,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,2,1,Lợi nhuận kinh doanh theo bộ phận,Nội địa | VND,1.143.988.835.518,1143988835518.0,1143988835518.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,2,2,Lợi nhuận kinh doanh theo bộ phận,Nước ngoài | VND,145.806.422.564,145806422564.0,145806422564.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,2,3,Lợi nhuận kinh doanh theo bộ phận,Tổng cộng | VND,1.289.795.258.082,1289795258082.0,1289795258082.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,3,0,Chi phí hoạt động chung,Năm nay,Chi phí hoạt động chung,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,3,1,Chi phí hoạt động chung,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,3,2,Chi phí hoạt động chung,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,3,3,Chi phí hoạt động chung,Tổng cộng | VND,(651.949.219.414),-651949219414.0,-651949219414.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,4,0,Doanh thu hoạt động tài chính,Năm nay,Doanh thu hoạt động tài chính,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,4,1,Doanh thu hoạt động tài chính,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,4,2,Doanh thu hoạt động tài chính,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,4,3,Doanh thu hoạt động tài chính,Tổng cộng | VND,130.240.695.027,130240695027.0,130240695027.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,5,0,Chi phí tài chính,Năm nay,Chi phí tài chính,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,5,1,Chi phí tài chính,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,5,2,Chi phí tài chính,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,5,3,Chi phí tài chính,Tổng cộng | VND,(61.660.315.782),-61660315782.0,-61660315782.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,6,0,Thu nhập khác,Năm nay,Thu nhập khác,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,6,1,Thu nhập khác,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,6,2,Thu nhập khác,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,6,3,Thu nhập khác,Tổng cộng | VND,10.735.344.253,10735344253.0,10735344253.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,7,0,Chi phí khác,Năm nay,Chi phí khác,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,7,1,Chi phí khác,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,7,2,Chi phí khác,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,7,3,Chi phí khác,Tổng cộng | VND,(2.333.025.958),-2333025958.0,-2333025958.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,8,0,Lợi nhuận trước thuế,Năm nay,Lợi nhuận trước thuế,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,8,1,Lợi nhuận trước thuế,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,8,2,Lợi nhuận trước thuế,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,8,3,Lợi nhuận trước thuế,Tổng cộng | VND,714.828.736.208,714828736208.0,714828736208.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,9,0,Chi phí thuế thu nhập doanh nghiệp hiện hành,Năm nay,Chi phí thuế thu nhập doanh nghiệp hiện hành,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,9,1,Chi phí thuế thu nhập doanh nghiệp hiện hành,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,9,2,Chi phí thuế thu nhập doanh nghiệp hiện hành,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,9,3,Chi phí thuế thu nhập doanh nghiệp hiện hành,Tổng cộng | VND,(51.252.737.929),-51252737929.0,-51252737929.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,10,0,Chi phí thuế thu nhập doanh nghiệp hoãn lại,Năm nay,Chi phí thuế thu nhập doanh nghiệp hoãn lại,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,10,1,Chi phí thuế thu nhập doanh nghiệp hoãn lại,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,10,2,Chi phí thuế thu nhập doanh nghiệp hoãn lại,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,10,3,Chi phí thuế thu nhập doanh nghiệp hoãn lại,Tổng cộng | VND,(2.011.554.971),-2011554971.0,-2011554971.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,11,0,Lợi nhuận sau thuế thu nhập doanh nghiệp,Năm nay,Lợi nhuận sau thuế thu nhập doanh nghiệp,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,11,1,Lợi nhuận sau thuế thu nhập doanh nghiệp,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,11,2,Lợi nhuận sau thuế thu nhập doanh nghiệp,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,11,3,Lợi nhuận sau thuế thu nhập doanh nghiệp,Tổng cộng | VND,661.564.443.308,661564443308.0,661564443308.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,12,0,Năm trước,Năm nay,Năm trước,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,12,1,Năm trước,Nội địa | VND,Nội địa,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,12,2,Năm trước,Nước ngoài | VND,Nước ngoài,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,12,3,Năm trước,Tổng cộng | VND,Tổng cộng,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,13,0,,Năm nay,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,13,1,,Nội địa | VND,VND,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,13,2,,Nước ngoài | VND,VND,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,13,3,,Tổng cộng | VND,VND,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,14,0,Doanh thu thuần,Năm nay,Doanh thu thuần,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,14,1,Doanh thu thuần,Nội địa | VND,5.779.872.123.584,5779872123584.0,5779872123584.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,14,2,Doanh thu thuần,Nước ngoài | VND,1.252.180.392.192,1252180392192.0,1252180392192.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,14,3,Doanh thu thuần,Tổng cộng | VND,7.032.052.515.776,7032052515776.0,7032052515776.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,15,0,Giá vốn hàng bán và cung cấp dịch vụ,Năm nay,Giá vốn hàng bán và cung cấp dịch vụ,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,15,1,Giá vốn hàng bán và cung cấp dịch vụ,Nội địa | VND,(4.957.062.253.904),-4957062253904.0,-4957062253904.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,15,2,Giá vốn hàng bán và cung cấp dịch vụ,Nước ngoài | VND,(1.140.487.133.832),-1140487133832.0,-1140487133832.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,15,3,Giá vốn hàng bán và cung cấp dịch vụ,Tổng cộng | VND,(6.097.549.387.736),-6097549387736.0,-6097549387736.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,16,0,Lợi nhuận kinh doanh theo bộ phận,Năm nay,Lợi nhuận kinh doanh theo bộ phận,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,16,1,Lợi nhuận kinh doanh theo bộ phận,Nội địa | VND,822.809.869.680,822809869680.0,822809869680.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,16,2,Lợi nhuận kinh doanh theo bộ phận,Nước ngoài | VND,111.693.258.360,111693258360.0,111693258360.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,16,3,Lợi nhuận kinh doanh theo bộ phận,Tổng cộng | VND,934.503.128.040,934503128040.0,934503128040.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,17,0,Chi phí hoạt động chung,Năm nay,Chi phí hoạt động chung,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,17,1,Chi phí hoạt động chung,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,17,2,Chi phí hoạt động chung,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,17,3,Chi phí hoạt động chung,Tổng cộng | VND,(547.038.956.303),-547038956303.0,-547038956303.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,18,0,Doanh thu hoạt động tài chính,Năm nay,Doanh thu hoạt động tài chính,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,18,1,Doanh thu hoạt động tài chính,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,18,2,Doanh thu hoạt động tài chính,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,18,3,Doanh thu hoạt động tài chính,Tổng cộng | VND,128.629.786.142,128629786142.0,128629786142.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,19,0,Chi phí tài chính,Năm nay,Chi phí tài chính,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,19,1,Chi phí tài chính,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,19,2,Chi phí tài chính,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,19,3,Chi phí tài chính,Tổng cộng | VND,(100.731.194.779),-100731194779.0,-100731194779.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,20,0,Thu nhập khác,Năm nay,Thu nhập khác,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,20,1,Thu nhập khác,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,20,2,Thu nhập khác,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,20,3,Thu nhập khác,Tổng cộng | VND,48.480.136.648,48480136648.0,48480136648.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,21,0,Chi phí khác,Năm nay,Chi phí khác,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,21,1,Chi phí khác,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,21,2,Chi phí khác,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,21,3,Chi phí khác,Tổng cộng | VND,(3.472.166.901),-3472166901.0,-3472166901.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,22,0,Lợi nhuận trước thuế,Năm nay,Lợi nhuận trước thuế,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,22,1,Lợi nhuận trước thuế,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,22,2,Lợi nhuận trước thuế,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,22,3,Lợi nhuận trước thuế,Tổng cộng | VND,460.370.732.847,460370732847.0,460370732847.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,23,0,Chi phí thuế thu nhập doanh nghiệp hiện hành,Năm nay,Chi phí thuế thu nhập doanh nghiệp hiện hành,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,23,1,Chi phí thuế thu nhập doanh nghiệp hiện hành,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,23,2,Chi phí thuế thu nhập doanh nghiệp hiện hành,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,23,3,Chi phí thuế thu nhập doanh nghiệp hiện hành,Tổng cộng | VND,(39.829.588.814),-39829588814.0,-39829588814.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,24,0,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,Năm nay,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,24,1,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,24,2,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,24,3,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,Tổng cộng | VND,5.282.435.028,5282435028.0,5282435028.0,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,25,0,Lợi nhuận sau thuế thu nhập doanh nghiệp,Năm nay,Lợi nhuận sau thuế thu nhập doanh nghiệp,,,False,False
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,25,1,Lợi nhuận sau thuế thu nhập doanh nghiệp,Nội địa | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,25,2,Lợi nhuận sau thuế thu nhập doanh nghiệp,Nước ngoài | VND,,,,False,True
+DCM_financial_statements_2020_separate|table_38,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,25,3,Lợi nhuận sau thuế thu nhập doanh nghiệp,Tổng cộng | VND,425.823.579.061,425823579061.0,425823579061.0,False,False

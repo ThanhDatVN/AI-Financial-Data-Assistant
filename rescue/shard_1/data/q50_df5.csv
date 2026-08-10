@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,0,0,Trái phiếu đặc biệt do VAMC phát hành (a),column_1,Trái phiếu đặc biệt do VAMC phát hành (a),,,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,0,1,Trái phiếu đặc biệt do VAMC phát hành (a),Số cuối nămTriệu đồng,2.720.958,2720958.0,2720958000000.0,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,0,2,Trái phiếu đặc biệt do VAMC phát hành (a),Số đầu nămTriệu đồng,-,0.0,0.0,True,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,1,0,Trái phiếu do các tổ chức kinh tế trong nước phát hành (b),column_1,Trái phiếu do các tổ chức kinh tế trong nước phát hành (b),,,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,1,1,Trái phiếu do các tổ chức kinh tế trong nước phát hành (b),Số cuối nămTriệu đồng,554.110,554110.0,554110000000.0,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,1,2,Trái phiếu do các tổ chức kinh tế trong nước phát hành (b),Số đầu nămTriệu đồng,659.385,659385.0,659385000000.0,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,2,0,,column_1,,,,False,True
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,2,1,,Số cuối nămTriệu đồng,3.275.068,3275068.0,3275068000000.0,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,2,2,,Số đầu nămTriệu đồng,659.385,659385.0,659385000000.0,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,3,0,Dự phòng rủi ro chứng khoángiữ đến ngày đáo hạn,column_1,Dự phòng rủi ro chứng khoángiữ đến ngày đáo hạn,,,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,3,1,Dự phòng rủi ro chứng khoángiữ đến ngày đáo hạn,Số cuối nămTriệu đồng,,,,False,True
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,3,2,Dự phòng rủi ro chứng khoángiữ đến ngày đáo hạn,Số đầu nămTriệu đồng,,,,False,True
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,4,0,Dự phòng chung,column_1,Dự phòng chung,,,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,4,1,Dự phòng chung,Số cuối nămTriệu đồng,(4.156),-4156.0,-4156000000.0,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,4,2,Dự phòng chung,Số đầu nămTriệu đồng,(3.820),-3820.0,-3820000000.0,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,5,0,Dự phòng cụ thể,column_1,Dự phòng cụ thể,,,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,5,1,Dự phòng cụ thể,Số cuối nămTriệu đồng,(217.902),-217902.0,-217902000000.0,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,5,2,Dự phòng cụ thể,Số đầu nămTriệu đồng,-,0.0,0.0,True,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,6,0,,column_1,,,,False,True
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,6,1,,Số cuối nămTriệu đồng,(222.058),-222058.0,-222058000000.0,False,False
+ABB_financial_statements_2023_separate|table_47,ABB_financial_statements_2023_separate,ABB,2023,separate,MILLION_VND,6,2,,Số đầu nămTriệu đồng,(3.820),-3820.0,-3820000000.0,False,False

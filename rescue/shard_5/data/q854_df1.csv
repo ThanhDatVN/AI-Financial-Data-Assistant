@@ -1,0 +1,19 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,0,0,Tiền cho thuê nhận trước,Ngắn hạn,Tiền cho thuê nhận trước,,,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,0,1,Tiền cho thuê nhận trước,Số cuối năm,7.589.982.574,7589982574.0,7589982574.0,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,0,2,Tiền cho thuê nhận trước,VND Số đầu năm,7.405.671.605,7405671605.0,7405671605.0,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,1,0,Dài hạn,Ngắn hạn,Dài hạn,,,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,1,1,Dài hạn,Số cuối năm,,,,False,True
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,1,2,Dài hạn,VND Số đầu năm,,,,False,True
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,2,0,Lợi nhuận chưa thực hiện dự án Mizuki Park,Ngắn hạn,Lợi nhuận chưa thực hiện dự án Mizuki Park,,,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,2,1,Lợi nhuận chưa thực hiện dự án Mizuki Park,Số cuối năm,218.146.395.789,218146395789.0,218146395789.0,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,2,2,Lợi nhuận chưa thực hiện dự án Mizuki Park,VND Số đầu năm,300.433.505.775,300433505775.0,300433505775.0,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,3,0,Tiền cho thuê nhận trước,Ngắn hạn,Tiền cho thuê nhận trước,,,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,3,1,Tiền cho thuê nhận trước,Số cuối năm,41.554.737.058,41554737058.0,41554737058.0,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,3,2,Tiền cho thuê nhận trước,VND Số đầu năm,54.025.584.949,54025584949.0,54025584949.0,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,4,0,,Ngắn hạn,,,,False,True
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,4,1,,Số cuối năm,259.701.132.847,259701132847.0,259701132847.0,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,4,2,,VND Số đầu năm,354.459.090.724,354459090724.0,354459090724.0,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,5,0,TỔNG CỘNG,Ngắn hạn,TỔNG CỘNG,,,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,5,1,TỔNG CỘNG,Số cuối năm,267.291.115.421,267291115421.0,267291115421.0,False,False
+NLG_financial_statements_2023_consolidated|table_45,NLG_financial_statements_2023_consolidated,NLG,2023,consolidated,VND,5,2,TỔNG CỘNG,VND Số đầu năm,361.864.762.329,361864762329.0,361864762329.0,False,False

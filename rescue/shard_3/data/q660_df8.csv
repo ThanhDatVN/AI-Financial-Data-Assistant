@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,0,0,Nghĩa vụ tiêm ấn,column_1,Nghĩa vụ tiêm ấn,,,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,0,1,Nghĩa vụ tiêm ấn,Số cuối năm | Triệu VND,159.575.895,159575895.0,159575895000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,0,2,Nghĩa vụ tiêm ấn,Số đầu năm | Triệu VND,109.949.627,109949627.0,109949627000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,1,0,Bảo lãnh vay vốn,column_1,Bảo lãnh vay vốn,,,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,1,1,Bảo lãnh vay vốn,Số cuối năm | Triệu VND,7.692.271,7692271.0,7692271000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,1,2,Bảo lãnh vay vốn,Số đầu năm | Triệu VND,3.237.485,3237485.0,3237485000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,2,0,Cam kết trong nghiệp vụ L/C,column_1,Cam kết trong nghiệp vụ L/C,,,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,2,1,Cam kết trong nghiệp vụ L/C,Số cuối năm | Triệu VND,73.681.669,73681669.0,73681669000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,2,2,Cam kết trong nghiệp vụ L/C,Số đầu năm | Triệu VND,46.584.571,46584571.0,46584571000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,3,0,Bảo lãnh khác,column_1,Bảo lãnh khác,,,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,3,1,Bảo lãnh khác,Số cuối năm | Triệu VND,78.201.955,78201955.0,78201955000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,3,2,Bảo lãnh khác,Số đầu năm | Triệu VND,60.127.571,60127571.0,60127571000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,4,0,Các cam kết đưa ra,column_1,Các cam kết đưa ra,,,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,4,1,Các cam kết đưa ra,Số cuối năm | Triệu VND,310.604.986,310604986.0,310604986000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,4,2,Các cam kết đưa ra,Số đầu năm | Triệu VND,583.961.974,583961974.0,583961974000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,5,0,Cam kết giao dịch hồi đoái,column_1,Cam kết giao dịch hồi đoái,,,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,5,1,Cam kết giao dịch hồi đoái,Số cuối năm | Triệu VND,258.304.665,258304665.0,258304665000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,5,2,Cam kết giao dịch hồi đoái,Số đầu năm | Triệu VND,479.385.067,479385067.0,479385067000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,6,0,Các cam kết khác,column_1,Các cam kết khác,,,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,6,1,Các cam kết khác,Số cuối năm | Triệu VND,52.300.321,52300321.0,52300321000000.0,False,False
+CTG_financial_statements_2022_separate|table_76,CTG_financial_statements_2022_separate,CTG,2022,separate,MILLION_VND,6,2,Các cam kết khác,Số đầu năm | Triệu VND,104.576.907,104576907.0,104576907000000.0,False,False

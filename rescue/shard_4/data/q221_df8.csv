@@ -1,0 +1,31 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,0,0,Số dư ngày 01/01/2017,Chỉ tiêu | Nguyên giá,Số dư ngày 01/01/2017,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,0,1,Số dư ngày 01/01/2017,Máy móc thiết bị,-,0.0,0.0,True,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,0,2,Số dư ngày 01/01/2017,Đơn vị tính: VND Tổng cộng,-,0.0,0.0,True,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,1,0,Thuê tài chính trong năm,Chỉ tiêu | Nguyên giá,Thuê tài chính trong năm,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,1,1,Thuê tài chính trong năm,Máy móc thiết bị,10.604.545.454,10604545454.0,10604545454.0,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,1,2,Thuê tài chính trong năm,Đơn vị tính: VND Tổng cộng,10.604.545.454,10604545454.0,10604545454.0,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,2,0,Số dư ngày 31/12/2017,Chỉ tiêu | Nguyên giá,Số dư ngày 31/12/2017,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,2,1,Số dư ngày 31/12/2017,Máy móc thiết bị,10.604.545.454,10604545454.0,10604545454.0,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,2,2,Số dư ngày 31/12/2017,Đơn vị tính: VND Tổng cộng,10.604.545.454,10604545454.0,10604545454.0,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,3,0,Giá trị hao mòn lũy kế,Chỉ tiêu | Nguyên giá,Giá trị hao mòn lũy kế,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,3,1,Giá trị hao mòn lũy kế,Máy móc thiết bị,,,,False,True
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,3,2,Giá trị hao mòn lũy kế,Đơn vị tính: VND Tổng cộng,,,,False,True
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,4,0,Số dư ngày 01/01/2017,Chỉ tiêu | Nguyên giá,Số dư ngày 01/01/2017,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,4,1,Số dư ngày 01/01/2017,Máy móc thiết bị,-,0.0,0.0,True,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,4,2,Số dư ngày 01/01/2017,Đơn vị tính: VND Tổng cộng,-,0.0,0.0,True,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,5,0,Khẩu hao trong năm,Chỉ tiêu | Nguyên giá,Khẩu hao trong năm,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,5,1,Khẩu hao trong năm,Máy móc thiết bị,28.817.843,28817843.0,28817843.0,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,5,2,Khẩu hao trong năm,Đơn vị tính: VND Tổng cộng,28.817.843,28817843.0,28817843.0,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,6,0,Số dư ngày 31/12/2017,Chỉ tiêu | Nguyên giá,Số dư ngày 31/12/2017,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,6,1,Số dư ngày 31/12/2017,Máy móc thiết bị,28.817.843,28817843.0,28817843.0,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,6,2,Số dư ngày 31/12/2017,Đơn vị tính: VND Tổng cộng,28.817.843,28817843.0,28817843.0,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,7,0,Giá trị còn lại,Chỉ tiêu | Nguyên giá,Giá trị còn lại,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,7,1,Giá trị còn lại,Máy móc thiết bị,,,,False,True
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,7,2,Giá trị còn lại,Đơn vị tính: VND Tổng cộng,,,,False,True
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,8,0,Tại ngày 01/01/2017,Chỉ tiêu | Nguyên giá,Tại ngày 01/01/2017,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,8,1,Tại ngày 01/01/2017,Máy móc thiết bị,-,0.0,0.0,True,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,8,2,Tại ngày 01/01/2017,Đơn vị tính: VND Tổng cộng,-,0.0,0.0,True,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,9,0,Tại ngày 31/12/2017,Chỉ tiêu | Nguyên giá,Tại ngày 31/12/2017,,,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,9,1,Tại ngày 31/12/2017,Máy móc thiết bị,10.575.727.611,10575727611.0,10575727611.0,False,False
+CEO_financial_statements_2017_consolidated|table_22,CEO_financial_statements_2017_consolidated,CEO,2017,consolidated,VND,9,2,Tại ngày 31/12/2017,Đơn vị tính: VND Tổng cộng,10.575.727.611,10575727611.0,10575727611.0,False,False

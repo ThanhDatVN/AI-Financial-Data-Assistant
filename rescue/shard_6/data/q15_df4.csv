@@ -1,0 +1,31 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,0,0,Chu Thị Bình,Hội đồng Quản trị,Chu Thị Bình,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,0,1,Chu Thị Bình,2021VND | Hội đồng Quản trị,150.000.000,150000000.0,150000000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,0,2,Chu Thị Bình,2020VND | Hội đồng Quản trị,150.000.000,150000000.0,150000000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,1,0,Lê Văn Quang,Hội đồng Quản trị,Lê Văn Quang,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,1,1,Lê Văn Quang,2021VND | Hội đồng Quản trị,150.000.000,150000000.0,150000000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,1,2,Lê Văn Quang,2020VND | Hội đồng Quản trị,150.000.000,150000000.0,150000000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,2,0,Lê Văn Điệp,Hội đồng Quản trị,Lê Văn Điệp,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,2,1,Lê Văn Điệp,2021VND | Hội đồng Quản trị,150.000.000,150000000.0,150000000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,2,2,Lê Văn Điệp,2020VND | Hội đồng Quản trị,150.000.000,150000000.0,150000000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,3,0,Bùi Anh Dũng,Hội đồng Quản trị,Bùi Anh Dũng,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,3,1,Bùi Anh Dũng,2021VND | Hội đồng Quản trị,150.000.000,150000000.0,150000000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,3,2,Bùi Anh Dũng,2020VND | Hội đồng Quản trị,150.000.000,150000000.0,150000000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,4,0,Phan Thanh Lộc,Hội đồng Quản trị,Phan Thanh Lộc,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,4,1,Phan Thanh Lộc,2021VND | Hội đồng Quản trị,387.500.000,387500000.0,387500000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,4,2,Phan Thanh Lộc,2020VND | Hội đồng Quản trị,387.500.000,387500000.0,387500000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,5,0,Hồ Thu Lê,Hội đồng Quản trị,Hồ Thu Lê,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,5,1,Hồ Thu Lê,2021VND | Hội đồng Quản trị,387.500.000,387500000.0,387500000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,5,2,Hồ Thu Lê,2020VND | Hội đồng Quản trị,387.500.000,387500000.0,387500000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,6,0,Osada Tsutomu,Hội đồng Quản trị,Osada Tsutomu,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,6,1,Osada Tsutomu,2021VND | Hội đồng Quản trị,138.461.538,138461538.0,138461538.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,6,2,Osada Tsutomu,2020VND | Hội đồng Quản trị,387.500.000,387500000.0,387500000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,7,0,Nguyễn Nhân Nghĩa,Hội đồng Quản trị,Nguyễn Nhân Nghĩa,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,7,1,Nguyễn Nhân Nghĩa,2021VND | Hội đồng Quản trị,387.500.000,387500000.0,387500000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,7,2,Nguyễn Nhân Nghĩa,2020VND | Hội đồng Quản trị,387.500.000,387500000.0,387500000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,8,0,Nagoya Yutaka,Hội đồng Quản trị,Nagoya Yutaka,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,8,1,Nagoya Yutaka,2021VND | Hội đồng Quản trị,387.500.000,387500000.0,387500000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,8,2,Nagoya Yutaka,2020VND | Hội đồng Quản trị,193.750.000,193750000.0,193750000.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,9,0,Tsukahara Keiichi,Hội đồng Quản trị,Tsukahara Keiichi,,,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,9,1,Tsukahara Keiichi,2021VND | Hội đồng Quản trị,208.653.847,208653847.0,208653847.0,False,False
+MPC_financial_statements_2021_separate|table_61,MPC_financial_statements_2021_separate,MPC,2021,separate,VND,9,2,Tsukahara Keiichi,2020VND | Hội đồng Quản trị,150.000.000,150000000.0,150000000.0,False,False

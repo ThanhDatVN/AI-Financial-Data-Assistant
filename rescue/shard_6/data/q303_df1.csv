@@ -1,0 +1,43 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,0,0,Thu nhập từ hoạt động dịch vụ,column_1,Thu nhập từ hoạt động dịch vụ,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,0,1,Thu nhập từ hoạt động dịch vụ,Năm nayTriệu đồng,5.144.222,5144222.0,5144222000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,0,2,Thu nhập từ hoạt động dịch vụ,Năm trướcTriệu đồng,4.503.702,4503702.0,4503702000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,1,0,Dịch vụ hoa hồng hợp tác bảo hiểm,column_1,Dịch vụ hoa hồng hợp tác bảo hiểm,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,1,1,Dịch vụ hoa hồng hợp tác bảo hiểm,Năm nayTriệu đồng,1.288.505,1288505.0,1288505000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,1,2,Dịch vụ hoa hồng hợp tác bảo hiểm,Năm trướcTriệu đồng,925.933,925933.0,925933000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,2,0,Dịch vụ thanh toán,column_1,Dịch vụ thanh toán,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,2,1,Dịch vụ thanh toán,Năm nayTriệu đồng,1.259.333,1259333.0,1259333000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,2,2,Dịch vụ thanh toán,Năm trướcTriệu đồng,1.137.597,1137597.0,1137597000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,3,0,Dịch vụ ủy thác và đại lý,column_1,Dịch vụ ủy thác và đại lý,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,3,1,Dịch vụ ủy thác và đại lý,Năm nayTriệu đồng,697.776,697776.0,697776000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,3,2,Dịch vụ ủy thác và đại lý,Năm trướcTriệu đồng,618.514,618514.0,618514000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,4,0,Dịch vụ ngân quỹ,column_1,Dịch vụ ngân quỹ,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,4,1,Dịch vụ ngân quỹ,Năm nayTriệu đồng,422.022,422022.0,422022000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,4,2,Dịch vụ ngân quỹ,Năm trướcTriệu đồng,454.979,454979.0,454979000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,5,0,Dịch vụ khác,column_1,Dịch vụ khác,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,5,1,Dịch vụ khác,Năm nayTriệu đồng,1.476.586,1476586.0,1476586000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,5,2,Dịch vụ khác,Năm trướcTriệu đồng,1.366.679,1366679.0,1366679000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,6,0,Chi phí hoạt động dịch vụ,column_1,Chi phí hoạt động dịch vụ,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,6,1,Chi phí hoạt động dịch vụ,Năm nayTriệu đồng,(1.688.112),-1688112.0,-1688112000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,6,2,Chi phí hoạt động dịch vụ,Năm trướcTriệu đồng,(1.422.579),-1422579.0,-1422579000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,7,0,Dịch vụ thanh toán,column_1,Dịch vụ thanh toán,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,7,1,Dịch vụ thanh toán,Năm nayTriệu đồng,(1.159.924),-1159924.0,-1159924000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,7,2,Dịch vụ thanh toán,Năm trướcTriệu đồng,(975.422),-975422.0,-975422000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,8,0,"Cước phí bưu điện, mạng viễn thông",column_1,"Cước phí bưu điện, mạng viễn thông",,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,8,1,"Cước phí bưu điện, mạng viễn thông",Năm nayTriệu đồng,(401.146),-401146.0,-401146000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,8,2,"Cước phí bưu điện, mạng viễn thông",Năm trướcTriệu đồng,(291.533),-291533.0,-291533000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,9,0,Dịch vụ ngân quỹ,column_1,Dịch vụ ngân quỹ,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,9,1,Dịch vụ ngân quỹ,Năm nayTriệu đồng,(41.980),-41980.0,-41980000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,9,2,Dịch vụ ngân quỹ,Năm trướcTriệu đồng,(47.025),-47025.0,-47025000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,10,0,Hoa hồng môi giới,column_1,Hoa hồng môi giới,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,10,1,Hoa hồng môi giới,Năm nayTriệu đồng,(39.900),-39900.0,-39900000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,10,2,Hoa hồng môi giới,Năm trướcTriệu đồng,(48.091),-48091.0,-48091000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,11,0,Dịch vụ tư vấn,column_1,Dịch vụ tư vấn,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,11,1,Dịch vụ tư vấn,Năm nayTriệu đồng,(25.638),-25638.0,-25638000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,11,2,Dịch vụ tư vấn,Năm trướcTriệu đồng,(43.260),-43260.0,-43260000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,12,0,Dịch vụ khác,column_1,Dịch vụ khác,,,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,12,1,Dịch vụ khác,Năm nayTriệu đồng,(19.524),-19524.0,-19524000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,12,2,Dịch vụ khác,Năm trướcTriệu đồng,(17.248),-17248.0,-17248000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,13,0,,column_1,,,,False,True
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,13,1,,Năm nayTriệu đồng,3.456.110,3456110.0,3456110000000.0,False,False
+STB_financial_statements_2020_separate|table_86,STB_financial_statements_2020_separate,STB,2020,separate,MILLION_VND,13,2,,Năm trướcTriệu đồng,3.081.123,3081123.0,3081123000000.0,False,False

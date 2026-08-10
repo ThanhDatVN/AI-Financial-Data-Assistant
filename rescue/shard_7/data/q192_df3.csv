@@ -1,0 +1,56 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,0,0,Doanh thu hoạt động tài chính,column_1,Doanh thu hoạt động tài chính,,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,0,1,Doanh thu hoạt động tài chính,Mã số,21,21.0,21.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,0,2,Doanh thu hoạt động tài chính,Thuyết minh,13,13.0,13.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,0,3,Doanh thu hoạt động tài chính,2017 VND,16.505.629.140,16505629140.0,16505629140.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,0,4,Doanh thu hoạt động tài chính,2016 VND,1.939.367.465.859,1939367465859.0,1939367465859.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,1,0,Chi phí tài chính,column_1,Chi phí tài chính,,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,1,1,Chi phí tài chính,Mã số,22,22.0,22.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,1,2,Chi phí tài chính,Thuyết minh,14,14.0,14.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,1,3,Chi phí tài chính,2017 VND,1.403.641.740.107,1403641740107.0,1403641740107.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,1,4,Chi phí tài chính,2016 VND,448.403.632.379,448403632379.0,448403632379.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,2,0,Trong đó: Chi phí lãi vay,column_1,Trong đó: Chi phí lãi vay,,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,2,1,Trong đó: Chi phí lãi vay,Mã số,23,23.0,23.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,2,2,Trong đó: Chi phí lãi vay,Thuyết minh,,,,False,True
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,2,3,Trong đó: Chi phí lãi vay,2017 VND,311.968.365.587,311968365587.0,311968365587.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,2,4,Trong đó: Chi phí lãi vay,2016 VND,444.344.752.594,444344752594.0,444344752594.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,3,0,Chi phí quản lý doanh nghiệp,column_1,Chi phí quản lý doanh nghiệp,,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,3,1,Chi phí quản lý doanh nghiệp,Mã số,26,26.0,26.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,3,2,Chi phí quản lý doanh nghiệp,Thuyết minh,,,,False,True
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,3,3,Chi phí quản lý doanh nghiệp,2017 VND,4.385.135.772,4385135772.0,4385135772.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,3,4,Chi phí quản lý doanh nghiệp,2016 VND,4.355.380.808,4355380808.0,4355380808.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,4,0,(Lỗ)/lợi nhuận thuần từ hoạt động kinh doanh (30 = 21 - 22 - 26),column_1,(Lỗ)/lợi nhuận thuần từ hoạt động kinh doanh (30 = 21 - 22 - 26),,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,4,1,(Lỗ)/lợi nhuận thuần từ hoạt động kinh doanh (30 = 21 - 22 - 26),Mã số,30,30.0,30.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,4,2,(Lỗ)/lợi nhuận thuần từ hoạt động kinh doanh (30 = 21 - 22 - 26),Thuyết minh,,,,False,True
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,4,3,(Lỗ)/lợi nhuận thuần từ hoạt động kinh doanh (30 = 21 - 22 - 26),2017 VND,(1.391.521.246.739),-1391521246739.0,-1391521246739.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,4,4,(Lỗ)/lợi nhuận thuần từ hoạt động kinh doanh (30 = 21 - 22 - 26),2016 VND,1.486.608.452.672,1486608452672.0,1486608452672.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,5,0,Chi phí khác,column_1,Chi phí khác,,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,5,1,Chi phí khác,Mã số,32,32.0,32.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,5,2,Chi phí khác,Thuyết minh,,,,False,True
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,5,3,Chi phí khác,2017 VND,145.200,145200.0,145200.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,5,4,Chi phí khác,2016 VND,-,0.0,0.0,True,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,6,0,Kết quả từ các hoạt động khác (40 = - 32),column_1,Kết quả từ các hoạt động khác (40 = - 32),,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,6,1,Kết quả từ các hoạt động khác (40 = - 32),Mã số,40,40.0,40.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,6,2,Kết quả từ các hoạt động khác (40 = - 32),Thuyết minh,,,,False,True
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,6,3,Kết quả từ các hoạt động khác (40 = - 32),2017 VND,(145.200),-145200.0,-145200.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,6,4,Kết quả từ các hoạt động khác (40 = - 32),2016 VND,-,0.0,0.0,True,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,7,0,(Lỗ)/lợi nhuận kế toán trước thuế (50 = 30 + 40),column_1,(Lỗ)/lợi nhuận kế toán trước thuế (50 = 30 + 40),,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,7,1,(Lỗ)/lợi nhuận kế toán trước thuế (50 = 30 + 40),Mã số,50,50.0,50.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,7,2,(Lỗ)/lợi nhuận kế toán trước thuế (50 = 30 + 40),Thuyết minh,,,,False,True
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,7,3,(Lỗ)/lợi nhuận kế toán trước thuế (50 = 30 + 40),2017 VND,(1.391.521.391.939),-1391521391939.0,-1391521391939.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,7,4,(Lỗ)/lợi nhuận kế toán trước thuế (50 = 30 + 40),2016 VND,1.486.608.452.672,1486608452672.0,1486608452672.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,8,0,Chi phí thuế TNDN hiện hành,column_1,Chi phí thuế TNDN hiện hành,,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,8,1,Chi phí thuế TNDN hiện hành,Mã số,51,51.0,51.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,8,2,Chi phí thuế TNDN hiện hành,Thuyết minh,15,15.0,15.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,8,3,Chi phí thuế TNDN hiện hành,2017 VND,-,0.0,0.0,True,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,8,4,Chi phí thuế TNDN hiện hành,2016 VND,-,0.0,0.0,True,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,9,0,Chi phí thuế TNDN hoãn lại,column_1,Chi phí thuế TNDN hoãn lại,,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,9,1,Chi phí thuế TNDN hoãn lại,Mã số,52,52.0,52.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,9,2,Chi phí thuế TNDN hoãn lại,Thuyết minh,15,15.0,15.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,9,3,Chi phí thuế TNDN hoãn lại,2017 VND,-,0.0,0.0,True,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,9,4,Chi phí thuế TNDN hoãn lại,2016 VND,-,0.0,0.0,True,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,10,0,(Lỗ)/lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52),column_1,(Lỗ)/lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52),,,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,10,1,(Lỗ)/lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52),Mã số,60,60.0,60.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,10,2,(Lỗ)/lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52),Thuyết minh,,,,False,True
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,10,3,(Lỗ)/lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52),2017 VND,(1.391.521.391.939),-1391521391939.0,-1391521391939.0,False,False
+MML_financial_statements_2017_separate|table_3,MML_financial_statements_2017_separate,MML,2017,separate,VND,10,4,(Lỗ)/lợi nhuận sau thuế TNDN (60 = 50 - 51 - 52),2016 VND,1.486.608.452.672,1486608452672.0,1486608452672.0,False,False

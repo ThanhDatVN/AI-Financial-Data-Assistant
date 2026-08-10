@@ -1,0 +1,28 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,0,0,Thu nhập từ hoạt động dịch vụ,column_1,Thu nhập từ hoạt động dịch vụ,,,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,0,1,Thu nhập từ hoạt động dịch vụ,Năm nay,52.446,52446.0,52446000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,0,2,Thu nhập từ hoạt động dịch vụ,Năm trước,23.250,23250.0,23250000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,1,0,Thu từ dịch vụ thanh toán,column_1,Thu từ dịch vụ thanh toán,,,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,1,1,Thu từ dịch vụ thanh toán,Năm nay,30.713,30713.0,30713000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,1,2,Thu từ dịch vụ thanh toán,Năm trước,22.011,22011.0,22011000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,2,0,Thu từ dịch vụ ngân quỹ,column_1,Thu từ dịch vụ ngân quỹ,,,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,2,1,Thu từ dịch vụ ngân quỹ,Năm nay,1.079,1079.0,1079000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,2,2,Thu từ dịch vụ ngân quỹ,Năm trước,1.100,1100.0,1100000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,3,0,Thu từ kinh doanh và dịch vụ bảo hiểm,column_1,Thu từ kinh doanh và dịch vụ bảo hiểm,,,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,3,1,Thu từ kinh doanh và dịch vụ bảo hiểm,Năm nay,20.518,20518.0,20518000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,3,2,Thu từ kinh doanh và dịch vụ bảo hiểm,Năm trước,-,0.0,0.0,True,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,4,0,Thu khác,column_1,Thu khác,,,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,4,1,Thu khác,Năm nay,136,136.0,136000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,4,2,Thu khác,Năm trước,139,139.0,139000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,5,0,Chi phí hoạt động dịch vụ,column_1,Chi phí hoạt động dịch vụ,,,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,5,1,Chi phí hoạt động dịch vụ,Năm nay,21.277,21277.0,21277000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,5,2,Chi phí hoạt động dịch vụ,Năm trước,14.536,14536.0,14536000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,6,0,Chi về dịch vụ thanh toán và ngân quỹ,column_1,Chi về dịch vụ thanh toán và ngân quỹ,,,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,6,1,Chi về dịch vụ thanh toán và ngân quỹ,Năm nay,13.124,13124.0,13124000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,6,2,Chi về dịch vụ thanh toán và ngân quỹ,Năm trước,9.285,9285.0,9285000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,7,0,Chi về ngân quỹ,column_1,Chi về ngân quỹ,,,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,7,1,Chi về ngân quỹ,Năm nay,8.153,8153.0,8153000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,7,2,Chi về ngân quỹ,Năm trước,5.251,5251.0,5251000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,8,0,Lãi thuần từ hoạt động dịch vụ,column_1,Lãi thuần từ hoạt động dịch vụ,,,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,8,1,Lãi thuần từ hoạt động dịch vụ,Năm nay,31.169,31169.0,31169000000.0,False,False
+KLB_financial_statements_2019_separate|table_46,KLB_financial_statements_2019_separate,KLB,2019,separate,MILLION_VND,8,2,Lãi thuần từ hoạt động dịch vụ,Năm trước,8.714,8714.0,8714000000.0,False,False

@@ -1,0 +1,31 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,0,0,Số dư đầu năm,column_1,Số dư đầu năm,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,0,1,Số dư đầu năm,2017VND,125.145.930.499,125145930499.0,125145930499.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,0,2,Số dư đầu năm,2016VND,871.558.660.940,871558660940.0,871558660940.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,1,0,Tăng trong năm,column_1,Tăng trong năm,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,1,1,Tăng trong năm,2017VND,277.602.130.362,277602130362.0,277602130362.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,1,2,Tăng trong năm,2016VND,443.286.267.272,443286267272.0,443286267272.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,2,0,Chuyển sang tài sản cố định hữu hình,column_1,Chuyển sang tài sản cố định hữu hình,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,2,1,Chuyển sang tài sản cố định hữu hình,2017VND,(62.638.516.659),-62638516659.0,-62638516659.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,2,2,Chuyển sang tài sản cố định hữu hình,2016VND,(924.497.204.739),-924497204739.0,-924497204739.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,3,0,Chuyển sang tài sản cố định vô hình,column_1,Chuyển sang tài sản cố định vô hình,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,3,1,Chuyển sang tài sản cố định vô hình,2017VND,-,0.0,0.0,True,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,3,2,Chuyển sang tài sản cố định vô hình,2016VND,(1.375.602.000),-1375602000.0,-1375602000.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,4,0,Chuyển sang chi phí trả trước dài hạn,column_1,Chuyển sang chi phí trả trước dài hạn,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,4,1,Chuyển sang chi phí trả trước dài hạn,2017VND,(7.870.154.966),-7870154966.0,-7870154966.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,4,2,Chuyển sang chi phí trả trước dài hạn,2016VND,(36.080.968.422),-36080968422.0,-36080968422.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,5,0,Điều chuyển tài sản cho Công ty TNHH,column_1,Điều chuyển tài sản cho Công ty TNHH,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,5,1,Điều chuyển tài sản cho Công ty TNHH,2017VND,,,,False,True
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,5,2,Điều chuyển tài sản cho Công ty TNHH,2016VND,,,,False,True
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,6,0,Tổng Công ty Đệt May Miền Bắc – Vinatex,column_1,Tổng Công ty Đệt May Miền Bắc – Vinatex,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,6,1,Tổng Công ty Đệt May Miền Bắc – Vinatex,2017VND,(181.099.760.231),-181099760231.0,-181099760231.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,6,2,Tổng Công ty Đệt May Miền Bắc – Vinatex,2016VND,(79.513.092.987),-79513092987.0,-79513092987.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,7,0,Điều chuyển tài sản cho Công ty TNHH,column_1,Điều chuyển tài sản cho Công ty TNHH,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,7,1,Điều chuyển tài sản cho Công ty TNHH,2017VND,,,,False,True
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,7,2,Điều chuyển tài sản cho Công ty TNHH,2016VND,,,,False,True
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,8,0,Tổng Công ty Đệt May Miền Nam – Vinatex,column_1,Tổng Công ty Đệt May Miền Nam – Vinatex,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,8,1,Tổng Công ty Đệt May Miền Nam – Vinatex,2017VND,(25.167.551.036),-25167551036.0,-25167551036.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,8,2,Tổng Công ty Đệt May Miền Nam – Vinatex,2016VND,(148.232.129.565),-148232129565.0,-148232129565.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,9,0,Số dư cuối năm,column_1,Số dư cuối năm,,,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,9,1,Số dư cuối năm,2017VND,125.972.077.969,125972077969.0,125972077969.0,False,False
+VGT_financial_statements_2017_separate|table_28,VGT_financial_statements_2017_separate,VGT,2017,separate,VND,9,2,Số dư cuối năm,2016VND,125.145.930.499,125145930499.0,125145930499.0,False,False

@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,0,0,Số dư đầu năm,column_1,Số dư đầu năm,,,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,0,1,Số dư đầu năm,2023VND,16.659.587.273,16659587273.0,16659587273.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,0,2,Số dư đầu năm,2022VND,25.157.498.695,25157498695.0,25157498695.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,1,0,Tăng trong năm,column_1,Tăng trong năm,,,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,1,1,Tăng trong năm,2023VND,122.800.000,122800000.0,122800000.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,1,2,Tăng trong năm,2022VND,24.689.084.371,24689084371.0,24689084371.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,2,0,Chuyển sang TSCĐ hữu hình (Thuyết minh 10(a)),column_1,Chuyển sang TSCĐ hữu hình (Thuyết minh 10(a)),,,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,2,1,Chuyển sang TSCĐ hữu hình (Thuyết minh 10(a)),2023VND,(4.998.405.960),-4998405960.0,-4998405960.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,2,2,Chuyển sang TSCĐ hữu hình (Thuyết minh 10(a)),2022VND,(21.486.995.160),-21486995160.0,-21486995160.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,3,0,Chuyển sang TSCĐ vô hình (Thuyết minh 10(b)),column_1,Chuyển sang TSCĐ vô hình (Thuyết minh 10(b)),,,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,3,1,Chuyển sang TSCĐ vô hình (Thuyết minh 10(b)),2023VND,(3.943.422.500),-3943422500.0,-3943422500.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,3,2,Chuyển sang TSCĐ vô hình (Thuyết minh 10(b)),2022VND,(447.000.000),-447000000.0,-447000000.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,4,0,Chuyển sang chi phí trả trước ngắn hạn,column_1,Chuyển sang chi phí trả trước ngắn hạn,,,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,4,1,Chuyển sang chi phí trả trước ngắn hạn,2023VND,,,,False,True
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,4,2,Chuyển sang chi phí trả trước ngắn hạn,2022VND,(6.842.965.000),-6842965000.0,-6842965000.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,5,0,Khác,column_1,Khác,,,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,5,1,Khác,2023VND,(1.390.937.691),-1390937691.0,-1390937691.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,5,2,Khác,2022VND,(4.410.035.633),-4410035633.0,-4410035633.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,6,0,Số dư cuối năm,column_1,Số dư cuối năm,,,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,6,1,Số dư cuối năm,2023VND,6.451.621.122,6451621122.0,6451621122.0,False,False
+NVL_financial_statements_2023_separate|table_42,NVL_financial_statements_2023_separate,NVL,2023,separate,VND,6,2,Số dư cuối năm,2022VND,16.659.587.273,16659587273.0,16659587273.0,False,False

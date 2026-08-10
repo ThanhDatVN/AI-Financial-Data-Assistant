@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,0,0,Số đầu năm,column_1,Số đầu năm,,,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,0,1,Số đầu năm,Vay ngắn hạn,2.374.628.430.111,2374628430111.0,2374628430111.0,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,0,2,Số đầu năm,VNDVay dài hạn,807.534.679.021,807534679021.0,807534679021.0,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,1,0,Tiền thu từ đi vay,column_1,Tiền thu từ đi vay,,,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,1,1,Tiền thu từ đi vay,Vay ngắn hạn,3.672.041.124.218,3672041124218.0,3672041124218.0,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,1,2,Tiền thu từ đi vay,VNDVay dài hạn,-,0.0,0.0,True,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,2,0,Kết chuyển vay dài hạn đến hạn trả,column_1,Kết chuyển vay dài hạn đến hạn trả,,,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,2,1,Kết chuyển vay dài hạn đến hạn trả,Vay ngắn hạn,807.534.679.021,807534679021.0,807534679021.0,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,2,2,Kết chuyển vay dài hạn đến hạn trả,VNDVay dài hạn,(807.534.679.021),-807534679021.0,-807534679021.0,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,3,0,Tiền chi trả nợ gốc vay,column_1,Tiền chi trả nợ gốc vay,,,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,3,1,Tiền chi trả nợ gốc vay,Vay ngắn hạn,(4.484.136.034.260),-4484136034260.0,-4484136034260.0,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,3,2,Tiền chi trả nợ gốc vay,VNDVay dài hạn,-,0.0,0.0,True,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,4,0,Chênh lệch tỷ giá hối đoái do đánh giá lại số dư cuối năm có gốc ngoại tệ,column_1,Chênh lệch tỷ giá hối đoái do đánh giá lại số dư cuối năm có gốc ngoại tệ,,,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,4,1,Chênh lệch tỷ giá hối đoái do đánh giá lại số dư cuối năm có gốc ngoại tệ,Vay ngắn hạn,6.878.983.473,6878983473.0,6878983473.0,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,4,2,Chênh lệch tỷ giá hối đoái do đánh giá lại số dư cuối năm có gốc ngoại tệ,VNDVay dài hạn,-,0.0,0.0,True,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,5,0,Số cuối năm,column_1,Số cuối năm,,,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,5,1,Số cuối năm,Vay ngắn hạn,2.376.947.182.563,2376947182563.0,2376947182563.0,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,5,2,Số cuối năm,VNDVay dài hạn,-,0.0,0.0,True,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,6,0,Số có khả năng trả nợ,column_1,Số có khả năng trả nợ,,,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,6,1,Số có khả năng trả nợ,Vay ngắn hạn,2.376.947.182.563,2376947182563.0,2376947182563.0,False,False
+HT1_financial_statements_2020_separate|table_30,HT1_financial_statements_2020_separate,HT1,2020,separate,VND,6,2,Số có khả năng trả nợ,VNDVay dài hạn,-,0.0,0.0,True,False

@@ -1,0 +1,16 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,0,0,Ngắn hạn,Bên liên quan,Ngắn hạn,,,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,0,1,Ngắn hạn,Số cuối năm,2.000.000.000,2000000000.0,2000000000.0,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,0,2,Ngắn hạn,Số đầu năm,100.974.750.000,100974750000.0,100974750000.0,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,1,0,Công ty CP Than - Điện Nông Sơn - TKV,Bên liên quan,Công ty CP Than - Điện Nông Sơn - TKV,,,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,1,1,Công ty CP Than - Điện Nông Sơn - TKV,Số cuối năm,2.000.000.000,2000000000.0,2000000000.0,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,1,2,Công ty CP Than - Điện Nông Sơn - TKV,Số đầu năm,100.974.750.000,100974750000.0,100974750000.0,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,2,0,Dài hạn,Bên liên quan,Dài hạn,,,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,2,1,Dài hạn,Số cuối năm,-,0.0,0.0,True,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,2,2,Dài hạn,Số đầu năm,75.230.000.000,75230000000.0,75230000000.0,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,3,0,Công ty CP Than - Điện Nông Sơn - TKV,Bên liên quan,Công ty CP Than - Điện Nông Sơn - TKV,,,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,3,1,Công ty CP Than - Điện Nông Sơn - TKV,Số cuối năm,-,0.0,0.0,True,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,3,2,Công ty CP Than - Điện Nông Sơn - TKV,Số đầu năm,75.230.000.000,75230000000.0,75230000000.0,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,4,0,Cộng,Bên liên quan,Cộng,,,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,4,1,Cộng,Số cuối năm,2.000.000.000,2000000000.0,2000000000.0,False,False
+DTK_financial_statements_2024_separate|table_63,DTK_financial_statements_2024_separate,DTK,2024,separate,UNKNOWN,4,2,Cộng,Số đầu năm,176.204.750.000,176204750000.0,176204750000.0,False,False

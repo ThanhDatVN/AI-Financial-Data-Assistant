@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MSB_financial_statements_2018_separate|table_37,MSB_financial_statements_2018_separate,MSB,2018,separate,MILLION_VND,0,0,Số dư đầu năm,column_1,Số dư đầu năm,,,False,False
+MSB_financial_statements_2018_separate|table_37,MSB_financial_statements_2018_separate,MSB,2018,separate,MILLION_VND,0,1,Số dư đầu năm,2018Triệu VND,256.043,256043.0,256043000000.0,False,False
+MSB_financial_statements_2018_separate|table_37,MSB_financial_statements_2018_separate,MSB,2018,separate,MILLION_VND,0,2,Số dư đầu năm,2017Triệu VND,237.860,237860.0,237860000000.0,False,False
+MSB_financial_statements_2018_separate|table_37,MSB_financial_statements_2018_separate,MSB,2018,separate,MILLION_VND,1,0,Trích lập dự phòng chung trong năm (Thuyết minh 33),column_1,Trích lập dự phòng chung trong năm (Thuyết minh 33),,,False,False
+MSB_financial_statements_2018_separate|table_37,MSB_financial_statements_2018_separate,MSB,2018,separate,MILLION_VND,1,1,Trích lập dự phòng chung trong năm (Thuyết minh 33),2018Triệu VND,55.659,55659.0,55659000000.0,False,False
+MSB_financial_statements_2018_separate|table_37,MSB_financial_statements_2018_separate,MSB,2018,separate,MILLION_VND,1,2,Trích lập dự phòng chung trong năm (Thuyết minh 33),2017Triệu VND,18.183,18183.0,18183000000.0,False,False
+MSB_financial_statements_2018_separate|table_37,MSB_financial_statements_2018_separate,MSB,2018,separate,MILLION_VND,2,0,Số dư cuối năm,column_1,Số dư cuối năm,,,False,False
+MSB_financial_statements_2018_separate|table_37,MSB_financial_statements_2018_separate,MSB,2018,separate,MILLION_VND,2,1,Số dư cuối năm,2018Triệu VND,311.702,311702.0,311702000000.0,False,False
+MSB_financial_statements_2018_separate|table_37,MSB_financial_statements_2018_separate,MSB,2018,separate,MILLION_VND,2,2,Số dư cuối năm,2017Triệu VND,256.043,256043.0,256043000000.0,False,False

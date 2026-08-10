@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HT1_financial_statements_2017_separate|table_41,HT1_financial_statements_2017_separate,HT1,2017,separate,VND,0,0,"Giá vốn của xi măng, clinker",column_1,"Giá vốn của xi măng, clinker",,,False,False
+HT1_financial_statements_2017_separate|table_41,HT1_financial_statements_2017_separate,HT1,2017,separate,VND,0,1,"Giá vốn của xi măng, clinker",Năm nay,6.834.641.634.899,6834641634899.0,6834641634899.0,False,False
+HT1_financial_statements_2017_separate|table_41,HT1_financial_statements_2017_separate,HT1,2017,separate,VND,0,2,"Giá vốn của xi măng, clinker",VNDNăm trước,6.503.365.311.436,6503365311436.0,6503365311436.0,False,False
+HT1_financial_statements_2017_separate|table_41,HT1_financial_statements_2017_separate,HT1,2017,separate,VND,1,0,"Giá vốn của vữa xi măng xây dựng,gạch các loại, cát, vật liệu phụ và các dịch vụ",column_1,"Giá vốn của vữa xi măng xây dựng,gạch các loại, cát, vật liệu phụ và các dịch vụ",,,False,False
+HT1_financial_statements_2017_separate|table_41,HT1_financial_statements_2017_separate,HT1,2017,separate,VND,1,1,"Giá vốn của vữa xi măng xây dựng,gạch các loại, cát, vật liệu phụ và các dịch vụ",Năm nay,31.245.319.542,31245319542.0,31245319542.0,False,False
+HT1_financial_statements_2017_separate|table_41,HT1_financial_statements_2017_separate,HT1,2017,separate,VND,1,2,"Giá vốn của vữa xi măng xây dựng,gạch các loại, cát, vật liệu phụ và các dịch vụ",VNDNăm trước,109.955.447.791,109955447791.0,109955447791.0,False,False
+HT1_financial_statements_2017_separate|table_41,HT1_financial_statements_2017_separate,HT1,2017,separate,VND,2,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+HT1_financial_statements_2017_separate|table_41,HT1_financial_statements_2017_separate,HT1,2017,separate,VND,2,1,TỔNG CỘNG,Năm nay,6.865.886.954.441,6865886954441.0,6865886954441.0,False,False
+HT1_financial_statements_2017_separate|table_41,HT1_financial_statements_2017_separate,HT1,2017,separate,VND,2,2,TỔNG CỘNG,VNDNăm trước,6.613.320.759.227,6613320759227.0,6613320759227.0,False,False

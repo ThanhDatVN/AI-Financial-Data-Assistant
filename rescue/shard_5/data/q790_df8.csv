@@ -1,0 +1,46 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,0,0,"Nông nghiệp, lâm nghiệp và thủy sản",column_1,"Nông nghiệp, lâm nghiệp và thủy sản",,,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,0,1,"Nông nghiệp, lâm nghiệp và thủy sản",Số cuối năm | Triệu VND,61.252.541,61252541.0,61252541000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,0,2,"Nông nghiệp, lâm nghiệp và thủy sản",Số cuối năm | %,"3,52",3.52,3.52,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,0,3,"Nông nghiệp, lâm nghiệp và thủy sản",Số đầu năm | Triệu VND,57.444.609,57444609.0,57444609000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,0,4,"Nông nghiệp, lâm nghiệp và thủy sản",Số đầu năm | %,"3,86",3.86,3.86,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,1,0,"Công nghiệp chế biến, chế tạo",column_1,"Công nghiệp chế biến, chế tạo",,,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,1,1,"Công nghiệp chế biến, chế tạo",Số cuối năm | Triệu VND,287.063.377,287063377.0,287063377000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,1,2,"Công nghiệp chế biến, chế tạo",Số cuối năm | %,"16,49",16.49,16.49,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,1,3,"Công nghiệp chế biến, chế tạo",Số đầu năm | Triệu VND,235.368.492,235368492.0,235368492000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,1,4,"Công nghiệp chế biến, chế tạo",Số đầu năm | %,"15,82",15.82,15.82,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,2,0,"Sản xuất và phân phối điện, khí đốt và nước",column_1,"Sản xuất và phân phối điện, khí đốt và nước",,,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,2,1,"Sản xuất và phân phối điện, khí đốt và nước",Số cuối năm | Triệu VND,94.743.993,94743993.0,94743993000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,2,2,"Sản xuất và phân phối điện, khí đốt và nước",Số cuối năm | %,"5,44",5.44,5.44,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,2,3,"Sản xuất và phân phối điện, khí đốt và nước",Số đầu năm | Triệu VND,79.094.586,79094586.0,79094586000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,2,4,"Sản xuất và phân phối điện, khí đốt và nước",Số đầu năm | %,"5,31",5.31,5.31,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,3,0,Xây dựng,column_1,Xây dựng,,,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,3,1,Xây dựng,Số cuối năm | Triệu VND,107.745.616,107745616.0,107745616000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,3,2,Xây dựng,Số cuối năm | %,"6,19",6.19,6.19,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,3,3,Xây dựng,Số đầu năm | Triệu VND,112.753.879,112753879.0,112753879000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,3,4,Xây dựng,Số đầu năm | %,"7,58",7.58,7.58,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,4,0,"Bán buôn và bán lẻ; sửa chữa ô tô, mô tô, xe máy và xe có động cơ khác",column_1,"Bán buôn và bán lẻ; sửa chữa ô tô, mô tô, xe máy và xe có động cơ khác",,,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,4,1,"Bán buôn và bán lẻ; sửa chữa ô tô, mô tô, xe máy và xe có động cơ khác",Số cuối năm | Triệu VND,548.172.620,548172620.0,548172620000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,4,2,"Bán buôn và bán lẻ; sửa chữa ô tô, mô tô, xe máy và xe có động cơ khác",Số cuối năm | %,"31,50",31.5,31.5,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,4,3,"Bán buôn và bán lẻ; sửa chữa ô tô, mô tô, xe máy và xe có động cơ khác",Số đầu năm | Triệu VND,457.510.446,457510446.0,457510446000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,4,4,"Bán buôn và bán lẻ; sửa chữa ô tô, mô tô, xe máy và xe có động cơ khác",Số đầu năm | %,"30,74",30.74,30.74,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,5,0,Dịch vụ,column_1,Dịch vụ,,,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,5,1,Dịch vụ,Số cuối năm | Triệu VND,232.689.278,232689278.0,232689278000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,5,2,Dịch vụ,Số cuối năm | %,"13,37",13.37,13.37,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,5,3,Dịch vụ,Số đầu năm | Triệu VND,178.637.194,178637194.0,178637194000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,5,4,Dịch vụ,Số đầu năm | %,"12,00",12.0,12.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,6,0,Ngành khác,column_1,Ngành khác,,,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,6,1,Ngành khác,Số cuối năm | Triệu VND,408.723.943,408723943.0,408723943000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,6,2,Ngành khác,Số cuối năm | %,"23,49",23.49,23.49,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,6,3,Ngành khác,Số đầu năm | Triệu VND,367.341.294,367341294.0,367341294000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,6,4,Ngành khác,Số đầu năm | %,"24,69",24.69,24.69,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,7,0,,column_1,,,,False,True
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,7,1,,Số cuối năm | Triệu VND,,,,False,True
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,7,2,,Số cuối năm | %,"100,00",100.0,100.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,7,3,,Số đầu năm | Triệu VND,,,,False,True
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,7,4,,Số đầu năm | %,"100,00",100.0,100.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,8,0,,column_1,,,,False,True
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,8,1,,Số cuối năm | Triệu VND,1.740.391.368,1740391368.0,1740391368000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,8,2,,Số cuối năm | %,,,,False,True
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,8,3,,Số đầu năm | Triệu VND,1.488.150.500,1488150500.0,1488150500000000.0,False,False
+BID_financial_statements_2023_separate|table_30,BID_financial_statements_2023_separate,BID,2023,separate,PERCENT,8,4,,Số đầu năm | %,,,,False,True

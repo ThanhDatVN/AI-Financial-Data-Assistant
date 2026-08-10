@@ -1,0 +1,28 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,0,0,Chi phí nhân viên quản lý,column_1,Chi phí nhân viên quản lý,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,0,1,Chi phí nhân viên quản lý,Năm 2021 | VND,28.599.202.056,28599202056.0,28599202056.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,0,2,Chi phí nhân viên quản lý,Năm 2020 | VND,15.426.541.517,15426541517.0,15426541517.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,1,0,Chi phí vật liệu quản lý,column_1,Chi phí vật liệu quản lý,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,1,1,Chi phí vật liệu quản lý,Năm 2021 | VND,965.936.421,965936421.0,965936421.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,1,2,Chi phí vật liệu quản lý,Năm 2020 | VND,1.494.124.353,1494124353.0,1494124353.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,2,0,Chi phí khấu hao tài sản cố định,column_1,Chi phí khấu hao tài sản cố định,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,2,1,Chi phí khấu hao tài sản cố định,Năm 2021 | VND,102.261.442,102261442.0,102261442.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,2,2,Chi phí khấu hao tài sản cố định,Năm 2020 | VND,73.040.052,73040052.0,73040052.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,3,0,"Thuế, phí và lệ phí",column_1,"Thuế, phí và lệ phí",,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,3,1,"Thuế, phí và lệ phí",Năm 2021 | VND,36.500.000,36500000.0,36500000.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,3,2,"Thuế, phí và lệ phí",Năm 2020 | VND,24.500.000,24500000.0,24500000.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,4,0,Chi phí dịch vụ mua ngoài,column_1,Chi phí dịch vụ mua ngoài,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,4,1,Chi phí dịch vụ mua ngoài,Năm 2021 | VND,8.835.913.783,8835913783.0,8835913783.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,4,2,Chi phí dịch vụ mua ngoài,Năm 2020 | VND,4.830.680.649,4830680649.0,4830680649.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,5,0,Chi phí khác bằng tiền,column_1,Chi phí khác bằng tiền,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,5,1,Chi phí khác bằng tiền,Năm 2021 | VND,1.254.672.166,1254672166.0,1254672166.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,5,2,Chi phí khác bằng tiền,Năm 2020 | VND,609.976.583,609976583.0,609976583.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,6,0,Trong đó:,column_1,Trong đó:,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,6,1,Trong đó:,Năm 2021 | VND,Trong đó:,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,6,2,Trong đó:,Năm 2020 | VND,Trong đó:,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,7,0,Thù lao của ban kiểm soát,column_1,Thù lao của ban kiểm soát,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,7,1,Thù lao của ban kiểm soát,Năm 2021 | VND,48.000.000,48000000.0,48000000.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,7,2,Thù lao của ban kiểm soát,Năm 2020 | VND,-,0.0,0.0,True,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,8,0,Cộng,column_1,Cộng,,,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,8,1,Cộng,Năm 2021 | VND,39.794.485.868,39794485868.0,39794485868.0,False,False
+KHG_financial_statements_2021_consolidated|table_42,KHG_financial_statements_2021_consolidated,KHG,2021,consolidated,VND,8,2,Cộng,Năm 2020 | VND,22.458.863.154,22458863154.0,22458863154.0,False,False

@@ -1,0 +1,16 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,0,0,Thuế thu nhập doanh nghiệp nộp thừa,a) Thuế và các khoản phải thu nhà nước,Thuế thu nhập doanh nghiệp nộp thừa,,,False,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,0,1,Thuế thu nhập doanh nghiệp nộp thừa,Đầu năm VND,-,0.0,0.0,True,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,0,2,Thuế thu nhập doanh nghiệp nộp thừa,Số phải nộp VND,-,0.0,0.0,True,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,0,3,Thuế thu nhập doanh nghiệp nộp thừa,Số đã thực nộp VND,-,0.0,0.0,True,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,0,4,Thuế thu nhập doanh nghiệp nộp thừa,Cuối năm VND,-,0.0,0.0,True,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,1,0,Các khoản thuế nộp thừa cho Nhà nước,a) Thuế và các khoản phải thu nhà nước,Các khoản thuế nộp thừa cho Nhà nước,,,False,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,1,1,Các khoản thuế nộp thừa cho Nhà nước,Đầu năm VND,6.611.445.762,6611445762.0,6611445762.0,False,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,1,2,Các khoản thuế nộp thừa cho Nhà nước,Số phải nộp VND,-,0.0,0.0,True,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,1,3,Các khoản thuế nộp thừa cho Nhà nước,Số đã thực nộp VND,2.766.246.418,2766246418.0,2766246418.0,False,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,1,4,Các khoản thuế nộp thừa cho Nhà nước,Cuối năm VND,9.377.692.180,9377692180.0,9377692180.0,False,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,2,0,Cộng,a) Thuế và các khoản phải thu nhà nước,Cộng,,,False,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,2,1,Cộng,Đầu năm VND,6.611.445.762,6611445762.0,6611445762.0,False,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,2,2,Cộng,Số phải nộp VND,-,0.0,0.0,True,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,2,3,Cộng,Số đã thực nộp VND,2.766.246.418,2766246418.0,2766246418.0,False,False
+DIG_financial_statements_2016_separate|table_45,DIG_financial_statements_2016_separate,DIG,2016,separate,VND,2,4,Cộng,Cuối năm VND,9.377.692.180,9377692180.0,9377692180.0,False,False

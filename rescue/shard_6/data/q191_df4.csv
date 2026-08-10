@@ -1,0 +1,21 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,USD,0,0,Đô la Mỹ USD),column_1,Đô la Mỹ USD),,,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,0,1,Đô la Mỹ USD),Tài sản | Số cuối năm VND,297.476.115.784,297476115784.0,297476115784.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,0,2,Đô la Mỹ USD),Tài sản | Số đầu năm VND,222.674.655.347,222674655347.0,222674655347.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,0,3,Đô la Mỹ USD),Công nợ | Số cuối năm VND,1.285.924.903.335,1285924903335.0,1285924903335.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,0,4,Đô la Mỹ USD),Công nợ | Số đầu năm VND,1.556.512.698.108,1556512698108.0,1556512698108.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,1,0,Euro (EUR),column_1,Euro (EUR),,,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,1,1,Euro (EUR),Tài sản | Số cuối năm VND,15.492.319.770,15492319770.0,15492319770.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,1,2,Euro (EUR),Tài sản | Số đầu năm VND,49.665.867.681,49665867681.0,49665867681.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,1,3,Euro (EUR),Công nợ | Số cuối năm VND,1.431.303.537,1431303537.0,1431303537.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,1,4,Euro (EUR),Công nợ | Số đầu năm VND,3.388.394.252,3388394252.0,3388394252.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,2,0,Yên Nhật (JPY),column_1,Yên Nhật (JPY),,,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,2,1,Yên Nhật (JPY),Tài sản | Số cuối năm VND,118.284.146,118284146.0,118284146.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,2,2,Yên Nhật (JPY),Tài sản | Số đầu năm VND,-,0.0,0.0,True,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,2,3,Yên Nhật (JPY),Công nợ | Số cuối năm VND,12.178.483.286,12178483286.0,12178483286.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,2,4,Yên Nhật (JPY),Công nợ | Số đầu năm VND,3.294.302.132,3294302132.0,3294302132.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,3,0,Đô la Singapore (SGD),column_1,Đô la Singapore (SGD),,,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,3,1,Đô la Singapore (SGD),Tài sản | Số cuối năm VND,-,0.0,0.0,True,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,3,2,Đô la Singapore (SGD),Tài sản | Số đầu năm VND,1.307.572,1307572.0,1307572.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,3,3,Đô la Singapore (SGD),Công nợ | Số cuối năm VND,1.589.113.369,1589113369.0,1589113369.0,False,False
+PVT_financial_statements_2022_consolidated|table_66,PVT_financial_statements_2022_consolidated,PVT,2022,consolidated,VND,3,4,Đô la Singapore (SGD),Công nợ | Số đầu năm VND,5.189.492.526,5189492526.0,5189492526.0,False,False

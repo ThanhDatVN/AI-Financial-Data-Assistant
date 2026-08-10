@@ -1,0 +1,31 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,0,0,Tổng lợi nhuận kế toán trước thuế,column_1,Tổng lợi nhuận kế toán trước thuế,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,0,1,Tổng lợi nhuận kế toán trước thuế,Năm nay,142.590.606.684,142590606684.0,142590606684.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,0,2,Tổng lợi nhuận kế toán trước thuế,VNDNăm trước,231.618.148.031,231618148031.0,231618148031.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,PERCENT,1,0,Thuế TNDN theo thuế suất 20% áp dụng cho Công ty,column_1,Thuế TNDN theo thuế suất 20% áp dụng cho Công ty,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,PERCENT,1,1,Thuế TNDN theo thuế suất 20% áp dụng cho Công ty,Năm nay,28.518.121.337,28518121337.0,28518121337.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,1,2,Thuế TNDN theo thuế suất 20% áp dụng cho Công ty,VNDNăm trước,46.323.629.606,46323629606.0,46323629606.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,2,0,Các khoản điều chỉnh:,column_1,Các khoản điều chỉnh:,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,2,1,Các khoản điều chỉnh:,Năm nay,Các khoản điều chỉnh:,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,2,2,Các khoản điều chỉnh:,VNDNăm trước,Các khoản điều chỉnh:,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,3,0,Chi phí lãi vay không được khấu trừ,column_1,Chi phí lãi vay không được khấu trừ,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,3,1,Chi phí lãi vay không được khấu trừ,Năm nay,1.895.060.531,1895060531.0,1895060531.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,3,2,Chi phí lãi vay không được khấu trừ,VNDNăm trước,5.912.659.339,5912659339.0,5912659339.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,4,0,Chi phí không được trừ,column_1,Chi phí không được trừ,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,4,1,Chi phí không được trừ,Năm nay,2.506.642.869,2506642869.0,2506642869.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,4,2,Chi phí không được trừ,VNDNăm trước,1.777.526.369,1777526369.0,1777526369.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,5,0,Thu nhập từ cổ tức,column_1,Thu nhập từ cổ tức,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,5,1,Thu nhập từ cổ tức,Năm nay,(35.145.397.720),-35145397720.0,-35145397720.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,5,2,Thu nhập từ cổ tức,VNDNăm trước,(49.819.171.811),-49819171811.0,-49819171811.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,6,0,Lỗ thuế chuyển sang năm sau,column_1,Lỗ thuế chuyển sang năm sau,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,6,1,Lỗ thuế chuyển sang năm sau,Năm nay,2.225.572.983,2225572983.0,2225572983.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,6,2,Lỗ thuế chuyển sang năm sau,VNDNăm trước,-,0.0,0.0,True,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,7,0,Lỗ thuế ghi nhận thuế TNDN hoãn lại,column_1,Lỗ thuế ghi nhận thuế TNDN hoãn lại,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,7,1,Lỗ thuế ghi nhận thuế TNDN hoãn lại,Năm nay,(5.064.496.052),-5064496052.0,-5064496052.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,7,2,Lỗ thuế ghi nhận thuế TNDN hoãn lại,VNDNăm trước,-,0.0,0.0,True,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,8,0,Điều chỉnh thuế TNDN trích thừa trong những năm trước,column_1,Điều chỉnh thuế TNDN trích thừa trong những năm trước,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,8,1,Điều chỉnh thuế TNDN trích thừa trong những năm trước,Năm nay,(4.194.643.503),-4194643503.0,-4194643503.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,8,2,Điều chỉnh thuế TNDN trích thừa trong những năm trước,VNDNăm trước,-,0.0,0.0,True,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,9,0,Chi phí thuế TNDN,column_1,Chi phí thuế TNDN,,,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,9,1,Chi phí thuế TNDN,Năm nay,(9.259.139.555),-9259139555.0,-9259139555.0,False,False
+SCR_financial_statements_2023_separate|table_52,SCR_financial_statements_2023_separate,SCR,2023,separate,VND,9,2,Chi phí thuế TNDN,VNDNăm trước,4.194.643.503,4194643503.0,4194643503.0,False,False

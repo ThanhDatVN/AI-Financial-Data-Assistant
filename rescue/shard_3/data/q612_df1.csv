@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NKG_financial_statements_2021_separate|table_14,NKG_financial_statements_2021_separate,NKG,2021,separate,VND,0,0,Công ty Cổ phần Đầu tư Xây dựng Giải trí Đại Dương,column_1,Công ty Cổ phần Đầu tư Xây dựng Giải trí Đại Dương,,,False,False
+NKG_financial_statements_2021_separate|table_14,NKG_financial_statements_2021_separate,NKG,2021,separate,VND,0,1,Công ty Cổ phần Đầu tư Xây dựng Giải trí Đại Dương,2021VND,253.734.664.190,253734664190.0,253734664190.0,False,False
+NKG_financial_statements_2021_separate|table_14,NKG_financial_statements_2021_separate,NKG,2021,separate,VND,0,2,Công ty Cổ phần Đầu tư Xây dựng Giải trí Đại Dương,2020VND,164.778.814.382,164778814382.0,164778814382.0,False,False
+NKG_financial_statements_2021_separate|table_14,NKG_financial_statements_2021_separate,NKG,2021,separate,VND,1,0,Khác,column_1,Khác,,,False,False
+NKG_financial_statements_2021_separate|table_14,NKG_financial_statements_2021_separate,NKG,2021,separate,VND,1,1,Khác,2021VND,60.807.821.172,60807821172.0,60807821172.0,False,False
+NKG_financial_statements_2021_separate|table_14,NKG_financial_statements_2021_separate,NKG,2021,separate,VND,1,2,Khác,2020VND,30.919.740.836,30919740836.0,30919740836.0,False,False
+NKG_financial_statements_2021_separate|table_14,NKG_financial_statements_2021_separate,NKG,2021,separate,VND,2,0,,column_1,,,,False,True
+NKG_financial_statements_2021_separate|table_14,NKG_financial_statements_2021_separate,NKG,2021,separate,VND,2,1,,2021VND,314.542.485.362,314542485362.0,314542485362.0,False,False
+NKG_financial_statements_2021_separate|table_14,NKG_financial_statements_2021_separate,NKG,2021,separate,VND,2,2,,2020VND,195.698.555.218,195698555218.0,195698555218.0,False,False

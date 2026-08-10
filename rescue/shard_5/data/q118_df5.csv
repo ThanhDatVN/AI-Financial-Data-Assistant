@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VCB_financial_statements_2015_separate|table_31,VCB_financial_statements_2015_separate,VCB,2015,separate,MILLION_VND,0,0,Dự phòng chung,column_1,Dự phòng chung,,,False,False
+VCB_financial_statements_2015_separate|table_31,VCB_financial_statements_2015_separate,VCB,2015,separate,MILLION_VND,0,1,Dự phòng chung,31/12/2015Triệu VND,2.688.909,2688909.0,2688909000000.0,False,False
+VCB_financial_statements_2015_separate|table_31,VCB_financial_statements_2015_separate,VCB,2015,separate,MILLION_VND,0,2,Dự phòng chung,31/12/2014Triệu VND(Trình bày lại),2.245.624,2245624.0,2245624000000.0,False,False
+VCB_financial_statements_2015_separate|table_31,VCB_financial_statements_2015_separate,VCB,2015,separate,MILLION_VND,1,0,Dự phòng cụ thể,column_1,Dự phòng cụ thể,,,False,False
+VCB_financial_statements_2015_separate|table_31,VCB_financial_statements_2015_separate,VCB,2015,separate,MILLION_VND,1,1,Dự phòng cụ thể,31/12/2015Triệu VND,5.875.693,5875693.0,5875693000000.0,False,False
+VCB_financial_statements_2015_separate|table_31,VCB_financial_statements_2015_separate,VCB,2015,separate,MILLION_VND,1,2,Dự phòng cụ thể,31/12/2014Triệu VND(Trình bày lại),4.797.930,4797930.0,4797930000000.0,False,False
+VCB_financial_statements_2015_separate|table_31,VCB_financial_statements_2015_separate,VCB,2015,separate,MILLION_VND,2,0,,column_1,,,,False,True
+VCB_financial_statements_2015_separate|table_31,VCB_financial_statements_2015_separate,VCB,2015,separate,MILLION_VND,2,1,,31/12/2015Triệu VND,8.564.602,8564602.0,8564602000000.0,False,False
+VCB_financial_statements_2015_separate|table_31,VCB_financial_statements_2015_separate,VCB,2015,separate,MILLION_VND,2,2,,31/12/2014Triệu VND(Trình bày lại),7.043.554,7043554.0,7043554000000.0,False,False

@@ -1,0 +1,181 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,0,0,100,Mãsô,100,100.0,100.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,0,1,100,TÀI SẢN,TÀI SẢN NGĂN HẠN,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,0,2,100,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,0,3,100,Tại ngày 31 tháng 12 năm | 2018VND,5.405.256.600.641,5405256600641.0,5405256600641.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,0,4,100,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),3.896.141.901.410,3896141901410.0,3896141901410.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,1,0,110,Mãsô,110,110.0,110.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,1,1,110,TÀI SẢN,Tiền và các khoản tương đương tiền,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,1,2,110,Thuyếtminh,3,3.0,3.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,1,3,110,Tại ngày 31 tháng 12 năm | 2018VND,206.721.179.629,206721179629.0,206721179629.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,1,4,110,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),175.208.552.187,175208552187.0,175208552187.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,2,0,111,Mãsô,111,111.0,111.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,2,1,111,TÀI SẢN,Tiền,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,2,2,111,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,2,3,111,Tại ngày 31 tháng 12 năm | 2018VND,206.721.179.629,206721179629.0,206721179629.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,2,4,111,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),111.158.552.187,111158552187.0,111158552187.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,3,0,112,Mãsô,112,112.0,112.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,3,1,112,TÀI SẢN,Các khoản tương đương tiền,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,3,2,112,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,3,3,112,Tại ngày 31 tháng 12 năm | 2018VND,-,0.0,0.0,True,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,3,4,112,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),64.050.000.000,64050000000.0,64050000000.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,4,0,120,Mãsô,120,120.0,120.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,4,1,120,TÀI SẢN,Khoản đầu tư tài chính ngắn hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,4,2,120,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,4,3,120,Tại ngày 31 tháng 12 năm | 2018VND,-,0.0,0.0,True,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,4,4,120,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),160.065.000.000,160065000000.0,160065000000.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,5,0,123,Mãsô,123,123.0,123.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,5,1,123,TÀI SẢN,Đầu tư năm giữ đến ngày đáo hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,5,2,123,Thuyếtminh,4,4.0,4.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,5,3,123,Tại ngày 31 tháng 12 năm | 2018VND,-,0.0,0.0,True,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,5,4,123,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),160.065.000.000,160065000000.0,160065000000.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,6,0,130,Mãsô,130,130.0,130.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,6,1,130,TÀI SẢN,Các khoản phải thu ngắn hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,6,2,130,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,6,3,130,Tại ngày 31 tháng 12 năm | 2018VND,155.196.257.825,155196257825.0,155196257825.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,6,4,130,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),84.622.464.067,84622464067.0,84622464067.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,7,0,131,Mãsô,131,131.0,131.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,7,1,131,TÀI SẢN,Phải thu ngắn hạn của khách hàng,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,7,2,131,Thuyếtminh,5,5.0,5.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,7,3,131,Tại ngày 31 tháng 12 năm | 2018VND,57.664.060.443,57664060443.0,57664060443.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,7,4,131,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),39.946.216.659,39946216659.0,39946216659.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,8,0,132,Mãsô,132,132.0,132.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,8,1,132,TÀI SẢN,Trả trước cho người bản ngắn hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,8,2,132,Thuyếtminh,6,6.0,6.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,8,3,132,Tại ngày 31 tháng 12 năm | 2018VND,57.981.679.202,57981679202.0,57981679202.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,8,4,132,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),33.682.107.963,33682107963.0,33682107963.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,9,0,136,Mãsô,136,136.0,136.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,9,1,136,TÀI SẢN,Phải thu ngắn hạn khác,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,9,2,136,Thuyếtminh,7(a),,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,9,3,136,Tại ngày 31 tháng 12 năm | 2018VND,39.159.008.338,39159008338.0,39159008338.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,9,4,136,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),10.858.761.425,10858761425.0,10858761425.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,10,0,139,Mãsô,139,139.0,139.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,10,1,139,TÀI SẢN,Tài sản thiếu chờ xử lý,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,10,2,139,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,10,3,139,Tại ngày 31 tháng 12 năm | 2018VND,391.509.842,391509842.0,391509842.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,10,4,139,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),135.378.020,135378020.0,135378020.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,11,0,140,Mãsô,140,140.0,140.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,11,1,140,TÀI SẢN,Hàng tôn kho,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,11,2,140,Thuyếtminh,8,8.0,8.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,11,3,140,Tại ngày 31 tháng 12 năm | 2018VND,4.968.145.942.990,4968145942990.0,4968145942990.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,11,4,140,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),3.401.959.226.624,3401959226624.0,3401959226624.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,12,0,141,Mãsô,141,141.0,141.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,12,1,141,TÀI SẢN,Hàng tôn kho,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,12,2,141,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,12,3,141,Tại ngày 31 tháng 12 năm | 2018VND,4.968.145.942.990,4968145942990.0,4968145942990.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,12,4,141,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),3.401.959.226.624,3401959226624.0,3401959226624.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,13,0,150,Mãsô,150,150.0,150.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,13,1,150,TÀI SẢN,Tài sản ngắn hạn khác,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,13,2,150,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,13,3,150,Tại ngày 31 tháng 12 năm | 2018VND,75.193.220.197,75193220197.0,75193220197.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,13,4,150,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),74.286.658.532,74286658532.0,74286658532.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,14,0,151,Mãsô,151,151.0,151.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,14,1,151,TÀI SẢN,Chi phí trả trước ngắn hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,14,2,151,Thuyếtminh,9(a),,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,14,3,151,Tại ngày 31 tháng 12 năm | 2018VND,68.191.416.708,68191416708.0,68191416708.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,14,4,151,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),69.117.538.788,69117538788.0,69117538788.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,15,0,152,Mãsô,152,152.0,152.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,15,1,152,TÀI SẢN,Thuế GTGT được khấu trú,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,15,2,152,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,15,3,152,Tại ngày 31 tháng 12 năm | 2018VND,625.511.019,625511019.0,625511019.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,15,4,152,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),28.174.789,28174789.0,28174789.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,16,0,153,Mãsô,153,153.0,153.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,16,1,153,TÀI SẢN,Thuế và các khoản khác phải thu Nha nước,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,16,2,153,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,16,3,153,Tại ngày 31 tháng 12 năm | 2018VND,8.376.292.470,8376292470.0,8376292470.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,16,4,153,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),5.140.946.955,5140946955.0,5140946955.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,17,0,200,Mãsô,200,200.0,200.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,17,1,200,TÀI SẢN,TÀI SẢN DÀI HẠN,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,17,2,200,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,17,3,200,Tại ngày 31 tháng 12 năm | 2018VND,1.032.638.955.963,1032638955963.0,1032638955963.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,17,4,200,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),675.158.254.081,675158254081.0,675158254081.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,18,0,210,Mãsô,210,210.0,210.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,18,1,210,TÀI SẢN,Khoản phải thu dài hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,18,2,210,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,18,3,210,Tại ngày 31 tháng 12 năm | 2018VND,57.498.444.869,57498444869.0,57498444869.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,18,4,210,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),42.787.737.738,42787737738.0,42787737738.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,19,0,218,Mãsô,218,218.0,218.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,19,1,218,TÀI SẢN,Phải thu dài hạn khác,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,19,2,218,Thuyếtminh,7(b),,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,19,3,218,Tại ngày 31 tháng 12 năm | 2018VND,57.498.444.869,57498444869.0,57498444869.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,19,4,218,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),42.787.737.738,42787737738.0,42787737738.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,20,0,220,Mãsô,220,220.0,220.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,20,1,220,TÀI SẢN,Tài sản cố định,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,20,2,220,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,20,3,220,Tại ngày 31 tháng 12 năm | 2018VND,719.287.274.744,719287274744.0,719287274744.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,20,4,220,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),487.243.774.697,487243774697.0,487243774697.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,21,0,221,Mãsô,221,221.0,221.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,21,1,221,TÀI SẢN,Tài sản cố định hữu hình,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,21,2,221,Thuyếtminh,10(a),,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,21,3,221,Tại ngày 31 tháng 12 năm | 2018VND,225.960.569.846,225960569846.0,225960569846.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,21,4,221,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),205.748.326.607,205748326607.0,205748326607.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,22,0,222,Mãsô,222,222.0,222.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,22,1,222,TÀI SẢN,Nguyễn giả,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,22,2,222,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,22,3,222,Tại ngày 31 tháng 12 năm | 2018VND,454.178.423.940,454178423940.0,454178423940.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,22,4,222,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),396.615.581.684,396615581684.0,396615581684.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,23,0,223,Mãsô,223,223.0,223.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,23,1,223,TÀI SẢN,Giá trị khấu hao lũy kế,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,23,2,223,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,23,3,223,Tại ngày 31 tháng 12 năm | 2018VND,(228.217.854.094),-228217854094.0,-228217854094.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,23,4,223,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),(190.887.255.077),-190887255077.0,-190887255077.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,24,0,227,Mãsô,227,227.0,227.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,24,1,227,TÀI SẢN,Tài sản cố định vô hình,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,24,2,227,Thuyếtminh,10(b),,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,24,3,227,Tại ngày 31 tháng 12 năm | 2018VND,493.326.704.898,493326704898.0,493326704898.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,24,4,227,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),281.495.448.090,281495448090.0,281495448090.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,25,0,228,Mãsô,228,228.0,228.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,25,1,228,TÀI SẢN,Nguyễn giả,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,25,2,228,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,25,3,228,Tại ngày 31 tháng 12 năm | 2018VND,499.937.407.873,499937407873.0,499937407873.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,25,4,228,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),286.740.907.873,286740907873.0,286740907873.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,26,0,229,Mãsô,229,229.0,229.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,26,1,229,TÀI SẢN,Giá trị khấu hao lũy kế,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,26,2,229,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,26,3,229,Tại ngày 31 tháng 12 năm | 2018VND,(6.610.702.975),-6610702975.0,-6610702975.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,26,4,229,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),(5.245.459.783),-5245459783.0,-5245459783.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,27,0,240,Mãsô,240,240.0,240.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,27,1,240,TÀI SẢN,Tài sản dở dang dài hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,27,2,240,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,27,3,240,Tại ngày 31 tháng 12 năm | 2018VND,70.822.681.154,70822681154.0,70822681154.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,27,4,240,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),9.665.078.966,9665078966.0,9665078966.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,28,0,242,Mãsô,242,242.0,242.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,28,1,242,TÀI SẢN,Chi phí xây dựng cơ bản dở dang,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,28,2,242,Thuyếtminh,11,11.0,11.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,28,3,242,Tại ngày 31 tháng 12 năm | 2018VND,70.822.681.154,70822681154.0,70822681154.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,28,4,242,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),9.665.078.966,9665078966.0,9665078966.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,29,0,250,Mãsô,250,250.0,250.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,29,1,250,TÀI SẢN,Đầu tư tài chính dài hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,29,2,250,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,29,3,250,Tại ngày 31 tháng 12 năm | 2018VND,-,0.0,0.0,True,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,29,4,250,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),-,0.0,0.0,True,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,30,0,253,Mãsô,253,253.0,253.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,30,1,253,TÀI SẢN,Đầu tư góp vốn vào đơn vị khác,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,30,2,253,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,30,3,253,Tại ngày 31 tháng 12 năm | 2018VND,395.271.613.400,395271613400.0,395271613400.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,30,4,253,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),395.271.613.400,395271613400.0,395271613400.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,31,0,254,Mãsô,254,254.0,254.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,31,1,254,TÀI SẢN,Dư phòng đầu tư tài chính dài hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,31,2,254,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,31,3,254,Tại ngày 31 tháng 12 năm | 2018VND,(395.271.613.400),-395271613400.0,-395271613400.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,31,4,254,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),(395.271.613.400),-395271613400.0,-395271613400.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,32,0,260,Mãsô,260,260.0,260.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,32,1,260,TÀI SẢN,Tài sản dài hạn khác,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,32,2,260,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,32,3,260,Tại ngày 31 tháng 12 năm | 2018VND,185.030.555.196,185030555196.0,185030555196.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,32,4,260,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),135.461.662.680,135461662680.0,135461662680.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,33,0,261,Mãsô,261,261.0,261.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,33,1,261,TÀI SẢN,Chi phí trả trước dài hạn,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,33,2,261,Thuyếtminh,9(b),,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,33,3,261,Tại ngày 31 tháng 12 năm | 2018VND,99.678.730.358,99678730358.0,99678730358.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,33,4,261,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),53.988.320.576,53988320576.0,53988320576.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,34,0,262,Mãsô,262,262.0,262.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,34,1,262,TÀI SẢN,Tài sản thuê thu nhập hoãn lại,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,34,2,262,Thuyếtminh,21,21.0,21.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,34,3,262,Tại ngày 31 tháng 12 năm | 2018VND,85.351.824.838,85351824838.0,85351824838.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,34,4,262,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),81.403.342.104,81403342104.0,81403342104.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,35,0,270,Mãsô,270,270.0,270.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,35,1,270,TÀI SẢN,TỔNG TÀI SẢN,,,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,35,2,270,Thuyếtminh,,,,False,True
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,35,3,270,Tại ngày 31 tháng 12 năm | 2018VND,6.437.895.556.604,6437895556604.0,6437895556604.0,False,False
+PNJ_financial_statements_2018_consolidated|table_2,PNJ_financial_statements_2018_consolidated,PNJ,2018,consolidated,VND,35,4,270,Tại ngày 31 tháng 12 năm | 2017VND(Trình bày lại – Thuyết minh 40),4.571.300.155.491,4571300155491.0,4571300155491.0,False,False

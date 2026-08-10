@@ -1,0 +1,19 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,0,0,■ Mseafood Corporation,column_1,■ Mseafood Corporation,,,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,0,1,■ Mseafood Corporation,31/12/2023VND,242.890.065.804,242890065804.0,242890065804.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,0,2,■ Mseafood Corporation,1/1/2023VND,109.322.354.042,109322354042.0,109322354042.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,1,0,■ Kb Seafood Company Pty Ltd.,column_1,■ Kb Seafood Company Pty Ltd.,,,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,1,1,■ Kb Seafood Company Pty Ltd.,31/12/2023VND,98.469.165.451,98469165451.0,98469165451.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,1,2,■ Kb Seafood Company Pty Ltd.,1/1/2023VND,86.902.279.484,86902279484.0,86902279484.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,2,0,"■ Ebisumo Logistic Co., Ltd.",column_1,"■ Ebisumo Logistic Co., Ltd.",,,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,2,1,"■ Ebisumo Logistic Co., Ltd.",31/12/2023VND,70.381.707.635,70381707635.0,70381707635.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,2,2,"■ Ebisumo Logistic Co., Ltd.",1/1/2023VND,57.851.529.910,57851529910.0,57851529910.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,3,0,■ Công ty Cổ phần Thủy sản Minh Phú Hậu Giang,column_1,■ Công ty Cổ phần Thủy sản Minh Phú Hậu Giang,,,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,3,1,■ Công ty Cổ phần Thủy sản Minh Phú Hậu Giang,31/12/2023VND,43.906.070.563,43906070563.0,43906070563.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,3,2,■ Công ty Cổ phần Thủy sản Minh Phú Hậu Giang,1/1/2023VND,2.055.450.100.039,2055450100039.0,2055450100039.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,4,0,■ Các khách hàng khác,column_1,■ Các khách hàng khác,,,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,4,1,■ Các khách hàng khác,31/12/2023VND,236.751.119.647,236751119647.0,236751119647.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,4,2,■ Các khách hàng khác,1/1/2023VND,280.005.589.560,280005589560.0,280005589560.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,5,0,,column_1,,,,False,True
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,5,1,,31/12/2023VND,692.398.129.100,692398129100.0,692398129100.0,False,False
+MPC_financial_statements_2023_separate|table_18,MPC_financial_statements_2023_separate,MPC,2023,separate,VND,5,2,,1/1/2023VND,2.589.531.853.035,2589531853035.0,2589531853035.0,False,False

@@ -1,0 +1,28 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,0,0,Ngắn hạn,column_1,Ngắn hạn,,,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,0,1,Ngắn hạn,31/12/2022VND,19.095.666.957,19095666957.0,19095666957.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,0,2,Ngắn hạn,01/01/2022VND,16.817.879.674,16817879674.0,16817879674.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,1,0,Lãi vay,column_1,Lãi vay,,,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,1,1,Lãi vay,31/12/2022VND,2.360.829.679,2360829679.0,2360829679.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,1,2,Lãi vay,01/01/2022VND,2.063.559.858,2063559858.0,2063559858.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,2,0,Tiền thuê đất,column_1,Tiền thuê đất,,,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,2,1,Tiền thuê đất,31/12/2022VND,6.388.386.919,6388386919.0,6388386919.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,2,2,Tiền thuê đất,01/01/2022VND,5.095.705.060,5095705060.0,5095705060.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,3,0,Chi phí hàng xuất khẩu,column_1,Chi phí hàng xuất khẩu,,,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,3,1,Chi phí hàng xuất khẩu,31/12/2022VND,3.974.169.576,3974169576.0,3974169576.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,3,2,Chi phí hàng xuất khẩu,01/01/2022VND,1.877.361.878,1877361878.0,1877361878.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,4,0,"Chi phí vận chuyển, hạ rỗng lô lúa",column_1,"Chi phí vận chuyển, hạ rỗng lô lúa",,,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,4,1,"Chi phí vận chuyển, hạ rỗng lô lúa",31/12/2022VND,1.022.695.010,1022695010.0,1022695010.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,4,2,"Chi phí vận chuyển, hạ rỗng lô lúa",01/01/2022VND,-,0.0,0.0,True,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,5,0,Chi phí phải trả khác,column_1,Chi phí phải trả khác,,,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,5,1,Chi phí phải trả khác,31/12/2022VND,5.349.585.773,5349585773.0,5349585773.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,5,2,Chi phí phải trả khác,01/01/2022VND,7.781.252.878,7781252878.0,7781252878.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,6,0,Dài hạn,column_1,Dài hạn,,,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,6,1,Dài hạn,31/12/2022VND,-,0.0,0.0,True,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,6,2,Dài hạn,01/01/2022VND,340.000.000,340000000.0,340000000.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,7,0,Chi phí khác,column_1,Chi phí khác,,,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,7,1,Chi phí khác,31/12/2022VND,-,0.0,0.0,True,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,7,2,Chi phí khác,01/01/2022VND,340.000.000,340000000.0,340000000.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,8,0,Tổng,column_1,Tổng,,,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,8,1,Tổng,31/12/2022VND,19.095.666.957,19095666957.0,19095666957.0,False,False
+VSF_financial_statements_2022_separate|table_34,VSF_financial_statements_2022_separate,VSF,2022,separate,VND,8,2,Tổng,01/01/2022VND,17.157.879.674,17157879674.0,17157879674.0,False,False

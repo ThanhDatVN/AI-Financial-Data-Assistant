@@ -1,0 +1,126 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,0,0,Đầu tư tài chính dài hạn,column_1,Đầu tư tài chính dài hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,0,1,Đầu tư tài chính dài hạn,Mã số,250,250.0,250.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,0,2,Đầu tư tài chính dài hạn,Thuyết minh,5(b),,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,0,3,Đầu tư tài chính dài hạn,31/12/2023 VND,5.394.292.289.878,5394292289878.0,5394292289878.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,0,4,Đầu tư tài chính dài hạn,1/1/2023 VND,5.316.208.640.939,5316208640939.0,5316208640939.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,1,0,Đầu tư vào công ty con,column_1,Đầu tư vào công ty con,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,1,1,Đầu tư vào công ty con,Mã số,251,251.0,251.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,1,2,Đầu tư vào công ty con,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,1,3,Đầu tư vào công ty con,31/12/2023 VND,3.789.927.776.619,3789927776619.0,3789927776619.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,1,4,Đầu tư vào công ty con,1/1/2023 VND,3.780.023.737.061,3780023737061.0,3780023737061.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,2,0,Đầu tư vào công ty liên kết,column_1,Đầu tư vào công ty liên kết,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,2,1,Đầu tư vào công ty liên kết,Mã số,252,252.0,252.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,2,2,Đầu tư vào công ty liên kết,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,2,3,Đầu tư vào công ty liên kết,31/12/2023 VND,1.603.148.756.168,1603148756168.0,1603148756168.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,2,4,Đầu tư vào công ty liên kết,1/1/2023 VND,1.534.748.756.168,1534748756168.0,1534748756168.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,3,0,Đầu tư góp vốn vào đơn vị khác,column_1,Đầu tư góp vốn vào đơn vị khác,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,3,1,Đầu tư góp vốn vào đơn vị khác,Mã số,253,253.0,253.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,3,2,Đầu tư góp vốn vào đơn vị khác,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,3,3,Đầu tư góp vốn vào đơn vị khác,31/12/2023 VND,4.821.770.000,4821770000.0,4821770000.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,3,4,Đầu tư góp vốn vào đơn vị khác,1/1/2023 VND,4.821.770.000,4821770000.0,4821770000.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,4,0,Dự phòng đầu tư tài chính dài hạn,column_1,Dự phòng đầu tư tài chính dài hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,4,1,Dự phòng đầu tư tài chính dài hạn,Mã số,254,254.0,254.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,4,2,Dự phòng đầu tư tài chính dài hạn,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,4,3,Dự phòng đầu tư tài chính dài hạn,31/12/2023 VND,(3.606.012.909),-3606012909.0,-3606012909.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,4,4,Dự phòng đầu tư tài chính dài hạn,1/1/2023 VND,(3.385.622.290),-3385622290.0,-3385622290.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,5,0,Tài sản dài hạn khác,column_1,Tài sản dài hạn khác,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,5,1,Tài sản dài hạn khác,Mã số,260,260.0,260.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,5,2,Tài sản dài hạn khác,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,5,3,Tài sản dài hạn khác,31/12/2023 VND,55.860.152.674,55860152674.0,55860152674.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,5,4,Tài sản dài hạn khác,1/1/2023 VND,70.646.478.003,70646478003.0,70646478003.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,6,0,Chi phí trả trước dài hạn,column_1,Chi phí trả trước dài hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,6,1,Chi phí trả trước dài hạn,Mã số,261,261.0,261.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,6,2,Chi phí trả trước dài hạn,Thuyết minh,16,16.0,16.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,6,3,Chi phí trả trước dài hạn,31/12/2023 VND,55.860.152.674,55860152674.0,55860152674.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,6,4,Chi phí trả trước dài hạn,1/1/2023 VND,70.646.478.003,70646478003.0,70646478003.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,7,0,TỔNG CỘNG TÀI SẢN (270 = 100 + 200),column_1,TỔNG CỘNG TÀI SẢN (270 = 100 + 200),,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,7,1,TỔNG CỘNG TÀI SẢN (270 = 100 + 200),Mã số,270,270.0,270.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,7,2,TỔNG CỘNG TÀI SẢN (270 = 100 + 200),Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,7,3,TỔNG CỘNG TÀI SẢN (270 = 100 + 200),31/12/2023 VND,10.751.985.852.670,10751985852670.0,10751985852670.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,7,4,TỔNG CỘNG TÀI SẢN (270 = 100 + 200),1/1/2023 VND,12.464.511.241.185,12464511241185.0,12464511241185.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,8,0,NGUỒN VỐN,column_1,NGUỒN VỐN,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,8,1,NGUỒN VỐN,Mã số,NGUỒN VỐN,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,8,2,NGUỒN VỐN,Thuyết minh,NGUỒN VỐN,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,8,3,NGUỒN VỐN,31/12/2023 VND,NGUỒN VỐN,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,8,4,NGUỒN VỐN,1/1/2023 VND,NGUỒN VỐN,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,9,0,NỘ PHẢI TRẢ (300 = 310 + 330),column_1,NỘ PHẢI TRẢ (300 = 310 + 330),,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,9,1,NỘ PHẢI TRẢ (300 = 310 + 330),Mã số,300,300.0,300.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,9,2,NỘ PHẢI TRẢ (300 = 310 + 330),Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,9,3,NỘ PHẢI TRẢ (300 = 310 + 330),31/12/2023 VND,5.816.145.114.858,5816145114858.0,5816145114858.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,9,4,NỘ PHẢI TRẢ (300 = 310 + 330),1/1/2023 VND,7.571.689.071.746,7571689071746.0,7571689071746.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,10,0,Nợ ngắn hạn,column_1,Nợ ngắn hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,10,1,Nợ ngắn hạn,Mã số,310,310.0,310.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,10,2,Nợ ngắn hạn,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,10,3,Nợ ngắn hạn,31/12/2023 VND,2.796.978.332.971,2796978332971.0,2796978332971.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,10,4,Nợ ngắn hạn,1/1/2023 VND,4.572.245.665.637,4572245665637.0,4572245665637.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,11,0,Phải trả người bán ngắn hạn,column_1,Phải trả người bán ngắn hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,11,1,Phải trả người bán ngắn hạn,Mã số,311,311.0,311.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,11,2,Phải trả người bán ngắn hạn,Thuyết minh,17,17.0,17.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,11,3,Phải trả người bán ngắn hạn,31/12/2023 VND,806.198.113.402,806198113402.0,806198113402.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,11,4,Phải trả người bán ngắn hạn,1/1/2023 VND,1.027.783.835.592,1027783835592.0,1027783835592.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,12,0,Người mua trả tiền trước ngắn hạn,column_1,Người mua trả tiền trước ngắn hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,12,1,Người mua trả tiền trước ngắn hạn,Mã số,312,312.0,312.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,12,2,Người mua trả tiền trước ngắn hạn,Thuyết minh,18,18.0,18.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,12,3,Người mua trả tiền trước ngắn hạn,31/12/2023 VND,101.802.829.495,101802829495.0,101802829495.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,12,4,Người mua trả tiền trước ngắn hạn,1/1/2023 VND,296.844.924.883,296844924883.0,296844924883.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,13,0,Thuế và các khoản khác phải nộp,column_1,Thuế và các khoản khác phải nộp,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,13,1,Thuế và các khoản khác phải nộp,Mã số,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,13,2,Thuế và các khoản khác phải nộp,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,13,3,Thuế và các khoản khác phải nộp,31/12/2023 VND,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,13,4,Thuế và các khoản khác phải nộp,1/1/2023 VND,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,14,0,Nhà nước,column_1,Nhà nước,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,14,1,Nhà nước,Mã số,313,313.0,313.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,14,2,Nhà nước,Thuyết minh,19,19.0,19.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,14,3,Nhà nước,31/12/2023 VND,5.968.392.864,5968392864.0,5968392864.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,14,4,Nhà nước,1/1/2023 VND,66.601.153.610,66601153610.0,66601153610.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,15,0,Phải trả người lao động,column_1,Phải trả người lao động,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,15,1,Phải trả người lao động,Mã số,314,314.0,314.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,15,2,Phải trả người lao động,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,15,3,Phải trả người lao động,31/12/2023 VND,6.624.695.061,6624695061.0,6624695061.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,15,4,Phải trả người lao động,1/1/2023 VND,7.457.277.117,7457277117.0,7457277117.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,16,0,Chi phí phải trả ngắn hạn,column_1,Chi phí phải trả ngắn hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,16,1,Chi phí phải trả ngắn hạn,Mã số,315,315.0,315.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,16,2,Chi phí phải trả ngắn hạn,Thuyết minh,20,20.0,20.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,16,3,Chi phí phải trả ngắn hạn,31/12/2023 VND,48.628.917.361,48628917361.0,48628917361.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,16,4,Chi phí phải trả ngắn hạn,1/1/2023 VND,187.195.114.723,187195114723.0,187195114723.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,17,0,Doanh thu chưa thực hiện ngắn hạn,column_1,Doanh thu chưa thực hiện ngắn hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,17,1,Doanh thu chưa thực hiện ngắn hạn,Mã số,318,318.0,318.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,17,2,Doanh thu chưa thực hiện ngắn hạn,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,17,3,Doanh thu chưa thực hiện ngắn hạn,31/12/2023 VND,853.018.181,853018181.0,853018181.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,17,4,Doanh thu chưa thực hiện ngắn hạn,1/1/2023 VND,500.728.365,500728365.0,500728365.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,18,0,Phải trả ngắn hạn khác,column_1,Phải trả ngắn hạn khác,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,18,1,Phải trả ngắn hạn khác,Mã số,319,319.0,319.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,18,2,Phải trả ngắn hạn khác,Thuyết minh,21,21.0,21.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,18,3,Phải trả ngắn hạn khác,31/12/2023 VND,20.020.281.837,20020281837.0,20020281837.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,18,4,Phải trả ngắn hạn khác,1/1/2023 VND,14.892.412.156,14892412156.0,14892412156.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,19,0,Vay ngắn hạn,column_1,Vay ngắn hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,19,1,Vay ngắn hạn,Mã số,320,320.0,320.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,19,2,Vay ngắn hạn,Thuyết minh,22(a),,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,19,3,Vay ngắn hạn,31/12/2023 VND,1.661.054.422.237,1661054422237.0,1661054422237.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,19,4,Vay ngắn hạn,1/1/2023 VND,2.862.060.337.867,2862060337867.0,2862060337867.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,20,0,"Quỹ khen thưởng, phúc lợi",column_1,"Quỹ khen thưởng, phúc lợi",,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,20,1,"Quỹ khen thưởng, phúc lợi",Mã số,322,322.0,322.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,20,2,"Quỹ khen thưởng, phúc lợi",Thuyết minh,23,23.0,23.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,20,3,"Quỹ khen thưởng, phúc lợi",31/12/2023 VND,145.827.662.533,145827662533.0,145827662533.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,20,4,"Quỹ khen thưởng, phúc lợi",1/1/2023 VND,108.909.881.324,108909881324.0,108909881324.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,21,0,Nợ dài hạn,column_1,Nợ dài hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,21,1,Nợ dài hạn,Mã số,330,330.0,330.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,21,2,Nợ dài hạn,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,21,3,Nợ dài hạn,31/12/2023 VND,3.019.166.781.887,3019166781887.0,3019166781887.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,21,4,Nợ dài hạn,1/1/2023 VND,2.999.443.406.109,2999443406109.0,2999443406109.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,22,0,Phải trả dài hạn khác,column_1,Phải trả dài hạn khác,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,22,1,Phải trả dài hạn khác,Mã số,337,337.0,337.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,22,2,Phải trả dài hạn khác,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,22,3,Phải trả dài hạn khác,31/12/2023 VND,1.521.414.720,1521414720.0,1521414720.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,22,4,Phải trả dài hạn khác,1/1/2023 VND,2.302.745.180,2302745180.0,2302745180.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,23,0,Vay và trái phiếu phát hành dài hạn,column_1,Vay và trái phiếu phát hành dài hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,23,1,Vay và trái phiếu phát hành dài hạn,Mã số,338,338.0,338.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,23,2,Vay và trái phiếu phát hành dài hạn,Thuyết minh,22(b),,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,23,3,Vay và trái phiếu phát hành dài hạn,31/12/2023 VND,3.017.645.367.167,3017645367167.0,3017645367167.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,23,4,Vay và trái phiếu phát hành dài hạn,1/1/2023 VND,2.992.770.508.866,2992770508866.0,2992770508866.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,24,0,Dự phòng phải trả dài hạn,column_1,Dự phòng phải trả dài hạn,,,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,24,1,Dự phòng phải trả dài hạn,Mã số,342,342.0,342.0,False,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,24,2,Dự phòng phải trả dài hạn,Thuyết minh,,,,False,True
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,24,3,Dự phòng phải trả dài hạn,31/12/2023 VND,-,0.0,0.0,True,False
+PC1_financial_statements_2023_separate|table_7,PC1_financial_statements_2023_separate,PC1,2023,separate,VND,24,4,Dự phòng phải trả dài hạn,1/1/2023 VND,4.370.152.063,4370152063.0,4370152063.0,False,False

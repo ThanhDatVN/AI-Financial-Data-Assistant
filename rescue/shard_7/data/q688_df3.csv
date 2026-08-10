@@ -1,0 +1,67 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,0,0,"Vốn góp cửa các hợp đồng hợp tác kinh doanh (""HĐHTKD"") (i)",column_1,"Vốn góp cửa các hợp đồng hợp tác kinh doanh (""HĐHTKD"") (i)",,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,0,1,"Vốn góp cửa các hợp đồng hợp tác kinh doanh (""HĐHTKD"") (i)",Số cuối năm,780.967.875.024,780967875024.0,780967875024.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,0,2,"Vốn góp cửa các hợp đồng hợp tác kinh doanh (""HĐHTKD"") (i)",VND Số đầu năm,995.146.493.163,995146493163.0,995146493163.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,1,0,- Công ty Cổ phần Vina Holdings,column_1,- Công ty Cổ phần Vina Holdings,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,1,1,- Công ty Cổ phần Vina Holdings,Số cuối năm,71.000.000.000,71000000000.0,71000000000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,1,2,- Công ty Cổ phần Vina Holdings,VND Số đầu năm,175.000.000.000,175000000000.0,175000000000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,2,0,- Công ty Cổ phần Bất động sản LinkGroup,column_1,- Công ty Cổ phần Bất động sản LinkGroup,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,2,1,- Công ty Cổ phần Bất động sản LinkGroup,Số cuối năm,23.025.188.000,23025188000.0,23025188000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,2,2,- Công ty Cổ phần Bất động sản LinkGroup,VND Số đầu năm,23.025.188.000,23025188000.0,23025188000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,3,0,- Công ty Cổ phần Địa ốc Sài Gòn,column_1,- Công ty Cổ phần Địa ốc Sài Gòn,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,3,1,- Công ty Cổ phần Địa ốc Sài Gòn,Số cuối năm,-,0.0,0.0,True,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,3,2,- Công ty Cổ phần Địa ốc Sài Gòn,VND Số đầu năm,100.000.000.000,100000000000.0,100000000000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,4,0,- Khác,column_1,- Khác,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,4,1,- Khác,Số cuối năm,6.283.419.826,6283419826.0,6283419826.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,4,2,- Khác,VND Số đầu năm,-,0.0,0.0,True,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,5,0,- Các bên liên quan,column_1,- Các bên liên quan,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,5,1,- Các bên liên quan,Số cuối năm,680.659.267.198,680659267198.0,680659267198.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,5,2,- Các bên liên quan,VND Số đầu năm,697.121.305.163,697121305163.0,697121305163.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,6,0,Tạm ứng góp vốn (ii),column_1,Tạm ứng góp vốn (ii),,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,6,1,Tạm ứng góp vốn (ii),Số cuối năm,303.594.480.000,303594480000.0,303594480000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,6,2,Tạm ứng góp vốn (ii),VND Số đầu năm,-,0.0,0.0,True,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,7,0,Tạm ứng đầu tư,column_1,Tạm ứng đầu tư,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,7,1,Tạm ứng đầu tư,Số cuối năm,54.683.618.750,54683618750.0,54683618750.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,7,2,Tạm ứng đầu tư,VND Số đầu năm,105.163.564.000,105163564000.0,105163564000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,8,0,- Công ty Cổ phần Đầu tư và Thương mại Việt Tín,column_1,- Công ty Cổ phần Đầu tư và Thương mại Việt Tín,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,8,1,- Công ty Cổ phần Đầu tư và Thương mại Việt Tín,Số cuối năm,48.600.000.000,48600000000.0,48600000000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,8,2,- Công ty Cổ phần Đầu tư và Thương mại Việt Tín,VND Số đầu năm,48.600.000.000,48600000000.0,48600000000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,9,0,- Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam,column_1,- Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,9,1,- Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam,Số cuối năm,-,0.0,0.0,True,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,9,2,- Tổng Công ty Cổ phần Xây lắp Dầu khí Việt Nam,VND Số đầu năm,29.251.650.000,29251650000.0,29251650000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,10,0,- Khác,column_1,- Khác,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,10,1,- Khác,Số cuối năm,6.083.618.750,6083618750.0,6083618750.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,10,2,- Khác,VND Số đầu năm,27.311.914.000,27311914000.0,27311914000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,11,0,Tạm ứng nhân viên,column_1,Tạm ứng nhân viên,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,11,1,Tạm ứng nhân viên,Số cuối năm,18.261.038.083,18261038083.0,18261038083.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,11,2,Tạm ứng nhân viên,VND Số đầu năm,30.174.016.311,30174016311.0,30174016311.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,12,0,"Ký quý, ký cược",column_1,"Ký quý, ký cược",,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,12,1,"Ký quý, ký cược",Số cuối năm,14.642.035.232,14642035232.0,14642035232.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,12,2,"Ký quý, ký cược",VND Số đầu năm,12.882.867.492,12882867492.0,12882867492.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,13,0,Phải thu lãi cho vay,column_1,Phải thu lãi cho vay,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,13,1,Phải thu lãi cho vay,Số cuối năm,5.843.029.492,5843029492.0,5843029492.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,13,2,Phải thu lãi cho vay,VND Số đầu năm,1.545.625.150,1545625150.0,1545625150.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,14,0,Cổ tức,column_1,Cổ tức,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,14,1,Cổ tức,Số cuối năm,2.125.818.182,2125818182.0,2125818182.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,14,2,Cổ tức,VND Số đầu năm,1.160.250.000,1160250000.0,1160250000.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,15,0,Khác,column_1,Khác,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,15,1,Khác,Số cuối năm,4.706.380.899,4706380899.0,4706380899.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,15,2,Khác,VND Số đầu năm,7.420.006.106,7420006106.0,7420006106.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,16,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,16,1,TỔNG CỘNG,Số cuối năm,1.184.824.275.662,1184824275662.0,1184824275662.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,16,2,TỔNG CỘNG,VND Số đầu năm,1.153.492.822.222,1153492822222.0,1153492822222.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,17,0,Dự phòng phải thu ngắn hạn khác(Thuyết minh số 10),column_1,Dự phòng phải thu ngắn hạn khác(Thuyết minh số 10),,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,17,1,Dự phòng phải thu ngắn hạn khác(Thuyết minh số 10),Số cuối năm,(9.124.886.323),-9124886323.0,-9124886323.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,17,2,Dự phòng phải thu ngắn hạn khác(Thuyết minh số 10),VND Số đầu năm,(9.124.886.323),-9124886323.0,-9124886323.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,18,0,GIÁ TRỊ THUÀN,column_1,GIÁ TRỊ THUÀN,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,18,1,GIÁ TRỊ THUÀN,Số cuối năm,1.175.699.389.339,1175699389339.0,1175699389339.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,18,2,GIÁ TRỊ THUÀN,VND Số đầu năm,1.144.367.935.899,1144367935899.0,1144367935899.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,19,0,Trong đó:,column_1,Trong đó:,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,19,1,Trong đó:,Số cuối năm,,,,False,True
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,19,2,Trong đó:,VND Số đầu năm,,,,False,True
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,20,0,Phải thu bên liên quan (Thuyết minh số 31),column_1,Phải thu bên liên quan (Thuyết minh số 31),,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,20,1,Phải thu bên liên quan (Thuyết minh số 31),Số cuối năm,970.687.349.862,970687349862.0,970687349862.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,20,2,Phải thu bên liên quan (Thuyết minh số 31),VND Số đầu năm,706.342.204.629,706342204629.0,706342204629.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,21,0,Phải thu bên khác,column_1,Phải thu bên khác,,,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,21,1,Phải thu bên khác,Số cuối năm,214.136.925.800,214136925800.0,214136925800.0,False,False
+DXG_financial_statements_2018_separate|table_16,DXG_financial_statements_2018_separate,DXG,2018,separate,VND,21,2,Phải thu bên khác,VND Số đầu năm,447.150.617.593,447150617593.0,447150617593.0,False,False

@@ -1,0 +1,136 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,0,0,A,Chỉ tiêu,A,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,0,1,A,Mã số,B,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,0,2,A,Thuyết minh,C,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,0,3,A,Năm nay,1,1.0,1.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,0,4,A,Năm trước,2,2.0,2.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,1,0,"I. Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng",Chỉ tiêu,"I. Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng",,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,1,1,"I. Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng",Mã số,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,1,2,"I. Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng",Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,1,3,"I. Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng",Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,1,4,"I. Lưu chuyển tiền hoạt động môi giới, ủy thác của khách hàng",Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,2,0,1. Tiền thu bán chứng khoán môi giới cho khách hàng,Chỉ tiêu,1. Tiền thu bán chứng khoán môi giới cho khách hàng,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,2,1,1. Tiền thu bán chứng khoán môi giới cho khách hàng,Mã số,1,1.0,1.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,2,2,1. Tiền thu bán chứng khoán môi giới cho khách hàng,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,2,3,1. Tiền thu bán chứng khoán môi giới cho khách hàng,Năm nay,146.823.476.127.761,146823476127761.0,146823476127761.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,2,4,1. Tiền thu bán chứng khoán môi giới cho khách hàng,Năm trước,123.060.030.047.960,123060030047960.0,123060030047960.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,3,0,2. Tiền chi mua chứng khoán môi giới cho khách hàng,Chỉ tiêu,2. Tiền chi mua chứng khoán môi giới cho khách hàng,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,3,1,2. Tiền chi mua chứng khoán môi giới cho khách hàng,Mã số,2,2.0,2.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,3,2,2. Tiền chi mua chứng khoán môi giới cho khách hàng,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,3,3,2. Tiền chi mua chứng khoán môi giới cho khách hàng,Năm nay,(147.264.955.221.619),-147264955221619.0,-147264955221619.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,3,4,2. Tiền chi mua chứng khoán môi giới cho khách hàng,Năm trước,(117.099.281.049.740),-117099281049740.0,-117099281049740.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,4,0,7. Nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng,Chỉ tiêu,7. Nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,4,1,7. Nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng,Mã số,7,7.0,7.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,4,2,7. Nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,4,3,7. Nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng,Năm nay,(218.022.068.369),-218022068369.0,-218022068369.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,4,4,7. Nhận tiền gửi để thanh toán giao dịch chứng khoán của khách hàng,Năm trước,(5.027.995.630.398),-5027995630398.0,-5027995630398.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,5,0,11. Chi trả phí lưu ký chứng khoán của khách hàng,Chỉ tiêu,11. Chi trả phí lưu ký chứng khoán của khách hàng,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,5,1,11. Chi trả phí lưu ký chứng khoán của khách hàng,Mã số,11,11.0,11.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,5,2,11. Chi trả phí lưu ký chứng khoán của khách hàng,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,5,3,11. Chi trả phí lưu ký chứng khoán của khách hàng,Năm nay,(14.783.796.220),-14783796220.0,-14783796220.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,5,4,11. Chi trả phí lưu ký chứng khoán của khách hàng,Năm trước,(13.488.906.058),-13488906058.0,-13488906058.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,6,0,12. Thu lỗi giao dịch chứng khoán,Chỉ tiêu,12. Thu lỗi giao dịch chứng khoán,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,6,1,12. Thu lỗi giao dịch chứng khoán,Mã số,12,12.0,12.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,6,2,12. Thu lỗi giao dịch chứng khoán,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,6,3,12. Thu lỗi giao dịch chứng khoán,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,6,4,12. Thu lỗi giao dịch chứng khoán,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,7,0,13. Chi lỗi giao dịch chứng khoán,Chỉ tiêu,13. Chi lỗi giao dịch chứng khoán,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,7,1,13. Chi lỗi giao dịch chứng khoán,Mã số,13,13.0,13.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,7,2,13. Chi lỗi giao dịch chứng khoán,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,7,3,13. Chi lỗi giao dịch chứng khoán,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,7,4,13. Chi lỗi giao dịch chứng khoán,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,8,0,14. Tiền thu của Tổ chức phát hành chứng khoán,Chỉ tiêu,14. Tiền thu của Tổ chức phát hành chứng khoán,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,8,1,14. Tiền thu của Tổ chức phát hành chứng khoán,Mã số,14,14.0,14.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,8,2,14. Tiền thu của Tổ chức phát hành chứng khoán,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,8,3,14. Tiền thu của Tổ chức phát hành chứng khoán,Năm nay,1.671.520.938.337,1671520938337.0,1671520938337.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,8,4,14. Tiền thu của Tổ chức phát hành chứng khoán,Năm trước,1.735.081.188.003,1735081188003.0,1735081188003.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,9,0,15. Tiền chi trả Tổ chức phát hành chứng khoán,Chỉ tiêu,15. Tiền chi trả Tổ chức phát hành chứng khoán,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,9,1,15. Tiền chi trả Tổ chức phát hành chứng khoán,Mã số,15,15.0,15.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,9,2,15. Tiền chi trả Tổ chức phát hành chứng khoán,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,9,3,15. Tiền chi trả Tổ chức phát hành chứng khoán,Năm nay,(1.669.999.809.487),-1669999809487.0,-1669999809487.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,9,4,15. Tiền chi trả Tổ chức phát hành chứng khoán,Năm trước,(1.734.882.219.528),-1734882219528.0,-1734882219528.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,10,0,Tăng/giảm tiền thuần trong kỳ,Chỉ tiêu,Tăng/giảm tiền thuần trong kỳ,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,10,1,Tăng/giảm tiền thuần trong kỳ,Mã số,20,20.0,20.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,10,2,Tăng/giảm tiền thuần trong kỳ,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,10,3,Tăng/giảm tiền thuần trong kỳ,Năm nay,(672.763.829.597),-672763829597.0,-672763829597.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,10,4,Tăng/giảm tiền thuần trong kỳ,Năm trước,919.463.430.739,919463430739.0,919463430739.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,11,0,II. Tiền và các khoản tương đương tiền đầu kỳ của khách hàng,Chỉ tiêu,II. Tiền và các khoản tương đương tiền đầu kỳ của khách hàng,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,11,1,II. Tiền và các khoản tương đương tiền đầu kỳ của khách hàng,Mã số,30,30.0,30.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,11,2,II. Tiền và các khoản tương đương tiền đầu kỳ của khách hàng,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,11,3,II. Tiền và các khoản tương đương tiền đầu kỳ của khách hàng,Năm nay,3.448.263.948.398,3448263948398.0,3448263948398.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,11,4,II. Tiền và các khoản tương đương tiền đầu kỳ của khách hàng,Năm trước,2.528.800.517.659,2528800517659.0,2528800517659.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,12,0,Tiền gửi ngân hàng đầu kỳ:,Chỉ tiêu,Tiền gửi ngân hàng đầu kỳ:,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,12,1,Tiền gửi ngân hàng đầu kỳ:,Mã số,31,31.0,31.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,12,2,Tiền gửi ngân hàng đầu kỳ:,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,12,3,Tiền gửi ngân hàng đầu kỳ:,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,12,4,Tiền gửi ngân hàng đầu kỳ:,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,13,0,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Chỉ tiêu,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,13,1,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Mã số,32,32.0,32.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,13,2,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,13,3,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Năm nay,3.447.888.429.448,3447888429448.0,3447888429448.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,13,4,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Năm trước,2.528.623.967.684,2528623967684.0,2528623967684.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,14,0,Trong đó có kỳ hạn,Chỉ tiêu,Trong đó có kỳ hạn,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,14,1,Trong đó có kỳ hạn,Mã số,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,14,2,Trong đó có kỳ hạn,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,14,3,Trong đó có kỳ hạn,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,14,4,Trong đó có kỳ hạn,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,15,0,- Tiền gửi của Tổ chức phát hành,Chỉ tiêu,- Tiền gửi của Tổ chức phát hành,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,15,1,- Tiền gửi của Tổ chức phát hành,Mã số,35,35.0,35.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,15,2,- Tiền gửi của Tổ chức phát hành,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,15,3,- Tiền gửi của Tổ chức phát hành,Năm nay,375.518.950,375518950.0,375518950.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,15,4,- Tiền gửi của Tổ chức phát hành,Năm trước,176.549.975,176549975.0,176549975.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,16,0,Trong đó có kỳ hạn,Chỉ tiêu,Trong đó có kỳ hạn,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,16,1,Trong đó có kỳ hạn,Mã số,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,16,2,Trong đó có kỳ hạn,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,16,3,Trong đó có kỳ hạn,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,16,4,Trong đó có kỳ hạn,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,17,0,Các khoản tương đương tiền,Chỉ tiêu,Các khoản tương đương tiền,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,17,1,Các khoản tương đương tiền,Mã số,36,36.0,36.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,17,2,Các khoản tương đương tiền,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,17,3,Các khoản tương đương tiền,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,17,4,Các khoản tương đương tiền,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,18,0,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Chỉ tiêu,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,18,1,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Mã số,37,37.0,37.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,18,2,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,18,3,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,18,4,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,19,0,III. Tiền và các khoản tương đương tiền cuối kỳ của khách hàng (\( 40 = 20 + 30 \)),Chỉ tiêu,III. Tiền và các khoản tương đương tiền cuối kỳ của khách hàng (\( 40 = 20 + 30 \)),,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,19,1,III. Tiền và các khoản tương đương tiền cuối kỳ của khách hàng (\( 40 = 20 + 30 \)),Mã số,40,40.0,40.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,19,2,III. Tiền và các khoản tương đương tiền cuối kỳ của khách hàng (\( 40 = 20 + 30 \)),Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,19,3,III. Tiền và các khoản tương đương tiền cuối kỳ của khách hàng (\( 40 = 20 + 30 \)),Năm nay,2.775.500.118.801,2775500118801.0,2775500118801.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,19,4,III. Tiền và các khoản tương đương tiền cuối kỳ của khách hàng (\( 40 = 20 + 30 \)),Năm trước,3.448.263.948.398,3448263948398.0,3448263948398.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,20,0,Tiền gửi ngân hàng cuối kỳ:,Chỉ tiêu,Tiền gửi ngân hàng cuối kỳ:,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,20,1,Tiền gửi ngân hàng cuối kỳ:,Mã số,41,41.0,41.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,20,2,Tiền gửi ngân hàng cuối kỳ:,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,20,3,Tiền gửi ngân hàng cuối kỳ:,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,20,4,Tiền gửi ngân hàng cuối kỳ:,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,21,0,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Chỉ tiêu,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,21,1,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Mã số,42,42.0,42.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,21,2,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Thuyết minh,C7.40,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,21,3,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Năm nay,2.773.603.471.001,2773603471001.0,2773603471001.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,21,4,- Tiền gửi của Nhà đầu tư về giao dịch chứng khoán theo phương thức CTCK quản lý,Năm trước,3.447.888.429.448,3447888429448.0,3447888429448.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,22,0,Trong đó có kỳ hạn,Chỉ tiêu,Trong đó có kỳ hạn,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,22,1,Trong đó có kỳ hạn,Mã số,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,22,2,Trong đó có kỳ hạn,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,22,3,Trong đó có kỳ hạn,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,22,4,Trong đó có kỳ hạn,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,23,0,- Tiền gửi của Tổ chức phát hành,Chỉ tiêu,- Tiền gửi của Tổ chức phát hành,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,23,1,- Tiền gửi của Tổ chức phát hành,Mã số,45,45.0,45.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,23,2,- Tiền gửi của Tổ chức phát hành,Thuyết minh,C7.40,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,23,3,- Tiền gửi của Tổ chức phát hành,Năm nay,1.896.647.800,1896647800.0,1896647800.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,23,4,- Tiền gửi của Tổ chức phát hành,Năm trước,375.518.950,375518950.0,375518950.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,24,0,Trong đó có kỳ hạn,Chỉ tiêu,Trong đó có kỳ hạn,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,24,1,Trong đó có kỳ hạn,Mã số,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,24,2,Trong đó có kỳ hạn,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,24,3,Trong đó có kỳ hạn,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,24,4,Trong đó có kỳ hạn,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,25,0,Các khoản tương đương tiền,Chỉ tiêu,Các khoản tương đương tiền,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,25,1,Các khoản tương đương tiền,Mã số,46,46.0,46.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,25,2,Các khoản tương đương tiền,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,25,3,Các khoản tương đương tiền,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,25,4,Các khoản tương đương tiền,Năm trước,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,26,0,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Chỉ tiêu,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,,,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,26,1,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Mã số,47,47.0,47.0,False,False
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,26,2,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Thuyết minh,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,26,3,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Năm nay,,,,False,True
+FTS_financial_statements_2024|table_13,FTS_financial_statements_2024,FTS,2024,unknown,UNKNOWN,26,4,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,Năm trước,,,,False,True

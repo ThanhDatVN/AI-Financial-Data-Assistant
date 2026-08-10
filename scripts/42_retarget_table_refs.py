@@ -43,21 +43,28 @@ GRAMMARS: dict[str, str] = {
     "ordinal0": "{doc}|{ordinal0}",
     # G3: the prefix kept but the count starting at zero.
     "table_n0": "{doc}|table_{ordinal0}",
-    # G4: position as the line the table starts on.
+    # G4: position as the line the table starts on. The first grammar to score above zero.
     "line": "{doc}|{line_no}",
+    # G7/G8: the same line counted from zero, or the line after the opening tag, in case the
+    # gold counts from a different edge of the table.
+    "line0": "{doc}|{line0}",
+    "line1": "{doc}|{line1}",
+    # G9: position as the character offset of the opening tag.
+    "char": "{doc}|{char_offset}",
     # G5: position as the page it appears on.
     "page": "{doc}|{page_no}",
     # G6: position across the whole corpus rather than within the report.
     "global": "{doc}|{global_index}",
 }
 # Which grammars need the manifest rather than only the reference string.
-_NEEDS_MANIFEST = frozenset({"line", "page", "global"})
+_NEEDS_MANIFEST = frozenset({"line", "line0", "line1", "char", "page", "global"})
 
 
 def _positions(manifest: Path) -> dict[str, dict[str, int]]:
     """Every positional field the manifest records, keyed by the reference we already emit."""
     frame = pd.read_parquet(
-        manifest, columns=["table_ref", "doc_id", "table_id", "page_no", "line_no"]
+        manifest,
+        columns=["table_ref", "doc_id", "table_id", "page_no", "line_no", "char_offset"],
     )
     frame = frame.sort_values(["doc_id", "table_id"]).reset_index(drop=True)
     frame["global_index"] = frame.index + 1
@@ -65,6 +72,9 @@ def _positions(manifest: Path) -> dict[str, dict[str, int]]:
         str(row.table_ref): {
             "page_no": int(row.page_no) if row.page_no == row.page_no else -1,
             "line_no": int(row.line_no),
+            "line0": int(row.line_no) - 1,
+            "line1": int(row.line_no) + 1,
+            "char_offset": int(row.char_offset),
             "global_index": int(row.global_index),
         }
         for row in frame.itertuples(index=False)

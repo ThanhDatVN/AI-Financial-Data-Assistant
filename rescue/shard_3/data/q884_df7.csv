@@ -1,0 +1,121 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,0,0,NỘ PHẢI TRẢ (300 = 310 + 330),NGUỒN VỐN,NỘ PHẢI TRẢ (300 = 310 + 330),,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,0,1,NỘ PHẢI TRẢ (300 = 310 + 330),Mã số | NGUỒN VỐN,300,300.0,300.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,0,2,NỘ PHẢI TRẢ (300 = 310 + 330),Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,0,3,NỘ PHẢI TRẢ (300 = 310 + 330),31/12/2021 VND | NGUỒN VỐN,2.475.731.954.180,2475731954180.0,2475731954180.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,0,4,NỘ PHẢI TRẢ (300 = 310 + 330),1/1/2021 VND | NGUỒN VỐN,4.261.525.941.169,4261525941169.0,4261525941169.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,1,0,Nợ ngắn hạn,NGUỒN VỐN,Nợ ngắn hạn,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,1,1,Nợ ngắn hạn,Mã số | NGUỒN VỐN,310,310.0,310.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,1,2,Nợ ngắn hạn,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,1,3,Nợ ngắn hạn,31/12/2021 VND | NGUỒN VỐN,1.327.979.436.070,1327979436070.0,1327979436070.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,1,4,Nợ ngắn hạn,1/1/2021 VND | NGUỒN VỐN,2.258.754.109.348,2258754109348.0,2258754109348.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,2,0,Phải trả người bán ngắn hạn,NGUỒN VỐN,Phải trả người bán ngắn hạn,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,2,1,Phải trả người bán ngắn hạn,Mã số | NGUỒN VỐN,311,311.0,311.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,2,2,Phải trả người bán ngắn hạn,Thuyết minh | NGUỒN VỐN,16,16.0,16.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,2,3,Phải trả người bán ngắn hạn,31/12/2021 VND | NGUỒN VỐN,340.474.143.698,340474143698.0,340474143698.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,2,4,Phải trả người bán ngắn hạn,1/1/2021 VND | NGUỒN VỐN,506.114.501.311,506114501311.0,506114501311.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,3,0,Người mua trả tiền trước,NGUỒN VỐN,Người mua trả tiền trước,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,3,1,Người mua trả tiền trước,Mã số | NGUỒN VỐN,312,312.0,312.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,3,2,Người mua trả tiền trước,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,3,3,Người mua trả tiền trước,31/12/2021 VND | NGUỒN VỐN,45.995.251,45995251.0,45995251.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,3,4,Người mua trả tiền trước,1/1/2021 VND | NGUỒN VỐN,45.995.251,45995251.0,45995251.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,4,0,Thuế và các khoản phải nộp Nhà nước,NGUỒN VỐN,Thuế và các khoản phải nộp Nhà nước,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,4,1,Thuế và các khoản phải nộp Nhà nước,Mã số | NGUỒN VỐN,313,313.0,313.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,4,2,Thuế và các khoản phải nộp Nhà nước,Thuyết minh | NGUỒN VỐN,17,17.0,17.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,4,3,Thuế và các khoản phải nộp Nhà nước,31/12/2021 VND | NGUỒN VỐN,13.449.427.575,13449427575.0,13449427575.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,4,4,Thuế và các khoản phải nộp Nhà nước,1/1/2021 VND | NGUỒN VỐN,17.704.712.638,17704712638.0,17704712638.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,5,0,Phải trả người lao động,NGUỒN VỐN,Phải trả người lao động,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,5,1,Phải trả người lao động,Mã số | NGUỒN VỐN,314,314.0,314.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,5,2,Phải trả người lao động,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,5,3,Phải trả người lao động,31/12/2021 VND | NGUỒN VỐN,31.448.652.900,31448652900.0,31448652900.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,5,4,Phải trả người lao động,1/1/2021 VND | NGUỒN VỐN,63.935.604.438,63935604438.0,63935604438.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,6,0,Chi phí phải trả ngắn hạn,NGUỒN VỐN,Chi phí phải trả ngắn hạn,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,6,1,Chi phí phải trả ngắn hạn,Mã số | NGUỒN VỐN,315,315.0,315.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,6,2,Chi phí phải trả ngắn hạn,Thuyết minh | NGUỒN VỐN,18,18.0,18.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,6,3,Chi phí phải trả ngắn hạn,31/12/2021 VND | NGUỒN VỐN,28.026.395.207,28026395207.0,28026395207.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,6,4,Chi phí phải trả ngắn hạn,1/1/2021 VND | NGUỒN VỐN,58.658.375.869,58658375869.0,58658375869.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,7,0,Phải trả ngắn hạn khác,NGUỒN VỐN,Phải trả ngắn hạn khác,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,7,1,Phải trả ngắn hạn khác,Mã số | NGUỒN VỐN,319,319.0,319.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,7,2,Phải trả ngắn hạn khác,Thuyết minh | NGUỒN VỐN,19,19.0,19.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,7,3,Phải trả ngắn hạn khác,31/12/2021 VND | NGUỒN VỐN,68.988.649.433,68988649433.0,68988649433.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,7,4,Phải trả ngắn hạn khác,1/1/2021 VND | NGUỒN VỐN,146.202.468.912,146202468912.0,146202468912.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,8,0,Vay ngắn hạn,NGUỒN VỐN,Vay ngắn hạn,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,8,1,Vay ngắn hạn,Mã số | NGUỒN VỐN,320,320.0,320.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,8,2,Vay ngắn hạn,Thuyết minh | NGUỒN VỐN,20(a),,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,8,3,Vay ngắn hạn,31/12/2021 VND | NGUỒN VỐN,820.129.317.939,820129317939.0,820129317939.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,8,4,Vay ngắn hạn,1/1/2021 VND | NGUỒN VỐN,1.440.287.631.269,1440287631269.0,1440287631269.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,9,0,"Quỹ khen thưởng, phúc lợi",NGUỒN VỐN,"Quỹ khen thưởng, phúc lợi",,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,9,1,"Quỹ khen thưởng, phúc lợi",Mã số | NGUỒN VỐN,322,322.0,322.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,9,2,"Quỹ khen thưởng, phúc lợi",Thuyết minh | NGUỒN VỐN,21,21.0,21.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,9,3,"Quỹ khen thưởng, phúc lợi",31/12/2021 VND | NGUỒN VỐN,25.416.854.067,25416854067.0,25416854067.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,9,4,"Quỹ khen thưởng, phúc lợi",1/1/2021 VND | NGUỒN VỐN,25.804.819.660,25804819660.0,25804819660.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,10,0,Nợ dài hạn,NGUỒN VỐN,Nợ dài hạn,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,10,1,Nợ dài hạn,Mã số | NGUỒN VỐN,330,330.0,330.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,10,2,Nợ dài hạn,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,10,3,Nợ dài hạn,31/12/2021 VND | NGUỒN VỐN,1.147.752.518.110,1147752518110.0,1147752518110.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,10,4,Nợ dài hạn,1/1/2021 VND | NGUỒN VỐN,2.002.771.831.821,2002771831821.0,2002771831821.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,11,0,Vay dài hạn,NGUỒN VỐN,Vay dài hạn,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,11,1,Vay dài hạn,Mã số | NGUỒN VỐN,338,338.0,338.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,11,2,Vay dài hạn,Thuyết minh | NGUỒN VỐN,20(b),,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,11,3,Vay dài hạn,31/12/2021 VND | NGUỒN VỐN,1.137.212.587.517,1137212587517.0,1137212587517.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,11,4,Vay dài hạn,1/1/2021 VND | NGUỒN VỐN,1.989.171.831.821,1989171831821.0,1989171831821.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,12,0,Quỹ phát triển khoa học và công nghệ,NGUỒN VỐN,Quỹ phát triển khoa học và công nghệ,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,12,1,Quỹ phát triển khoa học và công nghệ,Mã số | NGUỒN VỐN,343,343.0,343.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,12,2,Quỹ phát triển khoa học và công nghệ,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,12,3,Quỹ phát triển khoa học và công nghệ,31/12/2021 VND | NGUỒN VỐN,10.539.930.593,10539930593.0,10539930593.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,12,4,Quỹ phát triển khoa học và công nghệ,1/1/2021 VND | NGUỒN VỐN,13.600.000.000,13600000000.0,13600000000.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,13,0,VỐN CHỦ SỞ HỮU (400 = 410),NGUỒN VỐN,VỐN CHỦ SỞ HỮU (400 = 410),,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,13,1,VỐN CHỦ SỞ HỮU (400 = 410),Mã số | NGUỒN VỐN,400,400.0,400.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,13,2,VỐN CHỦ SỞ HỮU (400 = 410),Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,13,3,VỐN CHỦ SỞ HỮU (400 = 410),31/12/2021 VND | NGUỒN VỐN,6.226.191.877.217,6226191877217.0,6226191877217.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,13,4,VỐN CHỦ SỞ HỮU (400 = 410),1/1/2021 VND | NGUỒN VỐN,6.949.024.392.931,6949024392931.0,6949024392931.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,14,0,Vốn chủ sở hữu,NGUỒN VỐN,Vốn chủ sở hữu,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,14,1,Vốn chủ sở hữu,Mã số | NGUỒN VỐN,410,410.0,410.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,14,2,Vốn chủ sở hữu,Thuyết minh | NGUỒN VỐN,22,22.0,22.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,14,3,Vốn chủ sở hữu,31/12/2021 VND | NGUỒN VỐN,6.226.191.877.217,6226191877217.0,6226191877217.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,14,4,Vốn chủ sở hữu,1/1/2021 VND | NGUỒN VỐN,6.949.024.392.931,6949024392931.0,6949024392931.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,15,0,Vốn cổ phần,NGUỒN VỐN,Vốn cổ phần,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,15,1,Vốn cổ phần,Mã số | NGUỒN VỐN,411,411.0,411.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,15,2,Vốn cổ phần,Thuyết minh | NGUỒN VỐN,23,23.0,23.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,15,3,Vốn cổ phần,31/12/2021 VND | NGUỒN VỐN,5.000.000.000.000,5000000000000.0,5000000000000.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,15,4,Vốn cổ phần,1/1/2021 VND | NGUỒN VỐN,5.000.000.000.000,5000000000000.0,5000000000000.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,SHARES,16,0,- Cổ phiếu phố thông có quyền biểu quyết,NGUỒN VỐN,- Cổ phiếu phố thông có quyền biểu quyết,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,SHARES,16,1,- Cổ phiếu phố thông có quyền biểu quyết,Mã số | NGUỒN VỐN,411a,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,SHARES,16,2,- Cổ phiếu phố thông có quyền biểu quyết,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,16,3,- Cổ phiếu phố thông có quyền biểu quyết,31/12/2021 VND | NGUỒN VỐN,5.000.000.000.000,5000000000000.0,5000000000000.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,16,4,- Cổ phiếu phố thông có quyền biểu quyết,1/1/2021 VND | NGUỒN VỐN,5.000.000.000.000,5000000000000.0,5000000000000.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,17,0,Thặng dư vốn cổ phần,NGUỒN VỐN,Thặng dư vốn cổ phần,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,17,1,Thặng dư vốn cổ phần,Mã số | NGUỒN VỐN,412,412.0,412.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,17,2,Thặng dư vốn cổ phần,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,17,3,Thặng dư vốn cổ phần,31/12/2021 VND | NGUỒN VỐN,196.652.770.150,196652770150.0,196652770150.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,17,4,Thặng dư vốn cổ phần,1/1/2021 VND | NGUỒN VỐN,196.652.770.150,196652770150.0,196652770150.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,18,0,Vốn khác của chủ sở hữu,NGUỒN VỐN,Vốn khác của chủ sở hữu,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,18,1,Vốn khác của chủ sở hữu,Mã số | NGUỒN VỐN,414,414.0,414.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,18,2,Vốn khác của chủ sở hữu,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,18,3,Vốn khác của chủ sở hữu,31/12/2021 VND | NGUỒN VỐN,3.813.900.000,3813900000.0,3813900000.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,18,4,Vốn khác của chủ sở hữu,1/1/2021 VND | NGUỒN VỐN,3.033.280.000,3033280000.0,3033280000.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,19,0,Quỹ đầu tư phát triển,NGUỒN VỐN,Quỹ đầu tư phát triển,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,19,1,Quỹ đầu tư phát triển,Mã số | NGUỒN VỐN,418,418.0,418.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,19,2,Quỹ đầu tư phát triển,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,19,3,Quỹ đầu tư phát triển,31/12/2021 VND | NGUỒN VỐN,570.293.306.781,570293306781.0,570293306781.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,19,4,Quỹ đầu tư phát triển,1/1/2021 VND | NGUỒN VỐN,130.560.492.706,130560492706.0,130560492706.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,20,0,Lợi nhuận sau thuế chưa phân phối,NGUỒN VỐN,Lợi nhuận sau thuế chưa phân phối,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,20,1,Lợi nhuận sau thuế chưa phân phối,Mã số | NGUỒN VỐN,421,421.0,421.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,20,2,Lợi nhuận sau thuế chưa phân phối,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,20,3,Lợi nhuận sau thuế chưa phân phối,31/12/2021 VND | NGUỒN VỐN,455.431.900.286,455431900286.0,455431900286.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,20,4,Lợi nhuận sau thuế chưa phân phối,1/1/2021 VND | NGUỒN VỐN,1.618.777.850.075,1618777850075.0,1618777850075.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,21,0,- LNST chưa phân phối lũy kế đến cuối năm trước,NGUỒN VỐN,- LNST chưa phân phối lũy kế đến cuối năm trước,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,21,1,- LNST chưa phân phối lũy kế đến cuối năm trước,Mã số | NGUỒN VỐN,421a,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,21,2,- LNST chưa phân phối lũy kế đến cuối năm trước,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,21,3,- LNST chưa phân phối lũy kế đến cuối năm trước,31/12/2021 VND | NGUỒN VỐN,-,0.0,0.0,True,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,21,4,- LNST chưa phân phối lũy kế đến cuối năm trước,1/1/2021 VND | NGUỒN VỐN,273.973.558.197,273973558197.0,273973558197.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,22,0,- LNST chưa phân phối năm nay,NGUỒN VỐN,- LNST chưa phân phối năm nay,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,22,1,- LNST chưa phân phối năm nay,Mã số | NGUỒN VỐN,421b,,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,22,2,- LNST chưa phân phối năm nay,Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,22,3,- LNST chưa phân phối năm nay,31/12/2021 VND | NGUỒN VỐN,455.431.900.286,455431900286.0,455431900286.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,22,4,- LNST chưa phân phối năm nay,1/1/2021 VND | NGUỒN VỐN,1.344.804.291.878,1344804291878.0,1344804291878.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,23,0,TỔNG NGUỒN VỐN (440 = 300 + 400),NGUỒN VỐN,TỔNG NGUỒN VỐN (440 = 300 + 400),,,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,23,1,TỔNG NGUỒN VỐN (440 = 300 + 400),Mã số | NGUỒN VỐN,440,440.0,440.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,23,2,TỔNG NGUỒN VỐN (440 = 300 + 400),Thuyết minh | NGUỒN VỐN,,,,False,True
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,23,3,TỔNG NGUỒN VỐN (440 = 300 + 400),31/12/2021 VND | NGUỒN VỐN,8.701.923.831.397,8701923831397.0,8701923831397.0,False,False
+HND_financial_statements_2021|table_3,HND_financial_statements_2021,HND,2021,unknown,VND,23,4,TỔNG NGUỒN VỐN (440 = 300 + 400),1/1/2021 VND | NGUỒN VỐN,11.210.550.334.100,11210550334100.0,11210550334100.0,False,False

@@ -1,0 +1,91 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,0,0,1. Doanh thu bán hàng & cung cấp dịch vụ,CHỈ TIÊU,1. Doanh thu bán hàng & cung cấp dịch vụ,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,0,1,1. Doanh thu bán hàng & cung cấp dịch vụ,Mã số,01,1.0,1.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,0,2,1. Doanh thu bán hàng & cung cấp dịch vụ,Thuyết minh,25,25.0,25.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,0,3,1. Doanh thu bán hàng & cung cấp dịch vụ,Năm 2023 VND,9.804.102.168.176,9804102168176.0,9804102168176.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,0,4,1. Doanh thu bán hàng & cung cấp dịch vụ,Năm 2022 VND,8.042.189.188.194,8042189188194.0,8042189188194.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,1,0,2. Các khoản giảm trừ doanh thu,CHỈ TIÊU,2. Các khoản giảm trừ doanh thu,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,1,1,2. Các khoản giảm trừ doanh thu,Mã số,02,2.0,2.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,1,2,2. Các khoản giảm trừ doanh thu,Thuyết minh,26,26.0,26.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,1,3,2. Các khoản giảm trừ doanh thu,Năm 2023 VND,56.692.763.178,56692763178.0,56692763178.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,1,4,2. Các khoản giảm trừ doanh thu,Năm 2022 VND,60.698.507.108,60698507108.0,60698507108.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,2,0,3. Doanh thu thuần về bán hàng & cc dịch vụ,CHỈ TIÊU,3. Doanh thu thuần về bán hàng & cc dịch vụ,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,2,1,3. Doanh thu thuần về bán hàng & cc dịch vụ,Mã số,10,10.0,10.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,2,2,3. Doanh thu thuần về bán hàng & cc dịch vụ,Thuyết minh,,,,False,True
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,2,3,3. Doanh thu thuần về bán hàng & cc dịch vụ,Năm 2023 VND,9.747.409.404.998,9747409404998.0,9747409404998.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,2,4,3. Doanh thu thuần về bán hàng & cc dịch vụ,Năm 2022 VND,7.981.490.681.086,7981490681086.0,7981490681086.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,3,0,4. Giá vốn hàng bán,CHỈ TIÊU,4. Giá vốn hàng bán,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,3,1,4. Giá vốn hàng bán,Mã số,11,11.0,11.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,3,2,4. Giá vốn hàng bán,Thuyết minh,27,27.0,27.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,3,3,4. Giá vốn hàng bán,Năm 2023 VND,6.423.561.443.627,6423561443627.0,6423561443627.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,3,4,4. Giá vốn hàng bán,Năm 2022 VND,5.548.484.642.199,5548484642199.0,5548484642199.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,4,0,5. Lợi nhuận gộp về bán hàng & cc dịch vụ,CHỈ TIÊU,5. Lợi nhuận gộp về bán hàng & cc dịch vụ,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,4,1,5. Lợi nhuận gộp về bán hàng & cc dịch vụ,Mã số,20,20.0,20.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,4,2,5. Lợi nhuận gộp về bán hàng & cc dịch vụ,Thuyết minh,,,,False,True
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,4,3,5. Lợi nhuận gộp về bán hàng & cc dịch vụ,Năm 2023 VND,3.323.847.961.371,3323847961371.0,3323847961371.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,4,4,5. Lợi nhuận gộp về bán hàng & cc dịch vụ,Năm 2022 VND,2.433.006.038.887,2433006038887.0,2433006038887.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,5,0,6. Doanh thu hoạt động tài chính,CHỈ TIÊU,6. Doanh thu hoạt động tài chính,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,5,1,6. Doanh thu hoạt động tài chính,Mã số,21,21.0,21.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,5,2,6. Doanh thu hoạt động tài chính,Thuyết minh,28,28.0,28.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,5,3,6. Doanh thu hoạt động tài chính,Năm 2023 VND,507.722.088.414,507722088414.0,507722088414.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,5,4,6. Doanh thu hoạt động tài chính,Năm 2022 VND,330.772.924.133,330772924133.0,330772924133.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,6,0,7. Chi phí tài chính,CHỈ TIÊU,7. Chi phí tài chính,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,6,1,7. Chi phí tài chính,Mã số,22,22.0,22.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,6,2,7. Chi phí tài chính,Thuyết minh,29,29.0,29.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,6,3,7. Chi phí tài chính,Năm 2023 VND,138.891.494.695,138891494695.0,138891494695.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,6,4,7. Chi phí tài chính,Năm 2022 VND,83.722.680.028,83722680028.0,83722680028.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,7,0,Trong đó: Chi phí lãi vay,CHỈ TIÊU,Trong đó: Chi phí lãi vay,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,7,1,Trong đó: Chi phí lãi vay,Mã số,23,23.0,23.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,7,2,Trong đó: Chi phí lãi vay,Thuyết minh,,,,False,True
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,7,3,Trong đó: Chi phí lãi vay,Năm 2023 VND,136.264.011.316,136264011316.0,136264011316.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,7,4,Trong đó: Chi phí lãi vay,Năm 2022 VND,83.170.019.490,83170019490.0,83170019490.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,8,0,8. Chi phí bán hàng,CHỈ TIÊU,8. Chi phí bán hàng,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,8,1,8. Chi phí bán hàng,Mã số,25,25.0,25.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,8,2,8. Chi phí bán hàng,Thuyết minh,30.a,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,8,3,8. Chi phí bán hàng,Năm 2023 VND,781.780.887.375,781780887375.0,781780887375.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,8,4,8. Chi phí bán hàng,Năm 2022 VND,844.974.401.832,844974401832.0,844974401832.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,9,0,9. Chi phí quản lý doanh nghiệp,CHỈ TIÊU,9. Chi phí quản lý doanh nghiệp,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,9,1,9. Chi phí quản lý doanh nghiệp,Mã số,26,26.0,26.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,9,2,9. Chi phí quản lý doanh nghiệp,Thuyết minh,30.b,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,9,3,9. Chi phí quản lý doanh nghiệp,Năm 2023 VND,389.200.950.492,389200950492.0,389200950492.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,9,4,9. Chi phí quản lý doanh nghiệp,Năm 2022 VND,229.538.554.955,229538554955.0,229538554955.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,10,0,10. Lợi nhuận thuần từ hoạt động kinh doanh,CHỈ TIÊU,10. Lợi nhuận thuần từ hoạt động kinh doanh,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,10,1,10. Lợi nhuận thuần từ hoạt động kinh doanh,Mã số,30,30.0,30.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,10,2,10. Lợi nhuận thuần từ hoạt động kinh doanh,Thuyết minh,,,,False,True
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,10,3,10. Lợi nhuận thuần từ hoạt động kinh doanh,Năm 2023 VND,2.521.696.717.223,2521696717223.0,2521696717223.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,10,4,10. Lợi nhuận thuần từ hoạt động kinh doanh,Năm 2022 VND,1.605.543.326.205,1605543326205.0,1605543326205.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,11,0,11. Thu nhập khác,CHỈ TIÊU,11. Thu nhập khác,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,11,1,11. Thu nhập khác,Mã số,31,31.0,31.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,11,2,11. Thu nhập khác,Thuyết minh,31,31.0,31.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,11,3,11. Thu nhập khác,Năm 2023 VND,94.177.616.936,94177616936.0,94177616936.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,11,4,11. Thu nhập khác,Năm 2022 VND,43.968.955.633,43968955633.0,43968955633.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,12,0,12. Chi phí khác,CHỈ TIÊU,12. Chi phí khác,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,12,1,12. Chi phí khác,Mã số,32,32.0,32.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,12,2,12. Chi phí khác,Thuyết minh,32,32.0,32.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,12,3,12. Chi phí khác,Năm 2023 VND,3.053.207.308,3053207308.0,3053207308.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,12,4,12. Chi phí khác,Năm 2022 VND,4.593.899.324,4593899324.0,4593899324.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,13,0,13. Lợi nhuận khác,CHỈ TIÊU,13. Lợi nhuận khác,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,13,1,13. Lợi nhuận khác,Mã số,40,40.0,40.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,13,2,13. Lợi nhuận khác,Thuyết minh,,,,False,True
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,13,3,13. Lợi nhuận khác,Năm 2023 VND,91.124.409.628,91124409628.0,91124409628.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,13,4,13. Lợi nhuận khác,Năm 2022 VND,39.375.056.309,39375056309.0,39375056309.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,14,0,14. Tổng lợi nhuận kế toán trước thuế,CHỈ TIÊU,14. Tổng lợi nhuận kế toán trước thuế,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,14,1,14. Tổng lợi nhuận kế toán trước thuế,Mã số,50,50.0,50.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,14,2,14. Tổng lợi nhuận kế toán trước thuế,Thuyết minh,,,,False,True
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,14,3,14. Tổng lợi nhuận kế toán trước thuế,Năm 2023 VND,2.612.821.126.851,2612821126851.0,2612821126851.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,14,4,14. Tổng lợi nhuận kế toán trước thuế,Năm 2022 VND,1.644.918.382.514,1644918382514.0,1644918382514.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,15,0,15. Chi phí thuế TNDN hiện hành,CHỈ TIÊU,15. Chi phí thuế TNDN hiện hành,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,15,1,15. Chi phí thuế TNDN hiện hành,Mã số,51,51.0,51.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,15,2,15. Chi phí thuế TNDN hiện hành,Thuyết minh,33,33.0,33.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,15,3,15. Chi phí thuế TNDN hiện hành,Năm 2023 VND,263.147.356.576,263147356576.0,263147356576.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,15,4,15. Chi phí thuế TNDN hiện hành,Năm 2022 VND,218.549.615.435,218549615435.0,218549615435.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,16,0,16. Chi phí thuế TNDN hoãn lại,CHỈ TIÊU,16. Chi phí thuế TNDN hoãn lại,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,16,1,16. Chi phí thuế TNDN hoãn lại,Mã số,52,52.0,52.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,16,2,16. Chi phí thuế TNDN hoãn lại,Thuyết minh,,,,False,True
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,16,3,16. Chi phí thuế TNDN hoãn lại,Năm 2023 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,16,4,16. Chi phí thuế TNDN hoãn lại,Năm 2022 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,17,0,17. Lợi nhuận sau thuế TNDN,CHỈ TIÊU,17. Lợi nhuận sau thuế TNDN,,,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,17,1,17. Lợi nhuận sau thuế TNDN,Mã số,60,60.0,60.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,17,2,17. Lợi nhuận sau thuế TNDN,Thuyết minh,,,,False,True
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,17,3,17. Lợi nhuận sau thuế TNDN,Năm 2023 VND,2.349.673.770.275,2349673770275.0,2349673770275.0,False,False
+QNS_financial_statements_2023_separate|table_8,QNS_financial_statements_2023_separate,QNS,2023,separate,VND,17,4,17. Lợi nhuận sau thuế TNDN,Năm 2022 VND,1.426.368.767.079,1426368767079.0,1426368767079.0,False,False

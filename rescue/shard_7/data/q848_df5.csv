@@ -1,0 +1,31 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,0,0,Phí bảo lãnh và hoa hồng môi giới,Ngắn hạn,Phí bảo lãnh và hoa hồng môi giới,,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,0,1,Phí bảo lãnh và hoa hồng môi giới,Số cuối năm | Ngắn hạn,257.013.910.497,257013910497.0,257013910497.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,0,2,Phí bảo lãnh và hoa hồng môi giới,VND Số đầu năm | Ngắn hạn,2.812.563.878,2812563878.0,2812563878.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,1,0,"Công cụ, dụng cụ",Ngắn hạn,"Công cụ, dụng cụ",,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,1,1,"Công cụ, dụng cụ",Số cuối năm | Ngắn hạn,3.467.629.668,3467629668.0,3467629668.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,1,2,"Công cụ, dụng cụ",VND Số đầu năm | Ngắn hạn,1.358.654.530,1358654530.0,1358654530.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,2,0,Khác,Ngắn hạn,Khác,,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,2,1,Khác,Số cuối năm | Ngắn hạn,1.923.279.631,1923279631.0,1923279631.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,2,2,Khác,VND Số đầu năm | Ngắn hạn,243.240.321,243240321.0,243240321.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,3,0,,Ngắn hạn,,,,False,True
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,3,1,,Số cuối năm | Ngắn hạn,262.404.819.796,262404819796.0,262404819796.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,3,2,,VND Số đầu năm | Ngắn hạn,4.414.458.729,4414458729.0,4414458729.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,4,0,Dải hạn,Ngắn hạn,Dải hạn,,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,4,1,Dải hạn,Số cuối năm | Ngắn hạn,Dải hạn,,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,4,2,Dải hạn,VND Số đầu năm | Ngắn hạn,Dải hạn,,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,5,0,"Công cụ, dụng cụ",Ngắn hạn,"Công cụ, dụng cụ",,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,5,1,"Công cụ, dụng cụ",Số cuối năm | Ngắn hạn,9.412.961.245,9412961245.0,9412961245.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,5,2,"Công cụ, dụng cụ",VND Số đầu năm | Ngắn hạn,19.611.624.320,19611624320.0,19611624320.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,6,0,Hoa hồng môi giới,Ngắn hạn,Hoa hồng môi giới,,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,6,1,Hoa hồng môi giới,Số cuối năm | Ngắn hạn,,,,False,True
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,6,2,Hoa hồng môi giới,VND Số đầu năm | Ngắn hạn,449.667.233,449667233.0,449667233.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,7,0,Chỉ phí chờ phân bổ khác,Ngắn hạn,Chỉ phí chờ phân bổ khác,,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,7,1,Chỉ phí chờ phân bổ khác,Số cuối năm | Ngắn hạn,184.149.236.395,184149236395.0,184149236395.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,7,2,Chỉ phí chờ phân bổ khác,VND Số đầu năm | Ngắn hạn,84.020.342.297,84020342297.0,84020342297.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,8,0,,Ngắn hạn,,,,False,True
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,8,1,,Số cuối năm | Ngắn hạn,193.562.197.640,193562197640.0,193562197640.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,8,2,,VND Số đầu năm | Ngắn hạn,104.081.633.850,104081633850.0,104081633850.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,9,0,TỔNG CỘNG,Ngắn hạn,TỔNG CỘNG,,,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,9,1,TỔNG CỘNG,Số cuối năm | Ngắn hạn,455.967.017.436,455967017436.0,455967017436.0,False,False
+NLG_financial_statements_2021_consolidated|table_32,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,9,2,TỔNG CỘNG,VND Số đầu năm | Ngắn hạn,108.496.092.579,108496092579.0,108496092579.0,False,False

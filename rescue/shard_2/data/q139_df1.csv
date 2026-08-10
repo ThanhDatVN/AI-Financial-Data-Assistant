@@ -1,0 +1,46 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,0,0,Doanh thu gộp,column_1,Doanh thu gộp,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,0,1,Doanh thu gộp,Năm nay,376.925.022,376925022.0,376925022.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,0,2,Doanh thu gộp,Ngân VNDNăm trước,100.734.787,100734787.0,100734787.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,1,0,Trong đó:,column_1,Trong đó:,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,1,1,Trong đó:,Năm nay,Trong đó:,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,1,2,Trong đó:,Ngân VNDNăm trước,Trong đó:,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,2,0,Doanh thu bán trái cây,column_1,Doanh thu bán trái cây,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,2,1,Doanh thu bán trái cây,Năm nay,209.610.275,209610275.0,209610275.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,2,2,Doanh thu bán trái cây,Ngân VNDNăm trước,14.669.320,14669320.0,14669320.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,3,0,Doanh thu cung cấp dịch vụ,column_1,Doanh thu cung cấp dịch vụ,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,3,1,Doanh thu cung cấp dịch vụ,Năm nay,86.792.583,86792583.0,86792583.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,3,2,Doanh thu cung cấp dịch vụ,Ngân VNDNăm trước,63.838.764,63838764.0,63838764.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,4,0,Doanh thu bán hàng hóa,column_1,Doanh thu bán hàng hóa,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,4,1,Doanh thu bán hàng hóa,Năm nay,80.522.164,80522164.0,80522164.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,4,2,Doanh thu bán hàng hóa,Ngân VNDNăm trước,22.226.703,22226703.0,22226703.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,5,0,Khoản giảm trừ,column_1,Khoản giảm trừ,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,5,1,Khoản giảm trừ,Năm nay,(13.318.930),-13318930.0,-13318930.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,5,2,Khoản giảm trừ,Ngân VNDNăm trước,-,0.0,0.0,True,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,6,0,Giảm giá hàng bán,column_1,Giảm giá hàng bán,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,6,1,Giảm giá hàng bán,Năm nay,(13.318.930),-13318930.0,-13318930.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,6,2,Giảm giá hàng bán,Ngân VNDNăm trước,-,0.0,0.0,True,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,7,0,Doanh thu thuần,column_1,Doanh thu thuần,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,7,1,Doanh thu thuần,Năm nay,363.606.092,363606092.0,363606092.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,7,2,Doanh thu thuần,Ngân VNDNăm trước,100.734.787,100734787.0,100734787.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,8,0,Trong đó:,column_1,Trong đó:,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,8,1,Trong đó:,Năm nay,Trong đó:,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,8,2,Trong đó:,Ngân VNDNăm trước,Trong đó:,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,9,0,Doanh thu bán trái cây,column_1,Doanh thu bán trái cây,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,9,1,Doanh thu bán trái cây,Năm nay,196.291.344,196291344.0,196291344.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,9,2,Doanh thu bán trái cây,Ngân VNDNăm trước,14.669.320,14669320.0,14669320.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,10,0,Doanh thu cung cấp dịch vụ,column_1,Doanh thu cung cấp dịch vụ,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,10,1,Doanh thu cung cấp dịch vụ,Năm nay,86.792.583,86792583.0,86792583.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,10,2,Doanh thu cung cấp dịch vụ,Ngân VNDNăm trước,63.838.764,63838764.0,63838764.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,11,0,Doanh thu bán hàng hóa,column_1,Doanh thu bán hàng hóa,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,11,1,Doanh thu bán hàng hóa,Năm nay,80.522.165,80522165.0,80522165.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,11,2,Doanh thu bán hàng hóa,Ngân VNDNăm trước,22.226.703,22226703.0,22226703.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,12,0,Trong đó:,column_1,Trong đó:,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,12,1,Trong đó:,Năm nay,Trong đó:,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,12,2,Trong đó:,Ngân VNDNăm trước,Trong đó:,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,13,0,Doanh thu từ bên liên quan,column_1,Doanh thu từ bên liên quan,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,13,1,Doanh thu từ bên liên quan,Năm nay,153.277.069,153277069.0,153277069.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,13,2,Doanh thu từ bên liên quan,Ngân VNDNăm trước,58.183.306,58183306.0,58183306.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,14,0,Doanh thu từ bên khác,column_1,Doanh thu từ bên khác,,,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,14,1,Doanh thu từ bên khác,Năm nay,210.329.023,210329023.0,210329023.0,False,False
+HAG_financial_statements_2020_separate|table_58,HAG_financial_statements_2020_separate,HAG,2020,separate,VND,14,2,Doanh thu từ bên khác,Ngân VNDNăm trước,42.551.481,42551481.0,42551481.0,False,False

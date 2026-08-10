@@ -1,0 +1,133 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,0,0,Ông Trịnh Thanh Hùng,column_1,Ông Trịnh Thanh Hùng,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,0,1,Ông Trịnh Thanh Hùng,Chức danh,Tổng Giám ĐốcNguyễn Phó Tổng Giám Đốc,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,0,2,Ông Trịnh Thanh Hùng,Tiền lương,857.500.000,857500000.0,857500000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,0,3,Ông Trịnh Thanh Hùng,Thường,690.000.000,690000000.0,690000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,0,4,Ông Trịnh Thanh Hùng,Thù lao,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,0,5,Ông Trịnh Thanh Hùng,Cộng thu nhập,1.547.500.000,1547500000.0,1547500000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,1,0,Bà Võ Thị Huyền Trang,column_1,Bà Võ Thị Huyền Trang,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,1,1,Bà Võ Thị Huyền Trang,Chức danh,"Thành viên HDQT,Phó Tổng Giám đốc",,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,1,2,Bà Võ Thị Huyền Trang,Tiền lương,715.000.000,715000000.0,715000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,1,3,Bà Võ Thị Huyền Trang,Thường,675.000.000,675000000.0,675000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,1,4,Bà Võ Thị Huyền Trang,Thù lao,260.000.000,260000000.0,260000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,1,5,Bà Võ Thị Huyền Trang,Cộng thu nhập,1.650.000.000,1650000000.0,1650000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,2,0,Ông Trần Ngọc Hiền,column_1,Ông Trần Ngọc Hiền,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,2,1,Ông Trần Ngọc Hiền,Chức danh,Phó Tổng Giám đốc,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,2,2,Ông Trần Ngọc Hiền,Tiền lương,715.000.000,715000000.0,715000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,2,3,Ông Trần Ngọc Hiền,Thường,650.000.000,650000000.0,650000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,2,4,Ông Trần Ngọc Hiền,Thù lao,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,2,5,Ông Trần Ngọc Hiền,Cộng thu nhập,1.365.000.000,1365000000.0,1365000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,3,0,Bà Bùi Thị Thùy,column_1,Bà Bùi Thị Thùy,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,3,1,Bà Bùi Thị Thùy,Chức danh,Kế toán trưởng,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,3,2,Bà Bùi Thị Thùy,Tiền lương,715.000.000,715000000.0,715000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,3,3,Bà Bùi Thị Thùy,Thường,650.000.000,650000000.0,650000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,3,4,Bà Bùi Thị Thùy,Thù lao,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,3,5,Bà Bùi Thị Thùy,Cộng thu nhập,1.365.000.000,1365000000.0,1365000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,4,0,Cộng,column_1,Cộng,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,4,1,Cộng,Chức danh,,,,False,True
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,4,2,Cộng,Tiền lương,3.932.500.000,3932500000.0,3932500000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,4,3,Cộng,Thường,3.615.000.000,3615000000.0,3615000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,4,4,Cộng,Thù lao,2.933.000.000,2933000000.0,2933000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,4,5,Cộng,Cộng thu nhập,10.480.500.000,10480500000.0,10480500000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,5,0,Năm trước,column_1,Năm trước,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,5,1,Năm trước,Chức danh,Năm trước,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,5,2,Năm trước,Tiền lương,Năm trước,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,5,3,Năm trước,Thường,Năm trước,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,5,4,Năm trước,Thù lao,Năm trước,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,5,5,Năm trước,Cộng thu nhập,Năm trước,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,6,0,Ông Nguyễn Văn Hùng,column_1,Ông Nguyễn Văn Hùng,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,6,1,Ông Nguyễn Văn Hùng,Chức danh,Chủ tịch,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,6,2,Ông Nguyễn Văn Hùng,Tiền lương,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,6,3,Ông Nguyễn Văn Hùng,Thường,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,6,4,Ông Nguyễn Văn Hùng,Thù lao,350.800.000,350800000.0,350800000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,6,5,Ông Nguyễn Văn Hùng,Cộng thu nhập,350.800.000,350800000.0,350800000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,7,0,Ông Quảng Văn Việt Cương,column_1,Ông Quảng Văn Việt Cương,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,7,1,Ông Quảng Văn Việt Cương,Chức danh,Phó Chủ tịch,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,7,2,Ông Quảng Văn Việt Cương,Tiền lương,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,7,3,Ông Quảng Văn Việt Cương,Thường,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,7,4,Ông Quảng Văn Việt Cương,Thù lao,263.100.000,263100000.0,263100000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,7,5,Ông Quảng Văn Việt Cương,Cộng thu nhập,263.100.000,263100000.0,263100000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,8,0,Ông Nguyễn Hoàn Vũ,column_1,Ông Nguyễn Hoàn Vũ,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,8,1,Ông Nguyễn Hoàn Vũ,Chức danh,Thành viên,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,8,2,Ông Nguyễn Hoàn Vũ,Tiền lương,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,8,3,Ông Nguyễn Hoàn Vũ,Thường,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,8,4,Ông Nguyễn Hoàn Vũ,Thù lao,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,8,5,Ông Nguyễn Hoàn Vũ,Cộng thu nhập,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,9,0,Ông Trần Thiện Thế,column_1,Ông Trần Thiện Thế,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,9,1,Ông Trần Thiện Thế,Chức danh,Thành viên,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,9,2,Ông Trần Thiện Thế,Tiền lương,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,9,3,Ông Trần Thiện Thế,Thường,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,9,4,Ông Trần Thiện Thế,Thù lao,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,9,5,Ông Trần Thiện Thế,Cộng thu nhập,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,10,0,Ông Nguyễn Văn Hiền Phúc,column_1,Ông Nguyễn Văn Hiền Phúc,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,10,1,Ông Nguyễn Văn Hiền Phúc,Chức danh,Thành viên,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,10,2,Ông Nguyễn Văn Hiền Phúc,Tiền lương,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,10,3,Ông Nguyễn Văn Hiền Phúc,Thường,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,10,4,Ông Nguyễn Văn Hiền Phúc,Thù lao,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,10,5,Ông Nguyễn Văn Hiền Phúc,Cộng thu nhập,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,11,0,Ông Lê Anh Tuấn,column_1,Ông Lê Anh Tuấn,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,11,1,Ông Lê Anh Tuấn,Chức danh,Thành viên,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,11,2,Ông Lê Anh Tuấn,Tiền lương,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,11,3,Ông Lê Anh Tuấn,Thường,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,11,4,Ông Lê Anh Tuấn,Thù lao,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,11,5,Ông Lê Anh Tuấn,Cộng thu nhập,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,12,0,Bà Nguyễn Thị Thùy Dương,column_1,Bà Nguyễn Thị Thùy Dương,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,12,1,Bà Nguyễn Thị Thùy Dương,Chức danh,Trưởng Ban kiểm soát,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,12,2,Bà Nguyễn Thị Thùy Dương,Tiền lương,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,12,3,Bà Nguyễn Thị Thùy Dương,Thường,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,12,4,Bà Nguyễn Thị Thùy Dương,Thù lao,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,12,5,Bà Nguyễn Thị Thùy Dương,Cộng thu nhập,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,13,0,Bà Lê Thị Thùy Dương,column_1,Bà Lê Thị Thùy Dương,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,13,1,Bà Lê Thị Thùy Dương,Chức danh,Thành viên Bankiểm soát,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,13,2,Bà Lê Thị Thùy Dương,Tiền lương,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,13,3,Bà Lê Thị Thùy Dương,Thường,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,13,4,Bà Lê Thị Thùy Dương,Thù lao,87.700.000,87700000.0,87700000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,13,5,Bà Lê Thị Thùy Dương,Cộng thu nhập,87.700.000,87700000.0,87700000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,14,0,Bà Châu Thị Vân,column_1,Bà Châu Thị Vân,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,14,1,Bà Châu Thị Vân,Chức danh,Thành viên Bankiểm soát,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,14,2,Bà Châu Thị Vân,Tiền lương,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,14,3,Bà Châu Thị Vân,Thường,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,14,4,Bà Châu Thị Vân,Thù lao,87.700.000,87700000.0,87700000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,14,5,Bà Châu Thị Vân,Cộng thu nhập,87.700.000,87700000.0,87700000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,15,0,Ông Đỗ Quang Ngôn,column_1,Ông Đỗ Quang Ngôn,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,15,1,Ông Đỗ Quang Ngôn,Chức danh,Tổng Giám đốc,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,15,2,Ông Đỗ Quang Ngôn,Tiền lương,935.000.000,935000000.0,935000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,15,3,Ông Đỗ Quang Ngôn,Thường,735.000.000,735000000.0,735000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,15,4,Ông Đỗ Quang Ngôn,Thù lao,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,15,5,Ông Đỗ Quang Ngôn,Cộng thu nhập,1.670.000.000,1670000000.0,1670000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,16,0,Ông Trịnh Thanh Hùng,column_1,Ông Trịnh Thanh Hùng,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,16,1,Ông Trịnh Thanh Hùng,Chức danh,Phó Tổng Giám đốc,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,16,2,Ông Trịnh Thanh Hùng,Tiền lương,740.000.000,740000000.0,740000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,16,3,Ông Trịnh Thanh Hùng,Thường,510.000.000,510000000.0,510000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,16,4,Ông Trịnh Thanh Hùng,Thù lao,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,16,5,Ông Trịnh Thanh Hùng,Cộng thu nhập,1.250.000.000,1250000000.0,1250000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,17,0,Ông Trương Đức Hùng,column_1,Ông Trương Đức Hùng,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,17,1,Ông Trương Đức Hùng,Chức danh,Phó Tổng Giám đốc,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,17,2,Ông Trương Đức Hùng,Tiền lương,465.000.000,465000000.0,465000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,17,3,Ông Trương Đức Hùng,Thường,510.000.000,510000000.0,510000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,17,4,Ông Trương Đức Hùng,Thù lao,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,17,5,Ông Trương Đức Hùng,Cộng thu nhập,975.000.000,975000000.0,975000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,18,0,Bà Võ Thị Huyền Trang,column_1,Bà Võ Thị Huyền Trang,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,18,1,Bà Võ Thị Huyền Trang,Chức danh,"Thành viên HDQT,Phó Tổng Giám đốc",,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,18,2,Bà Võ Thị Huyền Trang,Tiền lương,740.000.000,740000000.0,740000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,18,3,Bà Võ Thị Huyền Trang,Thường,510.000.000,510000000.0,510000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,18,4,Bà Võ Thị Huyền Trang,Thù lao,175.400.000,175400000.0,175400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,18,5,Bà Võ Thị Huyền Trang,Cộng thu nhập,1.425.400.000,1425400000.0,1425400000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,19,0,Ông Trần Ngọc Hiền,column_1,Ông Trần Ngọc Hiền,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,19,1,Ông Trần Ngọc Hiền,Chức danh,Phó Tổng Giám đốc,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,19,2,Ông Trần Ngọc Hiền,Tiền lương,605.000.000,605000000.0,605000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,19,3,Ông Trần Ngọc Hiền,Thường,155.000.000,155000000.0,155000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,19,4,Ông Trần Ngọc Hiền,Thù lao,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,19,5,Ông Trần Ngọc Hiền,Cộng thu nhập,760.000.000,760000000.0,760000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,20,0,Bà Bùi Thị Thùy,column_1,Bà Bùi Thị Thùy,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,20,1,Bà Bùi Thị Thùy,Chức danh,Kế toán trưởng,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,20,2,Bà Bùi Thị Thùy,Tiền lương,605.000.000,605000000.0,605000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,20,3,Bà Bùi Thị Thùy,Thường,105.000.000,105000000.0,105000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,20,4,Bà Bùi Thị Thùy,Thù lao,-,0.0,0.0,True,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,20,5,Bà Bùi Thị Thùy,Cộng thu nhập,710.000.000,710000000.0,710000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,21,0,Cộng,column_1,Cộng,,,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,21,1,Cộng,Chức danh,,,,False,True
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,21,2,Cộng,Tiền lương,4.090.000.000,4090000000.0,4090000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,21,3,Cộng,Thường,2.525.000.000,2525000000.0,2525000000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,21,4,Cộng,Thù lao,1.841.700.000,1841700000.0,1841700000.0,False,False
+IJC_financial_statements_2022_separate|table_68,IJC_financial_statements_2022_separate,IJC,2022,separate,UNKNOWN,21,5,Cộng,Cộng thu nhập,8.456.700.000,8456700000.0,8456700000.0,False,False

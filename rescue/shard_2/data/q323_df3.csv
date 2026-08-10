@@ -1,0 +1,15 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,0,0,Công ty TNHH Sài Gòn Đan Linh,Công ty liên quan,Công ty TNHH Sài Gòn Đan Linh,,,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,0,1,Công ty TNHH Sài Gòn Đan Linh,Giao dịch,"Phi ứng trước tiền bán chứng khoán, phí lưu ký và phí giao dịchCổ tức SSI",,,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,0,2,Công ty TNHH Sài Gòn Đan Linh,Phải thu/(phải trả) | Số đầu nămVND,-,0.0,0.0,True,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,0,3,Công ty TNHH Sài Gòn Đan Linh,Phải thu/(phải trả) | Tăng trong nămVND,232.622.022(29.127.343.000),,,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,0,4,Công ty TNHH Sài Gòn Đan Linh,Phải thu/(phải trả) | Giảm trong nămVND,(232.622.022)29.127.343.000,,,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,0,5,Công ty TNHH Sài Gòn Đan Linh,Phải thu/(phải trả) | Số cuối nămVND,-,0.0,0.0,True,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,0,6,Công ty TNHH Sài Gòn Đan Linh,Doanh thu/(chi phí)VND,232.622.022-,,,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,1,0,Đối tượng liên quankhác,Công ty liên quan,Đối tượng liên quankhác,,,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,1,1,Đối tượng liên quankhác,Giao dịch,Mua trái phiếuLãi trái phiếu phải trả,,,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,1,2,Đối tượng liên quankhác,Phải thu/(phải trả) | Số đầu nămVND,-,0.0,0.0,True,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,1,3,Đối tượng liên quankhác,Phải thu/(phải trả) | Tăng trong nămVND,(12.500.000.000)(1.942.494.097),,,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,1,4,Đối tượng liên quankhác,Phải thu/(phải trả) | Giảm trong nămVND,-956.097.222,-956097222.0,-956097222.0,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,1,5,Đối tượng liên quankhác,Phải thu/(phải trả) | Số cuối nămVND,(12.500.000.000)(986.396.875),,,False,False
+SSI_financial_statements_2016_separate|table_96,SSI_financial_statements_2016_separate,SSI,2016,separate,VND,1,6,Đối tượng liên quankhác,Doanh thu/(chi phí)VND,-(1.036.166.319),,,False,False

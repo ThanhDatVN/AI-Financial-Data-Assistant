@@ -1,0 +1,19 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,0,0,Bên thứ ba,column_1,Bên thứ ba,,,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,0,1,Bên thứ ba,2016VND,150.103.469.865,150103469865.0,150103469865.0,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,0,2,Bên thứ ba,2015VND,112.341.845.057,112341845057.0,112341845057.0,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,1,0,Công ty TNHH American General Construction,column_1,Công ty TNHH American General Construction,,,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,1,1,Công ty TNHH American General Construction,2016VND,47.813.651.373,47813651373.0,47813651373.0,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,1,2,Công ty TNHH American General Construction,2015VND,-,0.0,0.0,True,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,2,0,Công ty Cổ phần Dịch vụ Tổng hợp Sài Gòn,column_1,Công ty Cổ phần Dịch vụ Tổng hợp Sài Gòn,,,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,2,1,Công ty Cổ phần Dịch vụ Tổng hợp Sài Gòn,2016VND,46.070.042.873,46070042873.0,46070042873.0,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,2,2,Công ty Cổ phần Dịch vụ Tổng hợp Sài Gòn,2015VND,-,0.0,0.0,True,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,3,0,Bên thứ ba khác,column_1,Bên thứ ba khác,,,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,3,1,Bên thứ ba khác,2016VND,56.219.775.619,56219775619.0,56219775619.0,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,3,2,Bên thứ ba khác,2015VND,112.341.845.057,112341845057.0,112341845057.0,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,4,0,Bên liên quan (Thuyết minh 37(b)),column_1,Bên liên quan (Thuyết minh 37(b)),,,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,4,1,Bên liên quan (Thuyết minh 37(b)),2016VND,18.226.169.305,18226169305.0,18226169305.0,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,4,2,Bên liên quan (Thuyết minh 37(b)),2015VND,26.842.800.000,26842800000.0,26842800000.0,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,5,0,,column_1,,,,False,True
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,5,1,,2016VND,168.329.639.170,168329639170.0,168329639170.0,False,False
+NVL_financial_statements_2016_separate|table_23,NVL_financial_statements_2016_separate,NVL,2016,separate,VND,5,2,,2015VND,139.184.645.057,139184645057.0,139184645057.0,False,False

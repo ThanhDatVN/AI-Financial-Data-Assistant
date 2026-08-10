@@ -1,0 +1,99 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,0,0,Đầu tư vào Công ty con,column_1,Đầu tư vào Công ty con,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,0,1,Đầu tư vào Công ty con,31/12/2020 | Giá gốc,1.562.591.316.160,1562591316160.0,1562591316160.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,0,2,Đầu tư vào Công ty con,31/12/2020 | Giá trị hợp lý,(1),-1.0,-1.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,0,3,Đầu tư vào Công ty con,31/12/2020 | Dự phòng,(17.850.000.000),-17850000000.0,-17850000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,0,4,Đầu tư vào Công ty con,01/01/2020 | Giá gốc,1.551.361.316.160,1551361316160.0,1551361316160.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,0,5,Đầu tư vào Công ty con,01/01/2020 | Giá trị hợp lý,(1),-1.0,-1.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,0,6,Đầu tư vào Công ty con,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,1,0,Công ty TNHH MTV Tasco 6,column_1,Công ty TNHH MTV Tasco 6,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,1,1,Công ty TNHH MTV Tasco 6,31/12/2020 | Giá gốc,65.180.000.000,65180000000.0,65180000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,1,2,Công ty TNHH MTV Tasco 6,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,1,3,Công ty TNHH MTV Tasco 6,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,1,4,Công ty TNHH MTV Tasco 6,01/01/2020 | Giá gốc,65.180.000.000,65180000000.0,65180000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,1,5,Công ty TNHH MTV Tasco 6,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,1,6,Công ty TNHH MTV Tasco 6,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,2,0,Công ty Cổ phần Tasco Nam Thái,column_1,Công ty Cổ phần Tasco Nam Thái,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,2,1,Công ty Cổ phần Tasco Nam Thái,31/12/2020 | Giá gốc,299.900.000.000,299900000000.0,299900000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,2,2,Công ty Cổ phần Tasco Nam Thái,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,2,3,Công ty Cổ phần Tasco Nam Thái,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,2,4,Công ty Cổ phần Tasco Nam Thái,01/01/2020 | Giá gốc,299.900.000.000,299900000000.0,299900000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,2,5,Công ty Cổ phần Tasco Nam Thái,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,2,6,Công ty Cổ phần Tasco Nam Thái,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,3,0,Công ty TNHH MTV Tasco Quảng Bình,column_1,Công ty TNHH MTV Tasco Quảng Bình,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,3,1,Công ty TNHH MTV Tasco Quảng Bình,31/12/2020 | Giá gốc,328.130.000.000,328130000000.0,328130000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,3,2,Công ty TNHH MTV Tasco Quảng Bình,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,3,3,Công ty TNHH MTV Tasco Quảng Bình,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,3,4,Công ty TNHH MTV Tasco Quảng Bình,01/01/2020 | Giá gốc,328.130.000.000,328130000000.0,328130000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,3,5,Công ty TNHH MTV Tasco Quảng Bình,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,3,6,Công ty TNHH MTV Tasco Quảng Bình,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,4,0,Công ty TNHH MTV Tasco Nam Định,column_1,Công ty TNHH MTV Tasco Nam Định,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,4,1,Công ty TNHH MTV Tasco Nam Định,31/12/2020 | Giá gốc,1.000.000.000,1000000000.0,1000000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,4,2,Công ty TNHH MTV Tasco Nam Định,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,4,3,Công ty TNHH MTV Tasco Nam Định,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,4,4,Công ty TNHH MTV Tasco Nam Định,01/01/2020 | Giá gốc,1.000.000.000,1000000000.0,1000000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,4,5,Công ty TNHH MTV Tasco Nam Định,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,4,6,Công ty TNHH MTV Tasco Nam Định,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,5,0,Công ty Cổ phần Tasco Thành Công,column_1,Công ty Cổ phần Tasco Thành Công,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,5,1,Công ty Cổ phần Tasco Thành Công,31/12/2020 | Giá gốc,6.120.000.000,6120000000.0,6120000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,5,2,Công ty Cổ phần Tasco Thành Công,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,5,3,Công ty Cổ phần Tasco Thành Công,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,5,4,Công ty Cổ phần Tasco Thành Công,01/01/2020 | Giá gốc,6.120.000.000,6120000000.0,6120000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,5,5,Công ty Cổ phần Tasco Thành Công,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,5,6,Công ty Cổ phần Tasco Thành Công,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,6,0,Công ty Cổ phần VETC,column_1,Công ty Cổ phần VETC,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,6,1,Công ty Cổ phần VETC,31/12/2020 | Giá gốc,247.300.000.000,247300000000.0,247300000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,6,2,Công ty Cổ phần VETC,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,6,3,Công ty Cổ phần VETC,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,6,4,Công ty Cổ phần VETC,01/01/2020 | Giá gốc,247.300.000.000,247300000000.0,247300000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,6,5,Công ty Cổ phần VETC,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,6,6,Công ty Cổ phần VETC,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,7,0,Công ty TNHH MTV Tasco Hải Phòng (2),column_1,Công ty TNHH MTV Tasco Hải Phòng (2),,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,7,1,Công ty TNHH MTV Tasco Hải Phòng (2),31/12/2020 | Giá gốc,395.600.000.000,395600000000.0,395600000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,7,2,Công ty TNHH MTV Tasco Hải Phòng (2),31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,7,3,Công ty TNHH MTV Tasco Hải Phòng (2),31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,7,4,Công ty TNHH MTV Tasco Hải Phòng (2),01/01/2020 | Giá gốc,384.000.000.000,384000000000.0,384000000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,7,5,Công ty TNHH MTV Tasco Hải Phòng (2),01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,7,6,Công ty TNHH MTV Tasco Hải Phòng (2),01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,8,0,Công ty TNHH Đào tạo và Tư vấn Tasedu (3),column_1,Công ty TNHH Đào tạo và Tư vấn Tasedu (3),,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,8,1,Công ty TNHH Đào tạo và Tư vấn Tasedu (3),31/12/2020 | Giá gốc,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,8,2,Công ty TNHH Đào tạo và Tư vấn Tasedu (3),31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,8,3,Công ty TNHH Đào tạo và Tư vấn Tasedu (3),31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,8,4,Công ty TNHH Đào tạo và Tư vấn Tasedu (3),01/01/2020 | Giá gốc,370.000.000,370000000.0,370000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,8,5,Công ty TNHH Đào tạo và Tư vấn Tasedu (3),01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,8,6,Công ty TNHH Đào tạo và Tư vấn Tasedu (3),01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,9,0,Công ty TNHH T'Hospital,column_1,Công ty TNHH T'Hospital,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,9,1,Công ty TNHH T'Hospital,31/12/2020 | Giá gốc,158.600.000.000,158600000000.0,158600000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,9,2,Công ty TNHH T'Hospital,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,9,3,Công ty TNHH T'Hospital,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,9,4,Công ty TNHH T'Hospital,01/01/2020 | Giá gốc,158.600.000.000,158600000000.0,158600000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,9,5,Công ty TNHH T'Hospital,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,9,6,Công ty TNHH T'Hospital,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,10,0,Công ty TNHH An Nhiên Foods,column_1,Công ty TNHH An Nhiên Foods,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,10,1,Công ty TNHH An Nhiên Foods,31/12/2020 | Giá gốc,8.000.000.000,8000000000.0,8000000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,10,2,Công ty TNHH An Nhiên Foods,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,10,3,Công ty TNHH An Nhiên Foods,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,10,4,Công ty TNHH An Nhiên Foods,01/01/2020 | Giá gốc,8.000.000.000,8000000000.0,8000000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,10,5,Công ty TNHH An Nhiên Foods,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,10,6,Công ty TNHH An Nhiên Foods,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,11,0,Công ty TNHH MTV Dịch vụ Tasco,column_1,Công ty TNHH MTV Dịch vụ Tasco,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,11,1,Công ty TNHH MTV Dịch vụ Tasco,31/12/2020 | Giá gốc,2.418.316.160,2418316160.0,2418316160.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,11,2,Công ty TNHH MTV Dịch vụ Tasco,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,11,3,Công ty TNHH MTV Dịch vụ Tasco,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,11,4,Công ty TNHH MTV Dịch vụ Tasco,01/01/2020 | Giá gốc,2.418.316.160,2418316160.0,2418316160.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,11,5,Công ty TNHH MTV Dịch vụ Tasco,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,11,6,Công ty TNHH MTV Dịch vụ Tasco,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,12,0,Công ty Cổ phần Bệnh viện mất Hà Nội - Cơ sở 2,column_1,Công ty Cổ phần Bệnh viện mất Hà Nội - Cơ sở 2,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,12,1,Công ty Cổ phần Bệnh viện mất Hà Nội - Cơ sở 2,31/12/2020 | Giá gốc,17.850.000.000,17850000000.0,17850000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,12,2,Công ty Cổ phần Bệnh viện mất Hà Nội - Cơ sở 2,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,12,3,Công ty Cổ phần Bệnh viện mất Hà Nội - Cơ sở 2,31/12/2020 | Dự phòng,(17.850.000.000),-17850000000.0,-17850000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,12,4,Công ty Cổ phần Bệnh viện mất Hà Nội - Cơ sở 2,01/01/2020 | Giá gốc,17.850.000.000,17850000000.0,17850000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,12,5,Công ty Cổ phần Bệnh viện mất Hà Nội - Cơ sở 2,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,12,6,Công ty Cổ phần Bệnh viện mất Hà Nội - Cơ sở 2,01/01/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,13,0,Công ty TNHH thu phí tự động VETC,column_1,Công ty TNHH thu phí tự động VETC,,,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,13,1,Công ty TNHH thu phí tự động VETC,31/12/2020 | Giá gốc,32.493.000.000,32493000000.0,32493000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,13,2,Công ty TNHH thu phí tự động VETC,31/12/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,13,3,Công ty TNHH thu phí tự động VETC,31/12/2020 | Dự phòng,-,0.0,0.0,True,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,13,4,Công ty TNHH thu phí tự động VETC,01/01/2020 | Giá gốc,32.493.000.000,32493000000.0,32493000000.0,False,False
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,13,5,Công ty TNHH thu phí tự động VETC,01/01/2020 | Giá trị hợp lý,,,,False,True
+HUT_financial_statements_2020_separate|table_15,HUT_financial_statements_2020_separate,HUT,2020,separate,VND,13,6,Công ty TNHH thu phí tự động VETC,01/01/2020 | Dự phòng,-,0.0,0.0,True,False

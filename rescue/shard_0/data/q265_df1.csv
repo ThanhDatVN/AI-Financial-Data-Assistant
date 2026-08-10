@@ -1,0 +1,13 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,0,0,Bằng VND,column_1,Bằng VND,,,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,0,1,Bằng VND,Số dư cuối năm VND,9.756.355.214.605,9756355214605.0,9756355214605.0,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,0,2,Bằng VND,Số dư đầu năm VND,5.565.012.704.994,5565012704994.0,5565012704994.0,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,1,0,"Trong đó: Vay chiết khấu, tái chiết khấu",column_1,"Trong đó: Vay chiết khấu, tái chiết khấu",,,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,1,1,"Trong đó: Vay chiết khấu, tái chiết khấu",Số dư cuối năm VND,6.546.243.850.000,6546243850000.0,6546243850000.0,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,1,2,"Trong đó: Vay chiết khấu, tái chiết khấu",Số dư đầu năm VND,3.245.221.900.000,3245221900000.0,3245221900000.0,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,2,0,Bằng ngoại tệ,column_1,Bằng ngoại tệ,,,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,2,1,Bằng ngoại tệ,Số dư cuối năm VND,2.214.931.863.743,2214931863743.0,2214931863743.0,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,2,2,Bằng ngoại tệ,Số dư đầu năm VND,603.368.775.863,603368775863.0,603368775863.0,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,3,0,,column_1,,,,False,True
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,3,1,,Số dư cuối năm VND,11.971.287.078.348,11971287078348.0,11971287078348.0,False,False
+OCB_financial_statements_2021_separate|table_60,OCB_financial_statements_2021_separate,OCB,2021,separate,VND,3,2,,Số dư đầu năm VND,6.168.381.480.857,6168381480857.0,6168381480857.0,False,False

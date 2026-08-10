@@ -1,0 +1,31 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,0,0,Số dư đầu năm,column_1,Số dư đầu năm,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,0,1,Số dư đầu năm,2015VND,2.159.797.043.780,2159797043780.0,2159797043780.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,0,2,Số dư đầu năm,2014VND,304.301.187.210,304301187210.0,304301187210.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,1,0,Tăng trong năm,column_1,Tăng trong năm,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,1,1,Tăng trong năm,2015VND,2.728.795.212.033,2728795212033.0,2728795212033.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,1,2,Tăng trong năm,2014VND,2.470.043.482.800,2470043482800.0,2470043482800.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,2,0,Giảm trong năm,column_1,Giảm trong năm,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,2,1,Giảm trong năm,2015VND,(2.521.524.715.525),-2521524715525.0,-2521524715525.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,2,2,Giảm trong năm,2014VND,(616.912.012.530),-616912012530.0,-616912012530.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,3,0,Lãi phát sinh từ tài khoản tiền gửi,column_1,Lãi phát sinh từ tài khoản tiền gửi,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,3,1,Lãi phát sinh từ tài khoản tiền gửi,2015VND,10.325.628.700,10325628700.0,10325628700.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,3,2,Lãi phát sinh từ tài khoản tiền gửi,2014VND,2.364.386.300,2364386300.0,2364386300.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,4,0,Quỹ bình ổn giá xăng dầu trong năm,column_1,Quỹ bình ổn giá xăng dầu trong năm,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,4,1,Quỹ bình ổn giá xăng dầu trong năm,2015VND,,,,False,True
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,4,2,Quỹ bình ổn giá xăng dầu trong năm,2014VND,,,,False,True
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,5,0,Số dư cuối năm,column_1,Số dư cuối năm,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,5,1,Số dư cuối năm,2015VND,2.377.393.168.988,2377393168988.0,2377393168988.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,5,2,Số dư cuối năm,2014VND,2.159.797.043.780,2159797043780.0,2159797043780.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,6,0,Trong đó:,column_1,Trong đó:,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,6,1,Trong đó:,2015VND,Trong đó:,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,6,2,Trong đó:,2014VND,Trong đó:,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,7,0,- Số dư tài khoản tiền gửi Quỹ bình ổn giá xăng dầu tại ngân hàng (Thuyết minh 5),column_1,- Số dư tài khoản tiền gửi Quỹ bình ổn giá xăng dầu tại ngân hàng (Thuyết minh 5),,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,7,1,- Số dư tài khoản tiền gửi Quỹ bình ổn giá xăng dầu tại ngân hàng (Thuyết minh 5),2015VND,2.185.442.448.068,2185442448068.0,2185442448068.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,7,2,- Số dư tài khoản tiền gửi Quỹ bình ổn giá xăng dầu tại ngân hàng (Thuyết minh 5),2014VND,1.816.305.940.580,1816305940580.0,1816305940580.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,8,0,- Số tiền chuyển vào tài khoản tiền gửi Quỹ bình ổn giá xăng dầu sau ngày kết thúc kỳ kế toán năm,column_1,- Số tiền chuyển vào tài khoản tiền gửi Quỹ bình ổn giá xăng dầu sau ngày kết thúc kỳ kế toán năm,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,8,1,- Số tiền chuyển vào tài khoản tiền gửi Quỹ bình ổn giá xăng dầu sau ngày kết thúc kỳ kế toán năm,2015VND,191.950.720.920,191950720920.0,191950720920.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,8,2,- Số tiền chuyển vào tài khoản tiền gửi Quỹ bình ổn giá xăng dầu sau ngày kết thúc kỳ kế toán năm,2014VND,343.491.103.200,343491103200.0,343491103200.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,9,0,Số dư cuối năm,column_1,Số dư cuối năm,,,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,9,1,Số dư cuối năm,2015VND,2.377.393.168.988,2377393168988.0,2377393168988.0,False,False
+PLX_financial_statements_2015_separate|table_33,PLX_financial_statements_2015_separate,PLX,2015,separate,VND,9,2,Số dư cuối năm,2014VND,2.159.797.043.780,2159797043780.0,2159797043780.0,False,False

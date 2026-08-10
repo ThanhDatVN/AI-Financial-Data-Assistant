@@ -1,0 +1,136 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,0,0,NỘ PHẢI TRẢ,NGUỒN VỐN,NỘ PHẢI TRẢ,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,0,1,NỘ PHẢI TRẢ,Mã số,300,300.0,300.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,0,2,NỘ PHẢI TRẢ,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,0,3,NỘ PHẢI TRẢ,31/12/2015,22.285.132.242.477,22285132242477.0,22285132242477.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,0,4,NỘ PHẢI TRẢ,01/01/2015,23.755.614.681.838,23755614681838.0,23755614681838.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,1,0,Nợ ngắn hạn,NGUỒN VỐN,Nợ ngắn hạn,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,1,1,Nợ ngắn hạn,Mã số,310,310.0,310.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,1,2,Nợ ngắn hạn,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,1,3,Nợ ngắn hạn,31/12/2015,5.124.600.002.464,5124600002464.0,5124600002464.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,1,4,Nợ ngắn hạn,01/01/2015,5.936.381.945.417,5936381945417.0,5936381945417.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,2,0,Phải trả người bán ngắn hạn,NGUỒN VỐN,Phải trả người bán ngắn hạn,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,2,1,Phải trả người bán ngắn hạn,Mã số,311,311.0,311.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,2,2,Phải trả người bán ngắn hạn,Thuyết minh,5.12,5.12,5.12,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,2,3,Phải trả người bán ngắn hạn,31/12/2015,2.050.415.386.319,2050415386319.0,2050415386319.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,2,4,Phải trả người bán ngắn hạn,01/01/2015,1.824.393.574.572,1824393574572.0,1824393574572.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,3,0,Người mua trả tiền trước ngắn hạn,NGUỒN VỐN,Người mua trả tiền trước ngắn hạn,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,3,1,Người mua trả tiền trước ngắn hạn,Mã số,312,312.0,312.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,3,2,Người mua trả tiền trước ngắn hạn,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,3,3,Người mua trả tiền trước ngắn hạn,31/12/2015,2.488.785.442,2488785442.0,2488785442.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,3,4,Người mua trả tiền trước ngắn hạn,01/01/2015,79.753.775,79753775.0,79753775.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,4,0,Thuế và các khoản phải nộp Nhà nước,NGUỒN VỐN,Thuế và các khoản phải nộp Nhà nước,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,4,1,Thuế và các khoản phải nộp Nhà nước,Mã số,313,313.0,313.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,4,2,Thuế và các khoản phải nộp Nhà nước,Thuyết minh,5.14,5.14,5.14,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,4,3,Thuế và các khoản phải nộp Nhà nước,31/12/2015,79.050.242.968,79050242968.0,79050242968.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,4,4,Thuế và các khoản phải nộp Nhà nước,01/01/2015,32.772.791.389,32772791389.0,32772791389.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,5,0,Phải trả người lao động,NGUỒN VỐN,Phải trả người lao động,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,5,1,Phải trả người lao động,Mã số,314,314.0,314.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,5,2,Phải trả người lao động,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,5,3,Phải trả người lao động,31/12/2015,74.069.328.262,74069328262.0,74069328262.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,5,4,Phải trả người lao động,01/01/2015,70.262.665.832,70262665832.0,70262665832.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,6,0,Chỉ phí phải trả ngắn hạn,NGUỒN VỐN,Chỉ phí phải trả ngắn hạn,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,6,1,Chỉ phí phải trả ngắn hạn,Mã số,315,315.0,315.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,6,2,Chỉ phí phải trả ngắn hạn,Thuyết minh,5.15,5.15,5.15,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,6,3,Chỉ phí phải trả ngắn hạn,31/12/2015,258.662.335.001,258662335001.0,258662335001.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,6,4,Chỉ phí phải trả ngắn hạn,01/01/2015,1.417.222.439.459,1417222439459.0,1417222439459.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,7,0,Phải trả ngắn hạn khác,NGUỒN VỐN,Phải trả ngắn hạn khác,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,7,1,Phải trả ngắn hạn khác,Mã số,319,319.0,319.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,7,2,Phải trả ngắn hạn khác,Thuyết minh,5.16,5.16,5.16,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,7,3,Phải trả ngắn hạn khác,31/12/2015,81.346.103.172,81346103172.0,81346103172.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,7,4,Phải trả ngắn hạn khác,01/01/2015,82.945.363.332,82945363332.0,82945363332.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,8,0,Vay và nợ thuê tài chính ngắn hạn,NGUỒN VỐN,Vay và nợ thuê tài chính ngắn hạn,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,8,1,Vay và nợ thuê tài chính ngắn hạn,Mã số,320,320.0,320.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,8,2,Vay và nợ thuê tài chính ngắn hạn,Thuyết minh,5.11,5.11,5.11,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,8,3,Vay và nợ thuê tài chính ngắn hạn,31/12/2015,2.557.056.067.200,2557056067200.0,2557056067200.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,8,4,Vay và nợ thuê tài chính ngắn hạn,01/01/2015,2.490.488.881.982,2490488881982.0,2490488881982.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,9,0,Quỹ khen thưởng và phúc lợi,NGUỒN VỐN,Quỹ khen thưởng và phúc lợi,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,9,1,Quỹ khen thưởng và phúc lợi,Mã số,322,322.0,322.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,9,2,Quỹ khen thưởng và phúc lợi,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,9,3,Quỹ khen thưởng và phúc lợi,31/12/2015,21.511.754.100,21511754100.0,21511754100.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,9,4,Quỹ khen thưởng và phúc lợi,01/01/2015,18.216.475.076,18216475076.0,18216475076.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,10,0,Nợ dài hạn,NGUỒN VỐN,Nợ dài hạn,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,10,1,Nợ dài hạn,Mã số,330,330.0,330.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,10,2,Nợ dài hạn,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,10,3,Nợ dài hạn,31/12/2015,17.160.532.240.013,17160532240013.0,17160532240013.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,10,4,Nợ dài hạn,01/01/2015,17.819.232.736.421,17819232736421.0,17819232736421.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,11,0,Phải trả người bán dài hạn,NGUỒN VỐN,Phải trả người bán dài hạn,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,11,1,Phải trả người bán dài hạn,Mã số,331,331.0,331.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,11,2,Phải trả người bán dài hạn,Thuyết minh,5.12,5.12,5.12,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,11,3,Phải trả người bán dài hạn,31/12/2015,620.066.861.622,620066861622.0,620066861622.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,11,4,Phải trả người bán dài hạn,01/01/2015,655.268.843.609,655268843609.0,655268843609.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,12,0,Vay và nợ thuê tài chính dài hạn,NGUỒN VỐN,Vay và nợ thuê tài chính dài hạn,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,12,1,Vay và nợ thuê tài chính dài hạn,Mã số,338,338.0,338.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,12,2,Vay và nợ thuê tài chính dài hạn,Thuyết minh,5.11,5.11,5.11,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,12,3,Vay và nợ thuê tài chính dài hạn,31/12/2015,16.540.465.378.391,16540465378391.0,16540465378391.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,12,4,Vay và nợ thuê tài chính dài hạn,01/01/2015,17.163.963.892.812,17163963892812.0,17163963892812.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,13,0,VỐN CHỦ SỞ HỮU,NGUỒN VỐN,VỐN CHỦ SỞ HỮU,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,13,1,VỐN CHỦ SỞ HỮU,Mã số,400,400.0,400.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,13,2,VỐN CHỦ SỞ HỮU,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,13,3,VỐN CHỦ SỞ HỮU,31/12/2015,5.767.584.425.850,5767584425850.0,5767584425850.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,13,4,VỐN CHỦ SỞ HỮU,01/01/2015,5.177.800.370.796,5177800370796.0,5177800370796.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,14,0,Vốn chủ sở hữu,NGUỒN VỐN,Vốn chủ sở hữu,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,14,1,Vốn chủ sở hữu,Mã số,410,410.0,410.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,14,2,Vốn chủ sở hữu,Thuyết minh,5.17,5.17,5.17,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,14,3,Vốn chủ sở hữu,31/12/2015,5.759.676.711.743,5759676711743.0,5759676711743.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,14,4,Vốn chủ sở hữu,01/01/2015,5.168.904.192.425,5168904192425.0,5168904192425.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,15,0,Vốn góp của chủ sở hữu,NGUỒN VỐN,Vốn góp của chủ sở hữu,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,15,1,Vốn góp của chủ sở hữu,Mã số,411,411.0,411.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,15,2,Vốn góp của chủ sở hữu,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,15,3,Vốn góp của chủ sở hữu,31/12/2015,6.436.967.325.797,6436967325797.0,6436967325797.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,15,4,Vốn góp của chủ sở hữu,01/01/2015,5.329.129.328.673,5329129328673.0,5329129328673.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,16,0,- Cổ phiếu phổ thông có quyền biểu quyết,NGUỒN VỐN,- Cổ phiếu phổ thông có quyền biểu quyết,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,16,1,- Cổ phiếu phổ thông có quyền biểu quyết,Mã số,411a,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,16,2,- Cổ phiếu phổ thông có quyền biểu quyết,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,16,3,- Cổ phiếu phổ thông có quyền biểu quyết,31/12/2015,6.436.967.325.797,6436967325797.0,6436967325797.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,16,4,- Cổ phiếu phổ thông có quyền biểu quyết,01/01/2015,5.329.129.328.673,5329129328673.0,5329129328673.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,17,0,- Cổ phiếu ưu đãi,NGUỒN VỐN,- Cổ phiếu ưu đãi,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,17,1,- Cổ phiếu ưu đãi,Mã số,411b,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,17,2,- Cổ phiếu ưu đãi,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,17,3,- Cổ phiếu ưu đãi,31/12/2015,-,0.0,0.0,True,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,SHARES,17,4,- Cổ phiếu ưu đãi,01/01/2015,-,0.0,0.0,True,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,18,0,Thặng dư vốn cổ phần,NGUỒN VỐN,Thặng dư vốn cổ phần,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,18,1,Thặng dư vốn cổ phần,Mã số,412,412.0,412.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,18,2,Thặng dư vốn cổ phần,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,18,3,Thặng dư vốn cổ phần,31/12/2015,18.746.488,18746488.0,18746488.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,18,4,Thặng dư vốn cổ phần,01/01/2015,18.746.488,18746488.0,18746488.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,19,0,Quỹ đầu tư phát triển,NGUỒN VỐN,Quỹ đầu tư phát triển,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,19,1,Quỹ đầu tư phát triển,Mã số,418,418.0,418.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,19,2,Quỹ đầu tư phát triển,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,19,3,Quỹ đầu tư phát triển,31/12/2015,18.017.398.052,18017398052.0,18017398052.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,19,4,Quỹ đầu tư phát triển,01/01/2015,22.633.545.326,22633545326.0,22633545326.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,20,0,Lợi nhuận sau thuế chưa phân phối,NGUỒN VỐN,Lợi nhuận sau thuế chưa phân phối,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,20,1,Lợi nhuận sau thuế chưa phân phối,Mã số,421,421.0,421.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,20,2,Lợi nhuận sau thuế chưa phân phối,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,20,3,Lợi nhuận sau thuế chưa phân phối,31/12/2015,(846.949.697.402),-846949697402.0,-846949697402.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,20,4,Lợi nhuận sau thuế chưa phân phối,01/01/2015,(371.948.758.738),-371948758738.0,-371948758738.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,21,0,- LNST chưa phân phối lũy kế đến cuối kỳ trước,NGUỒN VỐN,- LNST chưa phân phối lũy kế đến cuối kỳ trước,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,21,1,- LNST chưa phân phối lũy kế đến cuối kỳ trước,Mã số,421a,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,21,2,- LNST chưa phân phối lũy kế đến cuối kỳ trước,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,21,3,- LNST chưa phân phối lũy kế đến cuối kỳ trước,31/12/2015,(371.948.758.738),-371948758738.0,-371948758738.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,21,4,- LNST chưa phân phối lũy kế đến cuối kỳ trước,01/01/2015,(666.457.928.074),-666457928074.0,-666457928074.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,22,0,- LNST chưa phân phối kỳ này,NGUỒN VỐN,- LNST chưa phân phối kỳ này,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,22,1,- LNST chưa phân phối kỳ này,Mã số,421b,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,22,2,- LNST chưa phân phối kỳ này,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,22,3,- LNST chưa phân phối kỳ này,31/12/2015,(475.000.938.664),-475000938664.0,-475000938664.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,22,4,- LNST chưa phân phối kỳ này,01/01/2015,294.509.169.336,294509169336.0,294509169336.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,23,0,Lợi ích cổ đông không kiểm soát,NGUỒN VỐN,Lợi ích cổ đông không kiểm soát,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,23,1,Lợi ích cổ đông không kiểm soát,Mã số,429,429.0,429.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,23,2,Lợi ích cổ đông không kiểm soát,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,23,3,Lợi ích cổ đông không kiểm soát,31/12/2015,151.622.938.808,151622938808.0,151622938808.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,23,4,Lợi ích cổ đông không kiểm soát,01/01/2015,189.071.330.676,189071330676.0,189071330676.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,24,0,Nguồn kinh phí và quỹ khác,NGUỒN VỐN,Nguồn kinh phí và quỹ khác,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,24,1,Nguồn kinh phí và quỹ khác,Mã số,430,430.0,430.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,24,2,Nguồn kinh phí và quỹ khác,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,24,3,Nguồn kinh phí và quỹ khác,31/12/2015,7.907.714.107,7907714107.0,7907714107.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,24,4,Nguồn kinh phí và quỹ khác,01/01/2015,8.896.178.371,8896178371.0,8896178371.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,25,0,Nguồn kinh phí,NGUỒN VỐN,Nguồn kinh phí,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,25,1,Nguồn kinh phí,Mã số,431,431.0,431.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,25,2,Nguồn kinh phí,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,25,3,Nguồn kinh phí,31/12/2015,-,0.0,0.0,True,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,25,4,Nguồn kinh phí,01/01/2015,-,0.0,0.0,True,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,26,0,Nguồn kinh phí hình thành TSCĐ,NGUỒN VỐN,Nguồn kinh phí hình thành TSCĐ,,,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,26,1,Nguồn kinh phí hình thành TSCĐ,Mã số,432,432.0,432.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,26,2,Nguồn kinh phí hình thành TSCĐ,Thuyết minh,,,,False,True
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,26,3,Nguồn kinh phí hình thành TSCĐ,31/12/2015,7.907.714.107,7907714107.0,7907714107.0,False,False
+DTK_financial_statements_2015_consolidated|table_4,DTK_financial_statements_2015_consolidated,DTK,2015,consolidated,VND,26,4,Nguồn kinh phí hình thành TSCĐ,01/01/2015,8.896.178.371,8896178371.0,8896178371.0,False,False

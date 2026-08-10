@@ -1,0 +1,19 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,0,0,Mua sám TSCĐ,column_1,Mua sám TSCĐ,,,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,0,1,Mua sám TSCĐ,31.12.2020VND,46.231.344.533,46231344533.0,46231344533.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,0,2,Mua sám TSCĐ,31.12.2019VND,140.155.939.740,140155939740.0,140155939740.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,1,0,Cải tạo văn phòng,column_1,Cải tạo văn phòng,,,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,1,1,Cải tạo văn phòng,31.12.2020VND,35.051.272.503,35051272503.0,35051272503.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,1,2,Cải tạo văn phòng,31.12.2019VND,17.767.992.676,17767992676.0,17767992676.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,2,0,Thi công nhà mẫu,column_1,Thi công nhà mẫu,,,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,2,1,Thi công nhà mẫu,31.12.2020VND,19.537.947.677,19537947677.0,19537947677.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,2,2,Thi công nhà mẫu,31.12.2019VND,42.431.128.278,42431128278.0,42431128278.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,3,0,Chi phí xây dựng dự án,column_1,Chi phí xây dựng dự án,,,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,3,1,Chi phí xây dựng dự án,31.12.2020VND,-,0.0,0.0,True,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,3,2,Chi phí xây dựng dự án,31.12.2019VND,464.785.187.965,464785187965.0,464785187965.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,4,0,Khác,column_1,Khác,,,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,4,1,Khác,31.12.2020VND,2.952.296.769,2952296769.0,2952296769.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,4,2,Khác,31.12.2019VND,2.952.296.769,2952296769.0,2952296769.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,5,0,,column_1,,,,False,True
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,5,1,,31.12.2020VND,103.772.861.482,103772861482.0,103772861482.0,False,False
+NVL_financial_statements_2020_consolidated|table_57,NVL_financial_statements_2020_consolidated,NVL,2020,consolidated,VND,5,2,,31.12.2019VND,668.092.545.428,668092545428.0,668092545428.0,False,False

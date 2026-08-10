@@ -1,0 +1,49 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,0,0,Thuế giá trị gia tăng,column_1,Thuế giá trị gia tăng,,,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,0,1,Thuế giá trị gia tăng,1/1/2019 VND,2.876.923.270,2876923270.0,2876923270.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,0,2,Thuế giá trị gia tăng,Số phát sinh trong năm VND,147.405.625.764,147405625764.0,147405625764.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,0,3,Thuế giá trị gia tăng,Số đã nộp trong năm VND,(21.935.006.085),-21935006085.0,-21935006085.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,0,4,Thuế giá trị gia tăng,Số đã khấu trừ trong năm VND,(124.978.176.374),-124978176374.0,-124978176374.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,0,5,Thuế giá trị gia tăng,31/12/2019 VND,3.369.366.575,3369366575.0,3369366575.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,1,0,Thuế thu nhập cá nhân,column_1,Thuế thu nhập cá nhân,,,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,1,1,Thuế thu nhập cá nhân,1/1/2019 VND,20.910.923,20910923.0,20910923.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,1,2,Thuế thu nhập cá nhân,Số phát sinh trong năm VND,956.633.903,956633903.0,956633903.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,1,3,Thuế thu nhập cá nhân,Số đã nộp trong năm VND,(948.603.145),-948603145.0,-948603145.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,1,4,Thuế thu nhập cá nhân,Số đã khấu trừ trong năm VND,-,0.0,0.0,True,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,1,5,Thuế thu nhập cá nhân,31/12/2019 VND,28.941.681,28941681.0,28941681.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,2,0,Thuế tài nguyên,column_1,Thuế tài nguyên,,,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,2,1,Thuế tài nguyên,1/1/2019 VND,13.377.330,13377330.0,13377330.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,2,2,Thuế tài nguyên,Số phát sinh trong năm VND,329.190.200,329190200.0,329190200.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,2,3,Thuế tài nguyên,Số đã nộp trong năm VND,(315.526.650),-315526650.0,-315526650.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,2,4,Thuế tài nguyên,Số đã khấu trừ trong năm VND,-,0.0,0.0,True,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,2,5,Thuế tài nguyên,31/12/2019 VND,27.040.880,27040880.0,27040880.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,3,0,"Thuế nhà đất, tiền thuê đất",column_1,"Thuế nhà đất, tiền thuê đất",,,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,3,1,"Thuế nhà đất, tiền thuê đất",1/1/2019 VND,17.033.550.724,17033550724.0,17033550724.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,3,2,"Thuế nhà đất, tiền thuê đất",Số phát sinh trong năm VND,20.777.664.884,20777664884.0,20777664884.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,3,3,"Thuế nhà đất, tiền thuê đất",Số đã nộp trong năm VND,(37.093.505.282),-37093505282.0,-37093505282.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,3,4,"Thuế nhà đất, tiền thuê đất",Số đã khấu trừ trong năm VND,(104.989.373),-104989373.0,-104989373.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,3,5,"Thuế nhà đất, tiền thuê đất",31/12/2019 VND,612.720.953,612720953.0,612720953.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,4,0,Thuế bảo vệ môi trường,column_1,Thuế bảo vệ môi trường,,,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,4,1,Thuế bảo vệ môi trường,1/1/2019 VND,137.400,137400.0,137400.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,4,2,Thuế bảo vệ môi trường,Số phát sinh trong năm VND,88.025.040,88025040.0,88025040.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,4,3,Thuế bảo vệ môi trường,Số đã nộp trong năm VND,(84.334.440),-84334440.0,-84334440.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,4,4,Thuế bảo vệ môi trường,Số đã khấu trừ trong năm VND,-,0.0,0.0,True,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,4,5,Thuế bảo vệ môi trường,31/12/2019 VND,3.828.000,3828000.0,3828000.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,5,0,Các loại thuế khác,column_1,Các loại thuế khác,,,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,5,1,Các loại thuế khác,1/1/2019 VND,-,0.0,0.0,True,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,5,2,Các loại thuế khác,Số phát sinh trong năm VND,2.049.256.751,2049256751.0,2049256751.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,5,3,Các loại thuế khác,Số đã nộp trong năm VND,(2.049.256.751),-2049256751.0,-2049256751.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,5,4,Các loại thuế khác,Số đã khấu trừ trong năm VND,-,0.0,0.0,True,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,5,5,Các loại thuế khác,31/12/2019 VND,-,0.0,0.0,True,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,6,0,"Phí, lệ phí và các khoản phải nộp khác",column_1,"Phí, lệ phí và các khoản phải nộp khác",,,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,6,1,"Phí, lệ phí và các khoản phải nộp khác",1/1/2019 VND,-,0.0,0.0,True,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,6,2,"Phí, lệ phí và các khoản phải nộp khác",Số phát sinh trong năm VND,29.583.839,29583839.0,29583839.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,6,3,"Phí, lệ phí và các khoản phải nộp khác",Số đã nộp trong năm VND,(29.583.839),-29583839.0,-29583839.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,6,4,"Phí, lệ phí và các khoản phải nộp khác",Số đã khấu trừ trong năm VND,-,0.0,0.0,True,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,6,5,"Phí, lệ phí và các khoản phải nộp khác",31/12/2019 VND,-,0.0,0.0,True,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,7,0,,column_1,,,,False,True
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,7,1,,1/1/2019 VND,19.944.899.647,19944899647.0,19944899647.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,7,2,,Số phát sinh trong năm VND,171.635.980.381,171635980381.0,171635980381.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,7,3,,Số đã nộp trong năm VND,(62.455.816.192),-62455816192.0,-62455816192.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,7,4,,Số đã khấu trừ trong năm VND,(125.083.165.747),-125083165747.0,-125083165747.0,False,False
+VSF_financial_statements_2019_separate|table_31,VSF_financial_statements_2019_separate,VSF,2019,separate,VND,7,5,,31/12/2019 VND,4.041.898.089,4041898089.0,4041898089.0,False,False

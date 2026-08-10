@@ -1,0 +1,31 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,0,0,Tổng doanh thu bán hàng và cung cấp dịch vụ,column_1,Tổng doanh thu bán hàng và cung cấp dịch vụ,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,0,1,Tổng doanh thu bán hàng và cung cấp dịch vụ,Năm nayVND,1.987.758.432.856,1987758432856.0,1987758432856.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,0,2,Tổng doanh thu bán hàng và cung cấp dịch vụ,Năm trướcVND,1.390.541.454.277,1390541454277.0,1390541454277.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,1,0,Trong đó:,column_1,Trong đó:,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,1,1,Trong đó:,Năm nayVND,Trong đó:,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,1,2,Trong đó:,Năm trướcVND,Trong đó:,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,2,0,Doanh thu môi giới bắt động sản,column_1,Doanh thu môi giới bắt động sản,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,2,1,Doanh thu môi giới bắt động sản,Năm nayVND,988.104.528.690,988104528690.0,988104528690.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,2,2,Doanh thu môi giới bắt động sản,Năm trướcVND,927.974.385.319,927974385319.0,927974385319.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,3,0,Doanh thu chuyển nhượng bắt động sản,column_1,Doanh thu chuyển nhượng bắt động sản,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,3,1,Doanh thu chuyển nhượng bắt động sản,Năm nayVND,980.073.167.138,980073167138.0,980073167138.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,3,2,Doanh thu chuyển nhượng bắt động sản,Năm trướcVND,462.567.068.958,462567068958.0,462567068958.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,4,0,Doanh thu cho thuê văn phòng,column_1,Doanh thu cho thuê văn phòng,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,4,1,Doanh thu cho thuê văn phòng,Năm nayVND,19.580.737.028,19580737028.0,19580737028.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,4,2,Doanh thu cho thuê văn phòng,Năm trướcVND,-,0.0,0.0,True,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,5,0,,column_1,,,,False,True
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,5,1,,Năm nayVND,1.987.758.432.856,1987758432856.0,1987758432856.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,5,2,,Năm trướcVND,1.390.541.454.277,1390541454277.0,1390541454277.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,6,0,Các khoản giám trừ doanh thu,column_1,Các khoản giám trừ doanh thu,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,6,1,Các khoản giám trừ doanh thu,Năm nayVND,Các khoản giám trừ doanh thu,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,6,2,Các khoản giám trừ doanh thu,Năm trướcVND,Các khoản giám trừ doanh thu,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,7,0,Hàng bán bị trả lại,column_1,Hàng bán bị trả lại,,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,7,1,Hàng bán bị trả lại,Năm nayVND,12.802.872.727,12802872727.0,12802872727.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,7,2,Hàng bán bị trả lại,Năm trướcVND,-,0.0,0.0,True,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,8,0,,column_1,,,,False,True
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,8,1,,Năm nayVND,12.802.872.727,12802872727.0,12802872727.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,8,2,,Năm trướcVND,-,0.0,0.0,True,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,9,0,Doanh thu phát sinh trong năm với các bên liên quan (chi tiết trình bày tại Thuyết minh số 28),column_1,Doanh thu phát sinh trong năm với các bên liên quan (chi tiết trình bày tại Thuyết minh số 28),,,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,9,1,Doanh thu phát sinh trong năm với các bên liên quan (chi tiết trình bày tại Thuyết minh số 28),Năm nayVND,303.154.093.449,303154093449.0,303154093449.0,False,False
+CRE_financial_statements_2019_separate|table_26,CRE_financial_statements_2019_separate,CRE,2019,separate,VND,9,2,Doanh thu phát sinh trong năm với các bên liên quan (chi tiết trình bày tại Thuyết minh số 28),Năm trướcVND,278.658.697.154,278658697154.0,278658697154.0,False,False

@@ -1,0 +1,19 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,0,0,Trả trước cho các bên khác,column_1,Trả trước cho các bên khác,,,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,0,1,Trả trước cho các bên khác,Số cuối năm,21.241.072.574,21241072574.0,21241072574.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,0,2,Trả trước cho các bên khác,VND Số đầu năm,29.901.474.905,29901474905.0,29901474905.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,1,0,Ông Phạm Hùng Thắng,column_1,Ông Phạm Hùng Thắng,,,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,1,1,Ông Phạm Hùng Thắng,Số cuối năm,8.378.343.000,8378343000.0,8378343000.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,1,2,Ông Phạm Hùng Thắng,VND Số đầu năm,-,0.0,0.0,True,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,2,0,Công ty TNHH Pigtek Việt Nam,column_1,Công ty TNHH Pigtek Việt Nam,,,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,2,1,Công ty TNHH Pigtek Việt Nam,Số cuối năm,3.419.774.282,3419774282.0,3419774282.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,2,2,Công ty TNHH Pigtek Việt Nam,VND Số đầu năm,1.861.500.686,1861500686.0,1861500686.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,3,0,Các bên khác,column_1,Các bên khác,,,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,3,1,Các bên khác,Số cuối năm,9.442.955.292,9442955292.0,9442955292.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,3,2,Các bên khác,VND Số đầu năm,28.039.974.219,28039974219.0,28039974219.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,4,0,Trả trước cho bên liên quan(Thuyết minh số 30),column_1,Trả trước cho bên liên quan(Thuyết minh số 30),,,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,4,1,Trả trước cho bên liên quan(Thuyết minh số 30),Số cuối năm,4.458.797.551,4458797551.0,4458797551.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,4,2,Trả trước cho bên liên quan(Thuyết minh số 30),VND Số đầu năm,903.096.322,903096322.0,903096322.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,5,0,TỔNG CỔNG,column_1,TỔNG CỔNG,,,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,5,1,TỔNG CỔNG,Số cuối năm,25.699.870.125,25699870125.0,25699870125.0,False,False
+BAF_financial_statements_2022_separate|table_17,BAF_financial_statements_2022_separate,BAF,2022,separate,VND,5,2,TỔNG CỔNG,VND Số đầu năm,30.804.571.227,30804571227.0,30804571227.0,False,False

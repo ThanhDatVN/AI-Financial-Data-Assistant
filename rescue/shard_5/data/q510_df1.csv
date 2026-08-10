@@ -1,0 +1,55 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,VND,0,0,Tiền gửi không kỳ hạn bằng VND,Tiền gửi không kỳ hạn,Tiền gửi không kỳ hạn bằng VND,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,0,1,Tiền gửi không kỳ hạn bằng VND,31/12/2024Triệu VND,476.922,476922.0,476922000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,0,2,Tiền gửi không kỳ hạn bằng VND,31/12/2023Triệu VND,387.489,387489.0,387489000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,1,0,Tiền gửi không kỳ hạn bằng ngoại tệ,Tiền gửi không kỳ hạn,Tiền gửi không kỳ hạn bằng ngoại tệ,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,1,1,Tiền gửi không kỳ hạn bằng ngoại tệ,31/12/2024Triệu VND,470.622,470622.0,470622000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,1,2,Tiền gửi không kỳ hạn bằng ngoại tệ,31/12/2023Triệu VND,464.670,464670.0,464670000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,2,0,Tiền gửi có kỳ hạn,Tiền gửi không kỳ hạn,Tiền gửi có kỳ hạn,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,2,1,Tiền gửi có kỳ hạn,31/12/2024Triệu VND,,,,False,True
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,2,2,Tiền gửi có kỳ hạn,31/12/2023Triệu VND,,,,False,True
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,VND,3,0,Tiền gửi có kỳ hạn bằng VND,Tiền gửi không kỳ hạn,Tiền gửi có kỳ hạn bằng VND,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,3,1,Tiền gửi có kỳ hạn bằng VND,31/12/2024Triệu VND,48.900.000,48900000.0,48900000000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,3,2,Tiền gửi có kỳ hạn bằng VND,31/12/2023Triệu VND,55.530.000,55530000.0,55530000000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,4,0,,Tiền gửi không kỳ hạn,,,,False,True
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,4,1,,31/12/2024Triệu VND,49.847.544,49847544.0,49847544000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,4,2,,31/12/2023Triệu VND,56.382.159,56382159.0,56382159000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,5,0,Cho vay các TCTD khác,Tiền gửi không kỳ hạn,Cho vay các TCTD khác,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,5,1,Cho vay các TCTD khác,31/12/2024Triệu VND,,,,False,True
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,5,2,Cho vay các TCTD khác,31/12/2023Triệu VND,,,,False,True
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,VND,6,0,Cho vay TCTD khác bằng VND,Tiền gửi không kỳ hạn,Cho vay TCTD khác bằng VND,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,6,1,Cho vay TCTD khác bằng VND,31/12/2024Triệu VND,55.550.089,55550089.0,55550089000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,6,2,Cho vay TCTD khác bằng VND,31/12/2023Triệu VND,11.747.991,11747991.0,11747991000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,7,0,"Trong đó: chiết khấu, tái chiết khấu",Tiền gửi không kỳ hạn,"Trong đó: chiết khấu, tái chiết khấu",,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,7,1,"Trong đó: chiết khấu, tái chiết khấu",31/12/2024Triệu VND,52.144.080,52144080.0,52144080000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,7,2,"Trong đó: chiết khấu, tái chiết khấu",31/12/2023Triệu VND,1.956.911,1956911.0,1956911000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,8,0,Cho vay TCTD khác bằng ngoại tệ,Tiền gửi không kỳ hạn,Cho vay TCTD khác bằng ngoại tệ,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,8,1,Cho vay TCTD khác bằng ngoại tệ,31/12/2024Triệu VND,190.883,190883.0,190883000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,8,2,Cho vay TCTD khác bằng ngoại tệ,31/12/2023Triệu VND,67.424,67424.0,67424000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,9,0,,Tiền gửi không kỳ hạn,,,,False,True
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,9,1,,31/12/2024Triệu VND,55.740.972,55740972.0,55740972000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,9,2,,31/12/2023Triệu VND,11.815.415,11815415.0,11815415000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,10,0,,Tiền gửi không kỳ hạn,,,,False,True
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,10,1,,31/12/2024Triệu VND,105.588.516,105588516.0,105588516000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,10,2,,31/12/2023Triệu VND,68.197.574,68197574.0,68197574000000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,11,0,Lãi suất năm tại thời điểm cuối năm như sau:,Tiền gửi không kỳ hạn,Lãi suất năm tại thời điểm cuối năm như sau:,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,11,1,Lãi suất năm tại thời điểm cuối năm như sau:,31/12/2024Triệu VND,Lãi suất năm tại thời điểm cuối năm như sau:,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,11,2,Lãi suất năm tại thời điểm cuối năm như sau:,31/12/2023Triệu VND,Lãi suất năm tại thời điểm cuối năm như sau:,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,12,0,,Tiền gửi không kỳ hạn,,,,False,True
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,12,1,,31/12/2024Triệu VND,31/12/2024,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,12,2,,31/12/2023Triệu VND,31/12/2023,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,VND,13,0,Tiền gửi không kỳ hạn bằng VND,Tiền gửi không kỳ hạn,Tiền gửi không kỳ hạn bằng VND,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,13,1,Tiền gửi không kỳ hạn bằng VND,31/12/2024Triệu VND,"0,0% - 0,5%",,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,13,2,Tiền gửi không kỳ hạn bằng VND,31/12/2023Triệu VND,"0,0% - 0,1%",,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,14,0,Tiền gửi không kỳ hạn bằng ngoại tệ,Tiền gửi không kỳ hạn,Tiền gửi không kỳ hạn bằng ngoại tệ,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,14,1,Tiền gửi không kỳ hạn bằng ngoại tệ,31/12/2024Triệu VND,"0,0% - 2,8%",,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,14,2,Tiền gửi không kỳ hạn bằng ngoại tệ,31/12/2023Triệu VND,"0,0% - 3,1%",,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,VND,15,0,Tiền gửi có kỳ hạn bằng VND,Tiền gửi không kỳ hạn,Tiền gửi có kỳ hạn bằng VND,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,15,1,Tiền gửi có kỳ hạn bằng VND,31/12/2024Triệu VND,"3,7% - 5,3%",,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,15,2,Tiền gửi có kỳ hạn bằng VND,31/12/2023Triệu VND,"1,1% - 4,6%",,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,VND,16,0,Cho vay bằng VND,Tiền gửi không kỳ hạn,Cho vay bằng VND,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,16,1,Cho vay bằng VND,31/12/2024Triệu VND,"3,5% - 6,3%",,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,16,2,Cho vay bằng VND,31/12/2023Triệu VND,"2,3% - 10,1%",,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,17,0,Cho vay bằng ngoại tệ,Tiền gửi không kỳ hạn,Cho vay bằng ngoại tệ,,,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,17,1,Cho vay bằng ngoại tệ,31/12/2024Triệu VND,"6,4%",6.4,6400000.0,False,False
+VIB_financial_statements_2024_separate|table_27,VIB_financial_statements_2024_separate,VIB,2024,separate,MILLION_VND,17,2,Cho vay bằng ngoại tệ,31/12/2023Triệu VND,"6,1%",6.1,6100000.0,False,False

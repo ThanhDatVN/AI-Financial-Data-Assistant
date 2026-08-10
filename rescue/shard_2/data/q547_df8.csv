@@ -1,0 +1,43 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,0,0,(1),Chỉ tiêu,(1),-1.0,-1.0,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,0,1,(1),Số liệu năm 2022,(2),-2.0,-2.0,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,0,2,(1),Số liệu năm 2021,(3),-3.0,-3.0,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,0,3,(1),Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | Số tiền,(4)=(2)-(3),,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,0,4,(1),Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | %,(5)=(4)/(3),,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,0,5,(1),Ghi chú,(6),-6.0,-6.0,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,1,0,Báo cáo tài chính riêng,Chỉ tiêu,Báo cáo tài chính riêng,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,1,1,Báo cáo tài chính riêng,Số liệu năm 2022,Báo cáo tài chính riêng,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,1,2,Báo cáo tài chính riêng,Số liệu năm 2021,Báo cáo tài chính riêng,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,1,3,Báo cáo tài chính riêng,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | Số tiền,Báo cáo tài chính riêng,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,1,4,Báo cáo tài chính riêng,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | %,Báo cáo tài chính riêng,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,1,5,Báo cáo tài chính riêng,Ghi chú,Báo cáo tài chính riêng,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,2,0,Tổng lợi nhuận kế toán trước thuế,Chỉ tiêu,Tổng lợi nhuận kế toán trước thuế,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,2,1,Tổng lợi nhuận kế toán trước thuế,Số liệu năm 2022,"4.586,06",4586.06,4586.06,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,2,2,Tổng lợi nhuận kế toán trước thuế,Số liệu năm 2021,"1.950,55",1950.55,1950.55,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,2,3,Tổng lợi nhuận kế toán trước thuế,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | Số tiền,"2.635,50",2635.5,2635.5,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,2,4,Tổng lợi nhuận kế toán trước thuế,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | %,"135,12%",135.12,135.12,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,2,5,Tổng lợi nhuận kế toán trước thuế,Ghi chú,,,,False,True
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,3,0,Lợi nhuận sau thuế TNDN,Chỉ tiêu,Lợi nhuận sau thuế TNDN,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,3,1,Lợi nhuận sau thuế TNDN,Số liệu năm 2022,"4.313,44",4313.44,4313.44,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,3,2,Lợi nhuận sau thuế TNDN,Số liệu năm 2021,"1.821,83",1821.83,1821.83,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,3,3,Lợi nhuận sau thuế TNDN,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | Số tiền,"2.491,60",2491.6,2491.6,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,3,4,Lợi nhuận sau thuế TNDN,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | %,"136,76%",136.76,136.76,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,3,5,Lợi nhuận sau thuế TNDN,Ghi chú,,,,False,True
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,4,0,Báo cáo tài chính hợp nhất,Chỉ tiêu,Báo cáo tài chính hợp nhất,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,4,1,Báo cáo tài chính hợp nhất,Số liệu năm 2022,Báo cáo tài chính hợp nhất,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,4,2,Báo cáo tài chính hợp nhất,Số liệu năm 2021,Báo cáo tài chính hợp nhất,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,4,3,Báo cáo tài chính hợp nhất,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | Số tiền,Báo cáo tài chính hợp nhất,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,4,4,Báo cáo tài chính hợp nhất,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | %,Báo cáo tài chính hợp nhất,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,4,5,Báo cáo tài chính hợp nhất,Ghi chú,Báo cáo tài chính hợp nhất,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,5,0,Tổng lợi nhuận kế toán trước thuế,Chỉ tiêu,Tổng lợi nhuận kế toán trước thuế,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,5,1,Tổng lợi nhuận kế toán trước thuế,Số liệu năm 2022,"4.596,31",4596.31,4596.31,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,5,2,Tổng lợi nhuận kế toán trước thuế,Số liệu năm 2021,"1.956,27",1956.27,1956.27,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,5,3,Tổng lợi nhuận kế toán trước thuế,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | Số tiền,"2.640,04",2640.04,2640.04,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,5,4,Tổng lợi nhuận kế toán trước thuế,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | %,"134,95%",134.95,134.95,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,5,5,Tổng lợi nhuận kế toán trước thuế,Ghi chú,,,,False,True
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,6,0,Lợi nhuận sau thuế TNDN,Chỉ tiêu,Lợi nhuận sau thuế TNDN,,,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,6,1,Lợi nhuận sau thuế TNDN,Số liệu năm 2022,"4.321,08",4321.08,4321.08,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,6,2,Lợi nhuận sau thuế TNDN,Số liệu năm 2021,"1.826,12",1826.12,1826.12,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,6,3,Lợi nhuận sau thuế TNDN,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | Số tiền,"2.494,96",2494.96,2494.96,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,6,4,Lợi nhuận sau thuế TNDN,Chênh lệch giữa số cùng kỳ năm 2022 so với năm 2021 | %,"136,63%",136.63,136.63,False,False
+DCM_financial_statements_2022_separate|table_1,DCM_financial_statements_2022_separate,DCM,2022,separate,PERCENT,6,5,Lợi nhuận sau thuế TNDN,Ghi chú,,,,False,True

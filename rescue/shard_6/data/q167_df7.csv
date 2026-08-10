@@ -1,0 +1,13 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,0,0,Chi phí lãi vay,column_1,Chi phí lãi vay,,,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,0,1,Chi phí lãi vay,2025Nghìn VND,154.674.553,154674553.0,154674553000.0,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,0,2,Chi phí lãi vay,2024Nghìn VND,240.203.591,240203591.0,240203591000.0,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,1,0,Chi phí đi vay,column_1,Chi phí đi vay,,,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,1,1,Chi phí đi vay,2025Nghìn VND,10.029.294,10029294.0,10029294000.0,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,1,2,Chi phí đi vay,2024Nghìn VND,660.336,660336.0,660336000.0,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,2,0,Lỗ chênh lệch tỷ giá đã thực hiện,column_1,Lỗ chênh lệch tỷ giá đã thực hiện,,,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,2,1,Lỗ chênh lệch tỷ giá đã thực hiện,2025Nghìn VND,40.386,40386.0,40386000.0,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,2,2,Lỗ chênh lệch tỷ giá đã thực hiện,2024Nghìn VND,112.693,112693.0,112693000.0,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,3,0,,column_1,,,,False,True
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,3,1,,2025Nghìn VND,164.744.233,164744233.0,164744233000.0,False,False
+MSR_financial_statements_2025_separate|table_20,MSR_financial_statements_2025_separate,MSR,2025,separate,THOUSAND_VND,3,2,,2024Nghìn VND,240.976.620,240976620.0,240976620000.0,False,False

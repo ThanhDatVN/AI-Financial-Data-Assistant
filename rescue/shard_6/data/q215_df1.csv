@@ -1,0 +1,37 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,0,0,Chứng chỉ tiền gửi,column_1,Chứng chỉ tiền gửi,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,0,1,Chứng chỉ tiền gửi,Số cuối năm | Triệu VND,47.141.004,47141004.0,47141004000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,0,2,Chứng chỉ tiền gửi,Số đầu năm | Triệu VND,44.850.571,44850571.0,44850571000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,1,0,Dưới 12 tháng,column_1,Dưới 12 tháng,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,1,1,Dưới 12 tháng,Số cuối năm | Triệu VND,16.293.349,16293349.0,16293349000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,1,2,Dưới 12 tháng,Số đầu năm | Triệu VND,28.569.499,28569499.0,28569499000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,2,0,Từ 12 tháng đến dưới 5 năm,column_1,Từ 12 tháng đến dưới 5 năm,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,2,1,Từ 12 tháng đến dưới 5 năm,Số cuối năm | Triệu VND,29.845.417,29845417.0,29845417000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,2,2,Từ 12 tháng đến dưới 5 năm,Số đầu năm | Triệu VND,16.278.861,16278861.0,16278861000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,3,0,Từ 05 năm trở lên,column_1,Từ 05 năm trở lên,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,3,1,Từ 05 năm trở lên,Số cuối năm | Triệu VND,1.002.238,1002238.0,1002238000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,3,2,Từ 05 năm trở lên,Số đầu năm | Triệu VND,2.211,2211.0,2211000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,4,0,Kỳ phiếu,column_1,Kỳ phiếu,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,4,1,Kỳ phiếu,Số cuối năm | Triệu VND,608,608.0,608000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,4,2,Kỳ phiếu,Số đầu năm | Triệu VND,736,736.0,736000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,5,0,Dưới 12 tháng,column_1,Dưới 12 tháng,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,5,1,Dưới 12 tháng,Số cuối năm | Triệu VND,290,290.0,290000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,5,2,Dưới 12 tháng,Số đầu năm | Triệu VND,354,354.0,354000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,6,0,Từ 12 tháng đến dưới 05 năm,column_1,Từ 12 tháng đến dưới 05 năm,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,6,1,Từ 12 tháng đến dưới 05 năm,Số cuối năm | Triệu VND,318,318.0,318000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,6,2,Từ 12 tháng đến dưới 05 năm,Số đầu năm | Triệu VND,382,382.0,382000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,7,0,Trái phiếu,column_1,Trái phiếu,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,7,1,Trái phiếu,Số cuối năm | Triệu VND,367,367.0,367000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,7,2,Trái phiếu,Số đầu năm | Triệu VND,1.000.366,1000366.0,1000366000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,8,0,Từ 12 tháng đến dưới 05 năm,column_1,Từ 12 tháng đến dưới 05 năm,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,8,1,Từ 12 tháng đến dưới 05 năm,Số cuối năm | Triệu VND,61,61.0,61000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,8,2,Từ 12 tháng đến dưới 05 năm,Số đầu năm | Triệu VND,1.000.060,1000060.0,1000060000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,9,0,Từ 05 năm trở lên,column_1,Từ 05 năm trở lên,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,9,1,Từ 05 năm trở lên,Số cuối năm | Triệu VND,306,306.0,306000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,9,2,Từ 05 năm trở lên,Số đầu năm | Triệu VND,306,306.0,306000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,10,0,Trái phiếu tăng vốn BIDV,column_1,Trái phiếu tăng vốn BIDV,,,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,10,1,Trái phiếu tăng vốn BIDV,Số cuối năm | Triệu VND,19.500.062,19500062.0,19500062000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,10,2,Trái phiếu tăng vốn BIDV,Số đầu năm | Triệu VND,19.700.228,19700228.0,19700228000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,11,0,,column_1,,,,False,True
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,11,1,,Số cuối năm | Triệu VND,66.642.041,66642041.0,66642041000000.0,False,False
+BID_financial_statements_2016_separate|table_59,BID_financial_statements_2016_separate,BID,2016,separate,MILLION_VND,11,2,,Số đầu năm | Triệu VND,65.551.901,65551901.0,65551901000000.0,False,False

@@ -1,0 +1,151 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,0,0,A,CHỈ TIÊU,A,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,0,1,A,Mã số,B,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,0,2,A,Thuyết minh,C,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,0,3,A,Năm nay,1,1.0,1.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,0,4,A,Năm trước,2,2.0,2.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,1,0,III. DOANH THU HOẠT ĐỘNG TÀI CHÍNH,CHỈ TIÊU,III. DOANH THU HOẠT ĐỘNG TÀI CHÍNH,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,1,1,III. DOANH THU HOẠT ĐỘNG TÀI CHÍNH,Mã số,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,1,2,III. DOANH THU HOẠT ĐỘNG TÀI CHÍNH,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,1,3,III. DOANH THU HOẠT ĐỘNG TÀI CHÍNH,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,1,4,III. DOANH THU HOẠT ĐỘNG TÀI CHÍNH,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,2,0,3.1. Chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện,CHỈ TIÊU,3.1. Chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,2,1,3.1. Chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện,Mã số,41,41.0,41.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,2,2,3.1. Chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,2,3,3.1. Chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,2,4,3.1. Chênh lệch lãi tỷ giá hối đoái đã và chưa thực hiện,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,3,0,"3.2. Doanh thu, dự thu cổ tức, lãi tiền gửi không cố định",CHỈ TIÊU,"3.2. Doanh thu, dự thu cổ tức, lãi tiền gửi không cố định",,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,3,1,"3.2. Doanh thu, dự thu cổ tức, lãi tiền gửi không cố định",Mã số,42,42.0,42.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,3,2,"3.2. Doanh thu, dự thu cổ tức, lãi tiền gửi không cố định",Thuyết minh,B7.34,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,3,3,"3.2. Doanh thu, dự thu cổ tức, lãi tiền gửi không cố định",Năm nay,4.141.296.060,4141296060.0,4141296060.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,3,4,"3.2. Doanh thu, dự thu cổ tức, lãi tiền gửi không cố định",Năm trước,11.904.614.479,11904614479.0,11904614479.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,4,0,Cộng doanh thu hoạt động tài chính (50 = 41->44),CHỈ TIÊU,Cộng doanh thu hoạt động tài chính (50 = 41->44),,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,4,1,Cộng doanh thu hoạt động tài chính (50 = 41->44),Mã số,50,50.0,50.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,4,2,Cộng doanh thu hoạt động tài chính (50 = 41->44),Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,4,3,Cộng doanh thu hoạt động tài chính (50 = 41->44),Năm nay,4.141.296.060,4141296060.0,4141296060.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,4,4,Cộng doanh thu hoạt động tài chính (50 = 41->44),Năm trước,11.904.614.479,11904614479.0,11904614479.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,5,0,IV. CHI PHÍ TÀI CHÍNH,CHỈ TIÊU,IV. CHI PHÍ TÀI CHÍNH,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,5,1,IV. CHI PHÍ TÀI CHÍNH,Mã số,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,5,2,IV. CHI PHÍ TÀI CHÍNH,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,5,3,IV. CHI PHÍ TÀI CHÍNH,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,5,4,IV. CHI PHÍ TÀI CHÍNH,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,6,0,4.1. Chênh lệch lỗ tỷ giá hối đoái đã và chưa thực hiện,CHỈ TIÊU,4.1. Chênh lệch lỗ tỷ giá hối đoái đã và chưa thực hiện,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,6,1,4.1. Chênh lệch lỗ tỷ giá hối đoái đã và chưa thực hiện,Mã số,51,51.0,51.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,6,2,4.1. Chênh lệch lỗ tỷ giá hối đoái đã và chưa thực hiện,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,6,3,4.1. Chênh lệch lỗ tỷ giá hối đoái đã và chưa thực hiện,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,6,4,4.1. Chênh lệch lỗ tỷ giá hối đoái đã và chưa thực hiện,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,7,0,4.2. Chi phí lãi vay,CHỈ TIÊU,4.2. Chi phí lãi vay,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,7,1,4.2. Chi phí lãi vay,Mã số,52,52.0,52.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,7,2,4.2. Chi phí lãi vay,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,7,3,4.2. Chi phí lãi vay,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,7,4,4.2. Chi phí lãi vay,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,8,0,4.4. Chi phí tài chính khác,CHỈ TIÊU,4.4. Chi phí tài chính khác,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,8,1,4.4. Chi phí tài chính khác,Mã số,55,55.0,55.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,8,2,4.4. Chi phí tài chính khác,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,8,3,4.4. Chi phí tài chính khác,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,8,4,4.4. Chi phí tài chính khác,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,9,0,Cộng chi phí tài chính (60 = 51->55),CHỈ TIÊU,Cộng chi phí tài chính (60 = 51->55),,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,9,1,Cộng chi phí tài chính (60 = 51->55),Mã số,60,60.0,60.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,9,2,Cộng chi phí tài chính (60 = 51->55),Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,9,3,Cộng chi phí tài chính (60 = 51->55),Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,9,4,Cộng chi phí tài chính (60 = 51->55),Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,10,0,V. CHI PHÍ BÁN HÀNG,CHỈ TIÊU,V. CHI PHÍ BÁN HÀNG,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,10,1,V. CHI PHÍ BÁN HÀNG,Mã số,61,61.0,61.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,10,2,V. CHI PHÍ BÁN HÀNG,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,10,3,V. CHI PHÍ BÁN HÀNG,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,10,4,V. CHI PHÍ BÁN HÀNG,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,11,0,VI. CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN,CHỈ TIÊU,VI. CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,11,1,VI. CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN,Mã số,62,62.0,62.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,11,2,VI. CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN,Thuyết minh,B7.36,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,11,3,VI. CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN,Năm nay,60.263.821.454,60263821454.0,60263821454.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,11,4,VI. CHI PHÍ QUẢN LÝ CÔNG TY CHỨNG KHOÁN,Năm trước,53.194.398.404,53194398404.0,53194398404.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,12,0,VII. KẾT QUẢ HOẠT ĐỘNG (70= 20+50-40 - 60-61-62),CHỈ TIÊU,VII. KẾT QUẢ HOẠT ĐỘNG (70= 20+50-40 - 60-61-62),,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,12,1,VII. KẾT QUẢ HOẠT ĐỘNG (70= 20+50-40 - 60-61-62),Mã số,70,70.0,70.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,12,2,VII. KẾT QUẢ HOẠT ĐỘNG (70= 20+50-40 - 60-61-62),Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,12,3,VII. KẾT QUẢ HOẠT ĐỘNG (70= 20+50-40 - 60-61-62),Năm nay,978.812.100.627,978812100627.0,978812100627.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,12,4,VII. KẾT QUẢ HOẠT ĐỘNG (70= 20+50-40 - 60-61-62),Năm trước,218.988.316.715,218988316715.0,218988316715.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,13,0,VIII. THU NHẬP KHÁC VÀ CHI PHÍ KHÁC,CHỈ TIÊU,VIII. THU NHẬP KHÁC VÀ CHI PHÍ KHÁC,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,13,1,VIII. THU NHẬP KHÁC VÀ CHI PHÍ KHÁC,Mã số,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,13,2,VIII. THU NHẬP KHÁC VÀ CHI PHÍ KHÁC,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,13,3,VIII. THU NHẬP KHÁC VÀ CHI PHÍ KHÁC,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,13,4,VIII. THU NHẬP KHÁC VÀ CHI PHÍ KHÁC,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,14,0,8.1. Thu nhập khác,CHỈ TIÊU,8.1. Thu nhập khác,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,14,1,8.1. Thu nhập khác,Mã số,71,71.0,71.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,14,2,8.1. Thu nhập khác,Thuyết minh,B7.37,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,14,3,8.1. Thu nhập khác,Năm nay,64.543.355.987,64543355987.0,64543355987.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,14,4,8.1. Thu nhập khác,Năm trước,24.033.102.122,24033102122.0,24033102122.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,15,0,8.2. Chi phí khác,CHỈ TIÊU,8.2. Chi phí khác,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,15,1,8.2. Chi phí khác,Mã số,72,72.0,72.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,15,2,8.2. Chi phí khác,Thuyết minh,B7.38,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,15,3,8.2. Chi phí khác,Năm nay,61.973.212.345,61973212345.0,61973212345.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,15,4,8.2. Chi phí khác,Năm trước,22.417.403.483,22417403483.0,22417403483.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,16,0,Cộng kết quả hoạt động khác (80= 71-72),CHỈ TIÊU,Cộng kết quả hoạt động khác (80= 71-72),,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,16,1,Cộng kết quả hoạt động khác (80= 71-72),Mã số,80,80.0,80.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,16,2,Cộng kết quả hoạt động khác (80= 71-72),Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,16,3,Cộng kết quả hoạt động khác (80= 71-72),Năm nay,2.570.143.642,2570143642.0,2570143642.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,16,4,Cộng kết quả hoạt động khác (80= 71-72),Năm trước,1.615.698.639,1615698639.0,1615698639.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,17,0,IX. TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ (90=70 + 80),CHỈ TIÊU,IX. TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ (90=70 + 80),,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,17,1,IX. TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ (90=70 + 80),Mã số,90,90.0,90.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,17,2,IX. TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ (90=70 + 80),Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,17,3,IX. TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ (90=70 + 80),Năm nay,981.382.244.269,981382244269.0,981382244269.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,17,4,IX. TỔNG LỢI NHUẬN KẾ TOÁN TRƯỚC THUẾ (90=70 + 80),Năm trước,220.604.015.354,220604015354.0,220604015354.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,18,0,9.1. Lợi nhuận đã thực hiện,CHỈ TIÊU,9.1. Lợi nhuận đã thực hiện,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,18,1,9.1. Lợi nhuận đã thực hiện,Mã số,91,91.0,91.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,18,2,9.1. Lợi nhuận đã thực hiện,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,18,3,9.1. Lợi nhuận đã thực hiện,Năm nay,725.706.012.653,725706012653.0,725706012653.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,18,4,9.1. Lợi nhuận đã thực hiện,Năm trước,250.251.472.992,250251472992.0,250251472992.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,19,0,9.2. Lợi nhuận chưa thực hiện,CHỈ TIÊU,9.2. Lợi nhuận chưa thực hiện,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,19,1,9.2. Lợi nhuận chưa thực hiện,Mã số,92,92.0,92.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,19,2,9.2. Lợi nhuận chưa thực hiện,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,19,3,9.2. Lợi nhuận chưa thực hiện,Năm nay,255.676.231.616,255676231616.0,255676231616.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,19,4,9.2. Lợi nhuận chưa thực hiện,Năm trước,(29.647.457.638),-29647457638.0,-29647457638.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,20,0,X. CHI PHÍ THUẾ TNDN,CHỈ TIÊU,X. CHI PHÍ THUẾ TNDN,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,20,1,X. CHI PHÍ THUẾ TNDN,Mã số,100,100.0,100.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,20,2,X. CHI PHÍ THUẾ TNDN,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,20,3,X. CHI PHÍ THUẾ TNDN,Năm nay,135.407.201.367,135407201367.0,135407201367.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,20,4,X. CHI PHÍ THUẾ TNDN,Năm trước,50.054.776.776,50054776776.0,50054776776.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,21,0,10.1. Chi phí thuế TNDN hiện hành,CHỈ TIÊU,10.1. Chi phí thuế TNDN hiện hành,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,21,1,10.1. Chi phí thuế TNDN hiện hành,Mã số,100.1,100.1,100.1,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,21,2,10.1. Chi phí thuế TNDN hiện hành,Thuyết minh,B7.39,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,21,3,10.1. Chi phí thuế TNDN hiện hành,Năm nay,135.407.201.367,135407201367.0,135407201367.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,21,4,10.1. Chi phí thuế TNDN hiện hành,Năm trước,50.054.776.776,50054776776.0,50054776776.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,22,0,10.2. Chi phí thuế TNDN hoãn lại,CHỈ TIÊU,10.2. Chi phí thuế TNDN hoãn lại,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,22,1,10.2. Chi phí thuế TNDN hoãn lại,Mã số,100.2,100.2,100.2,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,22,2,10.2. Chi phí thuế TNDN hoãn lại,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,22,3,10.2. Chi phí thuế TNDN hoãn lại,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,22,4,10.2. Chi phí thuế TNDN hoãn lại,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,23,0,XI. LỢI NHUẬN KẾ TOÁN SAU THUẾ TNDN (200 = 90 - 100),CHỈ TIÊU,XI. LỢI NHUẬN KẾ TOÁN SAU THUẾ TNDN (200 = 90 - 100),,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,23,1,XI. LỢI NHUẬN KẾ TOÁN SAU THUẾ TNDN (200 = 90 - 100),Mã số,200,200.0,200.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,23,2,XI. LỢI NHUẬN KẾ TOÁN SAU THUẾ TNDN (200 = 90 - 100),Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,23,3,XI. LỢI NHUẬN KẾ TOÁN SAU THUẾ TNDN (200 = 90 - 100),Năm nay,845.975.042.902,845975042902.0,845975042902.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,23,4,XI. LỢI NHUẬN KẾ TOÁN SAU THUẾ TNDN (200 = 90 - 100),Năm trước,170.549.238.578,170549238578.0,170549238578.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,24,0,XII. THU NHẬP (Lỗ) TOÀN DIỆN KHÁC SAU THUẾ TNDN,CHỈ TIÊU,XII. THU NHẬP (Lỗ) TOÀN DIỆN KHÁC SAU THUẾ TNDN,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,24,1,XII. THU NHẬP (Lỗ) TOÀN DIỆN KHÁC SAU THUẾ TNDN,Mã số,300,300.0,300.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,24,2,XII. THU NHẬP (Lỗ) TOÀN DIỆN KHÁC SAU THUẾ TNDN,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,24,3,XII. THU NHẬP (Lỗ) TOÀN DIỆN KHÁC SAU THUẾ TNDN,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,24,4,XII. THU NHẬP (Lỗ) TOÀN DIỆN KHÁC SAU THUẾ TNDN,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,25,0,12.1. Lãi/(Lỗ) từ đánh giá lại các tài sản tài chính sẵn sàng để bán,CHỈ TIÊU,12.1. Lãi/(Lỗ) từ đánh giá lại các tài sản tài chính sẵn sàng để bán,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,25,1,12.1. Lãi/(Lỗ) từ đánh giá lại các tài sản tài chính sẵn sàng để bán,Mã số,301,301.0,301.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,25,2,12.1. Lãi/(Lỗ) từ đánh giá lại các tài sản tài chính sẵn sàng để bán,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,25,3,12.1. Lãi/(Lỗ) từ đánh giá lại các tài sản tài chính sẵn sàng để bán,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,25,4,12.1. Lãi/(Lỗ) từ đánh giá lại các tài sản tài chính sẵn sàng để bán,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,26,0,12.2. Lãi/(Lỗ) chênh lệch tỷ giá của hoạt động tại nước ngoài,CHỈ TIÊU,12.2. Lãi/(Lỗ) chênh lệch tỷ giá của hoạt động tại nước ngoài,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,26,1,12.2. Lãi/(Lỗ) chênh lệch tỷ giá của hoạt động tại nước ngoài,Mã số,302,302.0,302.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,26,2,12.2. Lãi/(Lỗ) chênh lệch tỷ giá của hoạt động tại nước ngoài,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,26,3,12.2. Lãi/(Lỗ) chênh lệch tỷ giá của hoạt động tại nước ngoài,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,26,4,12.2. Lãi/(Lỗ) chênh lệch tỷ giá của hoạt động tại nước ngoài,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,27,0,12.3. Lãi (lỗ) đánh giá lại tài sản cổ định theo mô hình giá tri hợp lý công tv,CHỈ TIÊU,12.3. Lãi (lỗ) đánh giá lại tài sản cổ định theo mô hình giá tri hợp lý công tv,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,27,1,12.3. Lãi (lỗ) đánh giá lại tài sản cổ định theo mô hình giá tri hợp lý công tv,Mã số,303,303.0,303.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,27,2,12.3. Lãi (lỗ) đánh giá lại tài sản cổ định theo mô hình giá tri hợp lý công tv,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,27,3,12.3. Lãi (lỗ) đánh giá lại tài sản cổ định theo mô hình giá tri hợp lý công tv,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,27,4,12.3. Lãi (lỗ) đánh giá lại tài sản cổ định theo mô hình giá tri hợp lý công tv,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,28,0,12.4. Lãi/(Lỗ) toàn diện khác,CHỈ TIÊU,12.4. Lãi/(Lỗ) toàn diện khác,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,28,1,12.4. Lãi/(Lỗ) toàn diện khác,Mã số,304,304.0,304.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,28,2,12.4. Lãi/(Lỗ) toàn diện khác,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,28,3,12.4. Lãi/(Lỗ) toàn diện khác,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,28,4,12.4. Lãi/(Lỗ) toàn diện khác,Năm trước,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,29,0,Tổng thu nhập toàn diện,CHỈ TIÊU,Tổng thu nhập toàn diện,,,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,29,1,Tổng thu nhập toàn diện,Mã số,400,400.0,400.0,False,False
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,29,2,Tổng thu nhập toàn diện,Thuyết minh,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,29,3,Tổng thu nhập toàn diện,Năm nay,,,,False,True
+FTS_financial_statements_2021|table_14,FTS_financial_statements_2021,FTS,2021,unknown,VND,29,4,Tổng thu nhập toàn diện,Năm trước,,,,False,True

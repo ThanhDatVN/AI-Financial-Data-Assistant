@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MSB_financial_statements_2024_separate|table_84,MSB_financial_statements_2024_separate,MSB,2024,separate,MILLION_VND,0,0,Trích lập dự phòng cho vay khách hàng,column_1,Trích lập dự phòng cho vay khách hàng,,,False,False
+MSB_financial_statements_2024_separate|table_84,MSB_financial_statements_2024_separate,MSB,2024,separate,MILLION_VND,0,1,Trích lập dự phòng cho vay khách hàng,Năm 2024 triệu đồng,1.924.250,1924250.0,1924250000000.0,False,False
+MSB_financial_statements_2024_separate|table_84,MSB_financial_statements_2024_separate,MSB,2024,separate,MILLION_VND,0,2,Trích lập dự phòng cho vay khách hàng,Năm 2023 triệu đồng,1.538.995,1538995.0,1538995000000.0,False,False
+MSB_financial_statements_2024_separate|table_84,MSB_financial_statements_2024_separate,MSB,2024,separate,MILLION_VND,1,0,Trích lập/(Hoàn nhập) dự phòng tài sản có khác có rủi ro tín dụng,column_1,Trích lập/(Hoàn nhập) dự phòng tài sản có khác có rủi ro tín dụng,,,False,False
+MSB_financial_statements_2024_separate|table_84,MSB_financial_statements_2024_separate,MSB,2024,separate,MILLION_VND,1,1,Trích lập/(Hoàn nhập) dự phòng tài sản có khác có rủi ro tín dụng,Năm 2024 triệu đồng,195,195.0,195000000.0,False,False
+MSB_financial_statements_2024_separate|table_84,MSB_financial_statements_2024_separate,MSB,2024,separate,MILLION_VND,1,2,Trích lập/(Hoàn nhập) dự phòng tài sản có khác có rủi ro tín dụng,Năm 2023 triệu đồng,(27.362),-27362.0,-27362000000.0,False,False
+MSB_financial_statements_2024_separate|table_84,MSB_financial_statements_2024_separate,MSB,2024,separate,MILLION_VND,2,0,,column_1,,,,False,True
+MSB_financial_statements_2024_separate|table_84,MSB_financial_statements_2024_separate,MSB,2024,separate,MILLION_VND,2,1,,Năm 2024 triệu đồng,1.924.445,1924445.0,1924445000000.0,False,False
+MSB_financial_statements_2024_separate|table_84,MSB_financial_statements_2024_separate,MSB,2024,separate,MILLION_VND,2,2,,Năm 2023 triệu đồng,1.511.633,1511633.0,1511633000000.0,False,False

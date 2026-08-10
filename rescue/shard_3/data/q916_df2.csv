@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,0,0,Chi phí triển khai quang hóa,a. Ngắn hạn,Chi phí triển khai quang hóa,,,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,0,1,Chi phí triển khai quang hóa,Số cuối nămVND | a. Ngắn hạn,326.152.977.092,326152977092.0,326152977092.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,0,2,Chi phí triển khai quang hóa,Số đầu nămVND | a. Ngắn hạn,226.447.915.476,226447915476.0,226447915476.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,1,0,Chi phí trả trước ngắn hạn khác,a. Ngắn hạn,Chi phí trả trước ngắn hạn khác,,,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,1,1,Chi phí trả trước ngắn hạn khác,Số cuối nămVND | a. Ngắn hạn,489.992.072.289,489992072289.0,489992072289.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,1,2,Chi phí trả trước ngắn hạn khác,Số đầu nămVND | a. Ngắn hạn,417.504.442.765,417504442765.0,417504442765.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,2,0,,a. Ngắn hạn,,,,False,True
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,2,1,,Số cuối nămVND | a. Ngắn hạn,816.145.049.381,816145049381.0,816145049381.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,2,2,,Số đầu nămVND | a. Ngắn hạn,643.952.358.241,643952358241.0,643952358241.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,3,0,b. Dải hạn,a. Ngắn hạn,b. Dải hạn,,,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,3,1,b. Dải hạn,Số cuối nămVND | a. Ngắn hạn,b. Dải hạn,,,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,3,2,b. Dải hạn,Số đầu nămVND | a. Ngắn hạn,b. Dải hạn,,,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,4,0,Chi phí lắp đặt truyền hình trả tiên,a. Ngắn hạn,Chi phí lắp đặt truyền hình trả tiên,,,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,4,1,Chi phí lắp đặt truyền hình trả tiên,Số cuối nămVND | a. Ngắn hạn,376.246.651.395,376246651395.0,376246651395.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,4,2,Chi phí lắp đặt truyền hình trả tiên,Số đầu nămVND | a. Ngắn hạn,259.299.100.263,259299100263.0,259299100263.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,5,0,Chi phí trả trước dài hạn khác,a. Ngắn hạn,Chi phí trả trước dài hạn khác,,,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,5,1,Chi phí trả trước dài hạn khác,Số cuối nămVND | a. Ngắn hạn,83.592.817.718,83592817718.0,83592817718.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,5,2,Chi phí trả trước dài hạn khác,Số đầu nămVND | a. Ngắn hạn,86.929.168.812,86929168812.0,86929168812.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,6,0,,a. Ngắn hạn,,,,False,True
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,6,1,,Số cuối nămVND | a. Ngắn hạn,459.839.469.113,459839469113.0,459839469113.0,False,False
+FOX_financial_statements_2018_separate|table_17,FOX_financial_statements_2018_separate,FOX,2018,separate,VND,6,2,,Số đầu nămVND | a. Ngắn hạn,346.228.269.075,346228269075.0,346228269075.0,False,False

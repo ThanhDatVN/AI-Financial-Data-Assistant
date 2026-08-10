@@ -1,0 +1,9 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+BID_financial_statements_2022_separate|table_91,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,0,0,LNST riêng lẻ,Chỉ tiêu,LNST riêng lẻ,,,False,False
+BID_financial_statements_2022_separate|table_91,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,0,1,LNST riêng lẻ,Năm 2022,18.063.825,18063825.0,18063825000000.0,False,False
+BID_financial_statements_2022_separate|table_91,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,0,2,LNST riêng lẻ,Năm 2021,10.072.391,10072391.0,10072391000000.0,False,False
+BID_financial_statements_2022_separate|table_91,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,0,3,LNST riêng lẻ,Tăng trưởng,"79,34%",79.34,79340000.0,False,False
+BID_financial_statements_2022_separate|table_91,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,1,0,LNST hợp nhất,Chỉ tiêu,LNST hợp nhất,,,False,False
+BID_financial_statements_2022_separate|table_91,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,1,1,LNST hợp nhất,Năm 2022,18.420.014,18420014.0,18420014000000.0,False,False
+BID_financial_statements_2022_separate|table_91,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,1,2,LNST hợp nhất,Năm 2021,10.841.271,10841271.0,10841271000000.0,False,False
+BID_financial_statements_2022_separate|table_91,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,1,3,LNST hợp nhất,Tăng trưởng,"69,91%",69.91,69910000.0,False,False

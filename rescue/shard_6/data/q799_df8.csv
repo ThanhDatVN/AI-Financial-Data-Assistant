@@ -1,0 +1,61 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,0,0,Số dư đầu năm trước,column_1,Số dư đầu năm trước,,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,0,1,Số dư đầu năm trước,Vốn đầu tư của chủ sở hữu | VND,2.565.045.400.000,2565045400000.0,2565045400000.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,0,2,Số dư đầu năm trước,Thặng dư vốn cổ phần | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,0,3,Số dư đầu năm trước,Quỹ đầu tư phát triển | VND,142.970.000,142970000.0,142970000.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,0,4,Số dư đầu năm trước,Lợi nhuận sau thuế chưa phân phối | VND,3.711.674.565,3711674565.0,3711674565.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,0,5,Số dư đầu năm trước,Cộng | VND,2.568.900.044.565,2568900044565.0,2568900044565.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,1,0,Lãi trong năm trước,column_1,Lãi trong năm trước,,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,1,1,Lãi trong năm trước,Vốn đầu tư của chủ sở hữu | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,1,2,Lãi trong năm trước,Thặng dư vốn cổ phần | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,1,3,Lãi trong năm trước,Quỹ đầu tư phát triển | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,1,4,Lãi trong năm trước,Lợi nhuận sau thuế chưa phân phối | VND,207.585.448.083,207585448083.0,207585448083.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,1,5,Lãi trong năm trước,Cộng | VND,207.585.448.083,207585448083.0,207585448083.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,2,0,Trích quỹ khen thưởng phúc lợi,column_1,Trích quỹ khen thưởng phúc lợi,,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,2,1,Trích quỹ khen thưởng phúc lợi,Vốn đầu tư của chủ sở hữu | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,2,2,Trích quỹ khen thưởng phúc lợi,Thặng dư vốn cổ phần | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,2,3,Trích quỹ khen thưởng phúc lợi,Quỹ đầu tư phát triển | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,2,4,Trích quỹ khen thưởng phúc lợi,Lợi nhuận sau thuế chưa phân phối | VND,(800.310.763),-800310763.0,-800310763.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,2,5,Trích quỹ khen thưởng phúc lợi,Cộng | VND,(800.310.763),-800310763.0,-800310763.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,3,0,Số dư cuối năm trước,column_1,Số dư cuối năm trước,,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,3,1,Số dư cuối năm trước,Vốn đầu tư của chủ sở hữu | VND,2.565.045.400.000,2565045400000.0,2565045400000.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,3,2,Số dư cuối năm trước,Thặng dư vốn cổ phần | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,3,3,Số dư cuối năm trước,Quỹ đầu tư phát triển | VND,142.970.000,142970000.0,142970000.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,3,4,Số dư cuối năm trước,Lợi nhuận sau thuế chưa phân phối | VND,210.496.811.885,210496811885.0,210496811885.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,3,5,Số dư cuối năm trước,Cộng | VND,2.775.685.181.885,2775685181885.0,2775685181885.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,4,0,Số dư đầu năm nay,column_1,Số dư đầu năm nay,,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,4,1,Số dư đầu năm nay,Vốn đầu tư của chủ sở hữu | VND,2.565.045.400.000,2565045400000.0,2565045400000.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,4,2,Số dư đầu năm nay,Thặng dư vốn cổ phần | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,4,3,Số dư đầu năm nay,Quỹ đầu tư phát triển | VND,142.970.000,142970000.0,142970000.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,4,4,Số dư đầu năm nay,Lợi nhuận sau thuế chưa phân phối | VND,210.496.811.885,210496811885.0,210496811885.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,4,5,Số dư đầu năm nay,Cộng | VND,2.775.685.181.885,2775685181885.0,2775685181885.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,5,0,Tăng vốn trong năm nay (*),column_1,Tăng vốn trong năm nay (*),,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,5,1,Tăng vốn trong năm nay (*),Vốn đầu tư của chủ sở hữu | VND,934.926.500.000,934926500000.0,934926500000.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,5,2,Tăng vốn trong năm nay (*),Thặng dư vốn cổ phần | VND,(76.363.636),-76363636.0,-76363636.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,5,3,Tăng vốn trong năm nay (*),Quỹ đầu tư phát triển | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,5,4,Tăng vốn trong năm nay (*),Lợi nhuận sau thuế chưa phân phối | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,5,5,Tăng vốn trong năm nay (*),Cộng | VND,934.850.136.364,934850136364.0,934850136364.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,6,0,Lãi trong năm nay,column_1,Lãi trong năm nay,,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,6,1,Lãi trong năm nay,Vốn đầu tư của chủ sở hữu | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,6,2,Lãi trong năm nay,Thặng dư vốn cổ phần | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,6,3,Lãi trong năm nay,Quỹ đầu tư phát triển | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,6,4,Lãi trong năm nay,Lợi nhuận sau thuế chưa phân phối | VND,129.649.355.922,129649355922.0,129649355922.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,6,5,Lãi trong năm nay,Cộng | VND,129.649.355.922,129649355922.0,129649355922.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,7,0,Trích quỹ khen thưởng phúc lợi (**),column_1,Trích quỹ khen thưởng phúc lợi (**),,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,7,1,Trích quỹ khen thưởng phúc lợi (**),Vốn đầu tư của chủ sở hữu | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,7,2,Trích quỹ khen thưởng phúc lợi (**),Thặng dư vốn cổ phần | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,7,3,Trích quỹ khen thưởng phúc lợi (**),Quỹ đầu tư phát triển | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,7,4,Trích quỹ khen thưởng phúc lợi (**),Lợi nhuận sau thuế chưa phân phối | VND,(926.237.429),-926237429.0,-926237429.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,7,5,Trích quỹ khen thưởng phúc lợi (**),Cộng | VND,(926.237.429),-926237429.0,-926237429.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,8,0,Tăng giảm khác,column_1,Tăng giảm khác,,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,8,1,Tăng giảm khác,Vốn đầu tư của chủ sở hữu | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,8,2,Tăng giảm khác,Thặng dư vốn cổ phần | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,8,3,Tăng giảm khác,Quỹ đầu tư phát triển | VND,-,0.0,0.0,True,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,8,4,Tăng giảm khác,Lợi nhuận sau thuế chưa phân phối | VND,1.138.353.324,1138353324.0,1138353324.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,8,5,Tăng giảm khác,Cộng | VND,1.138.353.324,1138353324.0,1138353324.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,9,0,Số dư cuối năm nay,column_1,Số dư cuối năm nay,,,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,9,1,Số dư cuối năm nay,Vốn đầu tư của chủ sở hữu | VND,3.499.971.900.000,3499971900000.0,3499971900000.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,9,2,Số dư cuối năm nay,Thặng dư vốn cổ phần | VND,(76.363.636),-76363636.0,-76363636.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,9,3,Số dư cuối năm nay,Quỹ đầu tư phát triển | VND,142.970.000,142970000.0,142970000.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,9,4,Số dư cuối năm nay,Lợi nhuận sau thuế chưa phân phối | VND,340.358.283.702,340358283702.0,340358283702.0,False,False
+SAM_financial_statements_2021_separate|table_24,SAM_financial_statements_2021_separate,SAM,2021,separate,VND,9,5,Số dư cuối năm nay,Cộng | VND,3.840.396.790.066,3840396790066.0,3840396790066.0,False,False

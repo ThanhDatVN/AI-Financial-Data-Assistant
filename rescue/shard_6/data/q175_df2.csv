@@ -1,0 +1,33 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,0,0,Số dư đầu năm,column_1,Số dư đầu năm,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,0,1,Số dư đầu năm,Chi phí di dòi VND,24.665.668.570,24665668570.0,24665668570.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,0,2,Số dư đầu năm,Khác VND,5.421.180.821,5421180821.0,5421180821.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,0,3,Số dư đầu năm,Tổng cộng VND,30.086.849.391,30086849391.0,30086849391.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,1,0,Dự phòng trích lập trong năm,column_1,Dự phòng trích lập trong năm,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,1,1,Dự phòng trích lập trong năm,Chi phí di dòi VND,-,0.0,0.0,True,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,1,2,Dự phòng trích lập trong năm,Khác VND,6.224.462.041,6224462041.0,6224462041.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,1,3,Dự phòng trích lập trong năm,Tổng cộng VND,6.224.462.041,6224462041.0,6224462041.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,2,0,Dự phòng sử dụng trong kỳ,column_1,Dự phòng sử dụng trong kỳ,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,2,1,Dự phòng sử dụng trong kỳ,Chi phí di dòi VND,-,0.0,0.0,True,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,2,2,Dự phòng sử dụng trong kỳ,Khác VND,(2.999.389.433),-2999389433.0,-2999389433.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,2,3,Dự phòng sử dụng trong kỳ,Tổng cộng VND,(2.999.389.433),-2999389433.0,-2999389433.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,3,0,Dự phòng hoàn nhập trong năm,column_1,Dự phòng hoàn nhập trong năm,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,3,1,Dự phòng hoàn nhập trong năm,Chi phí di dòi VND,-,0.0,0.0,True,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,3,2,Dự phòng hoàn nhập trong năm,Khác VND,(724.398.343),-724398343.0,-724398343.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,3,3,Dự phòng hoàn nhập trong năm,Tổng cộng VND,(724.398.343),-724398343.0,-724398343.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,4,0,Số dư cuối năm,column_1,Số dư cuối năm,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,4,1,Số dư cuối năm,Chi phí di dòi VND,24.665.668.570,24665668570.0,24665668570.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,4,2,Số dư cuối năm,Khác VND,7.921.855.086,7921855086.0,7921855086.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,4,3,Số dư cuối năm,Tổng cộng VND,32.587.523.656,32587523656.0,32587523656.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,5,0,Trong đó:,column_1,Trong đó:,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,5,1,Trong đó:,Chi phí di dòi VND,Trong đó:,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,5,2,Trong đó:,Khác VND,Trong đó:,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,5,3,Trong đó:,Tổng cộng VND,Trong đó:,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,6,0,Dự phòng phải trả ngắn hạn,column_1,Dự phòng phải trả ngắn hạn,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,6,1,Dự phòng phải trả ngắn hạn,Chi phí di dòi VND,-,0.0,0.0,True,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,6,2,Dự phòng phải trả ngắn hạn,Khác VND,5.634.013.216,5634013216.0,5634013216.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,6,3,Dự phòng phải trả ngắn hạn,Tổng cộng VND,5.634.013.216,5634013216.0,5634013216.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,7,0,Dự phòng phải trả dài hạn,column_1,Dự phòng phải trả dài hạn,,,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,7,1,Dự phòng phải trả dài hạn,Chi phí di dòi VND,24.665.668.570,24665668570.0,24665668570.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,7,2,Dự phòng phải trả dài hạn,Khác VND,2.287.841.870,2287841870.0,2287841870.0,False,False
+VGT_financial_statements_2020_consolidated|table_52,VGT_financial_statements_2020_consolidated,VGT,2020,consolidated,VND,7,3,Dự phòng phải trả dài hạn,Tổng cộng VND,26.953.510.440,26953510440.0,26953510440.0,False,False

@@ -1,0 +1,37 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,0,0,Ngắn hạn,column_1,Ngắn hạn,,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,0,1,Ngắn hạn,31/12/2024VND,199.973.081.166,199973081166.0,199973081166.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,0,2,Ngắn hạn,01/01/2024VND,138.358.270.048,138358270048.0,138358270048.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,1,0,"Công cụ, dụng cụ",column_1,"Công cụ, dụng cụ",,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,1,1,"Công cụ, dụng cụ",31/12/2024VND,114.424.082.292,114424082292.0,114424082292.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,1,2,"Công cụ, dụng cụ",01/01/2024VND,100.470.111.960,100470111960.0,100470111960.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,2,0,Phí bản quyền phần mềm,column_1,Phí bản quyền phần mềm,,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,2,1,Phí bản quyền phần mềm,31/12/2024VND,33.921.569.165,33921569165.0,33921569165.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,2,2,Phí bản quyền phần mềm,01/01/2024VND,21.819.620.173,21819620173.0,21819620173.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,3,0,Chi phí trả trước chờ phân bổ khác,column_1,Chi phí trả trước chờ phân bổ khác,,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,3,1,Chi phí trả trước chờ phân bổ khác,31/12/2024VND,51.627.429.709,51627429709.0,51627429709.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,3,2,Chi phí trả trước chờ phân bổ khác,01/01/2024VND,16.068.537.915,16068537915.0,16068537915.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,4,0,Dải hạn,column_1,Dải hạn,,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,4,1,Dải hạn,31/12/2024VND,9.784.692.781.149,9784692781149.0,9784692781149.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,4,2,Dải hạn,01/01/2024VND,9.052.934.537.222,9052934537222.0,9052934537222.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,5,0,Chi phí bảo dưỡng tàu bay,column_1,Chi phí bảo dưỡng tàu bay,,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,5,1,Chi phí bảo dưỡng tàu bay,31/12/2024VND,5.432.923.096.287,5432923096287.0,5432923096287.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,5,2,Chi phí bảo dưỡng tàu bay,01/01/2024VND,6.360.989.325.732,6360989325732.0,6360989325732.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,6,0,Chi phí thuê tàu bay hoãn lại,column_1,Chi phí thuê tàu bay hoãn lại,,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,6,1,Chi phí thuê tàu bay hoãn lại,31/12/2024VND,2.142.304.159.611,2142304159611.0,2142304159611.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,6,2,Chi phí thuê tàu bay hoãn lại,01/01/2024VND,875.071.909.143,875071909143.0,875071909143.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,7,0,"Phụ tùng, công cụ, dụng cụ",column_1,"Phụ tùng, công cụ, dụng cụ",,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,7,1,"Phụ tùng, công cụ, dụng cụ",31/12/2024VND,883.306.047.428,883306047428.0,883306047428.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,7,2,"Phụ tùng, công cụ, dụng cụ",01/01/2024VND,274.065.702.067,274065702067.0,274065702067.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,8,0,Chi phí hoàn trả tàu bay thuê,column_1,Chi phí hoàn trả tàu bay thuê,,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,8,1,Chi phí hoàn trả tàu bay thuê,31/12/2024VND,588.561.926.309,588561926309.0,588561926309.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,8,2,Chi phí hoàn trả tàu bay thuê,01/01/2024VND,681.066.083.405,681066083405.0,681066083405.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,9,0,"Chi phí kiểm tra, sửa chữa tàu bay",column_1,"Chi phí kiểm tra, sửa chữa tàu bay",,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,9,1,"Chi phí kiểm tra, sửa chữa tàu bay",31/12/2024VND,509.725.215.229,509725215229.0,509725215229.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,9,2,"Chi phí kiểm tra, sửa chữa tàu bay",01/01/2024VND,573.703.403.431,573703403431.0,573703403431.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,10,0,Chi phí trả trước chờ phân bổ khác,column_1,Chi phí trả trước chờ phân bổ khác,,,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,10,1,Chi phí trả trước chờ phân bổ khác,31/12/2024VND,227.872.336.285,227872336285.0,227872336285.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,10,2,Chi phí trả trước chờ phân bổ khác,01/01/2024VND,288.038.113.444,288038113444.0,288038113444.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,11,0,,column_1,,,,False,True
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,11,1,,31/12/2024VND,9.984.665.862.315,9984665862315.0,9984665862315.0,False,False
+VJC_financial_statements_2024_separate|table_25,VJC_financial_statements_2024_separate,VJC,2024,separate,VND,11,2,,01/01/2024VND,9.191.292.807.270,9191292807270.0,9191292807270.0,False,False

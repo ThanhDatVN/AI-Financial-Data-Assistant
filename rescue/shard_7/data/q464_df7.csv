@@ -1,0 +1,46 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,0,0,"Chi phí sản xuất, kinh doanh dở dang",column_1,"Chi phí sản xuất, kinh doanh dở dang",,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,0,1,"Chi phí sản xuất, kinh doanh dở dang",Số cuối năm,1.403.667.094,1403667094.0,1403667094.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,0,2,"Chi phí sản xuất, kinh doanh dở dang",Ngàn VND Số đầu năm,2.428.332.779,2428332779.0,2428332779.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,1,0,Trong đó:,column_1,Trong đó:,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,1,1,Trong đó:,Số cuối năm,Trong đó:,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,1,2,Trong đó:,Ngàn VND Số đầu năm,Trong đó:,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,2,0,Hoạt động xây dựng,column_1,Hoạt động xây dựng,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,2,1,Hoạt động xây dựng,Số cuối năm,601.329.775,601329775.0,601329775.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,2,2,Hoạt động xây dựng,Ngàn VND Số đầu năm,516.598.857,516598857.0,516598857.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,3,0,Chi phí nuôi bỏ thịt (i),column_1,Chi phí nuôi bỏ thịt (i),,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,3,1,Chi phí nuôi bỏ thịt (i),Số cuối năm,419.894.535,419894535.0,419894535.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,3,2,Chi phí nuôi bỏ thịt (i),Ngàn VND Số đầu năm,1.389.087.259,1389087259.0,1389087259.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,4,0,Hoạt động sản xuất,column_1,Hoạt động sản xuất,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,4,1,Hoạt động sản xuất,Số cuối năm,381.653.599,381653599.0,381653599.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,4,2,Hoạt động sản xuất,Ngàn VND Số đầu năm,521.785.649,521785649.0,521785649.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,5,0,Cung cấp dịch vụ,column_1,Cung cấp dịch vụ,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,5,1,Cung cấp dịch vụ,Số cuối năm,789.185,789185.0,789185.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,5,2,Cung cấp dịch vụ,Ngàn VND Số đầu năm,861.014,861014.0,861014.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,6,0,Chi phí các căn hộ xây đề bán (ii),column_1,Chi phí các căn hộ xây đề bán (ii),,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,6,1,Chi phí các căn hộ xây đề bán (ii),Số cuối năm,134.333.625,134333625.0,134333625.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,6,2,Chi phí các căn hộ xây đề bán (ii),Ngàn VND Số đầu năm,644.705.652,644705652.0,644705652.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,7,0,Nguyên vật liệu,column_1,Nguyên vật liệu,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,7,1,Nguyên vật liệu,Số cuối năm,160.086.800,160086800.0,160086800.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,7,2,Nguyên vật liệu,Ngàn VND Số đầu năm,470.738.184,470738184.0,470738184.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,8,0,"Công cụ, dụng cụ",column_1,"Công cụ, dụng cụ",,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,8,1,"Công cụ, dụng cụ",Số cuối năm,70.023.675,70023675.0,70023675.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,8,2,"Công cụ, dụng cụ",Ngàn VND Số đầu năm,17.666.745,17666745.0,17666745.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,9,0,Thành phẩm,column_1,Thành phẩm,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,9,1,Thành phẩm,Số cuối năm,29.303.407,29303407.0,29303407.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,9,2,Thành phẩm,Ngàn VND Số đầu năm,38.557.275,38557275.0,38557275.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,10,0,Vật liệu xây dựng,column_1,Vật liệu xây dựng,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,10,1,Vật liệu xây dựng,Số cuối năm,15.206.574,15206574.0,15206574.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,10,2,Vật liệu xây dựng,Ngàn VND Số đầu năm,41.367.158,41367158.0,41367158.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,11,0,Hàng hóa,column_1,Hàng hóa,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,11,1,Hàng hóa,Số cuối năm,9.533.507,9533507.0,9533507.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,11,2,Hàng hóa,Ngàn VND Số đầu năm,10.267.024,10267024.0,10267024.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,12,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,12,1,TỔNG CỘNG,Số cuối năm,1.822.154.682,1822154682.0,1822154682.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,12,2,TỔNG CỘNG,Ngàn VND Số đầu năm,3.651.634.817,3651634817.0,3651634817.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,13,0,Dự phòng giảm giá hàng tồn kho,column_1,Dự phòng giảm giá hàng tồn kho,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,13,1,Dự phòng giảm giá hàng tồn kho,Số cuối năm,(32.688.105),-32688105.0,-32688105.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,13,2,Dự phòng giảm giá hàng tồn kho,Ngàn VND Số đầu năm,(5.182.807),-5182807.0,-5182807.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,14,0,GIÁ TRỊ THUÀN,column_1,GIÁ TRỊ THUÀN,,,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,14,1,GIÁ TRỊ THUÀN,Số cuối năm,1.789.466.577,1789466577.0,1789466577.0,False,False
+HAG_financial_statements_2016_consolidated|table_35,HAG_financial_statements_2016_consolidated,HAG,2016,consolidated,VND,14,2,GIÁ TRỊ THUÀN,Ngàn VND Số đầu năm,3.646.452.010,3646452010.0,3646452010.0,False,False

@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HSG_financial_statements_2024_separate|table_11,HSG_financial_statements_2024_separate,HSG,2024,separate,VND,0,0,Bên thứ ba,column_1,Bên thứ ba,,,False,False
+HSG_financial_statements_2024_separate|table_11,HSG_financial_statements_2024_separate,HSG,2024,separate,VND,0,1,Bên thứ ba,30.9.2024VND,1.952.443.626.813,1952443626813.0,1952443626813.0,False,False
+HSG_financial_statements_2024_separate|table_11,HSG_financial_statements_2024_separate,HSG,2024,separate,VND,0,2,Bên thứ ba,30.9.2023VND,1.554.983.637.140,1554983637140.0,1554983637140.0,False,False
+HSG_financial_statements_2024_separate|table_11,HSG_financial_statements_2024_separate,HSG,2024,separate,VND,1,0,Bên liên quan (Thuyết minh 35(b)),column_1,Bên liên quan (Thuyết minh 35(b)),,,False,False
+HSG_financial_statements_2024_separate|table_11,HSG_financial_statements_2024_separate,HSG,2024,separate,VND,1,1,Bên liên quan (Thuyết minh 35(b)),30.9.2024VND,7.384.865.082.322,7384865082322.0,7384865082322.0,False,False
+HSG_financial_statements_2024_separate|table_11,HSG_financial_statements_2024_separate,HSG,2024,separate,VND,1,2,Bên liên quan (Thuyết minh 35(b)),30.9.2023VND,5.861.211.828.674,5861211828674.0,5861211828674.0,False,False
+HSG_financial_statements_2024_separate|table_11,HSG_financial_statements_2024_separate,HSG,2024,separate,VND,2,0,,column_1,,,,False,True
+HSG_financial_statements_2024_separate|table_11,HSG_financial_statements_2024_separate,HSG,2024,separate,VND,2,1,,30.9.2024VND,9.337.308.709.135,9337308709135.0,9337308709135.0,False,False
+HSG_financial_statements_2024_separate|table_11,HSG_financial_statements_2024_separate,HSG,2024,separate,VND,2,2,,30.9.2023VND,7.416.195.465.814,7416195465814.0,7416195465814.0,False,False

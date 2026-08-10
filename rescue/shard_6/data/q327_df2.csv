@@ -1,0 +1,161 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,0,0,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),TÀI SẢN,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,0,1,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),Mã số | TÀI SẢN,100,100.0,100.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,0,2,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,0,3,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),31/12/2021 VND | TÀI SẢN,4.280.149.404.002,4280149404002.0,4280149404002.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,0,4,Tài sản ngắn hạn(100 = 110 + 120 + 130 + 140 + 150),1/1/2021 VND | TÀI SẢN,4.390.794.141.363,4390794141363.0,4390794141363.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,1,0,Tiền và các khoản tương đương tiền,TÀI SẢN,Tiền và các khoản tương đương tiền,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,1,1,Tiền và các khoản tương đương tiền,Mã số | TÀI SẢN,110,110.0,110.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,1,2,Tiền và các khoản tương đương tiền,Thuyết minh | TÀI SẢN,4,4.0,4.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,1,3,Tiền và các khoản tương đương tiền,31/12/2021 VND | TÀI SẢN,1.358.886.612.081,1358886612081.0,1358886612081.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,1,4,Tiền và các khoản tương đương tiền,1/1/2021 VND | TÀI SẢN,1.300.061.223.658,1300061223658.0,1300061223658.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,2,0,Tiền,TÀI SẢN,Tiền,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,2,1,Tiền,Mã số | TÀI SẢN,111,111.0,111.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,2,2,Tiền,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,2,3,Tiền,31/12/2021 VND | TÀI SẢN,27.886.612.081,27886612081.0,27886612081.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,2,4,Tiền,1/1/2021 VND | TÀI SẢN,111.061.223.658,111061223658.0,111061223658.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,3,0,Các khoản tương đương tiền,TÀI SẢN,Các khoản tương đương tiền,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,3,1,Các khoản tương đương tiền,Mã số | TÀI SẢN,112,112.0,112.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,3,2,Các khoản tương đương tiền,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,3,3,Các khoản tương đương tiền,31/12/2021 VND | TÀI SẢN,1.331.000.000.000,1331000000000.0,1331000000000.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,3,4,Các khoản tương đương tiền,1/1/2021 VND | TÀI SẢN,1.189.000.000.000,1189000000000.0,1189000000000.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,4,0,Đầu tư tài chính ngắn hạn,TÀI SẢN,Đầu tư tài chính ngắn hạn,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,4,1,Đầu tư tài chính ngắn hạn,Mã số | TÀI SẢN,120,120.0,120.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,4,2,Đầu tư tài chính ngắn hạn,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,4,3,Đầu tư tài chính ngắn hạn,31/12/2021 VND | TÀI SẢN,140.791.658.746,140791658746.0,140791658746.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,4,4,Đầu tư tài chính ngắn hạn,1/1/2021 VND | TÀI SẢN,62.891.072.771,62891072771.0,62891072771.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,5,0,Đầu tư nằm giữ đến ngày đáo hạn,TÀI SẢN,Đầu tư nằm giữ đến ngày đáo hạn,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,5,1,Đầu tư nằm giữ đến ngày đáo hạn,Mã số | TÀI SẢN,123,123.0,123.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,5,2,Đầu tư nằm giữ đến ngày đáo hạn,Thuyết minh | TÀI SẢN,5(a),,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,5,3,Đầu tư nằm giữ đến ngày đáo hạn,31/12/2021 VND | TÀI SẢN,140.791.658.746,140791658746.0,140791658746.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,5,4,Đầu tư nằm giữ đến ngày đáo hạn,1/1/2021 VND | TÀI SẢN,62.891.072.771,62891072771.0,62891072771.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,6,0,Các khoản phải thu ngắn hạn,TÀI SẢN,Các khoản phải thu ngắn hạn,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,6,1,Các khoản phải thu ngắn hạn,Mã số | TÀI SẢN,130,130.0,130.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,6,2,Các khoản phải thu ngắn hạn,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,6,3,Các khoản phải thu ngắn hạn,31/12/2021 VND | TÀI SẢN,2.545.435.339.789,2545435339789.0,2545435339789.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,6,4,Các khoản phải thu ngắn hạn,1/1/2021 VND | TÀI SẢN,2.774.139.918.728,2774139918728.0,2774139918728.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,7,0,Phải thu ngắn hạn của khách hàng,TÀI SẢN,Phải thu ngắn hạn của khách hàng,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,7,1,Phải thu ngắn hạn của khách hàng,Mã số | TÀI SẢN,131,131.0,131.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,7,2,Phải thu ngắn hạn của khách hàng,Thuyết minh | TÀI SẢN,6,6.0,6.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,7,3,Phải thu ngắn hạn của khách hàng,31/12/2021 VND | TÀI SẢN,1.761.013.705.237,1761013705237.0,1761013705237.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,7,4,Phải thu ngắn hạn của khách hàng,1/1/2021 VND | TÀI SẢN,1.260.676.007.295,1260676007295.0,1260676007295.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,8,0,Trả trước cho người bán ngắn hạn,TÀI SẢN,Trả trước cho người bán ngắn hạn,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,8,1,Trả trước cho người bán ngắn hạn,Mã số | TÀI SẢN,132,132.0,132.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,8,2,Trả trước cho người bán ngắn hạn,Thuyết minh | TÀI SẢN,7,7.0,7.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,8,3,Trả trước cho người bán ngắn hạn,31/12/2021 VND | TÀI SẢN,220.813.526.684,220813526684.0,220813526684.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,8,4,Trả trước cho người bán ngắn hạn,1/1/2021 VND | TÀI SẢN,1.129.128.677.423,1129128677423.0,1129128677423.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,9,0,Phải thu theo tiến độ kế hoạch hợp đồng xây dựng,TÀI SẢN,Phải thu theo tiến độ kế hoạch hợp đồng xây dựng,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,9,1,Phải thu theo tiến độ kế hoạch hợp đồng xây dựng,Mã số | TÀI SẢN,134,134.0,134.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,9,2,Phải thu theo tiến độ kế hoạch hợp đồng xây dựng,Thuyết minh | TÀI SẢN,8,8.0,8.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,9,3,Phải thu theo tiến độ kế hoạch hợp đồng xây dựng,31/12/2021 VND | TÀI SẢN,119.556.381.433,119556381433.0,119556381433.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,9,4,Phải thu theo tiến độ kế hoạch hợp đồng xây dựng,1/1/2021 VND | TÀI SẢN,84.373.634.306,84373634306.0,84373634306.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,10,0,Phải thu về cho vay ngắn hạn,TÀI SẢN,Phải thu về cho vay ngắn hạn,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,10,1,Phải thu về cho vay ngắn hạn,Mã số | TÀI SẢN,135,135.0,135.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,10,2,Phải thu về cho vay ngắn hạn,Thuyết minh | TÀI SẢN,9,9.0,9.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,10,3,Phải thu về cho vay ngắn hạn,31/12/2021 VND | TÀI SẢN,213.378.473.900,213378473900.0,213378473900.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,10,4,Phải thu về cho vay ngắn hạn,1/1/2021 VND | TÀI SẢN,-,0.0,0.0,True,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,11,0,Phải thu ngắn hạn khác,TÀI SẢN,Phải thu ngắn hạn khác,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,11,1,Phải thu ngắn hạn khác,Mã số | TÀI SẢN,136,136.0,136.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,11,2,Phải thu ngắn hạn khác,Thuyết minh | TÀI SẢN,10,10.0,10.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,11,3,Phải thu ngắn hạn khác,31/12/2021 VND | TÀI SẢN,237.497.814.548,237497814548.0,237497814548.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,11,4,Phải thu ngắn hạn khác,1/1/2021 VND | TÀI SẢN,306.536.195.802,306536195802.0,306536195802.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,12,0,Dự phòng phải thu ngắn hạn khó đòi,TÀI SẢN,Dự phòng phải thu ngắn hạn khó đòi,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,12,1,Dự phòng phải thu ngắn hạn khó đòi,Mã số | TÀI SẢN,137,137.0,137.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,12,2,Dự phòng phải thu ngắn hạn khó đòi,Thuyết minh | TÀI SẢN,11,11.0,11.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,12,3,Dự phòng phải thu ngắn hạn khó đòi,31/12/2021 VND | TÀI SẢN,(6.824.562.013),-6824562013.0,-6824562013.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,12,4,Dự phòng phải thu ngắn hạn khó đòi,1/1/2021 VND | TÀI SẢN,(6.574.596.098),-6574596098.0,-6574596098.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,13,0,Hàng tồn kho,TÀI SẢN,Hàng tồn kho,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,13,1,Hàng tồn kho,Mã số | TÀI SẢN,140,140.0,140.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,13,2,Hàng tồn kho,Thuyết minh | TÀI SẢN,12,12.0,12.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,13,3,Hàng tồn kho,31/12/2021 VND | TÀI SẢN,233.383.972.887,233383972887.0,233383972887.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,13,4,Hàng tồn kho,1/1/2021 VND | TÀI SẢN,253.383.418.143,253383418143.0,253383418143.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,14,0,Hàng tồn kho,TÀI SẢN,Hàng tồn kho,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,14,1,Hàng tồn kho,Mã số | TÀI SẢN,141,141.0,141.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,14,2,Hàng tồn kho,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,14,3,Hàng tồn kho,31/12/2021 VND | TÀI SẢN,233.383.972.887,233383972887.0,233383972887.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,14,4,Hàng tồn kho,1/1/2021 VND | TÀI SẢN,253.383.418.143,253383418143.0,253383418143.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,15,0,Tài sản ngắn hạn khác,TÀI SẢN,Tài sản ngắn hạn khác,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,15,1,Tài sản ngắn hạn khác,Mã số | TÀI SẢN,150,150.0,150.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,15,2,Tài sản ngắn hạn khác,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,15,3,Tài sản ngắn hạn khác,31/12/2021 VND | TÀI SẢN,1.651.820.499,1651820499.0,1651820499.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,15,4,Tài sản ngắn hạn khác,1/1/2021 VND | TÀI SẢN,318.508.063,318508063.0,318508063.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,16,0,Chi phí trả trước ngắn hạn,TÀI SẢN,Chi phí trả trước ngắn hạn,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,16,1,Chi phí trả trước ngắn hạn,Mã số | TÀI SẢN,151,151.0,151.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,16,2,Chi phí trả trước ngắn hạn,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,16,3,Chi phí trả trước ngắn hạn,31/12/2021 VND | TÀI SẢN,295.877.083,295877083.0,295877083.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,16,4,Chi phí trả trước ngắn hạn,1/1/2021 VND | TÀI SẢN,318.508.063,318508063.0,318508063.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,17,0,Thuế giá trị gia tăng được khấu trừ,TÀI SẢN,Thuế giá trị gia tăng được khấu trừ,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,17,1,Thuế giá trị gia tăng được khấu trừ,Mã số | TÀI SẢN,152,152.0,152.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,17,2,Thuế giá trị gia tăng được khấu trừ,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,17,3,Thuế giá trị gia tăng được khấu trừ,31/12/2021 VND | TÀI SẢN,2.943.416,2943416.0,2943416.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,17,4,Thuế giá trị gia tăng được khấu trừ,1/1/2021 VND | TÀI SẢN,-,0.0,0.0,True,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,18,0,Thuế và các khoản phải thu Nhà nước,TÀI SẢN,Thuế và các khoản phải thu Nhà nước,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,18,1,Thuế và các khoản phải thu Nhà nước,Mã số | TÀI SẢN,153,153.0,153.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,18,2,Thuế và các khoản phải thu Nhà nước,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,18,3,Thuế và các khoản phải thu Nhà nước,31/12/2021 VND | TÀI SẢN,1.353.000.000,1353000000.0,1353000000.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,18,4,Thuế và các khoản phải thu Nhà nước,1/1/2021 VND | TÀI SẢN,-,0.0,0.0,True,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,19,0,Tài sản dài hạn(200 = 220 + 230 + 240 + 250 + 260),TÀI SẢN,Tài sản dài hạn(200 = 220 + 230 + 240 + 250 + 260),,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,19,1,Tài sản dài hạn(200 = 220 + 230 + 240 + 250 + 260),Mã số | TÀI SẢN,200,200.0,200.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,19,2,Tài sản dài hạn(200 = 220 + 230 + 240 + 250 + 260),Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,19,3,Tài sản dài hạn(200 = 220 + 230 + 240 + 250 + 260),31/12/2021 VND | TÀI SẢN,5.842.386.703.217,5842386703217.0,5842386703217.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,19,4,Tài sản dài hạn(200 = 220 + 230 + 240 + 250 + 260),1/1/2021 VND | TÀI SẢN,4.448.788.020.409,4448788020409.0,4448788020409.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,20,0,Tài sản cố định,TÀI SẢN,Tài sản cố định,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,20,1,Tài sản cố định,Mã số | TÀI SẢN,220,220.0,220.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,20,2,Tài sản cố định,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,20,3,Tài sản cố định,31/12/2021 VND | TÀI SẢN,2.255.669.554.997,2255669554997.0,2255669554997.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,20,4,Tài sản cố định,1/1/2021 VND | TÀI SẢN,2.353.324.694.271,2353324694271.0,2353324694271.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,21,0,Tài sản cố định hữu hình,TÀI SẢN,Tài sản cố định hữu hình,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,21,1,Tài sản cố định hữu hình,Mã số | TÀI SẢN,221,221.0,221.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,21,2,Tài sản cố định hữu hình,Thuyết minh | TÀI SẢN,13,13.0,13.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,21,3,Tài sản cố định hữu hình,31/12/2021 VND | TÀI SẢN,2.253.565.409.650,2253565409650.0,2253565409650.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,21,4,Tài sản cố định hữu hình,1/1/2021 VND | TÀI SẢN,2.351.601.962.162,2351601962162.0,2351601962162.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,22,0,Nguyên giá,TÀI SẢN,Nguyên giá,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,22,1,Nguyên giá,Mã số | TÀI SẢN,222,222.0,222.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,22,2,Nguyên giá,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,22,3,Nguyên giá,31/12/2021 VND | TÀI SẢN,2.721.620.287.625,2721620287625.0,2721620287625.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,22,4,Nguyên giá,1/1/2021 VND | TÀI SẢN,2.721.624.797.292,2721624797292.0,2721624797292.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,23,0,Giá trị hao mòn lũy kế,TÀI SẢN,Giá trị hao mòn lũy kế,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,23,1,Giá trị hao mòn lũy kế,Mã số | TÀI SẢN,223,223.0,223.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,23,2,Giá trị hao mòn lũy kế,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,23,3,Giá trị hao mòn lũy kế,31/12/2021 VND | TÀI SẢN,(468.054.877.975),-468054877975.0,-468054877975.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,23,4,Giá trị hao mòn lũy kế,1/1/2021 VND | TÀI SẢN,(370.022.835.130),-370022835130.0,-370022835130.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,24,0,Tài sản cố định vô hình,TÀI SẢN,Tài sản cố định vô hình,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,24,1,Tài sản cố định vô hình,Mã số | TÀI SẢN,227,227.0,227.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,24,2,Tài sản cố định vô hình,Thuyết minh | TÀI SẢN,14,14.0,14.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,24,3,Tài sản cố định vô hình,31/12/2021 VND | TÀI SẢN,2.104.145.347,2104145347.0,2104145347.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,24,4,Tài sản cố định vô hình,1/1/2021 VND | TÀI SẢN,1.722.732.109,1722732109.0,1722732109.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,25,0,Nguyên giá,TÀI SẢN,Nguyên giá,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,25,1,Nguyên giá,Mã số | TÀI SẢN,228,228.0,228.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,25,2,Nguyên giá,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,25,3,Nguyên giá,31/12/2021 VND | TÀI SẢN,2.706.470.000,2706470000.0,2706470000.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,25,4,Nguyên giá,1/1/2021 VND | TÀI SẢN,2.047.970.000,2047970000.0,2047970000.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,26,0,Giá trị hao mòn lũy kế,TÀI SẢN,Giá trị hao mòn lũy kế,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,26,1,Giá trị hao mòn lũy kế,Mã số | TÀI SẢN,229,229.0,229.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,26,2,Giá trị hao mòn lũy kế,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,26,3,Giá trị hao mòn lũy kế,31/12/2021 VND | TÀI SẢN,(602.324.653),-602324653.0,-602324653.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,26,4,Giá trị hao mòn lũy kế,1/1/2021 VND | TÀI SẢN,(325.237.891),-325237891.0,-325237891.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,27,0,Bất động sản đầu tư,TÀI SẢN,Bất động sản đầu tư,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,27,1,Bất động sản đầu tư,Mã số | TÀI SẢN,230,230.0,230.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,27,2,Bất động sản đầu tư,Thuyết minh | TÀI SẢN,15,15.0,15.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,27,3,Bất động sản đầu tư,31/12/2021 VND | TÀI SẢN,85.285.775.367,85285775367.0,85285775367.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,27,4,Bất động sản đầu tư,1/1/2021 VND | TÀI SẢN,91.027.823.929,91027823929.0,91027823929.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,28,0,Nguyên giá,TÀI SẢN,Nguyên giá,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,28,1,Nguyên giá,Mã số | TÀI SẢN,231,231.0,231.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,28,2,Nguyên giá,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,28,3,Nguyên giá,31/12/2021 VND | TÀI SẢN,125.823.873.019,125823873019.0,125823873019.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,28,4,Nguyên giá,1/1/2021 VND | TÀI SẢN,125.823.873.019,125823873019.0,125823873019.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,29,0,Giá trị hao mòn lũy kế,TÀI SẢN,Giá trị hao mòn lũy kế,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,29,1,Giá trị hao mòn lũy kế,Mã số | TÀI SẢN,232,232.0,232.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,29,2,Giá trị hao mòn lũy kế,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,29,3,Giá trị hao mòn lũy kế,31/12/2021 VND | TÀI SẢN,(40.538.097.652),-40538097652.0,-40538097652.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,29,4,Giá trị hao mòn lũy kế,1/1/2021 VND | TÀI SẢN,(34.796.049.090),-34796049090.0,-34796049090.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,30,0,Tài sản dở dang dài hạn,TÀI SẢN,Tài sản dở dang dài hạn,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,30,1,Tài sản dở dang dài hạn,Mã số | TÀI SẢN,240,240.0,240.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,30,2,Tài sản dở dang dài hạn,Thuyết minh | TÀI SẢN,,,,False,True
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,30,3,Tài sản dở dang dài hạn,31/12/2021 VND | TÀI SẢN,3.104.884.127,3104884127.0,3104884127.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,30,4,Tài sản dở dang dài hạn,1/1/2021 VND | TÀI SẢN,4.456.563.367,4456563367.0,4456563367.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,31,0,Xây dựng cơ bản dở dang,TÀI SẢN,Xây dựng cơ bản dở dang,,,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,31,1,Xây dựng cơ bản dở dang,Mã số | TÀI SẢN,242,242.0,242.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,31,2,Xây dựng cơ bản dở dang,Thuyết minh | TÀI SẢN,16,16.0,16.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,31,3,Xây dựng cơ bản dở dang,31/12/2021 VND | TÀI SẢN,3.104.884.127,3104884127.0,3104884127.0,False,False
+PC1_financial_statements_2021_separate|table_2,PC1_financial_statements_2021_separate,PC1,2021,separate,VND,31,4,Xây dựng cơ bản dở dang,1/1/2021 VND | TÀI SẢN,4.456.563.367,4456563367.0,4456563367.0,False,False

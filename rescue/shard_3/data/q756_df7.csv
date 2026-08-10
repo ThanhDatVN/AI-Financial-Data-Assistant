@@ -1,0 +1,13 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,0,0,Nợ ngắn hạn,column_1,Nợ ngắn hạn,,,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,0,1,Nợ ngắn hạn,31.12.2022Triệu đồng,172.747.107,172747107.0,172747107000000.0,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,0,2,Nợ ngắn hạn,31.12.2021Triệu đồng,118.670.666,118670666.0,118670666000000.0,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,1,0,Nợ trung hạn,column_1,Nợ trung hạn,,,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,1,1,Nợ trung hạn,31.12.2022Triệu đồng,25.793.635,25793635.0,25793635000000.0,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,1,2,Nợ trung hạn,31.12.2021Triệu đồng,24.879.776,24879776.0,24879776000000.0,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,2,0,Nợ dài hạn,column_1,Nợ dài hạn,,,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,2,1,Nợ dài hạn,31.12.2022Triệu đồng,65.315.641,65315641.0,65315641000000.0,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,2,2,Nợ dài hạn,31.12.2021Triệu đồng,59.660.459,59660459.0,59660459000000.0,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,3,0,,column_1,,,,False,True
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,3,1,,31.12.2022Triệu đồng,263.856.383,263856383.0,263856383000000.0,False,False
+HDB_financial_statements_2022_consolidated|table_32,HDB_financial_statements_2022_consolidated,HDB,2022,consolidated,MILLION_VND,3,2,,31.12.2021Triệu đồng,203.210.901,203210901.0,203210901000000.0,False,False

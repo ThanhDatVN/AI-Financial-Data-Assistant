@@ -1,0 +1,111 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,0,0,NỘ PHẢI TRẢ (300 = 310 + 330),NGUỒN VỐN,NỘ PHẢI TRẢ (300 = 310 + 330),,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,0,1,NỘ PHẢI TRẢ (300 = 310 + 330),Mã số | NGUỒN VỐN,300,300.0,300.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,0,2,NỘ PHẢI TRẢ (300 = 310 + 330),Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,0,3,NỘ PHẢI TRẢ (300 = 310 + 330),31/12/2021 VND | NGUỒN VỐN,2.080.965.707.890,2080965707890.0,2080965707890.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,0,4,NỘ PHẢI TRẢ (300 = 310 + 330),1/1/2021 VND | NGUỒN VỐN,9.772.665.322.450,9772665322450.0,9772665322450.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,1,0,Nợ ngắn hạn,NGUỒN VỐN,Nợ ngắn hạn,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,1,1,Nợ ngắn hạn,Mã số | NGUỒN VỐN,310,310.0,310.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,1,2,Nợ ngắn hạn,Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,1,3,Nợ ngắn hạn,31/12/2021 VND | NGUỒN VỐN,114.160.530.353,114160530353.0,114160530353.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,1,4,Nợ ngắn hạn,1/1/2021 VND | NGUỒN VỐN,6.029.655.921.740,6029655921740.0,6029655921740.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,2,0,Phải trả người bán,NGUỒN VỐN,Phải trả người bán,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,2,1,Phải trả người bán,Mã số | NGUỒN VỐN,311,311.0,311.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,2,2,Phải trả người bán,Thuyết minh | NGUỒN VỐN,11,11.0,11.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,2,3,Phải trả người bán,31/12/2021 VND | NGUỒN VỐN,4.219.526.114,4219526114.0,4219526114.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,2,4,Phải trả người bán,1/1/2021 VND | NGUỒN VỐN,2.742.722.363.752,2742722363752.0,2742722363752.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,3,0,Người mua trả tiền trước,NGUỒN VỐN,Người mua trả tiền trước,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,3,1,Người mua trả tiền trước,Mã số | NGUỒN VỐN,312,312.0,312.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,3,2,Người mua trả tiền trước,Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,3,3,Người mua trả tiền trước,31/12/2021 VND | NGUỒN VỐN,323.766.646,323766646.0,323766646.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,3,4,Người mua trả tiền trước,1/1/2021 VND | NGUỒN VỐN,11.899.556.110,11899556110.0,11899556110.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,4,0,Thuế phải nộp Nhà nước,NGUỒN VỐN,Thuế phải nộp Nhà nước,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,4,1,Thuế phải nộp Nhà nước,Mã số | NGUỒN VỐN,313,313.0,313.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,4,2,Thuế phải nộp Nhà nước,Thuyết minh | NGUỒN VỐN,12,12.0,12.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,4,3,Thuế phải nộp Nhà nước,31/12/2021 VND | NGUỒN VỐN,585.949.237,585949237.0,585949237.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,4,4,Thuế phải nộp Nhà nước,1/1/2021 VND | NGUỒN VỐN,4.621.894.902,4621894902.0,4621894902.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,5,0,Phải trả người lao động,NGUỒN VỐN,Phải trả người lao động,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,5,1,Phải trả người lao động,Mã số | NGUỒN VỐN,314,314.0,314.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,5,2,Phải trả người lao động,Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,5,3,Phải trả người lao động,31/12/2021 VND | NGUỒN VỐN,5.223.974,5223974.0,5223974.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,5,4,Phải trả người lao động,1/1/2021 VND | NGUỒN VỐN,5.223.974,5223974.0,5223974.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,6,0,Chi phí phải trả,NGUỒN VỐN,Chi phí phải trả,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,6,1,Chi phí phải trả,Mã số | NGUỒN VỐN,315,315.0,315.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,6,2,Chi phí phải trả,Thuyết minh | NGUỒN VỐN,13,13.0,13.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,6,3,Chi phí phải trả,31/12/2021 VND | NGUỒN VỐN,78.397.720.625,78397720625.0,78397720625.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,6,4,Chi phí phải trả,1/1/2021 VND | NGUỒN VỐN,267.206.555.730,267206555730.0,267206555730.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,7,0,Phải trả ngắn hạn khác,NGUỒN VỐN,Phải trả ngắn hạn khác,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,7,1,Phải trả ngắn hạn khác,Mã số | NGUỒN VỐN,319,319.0,319.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,7,2,Phải trả ngắn hạn khác,Thuyết minh | NGUỒN VỐN,14(a),,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,7,3,Phải trả ngắn hạn khác,31/12/2021 VND | NGUỒN VỐN,1.328.343.757,1328343757.0,1328343757.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,7,4,Phải trả ngắn hạn khác,1/1/2021 VND | NGUỒN VỐN,2.009.990.327.272,2009990327272.0,2009990327272.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,8,0,Vay ngắn hạn,NGUỒN VỐN,Vay ngắn hạn,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,8,1,Vay ngắn hạn,Mã số | NGUỒN VỐN,320,320.0,320.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,8,2,Vay ngắn hạn,Thuyết minh | NGUỒN VỐN,15(a),,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,8,3,Vay ngắn hạn,31/12/2021 VND | NGUỒN VỐN,29.300.000.000,29300000000.0,29300000000.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,8,4,Vay ngắn hạn,1/1/2021 VND | NGUỒN VỐN,993.210.000.000,993210000000.0,993210000000.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,9,0,Nợ dài hạn,NGUỒN VỐN,Nợ dài hạn,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,9,1,Nợ dài hạn,Mã số | NGUỒN VỐN,330,330.0,330.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,9,2,Nợ dài hạn,Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,9,3,Nợ dài hạn,31/12/2021 VND | NGUỒN VỐN,1.966.805.177.537,1966805177537.0,1966805177537.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,9,4,Nợ dài hạn,1/1/2021 VND | NGUỒN VỐN,3.743.009.400.710,3743009400710.0,3743009400710.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,10,0,Phải trả dài hạn khác,NGUỒN VỐN,Phải trả dài hạn khác,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,10,1,Phải trả dài hạn khác,Mã số | NGUỒN VỐN,337,337.0,337.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,10,2,Phải trả dài hạn khác,Thuyết minh | NGUỒN VỐN,14(b),,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,10,3,Phải trả dài hạn khác,31/12/2021 VND | NGUỒN VỐN,-,0.0,0.0,True,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,10,4,Phải trả dài hạn khác,1/1/2021 VND | NGUỒN VỐN,620.693.878.024,620693878024.0,620693878024.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,11,0,Vay và trái phiếu phát hành dài hạn,NGUỒN VỐN,Vay và trái phiếu phát hành dài hạn,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,11,1,Vay và trái phiếu phát hành dài hạn,Mã số | NGUỒN VỐN,338,338.0,338.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,11,2,Vay và trái phiếu phát hành dài hạn,Thuyết minh | NGUỒN VỐN,15(b),,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,11,3,Vay và trái phiếu phát hành dài hạn,31/12/2021 VND | NGUỒN VỐN,1.966.647.316.037,1966647316037.0,1966647316037.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,11,4,Vay và trái phiếu phát hành dài hạn,1/1/2021 VND | NGUỒN VỐN,3.111.844.095.436,3111844095436.0,3111844095436.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,12,0,Dự phòng phải trả dài hạn,NGUỒN VỐN,Dự phòng phải trả dài hạn,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,12,1,Dự phòng phải trả dài hạn,Mã số | NGUỒN VỐN,342,342.0,342.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,12,2,Dự phòng phải trả dài hạn,Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,12,3,Dự phòng phải trả dài hạn,31/12/2021 VND | NGUỒN VỐN,157.861.500,157861500.0,157861500.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,12,4,Dự phòng phải trả dài hạn,1/1/2021 VND | NGUỒN VỐN,10.471.427.250,10471427250.0,10471427250.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,13,0,VỐN CHỦ SỞ HỮU (400 = 410),NGUỒN VỐN,VỐN CHỦ SỞ HỮU (400 = 410),,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,13,1,VỐN CHỦ SỞ HỮU (400 = 410),Mã số | NGUỒN VỐN,400,400.0,400.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,13,2,VỐN CHỦ SỞ HỮU (400 = 410),Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,13,3,VỐN CHỦ SỞ HỮU (400 = 410),31/12/2021 VND | NGUỒN VỐN,5.416.895.027.800,5416895027800.0,5416895027800.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,13,4,VỐN CHỦ SỞ HỮU (400 = 410),1/1/2021 VND | NGUỒN VỐN,3.022.729.714.154,3022729714154.0,3022729714154.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,14,0,Vốn chủ sở hữu,NGUỒN VỐN,Vốn chủ sở hữu,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,14,1,Vốn chủ sở hữu,Mã số | NGUỒN VỐN,410,410.0,410.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,14,2,Vốn chủ sở hữu,Thuyết minh | NGUỒN VỐN,16,16.0,16.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,14,3,Vốn chủ sở hữu,31/12/2021 VND | NGUỒN VỐN,5.416.895.027.800,5416895027800.0,5416895027800.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,14,4,Vốn chủ sở hữu,1/1/2021 VND | NGUỒN VỐN,3.022.729.714.154,3022729714154.0,3022729714154.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,15,0,Vốn cổ phần,NGUỒN VỐN,Vốn cổ phần,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,15,1,Vốn cổ phần,Mã số | NGUỒN VỐN,411,411.0,411.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,15,2,Vốn cổ phần,Thuyết minh | NGUỒN VỐN,17,17.0,17.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,15,3,Vốn cổ phần,31/12/2021 VND | NGUỒN VỐN,3.269.884.470.000,3269884470000.0,3269884470000.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,15,4,Vốn cổ phần,1/1/2021 VND | NGUỒN VỐN,3.267.148.470.000,3267148470000.0,3267148470000.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,SHARES,16,0,- Cổ phiếu phổ thông có quyền biểu quyết,NGUỒN VỐN,- Cổ phiếu phổ thông có quyền biểu quyết,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,SHARES,16,1,- Cổ phiếu phổ thông có quyền biểu quyết,Mã số | NGUỒN VỐN,411a,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,SHARES,16,2,- Cổ phiếu phổ thông có quyền biểu quyết,Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,16,3,- Cổ phiếu phổ thông có quyền biểu quyết,31/12/2021 VND | NGUỒN VỐN,3.269.884.470.000,3269884470000.0,3269884470000.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,16,4,- Cổ phiếu phổ thông có quyền biểu quyết,1/1/2021 VND | NGUỒN VỐN,3.267.148.470.000,3267148470000.0,3267148470000.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,17,0,Thặng dư vốn cổ phần,NGUỒN VỐN,Thặng dư vốn cổ phần,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,17,1,Thặng dư vốn cổ phần,Mã số | NGUỒN VỐN,412,412.0,412.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,17,2,Thặng dư vốn cổ phần,Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,17,3,Thặng dư vốn cổ phần,31/12/2021 VND | NGUỒN VỐN,2.119.005.015.149,2119005015149.0,2119005015149.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,17,4,Thặng dư vốn cổ phần,1/1/2021 VND | NGUỒN VỐN,2.119.055.015.149,2119055015149.0,2119055015149.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,18,0,Lợi nhuận sau thuế chưa phân phối/(Lỗ lũy kế),NGUỒN VỐN,Lợi nhuận sau thuế chưa phân phối/(Lỗ lũy kế),,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,18,1,Lợi nhuận sau thuế chưa phân phối/(Lỗ lũy kế),Mã số | NGUỒN VỐN,421,421.0,421.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,18,2,Lợi nhuận sau thuế chưa phân phối/(Lỗ lũy kế),Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,18,3,Lợi nhuận sau thuế chưa phân phối/(Lỗ lũy kế),31/12/2021 VND | NGUỒN VỐN,28.005.542.651,28005542651.0,28005542651.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,18,4,Lợi nhuận sau thuế chưa phân phối/(Lỗ lũy kế),1/1/2021 VND | NGUỒN VỐN,(2.363.473.770.995),-2363473770995.0,-2363473770995.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,19,0,- Lỗ lũy kế đến cuối năm trước,NGUỒN VỐN,- Lỗ lũy kế đến cuối năm trước,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,19,1,- Lỗ lũy kế đến cuối năm trước,Mã số | NGUỒN VỐN,421a,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,19,2,- Lỗ lũy kế đến cuối năm trước,Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,19,3,- Lỗ lũy kế đến cuối năm trước,31/12/2021 VND | NGUỒN VỐN,(2.363.473.770.995),-2363473770995.0,-2363473770995.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,19,4,- Lỗ lũy kế đến cuối năm trước,1/1/2021 VND | NGUỒN VỐN,(2.247.530.810.778),-2247530810778.0,-2247530810778.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,20,0,- Lợi nhuận /(lỗ) sau thuế năm nay,NGUỒN VỐN,- Lợi nhuận /(lỗ) sau thuế năm nay,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,20,1,- Lợi nhuận /(lỗ) sau thuế năm nay,Mã số | NGUỒN VỐN,421b,,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,20,2,- Lợi nhuận /(lỗ) sau thuế năm nay,Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,20,3,- Lợi nhuận /(lỗ) sau thuế năm nay,31/12/2021 VND | NGUỒN VỐN,2.391.479.313.646,2391479313646.0,2391479313646.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,20,4,- Lợi nhuận /(lỗ) sau thuế năm nay,1/1/2021 VND | NGUỒN VỐN,(115.942.960.217),-115942960217.0,-115942960217.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,21,0,TỔNG NGUỒN VỐN (440 = 300 + 400),NGUỒN VỐN,TỔNG NGUỒN VỐN (440 = 300 + 400),,,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,21,1,TỔNG NGUỒN VỐN (440 = 300 + 400),Mã số | NGUỒN VỐN,440,440.0,440.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,21,2,TỔNG NGUỒN VỐN (440 = 300 + 400),Thuyết minh | NGUỒN VỐN,,,,False,True
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,21,3,TỔNG NGUỒN VỐN (440 = 300 + 400),31/12/2021 VND | NGUỒN VỐN,7.497.860.735.690,7497860735690.0,7497860735690.0,False,False
+MML_financial_statements_2021_separate|table_4,MML_financial_statements_2021_separate,MML,2021,separate,VND,21,4,TỔNG NGUỒN VỐN (440 = 300 + 400),1/1/2021 VND | NGUỒN VỐN,12.795.395.036.604,12795395036604.0,12795395036604.0,False,False

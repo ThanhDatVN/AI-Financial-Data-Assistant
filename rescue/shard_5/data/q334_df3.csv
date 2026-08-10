@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+FIT_financial_statements_2022_separate|table_43,FIT_financial_statements_2022_separate,FIT,2022,separate,SHARES,0,0,Số lượng cổ phiếu đăng ký phát hành,column_1,Số lượng cổ phiếu đăng ký phát hành,,,False,False
+FIT_financial_statements_2022_separate|table_43,FIT_financial_statements_2022_separate,FIT,2022,separate,SHARES,0,1,Số lượng cổ phiếu đăng ký phát hành,Số cuối năm,339.933.034,339933034.0,339933034.0,False,False
+FIT_financial_statements_2022_separate|table_43,FIT_financial_statements_2022_separate,FIT,2022,separate,SHARES,0,2,Số lượng cổ phiếu đăng ký phát hành,Số đầu năm,262.730.247,262730247.0,262730247.0,False,False
+FIT_financial_statements_2022_separate|table_43,FIT_financial_statements_2022_separate,FIT,2022,separate,SHARES,1,0,Số lượng cổ phiếu phổ thông đã phát hành ra công chúng,column_1,Số lượng cổ phiếu phổ thông đã phát hành ra công chúng,,,False,False
+FIT_financial_statements_2022_separate|table_43,FIT_financial_statements_2022_separate,FIT,2022,separate,SHARES,1,1,Số lượng cổ phiếu phổ thông đã phát hành ra công chúng,Số cuối năm,339.933.034,339933034.0,339933034.0,False,False
+FIT_financial_statements_2022_separate|table_43,FIT_financial_statements_2022_separate,FIT,2022,separate,SHARES,1,2,Số lượng cổ phiếu phổ thông đã phát hành ra công chúng,Số đầu năm,262.730.247,262730247.0,262730247.0,False,False
+FIT_financial_statements_2022_separate|table_43,FIT_financial_statements_2022_separate,FIT,2022,separate,SHARES,2,0,Số lượng cổ phiếu phổ thông đang lưu hành,column_1,Số lượng cổ phiếu phổ thông đang lưu hành,,,False,False
+FIT_financial_statements_2022_separate|table_43,FIT_financial_statements_2022_separate,FIT,2022,separate,SHARES,2,1,Số lượng cổ phiếu phổ thông đang lưu hành,Số cuối năm,339.933.034,339933034.0,339933034.0,False,False
+FIT_financial_statements_2022_separate|table_43,FIT_financial_statements_2022_separate,FIT,2022,separate,SHARES,2,2,Số lượng cổ phiếu phổ thông đang lưu hành,Số đầu năm,262.730.247,262730247.0,262730247.0,False,False

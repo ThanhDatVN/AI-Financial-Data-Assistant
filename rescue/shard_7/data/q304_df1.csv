@@ -1,0 +1,9 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VGC_financial_statements_2016_separate|table_43,VGC_financial_statements_2016_separate,VGC,2016,separate,VND,0,0,Lợi nhuận sau thuế TNDN của Báo cáo Tài chính riêng năm 2015,column_1,Lợi nhuận sau thuế TNDN của Báo cáo Tài chính riêng năm 2015,,,False,False
+VGC_financial_statements_2016_separate|table_43,VGC_financial_statements_2016_separate,VGC,2016,separate,VND,0,1,Lợi nhuận sau thuế TNDN của Báo cáo Tài chính riêng năm 2015,Số tiền | VND,180.892.282.220,180892282220.0,180892282220.0,False,False
+VGC_financial_statements_2016_separate|table_43,VGC_financial_statements_2016_separate,VGC,2016,separate,VND,1,0,Trích Quỹ khen thưởng phúc lợi,column_1,Trích Quỹ khen thưởng phúc lợi,,,False,False
+VGC_financial_statements_2016_separate|table_43,VGC_financial_statements_2016_separate,VGC,2016,separate,VND,1,1,Trích Quỹ khen thưởng phúc lợi,Số tiền | VND,9.044.614.000,9044614000.0,9044614000.0,False,False
+VGC_financial_statements_2016_separate|table_43,VGC_financial_statements_2016_separate,VGC,2016,separate,VND,2,0,Chi trả cổ tức,column_1,Chi trả cổ tức,,,False,False
+VGC_financial_statements_2016_separate|table_43,VGC_financial_statements_2016_separate,VGC,2016,separate,VND,2,1,Chi trả cổ tức,Số tiền | VND,105.800.000.000,105800000000.0,105800000000.0,False,False
+VGC_financial_statements_2016_separate|table_43,VGC_financial_statements_2016_separate,VGC,2016,separate,VND,3,0,(tương ứng mỗi cổ phần nhận 400 VND),column_1,(tương ứng mỗi cổ phần nhận 400 VND),,,False,False
+VGC_financial_statements_2016_separate|table_43,VGC_financial_statements_2016_separate,VGC,2016,separate,VND,3,1,(tương ứng mỗi cổ phần nhận 400 VND),Số tiền | VND,(tương ứng mỗi cổ phần nhận 400 VND),,,False,False

@@ -1,0 +1,31 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,0,0,"1. Chi nộp thuế và các khoản phí, lệ phí",column_1,"1. Chi nộp thuế và các khoản phí, lệ phí",,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,0,1,"1. Chi nộp thuế và các khoản phí, lệ phí",Năm 2024,17.435,17435.0,17435000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,0,2,"1. Chi nộp thuế và các khoản phí, lệ phí",Năm 2023,6.571,6571.0,6571000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,1,0,2. Chi phí cho nhân viên,column_1,2. Chi phí cho nhân viên,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,1,1,2. Chi phí cho nhân viên,Năm 2024,946.378,946378.0,946378000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,1,2,2. Chi phí cho nhân viên,Năm 2023,642.689,642689.0,642689000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,2,0,Trong đó:,column_1,Trong đó:,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,2,1,Trong đó:,Năm 2024,Trong đó:,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,2,2,Trong đó:,Năm 2023,Trong đó:,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,3,0,Chi lương và phụ cấp,column_1,Chi lương và phụ cấp,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,3,1,Chi lương và phụ cấp,Năm 2024,873.957,873957.0,873957000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,3,2,Chi lương và phụ cấp,Năm 2023,575.088,575088.0,575088000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,4,0,Các khoản chi đóng góp theo lương,column_1,Các khoản chi đóng góp theo lương,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,4,1,Các khoản chi đóng góp theo lương,Năm 2024,33.669,33669.0,33669000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,4,2,Các khoản chi đóng góp theo lương,Năm 2023,34.824,34824.0,34824000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,5,0,Chi trợ cấp,column_1,Chi trợ cấp,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,5,1,Chi trợ cấp,Năm 2024,855,855.0,855000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,5,2,Chi trợ cấp,Năm 2023,1.206,1206.0,1206000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,6,0,Chi khác cho nhân viên,column_1,Chi khác cho nhân viên,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,6,1,Chi khác cho nhân viên,Năm 2024,37.897,37897.0,37897000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,6,2,Chi khác cho nhân viên,Năm 2023,-,0.0,0.0,True,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,7,0,3. Chi về tài sản,column_1,3. Chi về tài sản,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,7,1,3. Chi về tài sản,Năm 2024,336.530,336530.0,336530000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,7,2,3. Chi về tài sản,Năm 2023,238.594,238594.0,238594000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,8,0,Trong đó: Khấu hao tài sản cố định,column_1,Trong đó: Khấu hao tài sản cố định,,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,8,1,Trong đó: Khấu hao tài sản cố định,Năm 2024,45.198,45198.0,45198000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,8,2,Trong đó: Khấu hao tài sản cố định,Năm 2023,50.723,50723.0,50723000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,9,0,4. Chi cho hoạt động quản lý công vụ (*),column_1,4. Chi cho hoạt động quản lý công vụ (*),,,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,9,1,4. Chi cho hoạt động quản lý công vụ (*),Năm 2024,255.711,255711.0,255711000000.0,False,False
+NVB_financial_statements_2024_separate|table_45,NVB_financial_statements_2024_separate,NVB,2024,separate,MILLION_VND,9,2,4. Chi cho hoạt động quản lý công vụ (*),Năm 2023,226.794,226794.0,226794000000.0,False,False

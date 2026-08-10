@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MSN_financial_statements_2022_separate|table_35,MSN_financial_statements_2022_separate,MSN,2022,separate,VND,0,0,Chi phí khấu hao và phân bổ,column_1,Chi phí khấu hao và phân bổ,,,False,False
+MSN_financial_statements_2022_separate|table_35,MSN_financial_statements_2022_separate,MSN,2022,separate,VND,0,1,Chi phí khấu hao và phân bổ,2022VND,5.071.225.625,5071225625.0,5071225625.0,False,False
+MSN_financial_statements_2022_separate|table_35,MSN_financial_statements_2022_separate,MSN,2022,separate,VND,0,2,Chi phí khấu hao và phân bổ,2021VND,4.791.519.925,4791519925.0,4791519925.0,False,False
+MSN_financial_statements_2022_separate|table_35,MSN_financial_statements_2022_separate,MSN,2022,separate,VND,1,0,"Chi phí nhân viên, chi phí dịch vụ mua ngoài và chi phí khác",column_1,"Chi phí nhân viên, chi phí dịch vụ mua ngoài và chi phí khác",,,False,False
+MSN_financial_statements_2022_separate|table_35,MSN_financial_statements_2022_separate,MSN,2022,separate,VND,1,1,"Chi phí nhân viên, chi phí dịch vụ mua ngoài và chi phí khác",2022VND,317.028.021.288,317028021288.0,317028021288.0,False,False
+MSN_financial_statements_2022_separate|table_35,MSN_financial_statements_2022_separate,MSN,2022,separate,VND,1,2,"Chi phí nhân viên, chi phí dịch vụ mua ngoài và chi phí khác",2021VND,286.069.642.848,286069642848.0,286069642848.0,False,False
+MSN_financial_statements_2022_separate|table_35,MSN_financial_statements_2022_separate,MSN,2022,separate,VND,2,0,,column_1,,,,False,True
+MSN_financial_statements_2022_separate|table_35,MSN_financial_statements_2022_separate,MSN,2022,separate,VND,2,1,,2022VND,322.099.246.913,322099246913.0,322099246913.0,False,False
+MSN_financial_statements_2022_separate|table_35,MSN_financial_statements_2022_separate,MSN,2022,separate,VND,2,2,,2021VND,290.861.162.773,290861162773.0,290861162773.0,False,False

@@ -1,0 +1,16 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,0,0,Lãi từ kinh doanh chứng khoán,column_1,Lãi từ kinh doanh chứng khoán,,,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,0,1,Lãi từ kinh doanh chứng khoán,Năm nay,122.285.732.437,122285732437.0,122285732437.0,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,0,2,Lãi từ kinh doanh chứng khoán,VNDNăm trước,276.629.371,276629371.0,276629371.0,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,1,0,Lãi từ thanh lý khoản đầu tư,column_1,Lãi từ thanh lý khoản đầu tư,,,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,1,1,Lãi từ thanh lý khoản đầu tư,Năm nay,66.115.000.000,66115000000.0,66115000000.0,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,1,2,Lãi từ thanh lý khoản đầu tư,VNDNăm trước,37.986.183.550,37986183550.0,37986183550.0,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,2,0,Cổ tức nhận được,column_1,Cổ tức nhận được,,,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,2,1,Cổ tức nhận được,Năm nay,62.702.956.361,62702956361.0,62702956361.0,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,2,2,Cổ tức nhận được,VNDNăm trước,70.126.878.264,70126878264.0,70126878264.0,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,3,0,"Thu nhập từ lãi cho vay, lãi tiền gửi",column_1,"Thu nhập từ lãi cho vay, lãi tiền gửi",,,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,3,1,"Thu nhập từ lãi cho vay, lãi tiền gửi",Năm nay,4.007.183.729,4007183729.0,4007183729.0,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,3,2,"Thu nhập từ lãi cho vay, lãi tiền gửi",VNDNăm trước,4.350.075.377,4350075377.0,4350075377.0,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,4,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,4,1,TỔNG CỘNG,Năm nay,255.110.872.527,255110872527.0,255110872527.0,False,False
+SAM_financial_statements_2017_separate|table_44,SAM_financial_statements_2017_separate,SAM,2017,separate,VND,4,2,TỔNG CỘNG,VNDNăm trước,112.739.766.562,112739766562.0,112739766562.0,False,False

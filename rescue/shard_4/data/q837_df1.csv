@@ -1,0 +1,19 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,0,0,Ngắn hạn,column_1,Ngắn hạn,,,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,0,1,Ngắn hạn,31/12/2023VND,12.424.654.647,12424654647.0,12424654647.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,0,2,Ngắn hạn,01/01/2023VND,12.372.479.182,12372479182.0,12372479182.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,1,0,"Doanh thu nhà số 2 Điện Biên Phù, Thành phố Trà Vinh (*)",column_1,"Doanh thu nhà số 2 Điện Biên Phù, Thành phố Trà Vinh (*)",,,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,1,1,"Doanh thu nhà số 2 Điện Biên Phù, Thành phố Trà Vinh (*)",31/12/2023VND,11.760.421.000,11760421000.0,11760421000.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,1,2,"Doanh thu nhà số 2 Điện Biên Phù, Thành phố Trà Vinh (*)",01/01/2023VND,11.760.421.000,11760421000.0,11760421000.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,2,0,Các khoản doanh thu chưa thực hiện khác,column_1,Các khoản doanh thu chưa thực hiện khác,,,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,2,1,Các khoản doanh thu chưa thực hiện khác,31/12/2023VND,664.233.647,664233647.0,664233647.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,2,2,Các khoản doanh thu chưa thực hiện khác,01/01/2023VND,612.058.182,612058182.0,612058182.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,3,0,Dài hạn,column_1,Dài hạn,,,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,3,1,Dài hạn,31/12/2023VND,19.150.720.044,19150720044.0,19150720044.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,3,2,Dài hạn,01/01/2023VND,33.881.957.500,33881957500.0,33881957500.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,4,0,"Doanh thu cho thuê Văn phòng, kho nhận trước",column_1,"Doanh thu cho thuê Văn phòng, kho nhận trước",,,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,4,1,"Doanh thu cho thuê Văn phòng, kho nhận trước",31/12/2023VND,19.150.720.044,19150720044.0,19150720044.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,4,2,"Doanh thu cho thuê Văn phòng, kho nhận trước",01/01/2023VND,33.881.957.500,33881957500.0,33881957500.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,5,0,Tổng,column_1,Tổng,,,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,5,1,Tổng,31/12/2023VND,31.575.374.691,31575374691.0,31575374691.0,False,False
+VSF_financial_statements_2023_separate|table_40,VSF_financial_statements_2023_separate,VSF,2023,separate,VND,5,2,Tổng,01/01/2023VND,46.254.436.682,46254436682.0,46254436682.0,False,False

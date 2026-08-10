@@ -1,0 +1,13 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,0,0,Giá vốn của hàng hóa đã bán,column_1,Giá vốn của hàng hóa đã bán,,,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,0,1,Giá vốn của hàng hóa đã bán,2024VND,4.416.467.377.102,4416467377102.0,4416467377102.0,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,0,2,Giá vốn của hàng hóa đã bán,2023VND,3.921.891.924.157,3921891924157.0,3921891924157.0,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,1,0,Giá vốn của dịch vụ đã cung cấp,column_1,Giá vốn của dịch vụ đã cung cấp,,,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,1,1,Giá vốn của dịch vụ đã cung cấp,2024VND,34.732.056.916.304,34732056916304.0,34732056916304.0,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,1,2,Giá vốn của dịch vụ đã cung cấp,2023VND,28.400.239.912.107,28400239912107.0,28400239912107.0,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,2,0,Dự phòng giảm giá hàng tồn kho/(hoàn nhập dự phòng),column_1,Dự phòng giảm giá hàng tồn kho/(hoàn nhập dự phòng),,,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,2,1,Dự phòng giảm giá hàng tồn kho/(hoàn nhập dự phòng),2024VND,1.921.688.045,1921688045.0,1921688045.0,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,2,2,Dự phòng giảm giá hàng tồn kho/(hoàn nhập dự phòng),2023VND,(23.784.453.561),-23784453561.0,-23784453561.0,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,3,0,,column_1,,,,False,True
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,3,1,,2024VND,39.150.445.981.451,39150445981451.0,39150445981451.0,False,False
+FPT_financial_statements_2024_consolidated|table_61,FPT_financial_statements_2024_consolidated,FPT,2024,consolidated,VND,3,2,,2023VND,32.298.347.382.703,32298347382703.0,32298347382703.0,False,False

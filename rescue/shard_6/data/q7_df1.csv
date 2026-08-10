@@ -1,0 +1,13 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,0,0,Số đầu năm,column_1,Số đầu năm,,,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,0,1,Số đầu năm,Năm nay,36.234.906.990,36234906990.0,36234906990.0,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,0,2,Số đầu năm,VNDNăm trước,92.032.728.468,92032728468.0,92032728468.0,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,1,0,Trích lập quỹ,column_1,Trích lập quỹ,,,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,1,1,Trích lập quỹ,Năm nay,95.040.000.000,95040000000.0,95040000000.0,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,1,2,Trích lập quỹ,VNDNăm trước,82.922.105.841,82922105841.0,82922105841.0,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,2,0,Sử dụng quỹ,column_1,Sử dụng quỹ,,,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,2,1,Sử dụng quỹ,Năm nay,(73.510.443.938),-73510443938.0,-73510443938.0,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,2,2,Sử dụng quỹ,VNDNăm trước,(138.719.927.319),-138719927319.0,-138719927319.0,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,3,0,Số cuối năm,column_1,Số cuối năm,,,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,3,1,Số cuối năm,Năm nay,57.764.463.052,57764463052.0,57764463052.0,False,False
+HT1_financial_statements_2019_consolidated|table_33,HT1_financial_statements_2019_consolidated,HT1,2019,consolidated,VND,3,2,Số cuối năm,VNDNăm trước,36.234.906.990,36234906990.0,36234906990.0,False,False

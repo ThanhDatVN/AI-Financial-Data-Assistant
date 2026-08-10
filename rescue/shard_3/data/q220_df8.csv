@@ -1,0 +1,13 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,0,0,Trong nước,column_1,Trong nước,,,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,0,1,Trong nước,Tổng dư nợ cho vay | Triệu VND,1.755.880.003,1755880003.0,1755880003000000.0,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,0,2,Trong nước,Tổng tiền gửi | Triệu VND,1.853.344.168,1853344168.0,1853344168000000.0,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,0,3,Trong nước,Các cam kết ngoại bảng | Triệu VND,314.331.809,314331809.0,314331809000000.0,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,0,4,Trong nước,CCTC phải sinh (Tổng giá trị giao dịch theo hợp đồng) | Triệu VND,335.208,335208.0,335208000000.0,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,0,5,Trong nước,Kinh doanh và đầu tư chứng khoán (Chênh lệch DN-DC) | Triệu VND,226.761.149,226761149.0,226761149000000.0,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,1,0,Nước ngoài,column_1,Nước ngoài,,,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,1,1,Nước ngoài,Tổng dư nợ cho vay | Triệu VND,564.756,564756.0,564756000000.0,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,1,2,Nước ngoài,Tổng tiền gửi | Triệu VND,1.513.412,1513412.0,1513412000000.0,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,1,3,Nước ngoài,Các cam kết ngoại bảng | Triệu VND,62.448,62448.0,62448000000.0,False,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,1,4,Nước ngoài,CCTC phải sinh (Tổng giá trị giao dịch theo hợp đồng) | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2023_separate|table_85,BID_financial_statements_2023_separate,BID,2023,separate,MILLION_VND,1,5,Nước ngoài,Kinh doanh và đầu tư chứng khoán (Chênh lệch DN-DC) | Triệu VND,-,0.0,0.0,True,False

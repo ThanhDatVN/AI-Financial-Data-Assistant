@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+DNH_financial_statements_2018_consolidated|table_44,DNH_financial_statements_2018_consolidated,DNH,2018,consolidated,VND,0,0,Giá vốn bán điện,column_1,Giá vốn bán điện,,,False,False
+DNH_financial_statements_2018_consolidated|table_44,DNH_financial_statements_2018_consolidated,DNH,2018,consolidated,VND,0,1,Giá vốn bán điện,2018VND,779.746.772.283,779746772283.0,779746772283.0,False,False
+DNH_financial_statements_2018_consolidated|table_44,DNH_financial_statements_2018_consolidated,DNH,2018,consolidated,VND,0,2,Giá vốn bán điện,2017VND,780.977.719.441,780977719441.0,780977719441.0,False,False
+DNH_financial_statements_2018_consolidated|table_44,DNH_financial_statements_2018_consolidated,DNH,2018,consolidated,VND,1,0,Giá vốn của dịch vụ đã cung ứng,column_1,Giá vốn của dịch vụ đã cung ứng,,,False,False
+DNH_financial_statements_2018_consolidated|table_44,DNH_financial_statements_2018_consolidated,DNH,2018,consolidated,VND,1,1,Giá vốn của dịch vụ đã cung ứng,2018VND,9.352.039.142,9352039142.0,9352039142.0,False,False
+DNH_financial_statements_2018_consolidated|table_44,DNH_financial_statements_2018_consolidated,DNH,2018,consolidated,VND,1,2,Giá vốn của dịch vụ đã cung ứng,2017VND,11.223.638.191,11223638191.0,11223638191.0,False,False
+DNH_financial_statements_2018_consolidated|table_44,DNH_financial_statements_2018_consolidated,DNH,2018,consolidated,VND,2,0,,column_1,,,,False,True
+DNH_financial_statements_2018_consolidated|table_44,DNH_financial_statements_2018_consolidated,DNH,2018,consolidated,VND,2,1,,2018VND,789.098.811.425,789098811425.0,789098811425.0,False,False
+DNH_financial_statements_2018_consolidated|table_44,DNH_financial_statements_2018_consolidated,DNH,2018,consolidated,VND,2,2,,2017VND,792.201.357.632,792201357632.0,792201357632.0,False,False

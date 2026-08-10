@@ -1,0 +1,116 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,0,0,01,Mã số,01,1.0,1.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,0,1,01,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tổng lợi nhuận kế toán trước thuếĐiều chỉnh cho các khoản:,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,0,2,01,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,0,3,01,Năm nay,75.058.999.454,75058999454.0,75058999454.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,0,4,01,Năm trước,269.842.337.384,269842337384.0,269842337384.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,1,0,02,Mã số,02,2.0,2.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,1,1,02,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Khấu hao và hao mòn tài sản cố định và bất động sản đầu tư,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,1,2,02,Thuyết minh,"13,14,15",,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,1,3,02,Năm nay,25.253.216.312(6.736.797.159),,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,1,4,02,Năm trước,14.883.232.323(16.299.681.605),,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,2,0,03,Mã số,03,3.0,3.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,2,1,03,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Hoàn nhập dự phòng,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,2,2,03,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,2,3,03,Năm nay,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,2,4,03,Năm trước,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,3,0,05,Mã số,05,5.0,5.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,3,1,05,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Lãi từ hoạt động đầu tư,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,3,2,05,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,3,3,05,Năm nay,(678.116.332.575),-678116332575.0,-678116332575.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,3,4,05,Năm trước,(168.517.991.710),-168517991710.0,-168517991710.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,4,0,06,Mã số,06,6.0,6.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,4,1,06,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Chi phí đi vay,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,4,2,06,Thuyết minh,28,28.0,28.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,4,3,06,Năm nay,200.492.626.184,200492626184.0,200492626184.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,4,4,06,Năm trước,134.968.073.199,134968073199.0,134968073199.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,5,0,08,Mã số,08,8.0,8.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,5,1,08,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,(Lỗ) lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,5,2,08,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,5,3,08,Năm nay,(384.048.287.784),-384048287784.0,-384048287784.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,5,4,08,Năm trước,234.875.969.591,234875969591.0,234875969591.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,6,0,09,Mã số,09,9.0,9.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,6,1,09,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Giảm (tăng) các khoản phải thu,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,6,2,09,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,6,3,09,Năm nay,592.752.793.104,592752793104.0,592752793104.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,6,4,09,Năm trước,(311.425.911.522),-311425911522.0,-311425911522.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,7,0,10,Mã số,10,10.0,10.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,7,1,10,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Giảm (tăng) giảm hàng tồn kho,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,7,2,10,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,7,3,10,Năm nay,714.667.001.980,714667001980.0,714667001980.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,7,4,10,Năm trước,(389.421.662.497),-389421662497.0,-389421662497.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,8,0,11,Mã số,11,11.0,11.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,8,1,11,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,(Giảm) tăng các khoản phải trả,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,8,2,11,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,8,3,11,Năm nay,(167.225.397.151),-167225397151.0,-167225397151.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,8,4,11,Năm trước,182.647.259.940,182647259940.0,182647259940.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,9,0,12,Mã số,12,12.0,12.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,9,1,12,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tăng chi phí trả trước,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,9,2,12,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,9,3,12,Năm nay,(8.011.302.539),-8011302539.0,-8011302539.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,9,4,12,Năm trước,(56.895.259.955),-56895259955.0,-56895259955.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,10,0,14,Mã số,14,14.0,14.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,10,1,14,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tiền lãi vay đã trả,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,10,2,14,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,10,3,14,Năm nay,(199.524.944.717),-199524944717.0,-199524944717.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,10,4,14,Năm trước,(99.660.452.218),-99660452218.0,-99660452218.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,11,0,15,Mã số,15,15.0,15.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,11,1,15,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Thuế thu nhập doanh nghiệp đã nộp,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,11,2,15,Thuyết minh,20,20.0,20.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,11,3,15,Năm nay,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,11,4,15,Năm trước,(12.421.778.370),-12421778370.0,-12421778370.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,12,0,17,Mã số,17,17.0,17.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,12,1,17,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tiền chi khác cho hoạt động kinh doanh,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,12,2,17,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,12,3,17,Năm nay,(11.722.068.762),-11722068762.0,-11722068762.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,12,4,17,Năm trước,(8.864.118.273),-8864118273.0,-8864118273.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,13,0,20,Mã số,20,20.0,20.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,13,1,20,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động kinh doanh,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,13,2,20,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,13,3,20,Năm nay,536.887.794.131,536887794131.0,536887794131.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,13,4,20,Năm trước,(461.165.953.304),-461165953304.0,-461165953304.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,14,0,,Mã số,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,14,1,,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,II. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG ĐẦU TƯ,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,14,2,,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,14,3,,Năm nay,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,14,4,,Năm trước,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,15,0,21,Mã số,21,21.0,21.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,15,1,21,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tiền chi để mua sắm tài sản cố định và bất động sản đầu tư,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,15,2,21,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,15,3,21,Năm nay,(98.883.263.330),-98883263330.0,-98883263330.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,15,4,21,Năm trước,(18.141.062.794),-18141062794.0,-18141062794.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,16,0,22,Mã số,22,22.0,22.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,16,1,22,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tiền thu do thanh lý tài sản cố định,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,16,2,22,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,16,3,22,Năm nay,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,16,4,22,Năm trước,125.984.601.022,125984601022.0,125984601022.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,17,0,23,Mã số,23,23.0,23.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,17,1,23,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tiền chi cho vay,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,17,2,23,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,17,3,23,Năm nay,(1.008.599.200.000),-1008599200000.0,-1008599200000.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,17,4,23,Năm trước,(1.039.897.832.482),-1039897832482.0,-1039897832482.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,18,0,24,Mã số,24,24.0,24.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,18,1,24,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tiền thu hồi cho vay,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,18,2,24,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,18,3,24,Năm nay,1.188.451.523.779,1188451523779.0,1188451523779.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,18,4,24,Năm trước,907.357.397.279,907357397279.0,907357397279.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,19,0,25,Mã số,25,25.0,25.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,19,1,25,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tiền chi đầu tư góp vốn vào đơn vị khác,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,19,2,25,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,19,3,25,Năm nay,(654.943.685.084),-654943685084.0,-654943685084.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,19,4,25,Năm trước,(12.030.000.000),-12030000000.0,-12030000000.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,20,0,26,Mã số,26,26.0,26.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,20,1,26,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tiền thu hồi đầu tư góp vốn vào đơn vị khác,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,20,2,26,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,20,3,26,Năm nay,639.760.228.804,639760228804.0,639760228804.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,20,4,26,Năm trước,324.391.744.137,324391744137.0,324391744137.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,21,0,27,Mã số,27,27.0,27.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,21,1,27,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Tiền thu lãi cho vay và cổ tức,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,21,2,27,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,21,3,27,Năm nay,264.712.819.713,264712819713.0,264712819713.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,21,4,27,Năm trước,67.866.727.559,67866727559.0,67866727559.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,22,0,30,Mã số,30,30.0,30.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,22,1,30,CHỈ TIÊU | I. LƯU CHUYÊN TIÊN TỪ HOẠT ĐỘNG KINH DOANH,Lưu chuyển tiền thuần từ hoạt động đầu tư,,,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,22,2,30,Thuyết minh,,,,False,True
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,22,3,30,Năm nay,330.498.423.882,330498423882.0,330498423882.0,False,False
+SCR_financial_statements_2020_separate|table_9,SCR_financial_statements_2020_separate,SCR,2020,separate,VND,22,4,30,Năm trước,355.531.574.721,355531574721.0,355531574721.0,False,False

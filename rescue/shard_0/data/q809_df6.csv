@@ -1,0 +1,51 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,0,0,Thuế thu nhập doanh nghiệp,column_1,Thuế thu nhập doanh nghiệp,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,0,1,Thuế thu nhập doanh nghiệp,Số đầu nămVND,(8.917.172.011),-8917172011.0,-8917172011.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,0,2,Thuế thu nhập doanh nghiệp,Số phải nộp trong nămVND,38.599.316.827,38599316827.0,38599316827.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,0,3,Thuế thu nhập doanh nghiệp,Số đã thực nộp/bù trừtrong nămVND,27.752.631.825,27752631825.0,27752631825.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,0,4,Thuế thu nhập doanh nghiệp,Số cuối nămVND,1.929.512.991,1929512991.0,1929512991.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,1,0,Thuế thu nhập cá nhân,column_1,Thuế thu nhập cá nhân,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,1,1,Thuế thu nhập cá nhân,Số đầu nămVND,846.808.138,846808138.0,846808138.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,1,2,Thuế thu nhập cá nhân,Số phải nộp trong nămVND,6.543.928.391,6543928391.0,6543928391.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,1,3,Thuế thu nhập cá nhân,Số đã thực nộp/bù trừtrong nămVND,7.300.136.529,7300136529.0,7300136529.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,1,4,Thuế thu nhập cá nhân,Số cuối nămVND,90.600.000,90600000.0,90600000.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,2,0,Thuế tài nguyên,column_1,Thuế tài nguyên,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,2,1,Thuế tài nguyên,Số đầu nămVND,9.043.985.340,9043985340.0,9043985340.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,2,2,Thuế tài nguyên,Số phải nộp trong nămVND,103.367.892.420,103367892420.0,103367892420.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,2,3,Thuế tài nguyên,Số đã thực nộp/bù trừtrong nămVND,103.820.240.160,103820240160.0,103820240160.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,2,4,Thuế tài nguyên,Số cuối nămVND,8.591.637.600,8591637600.0,8591637600.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,3,0,Thuế đất,column_1,Thuế đất,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,3,1,Thuế đất,Số đầu nămVND,-,0.0,0.0,True,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,3,2,Thuế đất,Số phải nộp trong nămVND,7.806.753.395,7806753395.0,7806753395.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,3,3,Thuế đất,Số đã thực nộp/bù trừtrong nămVND,13.004.206.595,13004206595.0,13004206595.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,3,4,Thuế đất,Số cuối nămVND,(5.197.453.200),-5197453200.0,-5197453200.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,4,0,Thuế môn bài,column_1,Thuế môn bài,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,4,1,Thuế môn bài,Số đầu nămVND,-,0.0,0.0,True,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,4,2,Thuế môn bài,Số phải nộp trong nămVND,4.000.000,4000000.0,4000000.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,4,3,Thuế môn bài,Số đã thực nộp/bù trừtrong nămVND,4.000.000,4000000.0,4000000.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,4,4,Thuế môn bài,Số cuối nămVND,-,0.0,0.0,True,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,5,0,"Phí, lệ phí và các khoản phải nộp khác",column_1,"Phí, lệ phí và các khoản phải nộp khác",,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,5,1,"Phí, lệ phí và các khoản phải nộp khác",Số đầu nămVND,445.887.900,445887900.0,445887900.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,5,2,"Phí, lệ phí và các khoản phải nộp khác",Số phải nộp trong nămVND,16.082.412.986,16082412986.0,16082412986.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,5,3,"Phí, lệ phí và các khoản phải nộp khác",Số đã thực nộp/bù trừtrong nămVND,16.447.705.036,16447705036.0,16447705036.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,5,4,"Phí, lệ phí và các khoản phải nộp khác",Số cuối nămVND,80.595.850,80595850.0,80595850.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,6,0,,column_1,,,,False,True
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,6,1,,Số đầu nămVND,1.419.509.367,1419509367.0,1419509367.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,6,2,,Số phải nộp trong nămVND,172.404.304.019,172404304019.0,172404304019.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,6,3,,Số đã thực nộp/bù trừtrong nămVND,168.328.920.145,168328920145.0,168328920145.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,6,4,,Số cuối nămVND,5.494.893.241,5494893241.0,5494893241.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,7,0,Trong đó:,column_1,Trong đó:,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,7,1,Trong đó:,Số đầu nămVND,Trong đó:,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,7,2,Trong đó:,Số phải nộp trong nămVND,Trong đó:,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,7,3,Trong đó:,Số đã thực nộp/bù trừtrong nămVND,Trong đó:,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,7,4,Trong đó:,Số cuối nămVND,Trong đó:,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,8,0,Thuế và các khoản phải thu Nhà nước,column_1,Thuế và các khoản phải thu Nhà nước,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,8,1,Thuế và các khoản phải thu Nhà nước,Số đầu nămVND,8.917.172.011,8917172011.0,8917172011.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,8,2,Thuế và các khoản phải thu Nhà nước,Số phải nộp trong nămVND,,,,False,True
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,8,3,Thuế và các khoản phải thu Nhà nước,Số đã thực nộp/bù trừtrong nămVND,,,,False,True
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,8,4,Thuế và các khoản phải thu Nhà nước,Số cuối nămVND,5.197.453.200,5197453200.0,5197453200.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,9,0,Thuế và các khoản phải nộp Nhà nước,column_1,Thuế và các khoản phải nộp Nhà nước,,,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,9,1,Thuế và các khoản phải nộp Nhà nước,Số đầu nămVND,10.336.681.378,10336681378.0,10336681378.0,False,False
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,9,2,Thuế và các khoản phải nộp Nhà nước,Số phải nộp trong nămVND,,,,False,True
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,9,3,Thuế và các khoản phải nộp Nhà nước,Số đã thực nộp/bù trừtrong nămVND,,,,False,True
+HND_financial_statements_2025|table_16,HND_financial_statements_2025,HND,2025,unknown,VND,9,4,Thuế và các khoản phải nộp Nhà nước,Số cuối nămVND,10.692.346.441,10692346441.0,10692346441.0,False,False

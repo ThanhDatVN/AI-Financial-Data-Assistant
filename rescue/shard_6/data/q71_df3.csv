@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,0,0,Doanh thu bán điện,column_1,Doanh thu bán điện,,,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,0,1,Doanh thu bán điện,Năm nay,549.518.696.003,549518696003.0,549518696003.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,0,2,Doanh thu bán điện,VNDNăm trước,540.621.081.374,540621081374.0,540621081374.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,1,0,Doanh thu cung cấp thiết bị,column_1,Doanh thu cung cấp thiết bị,,,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,1,1,Doanh thu cung cấp thiết bị,Năm nay,127.458.977.639,127458977639.0,127458977639.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,1,2,Doanh thu cung cấp thiết bị,VNDNăm trước,17.032.208.770,17032208770.0,17032208770.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,2,0,Doanh thu cung cấp dịch vụ,column_1,Doanh thu cung cấp dịch vụ,,,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,2,1,Doanh thu cung cấp dịch vụ,Năm nay,28.653.807.279,28653807279.0,28653807279.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,2,2,Doanh thu cung cấp dịch vụ,VNDNăm trước,29.609.831.922,29609831922.0,29609831922.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,3,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,3,1,TỔNG CỘNG,Năm nay,705.631.480.921,705631480921.0,705631480921.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,3,2,TỔNG CỘNG,VNDNăm trước,587.263.122.066,587263122066.0,587263122066.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,4,0,Trong đó:,column_1,Trong đó:,,,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,4,1,Trong đó:,Năm nay,Trong đó:,,,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,4,2,Trong đó:,VNDNăm trước,Trong đó:,,,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,5,0,Doanh thu đối với bên khác,column_1,Doanh thu đối với bên khác,,,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,5,1,Doanh thu đối với bên khác,Năm nay,551.808.025.831,551808025831.0,551808025831.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,5,2,Doanh thu đối với bên khác,VNDNăm trước,537.567.734.428,537567734428.0,537567734428.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,6,0,Doanh thu đối với bên liên quan(TM số 28),column_1,Doanh thu đối với bên liên quan(TM số 28),,,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,6,1,Doanh thu đối với bên liên quan(TM số 28),Năm nay,153.823.455.090,153823455090.0,153823455090.0,False,False
+GEG_financial_statements_2025_separate|table_41,GEG_financial_statements_2025_separate,GEG,2025,separate,VND,6,2,Doanh thu đối với bên liên quan(TM số 28),VNDNăm trước,49.695.387.638,49695387638.0,49695387638.0,False,False

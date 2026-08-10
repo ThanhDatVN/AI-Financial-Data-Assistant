@@ -1,0 +1,16 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,0,0,Lỗ chênh lệch tỷ giá hối đoái,column_1,Lỗ chênh lệch tỷ giá hối đoái,,,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,0,1,Lỗ chênh lệch tỷ giá hối đoái,Năm nay,768.389.098,768389098.0,768389098.0,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,0,2,Lỗ chênh lệch tỷ giá hối đoái,VNDNăm trước,824.061.075,824061075.0,824061075.0,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,1,0,Lỗ do thanh lý các khoản đầu tư,column_1,Lỗ do thanh lý các khoản đầu tư,,,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,1,1,Lỗ do thanh lý các khoản đầu tư,Năm nay,-,0.0,0.0,True,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,1,2,Lỗ do thanh lý các khoản đầu tư,VNDNăm trước,4.565.437.992,4565437992.0,4565437992.0,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,2,0,Hoàn nhập dự phòng giảm giácác khoản đầu tư tài chính,column_1,Hoàn nhập dự phòng giảm giácác khoản đầu tư tài chính,,,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,2,1,Hoàn nhập dự phòng giảm giácác khoản đầu tư tài chính,Năm nay,(22.093.123.024),-22093123024.0,-22093123024.0,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,2,2,Hoàn nhập dự phòng giảm giácác khoản đầu tư tài chính,VNDNăm trước,(107.582.989.651),-107582989651.0,-107582989651.0,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,3,0,Chi phí tài chính khác,column_1,Chi phí tài chính khác,,,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,3,1,Chi phí tài chính khác,Năm nay,549.410.035,549410035.0,549410035.0,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,3,2,Chi phí tài chính khác,VNDNăm trước,132.869.691,132869691.0,132869691.0,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,4,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,4,1,TỔNG CỘNG,Năm nay,(20.775.323.891),-20775323891.0,-20775323891.0,False,False
+SAB_financial_statements_2016_separate|table_50,SAB_financial_statements_2016_separate,SAB,2016,separate,VND,4,2,TỔNG CỘNG,VNDNăm trước,(102.060.620.893),-102060620893.0,-102060620893.0,False,False

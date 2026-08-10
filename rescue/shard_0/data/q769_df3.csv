@@ -1,0 +1,41 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,0,0,Số dư đầu năm,Nguyên giá,Số dư đầu năm,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,0,1,Số dư đầu năm,Quyềnsử dụng đấtVND | Nguyên giá,5.355.027.273,5355027273.0,5355027273.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,0,2,Số dư đầu năm,Phần mềmmáy vi tínhVND | Nguyên giá,966.068.330,966068330.0,966068330.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,0,3,Số dư đầu năm,Tổng cộngVND | Nguyên giá,6.321.095.603,6321095603.0,6321095603.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,1,0,Chuyển từ xây dựng cơ bản dở dang,Nguyên giá,Chuyển từ xây dựng cơ bản dở dang,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,1,1,Chuyển từ xây dựng cơ bản dở dang,Quyềnsử dụng đấtVND | Nguyên giá,-,0.0,0.0,True,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,1,2,Chuyển từ xây dựng cơ bản dở dang,Phần mềmmáy vi tínhVND | Nguyên giá,5.761.972.060,5761972060.0,5761972060.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,1,3,Chuyển từ xây dựng cơ bản dở dang,Tổng cộngVND | Nguyên giá,5.761.972.060,5761972060.0,5761972060.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,2,0,Số dư cuối năm,Nguyên giá,Số dư cuối năm,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,2,1,Số dư cuối năm,Quyềnsử dụng đấtVND | Nguyên giá,5.355.027.273,5355027273.0,5355027273.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,2,2,Số dư cuối năm,Phần mềmmáy vi tínhVND | Nguyên giá,6.728.040.390,6728040390.0,6728040390.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,2,3,Số dư cuối năm,Tổng cộngVND | Nguyên giá,12.083.067.663,12083067663.0,12083067663.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,3,0,Giá trị hao mòn lũy kế,Nguyên giá,Giá trị hao mòn lũy kế,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,3,1,Giá trị hao mòn lũy kế,Quyềnsử dụng đấtVND | Nguyên giá,Giá trị hao mòn lũy kế,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,3,2,Giá trị hao mòn lũy kế,Phần mềmmáy vi tínhVND | Nguyên giá,Giá trị hao mòn lũy kế,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,3,3,Giá trị hao mòn lũy kế,Tổng cộngVND | Nguyên giá,Giá trị hao mòn lũy kế,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,4,0,Số dư đầu năm,Nguyên giá,Số dư đầu năm,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,4,1,Số dư đầu năm,Quyềnsử dụng đấtVND | Nguyên giá,-,0.0,0.0,True,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,4,2,Số dư đầu năm,Phần mềmmáy vi tínhVND | Nguyên giá,941.623.890,941623890.0,941623890.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,4,3,Số dư đầu năm,Tổng cộngVND | Nguyên giá,941.623.890,941623890.0,941623890.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,5,0,Khấu hao trong năm,Nguyên giá,Khấu hao trong năm,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,5,1,Khấu hao trong năm,Quyềnsử dụng đấtVND | Nguyên giá,-,0.0,0.0,True,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,5,2,Khấu hao trong năm,Phần mềmmáy vi tínhVND | Nguyên giá,498.497.676,498497676.0,498497676.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,5,3,Khấu hao trong năm,Tổng cộngVND | Nguyên giá,498.497.676,498497676.0,498497676.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,6,0,Số dư cuối năm,Nguyên giá,Số dư cuối năm,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,6,1,Số dư cuối năm,Quyềnsử dụng đấtVND | Nguyên giá,-,0.0,0.0,True,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,6,2,Số dư cuối năm,Phần mềmmáy vi tínhVND | Nguyên giá,1.440.121.566,1440121566.0,1440121566.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,6,3,Số dư cuối năm,Tổng cộngVND | Nguyên giá,1.440.121.566,1440121566.0,1440121566.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,7,0,Giá trị còn lại,Nguyên giá,Giá trị còn lại,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,7,1,Giá trị còn lại,Quyềnsử dụng đấtVND | Nguyên giá,Giá trị còn lại,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,7,2,Giá trị còn lại,Phần mềmmáy vi tínhVND | Nguyên giá,Giá trị còn lại,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,7,3,Giá trị còn lại,Tổng cộngVND | Nguyên giá,Giá trị còn lại,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,8,0,Số dư đầu năm,Nguyên giá,Số dư đầu năm,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,8,1,Số dư đầu năm,Quyềnsử dụng đấtVND | Nguyên giá,5.355.027.273,5355027273.0,5355027273.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,8,2,Số dư đầu năm,Phần mềmmáy vi tínhVND | Nguyên giá,24.444.440,24444440.0,24444440.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,8,3,Số dư đầu năm,Tổng cộngVND | Nguyên giá,5.379.471.713,5379471713.0,5379471713.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,9,0,Số dư cuối năm,Nguyên giá,Số dư cuối năm,,,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,9,1,Số dư cuối năm,Quyềnsử dụng đấtVND | Nguyên giá,5.355.027.273,5355027273.0,5355027273.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,9,2,Số dư cuối năm,Phần mềmmáy vi tínhVND | Nguyên giá,5.287.918.824,5287918824.0,5287918824.0,False,False
+VSC_financial_statements_2015_separate|table_16,VSC_financial_statements_2015_separate,VSC,2015,separate,VND,9,3,Số dư cuối năm,Tổng cộngVND | Nguyên giá,10.642.946.097,10642946097.0,10642946097.0,False,False

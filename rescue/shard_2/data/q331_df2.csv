@@ -1,0 +1,57 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,0,0,Đại diện chủ sở hữu (NHNN),Bên liên quan,Đại diện chủ sở hữu (NHNN),,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,0,1,Đại diện chủ sở hữu (NHNN),Số dư,- Tiền gửi của BIDV tại đại diện chủ sở hữu,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,0,2,Đại diện chủ sở hữu (NHNN),Phải thu | Triệu VND,106.304.480,106304480.0,106304480000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,0,3,Đại diện chủ sở hữu (NHNN),(Phải trả) | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,1,0,Đại diện chủ sở hữu (NHNN),Bên liên quan,Đại diện chủ sở hữu (NHNN),,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,1,1,Đại diện chủ sở hữu (NHNN),Số dư,- Các khoản vay của BIDV từ đại diện chủ sở hữu,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,1,2,Đại diện chủ sở hữu (NHNN),Phải thu | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,1,3,Đại diện chủ sở hữu (NHNN),(Phải trả) | Triệu VND,(6.205.292),-6205292.0,-6205292000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,2,0,Bên liên quan của chủ sở hữu (BTC và KBNN),Bên liên quan,Bên liên quan của chủ sở hữu (BTC và KBNN),,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,2,1,Bên liên quan của chủ sở hữu (BTC và KBNN),Số dư,- Tiền gửi của bên liên quan của chủ sở hữu tại BIDV,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,2,2,Bên liên quan của chủ sở hữu (BTC và KBNN),Phải thu | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,2,3,Bên liên quan của chủ sở hữu (BTC và KBNN),(Phải trả) | Triệu VND,(145.504.247),-145504247.0,-145504247000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,3,0,Cổ đông,Bên liên quan,Cổ đông,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,3,1,Cổ đông,Số dư,- Tiền gửi của BIDV tại cổ đông chiến lược,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,3,2,Cổ đông,Phải thu | Triệu VND,238.023,238023.0,238023000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,3,3,Cổ đông,(Phải trả) | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,4,0,chiến lược,Bên liên quan,chiến lược,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,4,1,chiến lược,Số dư,- Tiền gửi tại BIDV của cổ đông chiến lược,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,4,2,chiến lược,Phải thu | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,4,3,chiến lược,(Phải trả) | Triệu VND,(102.050),-102050.0,-102050000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,5,0,Các công ty con,Bên liên quan,Các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,5,1,Các công ty con,Số dư,- Tiền gửi tại BIDV của các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,5,2,Các công ty con,Phải thu | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,5,3,Các công ty con,(Phải trả) | Triệu VND,(4.793.732),-4793732.0,-4793732000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,6,0,Các công ty con,Bên liên quan,Các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,6,1,Các công ty con,Số dư,- Tiền vay từ BIDV của các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,6,2,Các công ty con,Phải thu | Triệu VND,765.000,765000.0,765000000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,6,3,Các công ty con,(Phải trả) | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,7,0,Các công ty con,Bên liên quan,Các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,7,1,Các công ty con,Số dư,- Tiền gửi của BIDV tại các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,7,2,Các công ty con,Phải thu | Triệu VND,6.985.609,6985609.0,6985609000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,7,3,Các công ty con,(Phải trả) | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,8,0,Các công ty con,Bên liên quan,Các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,8,1,Các công ty con,Số dư,- Tiền BIDV vay của các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,8,2,Các công ty con,Phải thu | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,8,3,Các công ty con,(Phải trả) | Triệu VND,(1.666),-1666.0,-1666000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,9,0,Các công ty con,Bên liên quan,Các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,9,1,Các công ty con,Số dư,- Phải thu các công ty con,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,9,2,Các công ty con,Phải thu | Triệu VND,222.000,222000.0,222000000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,9,3,Các công ty con,(Phải trả) | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,10,0,Các công ty liên doanh,Bên liên quan,Các công ty liên doanh,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,10,1,Các công ty liên doanh,Số dư,- Tiền gửi của các công ty liên doanh,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,10,2,Các công ty liên doanh,Phải thu | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,10,3,Các công ty liên doanh,(Phải trả) | Triệu VND,(4.897.335),-4897335.0,-4897335000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,11,0,Các công ty liên doanh,Bên liên quan,Các công ty liên doanh,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,11,1,Các công ty liên doanh,Số dư,- Tiền gửi của BIDV tại các công ty liên doanh,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,11,2,Các công ty liên doanh,Phải thu | Triệu VND,4.879.521,4879521.0,4879521000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,11,3,Các công ty liên doanh,(Phải trả) | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,12,0,Các công ty liên kết,Bên liên quan,Các công ty liên kết,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,12,1,Các công ty liên kết,Số dư,- Tiền gửi tại BIDV của các công ty liên kết,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,12,2,Các công ty liên kết,Phải thu | Triệu VND,-,0.0,0.0,True,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,12,3,Các công ty liên kết,(Phải trả) | Triệu VND,(612.349),-612349.0,-612349000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,13,0,Các công ty liên kết,Bên liên quan,Các công ty liên kết,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,13,1,Các công ty liên kết,Số dư,- Tiền vay từ BIDV của các công ty liên kết,,,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,13,2,Các công ty liên kết,Phải thu | Triệu VND,311.578,311578.0,311578000000.0,False,False
+BID_financial_statements_2022_separate|table_82,BID_financial_statements_2022_separate,BID,2022,separate,MILLION_VND,13,3,Các công ty liên kết,(Phải trả) | Triệu VND,-,0.0,0.0,True,False

@@ -1,0 +1,16 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,0,0,Cổ tức được nhận,column_1,Cổ tức được nhận,,,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,0,1,Cổ tức được nhận,Năm nay,42.395.046.500,42395046500.0,42395046500.0,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,0,2,Cổ tức được nhận,VNDNăm trước,20.049.734.928,20049734928.0,20049734928.0,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,1,0,Lãi cho bên liên quan vay,column_1,Lãi cho bên liên quan vay,,,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,1,1,Lãi cho bên liên quan vay,Năm nay,23.949.720.002,23949720002.0,23949720002.0,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,1,2,Lãi cho bên liên quan vay,VNDNăm trước,20.195.208.753,20195208753.0,20195208753.0,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,2,0,Lãi tiền gửi ngân hàng,column_1,Lãi tiền gửi ngân hàng,,,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,2,1,Lãi tiền gửi ngân hàng,Năm nay,3.202.439.500,3202439500.0,3202439500.0,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,2,2,Lãi tiền gửi ngân hàng,VNDNăm trước,11.153.139.302,11153139302.0,11153139302.0,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,3,0,Lãi thanh lý các khoản đầu tư,column_1,Lãi thanh lý các khoản đầu tư,,,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,3,1,Lãi thanh lý các khoản đầu tư,Năm nay,14.250.407.383,14250407383.0,14250407383.0,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,3,2,Lãi thanh lý các khoản đầu tư,VNDNăm trước,13.604.000.000,13604000000.0,13604000000.0,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,4,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,4,1,TỔNG CỘNG,Năm nay,83.797.613.385,83797613385.0,83797613385.0,False,False
+NLG_financial_statements_2015_separate|table_47,NLG_financial_statements_2015_separate,NLG,2015,separate,VND,4,2,TỔNG CỘNG,VNDNăm trước,65.002.082.983,65002082983.0,65002082983.0,False,False

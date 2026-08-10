@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,0,0,Chi phí nhân viên,column_1,Chi phí nhân viên,,,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,0,1,Chi phí nhân viên,2023VND,36.183.988.796,36183988796.0,36183988796.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,0,2,Chi phí nhân viên,2022VND,30.630.955.899,30630955899.0,30630955899.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,1,0,"Phân bổ chi phí sửa chữa văn phòng, công cụ và dụng cụ và các chi phí trả trước dài hạn khác",column_1,"Phân bổ chi phí sửa chữa văn phòng, công cụ và dụng cụ và các chi phí trả trước dài hạn khác",,,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,1,1,"Phân bổ chi phí sửa chữa văn phòng, công cụ và dụng cụ và các chi phí trả trước dài hạn khác",2023VND,6.821.208.587,6821208587.0,6821208587.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,1,2,"Phân bổ chi phí sửa chữa văn phòng, công cụ và dụng cụ và các chi phí trả trước dài hạn khác",2022VND,2.556.315.001,2556315001.0,2556315001.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,2,0,Chi phí khấu hao,column_1,Chi phí khấu hao,,,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,2,1,Chi phí khấu hao,2023VND,29.557.989.724,29557989724.0,29557989724.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,2,2,Chi phí khấu hao,2022VND,18.485.468.508,18485468508.0,18485468508.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,3,0,Chi phí dịch vụ mua ngoài,column_1,Chi phí dịch vụ mua ngoài,,,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,3,1,Chi phí dịch vụ mua ngoài,2023VND,78.616.491.465,78616491465.0,78616491465.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,3,2,Chi phí dịch vụ mua ngoài,2022VND,54.069.957.922,54069957922.0,54069957922.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,4,0,Phí kiểm toán báo cáo tài chính,column_1,Phí kiểm toán báo cáo tài chính,,,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,4,1,Phí kiểm toán báo cáo tài chính,2023VND,972.700.000,972700000.0,972700000.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,4,2,Phí kiểm toán báo cáo tài chính,2022VND,885.800.000,885800000.0,885800000.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,5,0,Chi phí quản lý doanh nghiệp khác,column_1,Chi phí quản lý doanh nghiệp khác,,,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,5,1,Chi phí quản lý doanh nghiệp khác,2023VND,73.381.951.791,73381951791.0,73381951791.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,5,2,Chi phí quản lý doanh nghiệp khác,2022VND,56.965.400.180,56965400180.0,56965400180.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,6,0,,column_1,,,,False,True
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,6,1,,2023VND,225.534.330.363,225534330363.0,225534330363.0,False,False
+HPG_financial_statements_2023_separate|table_33,HPG_financial_statements_2023_separate,HPG,2023,separate,VND,6,2,,2022VND,163.593.897.510,163593897510.0,163593897510.0,False,False

@@ -1,0 +1,53 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,0,0,Doanh thu hoạt động và Doanh thu hoạt động tài chính,Nội dung,Doanh thu hoạt động và Doanh thu hoạt động tài chính,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,0,1,Doanh thu hoạt động và Doanh thu hoạt động tài chính,Năm 2023 | ( Triệu đồng ),"953,274",953.274,953274000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,0,2,Doanh thu hoạt động và Doanh thu hoạt động tài chính,Năm 2022 | ( Triệu đồng ),"851,608",851.608,851608000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,0,3,Doanh thu hoạt động và Doanh thu hoạt động tài chính,Biến động (%),11.94%,11.94,11.94,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,1,0,Trong đó,Nội dung,Trong đó,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,1,1,Trong đó,Năm 2023 | ( Triệu đồng ),,,,False,True
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,1,2,Trong đó,Năm 2022 | ( Triệu đồng ),,,,False,True
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,1,3,Trong đó,Biến động (%),,,,False,True
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,2,0,Doanh thu đã thực hiện,Nội dung,Doanh thu đã thực hiện,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,2,1,Doanh thu đã thực hiện,Năm 2023 | ( Triệu đồng ),"921,367",921.367,921367000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,2,2,Doanh thu đã thực hiện,Năm 2022 | ( Triệu đồng ),"1,048,228",,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,2,3,Doanh thu đã thực hiện,Biến động (%),-12.10%,-12.1,-12.1,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,3,0,Doanh thu chưa thực hiện,Nội dung,Doanh thu chưa thực hiện,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,3,1,Doanh thu chưa thực hiện,Năm 2023 | ( Triệu đồng ),"31,907",31.907,31907000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,3,2,Doanh thu chưa thực hiện,Năm 2022 | ( Triệu đồng ),"-196,620",-196.62,-196620000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,3,3,Doanh thu chưa thực hiện,Biến động (%),116.23%,116.23,116.23,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,4,0,Lợi nhuận trước thuế,Nội dung,Lợi nhuận trước thuế,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,4,1,Lợi nhuận trước thuế,Năm 2023 | ( Triệu đồng ),"541,945",541.945,541945000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,4,2,Lợi nhuận trước thuế,Năm 2022 | ( Triệu đồng ),"441,530",441.53,441530000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,4,3,Lợi nhuận trước thuế,Biến động (%),22.74%,22.74,22.74,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,5,0,Trong đó,Nội dung,Trong đó,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,5,1,Trong đó,Năm 2023 | ( Triệu đồng ),,,,False,True
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,5,2,Trong đó,Năm 2022 | ( Triệu đồng ),,,,False,True
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,5,3,Trong đó,Biến động (%),,,,False,True
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,6,0,Lợi nhuận trước thuế đã thực hiện,Nội dung,Lợi nhuận trước thuế đã thực hiện,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,6,1,Lợi nhuận trước thuế đã thực hiện,Năm 2023 | ( Triệu đồng ),"510,039",510.039,510039000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,6,2,Lợi nhuận trước thuế đã thực hiện,Năm 2022 | ( Triệu đồng ),"638,121",638.121,638121000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,6,3,Lợi nhuận trước thuế đã thực hiện,Biến động (%),-20.07%,-20.07,-20.07,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,7,0,Lợi nhuận trước thuế chưa thực hiện,Nội dung,Lợi nhuận trước thuế chưa thực hiện,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,7,1,Lợi nhuận trước thuế chưa thực hiện,Năm 2023 | ( Triệu đồng ),"31,906",31.906,31906000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,7,2,Lợi nhuận trước thuế chưa thực hiện,Năm 2022 | ( Triệu đồng ),"-196,591",-196.591,-196591000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,7,3,Lợi nhuận trước thuế chưa thực hiện,Biến động (%),116.23%,116.23,116.23,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,8,0,Thuế TNDN,Nội dung,Thuế TNDN,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,8,1,Thuế TNDN,Năm 2023 | ( Triệu đồng ),"97,027",97.027,97027000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,8,2,Thuế TNDN,Năm 2022 | ( Triệu đồng ),"123,305",123.305,123305000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,8,3,Thuế TNDN,Biến động (%),-21.31%,-21.31,-21.31,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,9,0,Lợi nhuận sau thuế,Nội dung,Lợi nhuận sau thuế,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,9,1,Lợi nhuận sau thuế,Năm 2023 | ( Triệu đồng ),"444,918",444.918,444918000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,9,2,Lợi nhuận sau thuế,Năm 2022 | ( Triệu đồng ),"318,225",318.225,318225000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,9,3,Lợi nhuận sau thuế,Biến động (%),39.81%,39.81,39.81,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,10,0,Trong đó,Nội dung,Trong đó,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,10,1,Trong đó,Năm 2023 | ( Triệu đồng ),,,,False,True
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,10,2,Trong đó,Năm 2022 | ( Triệu đồng ),,,,False,True
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,10,3,Trong đó,Biến động (%),,,,False,True
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,11,0,Lợi nhuận sau thuế đã thực hiện,Nội dung,Lợi nhuận sau thuế đã thực hiện,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,11,1,Lợi nhuận sau thuế đã thực hiện,Năm 2023 | ( Triệu đồng ),"413,012",413.012,413012000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,11,2,Lợi nhuận sau thuế đã thực hiện,Năm 2022 | ( Triệu đồng ),"514,816",514.816,514816000.00000006,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,11,3,Lợi nhuận sau thuế đã thực hiện,Biến động (%),-19.77%,-19.77,-19.77,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,12,0,Lợi nhuận sau thuế chưa thực hiện,Nội dung,Lợi nhuận sau thuế chưa thực hiện,,,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,12,1,Lợi nhuận sau thuế chưa thực hiện,Năm 2023 | ( Triệu đồng ),"31,906",31.906,31906000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,MILLION_VND,12,2,Lợi nhuận sau thuế chưa thực hiện,Năm 2022 | ( Triệu đồng ),"-196,591",-196.591,-196591000.0,False,False
+FTS_financial_statements_2023|table_1,FTS_financial_statements_2023,FTS,2023,unknown,PERCENT,12,3,Lợi nhuận sau thuế chưa thực hiện,Biến động (%),116.23%,116.23,116.23,False,False

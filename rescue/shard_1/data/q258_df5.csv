@@ -1,0 +1,101 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,0,0,100,Mã số,100,100.0,100.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,0,1,100,TÀI SẢN,A. TÀI SẢN NGÁN HẠN,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,0,2,100,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,0,3,100,31/12/2017 | VND,1.373.987.298.256,1373987298256.0,1373987298256.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,0,4,100,01/01/2017 | VND,1.940.988.596.497,1940988596497.0,1940988596497.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,1,0,110,Mã số,110,110.0,110.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,1,1,110,TÀI SẢN,I. Tiền và các khoản tương đương tiền,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,1,2,110,Thuyết minh,3,3.0,3.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,1,3,110,31/12/2017 | VND,351.215.705.931,351215705931.0,351215705931.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,1,4,110,01/01/2017 | VND,1.036.713.926.456,1036713926456.0,1036713926456.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,2,0,111,Mã số,111,111.0,111.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,2,1,111,TÀI SẢN,1. Tiền,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,2,2,111,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,2,3,111,31/12/2017 | VND,83.206.612.103,83206612103.0,83206612103.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,2,4,111,01/01/2017 | VND,194.078.007.128,194078007128.0,194078007128.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,3,0,112,Mã số,112,112.0,112.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,3,1,112,TÀI SẢN,2. Các khoản tương đương tiền,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,3,2,112,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,3,3,112,31/12/2017 | VND,268.009.093.828,268009093828.0,268009093828.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,3,4,112,01/01/2017 | VND,842.635.919.328,842635919328.0,842635919328.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,4,0,120,Mã số,120,120.0,120.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,4,1,120,TÀI SẢN,II. Các khoản đầu tư tài chính ngắn hạn,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,4,2,120,Thuyết minh,4,4.0,4.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,4,3,120,31/12/2017 | VND,53.281.327.261,53281327261.0,53281327261.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,4,4,120,01/01/2017 | VND,155.612.407.653,155612407653.0,155612407653.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,5,0,121,Mã số,121,121.0,121.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,5,1,121,TÀI SẢN,1. Chứng khoán kinh doanh,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,5,2,121,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,5,3,121,31/12/2017 | VND,6.246.878.161,6246878161.0,6246878161.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,5,4,121,01/01/2017 | VND,156.682.799.298,156682799298.0,156682799298.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,6,0,122,Mã số,122,122.0,122.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,6,1,122,TÀI SẢN,2. Dự phòng giảm giá chứng khoán kinh doanh,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,6,2,122,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,6,3,122,31/12/2017 | VND,(2.965.550.900),-2965550900.0,-2965550900.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,6,4,122,01/01/2017 | VND,(135.070.391.645),-135070391645.0,-135070391645.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,7,0,123,Mã số,123,123.0,123.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,7,1,123,TÀI SẢN,3. Đầu tư nắm giữ đến ngày đáo hạn,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,7,2,123,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,7,3,123,31/12/2017 | VND,50.000.000.000,50000000000.0,50000000000.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,7,4,123,01/01/2017 | VND,134.000.000.000,134000000000.0,134000000000.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,8,0,130,Mã số,130,130.0,130.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,8,1,130,TÀI SẢN,III. Các khoản phải thu ngắn hạn,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,8,2,130,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,8,3,130,31/12/2017 | VND,892.634.244.924,892634244924.0,892634244924.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,8,4,130,01/01/2017 | VND,664.442.157.953,664442157953.0,664442157953.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,9,0,131,Mã số,131,131.0,131.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,9,1,131,TÀI SẢN,1. Phải thu ngắn hạn của khách hàng,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,9,2,131,Thuyết minh,5,5.0,5.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,9,3,131,31/12/2017 | VND,4.535.614.110,4535614110.0,4535614110.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,9,4,131,01/01/2017 | VND,3.338.385.566,3338385566.0,3338385566.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,10,0,132,Mã số,132,132.0,132.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,10,1,132,TÀI SẢN,2. Trả trước cho người bán ngắn hạn,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,10,2,132,Thuyết minh,6,6.0,6.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,10,3,132,31/12/2017 | VND,21.327.327.500,21327327500.0,21327327500.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,10,4,132,01/01/2017 | VND,5.959.085.800,5959085800.0,5959085800.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,11,0,135,Mã số,135,135.0,135.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,11,1,135,TÀI SẢN,3. Phải thu về cho vay ngắn hạn,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,11,2,135,Thuyết minh,7,7.0,7.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,11,3,135,31/12/2017 | VND,131.104.875.705,131104875705.0,131104875705.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,11,4,135,01/01/2017 | VND,744.935.767.987,744935767987.0,744935767987.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,12,0,136,Mã số,136,136.0,136.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,12,1,136,TÀI SẢN,4. Phải thu ngắn hạn khác,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,12,2,136,Thuyết minh,8,8.0,8.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,12,3,136,31/12/2017 | VND,762.077.567.327,762077567327.0,762077567327.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,12,4,136,01/01/2017 | VND,607.837.831.871,607837831871.0,607837831871.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,13,0,137,Mã số,137,137.0,137.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,13,1,137,TÀI SẢN,5. Dự phòng phải thu ngắn hạn khó đòi,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,13,2,137,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,13,3,137,31/12/2017 | VND,(26.411.139.718),-26411139718.0,-26411139718.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,13,4,137,01/01/2017 | VND,(697.628.913.271),-697628913271.0,-697628913271.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,14,0,140,Mã số,140,140.0,140.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,14,1,140,TÀI SẢN,IV. Hàng tồn kho,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,14,2,140,Thuyết minh,10,10.0,10.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,14,3,140,31/12/2017 | VND,718.675.481,718675481.0,718675481.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,14,4,140,01/01/2017 | VND,28.805.944.977,28805944977.0,28805944977.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,15,0,141,Mã số,141,141.0,141.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,15,1,141,TÀI SẢN,1. Hàng tồn kho,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,15,2,141,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,15,3,141,31/12/2017 | VND,718.675.481,718675481.0,718675481.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,15,4,141,01/01/2017 | VND,28.805.944.977,28805944977.0,28805944977.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,16,0,150,Mã số,150,150.0,150.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,16,1,150,TÀI SẢN,V. Tài sản ngắn hạn khác,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,16,2,150,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,16,3,150,31/12/2017 | VND,76.137.344.659,76137344659.0,76137344659.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,16,4,150,01/01/2017 | VND,55.414.159.458,55414159458.0,55414159458.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,17,0,151,Mã số,151,151.0,151.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,17,1,151,TÀI SẢN,1. Chi phí trả trước ngắn hạn,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,17,2,151,Thuyết minh,14,14.0,14.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,17,3,151,31/12/2017 | VND,865.253.541,865253541.0,865253541.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,17,4,151,01/01/2017 | VND,395.034.743,395034743.0,395034743.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,18,0,152,Mã số,152,152.0,152.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,18,1,152,TÀI SẢN,2. Thuế giá trị gia tăng được khấu trừ,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,18,2,152,Thuyết minh,,,,False,True
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,18,3,152,31/12/2017 | VND,1.684.628.904,1684628904.0,1684628904.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,18,4,152,01/01/2017 | VND,3.607.963.670,3607963670.0,3607963670.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,19,0,153,Mã số,153,153.0,153.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,19,1,153,TÀI SẢN,3. Thuế và các khoản khác phải thu Nhà nước,,,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,19,2,153,Thuyết minh,17,17.0,17.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,19,3,153,31/12/2017 | VND,73.587.462.214,73587462214.0,73587462214.0,False,False
+GVR_financial_statements_2017_separate|table_5,GVR_financial_statements_2017_separate,GVR,2017,separate,VND,19,4,153,01/01/2017 | VND,51.411.161.045,51411161045.0,51411161045.0,False,False

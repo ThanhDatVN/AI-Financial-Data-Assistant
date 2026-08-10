@@ -1,0 +1,133 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,0,0,B.,column_1,B.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,0,1,B.,TÀI SẢN,TÀI SẢN DÀI HẠN,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,0,2,B.,Mã số,200,200.0,200.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,0,3,B.,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,0,4,B.,Số cuối năm,4.201.156.157.370,4201156157370.0,4201156157370.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,0,5,B.,Số đầu năm,5.761.339.795.356,5761339795356.0,5761339795356.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,1,0,I.,column_1,I.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,1,1,I.,TÀI SẢN,Các khoản phải thu dài hạn,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,1,2,I.,Mã số,210,210.0,210.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,1,3,I.,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,1,4,I.,Số cuối năm,1.339.600.000.000,1339600000000.0,1339600000000.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,1,5,I.,Số đầu năm,2.273.500.000.000,2273500000000.0,2273500000000.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,2,0,1.,column_1,1.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,2,1,1.,TÀI SẢN,Phải thu về cho vay dài hạn,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,2,2,1.,Mã số,215,215.0,215.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,2,3,1.,Thuyết minh,9,9.0,9.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,2,4,1.,Số cuối năm,1.339.600.000.000,1339600000000.0,1339600000000.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,2,5,1.,Số đầu năm,2.200.000.000.000,2200000000000.0,2200000000000.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,3,0,2.,column_1,2.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,3,1,2.,TÀI SẢN,Phải thu dài hạn khác,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,3,2,2.,Mã số,216,216.0,216.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,3,3,2.,Thuyết minh,10,10.0,10.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,3,4,2.,Số cuối năm,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,3,5,2.,Số đầu năm,73.500.000.000,73500000000.0,73500000000.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,4,0,II.,column_1,II.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,4,1,II.,TÀI SẢN,Tài sản cố định,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,4,2,II.,Mã số,220,220.0,220.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,4,3,II.,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,4,4,II.,Số cuối năm,186.867.786.525,186867786525.0,186867786525.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,4,5,II.,Số đầu năm,85.751.925.636,85751925636.0,85751925636.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,5,0,1.,column_1,1.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,5,1,1.,TÀI SẢN,Tài sản cố định hữu hình,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,5,2,1.,Mã số,221,221.0,221.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,5,3,1.,Thuyết minh,14,14.0,14.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,5,4,1.,Số cuối năm,166.772.841.034,166772841034.0,166772841034.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,5,5,1.,Số đầu năm,60.513.580.165,60513580165.0,60513580165.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,6,0,,column_1,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,6,1,,TÀI SẢN,- Nguyên giá,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,6,2,,Mã số,222,222.0,222.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,6,3,,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,6,4,,Số cuối năm,254.197.211.740,254197211740.0,254197211740.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,6,5,,Số đầu năm,135.880.339.811,135880339811.0,135880339811.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,7,0,,column_1,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,7,1,,TÀI SẢN,- Giá trị hao mòn lũy kế,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,7,2,,Mã số,223,223.0,223.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,7,3,,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,7,4,,Số cuối năm,(87.424.370.706),-87424370706.0,-87424370706.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,7,5,,Số đầu năm,(75.366.759.646),-75366759646.0,-75366759646.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,8,0,2.,column_1,2.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,8,1,2.,TÀI SẢN,Tài sản cố định vô hình,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,8,2,2.,Mã số,227,227.0,227.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,8,3,2.,Thuyết minh,15,15.0,15.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,8,4,2.,Số cuối năm,20.094.945.491,20094945491.0,20094945491.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,8,5,2.,Số đầu năm,25.238.345.471,25238345471.0,25238345471.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,9,0,,column_1,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,9,1,,TÀI SẢN,- Nguyên giá,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,9,2,,Mã số,228,228.0,228.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,9,3,,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,9,4,,Số cuối năm,33.445.160.000,33445160000.0,33445160000.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,9,5,,Số đầu năm,33.445.160.000,33445160000.0,33445160000.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,10,0,,column_1,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,10,1,,TÀI SẢN,- Giá trị hao mòn lũy kế,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,10,2,,Mã số,229,229.0,229.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,10,3,,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,10,4,,Số cuối năm,(13.350.214.509),-13350214509.0,-13350214509.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,10,5,,Số đầu năm,(8.206.814.529),-8206814529.0,-8206814529.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,11,0,III.,column_1,III.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,11,1,III.,TÀI SẢN,Bất động sản đầu tư,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,11,2,III.,Mã số,230,230.0,230.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,11,3,III.,Thuyết minh,16,16.0,16.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,11,4,III.,Số cuối năm,787.746.192.379,787746192379.0,787746192379.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,11,5,III.,Số đầu năm,712.802.660.784,712802660784.0,712802660784.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,12,0,,column_1,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,12,1,,TÀI SẢN,- Nguyên giá,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,12,2,,Mã số,231,231.0,231.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,12,3,,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,12,4,,Số cuối năm,1.338.152.750.357,1338152750357.0,1338152750357.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,12,5,,Số đầu năm,1.287.224.354.583,1287224354583.0,1287224354583.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,13,0,,column_1,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,13,1,,TÀI SẢN,- Giá trị hao mòn lũy kế,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,13,2,,Mã số,232,232.0,232.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,13,3,,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,13,4,,Số cuối năm,(550.406.557.978),-550406557978.0,-550406557978.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,13,5,,Số đầu năm,(574.421.693.799),-574421693799.0,-574421693799.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,14,0,IV.,column_1,IV.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,14,1,IV.,TÀI SẢN,Tài sản dở dang dài hạn,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,14,2,IV.,Mã số,240,240.0,240.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,14,3,IV.,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,14,4,IV.,Số cuối năm,127.982.942.807,127982942807.0,127982942807.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,14,5,IV.,Số đầu năm,285.473.519.212,285473519212.0,285473519212.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,15,0,1.,column_1,1.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,15,1,1.,TÀI SẢN,Chỉ phí xây dựng cơ bản dở dang,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,15,2,1.,Mã số,242,242.0,242.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,15,3,1.,Thuyết minh,17,17.0,17.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,15,4,1.,Số cuối năm,127.982.942.807,127982942807.0,127982942807.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,15,5,1.,Số đầu năm,285.473.519.212,285473519212.0,285473519212.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,16,0,V.,column_1,V.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,16,1,V.,TÀI SẢN,Đầu tư tài chính dài hạn,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,16,2,V.,Mã số,250,250.0,250.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,16,3,V.,Thuyết minh,18,18.0,18.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,16,4,V.,Số cuối năm,1.687.812.456.502,1687812456502.0,1687812456502.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,16,5,V.,Số đầu năm,2.403.265.015.095,2403265015095.0,2403265015095.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,17,0,1.,column_1,1.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,17,1,1.,TÀI SẢN,Đầu tư vào công ty liên kết,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,17,2,1.,Mã số,252,252.0,252.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,17,3,1.,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,17,4,1.,Số cuối năm,1.297.812.456.502,1297812456502.0,1297812456502.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,17,5,1.,Số đầu năm,443.137.443.614,443137443614.0,443137443614.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,18,0,2.,column_1,2.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,18,1,2.,TÀI SẢN,Đầu tư góp vốn vào đơn vị khác,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,18,2,2.,Mã số,253,253.0,253.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,18,3,2.,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,18,4,2.,Số cuối năm,390.000.000.000,390000000000.0,390000000000.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,18,5,2.,Số đầu năm,1.960.127.571.481,1960127571481.0,1960127571481.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,19,0,VI.,column_1,VI.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,19,1,VI.,TÀI SẢN,Tài sản dài hạn khác,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,19,2,VI.,Mã số,260,260.0,260.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,19,3,VI.,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,19,4,VI.,Số cuối năm,71.146.779.157,71146779157.0,71146779157.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,19,5,VI.,Số đầu năm,546.674.629,546674629.0,546674629.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,20,0,1.,column_1,1.,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,20,1,1.,TÀI SẢN,Chỉ phí trả trước dài hạn,,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,20,2,1.,Mã số,261,261.0,261.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,20,3,1.,Thuyết minh,13,13.0,13.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,20,4,1.,Số cuối năm,71.146.779.157,71146779157.0,71146779157.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,20,5,1.,Số đầu năm,546.674.629,546674629.0,546674629.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,21,0,,column_1,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,21,1,,TÀI SẢN,TỔNG CỘNG TÀI SẢN (270=100+200),,,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,21,2,,Mã số,270,270.0,270.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,21,3,,Thuyết minh,,,,False,True
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,21,4,,Số cuối năm,12.139.247.381.785,12139247381785.0,12139247381785.0,False,False
+SSH_financial_statements_2025_consolidated|table_4,SSH_financial_statements_2025_consolidated,SSH,2025,consolidated,VND,21,5,,Số đầu năm,14.394.873.021.527,14394873021527.0,14394873021527.0,False,False

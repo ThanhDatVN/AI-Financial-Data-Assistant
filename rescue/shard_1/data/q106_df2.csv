@@ -1,0 +1,248 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,0,0,1,STT,1,1.0,1.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,0,1,1,Tên Công ty,Tổng Công ty Vận tải Thủy Petrolimex (i),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,0,2,1,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,0,3,1,% sở hữu,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,0,4,1,% quyền biểu quyết,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,0,5,1,31/12/2016 | Giá gốc VND,2.196.550.463.185,2196550463185.0,2196550463185.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,0,6,1,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,0,7,1,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,0,8,1,31/12/2016 | % sở hữu,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,0,9,1,% quyền biểu quyết__2,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,0,10,1,1/1/2016 | Giá gốc VND,2.196.550.463.185,2196550463185.0,2196550463185.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,0,11,1,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,0,12,1,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,1,0,2,STT,2,2.0,2.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,1,1,2,Tên Công ty,Công ty LD TNHH Kho Xăng dầu Ngoai quan Văn Phong,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,1,2,2,Địa chỉ,Khánh Hòa,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,1,3,2,% sở hữu,"85,00%",85.0,85.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,1,4,2,% quyền biểu quyết,"85,00%",85.0,85.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,1,5,2,31/12/2016 | Giá gốc VND,629.755.076.565,629755076565.0,629755076565.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,1,6,2,31/12/2016 | Dự phòng VND,(254.024.851.301),-254024851301.0,-254024851301.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,1,7,2,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,1,8,2,31/12/2016 | % sở hữu,"85,00%",85.0,85.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,1,9,2,% quyền biểu quyết__2,"85,00%",85.0,85.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,1,10,2,1/1/2016 | Giá gốc VND,629.755.076.565,629755076565.0,629755076565.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,1,11,2,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,(365.006.241.827),-365006241827.0,-365006241827.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,1,12,2,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,2,0,3,STT,3,3.0,3.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,2,1,3,Tên Công ty,Tổng Công ty Hóa dầu Petrolimex - CTCP,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,2,2,3,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,2,3,3,% sở hữu,"79,07%",79.07,79.07,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,2,4,3,% quyền biểu quyết,"79,07%",79.07,79.07,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,2,5,3,31/12/2016 | Giá gốc VND,570.562.500.000,570562500000.0,570562500000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,2,6,3,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,2,7,3,31/12/2016 | Giá trị hợp lý VND,1.692.995.839.059,1692995839059.0,1692995839059.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,2,8,3,31/12/2016 | % sở hữu,"79,07%",79.07,79.07,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,2,9,3,% quyền biểu quyết__2,"79,07%",79.07,79.07,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,2,10,3,1/1/2016 | Giá gốc VND,570.562.500.000,570562500000.0,570562500000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,2,11,3,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,2,12,3,1/1/2016 | Giá trị hợp lý VND,2.306.307.539.247,2306307539247.0,2306307539247.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,3,0,4,STT,4,4.0,4.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,3,1,4,Tên Công ty,Tổng Công ty Cổ phần Bảo hiểm Petrolimex (ii),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,3,2,4,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,3,3,4,% sở hữu,"51,19%",51.19,51.19,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,3,4,4,% quyền biểu quyết,"51,19%",51.19,51.19,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,3,5,4,31/12/2016 | Giá gốc VND,361.849.067.685,361849067685.0,361849067685.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,3,6,4,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,3,7,4,31/12/2016 | Giá trị hợp lý VND,759.332.575.859,759332575859.0,759332575859.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,3,8,4,31/12/2016 | % sở hữu,"51,19%",51.19,51.19,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,3,9,4,% quyền biểu quyết__2,"51,19%",51.19,51.19,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,3,10,4,1/1/2016 | Giá gốc VND,361.849.067.685,361849067685.0,361849067685.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,3,11,4,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,3,12,4,1/1/2016 | Giá trị hợp lý VND,606.739.426.643,606739426643.0,606739426643.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,4,0,5,STT,5,5.0,5.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,4,1,5,Tên Công ty,Tổng Công ty Gas Petrolimex - CTCP,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,4,2,5,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,4,3,5,% sở hữu,"52,37%",52.37,52.37,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,4,4,5,% quyền biểu quyết,"52,37%",52.37,52.37,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,4,5,5,31/12/2016 | Giá gốc VND,306.662.738.200,306662738200.0,306662738200.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,4,6,5,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,4,7,5,31/12/2016 | Giá trị hợp lý VND,407.635.917.853,407635917853.0,407635917853.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,4,8,5,31/12/2016 | % sở hữu,"52,37%",52.37,52.37,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,4,9,5,% quyền biểu quyết__2,"52,37%",52.37,52.37,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,4,10,5,1/1/2016 | Giá gốc VND,306.662.738.200,306662738200.0,306662738200.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,4,11,5,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,4,12,5,1/1/2016 | Giá trị hợp lý VND,350.756.487.455,350756487455.0,350756487455.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,5,0,6,STT,6,6.0,6.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,5,1,6,Tên Công ty,Công ty TNHH MTV Petrolimex Singapore,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,5,2,6,Địa chỉ,Singapore,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,5,3,6,% sở hữu,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,5,4,6,% quyền biểu quyết,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,5,5,6,31/12/2016 | Giá gốc VND,287.897.418.502,287897418502.0,287897418502.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,5,6,6,31/12/2016 | Dự phòng VND,(278.507.859.634),-278507859634.0,-278507859634.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,5,7,6,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,5,8,6,31/12/2016 | % sở hữu,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,5,9,6,% quyền biểu quyết__2,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,5,10,6,1/1/2016 | Giá gốc VND,287.897.418.502,287897418502.0,287897418502.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,5,11,6,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,(278.507.859.634),-278507859634.0,-278507859634.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,5,12,6,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,6,0,7,STT,7,7.0,7.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,6,1,7,Tên Công ty,Công ty CP Đầu tư và Dịch vụ Hạ tầng Xăng dầu,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,6,2,7,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,6,3,7,% sở hữu,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,6,4,7,% quyền biểu quyết,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,6,5,7,31/12/2016 | Giá gốc VND,56.576.383.673,56576383673.0,56576383673.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,6,6,7,31/12/2016 | Dự phòng VND,(8.455.222.581),-8455222581.0,-8455222581.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,6,7,7,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,6,8,7,31/12/2016 | % sở hữu,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,6,9,7,% quyền biểu quyết__2,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,6,10,7,1/1/2016 | Giá gốc VND,107.576.383.673,107576383673.0,107576383673.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,6,11,7,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,(8.397.582.329),-8397582329.0,-8397582329.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,6,12,7,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,7,0,8,STT,8,8.0,8.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,7,1,8,Tên Công ty,Công ty CP Nhiên liệu bay Petrolimex,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,7,2,8,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,7,3,8,% sở hữu,"59,00%",59.0,59.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,7,4,8,% quyền biểu quyết,"59,00%",59.0,59.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,7,5,8,31/12/2016 | Giá gốc VND,88.500.000.000,88500000000.0,88500000000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,7,6,8,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,7,7,8,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,7,8,8,31/12/2016 | % sở hữu,"59,00%",59.0,59.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,7,9,8,% quyền biểu quyết__2,"59,00%",59.0,59.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,7,10,8,1/1/2016 | Giá gốc VND,88.500.000.000,88500000000.0,88500000000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,7,11,8,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,7,12,8,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,8,0,9,STT,9,9.0,9.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,8,1,9,Tên Công ty,Công ty CP Xuất nhập khẩu Petrolimex,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,8,2,9,Địa chỉ,TP. Hồ Chí Minh,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,8,3,9,% sở hữu,"52,67%",52.67,52.67,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,8,4,9,% quyền biểu quyết,"52,67%",52.67,52.67,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,8,5,9,31/12/2016 | Giá gốc VND,82.753.110.000,82753110000.0,82753110000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,8,6,9,31/12/2016 | Dự phòng VND,(7.314.839.430),-7314839430.0,-7314839430.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,8,7,9,31/12/2016 | Giá trị hợp lý VND,62.426.901.777,62426901777.0,62426901777.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,8,8,9,31/12/2016 | % sở hữu,"52,67%",52.67,52.67,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,8,9,9,% quyền biểu quyết__2,"52,67%",52.67,52.67,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,8,10,9,1/1/2016 | Giá gốc VND,82.753.110.000,82753110000.0,82753110000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,8,11,9,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,(11.454.656.306),-11454656306.0,-11454656306.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,8,12,9,1/1/2016 | Giá trị hợp lý VND,58.475.832.045,58475832045.0,58475832045.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,9,0,10,STT,10,10.0,10.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,9,1,10,Tên Công ty,Công ty TNHH MTV Petrolimex Lào,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,9,2,10,Địa chỉ,Lào,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,9,3,10,% sở hữu,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,9,4,10,% quyền biểu quyết,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,9,5,10,31/12/2016 | Giá gốc VND,68.162.068.617,68162068617.0,68162068617.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,9,6,10,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,9,7,10,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,9,8,10,31/12/2016 | % sở hữu,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,9,9,10,% quyền biểu quyết__2,"100,00%",100.0,100.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,9,10,10,1/1/2016 | Giá gốc VND,68.162.068.617,68162068617.0,68162068617.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,9,11,10,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,9,12,10,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,10,0,11,STT,11,11.0,11.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,10,1,11,Tên Công ty,Công ty CP Vận tải và Dịch vụ Petrolimex Sài Gòn,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,10,2,11,Địa chỉ,TP. Hồ Chí Minh,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,10,3,11,% sở hữu,"52,73%",52.73,52.73,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,10,4,11,% quyền biểu quyết,"52,73%",52.73,52.73,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,10,5,11,31/12/2016 | Giá gốc VND,53.722.150.000,53722150000.0,53722150000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,10,6,11,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,10,7,11,31/12/2016 | Giá trị hợp lý VND,63.782.208.000,63782208000.0,63782208000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,10,8,11,31/12/2016 | % sở hữu,"52,73%",52.73,52.73,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,10,9,11,% quyền biểu quyết__2,"52,73%",52.73,52.73,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,10,10,11,1/1/2016 | Giá gốc VND,53.722.150.000,53722150000.0,53722150000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,10,11,11,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,10,12,11,1/1/2016 | Giá trị hợp lý VND,64.161.864.000,64161864000.0,64161864000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,11,0,12,STT,12,12.0,12.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,11,1,12,Tên Công ty,Công ty CP Cơ khí Xăng dầu (iii),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,11,2,12,Địa chỉ,TP. Hồ Chí Minh,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,11,3,12,% sở hữu,"46,00%",46.0,46.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,11,4,12,% quyền biểu quyết,"46,00%",46.0,46.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,11,5,12,31/12/2016 | Giá gốc VND,47.517.612.315,47517612315.0,47517612315.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,11,6,12,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,11,7,12,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,11,8,12,31/12/2016 | % sở hữu,"46,00%",46.0,46.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,11,9,12,% quyền biểu quyết__2,"46,00%",46.0,46.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,11,10,12,1/1/2016 | Giá gốc VND,47.517.612.315,47517612315.0,47517612315.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,11,11,12,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,11,12,12,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,12,0,13,STT,13,13.0,13.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,12,1,13,Tên Công ty,Công ty TNHH Hóa chất PTN,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,12,2,13,Địa chỉ,Hải Phòng,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,12,3,13,% sở hữu,"60,00%",60.0,60.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,12,4,13,% quyền biểu quyết,"60,00%",60.0,60.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,12,5,13,31/12/2016 | Giá gốc VND,46.826.010.000,46826010000.0,46826010000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,12,6,13,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,12,7,13,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,12,8,13,31/12/2016 | % sở hữu,"60,00%",60.0,60.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,12,9,13,% quyền biểu quyết__2,"60,00%",60.0,60.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,12,10,13,1/1/2016 | Giá gốc VND,46.826.010.000,46826010000.0,46826010000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,12,11,13,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,12,12,13,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,13,0,14,STT,14,14.0,14.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,13,1,14,Tên Công ty,Công ty CP Thương mại và Vận tải Petrolimex Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,13,2,14,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,13,3,14,% sở hữu,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,13,4,14,% quyền biểu quyết,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,13,5,14,31/12/2016 | Giá gốc VND,24.902.280.000,24902280000.0,24902280000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,13,6,14,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,13,7,14,31/12/2016 | Giá trị hợp lý VND,31.925.775.600,31925775600.0,31925775600.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,13,8,14,31/12/2016 | % sở hữu,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,13,9,14,% quyền biểu quyết__2,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,13,10,14,1/1/2016 | Giá gốc VND,24.902.280.000,24902280000.0,24902280000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,13,11,14,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,13,12,14,1/1/2016 | Giá trị hợp lý VND,40.505.827.793,40505827793.0,40505827793.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,14,0,15,STT,15,15.0,15.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,14,1,15,Tên Công ty,Công ty CP Xây lập I (iii),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,14,2,15,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,14,3,15,% sở hữu,"30,00%",30.0,30.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,14,4,15,% quyền biểu quyết,"30,00%",30.0,30.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,14,5,15,31/12/2016 | Giá gốc VND,22.295.363.148,22295363148.0,22295363148.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,14,6,15,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,14,7,15,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,14,8,15,31/12/2016 | % sở hữu,"30,00%",30.0,30.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,14,9,15,% quyền biểu quyết__2,"30,00%",30.0,30.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,14,10,15,1/1/2016 | Giá gốc VND,22.295.363.148,22295363148.0,22295363148.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,14,11,15,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,14,12,15,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,15,0,16,STT,16,16.0,16.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,15,1,16,Tên Công ty,Công ty CP Xây lập III (iii),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,15,2,16,Địa chỉ,TP. Hồ Chí Minh,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,15,3,16,% sở hữu,"30,00%",30.0,30.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,15,4,16,% quyền biểu quyết,"30,00%",30.0,30.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,15,5,16,31/12/2016 | Giá gốc VND,19.722.009.190,19722009190.0,19722009190.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,15,6,16,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,15,7,16,31/12/2016 | Giá trị hợp lý VND,11.850.000.000,11850000000.0,11850000000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,15,8,16,31/12/2016 | % sở hữu,"30,00%",30.0,30.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,15,9,16,% quyền biểu quyết__2,"30,00%",30.0,30.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,15,10,16,1/1/2016 | Giá gốc VND,19.722.009.190,19722009190.0,19722009190.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,15,11,16,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,15,12,16,1/1/2016 | Giá trị hợp lý VND,11.250.000.000,11250000000.0,11250000000.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,16,0,17,STT,17,17.0,17.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,16,1,17,Tên Công ty,Công ty CP Vận tải và Dịch vụ Petrolimex Nghề Tinh,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,16,2,17,Địa chỉ,Nghệ An,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,16,3,17,% sở hữu,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,16,4,17,% quyền biểu quyết,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,16,5,17,31/12/2016 | Giá gốc VND,14.122.014.976,14122014976.0,14122014976.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,16,6,17,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,16,7,17,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,16,8,17,31/12/2016 | % sở hữu,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,16,9,17,% quyền biểu quyết__2,"51,00%",51.0,51.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,16,10,17,1/1/2016 | Giá gốc VND,14.122.014.976,14122014976.0,14122014976.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,16,11,17,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,16,12,17,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,17,0,18,STT,18,18.0,18.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,17,1,18,Tên Công ty,Công ty CP Thiết bị Xàng dầu Petrolimex,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,17,2,18,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,17,3,18,% sở hữu,"50,48%",50.48,50.48,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,17,4,18,% quyền biểu quyết,"50,48%",50.48,50.48,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,17,5,18,31/12/2016 | Giá gốc VND,15.554.168.240,15554168240.0,15554168240.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,17,6,18,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,17,7,18,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,17,8,18,31/12/2016 | % sở hữu,"50,48%",50.48,50.48,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,17,9,18,% quyền biểu quyết__2,"50,48%",50.48,50.48,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,17,10,18,1/1/2016 | Giá gốc VND,15.554.168.240,15554168240.0,15554168240.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,17,11,18,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,17,12,18,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,18,0,19,STT,19,19.0,19.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,18,1,19,Tên Công ty,Công ty CP Tín học Viễn thông Petrolimex,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,18,2,19,Địa chỉ,Hà Nội,,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,18,3,19,% sở hữu,"50,33%",50.33,50.33,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,18,4,19,% quyền biểu quyết,"50,33%",50.33,50.33,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,18,5,19,31/12/2016 | Giá gốc VND,11.435.592.821,11435592821.0,11435592821.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,18,6,19,31/12/2016 | Dự phòng VND,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,18,7,19,31/12/2016 | Giá trị hợp lý VND,(*),,,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,18,8,19,31/12/2016 | % sở hữu,"50,33%",50.33,50.33,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,PERCENT,18,9,19,% quyền biểu quyết__2,"50,33%",50.33,50.33,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,18,10,19,1/1/2016 | Giá gốc VND,11.435.592.821,11435592821.0,11435592821.0,False,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,18,11,19,1/1/2016 | Dự phòng VND Đã điều chỉnh lại,-,0.0,0.0,True,False
+PLX_financial_statements_2016_separate|table_17,PLX_financial_statements_2016_separate,PLX,2016,separate,VND,18,12,19,1/1/2016 | Giá trị hợp lý VND,(*),,,False,False

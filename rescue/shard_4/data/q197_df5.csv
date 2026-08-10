@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VIB_financial_statements_2018_consolidated|table_26,VIB_financial_statements_2018_consolidated,VIB,2018,consolidated,MILLION_VND,0,0,Dự phòng chung,column_1,Dự phòng chung,,,False,False
+VIB_financial_statements_2018_consolidated|table_26,VIB_financial_statements_2018_consolidated,VIB,2018,consolidated,MILLION_VND,0,1,Dự phòng chung,31/12/2018triệu đồng,679.950,679950.0,679950000000.0,False,False
+VIB_financial_statements_2018_consolidated|table_26,VIB_financial_statements_2018_consolidated,VIB,2018,consolidated,MILLION_VND,0,2,Dự phòng chung,31/12/2017triệu đồng,555.005,555005.0,555005000000.0,False,False
+VIB_financial_statements_2018_consolidated|table_26,VIB_financial_statements_2018_consolidated,VIB,2018,consolidated,MILLION_VND,1,0,Dự phòng cụ thể,column_1,Dự phòng cụ thể,,,False,False
+VIB_financial_statements_2018_consolidated|table_26,VIB_financial_statements_2018_consolidated,VIB,2018,consolidated,MILLION_VND,1,1,Dự phòng cụ thể,31/12/2018triệu đồng,197.815,197815.0,197815000000.0,False,False
+VIB_financial_statements_2018_consolidated|table_26,VIB_financial_statements_2018_consolidated,VIB,2018,consolidated,MILLION_VND,1,2,Dự phòng cụ thể,31/12/2017triệu đồng,389.855,389855.0,389855000000.0,False,False
+VIB_financial_statements_2018_consolidated|table_26,VIB_financial_statements_2018_consolidated,VIB,2018,consolidated,MILLION_VND,2,0,,column_1,,,,False,True
+VIB_financial_statements_2018_consolidated|table_26,VIB_financial_statements_2018_consolidated,VIB,2018,consolidated,MILLION_VND,2,1,,31/12/2018triệu đồng,877.765,877765.0,877765000000.0,False,False
+VIB_financial_statements_2018_consolidated|table_26,VIB_financial_statements_2018_consolidated,VIB,2018,consolidated,MILLION_VND,2,2,,31/12/2017triệu đồng,944.860,944860.0,944860000000.0,False,False

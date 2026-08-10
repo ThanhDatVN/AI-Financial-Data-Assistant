@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,0,0,Lãi tiền gửi,column_1,Lãi tiền gửi,,,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,0,1,Lãi tiền gửi,2018VND,208.253.201.298,208253201298.0,208253201298.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,0,2,Lãi tiền gửi,2017VND,69.917.578.051,69917578051.0,69917578051.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,1,0,Lãi chênh lệch tỷ giá hối đoái đã thực hiện,column_1,Lãi chênh lệch tỷ giá hối đoái đã thực hiện,,,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,1,1,Lãi chênh lệch tỷ giá hối đoái đã thực hiện,2018VND,85.422.296.361,85422296361.0,85422296361.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,1,2,Lãi chênh lệch tỷ giá hối đoái đã thực hiện,2017VND,43.977.690.600,43977690600.0,43977690600.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,2,0,Lãi từ thanh lý các công ty con,column_1,Lãi từ thanh lý các công ty con,,,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,2,1,Lãi từ thanh lý các công ty con,2018VND,16.271.500.000,16271500000.0,16271500000.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,2,2,Lãi từ thanh lý các công ty con,2017VND,-,0.0,0.0,True,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,3,0,"Cổ tức được chia từ Vietjet Air IVB No. I Limited, một công ty con",column_1,"Cổ tức được chia từ Vietjet Air IVB No. I Limited, một công ty con",,,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,3,1,"Cổ tức được chia từ Vietjet Air IVB No. I Limited, một công ty con",2018VND,-,0.0,0.0,True,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,3,2,"Cổ tức được chia từ Vietjet Air IVB No. I Limited, một công ty con",2017VND,1.412.325.376,1412325376.0,1412325376.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,4,0,Cổ tức được chia từ đơn vị khác,column_1,Cổ tức được chia từ đơn vị khác,,,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,4,1,Cổ tức được chia từ đơn vị khác,2018VND,2.832.636.000,2832636000.0,2832636000.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,4,2,Cổ tức được chia từ đơn vị khác,2017VND,3.068.690.000,3068690000.0,3068690000.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,5,0,Thu nhập tài chính khác,column_1,Thu nhập tài chính khác,,,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,5,1,Thu nhập tài chính khác,2018VND,5.195.227.454,5195227454.0,5195227454.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,5,2,Thu nhập tài chính khác,2017VND,800.800.000,800800000.0,800800000.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,6,0,,column_1,,,,False,True
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,6,1,,2018VND,317.974.861.113,317974861113.0,317974861113.0,False,False
+VJC_financial_statements_2018_separate|table_50,VJC_financial_statements_2018_separate,VJC,2018,separate,VND,6,2,,2017VND,119.177.084.027,119177084027.0,119177084027.0,False,False

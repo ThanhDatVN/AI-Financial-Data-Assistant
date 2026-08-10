@@ -1,0 +1,117 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,0,0,"Tiền mặt, vàng bạc, đá quý",TÀI SẢN,"Tiền mặt, vàng bạc, đá quý",,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,0,1,"Tiền mặt, vàng bạc, đá quý",Thuyết minh | TÀI SẢN,5,5.0,5000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,0,2,"Tiền mặt, vàng bạc, đá quý",31/12/2023 triệu đồng | TÀI SẢN,1.546,1546.0,1546000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,0,3,"Tiền mặt, vàng bạc, đá quý",31/12/2022 triệu đồng | TÀI SẢN,2.633,2633.0,2633000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,1,0,Tiền gửi tại Ngân hàng Nhà nước,TÀI SẢN,Tiền gửi tại Ngân hàng Nhà nước,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,1,1,Tiền gửi tại Ngân hàng Nhà nước,Thuyết minh | TÀI SẢN,6,6.0,6000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,1,2,Tiền gửi tại Ngân hàng Nhà nước,31/12/2023 triệu đồng | TÀI SẢN,1.304.924,1304924.0,1304924000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,1,3,Tiền gửi tại Ngân hàng Nhà nước,31/12/2022 triệu đồng | TÀI SẢN,1.178.325,1178325.0,1178325000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,2,0,Tiền gửi và cho vay các tổ chức tín dụng khác,TÀI SẢN,Tiền gửi và cho vay các tổ chức tín dụng khác,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,2,1,Tiền gửi và cho vay các tổ chức tín dụng khác,Thuyết minh | TÀI SẢN,7,7.0,7000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,2,2,Tiền gửi và cho vay các tổ chức tín dụng khác,31/12/2023 triệu đồng | TÀI SẢN,9.956.408,9956408.0,9956408000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,2,3,Tiền gửi và cho vay các tổ chức tín dụng khác,31/12/2022 triệu đồng | TÀI SẢN,9.883.853,9883853.0,9883853000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,3,0,Tiền gửi tại các tổ chức tín dụng khác,TÀI SẢN,Tiền gửi tại các tổ chức tín dụng khác,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,3,1,Tiền gửi tại các tổ chức tín dụng khác,Thuyết minh | TÀI SẢN,7.1,7.1,7100000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,3,2,Tiền gửi tại các tổ chức tín dụng khác,31/12/2023 triệu đồng | TÀI SẢN,9.035.288,9035288.0,9035288000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,3,3,Tiền gửi tại các tổ chức tín dụng khác,31/12/2022 triệu đồng | TÀI SẢN,9.883.853,9883853.0,9883853000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,4,0,Cho vay các tổ chức tín dụng khác,TÀI SẢN,Cho vay các tổ chức tín dụng khác,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,4,1,Cho vay các tổ chức tín dụng khác,Thuyết minh | TÀI SẢN,7.2,7.2,7200000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,4,2,Cho vay các tổ chức tín dụng khác,31/12/2023 triệu đồng | TÀI SẢN,921.120,921120.0,921120000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,4,3,Cho vay các tổ chức tín dụng khác,31/12/2022 triệu đồng | TÀI SẢN,-,0.0,0.0,True,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,5,0,Các công cụ tài chính phải sinh và các tài sản tài chính khác,TÀI SẢN,Các công cụ tài chính phải sinh và các tài sản tài chính khác,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,5,1,Các công cụ tài chính phải sinh và các tài sản tài chính khác,Thuyết minh | TÀI SẢN,8,8.0,8000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,5,2,Các công cụ tài chính phải sinh và các tài sản tài chính khác,31/12/2023 triệu đồng | TÀI SẢN,116.840,116840.0,116840000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,5,3,Các công cụ tài chính phải sinh và các tài sản tài chính khác,31/12/2022 triệu đồng | TÀI SẢN,-,0.0,0.0,True,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,6,0,Cho vay khách hàng,TÀI SẢN,Cho vay khách hàng,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,6,1,Cho vay khách hàng,Thuyết minh | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,6,2,Cho vay khách hàng,31/12/2023 triệu đồng | TÀI SẢN,33.092.777,33092777.0,33092777000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,6,3,Cho vay khách hàng,31/12/2022 triệu đồng | TÀI SẢN,23.956.552,23956552.0,23956552000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,7,0,Cho vay khách hàng,TÀI SẢN,Cho vay khách hàng,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,7,1,Cho vay khách hàng,Thuyết minh | TÀI SẢN,9,9.0,9000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,7,2,Cho vay khách hàng,31/12/2023 triệu đồng | TÀI SẢN,33.553.388,33553388.0,33553388000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,7,3,Cho vay khách hàng,31/12/2022 triệu đồng | TÀI SẢN,24.352.548,24352548.0,24352548000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,8,0,Dự phòng rủi ro cho vay khách hàng,TÀI SẢN,Dự phòng rủi ro cho vay khách hàng,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,8,1,Dự phòng rủi ro cho vay khách hàng,Thuyết minh | TÀI SẢN,10,10.0,10000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,8,2,Dự phòng rủi ro cho vay khách hàng,31/12/2023 triệu đồng | TÀI SẢN,(460.611),-460611.0,-460611000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,8,3,Dự phòng rủi ro cho vay khách hàng,31/12/2022 triệu đồng | TÀI SẢN,(395.996),-395996.0,-395996000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,9,0,Chứng khoán đầu tư,TÀI SẢN,Chứng khoán đầu tư,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,9,1,Chứng khoán đầu tư,Thuyết minh | TÀI SẢN,11,11.0,11000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,9,2,Chứng khoán đầu tư,31/12/2023 triệu đồng | TÀI SẢN,1.560.097,1560097.0,1560097000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,9,3,Chứng khoán đầu tư,31/12/2022 triệu đồng | TÀI SẢN,2.005.084,2005084.0,2005084000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,10,0,Chứng khoán đầu tư sẵn sàng để bán,TÀI SẢN,Chứng khoán đầu tư sẵn sàng để bán,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,10,1,Chứng khoán đầu tư sẵn sàng để bán,Thuyết minh | TÀI SẢN,11.1,11.1,11100000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,10,2,Chứng khoán đầu tư sẵn sàng để bán,31/12/2023 triệu đồng | TÀI SẢN,1.664.741,1664741.0,1664741000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,10,3,Chứng khoán đầu tư sẵn sàng để bán,31/12/2022 triệu đồng | TÀI SẢN,2.061.694,2061694.0,2061694000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,11,0,Dự phòng giảm giá chứng khoán đầu tư,TÀI SẢN,Dự phòng giảm giá chứng khoán đầu tư,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,11,1,Dự phòng giảm giá chứng khoán đầu tư,Thuyết minh | TÀI SẢN,11.2,11.2,11200000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,11,2,Dự phòng giảm giá chứng khoán đầu tư,31/12/2023 triệu đồng | TÀI SẢN,(104.644),-104644.0,-104644000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,11,3,Dự phòng giảm giá chứng khoán đầu tư,31/12/2022 triệu đồng | TÀI SẢN,(56.610),-56610.0,-56610000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,12,0,"Góp vốn, đầu tư dài hạn",TÀI SẢN,"Góp vốn, đầu tư dài hạn",,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,12,1,"Góp vốn, đầu tư dài hạn",Thuyết minh | TÀI SẢN,12,12.0,12000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,12,2,"Góp vốn, đầu tư dài hạn",31/12/2023 triệu đồng | TÀI SẢN,997.591,997591.0,997591000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,12,3,"Góp vốn, đầu tư dài hạn",31/12/2022 triệu đồng | TÀI SẢN,450.432,450432.0,450432000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,13,0,Đầu tư dài hạn khác,TÀI SẢN,Đầu tư dài hạn khác,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,13,1,Đầu tư dài hạn khác,Thuyết minh | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,13,2,Đầu tư dài hạn khác,31/12/2023 triệu đồng | TÀI SẢN,1.006.177,1006177.0,1006177000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,13,3,Đầu tư dài hạn khác,31/12/2022 triệu đồng | TÀI SẢN,454.206,454206.0,454206000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,14,0,Dự phòng giảm giá đầu tư dài hạn,TÀI SẢN,Dự phòng giảm giá đầu tư dài hạn,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,14,1,Dự phòng giảm giá đầu tư dài hạn,Thuyết minh | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,14,2,Dự phòng giảm giá đầu tư dài hạn,31/12/2023 triệu đồng | TÀI SẢN,(8.586),-8586.0,-8586000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,14,3,Dự phòng giảm giá đầu tư dài hạn,31/12/2022 triệu đồng | TÀI SẢN,(3.774),-3774.0,-3774000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,15,0,Tài sản cố định,TÀI SẢN,Tài sản cố định,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,15,1,Tài sản cố định,Thuyết minh | TÀI SẢN,13,13.0,13000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,15,2,Tài sản cố định,31/12/2023 triệu đồng | TÀI SẢN,75.862,75862.0,75862000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,15,3,Tài sản cố định,31/12/2022 triệu đồng | TÀI SẢN,81.882,81882.0,81882000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,16,0,Tài sản cố định hữu hình,TÀI SẢN,Tài sản cố định hữu hình,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,16,1,Tài sản cố định hữu hình,Thuyết minh | TÀI SẢN,13.1,13.1,13100000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,16,2,Tài sản cố định hữu hình,31/12/2023 triệu đồng | TÀI SẢN,28.468,28468.0,28468000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,16,3,Tài sản cố định hữu hình,31/12/2022 triệu đồng | TÀI SẢN,30.426,30426.0,30426000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,17,0,Nguyên giá tài sản cố định,TÀI SẢN,Nguyên giá tài sản cố định,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,17,1,Nguyên giá tài sản cố định,Thuyết minh | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,17,2,Nguyên giá tài sản cố định,31/12/2023 triệu đồng | TÀI SẢN,108.382,108382.0,108382000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,17,3,Nguyên giá tài sản cố định,31/12/2022 triệu đồng | TÀI SẢN,106.377,106377.0,106377000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,18,0,Khẩu hao tài sản cố định,TÀI SẢN,Khẩu hao tài sản cố định,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,18,1,Khẩu hao tài sản cố định,Thuyết minh | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,18,2,Khẩu hao tài sản cố định,31/12/2023 triệu đồng | TÀI SẢN,(79.914),-79914.0,-79914000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,18,3,Khẩu hao tài sản cố định,31/12/2022 triệu đồng | TÀI SẢN,(75.951),-75951.0,-75951000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,19,0,Tài sản cố định vô hình,TÀI SẢN,Tài sản cố định vô hình,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,19,1,Tài sản cố định vô hình,Thuyết minh | TÀI SẢN,13.2,13.2,13200000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,19,2,Tài sản cố định vô hình,31/12/2023 triệu đồng | TÀI SẢN,47.394,47394.0,47394000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,19,3,Tài sản cố định vô hình,31/12/2022 triệu đồng | TÀI SẢN,51.456,51456.0,51456000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,20,0,Nguyên giá tài sản cố định,TÀI SẢN,Nguyên giá tài sản cố định,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,20,1,Nguyên giá tài sản cố định,Thuyết minh | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,20,2,Nguyên giá tài sản cố định,31/12/2023 triệu đồng | TÀI SẢN,96.377,96377.0,96377000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,20,3,Nguyên giá tài sản cố định,31/12/2022 triệu đồng | TÀI SẢN,92.421,92421.0,92421000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,21,0,Hao mòn tài sản cố định,TÀI SẢN,Hao mòn tài sản cố định,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,21,1,Hao mòn tài sản cố định,Thuyết minh | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,21,2,Hao mòn tài sản cố định,31/12/2023 triệu đồng | TÀI SẢN,(48.983),-48983.0,-48983000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,21,3,Hao mòn tài sản cố định,31/12/2022 triệu đồng | TÀI SẢN,(40.965),-40965.0,-40965000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,22,0,Tài sản Có khác,TÀI SẢN,Tài sản Có khác,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,22,1,Tài sản Có khác,Thuyết minh | TÀI SẢN,14,14.0,14000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,22,2,Tài sản Có khác,31/12/2023 triệu đồng | TÀI SẢN,2.115.086,2115086.0,2115086000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,22,3,Tài sản Có khác,31/12/2022 triệu đồng | TÀI SẢN,4.639.160,4639160.0,4639160000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,23,0,Các khoản phải thu,TÀI SẢN,Các khoản phải thu,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,23,1,Các khoản phải thu,Thuyết minh | TÀI SẢN,14.1,14.1,14100000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,23,2,Các khoản phải thu,31/12/2023 triệu đồng | TÀI SẢN,545.571,545571.0,545571000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,23,3,Các khoản phải thu,31/12/2022 triệu đồng | TÀI SẢN,3.716.004,3716004.0,3716004000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,24,0,"Các khoản lãi, phí phải thu",TÀI SẢN,"Các khoản lãi, phí phải thu",,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,24,1,"Các khoản lãi, phí phải thu",Thuyết minh | TÀI SẢN,14.2,14.2,14200000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,24,2,"Các khoản lãi, phí phải thu",31/12/2023 triệu đồng | TÀI SẢN,1.683.350,1683350.0,1683350000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,24,3,"Các khoản lãi, phí phải thu",31/12/2022 triệu đồng | TÀI SẢN,971.182,971182.0,971182000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,25,0,Tài sản Có khác,TÀI SẢN,Tài sản Có khác,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,25,1,Tài sản Có khác,Thuyết minh | TÀI SẢN,14.3,14.3,14300000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,25,2,Tài sản Có khác,31/12/2023 triệu đồng | TÀI SẢN,76.863,76863.0,76863000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,25,3,Tài sản Có khác,31/12/2022 triệu đồng | TÀI SẢN,139.900,139900.0,139900000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,26,0,Các khoản dự phòng rủi ro cho các tài sản,TÀI SẢN,Các khoản dự phòng rủi ro cho các tài sản,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,26,1,Các khoản dự phòng rủi ro cho các tài sản,Thuyết minh | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,26,2,Các khoản dự phòng rủi ro cho các tài sản,31/12/2023 triệu đồng | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,26,3,Các khoản dự phòng rủi ro cho các tài sản,31/12/2022 triệu đồng | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,27,0,Có nội bằng khác,TÀI SẢN,Có nội bằng khác,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,27,1,Có nội bằng khác,Thuyết minh | TÀI SẢN,14.4,14.4,14400000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,27,2,Có nội bằng khác,31/12/2023 triệu đồng | TÀI SẢN,(190.698),-190698.0,-190698000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,27,3,Có nội bằng khác,31/12/2022 triệu đồng | TÀI SẢN,(187.926),-187926.0,-187926000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,28,0,TỔNG TÀI SẢN,TÀI SẢN,TỔNG TÀI SẢN,,,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,28,1,TỔNG TÀI SẢN,Thuyết minh | TÀI SẢN,,,,False,True
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,28,2,TỔNG TÀI SẢN,31/12/2023 triệu đồng | TÀI SẢN,49.221.131,49221131.0,49221131000000.0,False,False
+EVF_financial_statements_2023|table_6,EVF_financial_statements_2023,EVF,2023,unknown,MILLION_VND,28,3,TỔNG TÀI SẢN,31/12/2022 triệu đồng | TÀI SẢN,42.197.921,42197921.0,42197921000000.0,False,False

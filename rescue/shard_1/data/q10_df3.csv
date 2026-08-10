@@ -1,0 +1,19 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,0,0,Lãi tiền vay và trái phiếu,column_1,Lãi tiền vay và trái phiếu,,,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,0,1,Lãi tiền vay và trái phiếu,Năm nay | VND,104.777.542.153,104777542153.0,104777542153.0,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,0,2,Lãi tiền vay và trái phiếu,Năm trước | VND,133.862.100.456,133862100456.0,133862100456.0,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,1,0,Chi phí lãi từ hợp đồng hợp tác đầu tư(Hoàn nhập) dự phòng khoản đầu tư tại Công ty,column_1,Chi phí lãi từ hợp đồng hợp tác đầu tư(Hoàn nhập) dự phòng khoản đầu tư tại Công ty,,,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,1,1,Chi phí lãi từ hợp đồng hợp tác đầu tư(Hoàn nhập) dự phòng khoản đầu tư tại Công ty,Năm nay | VND,9.277.775.342(1.265.429.612),,,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,1,2,Chi phí lãi từ hợp đồng hợp tác đầu tư(Hoàn nhập) dự phòng khoản đầu tư tại Công ty,Năm trước | VND,2.222.597.877(201.179.439),,,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,2,0,Cổ phần Sunshine AM,column_1,Cổ phần Sunshine AM,,,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,2,1,Cổ phần Sunshine AM,Năm nay | VND,,,,False,True
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,2,2,Cổ phần Sunshine AM,Năm trước | VND,,,,False,True
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,3,0,,column_1,,,,False,True
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,3,1,,Năm nay | VND,112.789.887.883,112789887883.0,112789887883.0,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,3,2,,Năm trước | VND,135.883.518.894,135883518894.0,135883518894.0,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,4,0,Trong đó:,column_1,Trong đó:,,,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,4,1,Trong đó:,Năm nay | VND,Trong đó:,,,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,4,2,Trong đó:,Năm trước | VND,Trong đó:,,,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,5,0,Chi phí hoạt động tài chính với các bên liên quan(Chi tiết tại Thuyết minh số 35),column_1,Chi phí hoạt động tài chính với các bên liên quan(Chi tiết tại Thuyết minh số 35),,,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,5,1,Chi phí hoạt động tài chính với các bên liên quan(Chi tiết tại Thuyết minh số 35),Năm nay | VND,10.009.282.192,10009282192.0,10009282192.0,False,False
+SSH_financial_statements_2021_separate|table_45,SSH_financial_statements_2021_separate,SSH,2021,separate,VND,5,2,Chi phí hoạt động tài chính với các bên liên quan(Chi tiết tại Thuyết minh số 35),Năm trước | VND,2.251.365.000,2251365000.0,2251365000.0,False,False

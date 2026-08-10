@@ -1,0 +1,66 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,0,0,"Tiền mặt, vàng bạc, đá quý",Chỉ tiêu | Tài sản,"Tiền mặt, vàng bạc, đá quý",,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,0,1,"Tiền mặt, vàng bạc, đá quý",EUR được quy đổi,1.409,1409.0,1409.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,0,2,"Tiền mặt, vàng bạc, đá quý",USD được quy đổi,19.063,19063.0,19063.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,0,3,"Tiền mặt, vàng bạc, đá quý",Các ngoại tệ khác được quy đổi,90,90.0,90.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,0,4,"Tiền mặt, vàng bạc, đá quý",Tổng,20.562,20562.0,20562.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,1,0,Tiền gối tại ngân hàng Nhà nước,Chỉ tiêu | Tài sản,Tiền gối tại ngân hàng Nhà nước,,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,1,1,Tiền gối tại ngân hàng Nhà nước,EUR được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,1,2,Tiền gối tại ngân hàng Nhà nước,USD được quy đổi,5.142,5142.0,5142.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,1,3,Tiền gối tại ngân hàng Nhà nước,Các ngoại tệ khác được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,1,4,Tiền gối tại ngân hàng Nhà nước,Tổng,5.142,5142.0,5142.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,2,0,"Tiền, vàng gối tại và cho vay các TCTD khác (*)",Chỉ tiêu | Tài sản,"Tiền, vàng gối tại và cho vay các TCTD khác (*)",,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,2,1,"Tiền, vàng gối tại và cho vay các TCTD khác (*)",EUR được quy đổi,2.188,2188.0,2188.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,2,2,"Tiền, vàng gối tại và cho vay các TCTD khác (*)",USD được quy đổi,3.049.861,3049861.0,3049861.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,2,3,"Tiền, vàng gối tại và cho vay các TCTD khác (*)",Các ngoại tệ khác được quy đổi,7.485,7485.0,7485.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,2,4,"Tiền, vàng gối tại và cho vay các TCTD khác (*)",Tổng,3.059.534,3059534.0,3059534.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,3,0,Cho vay khách hàng (*),Chỉ tiêu | Tài sản,Cho vay khách hàng (*),,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,3,1,Cho vay khách hàng (*),EUR được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,3,2,Cho vay khách hàng (*),USD được quy đổi,164.405,164405.0,164405.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,3,3,Cho vay khách hàng (*),Các ngoại tệ khác được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,3,4,Cho vay khách hàng (*),Tổng,164.405,164405.0,164405.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,4,0,Tổng Tài sản,Chỉ tiêu | Tài sản,Tổng Tài sản,,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,4,1,Tổng Tài sản,EUR được quy đổi,3.597,3597.0,3597.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,4,2,Tổng Tài sản,USD được quy đổi,3.238.471,3238471.0,3238471.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,4,3,Tổng Tài sản,Các ngoại tệ khác được quy đổi,7.575,7575.0,7575.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,4,4,Tổng Tài sản,Tổng,3.249.643,3249643.0,3249643.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,5,0,Nợ phải trả và Vốn chủ sở hữu,Chỉ tiêu | Tài sản,Nợ phải trả và Vốn chủ sở hữu,,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,5,1,Nợ phải trả và Vốn chủ sở hữu,EUR được quy đổi,,,,False,True
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,5,2,Nợ phải trả và Vốn chủ sở hữu,USD được quy đổi,,,,False,True
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,5,3,Nợ phải trả và Vốn chủ sở hữu,Các ngoại tệ khác được quy đổi,,,,False,True
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,5,4,Nợ phải trả và Vốn chủ sở hữu,Tổng,,,,False,True
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,6,0,Tiền gửi của và vay từ NHNN và các TCTD khác,Chỉ tiêu | Tài sản,Tiền gửi của và vay từ NHNN và các TCTD khác,,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,6,1,Tiền gửi của và vay từ NHNN và các TCTD khác,EUR được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,6,2,Tiền gửi của và vay từ NHNN và các TCTD khác,USD được quy đổi,2.709.901,2709901.0,2709901.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,6,3,Tiền gửi của và vay từ NHNN và các TCTD khác,Các ngoại tệ khác được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,6,4,Tiền gửi của và vay từ NHNN và các TCTD khác,Tổng,2.709.901,2709901.0,2709901.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,7,0,Tiền gửi của khách hàng,Chỉ tiêu | Tài sản,Tiền gửi của khách hàng,,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,7,1,Tiền gửi của khách hàng,EUR được quy đổi,536,536.0,536.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,7,2,Tiền gửi của khách hàng,USD được quy đổi,52.332,52332.0,52332.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,7,3,Tiền gửi của khách hàng,Các ngoại tệ khác được quy đổi,111,111.0,111.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,7,4,Tiền gửi của khách hàng,Tổng,52.979,52979.0,52979.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,8,0,Các công cụ tài chính phải sinh và các tài sản tài chính khác (*),Chỉ tiêu | Tài sản,Các công cụ tài chính phải sinh và các tài sản tài chính khác (*),,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,8,1,Các công cụ tài chính phải sinh và các tài sản tài chính khác (*),EUR được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,8,2,Các công cụ tài chính phải sinh và các tài sản tài chính khác (*),USD được quy đổi,(2.304.120),-2304120.0,-2304120.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,8,3,Các công cụ tài chính phải sinh và các tài sản tài chính khác (*),Các ngoại tệ khác được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,8,4,Các công cụ tài chính phải sinh và các tài sản tài chính khác (*),Tổng,(2.304.120),-2304120.0,-2304120.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,9,0,Tổng Nợ phải trả và Vốn chủ sở hữu,Chỉ tiêu | Tài sản,Tổng Nợ phải trả và Vốn chủ sở hữu,,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,9,1,Tổng Nợ phải trả và Vốn chủ sở hữu,EUR được quy đổi,536,536.0,536.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,9,2,Tổng Nợ phải trả và Vốn chủ sở hữu,USD được quy đổi,458.113,458113.0,458113.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,9,3,Tổng Nợ phải trả và Vốn chủ sở hữu,Các ngoại tệ khác được quy đổi,111,111.0,111.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,9,4,Tổng Nợ phải trả và Vốn chủ sở hữu,Tổng,458.760,458760.0,458760.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,10,0,Trạng thái tiền tệ nội bằng,Chỉ tiêu | Tài sản,Trạng thái tiền tệ nội bằng,,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,10,1,Trạng thái tiền tệ nội bằng,EUR được quy đổi,3.061,3061.0,3061.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,10,2,Trạng thái tiền tệ nội bằng,USD được quy đổi,2.780.358,2780358.0,2780358.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,10,3,Trạng thái tiền tệ nội bằng,Các ngoại tệ khác được quy đổi,7.464,7464.0,7464.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,10,4,Trạng thái tiền tệ nội bằng,Tổng,2.790.883,2790883.0,2790883.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,11,0,Trạng thái tiền tệ ngoại bằng,Chỉ tiêu | Tài sản,Trạng thái tiền tệ ngoại bằng,,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,11,1,Trạng thái tiền tệ ngoại bằng,EUR được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,11,2,Trạng thái tiền tệ ngoại bằng,USD được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,11,3,Trạng thái tiền tệ ngoại bằng,Các ngoại tệ khác được quy đổi,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,11,4,Trạng thái tiền tệ ngoại bằng,Tổng,-,0.0,0.0,True,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,12,0,"Trạng thái tiền tệ nội, ngoại bằng",Chỉ tiêu | Tài sản,"Trạng thái tiền tệ nội, ngoại bằng",,,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,12,1,"Trạng thái tiền tệ nội, ngoại bằng",EUR được quy đổi,3.061,3061.0,3061.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,12,2,"Trạng thái tiền tệ nội, ngoại bằng",USD được quy đổi,2.780.358,2780358.0,2780358.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,12,3,"Trạng thái tiền tệ nội, ngoại bằng",Các ngoại tệ khác được quy đổi,7.464,7464.0,7464.0,False,False
+KLB_financial_statements_2024_separate|table_72,KLB_financial_statements_2024_separate,KLB,2024,separate,USD,12,4,"Trạng thái tiền tệ nội, ngoại bằng",Tổng,2.790.883,2790883.0,2790883.0,False,False

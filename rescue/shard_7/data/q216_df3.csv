@@ -1,0 +1,19 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,0,0,Chi phí khấu hao TSCĐ,column_1,Chi phí khấu hao TSCĐ,,,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,0,1,Chi phí khấu hao TSCĐ,Năm nay VND,160.813.147.366,160813147366.0,160813147366.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,0,2,Chi phí khấu hao TSCĐ,Năm trước VND,64.719.818.906,64719818906.0,64719818906.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,1,0,Chi phí nhân viên,column_1,Chi phí nhân viên,,,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,1,1,Chi phí nhân viên,Năm nay VND,77.961.799.614,77961799614.0,77961799614.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,1,2,Chi phí nhân viên,Năm trước VND,50.427.007.700,50427007700.0,50427007700.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,2,0,"Chi phí nguyên liệu, vật liệu",column_1,"Chi phí nguyên liệu, vật liệu",,,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,2,1,"Chi phí nguyên liệu, vật liệu",Năm nay VND,40.347.587.167,40347587167.0,40347587167.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,2,2,"Chi phí nguyên liệu, vật liệu",Năm trước VND,40.604.463.919,40604463919.0,40604463919.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,3,0,Chi phí dịch vụ mua ngoài,column_1,Chi phí dịch vụ mua ngoài,,,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,3,1,Chi phí dịch vụ mua ngoài,Năm nay VND,18.504.711.764,18504711764.0,18504711764.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,3,2,Chi phí dịch vụ mua ngoài,Năm trước VND,9.691.818.118,9691818118.0,9691818118.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,4,0,Chi phí khác,column_1,Chi phí khác,,,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,4,1,Chi phí khác,Năm nay VND,34.782.746.056,34782746056.0,34782746056.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,4,2,Chi phí khác,Năm trước VND,41.178.218.461,41178218461.0,41178218461.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,5,0,,column_1,,,,False,True
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,5,1,,Năm nay VND,332.409.991.967,332409991967.0,332409991967.0,False,False
+GEG_financial_statements_2019_separate|table_48,GEG_financial_statements_2019_separate,GEG,2019,separate,VND,5,2,,Năm trước VND,206.621.327.104,206621327104.0,206621327104.0,False,False

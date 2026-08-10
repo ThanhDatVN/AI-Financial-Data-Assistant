@@ -1,0 +1,181 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,0,0,I,STT | A,I,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,0,1,I,Chỉ tiêu | TÀI SẢN,"Tiền mặt, vàng bạc, đá quý",,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,0,2,I,Thuyết minh,4,4.0,4000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,0,3,I,31/12/2025Triệu VND,15.466.014,15466014.0,15466014000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,0,4,I,31/12/2024Triệu VND,14.242.073,14242073.0,14242073000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,1,0,II,STT | A,II,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,1,1,II,Chỉ tiêu | TÀI SẢN,"Tiền gửi tại Ngân hàng Nhà nước Việt Nam (""NHNNVN"")",,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,1,2,II,Thuyết minh,5,5.0,5000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,1,3,II,31/12/2025Triệu VND,37.211.549,37211549.0,37211549000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,1,4,II,31/12/2024Triệu VND,49.080.832,49080832.0,49080832000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,2,0,III,STT | A,III,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,2,1,III,Chỉ tiêu | TÀI SẢN,Tiền gửi và cho vay các tổ chức tín dụng khác,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,2,2,III,Thuyết minh,6,6.0,6000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,2,3,III,31/12/2025Triệu VND,526.677.310,526677310.0,526677310000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,2,4,III,31/12/2024Triệu VND,394.354.303,394354303.0,394354303000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,3,0,1,STT | A,1,1.0,1000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,3,1,1,Chỉ tiêu | TÀI SẢN,Tiền gửi tại các tổ chức tín dụng khác,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,3,2,1,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,3,3,1,31/12/2025Triệu VND,512.067.606,512067606.0,512067606000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,3,4,1,31/12/2024Triệu VND,382.313.025,382313025.0,382313025000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,4,0,2,STT | A,2,2.0,2000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,4,1,2,Chỉ tiêu | TÀI SẢN,Cho vay các tổ chức tín dụng khác,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,4,2,2,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,4,3,2,31/12/2025Triệu VND,14.609.704,14609704.0,14609704000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,4,4,2,31/12/2024Triệu VND,13.041.278,13041278.0,13041278000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,5,0,3,STT | A,3,3.0,3000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,5,1,3,Chỉ tiêu | TÀI SẢN,Dự phòng rủi ro,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,5,2,3,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,5,3,3,31/12/2025Triệu VND,-,0.0,0.0,True,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,5,4,3,31/12/2024Triệu VND,(1.000.000),-1000000.0,-1000000000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,6,0,IV,STT | A,IV,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,6,1,IV,Chỉ tiêu | TÀI SẢN,Chứng khoán kinh doanh,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,6,2,IV,Thuyết minh,7,7.0,7000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,6,3,IV,31/12/2025Triệu VND,7.362.215,7362215.0,7362215000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,6,4,IV,31/12/2024Triệu VND,1.000.145,1000145.0,1000145000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,7,0,1,STT | A,1,1.0,1000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,7,1,1,Chỉ tiêu | TÀI SẢN,Chứng khoán kinh doanh,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,7,2,1,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,7,3,1,31/12/2025Triệu VND,7.362.215,7362215.0,7362215000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,7,4,1,31/12/2024Triệu VND,1.000.145,1000145.0,1000145000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,8,0,V,STT | A,V,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,8,1,V,Chỉ tiêu | TÀI SẢN,Các công cụ tài chính phải sinh và các tài sản tài chính khác,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,8,2,V,Thuyết minh,8,8.0,8000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,8,3,V,31/12/2025Triệu VND,374.918,374918.0,374918000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,8,4,V,31/12/2024Triệu VND,1.314.434,1314434.0,1314434000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,9,0,VI,STT | A,VI,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,9,1,VI,Chỉ tiêu | TÀI SẢN,Cho vay khách hàng,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,9,2,VI,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,9,3,VI,31/12/2025Triệu VND,1.629.733.004,1629733004.0,1629733004000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,9,4,VI,31/12/2024Triệu VND,1.404.347.717,1404347717.0,1404347717000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,10,0,1,STT | A,1,1.0,1000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,10,1,1,Chỉ tiêu | TÀI SẢN,Cho vay khách hàng,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,10,2,1,Thuyết minh,9,9.0,9000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,10,3,1,31/12/2025Triệu VND,1.654.518.218,1654518218.0,1654518218000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,10,4,1,31/12/2024Triệu VND,1.435.408.058,1435408058.0,1435408058000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,11,0,2,STT | A,2,2.0,2000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,11,1,2,Chỉ tiêu | TÀI SẢN,Dự phòng rủi ro cho vay khách hàng,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,11,2,2,Thuyết minh,10,10.0,10000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,11,3,2,31/12/2025Triệu VND,(24.785.214),-24785214.0,-24785214000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,11,4,2,31/12/2024Triệu VND,(31.060.341),-31060341.0,-31060341000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,12,0,VIII,STT | A,VIII,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,12,1,VIII,Chỉ tiêu | TÀI SẢN,Chứng khoán đầu tư,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,12,2,VIII,Thuyết minh,11,11.0,11000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,12,3,VIII,31/12/2025Triệu VND,159.958.649,159958649.0,159958649000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,12,4,VIII,31/12/2024Triệu VND,166.147.237,166147237.0,166147237000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,13,0,1,STT | A,1,1.0,1000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,13,1,1,Chỉ tiêu | TÀI SẢN,Chứng khoán đầu tư sẵn sàng để bán,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,13,2,1,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,13,3,1,31/12/2025Triệu VND,143.080.817,143080817.0,143080817000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,13,4,1,31/12/2024Triệu VND,86.799.901,86799901.0,86799901000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,14,0,2,STT | A,2,2.0,2000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,14,1,2,Chỉ tiêu | TÀI SẢN,Chứng khoán đầu tư giữ đến ngày đáo hạn,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,14,2,2,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,14,3,2,31/12/2025Triệu VND,20.239.447,20239447.0,20239447000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,14,4,2,31/12/2024Triệu VND,79.593.428,79593428.0,79593428000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,15,0,3,STT | A,3,3.0,3000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,15,1,3,Chỉ tiêu | TÀI SẢN,Dự phòng rủi ro chứng khoán đầu tư,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,15,2,3,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,15,3,3,31/12/2025Triệu VND,(3.361.615),-3361615.0,-3361615000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,15,4,3,31/12/2024Triệu VND,(246.092),-246092.0,-246092000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,16,0,IX,STT | A,IX,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,16,1,IX,Chỉ tiêu | TÀI SẢN,"Góp vốn, đầu tư dài hạn",,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,16,2,IX,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,16,3,IX,31/12/2025Triệu VND,6.666.134,6666134.0,6666134000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,16,4,IX,31/12/2024Triệu VND,6.605.967,6605967.0,6605967000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,17,0,1,STT | A,1,1.0,1000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,17,1,1,Chỉ tiêu | TÀI SẢN,Đầu tư vào công ty con,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,17,2,1,Thuyết minh,12(a),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,17,3,1,31/12/2025Triệu VND,4.595.420,4595420.0,4595420000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,17,4,1,31/12/2024Triệu VND,4.595.420,4595420.0,4595420000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,18,0,2,STT | A,2,2.0,2000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,18,1,2,Chỉ tiêu | TÀI SẢN,Vốn góp liên doanh,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,18,2,2,Thuyết minh,12(b),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,18,3,2,31/12/2025Triệu VND,545.515,545515.0,545515000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,18,4,2,31/12/2024Triệu VND,545.515,545515.0,545515000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,19,0,3,STT | A,3,3.0,3000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,19,1,3,Chỉ tiêu | TÀI SẢN,Đầu tư vào công ty liên kết,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,19,2,3,Thuyết minh,12(c),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,19,3,3,31/12/2025Triệu VND,11.110,11110.0,11110000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,19,4,3,31/12/2024Triệu VND,11.110,11110.0,11110000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,20,0,4,STT | A,4,4.0,4000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,20,1,4,Chỉ tiêu | TÀI SẢN,Đầu tư dài hạn khác,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,20,2,4,Thuyết minh,12(d),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,20,3,4,31/12/2025Triệu VND,1.589.089,1589089.0,1589089000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,20,4,4,31/12/2024Triệu VND,1.528.922,1528922.0,1528922000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,21,0,5,STT | A,5,5.0,5000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,21,1,5,Chỉ tiêu | TÀI SẢN,Dự phòng giảm giá đầu tư dài hạn,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,21,2,5,Thuyết minh,12(e),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,21,3,5,31/12/2025Triệu VND,(75.000),-75000.0,-75000000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,21,4,5,31/12/2024Triệu VND,(75.000),-75000.0,-75000000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,22,0,X,STT | A,X,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,22,1,X,Chỉ tiêu | TÀI SẢN,Tài sản cố định,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,22,2,X,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,22,3,X,31/12/2025Triệu VND,7.979.571,7979571.0,7979571000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,22,4,X,31/12/2024Triệu VND,7.886.828,7886828.0,7886828000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,23,0,1,STT | A,1,1.0,1000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,23,1,1,Chỉ tiêu | TÀI SẢN,Tài sản cố định hữu hình,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,23,2,1,Thuyết minh,13,13.0,13000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,23,3,1,31/12/2025Triệu VND,5.475.133,5475133.0,5475133000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,23,4,1,31/12/2024Triệu VND,5.358.085,5358085.0,5358085000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,24,0,a,STT | A,a,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,24,1,a,Chỉ tiêu | TÀI SẢN,Nguyên giá tài sản cố định,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,24,2,a,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,24,3,a,31/12/2025Triệu VND,15.211.876,15211876.0,15211876000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,24,4,a,31/12/2024Triệu VND,14.758.274,14758274.0,14758274000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,25,0,b,STT | A,b,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,25,1,b,Chỉ tiêu | TÀI SẢN,Khẩu hao tài sản cố định,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,25,2,b,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,25,3,b,31/12/2025Triệu VND,(9.736.743),-9736743.0,-9736743000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,25,4,b,31/12/2024Triệu VND,(9.400.189),-9400189.0,-9400189000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,26,0,3,STT | A,3,3.0,3000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,26,1,3,Chỉ tiêu | TÀI SẢN,Tài sản cố định vô hình,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,26,2,3,Thuyết minh,14,14.0,14000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,26,3,3,31/12/2025Triệu VND,2.504.438,2504438.0,2504438000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,26,4,3,31/12/2024Triệu VND,2.528.743,2528743.0,2528743000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,27,0,a,STT | A,a,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,27,1,a,Chỉ tiêu | TÀI SẢN,Nguyên giá tài sản cố định,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,27,2,a,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,27,3,a,31/12/2025Triệu VND,5.152.837,5152837.0,5152837000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,27,4,a,31/12/2024Triệu VND,4.967.369,4967369.0,4967369000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,28,0,b,STT | A,b,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,28,1,b,Chỉ tiêu | TÀI SẢN,Hao mòn tài sản cố định,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,28,2,b,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,28,3,b,31/12/2025Triệu VND,(2.648.399),-2648399.0,-2648399000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,28,4,b,31/12/2024Triệu VND,(2.438.626),-2438626.0,-2438626000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,29,0,XII,STT | A,XII,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,29,1,XII,Chỉ tiêu | TÀI SẢN,Tài sản Có khác,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,29,2,XII,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,29,3,XII,31/12/2025Triệu VND,35.219.763,35219763.0,35219763000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,29,4,XII,31/12/2024Triệu VND,30.799.404,30799404.0,30799404000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,30,0,1,STT | A,1,1.0,1000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,30,1,1,Chỉ tiêu | TÀI SẢN,Các khoản phải thu,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,30,2,1,Thuyết minh,15(a),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,30,3,1,31/12/2025Triệu VND,19.808.933,19808933.0,19808933000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,30,4,1,31/12/2024Triệu VND,14.684.360,14684360.0,14684360000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,31,0,2,STT | A,2,2.0,2000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,31,1,2,Chỉ tiêu | TÀI SẢN,"Các khoản lãi, phí phải thu",,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,31,2,2,Thuyết minh,15(b),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,31,3,2,31/12/2025Triệu VND,9.592.816,9592816.0,9592816000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,31,4,2,31/12/2024Triệu VND,8.666.759,8666759.0,8666759000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,32,0,3,STT | A,3,3.0,3000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,32,1,3,Chỉ tiêu | TÀI SẢN,Tài sản thuế thu nhập doanh nghiệp hoãn lại,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,32,2,3,Thuyết minh,15(c),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,32,3,3,31/12/2025Triệu VND,-,0.0,0.0,True,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,32,4,3,31/12/2024Triệu VND,986.374,986374.0,986374000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,33,0,4,STT | A,4,4.0,4000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,33,1,4,Chỉ tiêu | TÀI SẢN,Tài sản Có khác,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,33,2,4,Thuyết minh,15(d),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,33,3,4,31/12/2025Triệu VND,5.818.495,5818495.0,5818495000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,33,4,4,31/12/2024Triệu VND,6.462.320,6462320.0,6462320000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,34,0,5,STT | A,5,5.0,5000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,34,1,5,Chỉ tiêu | TÀI SẢN,Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,34,2,5,Thuyết minh,15(d),,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,34,3,5,31/12/2025Triệu VND,(481),-481.0,-481000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,34,4,5,31/12/2024Triệu VND,(409),-409.0,-409000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,35,0,,STT | A,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,35,1,,Chỉ tiêu | TÀI SẢN,TỔNG TÀI SẢN CÓ,,,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,35,2,,Thuyết minh,,,,False,True
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,35,3,,31/12/2025Triệu VND,2.426.649.127,2426649127.0,2426649127000000.0,False,False
+VCB_financial_statements_2025_separate|table_11,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,35,4,,31/12/2024Triệu VND,2.075.778.940,2075778940.0,2075778940000000.0,False,False

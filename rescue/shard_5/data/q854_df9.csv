@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,0,0,Tiền cho thuê nhận trước,Ngắn hạn,Tiền cho thuê nhận trước,,,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,0,1,Tiền cho thuê nhận trước,Số cuối năm,7.186.302.603,7186302603.0,7186302603.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,0,2,Tiền cho thuê nhận trước,VND Số đầu năm,6.698.604.900,6698604900.0,6698604900.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,1,0,Dải hạn,Ngắn hạn,Dải hạn,,,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,1,1,Dải hạn,Số cuối năm,,,,False,True
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,1,2,Dải hạn,VND Số đầu năm,,,,False,True
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,2,0,Dự án Mizuki Park,Ngắn hạn,Dự án Mizuki Park,,,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,2,1,Dự án Mizuki Park,Số cuối năm,219.057.857.152,219057857152.0,219057857152.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,2,2,Dự án Mizuki Park,VND Số đầu năm,217.619.752.529,217619752529.0,217619752529.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,3,0,Tiền cho thuê nhận trước,Ngắn hạn,Tiền cho thuê nhận trước,,,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,3,1,Tiền cho thuê nhận trước,Số cuối năm,66.035.565.717,66035565717.0,66035565717.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,3,2,Tiền cho thuê nhận trước,VND Số đầu năm,75.032.438.524,75032438524.0,75032438524.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,4,0,Dự án Waterpoint,Ngắn hạn,Dự án Waterpoint,,,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,4,1,Dự án Waterpoint,Số cuối năm,-,0.0,0.0,True,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,4,2,Dự án Waterpoint,VND Số đầu năm,464.624.798.537,464624798537.0,464624798537.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,5,0,,Ngắn hạn,,,,False,True
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,5,1,,Số cuối năm,285.093.422.869,285093422869.0,285093422869.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,5,2,,VND Số đầu năm,757.276.989.590,757276989590.0,757276989590.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,6,0,TỔNG CỘNG,Ngắn hạn,TỔNG CỘNG,,,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,6,1,TỔNG CỘNG,Số cuối năm,292.279.725.472,292279725472.0,292279725472.0,False,False
+NLG_financial_statements_2021_consolidated|table_55,NLG_financial_statements_2021_consolidated,NLG,2021,consolidated,VND,6,2,TỔNG CỘNG,VND Số đầu năm,763.975.594.490,763975594490.0,763975594490.0,False,False

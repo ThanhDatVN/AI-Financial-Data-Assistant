@@ -1,0 +1,41 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,0,0,Ông Phạm Nhật Vương,Tên,Ông Phạm Nhật Vương,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,0,1,Ông Phạm Nhật Vương,Chức vụ,Chủ tịch,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,0,2,Ông Phạm Nhật Vương,Đơn vị tính: triệu VND | Năm nay,-,0.0,0.0,True,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,0,3,Ông Phạm Nhật Vương,Đơn vị tính: triệu VND | Năm trước,-,0.0,0.0,True,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,1,0,Bà Phạm Thúy Hằng,Tên,Bà Phạm Thúy Hằng,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,1,1,Bà Phạm Thúy Hằng,Chức vụ,Phó Chủ tịch,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,1,2,Bà Phạm Thúy Hằng,Đơn vị tính: triệu VND | Năm nay,2.763,2763.0,2763000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,1,3,Bà Phạm Thúy Hằng,Đơn vị tính: triệu VND | Năm trước,2.752,2752.0,2752000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,2,0,Bà Phạm Thu Hương,Tên,Bà Phạm Thu Hương,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,2,1,Bà Phạm Thu Hương,Chức vụ,Phó Chủ tịch,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,2,2,Bà Phạm Thu Hương,Đơn vị tính: triệu VND | Năm nay,2.763,2763.0,2763000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,2,3,Bà Phạm Thu Hương,Đơn vị tính: triệu VND | Năm trước,2.752,2752.0,2752000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,3,0,Bà Nguyễn Diệu Linh,Tên,Bà Nguyễn Diệu Linh,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,3,1,Bà Nguyễn Diệu Linh,Chức vụ,Phó Chủ tịch,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,3,2,Bà Nguyễn Diệu Linh,Đơn vị tính: triệu VND | Năm nay,-,0.0,0.0,True,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,3,3,Bà Nguyễn Diệu Linh,Đơn vị tính: triệu VND | Năm trước,-,0.0,0.0,True,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,4,0,Ông Nguyễn Việt Quang,Tên,Ông Nguyễn Việt Quang,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,4,1,Ông Nguyễn Việt Quang,Chức vụ,Phó Chủ tịch,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,4,2,Ông Nguyễn Việt Quang,Đơn vị tính: triệu VND | Năm nay,2.782,2782.0,2782000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,4,3,Ông Nguyễn Việt Quang,Đơn vị tính: triệu VND | Năm trước,2.781,2781.0,2781000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,5,0,Ông Adil Ahmad,Tên,Ông Adil Ahmad,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,5,1,Ông Adil Ahmad,Chức vụ,Thành viên độc lập,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,5,2,Ông Adil Ahmad,Đơn vị tính: triệu VND | Năm nay,1.239,1239.0,1239000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,5,3,Ông Adil Ahmad,Đơn vị tính: triệu VND | Năm trước,1.076,1076.0,1076000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,6,0,Ông Chin Michael Jaewuk,Tên,Ông Chin Michael Jaewuk,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,6,1,Ông Chin Michael Jaewuk,Chức vụ,Thành viên độc lập,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,6,2,Ông Chin Michael Jaewuk,Đơn vị tính: triệu VND | Năm nay,1.239,1239.0,1239000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,6,3,Ông Chin Michael Jaewuk,Đơn vị tính: triệu VND | Năm trước,1.076,1076.0,1076000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,7,0,Ông Ronaldo Dy-Liacco Ibasco,Tên,Ông Ronaldo Dy-Liacco Ibasco,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,7,1,Ông Ronaldo Dy-Liacco Ibasco,Chức vụ,Thành viên độc lập,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,7,2,Ông Ronaldo Dy-Liacco Ibasco,Đơn vị tính: triệu VND | Năm nay,1.239,1239.0,1239000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,7,3,Ông Ronaldo Dy-Liacco Ibasco,Đơn vị tính: triệu VND | Năm trước,1.076,1076.0,1076000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,8,0,Bà Chun Chae Rhan,Tên,Bà Chun Chae Rhan,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,8,1,Bà Chun Chae Rhan,Chức vụ,Thành viên đến ngày 25 tháng 2 năm 2025,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,8,2,Bà Chun Chae Rhan,Đơn vị tính: triệu VND | Năm nay,-,0.0,0.0,True,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,8,3,Bà Chun Chae Rhan,Đơn vị tính: triệu VND | Năm trước,-,0.0,0.0,True,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,9,0,TỔNG CỘNG,Tên,TỔNG CỘNG,,,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,9,1,TỔNG CỘNG,Chức vụ,,,,False,True
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,9,2,TỔNG CỘNG,Đơn vị tính: triệu VND | Năm nay,12.025,12025.0,12025000000.0,False,False
+VIC_financial_statements_2024_separate|table_82,VIC_financial_statements_2024_separate,VIC,2024,separate,MILLION_VND,9,3,TỔNG CỘNG,Đơn vị tính: triệu VND | Năm trước,11.513,11513.0,11513000000.0,False,False

@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HPX_financial_statements_2023_separate|table_53,HPX_financial_statements_2023_separate,HPX,2023,separate,VND,0,0,Chi phí lãi vay liên quan đến bất động sảnchưa bàn giao,column_1,Chi phí lãi vay liên quan đến bất động sảnchưa bàn giao,,,False,False
+HPX_financial_statements_2023_separate|table_53,HPX_financial_statements_2023_separate,HPX,2023,separate,VND,0,1,Chi phí lãi vay liên quan đến bất động sảnchưa bàn giao,Năm 2023VND,-,0.0,0.0,True,False
+HPX_financial_statements_2023_separate|table_53,HPX_financial_statements_2023_separate,HPX,2023,separate,VND,0,2,Chi phí lãi vay liên quan đến bất động sảnchưa bàn giao,Năm 2022VND,1.858.356.164,1858356164.0,1858356164.0,False,False
+HPX_financial_statements_2023_separate|table_53,HPX_financial_statements_2023_separate,HPX,2023,separate,VND,1,0,Thuế thu nhập doanh nghiệp tạm tính cho bất động sảnchuyển nhượng,column_1,Thuế thu nhập doanh nghiệp tạm tính cho bất động sảnchuyển nhượng,,,False,False
+HPX_financial_statements_2023_separate|table_53,HPX_financial_statements_2023_separate,HPX,2023,separate,VND,1,1,Thuế thu nhập doanh nghiệp tạm tính cho bất động sảnchuyển nhượng,Năm 2023VND,-,0.0,0.0,True,False
+HPX_financial_statements_2023_separate|table_53,HPX_financial_statements_2023_separate,HPX,2023,separate,VND,1,2,Thuế thu nhập doanh nghiệp tạm tính cho bất động sảnchuyển nhượng,Năm 2022VND,301.719.350,301719350.0,301719350.0,False,False
+HPX_financial_statements_2023_separate|table_53,HPX_financial_statements_2023_separate,HPX,2023,separate,VND,2,0,Tổng,column_1,Tổng,,,False,False
+HPX_financial_statements_2023_separate|table_53,HPX_financial_statements_2023_separate,HPX,2023,separate,VND,2,1,Tổng,Năm 2023VND,-,0.0,0.0,True,False
+HPX_financial_statements_2023_separate|table_53,HPX_financial_statements_2023_separate,HPX,2023,separate,VND,2,2,Tổng,Năm 2022VND,2.160.075.514,2160075514.0,2160075514.0,False,False

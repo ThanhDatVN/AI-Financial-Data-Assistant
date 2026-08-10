@@ -1,0 +1,206 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,0,0,A. TÀI SẢN NGĂN HẠN,TÀI SẢN,A. TÀI SẢN NGĂN HẠN,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,0,1,A. TÀI SẢN NGĂN HẠN,Mã số,100,100.0,100.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,0,2,A. TÀI SẢN NGĂN HẠN,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,0,3,A. TÀI SẢN NGĂN HẠN,31/12/2024 VND,10.009.678.757.320,10009678757320.0,10009678757320.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,0,4,A. TÀI SẢN NGĂN HẠN,01/01/2024 VND,8.091.482.216.843,8091482216843.0,8091482216843.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,1,0,I. Tiền và các khoản tương đương tiền,TÀI SẢN,I. Tiền và các khoản tương đương tiền,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,1,1,I. Tiền và các khoản tương đương tiền,Mã số,110,110.0,110.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,1,2,I. Tiền và các khoản tương đương tiền,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,1,3,I. Tiền và các khoản tương đương tiền,31/12/2024 VND,538.409.906.246,538409906246.0,538409906246.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,1,4,I. Tiền và các khoản tương đương tiền,01/01/2024 VND,288.969.487.361,288969487361.0,288969487361.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,2,0,1. Tiền,TÀI SẢN,1. Tiền,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,2,1,1. Tiền,Mã số,111,111.0,111.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,2,2,1. Tiền,Thuyết minh,5,5.0,5.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,2,3,1. Tiền,31/12/2024 VND,538.409.906.246,538409906246.0,538409906246.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,2,4,1. Tiền,01/01/2024 VND,288.969.487.361,288969487361.0,288969487361.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,3,0,2. Các khoản tương đương tiền,TÀI SẢN,2. Các khoản tương đương tiền,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,3,1,2. Các khoản tương đương tiền,Mã số,112,112.0,112.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,3,2,2. Các khoản tương đương tiền,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,3,3,2. Các khoản tương đương tiền,31/12/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,3,4,2. Các khoản tương đương tiền,01/01/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,4,0,II. Đầu tư tài chính ngắn hạn,TÀI SẢN,II. Đầu tư tài chính ngắn hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,4,1,II. Đầu tư tài chính ngắn hạn,Mã số,120,120.0,120.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,4,2,II. Đầu tư tài chính ngắn hạn,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,4,3,II. Đầu tư tài chính ngắn hạn,31/12/2024 VND,7.299.000.000.000,7299000000000.0,7299000000000.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,4,4,II. Đầu tư tài chính ngắn hạn,01/01/2024 VND,6.165.000.000.000,6165000000000.0,6165000000000.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,5,0,1. Chứng khoán kinh doanh,TÀI SẢN,1. Chứng khoán kinh doanh,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,5,1,1. Chứng khoán kinh doanh,Mã số,121,121.0,121.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,5,2,1. Chứng khoán kinh doanh,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,5,3,1. Chứng khoán kinh doanh,31/12/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,5,4,1. Chứng khoán kinh doanh,01/01/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,6,0,2. Đầu tư nằm giữ đến ngày đáo hạn,TÀI SẢN,2. Đầu tư nằm giữ đến ngày đáo hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,6,1,2. Đầu tư nằm giữ đến ngày đáo hạn,Mã số,123,123.0,123.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,6,2,2. Đầu tư nằm giữ đến ngày đáo hạn,Thuyết minh,6.a,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,6,3,2. Đầu tư nằm giữ đến ngày đáo hạn,31/12/2024 VND,7.299.000.000.000,7299000000000.0,7299000000000.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,6,4,2. Đầu tư nằm giữ đến ngày đáo hạn,01/01/2024 VND,6.165.000.000.000,6165000000000.0,6165000000000.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,7,0,III. Các khoản phải thu ngắn hạn,TÀI SẢN,III. Các khoản phải thu ngắn hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,7,1,III. Các khoản phải thu ngắn hạn,Mã số,130,130.0,130.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,7,2,III. Các khoản phải thu ngắn hạn,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,7,3,III. Các khoản phải thu ngắn hạn,31/12/2024 VND,810.193.555.309,810193555309.0,810193555309.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,7,4,III. Các khoản phải thu ngắn hạn,01/01/2024 VND,660.905.475.189,660905475189.0,660905475189.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,8,0,1. Phải thu ngắn hạn của khách hàng,TÀI SẢN,1. Phải thu ngắn hạn của khách hàng,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,8,1,1. Phải thu ngắn hạn của khách hàng,Mã số,131,131.0,131.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,8,2,1. Phải thu ngắn hạn của khách hàng,Thuyết minh,7,7.0,7.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,8,3,1. Phải thu ngắn hạn của khách hàng,31/12/2024 VND,344.435.595.077,344435595077.0,344435595077.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,8,4,1. Phải thu ngắn hạn của khách hàng,01/01/2024 VND,247.883.101.555,247883101555.0,247883101555.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,9,0,2. Trà trước cho người bán ngắn hạn,TÀI SẢN,2. Trà trước cho người bán ngắn hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,9,1,2. Trà trước cho người bán ngắn hạn,Mã số,132,132.0,132.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,9,2,2. Trà trước cho người bán ngắn hạn,Thuyết minh,8,8.0,8.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,9,3,2. Trà trước cho người bán ngắn hạn,31/12/2024 VND,429.953.442.576,429953442576.0,429953442576.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,9,4,2. Trà trước cho người bán ngắn hạn,01/01/2024 VND,379.855.956.240,379855956240.0,379855956240.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,10,0,3. Phải thu ngắn hạn khác,TÀI SẢN,3. Phải thu ngắn hạn khác,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,10,1,3. Phải thu ngắn hạn khác,Mã số,136,136.0,136.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,10,2,3. Phải thu ngắn hạn khác,Thuyết minh,9.a,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,10,3,3. Phải thu ngắn hạn khác,31/12/2024 VND,55.860.257.611,55860257611.0,55860257611.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,10,4,3. Phải thu ngắn hạn khác,01/01/2024 VND,52.334.442.791,52334442791.0,52334442791.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,11,0,4. Dự phòng phải thu ngắn hạn khó đòi,TÀI SẢN,4. Dự phòng phải thu ngắn hạn khó đòi,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,11,1,4. Dự phòng phải thu ngắn hạn khó đòi,Mã số,137,137.0,137.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,11,2,4. Dự phòng phải thu ngắn hạn khó đòi,Thuyết minh,10,10.0,10.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,11,3,4. Dự phòng phải thu ngắn hạn khó đòi,31/12/2024 VND,(20.055.739.955),-20055739955.0,-20055739955.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,11,4,4. Dự phòng phải thu ngắn hạn khó đòi,01/01/2024 VND,(19.168.025.397),-19168025397.0,-19168025397.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,12,0,IV. Hàng tồn kho,TÀI SẢN,IV. Hàng tồn kho,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,12,1,IV. Hàng tồn kho,Mã số,140,140.0,140.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,12,2,IV. Hàng tồn kho,Thuyết minh,11,11.0,11.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,12,3,IV. Hàng tồn kho,31/12/2024 VND,1.322.980.746.073,1322980746073.0,1322980746073.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,12,4,IV. Hàng tồn kho,01/01/2024 VND,957.509.561.445,957509561445.0,957509561445.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,13,0,1. Hàng tồn kho,TÀI SẢN,1. Hàng tồn kho,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,13,1,1. Hàng tồn kho,Mã số,141,141.0,141.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,13,2,1. Hàng tồn kho,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,13,3,1. Hàng tồn kho,31/12/2024 VND,1.322.994.553.282,1322994553282.0,1322994553282.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,13,4,1. Hàng tồn kho,01/01/2024 VND,960.148.782.878,960148782878.0,960148782878.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,14,0,2. Dự phòng giảm giá hàng tồn kho,TÀI SẢN,2. Dự phòng giảm giá hàng tồn kho,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,14,1,2. Dự phòng giảm giá hàng tồn kho,Mã số,149,149.0,149.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,14,2,2. Dự phòng giảm giá hàng tồn kho,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,14,3,2. Dự phòng giảm giá hàng tồn kho,31/12/2024 VND,(13.807.209),-13807209.0,-13807209.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,14,4,2. Dự phòng giảm giá hàng tồn kho,01/01/2024 VND,(2.639.221.433),-2639221433.0,-2639221433.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,15,0,V. Tài sản ngắn hạn khác,TÀI SẢN,V. Tài sản ngắn hạn khác,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,15,1,V. Tài sản ngắn hạn khác,Mã số,150,150.0,150.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,15,2,V. Tài sản ngắn hạn khác,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,15,3,V. Tài sản ngắn hạn khác,31/12/2024 VND,39.094.549.692,39094549692.0,39094549692.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,15,4,V. Tài sản ngắn hạn khác,01/01/2024 VND,19.097.692.848,19097692848.0,19097692848.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,16,0,1. Chi phí trả trước ngắn hạn,TÀI SẢN,1. Chi phí trả trước ngắn hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,16,1,1. Chi phí trả trước ngắn hạn,Mã số,151,151.0,151.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,16,2,1. Chi phí trả trước ngắn hạn,Thuyết minh,12.a,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,16,3,1. Chi phí trả trước ngắn hạn,31/12/2024 VND,23.875.900.105,23875900105.0,23875900105.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,16,4,1. Chi phí trả trước ngắn hạn,01/01/2024 VND,18.356.310.764,18356310764.0,18356310764.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,17,0,2. Thuế GTGT được khấu trừ,TÀI SẢN,2. Thuế GTGT được khấu trừ,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,17,1,2. Thuế GTGT được khấu trừ,Mã số,152,152.0,152.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,17,2,2. Thuế GTGT được khấu trừ,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,17,3,2. Thuế GTGT được khấu trừ,31/12/2024 VND,15.180.430.505,15180430505.0,15180430505.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,17,4,2. Thuế GTGT được khấu trừ,01/01/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,18,0,3. Thuế và các khoản khác phải thu Nhà nước,TÀI SẢN,3. Thuế và các khoản khác phải thu Nhà nước,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,18,1,3. Thuế và các khoản khác phải thu Nhà nước,Mã số,153,153.0,153.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,18,2,3. Thuế và các khoản khác phải thu Nhà nước,Thuyết minh,18,18.0,18.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,18,3,3. Thuế và các khoản khác phải thu Nhà nước,31/12/2024 VND,38.219.082,38219082.0,38219082.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,18,4,3. Thuế và các khoản khác phải thu Nhà nước,01/01/2024 VND,741.382.084,741382084.0,741382084.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,19,0,B. TÀI SẢN DÀI HẠN,TÀI SẢN,B. TÀI SẢN DÀI HẠN,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,19,1,B. TÀI SẢN DÀI HẠN,Mã số,200,200.0,200.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,19,2,B. TÀI SẢN DÀI HẠN,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,19,3,B. TÀI SẢN DÀI HẠN,31/12/2024 VND,4.597.251.860.368,4597251860368.0,4597251860368.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,19,4,B. TÀI SẢN DÀI HẠN,01/01/2024 VND,4.759.144.462.436,4759144462436.0,4759144462436.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,20,0,I. Các khoản phải thu dài hạn,TÀI SẢN,I. Các khoản phải thu dài hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,20,1,I. Các khoản phải thu dài hạn,Mã số,210,210.0,210.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,20,2,I. Các khoản phải thu dài hạn,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,20,3,I. Các khoản phải thu dài hạn,31/12/2024 VND,434.783.710,434783710.0,434783710.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,20,4,I. Các khoản phải thu dài hạn,01/01/2024 VND,786.569.947,786569947.0,786569947.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,21,0,1. Phải thu dài hạn của khách hàng,TÀI SẢN,1. Phải thu dài hạn của khách hàng,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,21,1,1. Phải thu dài hạn của khách hàng,Mã số,211,211.0,211.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,21,2,1. Phải thu dài hạn của khách hàng,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,21,3,1. Phải thu dài hạn của khách hàng,31/12/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,21,4,1. Phải thu dài hạn của khách hàng,01/01/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,22,0,2. Phải thu dài hạn khác,TÀI SẢN,2. Phải thu dài hạn khác,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,22,1,2. Phải thu dài hạn khác,Mã số,216,216.0,216.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,22,2,2. Phải thu dài hạn khác,Thuyết minh,9.b,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,22,3,2. Phải thu dài hạn khác,31/12/2024 VND,434.783.710,434783710.0,434783710.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,22,4,2. Phải thu dài hạn khác,01/01/2024 VND,786.569.947,786569947.0,786569947.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,23,0,II. Tài sản cố định,TÀI SẢN,II. Tài sản cố định,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,23,1,II. Tài sản cố định,Mã số,220,220.0,220.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,23,2,II. Tài sản cố định,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,23,3,II. Tài sản cố định,31/12/2024 VND,3.451.468.082.294,3451468082294.0,3451468082294.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,23,4,II. Tài sản cố định,01/01/2024 VND,3.666.123.937.870,3666123937870.0,3666123937870.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,24,0,1. Tài sản cố định hữu hình,TÀI SẢN,1. Tài sản cố định hữu hình,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,24,1,1. Tài sản cố định hữu hình,Mã số,221,221.0,221.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,24,2,1. Tài sản cố định hữu hình,Thuyết minh,13,13.0,13.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,24,3,1. Tài sản cố định hữu hình,31/12/2024 VND,3.434.323.430.222,3434323430222.0,3434323430222.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,24,4,1. Tài sản cố định hữu hình,01/01/2024 VND,3.650.071.571.533,3650071571533.0,3650071571533.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,25,0,- Nguyên giá,TÀI SẢN,- Nguyên giá,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,25,1,- Nguyên giá,Mã số,222,222.0,222.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,25,2,- Nguyên giá,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,25,3,- Nguyên giá,31/12/2024 VND,9.378.025.233.461,9378025233461.0,9378025233461.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,25,4,- Nguyên giá,01/01/2024 VND,9.201.583.768.224,9201583768224.0,9201583768224.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,26,0,- Giá trị hao mòn lũy kế,TÀI SẢN,- Giá trị hao mòn lũy kế,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,26,1,- Giá trị hao mòn lũy kế,Mã số,223,223.0,223.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,26,2,- Giá trị hao mòn lũy kế,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,26,3,- Giá trị hao mòn lũy kế,31/12/2024 VND,(5.943.701.803.239),-5943701803239.0,-5943701803239.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,26,4,- Giá trị hao mòn lũy kế,01/01/2024 VND,(5.551.512.196.691),-5551512196691.0,-5551512196691.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,27,0,2. Tài sản cố định vô hình,TÀI SẢN,2. Tài sản cố định vô hình,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,27,1,2. Tài sản cố định vô hình,Mã số,227,227.0,227.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,27,2,2. Tài sản cố định vô hình,Thuyết minh,14,14.0,14.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,27,3,2. Tài sản cố định vô hình,31/12/2024 VND,17.144.652.072,17144652072.0,17144652072.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,27,4,2. Tài sản cố định vô hình,01/01/2024 VND,16.052.366.337,16052366337.0,16052366337.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,28,0,- Nguyên giá,TÀI SẢN,- Nguyên giá,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,28,1,- Nguyên giá,Mã số,228,228.0,228.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,28,2,- Nguyên giá,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,28,3,- Nguyên giá,31/12/2024 VND,78.177.331.109,78177331109.0,78177331109.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,28,4,- Nguyên giá,01/01/2024 VND,74.486.330.425,74486330425.0,74486330425.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,29,0,- Giá trị hao mòn lũy kế,TÀI SẢN,- Giá trị hao mòn lũy kế,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,29,1,- Giá trị hao mòn lũy kế,Mã số,229,229.0,229.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,29,2,- Giá trị hao mòn lũy kế,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,29,3,- Giá trị hao mòn lũy kế,31/12/2024 VND,(61.032.679.037),-61032679037.0,-61032679037.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,29,4,- Giá trị hao mòn lũy kế,01/01/2024 VND,(58.433.964.088),-58433964088.0,-58433964088.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,30,0,III. Bất động sản đầu tư,TÀI SẢN,III. Bất động sản đầu tư,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,30,1,III. Bất động sản đầu tư,Mã số,230,230.0,230.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,30,2,III. Bất động sản đầu tư,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,30,3,III. Bất động sản đầu tư,31/12/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,30,4,III. Bất động sản đầu tư,01/01/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,31,0,IV. Tài sản dở dang dài hạn,TÀI SẢN,IV. Tài sản dở dang dài hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,31,1,IV. Tài sản dở dang dài hạn,Mã số,240,240.0,240.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,31,2,IV. Tài sản dở dang dài hạn,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,31,3,IV. Tài sản dở dang dài hạn,31/12/2024 VND,81.773.023.093,81773023093.0,81773023093.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,31,4,IV. Tài sản dở dang dài hạn,01/01/2024 VND,53.483.559.255,53483559255.0,53483559255.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,32,0,"1. Chi phí sản xuất, kinh doanh dở dang dài hạn",TÀI SẢN,"1. Chi phí sản xuất, kinh doanh dở dang dài hạn",,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,32,1,"1. Chi phí sản xuất, kinh doanh dở dang dài hạn",Mã số,241,241.0,241.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,32,2,"1. Chi phí sản xuất, kinh doanh dở dang dài hạn",Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,32,3,"1. Chi phí sản xuất, kinh doanh dở dang dài hạn",31/12/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,32,4,"1. Chi phí sản xuất, kinh doanh dở dang dài hạn",01/01/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,33,0,2. Chi phí xây dựng cơ bản dở dang,TÀI SẢN,2. Chi phí xây dựng cơ bản dở dang,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,33,1,2. Chi phí xây dựng cơ bản dở dang,Mã số,242,242.0,242.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,33,2,2. Chi phí xây dựng cơ bản dở dang,Thuyết minh,15,15.0,15.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,33,3,2. Chi phí xây dựng cơ bản dở dang,31/12/2024 VND,81.773.023.093,81773023093.0,81773023093.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,33,4,2. Chi phí xây dựng cơ bản dở dang,01/01/2024 VND,53.483.559.255,53483559255.0,53483559255.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,34,0,V. Đầu tư tài chính dài hạn,TÀI SẢN,V. Đầu tư tài chính dài hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,34,1,V. Đầu tư tài chính dài hạn,Mã số,250,250.0,250.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,34,2,V. Đầu tư tài chính dài hạn,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,34,3,V. Đầu tư tài chính dài hạn,31/12/2024 VND,800.000.000.000,800000000000.0,800000000000.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,34,4,V. Đầu tư tài chính dài hạn,01/01/2024 VND,800.000.000.000,800000000000.0,800000000000.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,35,0,1. Đầu tư vào công ty con,TÀI SẢN,1. Đầu tư vào công ty con,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,35,1,1. Đầu tư vào công ty con,Mã số,251,251.0,251.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,35,2,1. Đầu tư vào công ty con,Thuyết minh,6.b,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,35,3,1. Đầu tư vào công ty con,31/12/2024 VND,800.000.000.000,800000000000.0,800000000000.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,35,4,1. Đầu tư vào công ty con,01/01/2024 VND,800.000.000.000,800000000000.0,800000000000.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,36,0,2. Đầu tư nấm giữ đến ngày đáo hạn,TÀI SẢN,2. Đầu tư nấm giữ đến ngày đáo hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,36,1,2. Đầu tư nấm giữ đến ngày đáo hạn,Mã số,255,255.0,255.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,36,2,2. Đầu tư nấm giữ đến ngày đáo hạn,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,36,3,2. Đầu tư nấm giữ đến ngày đáo hạn,31/12/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,36,4,2. Đầu tư nấm giữ đến ngày đáo hạn,01/01/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,37,0,VI. Tài sản dài hạn khác,TÀI SẢN,VI. Tài sản dài hạn khác,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,37,1,VI. Tài sản dài hạn khác,Mã số,260,260.0,260.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,37,2,VI. Tài sản dài hạn khác,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,37,3,VI. Tài sản dài hạn khác,31/12/2024 VND,263.575.971.271,263575971271.0,263575971271.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,37,4,VI. Tài sản dài hạn khác,01/01/2024 VND,238.750.395.364,238750395364.0,238750395364.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,38,0,1. Chi phí trả trước dài hạn,TÀI SẢN,1. Chi phí trả trước dài hạn,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,38,1,1. Chi phí trả trước dài hạn,Mã số,261,261.0,261.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,38,2,1. Chi phí trả trước dài hạn,Thuyết minh,12.b,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,38,3,1. Chi phí trả trước dài hạn,31/12/2024 VND,263.575.971.271,263575971271.0,263575971271.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,38,4,1. Chi phí trả trước dài hạn,01/01/2024 VND,238.750.395.364,238750395364.0,238750395364.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,39,0,2. Tài sản dài hạn khác,TÀI SẢN,2. Tài sản dài hạn khác,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,39,1,2. Tài sản dài hạn khác,Mã số,268,268.0,268.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,39,2,2. Tài sản dài hạn khác,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,39,3,2. Tài sản dài hạn khác,31/12/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,39,4,2. Tài sản dài hạn khác,01/01/2024 VND,-,0.0,0.0,True,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,40,0,TỔNG CỘNG TÀI SẢN,TÀI SẢN,TỔNG CỘNG TÀI SẢN,,,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,40,1,TỔNG CỘNG TÀI SẢN,Mã số,270,270.0,270.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,40,2,TỔNG CỘNG TÀI SẢN,Thuyết minh,,,,False,True
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,40,3,TỔNG CỘNG TÀI SẢN,31/12/2024 VND,14.606.930.617.688,14606930617688.0,14606930617688.0,False,False
+QNS_financial_statements_2024_separate|table_4,QNS_financial_statements_2024_separate,QNS,2024,separate,VND,40,4,TỔNG CỘNG TÀI SẢN,01/01/2024 VND,12.850.626.679.279,12850626679279.0,12850626679279.0,False,False

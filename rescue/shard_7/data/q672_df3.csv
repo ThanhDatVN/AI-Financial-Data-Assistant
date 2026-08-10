@@ -1,0 +1,136 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,0,0,100,Mã số,100,100.0,100.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,0,1,100,CHỈ TIÊU,A. TÀI SẢN NGẮN HẠN,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,0,2,100,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,0,3,100,31/12/2022 VND,9.739.510.880.503,9739510880503.0,9739510880503.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,0,4,100,31/12/2021 VND,10.801.086.423.799,10801086423799.0,10801086423799.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,1,0,110,Mã số,110,110.0,110.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,1,1,110,CHỈ TIÊU,I. Tài sản tài chính,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,1,2,110,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,1,3,110,31/12/2022 VND,9.704.969.881.216,9704969881216.0,9704969881216.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,1,4,110,31/12/2021 VND,10.749.300.163.847,10749300163847.0,10749300163847.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,2,0,111,Mã số,111,111.0,111.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,2,1,111,CHỈ TIÊU,1. Tiền và các khoản tương đương tiền,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,2,2,111,Thuyết minh,5,5.0,5.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,2,3,111,31/12/2022 VND,194.935.879.341,194935879341.0,194935879341.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,2,4,111,31/12/2021 VND,118.318.984.352,118318984352.0,118318984352.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,3,0,111.1,Mã số,111.1,111.1,111.1,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,3,1,111.1,CHỈ TIÊU,1.1. Tiền,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,3,2,111.1,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,3,3,111.1,31/12/2022 VND,24.935.879.341,24935879341.0,24935879341.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,3,4,111.1,31/12/2021 VND,91.018.984.352,91018984352.0,91018984352.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,4,0,111.2,Mã số,111.2,111.2,111.2,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,4,1,111.2,CHỈ TIÊU,1.2. Các khoản tương đương tiền,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,4,2,111.2,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,4,3,111.2,31/12/2022 VND,170.000.000.000,170000000000.0,170000000000.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,4,4,111.2,31/12/2021 VND,27.300.000.000,27300000000.0,27300000000.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,5,0,112,Mã số,112,112.0,112.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,5,1,112,CHỈ TIÊU,2. Các tài sản tài chính ghi nhận thông qua lãi/lỗ (FVTPL),,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,5,2,112,Thuyết minh,7.1,7.1,7.1,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,5,3,112,31/12/2022 VND,2.611.500.872.106,2611500872106.0,2611500872106.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,5,4,112,31/12/2021 VND,1.722.347.864.808,1722347864808.0,1722347864808.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,6,0,113,Mã số,113,113.0,113.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,6,1,113,CHỈ TIÊU,3. Các khoản đầu tư nắm giữ đến ngày đáo hạn (HTM),,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,6,2,113,Thuyết minh,7.2,7.2,7.2,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,6,3,113,31/12/2022 VND,1.623.292.939.025,1623292939025.0,1623292939025.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,6,4,113,31/12/2021 VND,1.584.415.039.025,1584415039025.0,1584415039025.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,7,0,114,Mã số,114,114.0,114.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,7,1,114,CHỈ TIÊU,4. Các khoản cho vay,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,7,2,114,Thuyết minh,7.3,7.3,7.3,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,7,3,114,31/12/2022 VND,3.759.499.832.736,3759499832736.0,3759499832736.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,7,4,114,31/12/2021 VND,7.151.289.176.293,7151289176293.0,7151289176293.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,8,0,115,Mã số,115,115.0,115.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,8,1,115,CHỈ TIÊU,5. Các tài sản tài chính sẵn sàng để bán (AFS),,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,8,2,115,Thuyết minh,7.4,7.4,7.4,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,8,3,115,31/12/2022 VND,1.389.980.915.859,1389980915859.0,1389980915859.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,8,4,115,31/12/2021 VND,117.949.857.502,117949857502.0,117949857502.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,9,0,116,Mã số,116,116.0,116.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,9,1,116,CHỈ TIÊU,6. Dự phòng suy giảm giá trị các tài sản tài chính và tài sẵn thế chấp,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,9,2,116,Thuyết minh,7.5,7.5,7.5,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,9,3,116,31/12/2022 VND,(82.583.086.500),-82583086500.0,-82583086500.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,9,4,116,31/12/2021 VND,(82.583.086.500),-82583086500.0,-82583086500.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,10,0,117,Mã số,117,117.0,117.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,10,1,117,CHỈ TIÊU,7. Các khoản phải thu,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,10,2,117,Thuyết minh,8,8.0,8.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,10,3,117,31/12/2022 VND,160.510.533.957,160510533957.0,160510533957.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,10,4,117,31/12/2021 VND,83.219.415.221,83219415221.0,83219415221.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,11,0,117.1,Mã số,117.1,117.1,117.1,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,11,1,117.1,CHỈ TIÊU,7.1. Phải thu bán các tài sản tài chính,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,11,2,117.1,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,11,3,117.1,31/12/2022 VND,-,0.0,0.0,True,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,11,4,117.1,31/12/2021 VND,3.002.354.000,3002354000.0,3002354000.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,12,0,117.2,Mã số,117.2,117.2,117.2,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,12,1,117.2,CHỈ TIÊU,"7.2. Phải thu và dự thu cổ tức, tiền lãi các tài sản tài chính",,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,12,2,117.2,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,12,3,117.2,31/12/2022 VND,160.510.533.957,160510533957.0,160510533957.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,12,4,117.2,31/12/2021 VND,80.217.061.221,80217061221.0,80217061221.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,13,0,117.3,Mã số,117.3,117.3,117.3,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,13,1,117.3,CHỈ TIÊU,"7.2.1. Phải thu cổ tức, tiền lãi đến ngày nhận",,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,13,2,117.3,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,13,3,117.3,31/12/2022 VND,64.711.196.146,64711196146.0,64711196146.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,13,4,117.3,31/12/2021 VND,36.417.255.215,36417255215.0,36417255215.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,14,0,117.4,Mã số,117.4,117.4,117.4,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,14,1,117.4,CHỈ TIÊU,"7.2.2. Dự thu cổ tức, tiền lãi chưa đến ngày nhận",,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,14,2,117.4,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,14,3,117.4,31/12/2022 VND,95.799.337.811,95799337811.0,95799337811.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,14,4,117.4,31/12/2021 VND,43.799.806.006,43799806006.0,43799806006.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,15,0,118,Mã số,118,118.0,118.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,15,1,118,CHỈ TIÊU,8. Trả trước cho người bán,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,15,2,118,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,15,3,118,31/12/2022 VND,38.016.988.078,38016988078.0,38016988078.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,15,4,118,31/12/2021 VND,27.392.863.570,27392863570.0,27392863570.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,16,0,119,Mã số,119,119.0,119.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,16,1,119,CHỈ TIÊU,9. Phải thu các dịch vụ công ty chứng khoán cung cấp,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,16,2,119,Thuyết minh,9,9.0,9.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,16,3,119,31/12/2022 VND,12.529.942.656,12529942656.0,12529942656.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,16,4,119,31/12/2021 VND,20.989.313.964,20989313964.0,20989313964.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,17,0,122,Mã số,122,122.0,122.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,17,1,122,CHỈ TIÊU,10. Các khoản phải thu khác,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,17,2,122,Thuyết minh,10,10.0,10.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,17,3,122,31/12/2022 VND,3.520.822.211,3520822211.0,3520822211.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,17,4,122,31/12/2021 VND,10.061.633.840,10061633840.0,10061633840.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,18,0,129,Mã số,129,129.0,129.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,18,1,129,CHỈ TIÊU,11. Dự phòng suy giảm giá trị các khoản phải thu,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,18,2,129,Thuyết minh,11,11.0,11.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,18,3,129,31/12/2022 VND,(6.235.758.253),-6235758253.0,-6235758253.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,18,4,129,31/12/2021 VND,(4.100.898.228),-4100898228.0,-4100898228.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,19,0,130,Mã số,130,130.0,130.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,19,1,130,CHỈ TIÊU,II. Tài sản ngắn hạn khác,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,19,2,130,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,19,3,130,31/12/2022 VND,34.540.999.287,34540999287.0,34540999287.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,19,4,130,31/12/2021 VND,51.786.259.952,51786259952.0,51786259952.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,20,0,131,Mã số,131,131.0,131.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,20,1,131,CHỈ TIÊU,1. Tạm ứng,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,20,2,131,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,20,3,131,31/12/2022 VND,4.055.032.198,4055032198.0,4055032198.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,20,4,131,31/12/2021 VND,1.076.680.879,1076680879.0,1076680879.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,21,0,132,Mã số,132,132.0,132.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,21,1,132,CHỈ TIÊU,"2. Vật tư văn phòng, công cụ, dụng cụ",,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,21,2,132,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,21,3,132,31/12/2022 VND,398.983.654,398983654.0,398983654.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,21,4,132,31/12/2021 VND,2.070.802.126,2070802126.0,2070802126.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,22,0,133,Mã số,133,133.0,133.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,22,1,133,CHỈ TIÊU,3. Chi phí trả trước ngắn hạn,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,22,2,133,Thuyết minh,12,12.0,12.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,22,3,133,31/12/2022 VND,14.317.396.673,14317396673.0,14317396673.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,22,4,133,31/12/2021 VND,24.013.308.548,24013308548.0,24013308548.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,23,0,134,Mã số,134,134.0,134.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,23,1,134,CHỈ TIÊU,"4. Cẩm cố, thể chấp, ký quỹ, ký cược ngắn hạn",,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,23,2,134,Thuyết minh,13,13.0,13.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,23,3,134,31/12/2022 VND,15.090.000.000,15090000000.0,15090000000.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,23,4,134,31/12/2021 VND,15.090.000.000,15090000000.0,15090000000.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,24,0,135,Mã số,135,135.0,135.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,24,1,135,CHỈ TIÊU,5. Thuế giá trị gia tăng được khấu trừ,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,24,2,135,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,24,3,135,31/12/2022 VND,171.369.547,171369547.0,171369547.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,24,4,135,31/12/2021 VND,-,0.0,0.0,True,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,25,0,136,Mã số,136,136.0,136.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,25,1,136,CHỈ TIÊU,6. Thuế và các khoản phải thu Nhà nước,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,25,2,136,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,25,3,136,31/12/2022 VND,508.217.215,508217215.0,508217215.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,25,4,136,31/12/2021 VND,35.468.399,35468399.0,35468399.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,26,0,137,Mã số,137,137.0,137.0,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,26,1,137,CHỈ TIÊU,7. Tài sản ngắn hạn khác,,,False,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,26,2,137,Thuyết minh,,,,False,True
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,26,3,137,31/12/2022 VND,-,0.0,0.0,True,False
+MBS_financial_statements_2022|table_5,MBS_financial_statements_2022,MBS,2022,unknown,VND,26,4,137,31/12/2021 VND,9.500.000.000,9500000000.0,9500000000.0,False,False

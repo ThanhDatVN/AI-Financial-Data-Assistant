@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+PLX_financial_statements_2023_consolidated|table_43,PLX_financial_statements_2023_consolidated,PLX,2023,consolidated,VND,0,0,Vay dài hạn,column_1,Vay dài hạn,,,False,False
+PLX_financial_statements_2023_consolidated|table_43,PLX_financial_statements_2023_consolidated,PLX,2023,consolidated,VND,0,1,Vay dài hạn,31/12/2023VND,833.373.398.235,833373398235.0,833373398235.0,False,False
+PLX_financial_statements_2023_consolidated|table_43,PLX_financial_statements_2023_consolidated,PLX,2023,consolidated,VND,0,2,Vay dài hạn,1/1/2023VND,1.098.314.666.661,1098314666661.0,1098314666661.0,False,False
+PLX_financial_statements_2023_consolidated|table_43,PLX_financial_statements_2023_consolidated,PLX,2023,consolidated,VND,1,0,Khoản đến hạn trả trong vòng 12 tháng (a),column_1,Khoản đến hạn trả trong vòng 12 tháng (a),,,False,False
+PLX_financial_statements_2023_consolidated|table_43,PLX_financial_statements_2023_consolidated,PLX,2023,consolidated,VND,1,1,Khoản đến hạn trả trong vòng 12 tháng (a),31/12/2023VND,(186.558.947.671),-186558947671.0,-186558947671.0,False,False
+PLX_financial_statements_2023_consolidated|table_43,PLX_financial_statements_2023_consolidated,PLX,2023,consolidated,VND,1,2,Khoản đến hạn trả trong vòng 12 tháng (a),1/1/2023VND,(274.963.676.733),-274963676733.0,-274963676733.0,False,False
+PLX_financial_statements_2023_consolidated|table_43,PLX_financial_statements_2023_consolidated,PLX,2023,consolidated,VND,2,0,Khoản đến hạn trả sau 12 tháng,column_1,Khoản đến hạn trả sau 12 tháng,,,False,False
+PLX_financial_statements_2023_consolidated|table_43,PLX_financial_statements_2023_consolidated,PLX,2023,consolidated,VND,2,1,Khoản đến hạn trả sau 12 tháng,31/12/2023VND,646.814.450.564,646814450564.0,646814450564.0,False,False
+PLX_financial_statements_2023_consolidated|table_43,PLX_financial_statements_2023_consolidated,PLX,2023,consolidated,VND,2,2,Khoản đến hạn trả sau 12 tháng,1/1/2023VND,823.350.989.928,823350989928.0,823350989928.0,False,False

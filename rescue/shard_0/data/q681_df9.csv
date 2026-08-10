@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,0,0,"Doanh thu từ dịch vụ tổng thầu (""EPC"")",column_1,"Doanh thu từ dịch vụ tổng thầu (""EPC"")",,,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,0,1,"Doanh thu từ dịch vụ tổng thầu (""EPC"")",Năm nay,814.063.626.970,814063626970.0,814063626970.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,0,2,"Doanh thu từ dịch vụ tổng thầu (""EPC"")",VNDNăm trước,676.004.734.070,676004734070.0,676004734070.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,1,0,"Doanh thu bán đất, căn hộ, nhà phố và biệt thụ",column_1,"Doanh thu bán đất, căn hộ, nhà phố và biệt thụ",,,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,1,1,"Doanh thu bán đất, căn hộ, nhà phố và biệt thụ",Năm nay,808.262.314.955,808262314955.0,808262314955.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,1,2,"Doanh thu bán đất, căn hộ, nhà phố và biệt thụ",VNDNăm trước,174.665.309.064,174665309064.0,174665309064.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,2,0,Doanh thu cung cấp dịch vụ,column_1,Doanh thu cung cấp dịch vụ,,,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,2,1,Doanh thu cung cấp dịch vụ,Năm nay,60.316.013.554,60316013554.0,60316013554.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,2,2,Doanh thu cung cấp dịch vụ,VNDNăm trước,92.431.571.175,92431571175.0,92431571175.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,3,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,3,1,TỔNG CỘNG,Năm nay,1.682.641.955.479,1682641955479.0,1682641955479.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,3,2,TỔNG CỘNG,VNDNăm trước,943.101.614.309,943101614309.0,943101614309.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,4,0,Trong đó:,column_1,Trong đó:,,,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,4,1,Trong đó:,Năm nay,Trong đó:,,,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,4,2,Trong đó:,VNDNăm trước,Trong đó:,,,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,5,0,Doanh thu với bên liên quan (TM số 27),column_1,Doanh thu với bên liên quan (TM số 27),,,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,5,1,Doanh thu với bên liên quan (TM số 27),Năm nay,1.018.688.970.162,1018688970162.0,1018688970162.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,5,2,Doanh thu với bên liên quan (TM số 27),VNDNăm trước,762.410.315.215,762410315215.0,762410315215.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,6,0,Doanh thu với khách hàng khác,column_1,Doanh thu với khách hàng khác,,,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,6,1,Doanh thu với khách hàng khác,Năm nay,663.952.985.317,663952985317.0,663952985317.0,False,False
+NLG_financial_statements_2019_separate|table_39,NLG_financial_statements_2019_separate,NLG,2019,separate,VND,6,2,Doanh thu với khách hàng khác,VNDNăm trước,180.691.299.094,180691299094.0,180691299094.0,False,False

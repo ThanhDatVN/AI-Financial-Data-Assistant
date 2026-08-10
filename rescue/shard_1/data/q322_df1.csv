@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,VND,0,0,Chứng chỉ tiền gửi bằng VND,column_1,Chứng chỉ tiền gửi bằng VND,,,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,0,1,Chứng chỉ tiền gửi bằng VND,Số cuối nămTriệu đồng,1.000.000,1000000.0,1000000000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,0,2,Chứng chỉ tiền gửi bằng VND,Số đầu nămTriệu đồng,5.930,5930.0,5930000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,1,0,Từ 12 tháng đến dưới 5 năm,column_1,Từ 12 tháng đến dưới 5 năm,,,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,1,1,Từ 12 tháng đến dưới 5 năm,Số cuối nămTriệu đồng,1.000.000,1000000.0,1000000000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,1,2,Từ 12 tháng đến dưới 5 năm,Số đầu nămTriệu đồng,-,0.0,0.0,True,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,2,0,Từ 5 năm trở lên,column_1,Từ 5 năm trở lên,,,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,2,1,Từ 5 năm trở lên,Số cuối nămTriệu đồng,-,0.0,0.0,True,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,2,2,Từ 5 năm trở lên,Số đầu nămTriệu đồng,5.930,5930.0,5930000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,VND,3,0,Trái phiếu thường bằng VND,column_1,Trái phiếu thường bằng VND,,,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,3,1,Trái phiếu thường bằng VND,Số cuối nămTriệu đồng,6.700.000,6700000.0,6700000000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,3,2,Trái phiếu thường bằng VND,Số đầu nămTriệu đồng,11.400.000,11400000.0,11400000000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,4,0,Từ 12 tháng đến dưới 5 năm,column_1,Từ 12 tháng đến dưới 5 năm,,,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,4,1,Từ 12 tháng đến dưới 5 năm,Số cuối nămTriệu đồng,6.300.000,6300000.0,6300000000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,4,2,Từ 12 tháng đến dưới 5 năm,Số đầu nămTriệu đồng,11.000.000,11000000.0,11000000000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,5,0,Từ 5 năm trở lên,column_1,Từ 5 năm trở lên,,,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,5,1,Từ 5 năm trở lên,Số cuối nămTriệu đồng,400.000,400000.0,400000000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,5,2,Từ 5 năm trở lên,Số đầu nămTriệu đồng,400.000,400000.0,400000000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,6,0,,column_1,,,,False,True
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,6,1,,Số cuối nămTriệu đồng,7.700.000,7700000.0,7700000000000.0,False,False
+ABB_financial_statements_2022_separate|table_78,ABB_financial_statements_2022_separate,ABB,2022,separate,MILLION_VND,6,2,,Số đầu nămTriệu đồng,11.405.930,11405930.0,11405930000000.0,False,False

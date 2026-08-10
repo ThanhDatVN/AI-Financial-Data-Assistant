@@ -1,0 +1,22 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,0,0,"Doanh thu bán đất, căn hộ, nhà phố và biệt thụ",column_1,"Doanh thu bán đất, căn hộ, nhà phố và biệt thụ",,,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,0,1,"Doanh thu bán đất, căn hộ, nhà phố và biệt thụ",Năm nay,1.168.073.117.314,1168073117314.0,1168073117314.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,0,2,"Doanh thu bán đất, căn hộ, nhà phố và biệt thụ",VNDNăm trước,3.523.698.307.633,3523698307633.0,3523698307633.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,1,0,Doanh thu từ dịch vụ quản lý dự án,column_1,Doanh thu từ dịch vụ quản lý dự án,,,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,1,1,Doanh thu từ dịch vụ quản lý dự án,Năm nay,1.056.218.294.184,1056218294184.0,1056218294184.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,1,2,Doanh thu từ dịch vụ quản lý dự án,VNDNăm trước,570.746.130.411,570746130411.0,570746130411.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,2,0,Doanh thu cung cấp dịch vụ,column_1,Doanh thu cung cấp dịch vụ,,,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,2,1,Doanh thu cung cấp dịch vụ,Năm nay,32.948.884.016,32948884016.0,32948884016.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,2,2,Doanh thu cung cấp dịch vụ,VNDNăm trước,13.504.217.348,13504217348.0,13504217348.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,3,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,3,1,TỔNG CỘNG,Năm nay,2.257.240.295.514,2257240295514.0,2257240295514.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,3,2,TỔNG CỘNG,VNDNăm trước,4.107.948.655.392,4107948655392.0,4107948655392.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,4,0,Trong đó:,column_1,Trong đó:,,,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,4,1,Trong đó:,Năm nay,Trong đó:,,,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,4,2,Trong đó:,VNDNăm trước,Trong đó:,,,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,5,0,Doanh thu với khách hàng khác,column_1,Doanh thu với khách hàng khác,,,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,5,1,Doanh thu với khách hàng khác,Năm nay,1.199.333.618.674,1199333618674.0,1199333618674.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,5,2,Doanh thu với khách hàng khác,VNDNăm trước,3.530.105.726.299,3530105726299.0,3530105726299.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,6,0,Doanh thu với bên liên quan (TM số 28),column_1,Doanh thu với bên liên quan (TM số 28),,,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,6,1,Doanh thu với bên liên quan (TM số 28),Năm nay,1.057.906.676.840,1057906676840.0,1057906676840.0,False,False
+NLG_financial_statements_2022_separate|table_40,NLG_financial_statements_2022_separate,NLG,2022,separate,VND,6,2,Doanh thu với bên liên quan (TM số 28),VNDNăm trước,577.842.929.093,577842929093.0,577842929093.0,False,False

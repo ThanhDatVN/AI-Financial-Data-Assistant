@@ -1,0 +1,111 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,0,0,Tài sản dài hạn(200 = 210 + 220 + 240 + 250 + 260),column_1,Tài sản dài hạn(200 = 210 + 220 + 240 + 250 + 260),,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,0,1,Tài sản dài hạn(200 = 210 + 220 + 240 + 250 + 260),Mã số,200,200.0,200.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,0,2,Tài sản dài hạn(200 = 210 + 220 + 240 + 250 + 260),Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,0,3,Tài sản dài hạn(200 = 210 + 220 + 240 + 250 + 260),31/12/2023 VND,5.749.096.845.268,5749096845268.0,5749096845268.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,0,4,Tài sản dài hạn(200 = 210 + 220 + 240 + 250 + 260),1/1/2023 VND Đã điều chỉnh lại,6.169.213.557.860,6169213557860.0,6169213557860.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,1,0,Các khoản phải thu dài hạn,column_1,Các khoản phải thu dài hạn,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,1,1,Các khoản phải thu dài hạn,Mã số,210,210.0,210.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,1,2,Các khoản phải thu dài hạn,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,1,3,Các khoản phải thu dài hạn,31/12/2023 VND,1.791.695.774.317,1791695774317.0,1791695774317.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,1,4,Các khoản phải thu dài hạn,1/1/2023 VND Đã điều chỉnh lại,2.019.143.246.695,2019143246695.0,2019143246695.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,2,0,Phải thu dài hạn của khách hàng,column_1,Phải thu dài hạn của khách hàng,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,2,1,Phải thu dài hạn của khách hàng,Mã số,211,211.0,211.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,2,2,Phải thu dài hạn của khách hàng,Thuyết minh,6(b),,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,2,3,Phải thu dài hạn của khách hàng,31/12/2023 VND,61.843.907.911,61843907911.0,61843907911.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,2,4,Phải thu dài hạn của khách hàng,1/1/2023 VND Đã điều chỉnh lại,61.843.907.911,61843907911.0,61843907911.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,3,0,Phải thu về cho vay dài hạn,column_1,Phải thu về cho vay dài hạn,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,3,1,Phải thu về cho vay dài hạn,Mã số,215,215.0,215.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,3,2,Phải thu về cho vay dài hạn,Thuyết minh,8(b),,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,3,3,Phải thu về cho vay dài hạn,31/12/2023 VND,1.338.857.792.967,1338857792967.0,1338857792967.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,3,4,Phải thu về cho vay dài hạn,1/1/2023 VND Đã điều chỉnh lại,1.485.934.020.078,1485934020078.0,1485934020078.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,4,0,Phải thu dài hạn khác,column_1,Phải thu dài hạn khác,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,4,1,Phải thu dài hạn khác,Mã số,216,216.0,216.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,4,2,Phải thu dài hạn khác,Thuyết minh,9(b),,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,4,3,Phải thu dài hạn khác,31/12/2023 VND,390.994.073.439,390994073439.0,390994073439.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,4,4,Phải thu dài hạn khác,1/1/2023 VND Đã điều chỉnh lại,471.365.318.706,471365318706.0,471365318706.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,5,0,Tài sản cố định,column_1,Tài sản cố định,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,5,1,Tài sản cố định,Mã số,220,220.0,220.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,5,2,Tài sản cố định,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,5,3,Tài sản cố định,31/12/2023 VND,755.751.424.697,755751424697.0,755751424697.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,5,4,Tài sản cố định,1/1/2023 VND Đã điều chỉnh lại,855.157.298.691,855157298691.0,855157298691.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,6,0,Tài sản cố định hữu hình,column_1,Tài sản cố định hữu hình,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,6,1,Tài sản cố định hữu hình,Mã số,221,221.0,221.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,6,2,Tài sản cố định hữu hình,Thuyết minh,11,11.0,11.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,6,3,Tài sản cố định hữu hình,31/12/2023 VND,699.603.530.456,699603530456.0,699603530456.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,6,4,Tài sản cố định hữu hình,1/1/2023 VND Đã điều chỉnh lại,797.363.441.490,797363441490.0,797363441490.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,7,0,Nguyên giá,column_1,Nguyên giá,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,7,1,Nguyên giá,Mã số,222,222.0,222.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,7,2,Nguyên giá,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,7,3,Nguyên giá,31/12/2023 VND,1.659.862.020.373,1659862020373.0,1659862020373.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,7,4,Nguyên giá,1/1/2023 VND Đã điều chỉnh lại,1.657.691.236.575,1657691236575.0,1657691236575.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,8,0,Giá trị hao mòn lũy kế,column_1,Giá trị hao mòn lũy kế,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,8,1,Giá trị hao mòn lũy kế,Mã số,223,223.0,223.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,8,2,Giá trị hao mòn lũy kế,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,8,3,Giá trị hao mòn lũy kế,31/12/2023 VND,(960.258.489.917),-960258489917.0,-960258489917.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,8,4,Giá trị hao mòn lũy kế,1/1/2023 VND Đã điều chỉnh lại,(860.327.795.085),-860327795085.0,-860327795085.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,9,0,Tài sản cố định vô hình,column_1,Tài sản cố định vô hình,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,9,1,Tài sản cố định vô hình,Mã số,227,227.0,227.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,9,2,Tài sản cố định vô hình,Thuyết minh,12,12.0,12.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,9,3,Tài sản cố định vô hình,31/12/2023 VND,56.147.894.241,56147894241.0,56147894241.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,9,4,Tài sản cố định vô hình,1/1/2023 VND Đã điều chỉnh lại,57.793.857.201,57793857201.0,57793857201.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,10,0,Nguyên giá,column_1,Nguyên giá,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,10,1,Nguyên giá,Mã số,228,228.0,228.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,10,2,Nguyên giá,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,10,3,Nguyên giá,31/12/2023 VND,81.905.473.511,81905473511.0,81905473511.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,10,4,Nguyên giá,1/1/2023 VND Đã điều chỉnh lại,81.790.248.511,81790248511.0,81790248511.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,11,0,Giá trị hao mòn lũy kế,column_1,Giá trị hao mòn lũy kế,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,11,1,Giá trị hao mòn lũy kế,Mã số,229,229.0,229.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,11,2,Giá trị hao mòn lũy kế,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,11,3,Giá trị hao mòn lũy kế,31/12/2023 VND,(25.757.579.270),-25757579270.0,-25757579270.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,11,4,Giá trị hao mòn lũy kế,1/1/2023 VND Đã điều chỉnh lại,(23.996.391.310),-23996391310.0,-23996391310.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,12,0,Tài sản dở dang dài hạn,column_1,Tài sản dở dang dài hạn,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,12,1,Tài sản dở dang dài hạn,Mã số,240,240.0,240.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,12,2,Tài sản dở dang dài hạn,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,12,3,Tài sản dở dang dài hạn,31/12/2023 VND,274.187.600.718,274187600718.0,274187600718.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,12,4,Tài sản dở dang dài hạn,1/1/2023 VND Đã điều chỉnh lại,199.397.851.883,199397851883.0,199397851883.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,13,0,Xây dựng cơ bản dở dang,column_1,Xây dựng cơ bản dở dang,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,13,1,Xây dựng cơ bản dở dang,Mã số,242,242.0,242.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,13,2,Xây dựng cơ bản dở dang,Thuyết minh,13,13.0,13.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,13,3,Xây dựng cơ bản dở dang,31/12/2023 VND,274.187.600.718,274187600718.0,274187600718.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,13,4,Xây dựng cơ bản dở dang,1/1/2023 VND Đã điều chỉnh lại,199.397.851.883,199397851883.0,199397851883.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,14,0,Đầu tư tài chính dài hạn,column_1,Đầu tư tài chính dài hạn,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,14,1,Đầu tư tài chính dài hạn,Mã số,250,250.0,250.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,14,2,Đầu tư tài chính dài hạn,Thuyết minh,5(b),,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,14,3,Đầu tư tài chính dài hạn,31/12/2023 VND,2.889.510.606.306,2889510606306.0,2889510606306.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,14,4,Đầu tư tài chính dài hạn,1/1/2023 VND Đã điều chỉnh lại,3.050.079.526.099,3050079526099.0,3050079526099.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,15,0,Đầu tư vào công ty con,column_1,Đầu tư vào công ty con,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,15,1,Đầu tư vào công ty con,Mã số,251,251.0,251.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,15,2,Đầu tư vào công ty con,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,15,3,Đầu tư vào công ty con,31/12/2023 VND,2.191.080.629.010,2191080629010.0,2191080629010.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,15,4,Đầu tư vào công ty con,1/1/2023 VND Đã điều chỉnh lại,2.142.081.329.010,2142081329010.0,2142081329010.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,16,0,Đầu tư vào các công ty liên kết,column_1,Đầu tư vào các công ty liên kết,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,16,1,Đầu tư vào các công ty liên kết,Mã số,252,252.0,252.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,16,2,Đầu tư vào các công ty liên kết,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,16,3,Đầu tư vào các công ty liên kết,31/12/2023 VND,1.038.269.855.779,1038269855779.0,1038269855779.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,16,4,Đầu tư vào các công ty liên kết,1/1/2023 VND Đã điều chỉnh lại,1.047.077.855.779,1047077855779.0,1047077855779.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,17,0,Đầu tư góp vốn vào đơn vị khác,column_1,Đầu tư góp vốn vào đơn vị khác,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,17,1,Đầu tư góp vốn vào đơn vị khác,Mã số,253,253.0,253.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,17,2,Đầu tư góp vốn vào đơn vị khác,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,17,3,Đầu tư góp vốn vào đơn vị khác,31/12/2023 VND,39.789.498.900,39789498900.0,39789498900.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,17,4,Đầu tư góp vốn vào đơn vị khác,1/1/2023 VND Đã điều chỉnh lại,39.789.498.900,39789498900.0,39789498900.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,18,0,Dự phòng đầu tư tài chính dài hạn,column_1,Dự phòng đầu tư tài chính dài hạn,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,18,1,Dự phòng đầu tư tài chính dài hạn,Mã số,254,254.0,254.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,18,2,Dự phòng đầu tư tài chính dài hạn,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,18,3,Dự phòng đầu tư tài chính dài hạn,31/12/2023 VND,(379.629.377.383),-379629377383.0,-379629377383.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,18,4,Dự phòng đầu tư tài chính dài hạn,1/1/2023 VND Đã điều chỉnh lại,(178.869.157.590),-178869157590.0,-178869157590.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,19,0,Tài sản dài hạn khác,column_1,Tài sản dài hạn khác,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,19,1,Tài sản dài hạn khác,Mã số,260,260.0,260.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,19,2,Tài sản dài hạn khác,Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,19,3,Tài sản dài hạn khác,31/12/2023 VND,37.951.439.230,37951439230.0,37951439230.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,19,4,Tài sản dài hạn khác,1/1/2023 VND Đã điều chỉnh lại,45.435.634.492,45435634492.0,45435634492.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,20,0,Chi phí trả trước dài hạn,column_1,Chi phí trả trước dài hạn,,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,20,1,Chi phí trả trước dài hạn,Mã số,261,261.0,261.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,20,2,Chi phí trả trước dài hạn,Thuyết minh,14,14.0,14.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,20,3,Chi phí trả trước dài hạn,31/12/2023 VND,37.951.439.230,37951439230.0,37951439230.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,20,4,Chi phí trả trước dài hạn,1/1/2023 VND Đã điều chỉnh lại,45.435.634.492,45435634492.0,45435634492.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,21,0,TỔNG TÀI SẢN (270 = 100 + 200),column_1,TỔNG TÀI SẢN (270 = 100 + 200),,,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,21,1,TỔNG TÀI SẢN (270 = 100 + 200),Mã số,270,270.0,270.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,21,2,TỔNG TÀI SẢN (270 = 100 + 200),Thuyết minh,,,,False,True
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,21,3,TỔNG TÀI SẢN (270 = 100 + 200),31/12/2023 VND,8.018.877.835.029,8018877835029.0,8018877835029.0,False,False
+VGT_financial_statements_2023_separate|table_2,VGT_financial_statements_2023_separate,VGT,2023,separate,VND,21,4,TỔNG TÀI SẢN (270 = 100 + 200),1/1/2023 VND Đã điều chỉnh lại,8.543.000.995.892,8543000995892.0,8543000995892.0,False,False

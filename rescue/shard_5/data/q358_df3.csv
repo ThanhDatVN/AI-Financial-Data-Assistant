@@ -1,0 +1,10 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+VIF_financial_statements_2021_consolidated|table_60,VIF_financial_statements_2021_consolidated,VIF,2021,consolidated,VND,0,0,Chi phí thuế TNDN hiện hành,column_1,Chi phí thuế TNDN hiện hành,,,False,False
+VIF_financial_statements_2021_consolidated|table_60,VIF_financial_statements_2021_consolidated,VIF,2021,consolidated,VND,0,1,Chi phí thuế TNDN hiện hành,Đơn vị tính: VND | Năm nay,25.329.734.771,25329734771.0,25329734771.0,False,False
+VIF_financial_statements_2021_consolidated|table_60,VIF_financial_statements_2021_consolidated,VIF,2021,consolidated,VND,0,2,Chi phí thuế TNDN hiện hành,Đơn vị tính: VND | Năm trước,34.398.750.466,34398750466.0,34398750466.0,False,False
+VIF_financial_statements_2021_consolidated|table_60,VIF_financial_statements_2021_consolidated,VIF,2021,consolidated,VND,1,0,Chi phí thuế thu nhập hoãn lại,column_1,Chi phí thuế thu nhập hoãn lại,,,False,False
+VIF_financial_statements_2021_consolidated|table_60,VIF_financial_statements_2021_consolidated,VIF,2021,consolidated,VND,1,1,Chi phí thuế thu nhập hoãn lại,Đơn vị tính: VND | Năm nay,615.187.316,615187316.0,615187316.0,False,False
+VIF_financial_statements_2021_consolidated|table_60,VIF_financial_statements_2021_consolidated,VIF,2021,consolidated,VND,1,2,Chi phí thuế thu nhập hoãn lại,Đơn vị tính: VND | Năm trước,4.813.101.585,4813101585.0,4813101585.0,False,False
+VIF_financial_statements_2021_consolidated|table_60,VIF_financial_statements_2021_consolidated,VIF,2021,consolidated,VND,2,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
+VIF_financial_statements_2021_consolidated|table_60,VIF_financial_statements_2021_consolidated,VIF,2021,consolidated,VND,2,1,TỔNG CỘNG,Đơn vị tính: VND | Năm nay,25.944.922.087,25944922087.0,25944922087.0,False,False
+VIF_financial_statements_2021_consolidated|table_60,VIF_financial_statements_2021_consolidated,VIF,2021,consolidated,VND,2,2,TỔNG CỘNG,Đơn vị tính: VND | Năm trước,39.211.852.051,39211852051.0,39211852051.0,False,False

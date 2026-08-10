@@ -1,0 +1,131 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,0,0,NỘ PHẢI TRẢ (300 = 310 + 330),NGUỒN VỐN,NỘ PHẢI TRẢ (300 = 310 + 330),,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,0,1,NỘ PHẢI TRẢ (300 = 310 + 330),Mã số | NGUỒN VỐN,300,300.0,300.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,0,2,NỘ PHẢI TRẢ (300 = 310 + 330),Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,0,3,NỘ PHẢI TRẢ (300 = 310 + 330),31/12/2016 VND | NGUỒN VỐN,1.891.837.061.643,1891837061643.0,1891837061643.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,0,4,NỘ PHẢI TRẢ (300 = 310 + 330),1/1/2016 VND | NGUỒN VỐN,1.258.417.266.708,1258417266708.0,1258417266708.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,1,0,Nợ ngắn hạn,NGUỒN VỐN,Nợ ngắn hạn,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,1,1,Nợ ngắn hạn,Mã số | NGUỒN VỐN,310,310.0,310.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,1,2,Nợ ngắn hạn,Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,1,3,Nợ ngắn hạn,31/12/2016 VND | NGUỒN VỐN,891.025.472.820,891025472820.0,891025472820.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,1,4,Nợ ngắn hạn,1/1/2016 VND | NGUỒN VỐN,582.386.167.081,582386167081.0,582386167081.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,2,0,Phải trả người bán ngắn hạn,NGUỒN VỐN,Phải trả người bán ngắn hạn,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,2,1,Phải trả người bán ngắn hạn,Mã số | NGUỒN VỐN,311,311.0,311.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,2,2,Phải trả người bán ngắn hạn,Thuyết minh | NGUỒN VỐN,15,15.0,15.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,2,3,Phải trả người bán ngắn hạn,31/12/2016 VND | NGUỒN VỐN,56.709.770.169,56709770169.0,56709770169.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,2,4,Phải trả người bán ngắn hạn,1/1/2016 VND | NGUỒN VỐN,78.825.148.124,78825148124.0,78825148124.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,3,0,Người mua trả tiền trước ngắn hạn,NGUỒN VỐN,Người mua trả tiền trước ngắn hạn,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,3,1,Người mua trả tiền trước ngắn hạn,Mã số | NGUỒN VỐN,312,312.0,312.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,3,2,Người mua trả tiền trước ngắn hạn,Thuyết minh | NGUỒN VỐN,16,16.0,16.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,3,3,Người mua trả tiền trước ngắn hạn,31/12/2016 VND | NGUỒN VỐN,217.602.021.881,217602021881.0,217602021881.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,3,4,Người mua trả tiền trước ngắn hạn,1/1/2016 VND | NGUỒN VỐN,170.043.966.714,170043966714.0,170043966714.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,4,0,Thuế và các khoản phải nộp Nhà nước,NGUỒN VỐN,Thuế và các khoản phải nộp Nhà nước,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,4,1,Thuế và các khoản phải nộp Nhà nước,Mã số | NGUỒN VỐN,313,313.0,313.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,4,2,Thuế và các khoản phải nộp Nhà nước,Thuyết minh | NGUỒN VỐN,17(b),,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,4,3,Thuế và các khoản phải nộp Nhà nước,31/12/2016 VND | NGUỒN VỐN,179.693.733,179693733.0,179693733.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,4,4,Thuế và các khoản phải nộp Nhà nước,1/1/2016 VND | NGUỒN VỐN,111.294.907,111294907.0,111294907.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,5,0,Phải trả người lao động,NGUỒN VỐN,Phải trả người lao động,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,5,1,Phải trả người lao động,Mã số | NGUỒN VỐN,314,314.0,314.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,5,2,Phải trả người lao động,Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,5,3,Phải trả người lao động,31/12/2016 VND | NGUỒN VỐN,6.840.807.390,6840807390.0,6840807390.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,5,4,Phải trả người lao động,1/1/2016 VND | NGUỒN VỐN,4.543.658.168,4543658168.0,4543658168.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,6,0,Chi phí phải trả ngắn hạn,NGUỒN VỐN,Chi phí phải trả ngắn hạn,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,6,1,Chi phí phải trả ngắn hạn,Mã số | NGUỒN VỐN,315,315.0,315.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,6,2,Chi phí phải trả ngắn hạn,Thuyết minh | NGUỒN VỐN,18,18.0,18.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,6,3,Chi phí phải trả ngắn hạn,31/12/2016 VND | NGUỒN VỐN,258.155.199.611,258155199611.0,258155199611.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,6,4,Chi phí phải trả ngắn hạn,1/1/2016 VND | NGUỒN VỐN,173.928.415.646,173928415646.0,173928415646.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,7,0,Doanh thu chưa thực hiện ngắn hạn,NGUỒN VỐN,Doanh thu chưa thực hiện ngắn hạn,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,7,1,Doanh thu chưa thực hiện ngắn hạn,Mã số | NGUỒN VỐN,318,318.0,318.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,7,2,Doanh thu chưa thực hiện ngắn hạn,Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,7,3,Doanh thu chưa thực hiện ngắn hạn,31/12/2016 VND | NGUỒN VỐN,1.346.540.832,1346540832.0,1346540832.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,7,4,Doanh thu chưa thực hiện ngắn hạn,1/1/2016 VND | NGUỒN VỐN,-,0.0,0.0,True,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,8,0,Phải trả ngắn hạn khác,NGUỒN VỐN,Phải trả ngắn hạn khác,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,8,1,Phải trả ngắn hạn khác,Mã số | NGUỒN VỐN,319,319.0,319.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,8,2,Phải trả ngắn hạn khác,Thuyết minh | NGUỒN VỐN,19,19.0,19.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,8,3,Phải trả ngắn hạn khác,31/12/2016 VND | NGUỒN VỐN,59.979.837.337,59979837337.0,59979837337.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,8,4,Phải trả ngắn hạn khác,1/1/2016 VND | NGUỒN VỐN,42.637.959.541,42637959541.0,42637959541.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,9,0,Vay ngắn hạn,NGUỒN VỐN,Vay ngắn hạn,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,9,1,Vay ngắn hạn,Mã số | NGUỒN VỐN,320,320.0,320.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,9,2,Vay ngắn hạn,Thuyết minh | NGUỒN VỐN,20(a),,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,9,3,Vay ngắn hạn,31/12/2016 VND | NGUỒN VỐN,289.473.164.867,289473164867.0,289473164867.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,9,4,Vay ngắn hạn,1/1/2016 VND | NGUỒN VỐN,110.444.000.000,110444000000.0,110444000000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,10,0,"Quỹ khen thưởng, phúc lợi",NGUỒN VỐN,"Quỹ khen thưởng, phúc lợi",,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,10,1,"Quỹ khen thưởng, phúc lợi",Mã số | NGUỒN VỐN,322,322.0,322.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,10,2,"Quỹ khen thưởng, phúc lợi",Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,10,3,"Quỹ khen thưởng, phúc lợi",31/12/2016 VND | NGUỒN VỐN,738.437.000,738437000.0,738437000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,10,4,"Quỹ khen thưởng, phúc lợi",1/1/2016 VND | NGUỒN VỐN,1.851.723.981,1851723981.0,1851723981.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,11,0,Nợ dài hạn,NGUỒN VỐN,Nợ dài hạn,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,11,1,Nợ dài hạn,Mã số | NGUỒN VỐN,330,330.0,330.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,11,2,Nợ dài hạn,Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,11,3,Nợ dài hạn,31/12/2016 VND | NGUỒN VỐN,1.000.811.588.823,1000811588823.0,1000811588823.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,11,4,Nợ dài hạn,1/1/2016 VND | NGUỒN VỐN,676.031.099.627,676031099627.0,676031099627.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,12,0,Vay dài hạn,NGUỒN VỐN,Vay dài hạn,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,12,1,Vay dài hạn,Mã số | NGUỒN VỐN,338,338.0,338.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,12,2,Vay dài hạn,Thuyết minh | NGUỒN VỐN,20(b),,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,12,3,Vay dài hạn,31/12/2016 VND | NGUỒN VỐN,996.889.120.217,996889120217.0,996889120217.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,12,4,Vay dài hạn,1/1/2016 VND | NGUỒN VỐN,672.108.631.021,672108631021.0,672108631021.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,13,0,Dự phòng phải trả dài hạn,NGUỒN VỐN,Dự phòng phải trả dài hạn,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,13,1,Dự phòng phải trả dài hạn,Mã số | NGUỒN VỐN,342,342.0,342.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,13,2,Dự phòng phải trả dài hạn,Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,13,3,Dự phòng phải trả dài hạn,31/12/2016 VND | NGUỒN VỐN,684.468.606,684468606.0,684468606.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,13,4,Dự phòng phải trả dài hạn,1/1/2016 VND | NGUỒN VỐN,684.468.606,684468606.0,684468606.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,14,0,Quỹ phát triển khoa học và công nghệ,NGUỒN VỐN,Quỹ phát triển khoa học và công nghệ,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,14,1,Quỹ phát triển khoa học và công nghệ,Mã số | NGUỒN VỐN,343,343.0,343.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,14,2,Quỹ phát triển khoa học và công nghệ,Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,14,3,Quỹ phát triển khoa học và công nghệ,31/12/2016 VND | NGUỒN VỐN,3.238.000.000,3238000000.0,3238000000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,14,4,Quỹ phát triển khoa học và công nghệ,1/1/2016 VND | NGUỒN VỐN,3.238.000.000,3238000000.0,3238000000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,15,0,VỐN CHỦ SỞ HỮU (400 = 410),NGUỒN VỐN,VỐN CHỦ SỞ HỮU (400 = 410),,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,15,1,VỐN CHỦ SỞ HỮU (400 = 410),Mã số | NGUỒN VỐN,400,400.0,400.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,15,2,VỐN CHỦ SỞ HỮU (400 = 410),Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,15,3,VỐN CHỦ SỞ HỮU (400 = 410),31/12/2016 VND | NGUỒN VỐN,866.835.550.667,866835550667.0,866835550667.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,15,4,VỐN CHỦ SỞ HỮU (400 = 410),1/1/2016 VND | NGUỒN VỐN,870.050.682.480,870050682480.0,870050682480.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,16,0,Vốn chủ sở hữu,NGUỒN VỐN,Vốn chủ sở hữu,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,16,1,Vốn chủ sở hữu,Mã số | NGUỒN VỐN,410,410.0,410.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,16,2,Vốn chủ sở hữu,Thuyết minh | NGUỒN VỐN,21,21.0,21.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,16,3,Vốn chủ sở hữu,31/12/2016 VND | NGUỒN VỐN,866.835.550.667,866835550667.0,866835550667.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,16,4,Vốn chủ sở hữu,1/1/2016 VND | NGUỒN VỐN,870.050.682.480,870050682480.0,870050682480.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,17,0,Vốn cổ phần,NGUỒN VỐN,Vốn cổ phần,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,17,1,Vốn cổ phần,Mã số | NGUỒN VỐN,411,411.0,411.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,17,2,Vốn cổ phần,Thuyết minh | NGUỒN VỐN,22,22.0,22.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,17,3,Vốn cổ phần,31/12/2016 VND | NGUỒN VỐN,759.680.800.000,759680800000.0,759680800000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,17,4,Vốn cổ phần,1/1/2016 VND | NGUỒN VỐN,684.118.840.000,684118840000.0,684118840000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,SHARES,18,0,- Cổ phiếu phổ thông có quyền biểu quyết,NGUỒN VỐN,- Cổ phiếu phổ thông có quyền biểu quyết,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,SHARES,18,1,- Cổ phiếu phổ thông có quyền biểu quyết,Mã số | NGUỒN VỐN,411a,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,SHARES,18,2,- Cổ phiếu phổ thông có quyền biểu quyết,Thuyết minh | NGUỒN VỐN,22,22.0,22.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,18,3,- Cổ phiếu phổ thông có quyền biểu quyết,31/12/2016 VND | NGUỒN VỐN,759.680.800.000,759680800000.0,759680800000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,18,4,- Cổ phiếu phổ thông có quyền biểu quyết,1/1/2016 VND | NGUỒN VỐN,684.118.840.000,684118840000.0,684118840000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,19,0,Thặng dư vốn cổ phần,NGUỒN VỐN,Thặng dư vốn cổ phần,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,19,1,Thặng dư vốn cổ phần,Mã số | NGUỒN VỐN,412,412.0,412.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,19,2,Thặng dư vốn cổ phần,Thuyết minh | NGUỒN VỐN,22,22.0,22.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,19,3,Thặng dư vốn cổ phần,31/12/2016 VND | NGUỒN VỐN,(33.000.000),-33000000.0,-33000000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,19,4,Thặng dư vốn cổ phần,1/1/2016 VND | NGUỒN VỐN,-,0.0,0.0,True,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,SHARES,20,0,Cổ phiếu quỹ,NGUỒN VỐN,Cổ phiếu quỹ,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,SHARES,20,1,Cổ phiếu quỹ,Mã số | NGUỒN VỐN,415,415.0,415.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,SHARES,20,2,Cổ phiếu quỹ,Thuyết minh | NGUỒN VỐN,22,22.0,22.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,20,3,Cổ phiếu quỹ,31/12/2016 VND | NGUỒN VỐN,(311.780.000),-311780000.0,-311780000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,20,4,Cổ phiếu quỹ,1/1/2016 VND | NGUỒN VỐN,(8.560.000),-8560000.0,-8560000.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,21,0,Quỹ đầu tư phát triển,NGUỒN VỐN,Quỹ đầu tư phát triển,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,21,1,Quỹ đầu tư phát triển,Mã số | NGUỒN VỐN,418,418.0,418.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,21,2,Quỹ đầu tư phát triển,Thuyết minh | NGUỒN VỐN,24,24.0,24.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,21,3,Quỹ đầu tư phát triển,31/12/2016 VND | NGUỒN VỐN,23.516.835.886,23516835886.0,23516835886.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,21,4,Quỹ đầu tư phát triển,1/1/2016 VND | NGUỒN VỐN,23.516.835.886,23516835886.0,23516835886.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,22,0,Lợi nhuận sau thuế chưa phân phối,NGUỒN VỐN,Lợi nhuận sau thuế chưa phân phối,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,22,1,Lợi nhuận sau thuế chưa phân phối,Mã số | NGUỒN VỐN,421,421.0,421.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,22,2,Lợi nhuận sau thuế chưa phân phối,Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,22,3,Lợi nhuận sau thuế chưa phân phối,31/12/2016 VND | NGUỒN VỐN,83.982.694.781,83982694781.0,83982694781.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,22,4,Lợi nhuận sau thuế chưa phân phối,1/1/2016 VND | NGUỒN VỐN,162.423.566.594,162423566594.0,162423566594.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,23,0,- LNST chưa phân phối lũy kế đến cuối năm trước,NGUỒN VỐN,- LNST chưa phân phối lũy kế đến cuối năm trước,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,23,1,- LNST chưa phân phối lũy kế đến cuối năm trước,Mã số | NGUỒN VỐN,421a,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,23,2,- LNST chưa phân phối lũy kế đến cuối năm trước,Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,23,3,- LNST chưa phân phối lũy kế đến cuối năm trước,31/12/2016 VND | NGUỒN VỐN,56.773.318.844,56773318844.0,56773318844.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,23,4,- LNST chưa phân phối lũy kế đến cuối năm trước,1/1/2016 VND | NGUỒN VỐN,92.441.058.918,92441058918.0,92441058918.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,24,0,- LNST chưa phân phối năm nay,NGUỒN VỐN,- LNST chưa phân phối năm nay,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,24,1,- LNST chưa phân phối năm nay,Mã số | NGUỒN VỐN,421b,,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,24,2,- LNST chưa phân phối năm nay,Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,24,3,- LNST chưa phân phối năm nay,31/12/2016 VND | NGUỒN VỐN,27.209.375.937,27209375937.0,27209375937.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,24,4,- LNST chưa phân phối năm nay,1/1/2016 VND | NGUỒN VỐN,69.982.507.676,69982507676.0,69982507676.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,25,0,TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400),NGUỒN VỐN,TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400),,,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,25,1,TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400),Mã số | NGUỒN VỐN,440,440.0,440.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,25,2,TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400),Thuyết minh | NGUỒN VỐN,,,,False,True
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,25,3,TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400),31/12/2016 VND | NGUỒN VỐN,2.758.672.612.310,2758672612310.0,2758672612310.0,False,False
+HDG_financial_statements_2016_separate|table_4,HDG_financial_statements_2016_separate,HDG,2016,separate,VND,25,4,TỔNG CỘNG NGUỒN VỐN (440 = 300 + 400),1/1/2016 VND | NGUỒN VỐN,2.128.467.949.188,2128467949188.0,2128467949188.0,False,False

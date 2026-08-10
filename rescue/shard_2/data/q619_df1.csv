@@ -1,0 +1,57 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,0,0,3,STT | I,3,3.0,3.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,0,1,3,Danh mục các loại tài sảntài chính | Loại FVTPL (tiếp theo),Cổ phiếu và chứng chíquỹ chưa niêm yết,,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,0,2,3,Già trị mua theo số kếtoán,54.082.228.373,54082228373.0,54082228373.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,0,3,3,Giá trị hợp lý,34.525.310.285,34525310285.0,34525310285.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,0,4,3,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2020,(19.556.918.088),-19556918088.0,-19556918088.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,0,5,3,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2019,(12.471.918.092),-12471918092.0,-12471918092.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,0,6,3,Đơn vị tính: VNDChênh lệch thuậndiều chính số kế toántrong năm,(7.084.999.996),-7084999996.0,-7084999996.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,1,0,4,STT | I,4,4.0,4.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,1,1,4,Danh mục các loại tài sảntài chính | Loại FVTPL (tiếp theo),Trải phiếu chưa niêm yết,,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,1,2,4,Già trị mua theo số kếtoán,2.274.447.114.683,2274447114683.0,2274447114683.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,1,3,4,Giá trị hợp lý,2.274.447.114.683,2274447114683.0,2274447114683.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,1,4,4,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2020,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,1,5,4,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2019,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,1,6,4,Đơn vị tính: VNDChênh lệch thuậndiều chính số kế toántrong năm,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,2,0,5,STT | I,5,5.0,5.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,2,1,5,Danh mục các loại tài sảntài chính | Loại FVTPL (tiếp theo),Chứng chỉ tiến gửi,,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,2,2,5,Già trị mua theo số kếtoán,8.863.948.398.453,8863948398453.0,8863948398453.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,2,3,5,Giá trị hợp lý,8.863.948.398.453,8863948398453.0,8863948398453.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,2,4,5,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2020,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,2,5,5,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2019,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,2,6,5,Đơn vị tính: VNDChênh lệch thuậndiều chính số kế toántrong năm,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,3,0,II,STT | I,II,,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,3,1,II,Danh mục các loại tài sảntài chính | Loại FVTPL (tiếp theo),Loại AFS,,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,3,2,II,Già trị mua theo số kếtoán,188.022.664.703,188022664703.0,188022664703.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,3,3,II,Giá trị hợp lý,183.281.373.318,183281373318.0,183281373318.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,3,4,II,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2020,(4.741.291.385),-4741291385.0,-4741291385.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,3,5,II,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2019,331.916.903.872,331916903872.0,331916903872.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,3,6,II,Đơn vị tính: VNDChênh lệch thuậndiều chính số kế toántrong năm,(336.658.195.257),-336658195257.0,-336658195257.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,4,0,1,STT | I,1,1.0,1.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,4,1,1,Danh mục các loại tài sảntài chính | Loại FVTPL (tiếp theo),Cổ phiếu niêm yếtHAH,,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,4,2,1,Già trị mua theo số kếtoán,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,4,3,1,Giá trị hợp lý,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,4,4,1,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2020,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,4,5,1,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2019,340.015.398.872(14.696.996.420),,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,4,6,1,Đơn vị tính: VNDChênh lệch thuậndiều chính số kế toántrong năm,(340.015.398.872),-340015398872.0,-340015398872.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,5,0,1,STT | I,1,1.0,1.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,5,1,1,Danh mục các loại tài sảntài chính | Loại FVTPL (tiếp theo),Cổ phiếu niêm yết khác,,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,5,2,1,Già trị mua theo số kếtoán,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,5,3,1,Giá trị hợp lý,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,5,4,1,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2020,-,0.0,0.0,True,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,5,5,1,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2019,354.712.395.292,354712395292.0,354712395292.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,5,6,1,Đơn vị tính: VNDChênh lệch thuậndiều chính số kế toántrong năm,(354.712.395.292),-354712395292.0,-354712395292.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,6,0,2,STT | I,2,2.0,2.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,6,1,2,Danh mục các loại tài sảntài chính | Loại FVTPL (tiếp theo),Cổ phiếu chưa niêm yết,,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,6,2,2,Già trị mua theo số kếtoán,188.022.664.703,188022664703.0,188022664703.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,6,3,2,Giá trị hợp lý,183.281.373.318,183281373318.0,183281373318.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,6,4,2,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2020,(4.741.291.385),-4741291385.0,-4741291385.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,6,5,2,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2019,(8.098.495.000),-8098495000.0,-8098495000.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,6,6,2,Đơn vị tính: VNDChênh lệch thuậndiều chính số kế toántrong năm,3.357.203.615,3357203615.0,3357203615.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,7,0,2,STT | I,2,2.0,2.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,7,1,2,Danh mục các loại tài sảntài chính | Loại FVTPL (tiếp theo),Tổng cộng,,,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,7,2,2,Già trị mua theo số kếtoán,13.361.222.643.914,13361222643914.0,13361222643914.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,7,3,2,Giá trị hợp lý,13.391.194.863.819,13391194863819.0,13391194863819.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,7,4,2,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2020,29.972.219.905,29972219905.0,29972219905.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,7,5,2,Số dư chênh lệch đánhgiá lạitại ngày 31 tháng 12năm 2019,91.869.541.480,91869541480.0,91869541480.0,False,False
+SSI_financial_statements_2020_separate|table_77,SSI_financial_statements_2020_separate,SSI,2020,separate,VND,7,6,2,Đơn vị tính: VNDChênh lệch thuậndiều chính số kế toántrong năm,(61.897.321.575),-61897321575.0,-61897321575.0,False,False

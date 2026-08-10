@@ -1,0 +1,151 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,0,0,Tài sản ngắn hạn(100 = 110 + 130 + 150),TÀI SẢN,Tài sản ngắn hạn(100 = 110 + 130 + 150),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,0,1,Tài sản ngắn hạn(100 = 110 + 130 + 150),Mã số | TÀI SẢN,100,100.0,100.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,0,2,Tài sản ngắn hạn(100 = 110 + 130 + 150),Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,0,3,Tài sản ngắn hạn(100 = 110 + 130 + 150),31/12/2023 VND | TÀI SẢN,3.373.380.970.847,3373380970847.0,3373380970847.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,0,4,Tài sản ngắn hạn(100 = 110 + 130 + 150),1/1/2023 VND | TÀI SẢN,2.538.477.702.905,2538477702905.0,2538477702905.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,1,0,Tiền,TÀI SẢN,Tiền,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,1,1,Tiền,Mã số | TÀI SẢN,110,110.0,110.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,1,2,Tiền,Thuyết minh | TÀI SẢN,4,4.0,4.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,1,3,Tiền,31/12/2023 VND | TÀI SẢN,12.076.818.067,12076818067.0,12076818067.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,1,4,Tiền,1/1/2023 VND | TÀI SẢN,7.668.804.630,7668804630.0,7668804630.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,2,0,Tiền,TÀI SẢN,Tiền,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,2,1,Tiền,Mã số | TÀI SẢN,111,111.0,111.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,2,2,Tiền,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,2,3,Tiền,31/12/2023 VND | TÀI SẢN,12.076.818.067,12076818067.0,12076818067.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,2,4,Tiền,1/1/2023 VND | TÀI SẢN,7.668.804.630,7668804630.0,7668804630.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,3,0,Các khoản phải thu ngắn hạn,TÀI SẢN,Các khoản phải thu ngắn hạn,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,3,1,Các khoản phải thu ngắn hạn,Mã số | TÀI SẢN,130,130.0,130.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,3,2,Các khoản phải thu ngắn hạn,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,3,3,Các khoản phải thu ngắn hạn,31/12/2023 VND | TÀI SẢN,3.360.717.280.590,3360717280590.0,3360717280590.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,3,4,Các khoản phải thu ngắn hạn,1/1/2023 VND | TÀI SẢN,2.527.879.070.464,2527879070464.0,2527879070464.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,4,0,Phải thu của khách hàng,TÀI SẢN,Phải thu của khách hàng,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,4,1,Phải thu của khách hàng,Mã số | TÀI SẢN,131,131.0,131.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,4,2,Phải thu của khách hàng,Thuyết minh | TÀI SẢN,5,5.0,5.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,4,3,Phải thu của khách hàng,31/12/2023 VND | TÀI SẢN,123.859.082.604,123859082604.0,123859082604.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,4,4,Phải thu của khách hàng,1/1/2023 VND | TÀI SẢN,20.242.867.968,20242867968.0,20242867968.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,5,0,Trả trước cho người bán,TÀI SẢN,Trả trước cho người bán,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,5,1,Trả trước cho người bán,Mã số | TÀI SẢN,132,132.0,132.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,5,2,Trả trước cho người bán,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,5,3,Trả trước cho người bán,31/12/2023 VND | TÀI SẢN,3.180.000,3180000.0,3180000.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,5,4,Trả trước cho người bán,1/1/2023 VND | TÀI SẢN,12.314.996,12314996.0,12314996.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,6,0,Phải thu về cho vay ngắn hạn,TÀI SẢN,Phải thu về cho vay ngắn hạn,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,6,1,Phải thu về cho vay ngắn hạn,Mã số | TÀI SẢN,135,135.0,135.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,6,2,Phải thu về cho vay ngắn hạn,Thuyết minh | TÀI SẢN,6(a),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,6,3,Phải thu về cho vay ngắn hạn,31/12/2023 VND | TÀI SẢN,3.001.294.077.093,3001294077093.0,3001294077093.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,6,4,Phải thu về cho vay ngắn hạn,1/1/2023 VND | TÀI SẢN,2.350.850.000.000,2350850000000.0,2350850000000.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,7,0,Phải thu ngắn hạn khác,TÀI SẢN,Phải thu ngắn hạn khác,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,7,1,Phải thu ngắn hạn khác,Mã số | TÀI SẢN,136,136.0,136.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,7,2,Phải thu ngắn hạn khác,Thuyết minh | TÀI SẢN,7(a),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,7,3,Phải thu ngắn hạn khác,31/12/2023 VND | TÀI SẢN,249.931.485.396,249931485396.0,249931485396.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,7,4,Phải thu ngắn hạn khác,1/1/2023 VND | TÀI SẢN,176.047.556.602,176047556602.0,176047556602.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,8,0,Dự phòng phải thu khó đòi,TÀI SẢN,Dự phòng phải thu khó đòi,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,8,1,Dự phòng phải thu khó đòi,Mã số | TÀI SẢN,137,137.0,137.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,8,2,Dự phòng phải thu khó đòi,Thuyết minh | TÀI SẢN,8,8.0,8.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,8,3,Dự phòng phải thu khó đòi,31/12/2023 VND | TÀI SẢN,(14.370.544.503),-14370544503.0,-14370544503.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,8,4,Dự phòng phải thu khó đòi,1/1/2023 VND | TÀI SẢN,(19.273.669.102),-19273669102.0,-19273669102.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,9,0,Tài sản ngắn hạn khác,TÀI SẢN,Tài sản ngắn hạn khác,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,9,1,Tài sản ngắn hạn khác,Mã số | TÀI SẢN,150,150.0,150.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,9,2,Tài sản ngắn hạn khác,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,9,3,Tài sản ngắn hạn khác,31/12/2023 VND | TÀI SẢN,586.872.190,586872190.0,586872190.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,9,4,Tài sản ngắn hạn khác,1/1/2023 VND | TÀI SẢN,2.929.827.811,2929827811.0,2929827811.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,10,0,Chi phí trả trước ngắn hạn,TÀI SẢN,Chi phí trả trước ngắn hạn,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,10,1,Chi phí trả trước ngắn hạn,Mã số | TÀI SẢN,151,151.0,151.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,10,2,Chi phí trả trước ngắn hạn,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,10,3,Chi phí trả trước ngắn hạn,31/12/2023 VND | TÀI SẢN,586.872.190,586872190.0,586872190.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,10,4,Chi phí trả trước ngắn hạn,1/1/2023 VND | TÀI SẢN,789.818.310,789818310.0,789818310.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,11,0,Thuế giá trị gia tăng được khấu trừ,TÀI SẢN,Thuế giá trị gia tăng được khấu trừ,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,11,1,Thuế giá trị gia tăng được khấu trừ,Mã số | TÀI SẢN,152,152.0,152.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,11,2,Thuế giá trị gia tăng được khấu trừ,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,11,3,Thuế giá trị gia tăng được khấu trừ,31/12/2023 VND | TÀI SẢN,-,0.0,0.0,True,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,11,4,Thuế giá trị gia tăng được khấu trừ,1/1/2023 VND | TÀI SẢN,2.140.009.501,2140009501.0,2140009501.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,12,0,Tài sản dài hạn(200 = 210 + 220 + 250 + 260),TÀI SẢN,Tài sản dài hạn(200 = 210 + 220 + 250 + 260),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,12,1,Tài sản dài hạn(200 = 210 + 220 + 250 + 260),Mã số | TÀI SẢN,200,200.0,200.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,12,2,Tài sản dài hạn(200 = 210 + 220 + 250 + 260),Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,12,3,Tài sản dài hạn(200 = 210 + 220 + 250 + 260),31/12/2023 VND | TÀI SẢN,4.069.273.843.457,4069273843457.0,4069273843457.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,12,4,Tài sản dài hạn(200 = 210 + 220 + 250 + 260),1/1/2023 VND | TÀI SẢN,7.349.458.136.297,7349458136297.0,7349458136297.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,13,0,Các khoản phải thu dài hạn,TÀI SẢN,Các khoản phải thu dài hạn,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,13,1,Các khoản phải thu dài hạn,Mã số | TÀI SẢN,210,210.0,210.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,13,2,Các khoản phải thu dài hạn,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,13,3,Các khoản phải thu dài hạn,31/12/2023 VND | TÀI SẢN,81.351.465.755,81351465755.0,81351465755.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,13,4,Các khoản phải thu dài hạn,1/1/2023 VND | TÀI SẢN,985.000.000.000,985000000000.0,985000000000.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,14,0,Phải thu về cho vay dài hạn,TÀI SẢN,Phải thu về cho vay dài hạn,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,14,1,Phải thu về cho vay dài hạn,Mã số | TÀI SẢN,215,215.0,215.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,14,2,Phải thu về cho vay dài hạn,Thuyết minh | TÀI SẢN,6(b),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,14,3,Phải thu về cho vay dài hạn,31/12/2023 VND | TÀI SẢN,79.000.000.000,79000000000.0,79000000000.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,14,4,Phải thu về cho vay dài hạn,1/1/2023 VND | TÀI SẢN,985.000.000.000,985000000000.0,985000000000.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,15,0,Phải thu dài hạn khác,TÀI SẢN,Phải thu dài hạn khác,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,15,1,Phải thu dài hạn khác,Mã số | TÀI SẢN,216,216.0,216.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,15,2,Phải thu dài hạn khác,Thuyết minh | TÀI SẢN,7(b),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,15,3,Phải thu dài hạn khác,31/12/2023 VND | TÀI SẢN,2.351.465.755,2351465755.0,2351465755.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,15,4,Phải thu dài hạn khác,1/1/2023 VND | TÀI SẢN,-,0.0,0.0,True,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,16,0,Tài sản cố định,TÀI SẢN,Tài sản cố định,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,16,1,Tài sản cố định,Mã số | TÀI SẢN,220,220.0,220.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,16,2,Tài sản cố định,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,16,3,Tài sản cố định,31/12/2023 VND | TÀI SẢN,50.350.000,50350000.0,50350000.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,16,4,Tài sản cố định,1/1/2023 VND | TÀI SẢN,366.266.235,366266235.0,366266235.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,17,0,Tài sản cố định hữu hình,TÀI SẢN,Tài sản cố định hữu hình,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,17,1,Tài sản cố định hữu hình,Mã số | TÀI SẢN,221,221.0,221.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,17,2,Tài sản cố định hữu hình,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,17,3,Tài sản cố định hữu hình,31/12/2023 VND | TÀI SẢN,50.350.000,50350000.0,50350000.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,17,4,Tài sản cố định hữu hình,1/1/2023 VND | TÀI SẢN,366.266.235,366266235.0,366266235.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,18,0,Nguyên giá,TÀI SẢN,Nguyên giá,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,18,1,Nguyên giá,Mã số | TÀI SẢN,222,222.0,222.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,18,2,Nguyên giá,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,18,3,Nguyên giá,31/12/2023 VND | TÀI SẢN,251.840.318,251840318.0,251840318.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,18,4,Nguyên giá,1/1/2023 VND | TÀI SẢN,609.058.500,609058500.0,609058500.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,19,0,Giá trị hao mòn lũy kế,TÀI SẢN,Giá trị hao mòn lũy kế,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,19,1,Giá trị hao mòn lũy kế,Mã số | TÀI SẢN,223,223.0,223.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,19,2,Giá trị hao mòn lũy kế,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,19,3,Giá trị hao mòn lũy kế,31/12/2023 VND | TÀI SẢN,(201.490.318),-201490318.0,-201490318.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,19,4,Giá trị hao mòn lũy kế,1/1/2023 VND | TÀI SẢN,(242.792.265),-242792265.0,-242792265.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,20,0,Tài sản cố định vô hình,TÀI SẢN,Tài sản cố định vô hình,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,20,1,Tài sản cố định vô hình,Mã số | TÀI SẢN,227,227.0,227.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,20,2,Tài sản cố định vô hình,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,20,3,Tài sản cố định vô hình,31/12/2023 VND | TÀI SẢN,-,0.0,0.0,True,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,20,4,Tài sản cố định vô hình,1/1/2023 VND | TÀI SẢN,-,0.0,0.0,True,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,21,0,Nguyên giá,TÀI SẢN,Nguyên giá,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,21,1,Nguyên giá,Mã số | TÀI SẢN,228,228.0,228.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,21,2,Nguyên giá,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,21,3,Nguyên giá,31/12/2023 VND | TÀI SẢN,918.560.700,918560700.0,918560700.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,21,4,Nguyên giá,1/1/2023 VND | TÀI SẢN,918.560.700,918560700.0,918560700.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,22,0,Giá trị hao mòn lũy kế,TÀI SẢN,Giá trị hao mòn lũy kế,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,22,1,Giá trị hao mòn lũy kế,Mã số | TÀI SẢN,229,229.0,229.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,22,2,Giá trị hao mòn lũy kế,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,22,3,Giá trị hao mòn lũy kế,31/12/2023 VND | TÀI SẢN,(918.560.700),-918560700.0,-918560700.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,22,4,Giá trị hao mòn lũy kế,1/1/2023 VND | TÀI SẢN,(918.560.700),-918560700.0,-918560700.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,23,0,Đầu tư tài chính dài hạn,TÀI SẢN,Đầu tư tài chính dài hạn,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,23,1,Đầu tư tài chính dài hạn,Mã số | TÀI SẢN,250,250.0,250.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,23,2,Đầu tư tài chính dài hạn,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,23,3,Đầu tư tài chính dài hạn,31/12/2023 VND | TÀI SẢN,3.987.705.858.980,3987705858980.0,3987705858980.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,23,4,Đầu tư tài chính dài hạn,1/1/2023 VND | TÀI SẢN,6.363.958.385.053,6363958385053.0,6363958385053.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,24,0,Đầu tư vào các công ty con,TÀI SẢN,Đầu tư vào các công ty con,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,24,1,Đầu tư vào các công ty con,Mã số | TÀI SẢN,251,251.0,251.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,24,2,Đầu tư vào các công ty con,Thuyết minh | TÀI SẢN,9(a),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,24,3,Đầu tư vào các công ty con,31/12/2023 VND | TÀI SẢN,3.829.862.020.000,3829862020000.0,3829862020000.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,24,4,Đầu tư vào các công ty con,1/1/2023 VND | TÀI SẢN,5.789.811.020.000,5789811020000.0,5789811020000.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,25,0,Đầu tư vào một công ty liên kết,TÀI SẢN,Đầu tư vào một công ty liên kết,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,25,1,Đầu tư vào một công ty liên kết,Mã số | TÀI SẢN,252,252.0,252.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,25,2,Đầu tư vào một công ty liên kết,Thuyết minh | TÀI SẢN,9(b),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,25,3,Đầu tư vào một công ty liên kết,31/12/2023 VND | TÀI SẢN,648.102.724.017,648102724017.0,648102724017.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,25,4,Đầu tư vào một công ty liên kết,1/1/2023 VND | TÀI SẢN,648.102.724.017,648102724017.0,648102724017.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,26,0,Dự phòng giảm giá đầu tư tài chính dài hạn,TÀI SẢN,Dự phòng giảm giá đầu tư tài chính dài hạn,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,26,1,Dự phòng giảm giá đầu tư tài chính dài hạn,Mã số | TÀI SẢN,254,254.0,254.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,26,2,Dự phòng giảm giá đầu tư tài chính dài hạn,Thuyết minh | TÀI SẢN,9(a),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,26,3,Dự phòng giảm giá đầu tư tài chính dài hạn,31/12/2023 VND | TÀI SẢN,(490.258.885.037),-490258885037.0,-490258885037.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,26,4,Dự phòng giảm giá đầu tư tài chính dài hạn,1/1/2023 VND | TÀI SẢN,(73.955.358.964),-73955358964.0,-73955358964.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,27,0,Tài sản dài hạn khác,TÀI SẢN,Tài sản dài hạn khác,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,27,1,Tài sản dài hạn khác,Mã số | TÀI SẢN,260,260.0,260.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,27,2,Tài sản dài hạn khác,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,27,3,Tài sản dài hạn khác,31/12/2023 VND | TÀI SẢN,166.168.722,166168722.0,166168722.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,27,4,Tài sản dài hạn khác,1/1/2023 VND | TÀI SẢN,133.485.009,133485009.0,133485009.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,28,0,Chi phí trả trước dài hạn,TÀI SẢN,Chi phí trả trước dài hạn,,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,28,1,Chi phí trả trước dài hạn,Mã số | TÀI SẢN,261,261.0,261.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,28,2,Chi phí trả trước dài hạn,Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,28,3,Chi phí trả trước dài hạn,31/12/2023 VND | TÀI SẢN,166.168.722,166168722.0,166168722.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,28,4,Chi phí trả trước dài hạn,1/1/2023 VND | TÀI SẢN,133.485.009,133485009.0,133485009.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,29,0,TỔNG TÀI SẢN (270 = 100 + 200),TÀI SẢN,TỔNG TÀI SẢN (270 = 100 + 200),,,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,29,1,TỔNG TÀI SẢN (270 = 100 + 200),Mã số | TÀI SẢN,270,270.0,270.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,29,2,TỔNG TÀI SẢN (270 = 100 + 200),Thuyết minh | TÀI SẢN,,,,False,True
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,29,3,TỔNG TÀI SẢN (270 = 100 + 200),31/12/2023 VND | TÀI SẢN,7.442.654.814.304,7442654814304.0,7442654814304.0,False,False
+MML_financial_statements_2023_separate|table_1,MML_financial_statements_2023_separate,MML,2023,separate,VND,29,4,TỔNG TÀI SẢN (270 = 100 + 200),1/1/2023 VND | TÀI SẢN,9.887.935.839.202,9887935839202.0,9887935839202.0,False,False

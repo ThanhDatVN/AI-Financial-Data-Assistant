@@ -1,0 +1,41 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,0,0,1.,II.,1.,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,0,1,1.,CHÌ TIÊU | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,Tiền thu từ đi vay,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,0,2,1.,Mã số | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,33,33.0,33.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,0,3,1.,Năm nay | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,1.690.158.567.850,1690158567850.0,1690158567850.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,0,4,1.,Năm trước | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,1.623.831.009.297,1623831009297.0,1623831009297.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,1,0,2.,II.,2.,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,1,1,2.,CHÌ TIÊU | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,Tiền trả nợ gốc vay,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,1,2,2.,Mã số | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,34,34.0,34.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,1,3,2.,Năm nay | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,(2.633.448.797.133),-2633448797133.0,-2633448797133.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,1,4,2.,Năm trước | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,(2.532.939.802.229),-2532939802229.0,-2532939802229.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,2,0,3.,II.,3.,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,2,1,3.,CHÌ TIÊU | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,"Cổ tức, lợi nhuận đã trả cho chủ sở hữu",,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,2,2,3.,Mã số | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,36,36.0,36.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,2,3,3.,Năm nay | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,(317.605.344.000),-317605344000.0,-317605344000.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,2,4,3.,Năm trước | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,(476.386.137.500),-476386137500.0,-476386137500.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,3,0,3.,II.,3.,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,3,1,3.,CHÌ TIÊU | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,Lưu chuyển tiền thuần từ hoạt động tài chính,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,3,2,3.,Mã số | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,40,40.0,40.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,3,3,3.,Năm nay | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,(1.260.895.573.283),-1260895573283.0,-1260895573283.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,3,4,3.,Năm trước | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,(1.385.494.930.432),-1385494930432.0,-1385494930432.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,4,0,3.,II.,3.,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,4,1,3.,CHÌ TIÊU | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,Lưu chuyển tiền thuần trong năm (50=20+30+40),,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,4,2,3.,Mã số | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,50,50.0,50.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,4,3,3.,Năm nay | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,43.663.148.317,43663148317.0,43663148317.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,4,4,3.,Năm trước | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,181.666.367.740,181666367740.0,181666367740.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,5,0,3.,II.,3.,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,5,1,3.,CHÌ TIÊU | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,Tiền và tương đương tiền đầu năm,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,5,2,3.,Mã số | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,60,60.0,60.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,5,3,3.,Năm nay | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,464.482.357.354,464482357354.0,464482357354.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,5,4,3.,Năm trước | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,283.034.462.335,283034462335.0,283034462335.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,6,0,3.,II.,3.,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,6,1,3.,CHÌ TIÊU | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,Ảnh hưởng của thay đối tỷ giá hối đoái quy đối ngoại tệ,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,6,2,3.,Mã số | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,61,61.0,61.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,6,3,3.,Năm nay | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,(294.617.915),-294617915.0,-294617915.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,6,4,3.,Năm trước | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,(218.472.721),-218472721.0,-218472721.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,7,0,3.,II.,3.,,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,7,1,3.,CHÌ TIÊU | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,Tiền và tương đương tiền cuối năm (70=50+60+61),,,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,7,2,3.,Mã số | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,70,70.0,70.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,7,3,3.,Năm nay | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,507.850.887.756,507850887756.0,507850887756.0,False,False
+DCM_financial_statements_2020_separate|table_9,DCM_financial_statements_2020_separate,DCM,2020,separate,VND,7,4,3.,Năm trước | LU'U CHUYÊN TIÊN TỪ HOẠT ĐỘNG TÀI CHÍNH,464.482.357.354,464482357354.0,464482357354.0,False,False

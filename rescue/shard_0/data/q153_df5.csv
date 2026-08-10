@@ -1,0 +1,16 @@
+table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,0,0,Lãi tiền gửi và cho vay,column_1,Lãi tiền gửi và cho vay,,,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,0,1,Lãi tiền gửi và cho vay,Năm nay,13.503.042.717,13503042717.0,13503042717.0,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,0,2,Lãi tiền gửi và cho vay,VNDNăm trước,21.338.717.293,21338717293.0,21338717293.0,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,1,0,Lãi chênh lệch tỷ giá hối đoái,column_1,Lãi chênh lệch tỷ giá hối đoái,,,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,1,1,Lãi chênh lệch tỷ giá hối đoái,Năm nay,5.707.288.604,5707288604.0,5707288604.0,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,1,2,Lãi chênh lệch tỷ giá hối đoái,VNDNăm trước,306.986.909,306986909.0,306986909.0,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,2,0,Lãi thanh lý khoản đầu tư,column_1,Lãi thanh lý khoản đầu tư,,,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,2,1,Lãi thanh lý khoản đầu tư,Năm nay,-,0.0,0.0,True,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,2,2,Lãi thanh lý khoản đầu tư,VNDNăm trước,14.594.027.538,14594027538.0,14594027538.0,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,3,0,Khác,column_1,Khác,,,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,3,1,Khác,Năm nay,3.013.337.685,3013337685.0,3013337685.0,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,3,2,Khác,VNDNăm trước,1.694.488.045,1694488045.0,1694488045.0,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,4,0,TỔNG CỔNG,column_1,TỔNG CỔNG,,,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,4,1,TỔNG CỔNG,Năm nay,22.223.669.006,22223669006.0,22223669006.0,False,False
+BAF_financial_statements_2024_consolidated|table_47,BAF_financial_statements_2024_consolidated,BAF,2024,consolidated,VND,4,2,TỔNG CỔNG,VNDNăm trước,37.934.219.785,37934219785.0,37934219785.0,False,False
