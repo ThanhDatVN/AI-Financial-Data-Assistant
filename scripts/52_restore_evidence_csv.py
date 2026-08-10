@@ -21,24 +21,43 @@ if str(SRC) not in sys.path:
 from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame  # noqa: E402
 
 
+def _shard_predictions(shard: Path) -> list[dict[str, object]]:
+    """Read a shard's answers from whichever record survived.
+
+    A checkpoint carries one file per row; a finished shard also consolidates them into
+    predictions.jsonl. Either is enough to say which tables the answers cite, and a rescue
+    often has only one of them, so accept both.
+    """
+    consolidated = shard / "predictions.jsonl"
+    if consolidated.is_file():
+        return [
+            json.loads(line)
+            for line in consolidated.read_text(encoding="utf-8").splitlines()
+            if line.strip()
+        ]
+    predictions: list[dict[str, object]] = []
+    for row_path in sorted((shard / "rows").glob("*.json")):
+        row = json.loads(row_path.read_text(encoding="utf-8"))
+        prediction = row.get("prediction")
+        if isinstance(prediction, dict):
+            predictions.append(prediction)
+    return predictions
+
+
 def _required_frames(shards: list[Path]) -> dict[Path, str]:
-    """Map every evidence CSV a completed row cites to the table it was written from."""
+    """Map every evidence CSV a completed answer cites to the table it was written from."""
     required: dict[Path, str] = {}
     for shard in shards:
-        for row_path in sorted((shard / "rows").glob("*.json")):
-            row = json.loads(row_path.read_text(encoding="utf-8"))
-            prediction = row.get("prediction")
-            if not isinstance(prediction, dict):
-                continue
+        for prediction in _shard_predictions(shard):
             evidence = prediction.get("evidence")
             tables = prediction.get("relevant_tables")
             if not isinstance(evidence, list) or not isinstance(tables, list):
                 continue
             if len(evidence) != len(tables):
-                raise ValueError(f"Evidence and tables disagree in {row_path}")
+                raise ValueError(f"Evidence and tables disagree in {shard}")
             for item, table_ref in zip(evidence, tables, strict=True):
                 if not isinstance(item, dict):
-                    raise TypeError(f"Malformed evidence entry in {row_path}")
+                    raise TypeError(f"Malformed evidence entry in {shard}")
                 csv_path = shard / str(item["csv_path"])
                 if csv_path.parent.name != "data":
                     raise ValueError(f"Evidence path escapes data/: {item['csv_path']}")
