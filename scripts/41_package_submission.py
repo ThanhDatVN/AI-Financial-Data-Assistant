@@ -23,6 +23,14 @@ def main() -> None:
     )
     parser.add_argument("--evidence-root", type=Path)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument(
+        "--reuse-execution-from",
+        type=Path,
+        help=(
+            "Skip re-executing every query, reusing a submission already validated in "
+            "full. Refused unless the answers, queries and evidence are identical."
+        ),
+    )
     args = parser.parse_args()
     output = package_submission(
         args.submission,
@@ -30,6 +38,7 @@ def main() -> None:
         questions_path=args.questions,
         evidence_root=args.evidence_root,
         force=args.force,
+        reuse_execution_from=args.reuse_execution_from,
     )
     print(output)
 

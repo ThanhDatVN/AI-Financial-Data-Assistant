@@ -97,3 +97,41 @@ def test_execution_check_scales_with_the_magnitude_it_is_checking(tmp_path: Path
     submission, questions = _single_question_submission(tmp_path, 4.82e38)
     with pytest.raises(ValueError, match="Execution mismatch"):
         validate_submission(submission, questions_path=questions, evidence_root=tmp_path)
+
+
+def test_packaging_may_reuse_a_validation_only_when_execution_is_unchanged(
+    tmp_path: Path,
+) -> None:
+    """Testing a reference grammar repackages the same answers again and again.
+
+    Re-executing 1,012 queries each time re-confirms what was already confirmed, but the
+    shortcut is only sound while the queries and their evidence are untouched.
+    """
+    validated, questions = _single_question_submission(tmp_path, 4.7732000000157094e38)
+    validate_submission(validated, questions_path=questions, evidence_root=tmp_path)
+
+    rows = json.loads(validated.read_text(encoding="utf-8"))
+    rows[0]["relevant_tables"] = ["DOC|1"]
+    retargeted = tmp_path / "retargeted.json"
+    retargeted.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
+    archive = package_submission(
+        retargeted,
+        tmp_path / "retargeted.zip",
+        questions_path=questions,
+        evidence_root=tmp_path,
+        reuse_execution_from=validated,
+    )
+    assert archive.is_file()
+
+    # Changing what gets executed forfeits the shortcut.
+    rows[0]["answer"] = 1.0
+    altered = tmp_path / "altered.json"
+    altered.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
+    with pytest.raises(ValueError, match="execution has to be checked"):
+        package_submission(
+            altered,
+            tmp_path / "altered.zip",
+            questions_path=questions,
+            evidence_root=tmp_path,
+            reuse_execution_from=validated,
+        )
