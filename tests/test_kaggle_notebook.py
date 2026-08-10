@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BUILDER_NOTEBOOK = ROOT / "notebooks/01_kaggle_build_dense_artifact.ipynb"
 GENERATION_NOTEBOOK = ROOT / "notebooks/02_kaggle_dense_and_generate.ipynb"
 RESUME_NOTEBOOK = ROOT / "notebooks/03_kaggle_resume_and_submit.ipynb"
+PACKAGE_NOTEBOOK = ROOT / "notebooks/04_kaggle_package_submission.ipynb"
 KAGGLE_INPUTS = ROOT / "src/vifinqa/kaggle_inputs.py"
 
 
@@ -128,7 +129,7 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
 def test_notebooks_discover_inputs_through_symlinked_kaggle_mounts() -> None:
     module_source = KAGGLE_INPUTS.read_text(encoding="utf-8")
     helpers = module_source[module_source.index("def iter_input_paths") :].rstrip("\n")
-    for notebook in (BUILDER_NOTEBOOK, GENERATION_NOTEBOOK, RESUME_NOTEBOOK):
+    for notebook in (BUILDER_NOTEBOOK, GENERATION_NOTEBOOK, RESUME_NOTEBOOK, PACKAGE_NOTEBOOK):
         code = _compiled_code(notebook)
         # The bootstrap cell runs before the project is installed, so it carries a verbatim
         # copy of the module instead of importing it.
@@ -201,3 +202,25 @@ def test_resume_notebook_finishes_a_run_without_rebuilding_its_retrieval() -> No
     # Fetching a bare SHA is a server permission, not a guarantee; a full clone has it.
     assert '"fetch", "origin", PROJECT_SHA], check=False' in code
     assert '"scripts/41_package_submission.py"' in code
+
+
+def test_packaging_notebook_needs_no_accelerator_and_downloads_one_file() -> None:
+    code = _compiled_code(PACKAGE_NOTEBOOK)
+
+    # Merging, re-executing and zipping are CPU work. Asking for a GPU here would spend
+    # quota to do arithmetic, and pulling the serving stack would spend minutes on it.
+    assert "torch" not in code
+    assert "vllm" not in code
+    assert "requirements-gpu.txt" not in code
+    assert 'str(PROJECT / "requirements.txt")' in code
+
+    # It packages with the commit that produced the answers, not with whatever main is.
+    assert '"checkout", PROJECT_SHA' in code
+    assert '"fetch", "origin", PROJECT_SHA], check=False' in code
+
+    assert '"scripts/52_restore_evidence_csv.py"' in code
+    assert '"scripts/51_merge_generation_shards.py"' in code
+    assert '"scripts/40_validate_submission.py"' in code
+    assert '"scripts/41_package_submission.py"' in code
+    assert "assert answers == 1012" in code
+    assert "Download only this ZIP." in code
