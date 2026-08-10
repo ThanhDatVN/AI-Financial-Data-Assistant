@@ -39,6 +39,7 @@ def package_submission(
     evidence_root: Path | None = None,
     force: bool = False,
     reuse_execution_from: Path | None = None,
+    allow_partial_docs: bool = False,
 ) -> Path:
     if output_zip.exists() and not force:
         raise FileExistsError(f"Refusing to overwrite existing ZIP: {output_zip}")
@@ -56,6 +57,7 @@ def package_submission(
         questions_path=questions_path,
         evidence_root=root,
         execute=execute,
+        allow_partial_docs=allow_partial_docs,
     )
     canonical = [prediction.model_dump(mode="json") for prediction in predictions]
     csv_paths = sorted({item.csv_path for row in predictions for item in row.evidence})

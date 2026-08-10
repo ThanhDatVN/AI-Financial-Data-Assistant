@@ -46,9 +46,20 @@ def main() -> None:
         type=int,
         help="How many tables to cite per question, counting the ones the program read first",
     )
+    parser.add_argument(
+        "--docs",
+        type=int,
+        help=(
+            "How many documents to cite, if fewer than the widened tables span. The two fields "
+            "are scored separately, and widening cost documents 0.090 while it earned tables "
+            "0.117, so the depth that suits one need not suit the other."
+        ),
+    )
     args = parser.parse_args()
     if args.tables < 1:
         parser.error("--tables must be at least 1")
+    if args.docs is not None and args.docs < 1:
+        parser.error("--docs must be at least 1")
 
     ranked = _retrieved(args.retrieval)
     predictions = json.loads(args.submission.read_text(encoding="utf-8"))
@@ -64,13 +75,14 @@ def main() -> None:
                 cited.append(candidate)
         widened += len(cited) - len(prediction["relevant_tables"])
         prediction["relevant_tables"] = cited
-        prediction["relevant_docs"] = list(dict.fromkeys(ref.split("|", 1)[0] for ref in cited))
+        documents = list(dict.fromkeys(ref.split("|", 1)[0] for ref in cited))
+        prediction["relevant_docs"] = documents if args.docs is None else documents[: args.docs]
     write_json_atomic(args.output, predictions)
-    average = sum(len(row["relevant_tables"]) for row in predictions) / len(predictions)
-    documents = sum(len(row["relevant_docs"]) for row in predictions) / len(predictions)
+    tables_each = sum(len(row["relevant_tables"]) for row in predictions) / len(predictions)
+    docs_each = sum(len(row["relevant_docs"]) for row in predictions) / len(predictions)
     print(
         f"added {widened} citations across {len(predictions)} questions; now "
-        f"{average:.2f} tables and {documents:.2f} documents per question -> {args.output}"
+        f"{tables_each:.2f} tables and {docs_each:.2f} documents per question -> {args.output}"
     )
 
 

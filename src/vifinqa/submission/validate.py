@@ -32,11 +32,13 @@ def validate_submission(
     execute: bool = True,
     abs_tolerance: float = 0.01,
     execution_timeout: float = 10.0,
+    allow_partial_docs: bool = False,
 ) -> list[Prediction]:
     raw = json.loads(submission_path.read_text(encoding="utf-8"))
     if not isinstance(raw, list):
         raise ValueError("Submission root must be a JSON list")
-    predictions = [Prediction.model_validate(item) for item in raw]
+    context = {"allow_partial_docs": allow_partial_docs}
+    predictions = [Prediction.model_validate(item, context=context) for item in raw]
     expected = _load_questions(questions_path)
     by_id = {prediction.id: prediction for prediction in predictions}
     if len(by_id) != len(predictions):

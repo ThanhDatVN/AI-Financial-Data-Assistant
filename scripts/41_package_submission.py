@@ -24,6 +24,15 @@ def main() -> None:
     parser.add_argument("--evidence-root", type=Path)
     parser.add_argument("--force", action="store_true")
     parser.add_argument(
+        "--allow-partial-docs",
+        action="store_true",
+        help=(
+            "Let relevant_docs omit documents that relevant_tables cites. The two lists are "
+            "scored separately, so their best depths differ; only pass this when that is the "
+            "point of the build."
+        ),
+    )
+    parser.add_argument(
         "--reuse-execution-from",
         type=Path,
         help=(
@@ -39,6 +48,7 @@ def main() -> None:
         evidence_root=args.evidence_root,
         force=args.force,
         reuse_execution_from=args.reuse_execution_from,
+        allow_partial_docs=args.allow_partial_docs,
     )
     print(output)
 

@@ -40,6 +40,49 @@ def test_submission_is_executed_and_packaged_at_zip_root(tmp_path: Path) -> None
         assert set(archive.namelist()) == {"submission.json", "data/one.csv"}
 
 
+def test_documents_may_be_cited_less_deeply_than_tables_only_on_request(tmp_path: Path) -> None:
+    """The two reference lists are scored apart, so their best depths differ.
+
+    Widening both together earned tables 0.117 and cost documents 0.090, which is why a build
+    may deliberately cite one document while citing five tables. Containment stays required by
+    default, because for anything built normally a document missing from the list is a bug.
+    """
+    questions = tmp_path / "questions.jsonl"
+    questions.write_text('{"id":1,"question":"Q?"}\n', encoding="utf-8")
+    data = tmp_path / "data"
+    data.mkdir()
+    pd.DataFrame({"x": [2.0]}).to_csv(data / "one.csv", index=False)
+    submission = tmp_path / "candidate.json"
+    submission.write_text(
+        json.dumps(
+            [
+                {
+                    "id": 1,
+                    "question": "Q?",
+                    "answer": 2.0,
+                    "relevant_docs": ["DOC"],
+                    "relevant_tables": ["DOC|11", "OTHER|22"],
+                    "evidence": [{"variable": "df1", "csv_path": "data/one.csv"}],
+                    "pandas_query": "float(df1['x'].iloc[0])",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(Exception, match="OTHER"):
+        validate_submission(submission, questions_path=questions)
+    relaxed = validate_submission(submission, questions_path=questions, allow_partial_docs=True)
+    assert relaxed[0].relevant_docs == ["DOC"]
+    assert relaxed[0].relevant_tables == ["DOC|11", "OTHER|22"]
+
+    # Relaxing containment must not relax the shape of a reference itself.
+    malformed = json.loads(submission.read_text(encoding="utf-8"))
+    malformed[0]["relevant_tables"] = ["DOC|11", "OTHER"]
+    submission.write_text(json.dumps(malformed), encoding="utf-8")
+    with pytest.raises(Exception, match="invalid relevant_tables item"):
+        validate_submission(submission, questions_path=questions, allow_partial_docs=True)
+
+
 def _single_question_submission(tmp_path: Path, answer: float) -> tuple[Path, Path]:
     frame = pd.DataFrame(
         {
