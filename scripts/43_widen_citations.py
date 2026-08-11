@@ -121,6 +121,16 @@ def main() -> None:
         ),
     )
     parser.add_argument(
+        "--table-router",
+        choices=["both", "consolidated", "separate"],
+        help=(
+            "Keep only the tables that sit in a report the question's metadata can be naming, "
+            "then fill back up to --tables from candidates inside that set. Submission 2807 "
+            "scored those names at 0.9580 precision against 0.6708 for names read off the "
+            "ranking, while 27.2%% of the tables cited alongside them sit outside the set."
+        ),
+    )
+    parser.add_argument(
         "--router-only",
         action="store_true",
         help=(
@@ -148,22 +158,39 @@ def main() -> None:
     ranked = _retrieved(args.retrieval)
     specs: dict[int, _Spec] = {}
     known: set[str] = set()
-    if args.doc_router is not None:
+    if args.doc_router is not None or args.table_router is not None:
         specs = _specs(args.retrieval)
         known = set(pd.read_parquet(args.manifest, columns=["doc_id"])["doc_id"].unique())
     predictions = json.loads(args.submission.read_text(encoding="utf-8"))
     unrouted = 0
     widened = 0
+    dropped = 0
     for prediction in predictions:
         question_id = int(prediction["id"])
+        spec = specs.get(question_id, _Spec((), (), None))
         # The tables the program read come first: they are the ones it can defend.
-        cited = [str(ref) for ref in prediction["relevant_tables"]]
+        read = [str(ref) for ref in prediction["relevant_tables"]]
+        cited = list(read)
+        # A question whose metadata names no report keeps the ranking it already had.
+        table_route = (
+            set(_routed(spec, args.table_router, known)) if args.table_router is not None else set()
+        )
+        if table_route:
+            cited = [ref for ref in cited if ref.split("|", 1)[0] in table_route]
         for candidate in ranked.get(question_id, []):
             if len(cited) >= args.tables:
                 break
+            if table_route and candidate.split("|", 1)[0] not in table_route:
+                continue
             if candidate not in cited:
                 cited.append(candidate)
-        widened += len(cited) - len(prediction["relevant_tables"])
+        if not cited:
+            # The schema rejects an empty list, so a route that strips a question bare loses.
+            # No question in the corpus does: every routed set holds at least three candidates.
+            cited = list(read)
+        elif table_route:
+            dropped += sum(1 for ref in read if ref.split("|", 1)[0] not in table_route)
+        widened += len(cited) - len(read)
         prediction["relevant_tables"] = cited
         sources = cited
         if args.doc_depth is not None:
@@ -175,7 +202,7 @@ def main() -> None:
                     sources.append(candidate)
         documents = list(dict.fromkeys(ref.split("|", 1)[0] for ref in sources))
         if args.doc_router is not None:
-            routed = _routed(specs.get(question_id, _Spec((), (), None)), args.doc_router, known)
+            routed = _routed(spec, args.doc_router, known)
             if routed:
                 # Merging keeps every cited table's document present, which the schema wants.
                 # Replacing tests the router on its own, and costs that guarantee.
@@ -192,6 +219,8 @@ def main() -> None:
         f"added {widened} citations across {len(predictions)} questions; now "
         f"{tables_each:.2f} tables and {docs_each:.2f} documents per question -> {args.output}"
     )
+    if dropped:
+        print(f"  dropped {dropped} tables sitting outside the reports the metadata names")
     if unrouted:
         print(f"  {unrouted} questions named no report their metadata could resolve")
 
