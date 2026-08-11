@@ -3,7 +3,7 @@ from __future__ import annotations
 import pandas as pd
 import pytest
 
-from vifinqa.programs.compiler import compile_expression
+from vifinqa.programs.compiler import MAX_QUERY_CHARS, compile_expression
 from vifinqa.programs.dimensions import infer_dimension
 from vifinqa.programs.executor import execute_expression, execute_expression_isolated
 from vifinqa.programs.grounding import (
@@ -250,10 +250,42 @@ def test_selection_ranks_within_the_half_below_the_median() -> None:
     )
     assert execute_expression(compile_expression(program), frames) == 200.0
 
-    # Naming shared work once is what keeps this from expanding past a megabyte.
+    # The organiser's grader raises SyntaxError on `:=`, so the shipped form must not contain
+    # one. Repeating the shared work is what that costs: a five-member cohort lands near 167k
+    # characters against 6k named, and the cap is what stops the trade at the point where a
+    # wider cohort would be better off falling back.
     compiled = compile_expression(program)
-    assert compiled.startswith("((_v0 :=") and compiled.endswith(")[-1]")
-    assert len(compiled) < 20_000
+    assert ":=" not in compiled
+    assert len(compiled) < MAX_QUERY_CHARS
+
+    # The walrus form stays reachable so the scored submissions can still be reproduced.
+    named = compile_expression(program, inline=False)
+    assert named.startswith("((_v0 :=") and named.endswith(")[-1]")
+    assert execute_expression(named, frames) == 200.0
+    assert len(named) * 20 < len(compiled)
+
+
+def test_ranking_without_keys_ranks_the_members_themselves() -> None:
+    """Two rules that rejected 54 questions were our refusals, not the model's mistakes.
+
+    `argmax` with no keys is max over the members, and keys handed to an operator that cannot
+    rank are surplus rather than contradictory. Neither reading is ambiguous, so neither should
+    send a question to the fallback answer.
+    """
+    frames = _cohort([[30.0], [10.0], [20.0]])
+    members = tuple(CellExpr(f"df{index}", 0, 1) for index in range(1, 4))
+
+    assert execute_expression(compile_expression(SelectExpr("argmax", members)), frames) == 30.0
+    assert execute_expression(compile_expression(SelectExpr("argmin", members)), frames) == 10.0
+
+    surplus = SelectExpr("sum", members, keys=members)
+    assert execute_expression(compile_expression(surplus), frames) == 60.0
+    middle = SelectExpr("median", members, keys=members)
+    assert execute_expression(compile_expression(middle), frames) == 20.0
+
+    # A key list that does not line up with the members is still a real contradiction.
+    with pytest.raises(ValueError, match="one key per member"):
+        compile_expression(SelectExpr("argmax", members, keys=members[:2]))
 
 
 def test_selection_refuses_an_empty_subset_rather_than_inventing_an_extreme() -> None:

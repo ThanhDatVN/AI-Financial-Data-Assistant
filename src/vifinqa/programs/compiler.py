@@ -22,12 +22,21 @@ class _Bindings:
     A selection compares every member against every other, and each comparison repeats the
     membership test, which in turn may repeat a median over the whole cohort. Inlined, a
     nine-company question expands past a megabyte; named, it stays a few kilobytes.
+
+    Naming costs `:=`, and the organiser's grader answers that with a SyntaxError -- three
+    questions compiled to a walrus and two of them scored zero for it. Their interpreter runs
+    every other program we send, so the syntax those programs use is the only syntax known to
+    be safe. `inline=True` therefore repeats the sub-expression instead of naming it, trading
+    size for a guarantee, and `MAX_QUERY_CHARS` refuses the trade when it stops being cheap.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, *, inline: bool = True) -> None:
+        self.inline = inline
         self.assignments: list[str] = []
 
     def bind(self, compiled: str) -> str:
+        if self.inline:
+            return f"({compiled})"
         name = f"_v{len(self.assignments)}"
         self.assignments.append(f"({name} := {compiled})")
         return name
@@ -38,9 +47,28 @@ class _Bindings:
         return "(" + ", ".join([*self.assignments, body]) + ")[-1]"
 
 
-def compile_expression(expression: ScalarExpr) -> str:
-    bindings = _Bindings()
-    return bindings.wrap(_compile(expression, bindings))
+# Inlining a wide cohort grows super-linearly. Past this the program stops being worth sending,
+# and the question falls back rather than shipping something the grader may choke on.
+MAX_QUERY_CHARS = 200_000
+
+
+class QueryTooLargeError(ValueError):
+    """Raised when inlining a program past the point where sending it is sensible."""
+
+
+def compile_expression(expression: ScalarExpr, *, inline: bool = True) -> str:
+    """Render an IR program as a pandas expression.
+
+    `inline=False` restores the walrus form, kept so the earlier submissions can be reproduced
+    byte for byte; it must not be used for anything the organiser will score.
+    """
+    bindings = _Bindings(inline=inline)
+    compiled = bindings.wrap(_compile(expression, bindings))
+    if inline and len(compiled) > MAX_QUERY_CHARS:
+        raise QueryTooLargeError(
+            f"inlined program is {len(compiled)} characters, over the {MAX_QUERY_CHARS} limit"
+        )
+    return compiled
 
 
 def _compile_conditions(expression: SelectExpr, size: int, bindings: _Bindings) -> list[str]:
@@ -88,11 +116,18 @@ def _compile_select(expression: SelectExpr, bindings: _Bindings) -> str:
     size = len(expression.members)
     if size == 0:
         raise ValueError("Select members must not be empty")
+    # Both of these were our refusals rather than the model's mistakes, and together they sent 54
+    # questions to the fallback answer. Ranking without keys is just max/min over the members
+    # themselves, and keys attached to an operator that cannot rank are surplus rather than
+    # contradictory -- neither reading is ambiguous, so neither needs to fail.
+    ranking_keys = expression.keys
     if expression.operator in {"argmin", "argmax"}:
-        if expression.keys is None or len(expression.keys) != size:
+        if ranking_keys is not None and len(ranking_keys) != size:
             raise ValueError("Ranked selection needs one key per member")
-    elif expression.keys is not None:
-        raise ValueError("Keys are only meaningful for argmin and argmax")
+        if ranking_keys is None:
+            ranking_keys = expression.members
+    elif ranking_keys is not None:
+        ranking_keys = None
 
     members = [bindings.bind(_compile(member, bindings)) for member in expression.members]
     kept = _compile_conditions(expression, size, bindings)
@@ -120,7 +155,7 @@ def _compile_select(expression: SelectExpr, bindings: _Bindings) -> str:
     keys = (
         members
         if expression.operator in {"min", "max"}
-        else [bindings.bind(_compile(key, bindings)) for key in expression.keys or ()]
+        else [bindings.bind(_compile(key, bindings)) for key in ranking_keys or ()]
     )
     comparator = "<=" if expression.operator in {"argmin", "min"} else ">="
     selected = "float('nan')"
