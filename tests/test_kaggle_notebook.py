@@ -42,8 +42,8 @@ def test_kaggle_dense_builder_is_full_quality_resumable_and_multi_gpu() -> None:
 def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     code = _compiled_code(GENERATION_NOTEBOOK)
 
-    assert "Qwen/Qwen3-8B-AWQ" in code
-    assert "4da05a8edb55c6046cce958586c33b61da07bb79" in code
+    assert "Qwen/Qwen3-14B-AWQ" in code
+    assert "31c69efc29464b6bb0aee1398b5a7b50a99340c3" in code
     assert 'THINKING_MODE = os.environ.get("VIFINQA_THINKING_MODE"' in code
     assert "torch.cuda.device_count() >= requested_dp" in code
     assert "assert capability >= (" in code
@@ -51,7 +51,7 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert '"pull", "--ff-only", "origin", "main"' in code
     assert 'if (PROJECT / ".git").exists()' in code
     assert "SMOKE ERRORS (full unresolved records)" in code
-    assert "generation_qwen3_8b_awq_smoke_{PROJECT_SHA[:12]}" in code
+    assert "generation_qwen3_14b_awq_smoke_{PROJECT_SHA[:12]}" in code
     assert "SMOKE_IDS = [1, 213, 399, 442, 473]" in code
     assert "WIDE GATE ERRORS (full unresolved records)" in code
     assert "def route_fan_out(" in code
@@ -80,7 +80,10 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "partial run finished cleanly" in code
     assert code.count("str(SHARDS)") == 2
     # Decode measured 3.7 tokens/s with one sequence per replica; batching is the lever.
-    assert '"--max-num-seqs",\n        "4",' in code
+    # Qwen3-14B-AWQ leaves room for roughly two concurrent sequences on a T4, not four, so the
+    # width became a knob rather than a constant. The pin that matters is the default.
+    assert '"--max-num-seqs",\n        str(MAX_NUM_SEQS),' in code
+    assert 'MAX_NUM_SEQS = int(os.environ.get("VIFINQA_MAX_NUM_SEQS", "2"))' in code
     assert "--default-chat-template-kwargs" in code
     assert "--thinking-mode" in code
     # smoke, widest-route gate, representative sample, full run
@@ -116,7 +119,7 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     # hybrid retrieval, reranking, smoke, widest-route gate, sample, full run
     assert code.count('"--project-revision"') == 6
     assert '"scripts/51_merge_generation_shards.py"' in code
-    assert 'iter_input_paths("generation_qwen3_8b_awq_shards/shard_0/run_metadata.json")' in code
+    assert 'iter_input_paths("generation_qwen3_14b_awq_shards/shard_0/run_metadata.json")' in code
     assert "VLLM_CONFIG" in code
     assert "cuda_driver_linker_environment" in code
     assert 'linker_name = linker_dir / "libcuda.so"' in code
@@ -192,8 +195,8 @@ def test_resume_notebook_finishes_a_run_without_rebuilding_its_retrieval() -> No
     assert "resuming with {completed_rows()}/1012 questions already answered" in code
     assert "if answered < 1012:" in code
 
-    assert "Qwen/Qwen3-8B-AWQ" in code
-    assert "4da05a8edb55c6046cce958586c33b61da07bb79" in code
+    assert "Qwen/Qwen3-14B-AWQ" in code
+    assert "31c69efc29464b6bb0aee1398b5a7b50a99340c3" in code
     assert '"--final-run"' in code
     # A session that stops at a cap must not package a submission that is not finished.
     assert 'os.environ["VIFINQA_QUESTION_LIMIT"]' in code
