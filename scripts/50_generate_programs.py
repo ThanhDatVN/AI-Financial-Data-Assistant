@@ -362,11 +362,17 @@ def main() -> None:
     if args.shard_count <= 0 or not 0 <= args.shard_index < args.shard_count:
         parser.error("--shard-index must be in [0, --shard-count)")
 
-    selected_rows = _select_rows(
+    # What the run is about, and what this session will get through, are two different things.
+    # `--id` narrows the run; `--limit` only says how far one Kaggle session expects to reach
+    # before the twelve-hour cap. Folding the cap into the run's identity meant a first session
+    # capped at 600 wrote a fingerprint no uncapped session could match, so the notebook meant
+    # to finish the remaining questions refused the checkpoint it was handed.
+    run_scope = _select_rows(
         _load_jsonl(args.retrieval),
         question_ids=args.question_ids,
-        limit=args.limit,
+        limit=None,
     )
+    selected_rows = run_scope[: args.limit] if args.limit is not None else run_scope
     rows = _select_rows(
         selected_rows,
         question_ids=None,
@@ -398,7 +404,7 @@ def main() -> None:
         memory_limit_mb=args.memory_limit_mb,
         thinking_mode=args.thinking_mode,
         max_attempts=args.max_attempts,
-        selected_question_ids=[_as_int(row["id"], field="id") for row in selected_rows],
+        selected_question_ids=[_as_int(row["id"], field="id") for row in run_scope],
         table_unit_source=args.table_unit_source,
         row_hierarchy=args.row_hierarchy,
         project_revision=args.project_revision,

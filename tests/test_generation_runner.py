@@ -283,3 +283,48 @@ def test_select_rows_rejects_duplicate_and_missing_ids() -> None:
         pass
     else:
         raise AssertionError("Expected duplicate retrieval IDs to fail")
+
+
+def test_a_session_cap_does_not_change_what_the_run_is_about() -> None:
+    """A capped first session must hand its checkpoint to an uncapped second one.
+
+    Kaggle keeps nothing from a session it kills, so a long run is split: notebook 02 answers a
+    fixed slice and saves, notebook 03 finishes the rest. That only works if both agree on the
+    run's identity. Folding `--limit` into it meant the capped session wrote a fingerprint the
+    uncapped one could never match, and the resume refused the checkpoint it was handed.
+    """
+    rows = [{"id": index, "fused": []} for index in range(1, 21)]
+
+    scope = runner._select_rows(rows, question_ids=None, limit=None)
+    capped = scope[:12]
+    assert [row["id"] for row in capped] == list(range(1, 13))
+
+    # The cap changes what this session works through, not which questions the run covers.
+    assert [row["id"] for row in scope] == list(range(1, 21))
+
+    # And an explicit selection still narrows the run itself, because that is the run's identity.
+    narrowed = runner._select_rows(rows, question_ids=[3, 1, 2], limit=None)
+    assert [row["id"] for row in narrowed] == [3, 1, 2]
+
+
+def test_sharding_sends_a_question_to_the_same_shard_in_both_sessions() -> None:
+    """Position-based sharding has to survive the second session widening the slice.
+
+    Notebook 02 shards the first 600 of 1,012; notebook 03 shards all 1,012. A question that
+    moved shards between the two would be answered twice or not at all.
+    """
+    rows = [{"id": index, "fused": []} for index in range(1, 101)]
+    shard_count = 8
+
+    def shard_of(subset: list[dict[str, object]], question_id: int) -> int | None:
+        for index in range(shard_count):
+            assigned = runner._select_rows(
+                subset, question_ids=None, limit=None, shard_count=shard_count, shard_index=index
+            )
+            if any(row["id"] == question_id for row in assigned):
+                return index
+        return None
+
+    first_session = rows[:60]
+    for question_id in (1, 17, 40, 60):
+        assert shard_of(first_session, question_id) == shard_of(rows, question_id)
