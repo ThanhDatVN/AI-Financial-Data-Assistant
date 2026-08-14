@@ -268,7 +268,13 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=ROOT / "outputs/generation")
     parser.add_argument("--base-url", default="http://127.0.0.1:8000/v1")
     parser.add_argument("--api-key-env", default="VLLM_API_KEY")
-    parser.add_argument("--model", default="Qwen/Qwen3-8B-AWQ")
+    parser.add_argument(
+        "--model",
+        # The notebooks always pass this explicitly, so the default only matters for a bare
+        # CLI call. It tracks whichever model the pipeline currently runs, because a default
+        # naming a retired model is a trap for anyone reproducing a run by hand.
+        default="Qwen/Qwen3-14B-AWQ",
+    )
     parser.add_argument("--model-revision")
     parser.add_argument(
         "--thinking-mode",
