@@ -48,6 +48,10 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
     assert first["retrieval_sha256"] == runner._sha256(retrieval)
     assert first["thinking_mode"] == "disabled"
     assert first["max_attempts"] == 3
+    assert first["semantic_convention_version"] == 1
+    assert first["table_unit_inference_version"] == 3
+    assert first["question_count"] == 0
+    assert first["table_unit_source"] == "latest"
     assert first["project_revision"] is None
 
     pinned_project = runner._fingerprint(
@@ -96,6 +100,71 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         max_attempts=3,
     )
     assert thinking != third
+
+    hierarchy = runner._fingerprint(
+        retrieval=retrieval,
+        manifest=manifest,
+        model="open/model",
+        model_revision="abc123",
+        candidate_tables=10,
+        max_tokens=1024,
+        execution_timeout=10.0,
+        request_timeout=180.0,
+        memory_limit_mb=None,
+        thinking_mode="disabled",
+        max_attempts=3,
+        row_hierarchy=True,
+    )
+    assert hierarchy != third
+    assert hierarchy["row_hierarchy"] is True
+
+    selected = runner._fingerprint(
+        retrieval=retrieval,
+        manifest=manifest,
+        model="open/model",
+        model_revision="abc123",
+        candidate_tables=10,
+        max_tokens=1024,
+        execution_timeout=10.0,
+        request_timeout=180.0,
+        memory_limit_mb=None,
+        thinking_mode="disabled",
+        max_attempts=3,
+        selected_question_ids=[5, 9, 12],
+    )
+    reordered = runner._fingerprint(
+        retrieval=retrieval,
+        manifest=manifest,
+        model="open/model",
+        model_revision="abc123",
+        candidate_tables=10,
+        max_tokens=1024,
+        execution_timeout=10.0,
+        request_timeout=180.0,
+        memory_limit_mb=None,
+        thinking_mode="disabled",
+        max_attempts=3,
+        selected_question_ids=[12, 9, 5],
+    )
+    assert selected["question_count"] == 3
+    assert selected["question_ids_sha256"] != reordered["question_ids_sha256"]
+
+    manifest_units = runner._fingerprint(
+        retrieval=retrieval,
+        manifest=manifest,
+        model="open/model",
+        model_revision="abc123",
+        candidate_tables=10,
+        max_tokens=1024,
+        execution_timeout=10.0,
+        request_timeout=180.0,
+        memory_limit_mb=None,
+        thinking_mode="disabled",
+        max_attempts=3,
+        selected_question_ids=[5, 9, 12],
+        table_unit_source="manifest",
+    )
+    assert manifest_units != selected
 
 
 def test_candidate_limit_expands_to_entity_year_routes() -> None:

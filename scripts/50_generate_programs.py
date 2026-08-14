@@ -29,6 +29,7 @@ from vifinqa.generation.prompt import (  # noqa: E402
     numeric_cells_of,
 )
 from vifinqa.parsing.normalize import ascii_words  # noqa: E402
+from vifinqa.parsing.units import TABLE_UNIT_INFERENCE_VERSION  # noqa: E402
 from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
 from vifinqa.programs.grounding import (  # noqa: E402
@@ -50,6 +51,10 @@ from vifinqa.programs.serde import (  # noqa: E402
     PROGRAM_GRAMMAR_SCHEMA,
     PROGRAM_JSON_SCHEMA,
     expression_from_dict,
+)
+from vifinqa.submission.semantics import (  # noqa: E402
+    SEMANTIC_CONVENTION_VERSION,
+    normalize_absolute_difference,
 )
 
 SEED = 20260802
@@ -218,15 +223,24 @@ def _fingerprint(
     memory_limit_mb: int | None,
     thinking_mode: str,
     max_attempts: int,
+    selected_question_ids: list[int] | None = None,
+    table_unit_source: str = "latest",
+    row_hierarchy: bool = False,
     project_revision: str | None = None,
     shard_count: int = 1,
     shard_index: int = 0,
 ) -> dict[str, object]:
     schema_bytes = json.dumps(PROGRAM_JSON_SCHEMA, sort_keys=True).encode()
+    question_ids_bytes = json.dumps(selected_question_ids or [], separators=(",", ":")).encode()
     return {
         "retrieval_sha256": _sha256(retrieval),
         "manifest_sha256": _sha256(manifest),
         "program_schema_sha256": hashlib.sha256(schema_bytes).hexdigest(),
+        "semantic_convention_version": SEMANTIC_CONVENTION_VERSION,
+        "table_unit_inference_version": TABLE_UNIT_INFERENCE_VERSION,
+        "question_count": len(selected_question_ids or []),
+        "question_ids_sha256": hashlib.sha256(question_ids_bytes).hexdigest(),
+        "table_unit_source": table_unit_source,
         "model": model,
         "model_revision": model_revision,
         "candidate_tables": candidate_tables,
@@ -236,6 +250,7 @@ def _fingerprint(
         "memory_limit_mb": memory_limit_mb,
         "thinking_mode": thinking_mode,
         "max_attempts": max_attempts,
+        "row_hierarchy": row_hierarchy,
         "project_revision": project_revision,
         "shard_count": shard_count,
         "shard_index": shard_index,
@@ -271,6 +286,17 @@ def main() -> None:
         type=int,
         default=10,
         help="Minimum schemas per question; route coverage can increase this value",
+    )
+    parser.add_argument(
+        "--row-hierarchy",
+        action="store_true",
+        help="Show conservative accounting parent paths in row labels (experimental ablation)",
+    )
+    parser.add_argument(
+        "--table-unit-source",
+        choices=("latest", "manifest"),
+        default="latest",
+        help="Use latest parser units or frozen manifest units for a controlled ablation",
     )
     parser.add_argument(
         "--max-tokens",
@@ -330,10 +356,15 @@ def main() -> None:
     if args.shard_count <= 0 or not 0 <= args.shard_index < args.shard_count:
         parser.error("--shard-index must be in [0, --shard-count)")
 
-    rows = _select_rows(
+    selected_rows = _select_rows(
         _load_jsonl(args.retrieval),
         question_ids=args.question_ids,
         limit=args.limit,
+    )
+    rows = _select_rows(
+        selected_rows,
+        question_ids=None,
+        limit=None,
         shard_count=args.shard_count,
         shard_index=args.shard_index,
     )
@@ -361,6 +392,9 @@ def main() -> None:
         memory_limit_mb=args.memory_limit_mb,
         thinking_mode=args.thinking_mode,
         max_attempts=args.max_attempts,
+        selected_question_ids=[_as_int(row["id"], field="id") for row in selected_rows],
+        table_unit_source=args.table_unit_source,
+        row_hierarchy=args.row_hierarchy,
         project_revision=args.project_revision,
         shard_count=args.shard_count,
         shard_index=args.shard_index,
@@ -435,7 +469,7 @@ def main() -> None:
             for table_ref in _as_str_list(row["fused"], field="fused"):
                 if len(schemas) >= candidate_limit:
                     break
-                record, table = store.load(str(table_ref))
+                record, table = store.load(str(table_ref), unit_source=args.table_unit_source)
                 frame = parsed_table_to_long_frame(record, table)
                 numeric_cells = numeric_cells_of(frame)
                 # About one retrieved table in sixteen parses to no number at all, and a
@@ -467,6 +501,7 @@ def main() -> None:
                 target_divisor=float(spec["target_divisor"]),
                 required_tickers=required_tickers,
                 required_years=required_years,
+                include_row_hierarchy=args.row_hierarchy,
             )
             successful: (
                 tuple[dict[str, object], list[str], Dimension, str, float, list[str]] | None
@@ -543,6 +578,11 @@ def main() -> None:
                         memory_limit_mb=args.memory_limit_mb,
                     )
                     validate_answer_plausibility(answer, expression)
+                    query, answer, semantic_adjusted = normalize_absolute_difference(
+                        question=str(row["question"]),
+                        pandas_query=query,
+                        answer=answer,
+                    )
                     selected_refs = [table_refs[variable] for variable in selected]
                     attempt_latency = round(time.monotonic() - attempt_started, 2)
                     successful = (
@@ -596,6 +636,7 @@ def main() -> None:
                 "cells_read": len(cells_in_program(expression)),
                 "latency_seconds": attempt_latency,
                 "completion_tokens": completion_tokens,
+                "semantic_adjusted": semantic_adjusted,
             }
             completed_checkpoint.write(
                 {
@@ -630,6 +671,11 @@ def main() -> None:
             )
             if fallback is not None:
                 query, selected, answer = fallback
+                query, answer, semantic_adjusted = normalize_absolute_difference(
+                    question=str(row["question"]),
+                    pandas_query=query,
+                    answer=answer,
+                )
                 selected_refs = [table_refs[variable] for variable in selected]
                 completed_checkpoint.write(
                     {
@@ -656,6 +702,7 @@ def main() -> None:
                             "compiled_pandas_query": query,
                             "generation_attempts": len(attempt_failures),
                             "failed_attempts": attempt_failures,
+                            "semantic_adjusted": semantic_adjusted,
                         },
                     }
                 )

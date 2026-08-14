@@ -44,14 +44,21 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
 
     assert "Qwen/Qwen3-14B-AWQ" in code
     assert "31c69efc29464b6bb0aee1398b5a7b50a99340c3" in code
+    assert "Qwen/Qwen3-8B-AWQ" in code
+    assert "4da05a8edb55c6046cce958586c33b61da07bb79" in code
+    assert 'os.environ["VIFINQA_MODEL_PROFILE"]' in code
+    assert 'os.environ["VIFINQA_EXPECTED_PROJECT_SHA"]' in code
+    assert "Final 14B-profile run requires written organiser confirmation." in code
     assert 'THINKING_MODE = os.environ.get("VIFINQA_THINKING_MODE"' in code
     assert "torch.cuda.device_count() >= requested_dp" in code
     assert "assert capability >= (" in code
     assert "select T4 x2" in code
-    assert '"pull", "--ff-only", "origin", "main"' in code
+    assert '"fetch", "--depth", "1", "origin", GIT_REF' in code
+    assert '"checkout", "--detach", "FETCH_HEAD"' in code
+    assert 'os.environ["VIFINQA_GIT_REF"]' in code
     assert 'if (PROJECT / ".git").exists()' in code
     assert "SMOKE ERRORS (full unresolved records)" in code
-    assert "generation_qwen3_14b_awq_smoke_{PROJECT_SHA[:12]}" in code
+    assert "generation_{MODEL_RUN_TAG}_smoke_{PROJECT_SHA[:12]}" in code
     assert "SMOKE_IDS = [1, 213, 399, 442, 473]" in code
     assert "WIDE GATE ERRORS (full unresolved records)" in code
     assert "def route_fan_out(" in code
@@ -64,6 +71,25 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     # say what the run scores or how long it takes.
     assert "random.Random(20260802).sample" in code
     assert "decode rate per request: about" in code
+    assert "scripts/72_benchmark_structured_decoding.py" in code
+    assert "structured_decoding_benchmark_{MODEL_RUN_TAG}_{PROJECT_SHA[:12]}.json" in code
+    assert '"--model-revision"' in code
+    assert '"--project-revision"' in code
+    assert '"model_total_parameters_billions": MODEL_TOTAL_PARAMS_B' in code
+    assert '"model_non_embedding_parameters_billions": MODEL_NON_EMBEDDING_PARAMS_B' in code
+    assert "vllm_kernel_diagnostic_{MODEL_RUN_TAG}_{PROJECT_SHA[:12]}.log" in code
+    assert "VIFINQA_RUN_SUBSET_200" in code
+    assert 'os.environ["VIFINQA_UNIT_VARIANTS"] = "manifest"' in code
+    assert 'os.environ["VIFINQA_TABLE_UNIT_SOURCE"] = "latest"' in code
+    assert "imported unit checkpoint:" in code
+    assert 'if set(unit_ablation) == {"manifest", "latest"}' in code
+    assert "configs/experiment_subset_200.json" in code
+    assert '("manifest", "latest")' in code
+    assert "--table-unit-source" in code
+    assert "comparison_manifest.json" in code
+    assert "scripts/54_compare_generation_variants.py" in code
+    assert "offline_comparison.json" in code
+    assert "subset_config_sha256" in code
     assert "1012 * per_question / 3600" in code
     # The sample has to shard exactly like the full run or its projection is fiction.
     assert "SHARDS = DP * int(os.environ.get(" in code
@@ -78,16 +104,17 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert 'os.environ["VIFINQA_QUESTION_LIMIT"]' in code
     assert 'common_cmd += ["--limit", QUESTION_LIMIT]' in code
     assert "partial run finished cleanly" in code
-    assert code.count("str(SHARDS)") == 2
+    assert code.count("str(SHARDS)") == 3
     # Decode measured 3.7 tokens/s with one sequence per replica; batching is the lever.
     # Qwen3-14B-AWQ leaves room for roughly two concurrent sequences on a T4, not four, so the
     # width became a knob rather than a constant. The pin that matters is the default.
     assert '"--max-num-seqs",\n        str(MAX_NUM_SEQS),' in code
     assert 'MAX_NUM_SEQS = int(os.environ.get("VIFINQA_MAX_NUM_SEQS", "2"))' in code
+    assert '"max_num_seqs": MAX_NUM_SEQS' in code
     assert "--default-chat-template-kwargs" in code
     assert "--thinking-mode" in code
-    # smoke, widest-route gate, representative sample, full run
-    assert code.count("--max-attempts") == 4
+    # smoke, widest-route gate, representative sample, unit ablation, full run
+    assert code.count("--max-attempts") == 5
     assert 'dense_config.get("model_revision") == DENSE_REVISION' in code
     assert "scripts/22_build_dense.py" not in code
     assert "BAAI/bge-reranker-v2-m3" in code
@@ -116,16 +143,26 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "The retrieval used by a final run must be recorded." in code
     assert '"--data-parallel-size"' in code
     assert '"--shard-count"' in code
-    # hybrid retrieval, reranking, smoke, widest-route gate, sample, full run
-    assert code.count('"--project-revision"') == 6
+    # hybrid retrieval, reranking, D1, smoke, widest-route, sample, unit ablation, full run
+    assert code.count('"--project-revision"') == 8
     assert '"scripts/51_merge_generation_shards.py"' in code
-    assert 'iter_input_paths("generation_qwen3_14b_awq_shards/shard_0/run_metadata.json")' in code
+    assert 'iter_input_paths(f"{GENERATION_NAME}_shards/shard_0/run_metadata.json")' in code
+    assert "expected_smoke_answers = {1: 208253.201298, 213: 6.15569834}" in code
+    assert "Smoke used a fallback answer" in code
+    assert 'SMOKE_GATE = SMOKE_GEN / "smoke_gate.json"' in code
+    assert '"projected_unit_branch_hours": projected_unit_branch_hours' in code
+    assert 'os.environ["VIFINQA_ALLOW_LONG_SUBSET"] = "0"' in code
+    assert "Smoke projects {projected_branch_hours:.2f}h for one branch" in code
     assert "VLLM_CONFIG" in code
     assert "cuda_driver_linker_environment" in code
     assert 'linker_name = linker_dir / "libcuda.so"' in code
     assert 'for variable in ("LIBRARY_PATH", "LD_LIBRARY_PATH")' in code
     assert "env=server_environment" in code
     assert "[-50_000:]" in code
+    assert '"scripts/45_finalize_submission.py"' in code
+    assert 'FINAL_SUBMISSION = GEN / "submission_z4_abs.json"' in code
+    assert '"submission_profile": "z4_abs_line"' in code
+    assert code.count('"--allow-partial-docs"') == 2
     assert "Qwen2.5" not in code
 
 
@@ -180,9 +217,11 @@ def test_resume_notebook_finishes_a_run_without_rebuilding_its_retrieval() -> No
     # The generation checkpoint is keyed to the retrieval's SHA-256 and to the commit that
     # wrote it, so both are taken from the checkpoint rather than recomputed or assumed.
     assert 'iter_input_paths("retrieval_reranked.jsonl")' in code
-    assert (
-        'PROJECT_SHA = json.loads(prior[0].read_text(encoding="utf-8"))["project_revision"]' in code
-    )
+    assert 'iter_input_paths("retrieval_hybrid.jsonl")' in code
+    assert 'sha256(path) == prior_metadata.get("retrieval_sha256")' in code
+    assert 'PROJECT_SHA = prior_metadata["project_revision"]' in code
+    assert 'TABLE_UNIT_SOURCE = str(prior_metadata.get("table_unit_source", "latest"))' in code
+    assert '"--table-unit-source",\n    TABLE_UNIT_SOURCE,' in code
     assert '"checkout", PROJECT_SHA' in code
     assert "assert checked_out == PROJECT_SHA" in code
 
@@ -197,6 +236,9 @@ def test_resume_notebook_finishes_a_run_without_rebuilding_its_retrieval() -> No
 
     assert "Qwen/Qwen3-14B-AWQ" in code
     assert "31c69efc29464b6bb0aee1398b5a7b50a99340c3" in code
+    assert "Qwen/Qwen3-8B-AWQ" in code
+    assert "4da05a8edb55c6046cce958586c33b61da07bb79" in code
+    assert "Attach exactly one supported generation checkpoint" in code
     assert '"--final-run"' in code
     # A session that stops at a cap must not package a submission that is not finished.
     assert 'os.environ["VIFINQA_QUESTION_LIMIT"]' in code
@@ -204,6 +246,9 @@ def test_resume_notebook_finishes_a_run_without_rebuilding_its_retrieval() -> No
     assert "skipping merge and packaging" in code
     # Fetching a bare SHA is a server permission, not a guarantee; a full clone has it.
     assert '"fetch", "origin", PROJECT_SHA], check=False' in code
+    assert '"scripts/45_finalize_submission.py"' in code
+    assert 'FINAL_SUBMISSION = GEN / "submission_z4_abs.json"' in code
+    assert code.count('"--allow-partial-docs"') == 2
     assert '"scripts/41_package_submission.py"' in code
 
 
@@ -216,6 +261,11 @@ def test_packaging_notebook_needs_no_accelerator_and_downloads_one_file() -> Non
     assert "vllm" not in code
     assert "requirements-gpu.txt" not in code
     assert 'str(PROJECT / "requirements.txt")' in code
+    assert "Qwen/Qwen3-14B-AWQ" in code
+    assert "Qwen/Qwen3-8B-AWQ" in code
+    assert "Attach exactly one supported finished checkpoint" in code
+    assert 'GENERATION_NAME = f"generation_{MODEL_PROFILE}"' in code
+    assert 'file_sha256(path) == prior_metadata.get("retrieval_sha256")' in code
 
     # It packages with the commit that produced the answers, not with whatever main is.
     assert '"checkout", PROJECT_SHA' in code
@@ -223,7 +273,10 @@ def test_packaging_notebook_needs_no_accelerator_and_downloads_one_file() -> Non
 
     assert '"scripts/52_restore_evidence_csv.py"' in code
     assert '"scripts/51_merge_generation_shards.py"' in code
+    assert '"scripts/45_finalize_submission.py"' in code
+    assert 'FINAL_SUBMISSION = GEN / "submission_z4_abs.json"' in code
     assert '"scripts/40_validate_submission.py"' in code
     assert '"scripts/41_package_submission.py"' in code
+    assert code.count('"--allow-partial-docs"') == 2
     assert "assert answers == 1012" in code
     assert "Download only this ZIP." in code

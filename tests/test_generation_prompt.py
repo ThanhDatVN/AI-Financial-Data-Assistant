@@ -144,3 +144,110 @@ def test_program_prompt_shows_the_section_that_separates_restatements() -> None:
     # Without the map the rows render exactly as before, so old callers are unaffected.
     rendered_rows = user.split("rows:\n", 1)[1].split("</table>", 1)[0]
     assert "-> values at" not in rendered_rows
+
+
+def test_program_prompt_propagates_only_explicit_accounting_hierarchy() -> None:
+    raw = RawTable(
+        1,
+        1,
+        1,
+        0,
+        (
+            "<table><tr><td>Chỉ tiêu</td><td>2024</td></tr>"
+            "<tr><td>A. TÀI SẢN NGẮN HẠN</td><td>10</td></tr>"
+            "<tr><td>I. Tiền và tương đương tiền</td><td>4</td></tr>"
+            "<tr><td>1. Tiền</td><td>3</td></tr>"
+            "<tr><td>- Tiền mặt</td><td>2</td></tr>"
+            "<tr><td>TỔNG CỘNG TÀI SẢN</td><td>10</td></tr></table>"
+        ),
+        ("Đơn vị: VND",),
+        None,
+    )
+    table = parse_table(raw)
+    record = ManifestRecord(
+        "DOC|table_1",
+        "DOC",
+        "AAA",
+        2024,
+        "consolidated",
+        1,
+        1,
+        1,
+        0,
+        None,
+        "VND",
+        1,
+        table.n_rows,
+        table.n_cols,
+        table.headers,
+        tuple(row[0] for row in table.rows),
+        "",
+        Path("report.txt").as_posix(),
+        "0" * 64,
+    )
+    frame = parsed_table_to_long_frame(record, table)
+
+    _, user = build_program_prompt(
+        "Tiền mặt năm 2024?",
+        [CandidateSchema("df1", record, table, numeric_cells_of(frame))],
+        target_unit="MILLION_VND",
+        target_divisor=1e6,
+        include_row_hierarchy=True,
+    )
+
+    assert (
+        "r3: - Tiền mặt [parents: A. TÀI SẢN NGẮN HẠN > "
+        "I. Tiền và tương đương tiền > 1. Tiền]" in user
+    )
+    assert "r4: TỔNG CỘNG TÀI SẢN [parents:" not in user
+
+
+def test_program_prompt_uses_repeated_colspan_label_as_bullet_parent() -> None:
+    raw = RawTable(
+        1,
+        1,
+        1,
+        0,
+        (
+            "<table><tr><td>Khoản mục</td><td>2024</td></tr>"
+            "<tr><td>Số dư</td><td>1</td></tr>"
+            "<tr><td>Đầu tư vào công ty liên kết</td>"
+            "<td>Đầu tư vào công ty liên kết</td></tr>"
+            "<tr><td>▪ Công ty A</td><td>10</td></tr></table>"
+        ),
+        ("Đơn vị: VND",),
+        None,
+    )
+    table = parse_table(raw)
+    record = ManifestRecord(
+        "DOC|table_1",
+        "DOC",
+        "AAA",
+        2024,
+        "consolidated",
+        1,
+        1,
+        1,
+        0,
+        None,
+        "VND",
+        1,
+        table.n_rows,
+        table.n_cols,
+        table.headers,
+        tuple(row[0] for row in table.rows),
+        "",
+        Path("report.txt").as_posix(),
+        "0" * 64,
+    )
+    frame = parsed_table_to_long_frame(record, table)
+
+    _, user = build_program_prompt(
+        "Giá trị đầu tư vào Công ty A?",
+        [CandidateSchema("df1", record, table, numeric_cells_of(frame))],
+        target_unit="MILLION_VND",
+        target_divisor=1e6,
+        include_row_hierarchy=True,
+    )
+
+    assert "r2: ▪ Công ty A [parents: Đầu tư vào công ty liên kết]" in user

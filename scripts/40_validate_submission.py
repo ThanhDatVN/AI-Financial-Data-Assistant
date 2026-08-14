@@ -22,6 +22,11 @@ def main() -> None:
     )
     parser.add_argument("--evidence-root", type=Path)
     parser.add_argument("--no-execute", action="store_true")
+    parser.add_argument(
+        "--allow-partial-docs",
+        action="store_true",
+        help="Allow the measured router-only citation profile used by z4.",
+    )
     parser.add_argument("--execution-timeout", type=float, default=10.0)
     args = parser.parse_args()
     predictions = validate_submission(
@@ -30,6 +35,7 @@ def main() -> None:
         evidence_root=args.evidence_root,
         execute=not args.no_execute,
         execution_timeout=args.execution_timeout,
+        allow_partial_docs=args.allow_partial_docs,
     )
     print(f"valid submission: {len(predictions)} questions")
 
