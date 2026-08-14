@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 import pandas as pd
@@ -33,12 +34,63 @@ def _numeric_columns(candidate: CandidateSchema, row_index: int) -> str:
     return "  -> values at " + ",".join(f"c{column}" for column in columns) if columns else ""
 
 
-def _render_candidate(candidate: CandidateSchema) -> str:
+_LETTERED_ROW_RE = re.compile(r"^\s*([A-ZĐ]+)\s*[.)]\s+", flags=re.IGNORECASE)
+_NUMBERED_ROW_RE = re.compile(r"^\s*\d+(?:\.\d+)*\s*[.)]\s+")
+_BULLETED_ROW_RE = re.compile(r"^\s*[-+•▪●○◦]\s+")
+
+
+def _row_level(label: str) -> int | None:
+    """Infer only explicit accounting-outline levels; ambiguous plain text stays flat."""
+    lettered = _LETTERED_ROW_RE.match(label)
+    if lettered:
+        token = lettered.group(1).upper()
+        # Vietnamese statements conventionally use A/B/... for top-level groups and
+        # I/II/III/... for the next level. Treat only common I/V/X combinations as Roman;
+        # a single C or D is much more likely a lettered group than 100 or 500.
+        return 1 if set(token) <= {"I", "V", "X"} else 0
+    if _NUMBERED_ROW_RE.match(label):
+        return 2
+    if _BULLETED_ROW_RE.match(label):
+        return 3
+    return None
+
+
+def _row_hierarchy_contexts(rows: tuple[tuple[str, ...], ...]) -> tuple[str, ...]:
+    """Render conservative ancestor paths without changing source row coordinates."""
+    ancestors: dict[int, str] = {}
+    contexts: list[str] = []
+    for row in rows:
+        label = row[0].strip() if row else ""
+        populated = [cell.strip() for cell in row if cell.strip()]
+        # OCR often represents a colspan section title by repeating the same text in every
+        # column. It is safe to treat that exact structural signal as the parent of bullets.
+        if label and len(populated) >= 2 and all(cell == label for cell in populated):
+            ancestors = {2: label}
+            contexts.append("")
+            continue
+        level = _row_level(label)
+        if level is None:
+            contexts.append("")
+            continue
+        parents = [ancestors[index] for index in sorted(ancestors) if index < level]
+        contexts.append(" [parents: " + " > ".join(parents) + "]" if parents else "")
+        ancestors = {index: value for index, value in ancestors.items() if index < level}
+        ancestors[level] = label
+    return tuple(contexts)
+
+
+def _render_candidate(candidate: CandidateSchema, *, include_row_hierarchy: bool) -> str:
     headers = "\n".join(
         f"  c{index}: {label}" for index, label in enumerate(candidate.table.headers)
     )
+    hierarchy_contexts = (
+        _row_hierarchy_contexts(candidate.table.rows)
+        if include_row_hierarchy
+        else ("",) * len(candidate.table.rows)
+    )
     rows = "\n".join(
-        f"  r{index}: {row[0] if row else ''}{_numeric_columns(candidate, index)}"
+        f"  r{index}: {row[0] if row else ''}{hierarchy_contexts[index]}"
+        f"{_numeric_columns(candidate, index)}"
         for index, row in enumerate(candidate.table.rows)
     )
     record = candidate.record
@@ -61,6 +113,7 @@ def build_program_prompt(
     target_divisor: float,
     required_tickers: list[str] | None = None,
     required_years: list[int] | None = None,
+    include_row_hierarchy: bool = False,
 ) -> tuple[str, str]:
     system = """You translate a Vietnamese financial question into a typed arithmetic IR tree.
 Each variable is a normalized long pandas DataFrame with columns row_index, column_index,
@@ -84,7 +137,10 @@ selected_variables must list exactly the variables your program reads, and nothi
 consulted. Omit value_column and dimension on a cell whose table declares a source unit; grounding
 fills both from that unit, and leaving them out keeps a wide cohort program short enough to finish.
 Return only JSON matching the supplied schema; never emit Python/Pandas code or source values."""
-    rendered = "\n\n".join(_render_candidate(candidate) for candidate in candidates)
+    rendered = "\n\n".join(
+        _render_candidate(candidate, include_row_hierarchy=include_row_hierarchy)
+        for candidate in candidates
+    )
     # A cohort question names its group in Vietnamese prose, and a program that answers for
     # one member of the group is rejected. The resolver already extracted the group, so state
     # it as a requirement rather than making the model recover it from the sentence.
@@ -99,13 +155,19 @@ Return only JSON matching the supplied schema; never emit Python/Pandas code or 
             "It must also cover every one of these report years: "
             f"{', '.join(str(year) for year in required_years)}.\n"
         )
+    hierarchy_note = (
+        " Explicit accounting outlines also show `parents:` to disambiguate repeated child "
+        "labels; parents are context, not extra rows."
+        if include_row_hierarchy
+        else ""
+    )
     user = (
         f"Question: {question}\n"
         f"target_unit={target_unit}; target_divisor={target_divisor}\n"
         f"{coverage}\n"
         f"Candidate schemas (labels only; no source values):\n{rendered}\n\n"
         "Rows list the coordinates that hold a number as `-> values at c...`; a cell node is "
-        "only valid at one of those coordinates.\n"
+        f"only valid at one of those coordinates.{hierarchy_note}\n"
         "Choose the minimum evidence variables needed and emit selected_variables plus program."
     )
     return system, user

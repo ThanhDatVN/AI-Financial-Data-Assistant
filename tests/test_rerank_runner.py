@@ -1,5 +1,13 @@
 from __future__ import annotations
 
+import pytest
+
+# The dense and rerank stacks need torch and sentence-transformers, which the local
+# environment deliberately does not install -- they are exercised on the Linux/GPU
+# runtime instead. Skipping keeps `pytest tests` runnable here; erroring on collection
+# made a clean checkout look broken.
+pytest.importorskip("sentence_transformers")
+
 import importlib
 import json
 import sys

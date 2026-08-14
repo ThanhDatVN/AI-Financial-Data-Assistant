@@ -28,6 +28,14 @@ line-length = 100
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "SIM"]
 
+[tool.ruff.lint.per-file-ignores]
+# These modules import the dense/rerank stacks, which live in the Linux/GPU requirements. The
+# `pytest.importorskip` guard has to run before those imports, so E402 is the intended shape
+# here rather than a lapse.
+"tests/test_dense_checkpoint.py" = ["E402"]
+"tests/test_rerank_runner.py" = ["E402"]
+"tests/test_reranker.py" = ["E402"]
+
 [tool.mypy]
 python_version = "3.12"
 strict = true
@@ -40,5 +48,9 @@ module = [
   "faiss", "faiss.*",
   "pandas", "pandas.*",
   "pyarrow", "pyarrow.*",
+  # Ship with the Linux/GPU requirements, so a CPU checkout has no stubs to find. faiss was
+  # already listed; these two were only absent because they happened to be installed locally.
+  "sentence_transformers", "sentence_transformers.*",
+  "torch", "torch.*",
 ]
 ignore_missing_imports = true
