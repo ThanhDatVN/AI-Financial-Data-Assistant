@@ -5,6 +5,7 @@ import re
 
 from vifinqa.parsing.models import RawTable
 from vifinqa.parsing.normalize import normalize_text
+from vifinqa.parsing.units import is_unit_declaration
 
 _PAGE_RE = re.compile(r"(?m)^=====\s*PAGE\s+(\d+)\s*=====\s*$", re.IGNORECASE)
 _TABLE_RE = re.compile(r"<table\b[^>]*>.*?</table\s*>", re.IGNORECASE | re.DOTALL)
@@ -57,12 +58,15 @@ def segment_tables(
     tables: list[RawTable] = []
     previous_table_end = 0
     current_numbered_section: str | None = None
+    current_unit_declaration: str | None = None
     for ordinal, match in enumerate(_TABLE_RE.finditer(text), start=first_table_id):
         between_tables = text[previous_table_end : match.start()]
         for raw_line in between_tables.splitlines():
             line = normalize_text(raw_line)
             if _SECTION_NUMBER_RE.match(line):
                 current_numbered_section = line
+            if is_unit_declaration(line):
+                current_unit_declaration = line
         page_index = bisect.bisect_right(page_offsets, match.start()) - 1
         page_no = int(page_matches[page_index].group(1)) if page_index >= 0 else None
         line_index = bisect.bisect_right(line_starts, match.start()) - 1
@@ -77,6 +81,9 @@ def segment_tables(
                 html=match.group(0),
                 context_before=context,
                 section_title=current_numbered_section or local_section,
+                # Unit declarations commonly appear once before a run of note tables. A
+                # previous table ends prose context but does not cancel this explicit default.
+                unit_declaration=current_unit_declaration,
             )
         )
         previous_table_end = match.end()

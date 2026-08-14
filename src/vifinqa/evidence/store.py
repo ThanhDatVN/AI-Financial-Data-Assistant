@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+from dataclasses import replace
 from pathlib import Path
 
 import pandas as pd
@@ -76,7 +77,9 @@ class TableStore:
             raise KeyError(f"Unknown table_ref values: {sorted(missing)}")
         return cls(data_root, records)
 
-    def load(self, table_ref: str) -> tuple[ManifestRecord, ParsedTable]:
+    def load(
+        self, table_ref: str, *, unit_source: str = "latest"
+    ) -> tuple[ManifestRecord, ParsedTable]:
         try:
             record = self.records[table_ref]
         except KeyError as exc:
@@ -91,7 +94,12 @@ class TableStore:
         digest = hashlib.sha256(raw.html.encode("utf-8")).hexdigest()
         if digest != record.html_sha256:
             raise ValueError(f"Source drift for {table_ref}: HTML hash differs from manifest")
-        return record, parse_table(raw)
+        parsed = parse_table(raw)
+        if unit_source == "manifest":
+            parsed = replace(parsed, unit=record.unit)
+        elif unit_source != "latest":
+            raise ValueError(f"Unknown table unit source: {unit_source}")
+        return record, parsed
 
     def export_csv(self, table_ref: str, output_path: Path) -> Path:
         record, table = self.load(table_ref)

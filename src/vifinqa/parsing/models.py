@@ -23,6 +23,7 @@ class RawTable:
     html: str
     context_before: tuple[str, ...]
     section_title: str | None
+    unit_declaration: str | None = None
 
 
 @dataclass(frozen=True, slots=True)

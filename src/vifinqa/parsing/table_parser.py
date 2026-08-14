@@ -7,7 +7,7 @@ from lxml import html as lxml_html
 from vifinqa.parsing.models import ParsedTable, RawTable
 from vifinqa.parsing.normalize import normalize_text
 from vifinqa.parsing.numbers import is_numeric_cell
-from vifinqa.parsing.units import detect_source_unit
+from vifinqa.parsing.units import detect_table_unit
 
 
 def _positive_int(raw: object, default: int = 1) -> int:
@@ -116,12 +116,15 @@ def parse_table(raw: RawTable, *, max_header_rows: int = 3) -> ParsedTable:
     header_rows = infer_header_rows(matrix, max_header_rows=max_header_rows)
     headers = combine_headers(matrix, header_rows)
     rows = matrix[header_rows:]
-    unit_context = (*raw.context_before, *headers)
     return ParsedTable(
         raw=raw,
         matrix=matrix,
         header_rows=header_rows,
         headers=headers,
         rows=rows,
-        unit=detect_source_unit(unit_context),
+        unit=detect_table_unit(
+            raw.context_before,
+            headers,
+            inherited_declaration=raw.unit_declaration,
+        ),
     )
