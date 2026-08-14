@@ -479,11 +479,15 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
                 for item in _items(raw_keys, field="keys")
             )
         )
+        # The compiler already reads a missing key list as "rank the members themselves" and
+        # ignores keys an operator cannot rank with. Rejecting those here undid that: a program
+        # never reached the compiler, so relaxing the rule there alone changed nothing. A key
+        # list whose length disagrees with the members is still a real contradiction.
         if operator in {"argmin", "argmax"}:
-            if keys is None or len(keys) != len(members):
+            if keys is not None and len(keys) != len(members):
                 raise ValueError("Ranked selection needs one key per member")
         elif keys is not None:
-            raise ValueError("Keys are only meaningful for argmin and argmax")
+            keys = None
         conditions = tuple(
             _condition_from_dict(item, member_count=len(members), depth=_depth + 1)
             for item in _conditions(node.get("conditions"))

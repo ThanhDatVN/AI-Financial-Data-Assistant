@@ -22,6 +22,7 @@ from vifinqa.programs.ir import (
     LiteralExpr,
     SelectExpr,
 )
+from vifinqa.programs.serde import expression_from_dict
 
 
 def test_compiled_ir_executes_against_long_evidence() -> None:
@@ -340,4 +341,32 @@ def test_panel_coverage_requires_entities_and_accepts_labeled_prior_year() -> No
             frames={"df1": frames["df1"]},
             required_tickers=["AAA", "BBB"],
             required_years=[2021],
+        )
+
+
+def test_keys_are_relaxed_where_the_model_output_is_parsed_not_only_where_it_compiles() -> None:
+    """The compiler's leniency is unreachable if the parser rejects the program first.
+
+    Relaxing the key rules in the compiler alone changed nothing in practice: `expression_from_dict`
+    raised on the same shapes, so a program carrying surplus keys never reached the compiler at all.
+    Question 473 kept failing on `Keys are only meaningful for argmin and argmax` after the compiler
+    was supposedly fixed, which is how this surfaced.
+    """
+    members = [
+        {"kind": "cell", "variable": f"df{index}", "row_index": 0, "column_index": 1}
+        for index in (1, 2, 3)
+    ]
+
+    ranked = expression_from_dict({"kind": "select", "operator": "argmax", "members": members})
+    assert ranked.keys is None
+    compile_expression(ranked)
+
+    surplus = expression_from_dict(
+        {"kind": "select", "operator": "sum", "members": members, "keys": members}
+    )
+    assert surplus.keys is None
+
+    with pytest.raises(ValueError, match="one key per member"):
+        expression_from_dict(
+            {"kind": "select", "operator": "argmax", "members": members, "keys": members[:2]}
         )

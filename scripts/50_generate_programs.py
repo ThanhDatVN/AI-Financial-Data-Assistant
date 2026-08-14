@@ -309,7 +309,14 @@ def main() -> None:
         type=int,
         # A cohort program over the widest route fan-out spends about 1,300 tokens on its
         # coordinates alone, so a 1,024 budget truncates exactly the hardest questions.
-        default=2048,
+        #
+        # 2,048 truncated them too. Questions 399 and 442 stopped at exactly 2,048 completion
+        # tokens on all three attempts and failed to parse mid-JSON every time -- an unterminated
+        # string, then a missing property name, then a missing value. With the Marlin kernel
+        # decoding at 22 tokens per second, 4,096 takes 186 seconds against a 360-second request
+        # timeout, and the longest prompt measured over thirty questions is 9,337 tokens, so
+        # prompt plus budget stays under the 16,384 context with room to spare.
+        default=4096,
     )
     parser.add_argument(
         "--max-attempts",
