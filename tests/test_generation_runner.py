@@ -328,3 +328,28 @@ def test_sharding_sends_a_question_to_the_same_shard_in_both_sessions() -> None:
     first_session = rows[:60]
     for question_id in (1, 17, 40, 60):
         assert shard_of(first_session, question_id) == shard_of(rows, question_id)
+
+
+def test_a_context_refusal_is_arithmetic_not_a_bad_program() -> None:
+    """A fixed token budget is wrong in both directions on the same run.
+
+    Question 213 carries a 12,289-token prompt, so asking for 4,096 output tokens puts the
+    request one token past the 16,384 context and the server refuses before the model writes
+    anything -- a question that had been answered correctly turned into a fallback. Question 442
+    truncates at the same 4,096 because its prompt is short enough to have afforded far more.
+    The refusal states both figures, so the budget can be corrected from it rather than guessed.
+    """
+    refusal = (
+        "Error code: 400 - {'error': {'message': \"This model's maximum context length is 16384 "
+        "tokens. However, you requested 4096 output tokens and your prompt contains at least "
+        "12289 input tokens, for a total of at least 16385 tokens. "
+        '(parameter=input_tokens, value=12289)"}}'
+    )
+    assert runner._budget_from_context_error(refusal) == 4094
+
+    # Anything else is a real bad request and must keep propagating.
+    assert runner._budget_from_context_error("Error code: 400 - malformed schema") is None
+
+    # A prompt that leaves no useful room is not worth retrying either.
+    crowded = "maximum context length is 16384 tokens ... (parameter=input_tokens, value=16300)"
+    assert runner._budget_from_context_error(crowded) is None

@@ -99,6 +99,27 @@ def _candidate_limit(row: dict[str, object], *, minimum: int) -> int:
     return max(minimum, max(1, len(tickers)) * max(1, len(years)))
 
 
+_CONTEXT_LIMIT_RE = re.compile(r"maximum context length is (\d+) tokens")
+_INPUT_TOKENS_RE = re.compile(r"value=(\d+)")
+
+
+def _budget_from_context_error(message: str, *, floor: int = 256) -> int | None:
+    """Read the server's own numbers off a context-length refusal.
+
+    A fixed token budget is wrong in both directions at once: question 213 carries a 12,289-token
+    prompt and a 4,096 budget puts the request one token over the 16,384 context, while question
+    442 truncates at 4,096 because its prompt is short enough to have afforded far more. The
+    refusal states the context limit and the exact prompt length, so the corrected budget can be
+    read straight off it rather than guessed.
+    """
+    limit = _CONTEXT_LIMIT_RE.search(message)
+    used = _INPUT_TOKENS_RE.search(message)
+    if not limit or not used:
+        return None
+    remaining = int(limit.group(1)) - int(used.group(1)) - 1
+    return remaining if remaining >= floor else None
+
+
 def _select_rows(
     rows: list[dict[str, object]],
     *,
@@ -525,6 +546,8 @@ def main() -> None:
             successful: (
                 tuple[dict[str, object], list[str], Dimension, str, float, list[str]] | None
             ) = None
+            # Shrinks once for this question if the server says the prompt leaves less room.
+            question_max_tokens = args.max_tokens
             for attempt in range(1, args.max_attempts + 1):
                 attempt_user = user
                 if attempt_failures:
@@ -536,6 +559,7 @@ def main() -> None:
                     )
                 attempt_started = time.monotonic()
                 completion_tokens: int | None = None
+                attempt_max_tokens = question_max_tokens
                 try:
                     extra_body: dict[str, object] = {"top_k": 20}
                     if args.thinking_mode == "disabled":
@@ -549,7 +573,7 @@ def main() -> None:
                         temperature=0.0 if attempt == 1 else 0.7,
                         top_p=1.0 if attempt == 1 else 0.8,
                         seed=SEED + attempt - 1,
-                        max_tokens=args.max_tokens,
+                        max_tokens=attempt_max_tokens,
                         response_format={
                             "type": "json_schema",
                             "json_schema": {
@@ -627,6 +651,15 @@ def main() -> None:
                         }
                     )
                     if isinstance(attempt_exc, BadRequestError):
+                        # A context-length refusal is arithmetic, not a bad program: the prompt
+                        # simply left less room than the configured budget asked for. Take the
+                        # server's own figures, shrink the budget for this question, and let the
+                        # loop try again rather than spending the question on a fallback.
+                        corrected = _budget_from_context_error(str(attempt_exc))
+                        if corrected is not None and corrected < question_max_tokens:
+                            question_max_tokens = corrected
+                            attempt_failures.pop()
+                            continue
                         raise
                     if attempt == args.max_attempts:
                         raise
