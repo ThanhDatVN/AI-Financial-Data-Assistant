@@ -145,6 +145,26 @@ class _TokenBudget:
         self.floor = floor
         self.margin = 64
         self.current = ceiling
+        # Set once this question has been observed decoding. Context is not the only ceiling:
+        # a 14B on a T4 decodes at roughly half the 8B's 22 tokens per second, so a budget the
+        # context affords can still cost more wall clock than the request timeout allows, and
+        # the reward for widening would be a timeout instead of a truncation.
+        self.affordable: int | None = None
+
+    def observe_rate(self, completion_tokens: int | None, elapsed: float, timeout: float) -> None:
+        """Bound the budget by what this model, on this hardware, can decode before the timeout.
+
+        Measured per question rather than assumed: the rate differs between the 8B and 14B
+        profiles and again between quantisation kernels, and every one of those numbers has
+        already been wrong once in this project.
+        """
+        if not completion_tokens or elapsed <= 0:
+            return
+        rate = completion_tokens / elapsed
+        # Four fifths of the timeout: prefill, validation and execution also take time, and a
+        # budget that fits exactly is a budget that occasionally does not.
+        self.affordable = max(self.floor, int(rate * timeout * 0.8))
+        self.current = min(self.current, self.affordable)
 
     def observe(self, prompt_tokens: int | None) -> None:
         """Take the exact prompt length from a response the server actually produced.
@@ -183,6 +203,8 @@ class _TokenBudget:
         if prompt_tokens is None:
             return False
         room = _room_for_output(self.context_limit, prompt_tokens, margin=self.margin)
+        if self.affordable is not None:
+            room = min(room, self.affordable)
         if room <= self.current:
             return False
         self.current = room
@@ -679,9 +701,15 @@ def main() -> None:
                     usage = getattr(response, "usage", None)
                     completion_tokens = getattr(usage, "completion_tokens", None)
                     prompt_tokens = getattr(usage, "prompt_tokens", None)
-                    # The exact prompt length, which no refusal ever states exactly. Every later
-                    # attempt on this question sizes itself from it.
+                    # The exact prompt length, which no refusal ever states exactly, and the
+                    # decode rate this model actually achieved. Every later attempt on this
+                    # question sizes itself from both.
                     budget.observe(prompt_tokens)
+                    budget.observe_rate(
+                        completion_tokens,
+                        time.monotonic() - attempt_started,
+                        args.request_timeout,
+                    )
                     choice = response.choices[0]
                     content = choice.message.content
                     if not content:

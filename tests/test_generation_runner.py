@@ -409,3 +409,36 @@ def test_a_truncated_program_is_unfinished_rather_than_wrong() -> None:
     assert widened.widen(6000)
     widened.observe(6000)
     assert widened.current == 16384 - 6000 - 64
+
+
+def test_the_budget_never_asks_for_more_than_the_timeout_can_decode() -> None:
+    """Context is not the only ceiling, and widening into the other one only buys a timeout.
+
+    The 8B decoded 4,096 tokens in 171 seconds against a 360-second request timeout. The 14B is
+    roughly half that rate, so a budget the 16,384 context happily affords can cost more wall
+    clock than the request is allowed to take. The rate is measured per question because it has
+    differed by 6.6x between quantisation kernels alone.
+    """
+    budget = runner._TokenBudget(6144, 16384)
+    # 4,096 tokens in 171 seconds is about 24/s; four fifths of 360 seconds buys about 6,900.
+    budget.observe_rate(4096, 171.0, 360.0)
+    assert budget.affordable is not None
+    assert 6500 < budget.affordable < 7200
+    assert budget.current == 6144  # the configured ceiling is still lower, so it stands
+
+    # A short prompt leaves 10k of context, but the clock does not, and widening must respect it.
+    assert budget.widen(6000)
+    assert budget.current == budget.affordable
+    assert budget.current < 16384 - 6000 - 64
+
+    # Half the rate halves the budget, and the ceiling that was safe for the 8B is not for a 14B.
+    slower = runner._TokenBudget(6144, 16384)
+    slower.observe_rate(4096, 342.0, 360.0)
+    assert slower.current < 4096
+
+    # Nothing to divide by is not a measurement.
+    unmeasured = runner._TokenBudget(6144, 16384)
+    unmeasured.observe_rate(None, 171.0, 360.0)
+    unmeasured.observe_rate(4096, 0.0, 360.0)
+    assert unmeasured.affordable is None
+    assert unmeasured.current == 6144
