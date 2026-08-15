@@ -252,6 +252,41 @@ def test_resume_notebook_finishes_a_run_without_rebuilding_its_retrieval() -> No
     assert '"scripts/41_package_submission.py"' in code
 
 
+def test_both_generation_notebooks_pass_every_flag_the_fingerprint_reads() -> None:
+    """The second notebook finishes what the first started, and a fingerprint mismatch refuses it.
+
+    Every generator flag in the fingerprint has to be passed by both, or the resume is rejected
+    for a setting nobody chose to change. `--max-tokens` was the one that got away: the first
+    notebook passed 4096 and the second left it to the script's default, so the checkpoint could
+    never be picked up. Comparing the two call sites catches the next one without naming it.
+    """
+    fingerprinted = {
+        "--model",
+        "--model-revision",
+        "--thinking-mode",
+        "--table-unit-source",
+        "--candidate-tables",
+        "--max-tokens",
+        "--context-limit",
+        "--max-attempts",
+        "--project-revision",
+    }
+    generation = _compiled_code(GENERATION_NOTEBOOK)
+    resume = _compiled_code(RESUME_NOTEBOOK)
+    missing = sorted(flag for flag in fingerprinted if f'"{flag}",' not in resume)
+    assert not missing, f"resume notebook never passes {missing}"
+    unpassed = sorted(flag for flag in fingerprinted if f'"{flag}",' not in generation)
+    assert not unpassed, f"generation notebook never passes {unpassed}"
+
+    # And the two budget figures must agree with the server they are sized against, which is why
+    # one constant feeds both rather than two literals that can drift apart.
+    assert "MAX_MODEL_LEN = 16384" in generation
+    assert '"max_model_len": MAX_MODEL_LEN,' in generation
+    assert '"--context-limit",\n    str(MAX_MODEL_LEN),' in generation
+    assert 'CONTEXT_LIMIT = str(prior_metadata["context_limit"])' in resume
+    assert 'MAX_TOKENS = str(prior_metadata["max_tokens"])' in resume
+
+
 def test_packaging_notebook_needs_no_accelerator_and_downloads_one_file() -> None:
     code = _compiled_code(PACKAGE_NOTEBOOK)
 

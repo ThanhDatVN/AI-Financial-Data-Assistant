@@ -25,6 +25,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         model_revision="abc123",
         candidate_tables=10,
         max_tokens=1024,
+        context_limit=16384,
         execution_timeout=10.0,
         request_timeout=180.0,
         memory_limit_mb=None,
@@ -38,6 +39,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         model_revision="def456",
         candidate_tables=10,
         max_tokens=1024,
+        context_limit=16384,
         execution_timeout=10.0,
         request_timeout=180.0,
         memory_limit_mb=None,
@@ -61,6 +63,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         model_revision="abc123",
         candidate_tables=10,
         max_tokens=1024,
+        context_limit=16384,
         execution_timeout=10.0,
         request_timeout=180.0,
         memory_limit_mb=None,
@@ -78,6 +81,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         model_revision="abc123",
         candidate_tables=10,
         max_tokens=1024,
+        context_limit=16384,
         execution_timeout=10.0,
         request_timeout=180.0,
         memory_limit_mb=None,
@@ -93,6 +97,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         model_revision="abc123",
         candidate_tables=10,
         max_tokens=1024,
+        context_limit=16384,
         execution_timeout=10.0,
         request_timeout=180.0,
         memory_limit_mb=None,
@@ -108,6 +113,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         model_revision="abc123",
         candidate_tables=10,
         max_tokens=1024,
+        context_limit=16384,
         execution_timeout=10.0,
         request_timeout=180.0,
         memory_limit_mb=None,
@@ -125,6 +131,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         model_revision="abc123",
         candidate_tables=10,
         max_tokens=1024,
+        context_limit=16384,
         execution_timeout=10.0,
         request_timeout=180.0,
         memory_limit_mb=None,
@@ -139,6 +146,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         model_revision="abc123",
         candidate_tables=10,
         max_tokens=1024,
+        context_limit=16384,
         execution_timeout=10.0,
         request_timeout=180.0,
         memory_limit_mb=None,
@@ -156,6 +164,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         model_revision="abc123",
         candidate_tables=10,
         max_tokens=1024,
+        context_limit=16384,
         execution_timeout=10.0,
         request_timeout=180.0,
         memory_limit_mb=None,
@@ -339,20 +348,64 @@ def test_a_context_refusal_is_arithmetic_not_a_bad_program() -> None:
     truncates at the same 4,096 because its prompt is short enough to have afforded far more.
     The refusal states both figures, so the budget can be corrected from it rather than guessed.
     """
-    refusal = (
-        "Error code: 400 - {'error': {'message': \"This model's maximum context length is 16384 "
-        "tokens. However, you requested 4096 output tokens and your prompt contains at least "
-        "12289 input tokens, for a total of at least 16385 tokens. "
-        '(parameter=input_tokens, value=12289)"}}'
-    )
-    # The margin is wider than the arithmetic demands because the server reports the prompt as
-    # "at least" that long. Shaving a single token landed one short and bought another refusal,
-    # three times over, until the question ran out of attempts without one completed call.
-    assert runner._budget_from_context_error(refusal) == 16384 - 12289 - 64
+
+    def refusal(requested: int, prompt: int, limit: int = 16384) -> str:
+        return (
+            f"Error code: 400 - {{'error': {{'message': \"This model's maximum context length is "
+            f"{limit} tokens. However, you requested {requested} output tokens and your prompt "
+            f"contains at least {prompt} input tokens, for a total of at least "
+            f'{requested + prompt} tokens. (parameter=input_tokens, value={prompt})"}}}}'
+        )
+
+    budget = runner._TokenBudget(4096, 16384)
+    assert budget.current == 4096
+    assert budget.shrink(refusal(4096, 12354))
+    # The refusal reports the prompt as "at least" that long, so shaving the arithmetic exactly
+    # landed one token short and bought a second refusal -- question 213 spent every correction
+    # measuring its own prompt and completed no call at all. Each refusal now doubles the cushion.
+    first = budget.current
+    assert first == 16384 - 12354 - 128
+    assert budget.shrink(refusal(first, 12419))
+    assert budget.current == 16384 - 12419 - 256
+    assert budget.current + 12419 < 16384
 
     # Anything else is a real bad request and must keep propagating.
-    assert runner._budget_from_context_error("Error code: 400 - malformed schema") is None
+    assert not runner._TokenBudget(4096, 16384).shrink("Error code: 400 - malformed schema")
 
     # A prompt that leaves no useful room is not worth retrying either.
     crowded = "maximum context length is 16384 tokens ... (parameter=input_tokens, value=16300)"
-    assert runner._budget_from_context_error(crowded) is None
+    assert not runner._TokenBudget(4096, 16384).shrink(crowded)
+
+
+def test_a_truncated_program_is_unfinished_rather_than_wrong() -> None:
+    """Question 442 stopped at exactly 4,096 tokens on all three attempts and never parsed.
+
+    Retrying an unfinished program at the budget that cut it off reproduces the same cut in the
+    same place. Its prompt was short enough to afford far more, and the only figure that says so
+    is `usage.prompt_tokens`, which a truncation -- unlike a refusal -- never reports on its own.
+    """
+    budget = runner._TokenBudget(4096, 16384)
+    assert budget.widen(6000)
+    assert budget.current == 16384 - 6000 - 64
+    assert budget.current > 4096
+
+    # A prompt that already fills the context has nothing left to give, and the caller must let
+    # the failure stand rather than loop.
+    assert not runner._TokenBudget(4096, 16384).widen(16000)
+    assert not runner._TokenBudget(4096, 16384).widen(None)
+
+    # Observing a long prompt lowers the budget before the server has to refuse it at all --
+    # question 213's failure mode, prevented rather than corrected.
+    measured = runner._TokenBudget(4096, 16384)
+    measured.observe(12419)
+    assert measured.current == 16384 - 12419 - 64
+    # Measuring only ever lowers. Were it allowed to raise, the response that follows a widened
+    # retry would clamp the budget back to the ceiling that truncated the program to begin with,
+    # and the retry would stop in the same place for the same reason.
+    measured.observe(1000)
+    assert measured.current == 16384 - 12419 - 64
+
+    widened = runner._TokenBudget(4096, 16384)
+    assert widened.widen(6000)
+    widened.observe(6000)
+    assert widened.current == 16384 - 6000 - 64

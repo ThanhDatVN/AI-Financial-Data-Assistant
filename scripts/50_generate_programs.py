@@ -103,24 +103,90 @@ _CONTEXT_LIMIT_RE = re.compile(r"maximum context length is (\d+) tokens")
 _INPUT_TOKENS_RE = re.compile(r"value=(\d+)")
 
 
-def _budget_from_context_error(message: str, *, floor: int = 256) -> int | None:
-    """Read the server's own numbers off a context-length refusal.
+class _Truncated(ValueError):
+    """The model ran out of budget mid-program.
 
-    A fixed token budget is wrong in both directions at once: question 213 carries a 12,289-token
-    prompt and a 4,096 budget puts the request one token over the 16,384 context, while question
-    442 truncates at 4,096 because its prompt is short enough to have afforded far more. The
-    refusal states the context limit and the exact prompt length, so the corrected budget can be
-    read straight off it rather than guessed.
+    Worth its own type because the remedy is the opposite of every other failure's: the program
+    is not wrong and must not be criticised back to the model, it is simply unfinished.
     """
+
+
+def _context_numbers(message: str) -> tuple[int, int] | None:
+    """Read the context limit and the prompt's length off a context-length refusal."""
     limit = _CONTEXT_LIMIT_RE.search(message)
     used = _INPUT_TOKENS_RE.search(message)
     if not limit or not used:
         return None
-    # The server reports the prompt as "at least" this many tokens, so shave a little more
-    # than the arithmetic demands: a correction that lands one token short only buys another
-    # refusal.
-    remaining = int(limit.group(1)) - int(used.group(1)) - 64
-    return remaining if remaining >= floor else None
+    return int(limit.group(1)), int(used.group(1))
+
+
+def _room_for_output(context_limit: int, prompt_tokens: int, *, margin: int) -> int:
+    """How many output tokens this prompt can still afford, with room to spare."""
+    return context_limit - prompt_tokens - margin
+
+
+class _TokenBudget:
+    """How many output tokens this one question gets, revised as the server reveals the truth.
+
+    A fixed budget is wrong in both directions at once. Question 213 carries a 12.4k-token prompt,
+    so a 4,096 budget puts the request past the 16,384 context and is refused outright. Question
+    442's prompt is short enough to have afforded far more, and all three of its attempts stopped
+    mid-string at exactly 4,096 tokens and failed to parse.
+
+    Guessing from the refusal alone did not converge: the refusal reports the prompt as "at least"
+    so many tokens, and question 213's corrected request came back one token over a second time.
+    So prefer the figure that is not a lower bound -- `usage.prompt_tokens` off any response the
+    server did return -- and widen the safety margin on each successive refusal.
+    """
+
+    def __init__(self, ceiling: int, context_limit: int, *, floor: int = 256) -> None:
+        self.ceiling = ceiling
+        self.context_limit = context_limit
+        self.floor = floor
+        self.margin = 64
+        self.current = ceiling
+
+    def observe(self, prompt_tokens: int | None) -> None:
+        """Take the exact prompt length from a response the server actually produced.
+
+        Only ever lowers. Raising here would undo `widen` on the very next attempt -- the
+        measurement would clamp the budget back to the ceiling that truncated the program in the
+        first place, and the retry would stop at the same place for the same reason.
+        """
+        if prompt_tokens is None:
+            return
+        room = _room_for_output(self.context_limit, prompt_tokens, margin=self.margin)
+        if room < self.current:
+            self.current = max(self.floor, room)
+
+    def shrink(self, message: str) -> bool:
+        """Fit the budget inside a context the server just refused. False when it cannot."""
+        numbers = _context_numbers(message)
+        if numbers is None:
+            return False
+        self.context_limit, prompt_tokens = numbers
+        # Each refusal doubles the cushion. One token short only buys another refusal, and a
+        # question that spends its attempts re-measuring its own prompt answers nothing.
+        self.margin *= 2
+        room = _room_for_output(self.context_limit, prompt_tokens, margin=self.margin)
+        if room < self.floor or room >= self.current:
+            return False
+        self.current = room
+        return True
+
+    def widen(self, prompt_tokens: int | None) -> bool:
+        """Give a truncated answer the rest of the context. False when none is left.
+
+        A program cut off mid-string is not a wrong program, it is an unfinished one, and
+        retrying it at the same budget produces the same cut in the same place three times over.
+        """
+        if prompt_tokens is None:
+            return False
+        room = _room_for_output(self.context_limit, prompt_tokens, margin=self.margin)
+        if room <= self.current:
+            return False
+        self.current = room
+        return True
 
 
 def _select_rows(
@@ -242,6 +308,7 @@ def _fingerprint(
     model_revision: str | None,
     candidate_tables: int,
     max_tokens: int,
+    context_limit: int,
     execution_timeout: float,
     request_timeout: float,
     memory_limit_mb: int | None,
@@ -269,6 +336,7 @@ def _fingerprint(
         "model_revision": model_revision,
         "candidate_tables": candidate_tables,
         "max_tokens": max_tokens,
+        "context_limit": context_limit,
         "execution_timeout": execution_timeout,
         "request_timeout": request_timeout,
         "memory_limit_mb": memory_limit_mb,
@@ -345,6 +413,15 @@ def main() -> None:
         # timeout, while 8,192 would cost 371 and time out on its own; the context correction
         # above trims this back for questions whose prompts leave less room.
         default=6144,
+    )
+    parser.add_argument(
+        "--context-limit",
+        type=int,
+        # The server's own --max-model-len. Knowing it up front is what lets a truncated program
+        # be retried with the rest of the context instead of being cut in the same place three
+        # times: a refusal states the limit, but a truncation states nothing at all.
+        default=16384,
+        help="The served model's context window, so a question can size its own budget",
     )
     parser.add_argument(
         "--max-attempts",
@@ -434,6 +511,7 @@ def main() -> None:
         model_revision=args.model_revision,
         candidate_tables=args.candidate_tables,
         max_tokens=args.max_tokens,
+        context_limit=args.context_limit,
         execution_timeout=args.execution_timeout,
         request_timeout=args.request_timeout,
         memory_limit_mb=args.memory_limit_mb,
@@ -553,12 +631,12 @@ def main() -> None:
             successful: (
                 tuple[dict[str, object], list[str], Dimension, str, float, list[str]] | None
             ) = None
-            # Shrinks for this question if the server says the prompt leaves less room. Trimming
-            # the budget is arithmetic about the prompt, not a failed attempt, so it gets its own
-            # small allowance: spending real attempts on it left question 213 with three
+            # Resized for this question whenever the server reveals what the prompt actually
+            # costs. Measuring is arithmetic about the prompt, not a failed attempt, so it gets
+            # its own small allowance: spending real attempts on it left question 213 with three
             # corrections, zero completions and nothing to show for the question.
-            question_max_tokens = args.max_tokens
-            budget_corrections_left = 2
+            budget = _TokenBudget(args.max_tokens, args.context_limit)
+            budget_corrections_left = 3
             attempt = 0
             while attempt < args.max_attempts:
                 attempt += 1
@@ -572,7 +650,8 @@ def main() -> None:
                     )
                 attempt_started = time.monotonic()
                 completion_tokens: int | None = None
-                attempt_max_tokens = question_max_tokens
+                prompt_tokens: int | None = None
+                attempt_max_tokens = budget.current
                 try:
                     extra_body: dict[str, object] = {"top_k": 20}
                     if args.thinking_mode == "disabled":
@@ -599,9 +678,19 @@ def main() -> None:
                     )
                     usage = getattr(response, "usage", None)
                     completion_tokens = getattr(usage, "completion_tokens", None)
-                    content = response.choices[0].message.content
+                    prompt_tokens = getattr(usage, "prompt_tokens", None)
+                    # The exact prompt length, which no refusal ever states exactly. Every later
+                    # attempt on this question sizes itself from it.
+                    budget.observe(prompt_tokens)
+                    choice = response.choices[0]
+                    content = choice.message.content
                     if not content:
                         raise ValueError("Model returned empty content")
+                    if choice.finish_reason == "length":
+                        raise _Truncated(
+                            f"Model stopped at the {attempt_max_tokens}-token budget with the "
+                            f"program unfinished"
+                        )
                     program = json.loads(content)
                     if not isinstance(program, dict):
                         raise ValueError("Model output must be an object")
@@ -663,24 +752,21 @@ def main() -> None:
                             "completion_tokens": completion_tokens,
                         }
                     )
+                    # Neither a refused request nor a truncated one is a wrong program: the first
+                    # asked for more room than the prompt left, the second was given less than
+                    # the answer needed. Both are arithmetic about the budget, so both get their
+                    # own small allowance and neither spends one of the question's attempts.
+                    resized = False
                     if isinstance(attempt_exc, BadRequestError):
-                        # A context-length refusal is arithmetic, not a bad program: the prompt
-                        # simply left less room than the configured budget asked for. Take the
-                        # server's own figures, shrink the budget for this question, and let the
-                        # loop try again rather than spending the question on a fallback.
-                        corrected = _budget_from_context_error(str(attempt_exc))
-                        if (
-                            corrected is not None
-                            and corrected < question_max_tokens
-                            and budget_corrections_left > 0
-                        ):
-                            question_max_tokens = corrected
-                            budget_corrections_left -= 1
-                            attempt_failures.pop()
-                            attempt -= 1
-                            continue
-                        raise
-                    if attempt == args.max_attempts:
+                        resized = budget.shrink(str(attempt_exc))
+                    elif isinstance(attempt_exc, _Truncated):
+                        resized = budget.widen(prompt_tokens)
+                    if resized and budget_corrections_left > 0:
+                        budget_corrections_left -= 1
+                        attempt_failures.pop()
+                        attempt -= 1
+                        continue
+                    if isinstance(attempt_exc, BadRequestError) or attempt == args.max_attempts:
                         raise
             if successful is None:
                 raise RuntimeError("Generation retry loop ended without a result")
