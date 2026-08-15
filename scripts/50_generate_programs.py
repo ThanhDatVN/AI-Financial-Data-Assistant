@@ -7,6 +7,7 @@ import os
 import re
 import sys
 import time
+from dataclasses import dataclass
 from pathlib import Path
 
 import httpx
@@ -34,6 +35,7 @@ from vifinqa.parsing.units import TABLE_UNIT_INFERENCE_VERSION  # noqa: E402
 from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression_isolated  # noqa: E402
 from vifinqa.programs.grounding import (  # noqa: E402
+    SoftGroundingError,
     cells_in_program,
     normalize_cells,
     prepare_program,
@@ -51,6 +53,7 @@ from vifinqa.programs.ir import (  # noqa: E402
 from vifinqa.programs.serde import (  # noqa: E402
     PROGRAM_GRAMMAR_SCHEMA,
     PROGRAM_JSON_SCHEMA,
+    RankMismatchError,
     expression_from_dict,
 )
 from vifinqa.submission.semantics import (  # noqa: E402
@@ -340,6 +343,86 @@ def _fallback_program(
     except Exception:  # noqa: BLE001 - a fallback must not raise
         return None
     return query, [variable], answer
+
+
+@dataclass(frozen=True, slots=True)
+class _Grounded:
+    """One model program turned into an answer, with everything the trace has to record."""
+
+    program: dict[str, object]
+    expression: ScalarExpr
+    selected: list[str]
+    dimension: Dimension
+    query: str
+    answer: float
+    selected_refs: list[str]
+    semantic_adjusted: bool
+
+
+def _ground(
+    program: dict[str, object],
+    *,
+    frames: dict[str, pd.DataFrame],
+    table_refs: dict[str, str],
+    question: str,
+    target_unit: str,
+    target_divisor: float,
+    required_tickers: list[str],
+    required_years: list[int],
+    execution_timeout: float,
+    memory_limit_mb: int | None,
+    lenient: bool = False,
+) -> _Grounded:
+    """Turn one model program into an answer, or raise saying why it cannot be one.
+
+    Called twice per question at most: once per attempt while the model can still be corrected,
+    and once more at the end in `lenient` mode over the best program that was refused only for
+    something we doubted rather than something that would not run.
+    """
+    expression = expression_from_dict(program.get("program"), lenient=lenient)
+    # The tree is the authority on which evidence is read. Taking the model's separate
+    # declaration at face value only loses questions to bookkeeping.
+    selected = sorted(referenced_variables(expression))
+    unknown = [variable for variable in selected if variable not in frames]
+    if unknown:
+        raise ValueError(f"Program references unknown variables: {unknown}")
+    selected_frames = {variable: frames[variable] for variable in selected}
+    prepared, inferred_dimension = prepare_program(
+        expression,
+        selected_variables=selected,
+        frames=selected_frames,
+        target_unit=target_unit,
+        target_divisor=target_divisor,
+        lenient=lenient,
+    )
+    validate_query_coverage(
+        expression,
+        frames=selected_frames,
+        required_tickers=required_tickers,
+        required_years=required_years,
+        lenient=lenient,
+    )
+    query = compile_expression(prepared)
+    answer = execute_expression_isolated(
+        query,
+        selected_frames,
+        timeout_seconds=execution_timeout,
+        memory_limit_mb=memory_limit_mb,
+    )
+    validate_answer_plausibility(answer, expression)
+    query, answer, semantic_adjusted = normalize_absolute_difference(
+        question=question, pandas_query=query, answer=answer
+    )
+    return _Grounded(
+        program=program,
+        expression=expression,
+        selected=selected,
+        dimension=inferred_dimension,
+        query=query,
+        answer=answer,
+        selected_refs=[table_refs[variable] for variable in selected],
+        semantic_adjusted=semantic_adjusted,
+    )
 
 
 def _sha256(path: Path) -> str:
@@ -639,6 +722,7 @@ def main() -> None:
         csv_paths: dict[str, str] = {}
         table_refs: dict[str, str] = {}
         fallback_divisor = 1.0
+        fallback_target_unit = "VND"
         fallback_years: list[int] = []
         try:
             candidate_limit = _candidate_limit(row, minimum=args.candidate_tables)
@@ -667,6 +751,7 @@ def main() -> None:
             if not isinstance(spec, dict):
                 raise ValueError("query_spec must be an object")
             fallback_divisor = float(spec["target_divisor"])
+            fallback_target_unit = str(spec["target_unit"])
             fallback_years = _as_int_list(spec.get("years"), field="query_spec.years")
             required_tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
             required_years = _as_int_list(spec.get("years"), field="query_spec.years")
@@ -679,13 +764,12 @@ def main() -> None:
                 required_years=required_years,
                 include_row_hierarchy=args.row_hierarchy,
             )
-            successful: (
-                tuple[dict[str, object], list[str], Dimension, str, float, list[str]] | None
-            ) = None
+            successful: _Grounded | None = None
             # Resized for this question whenever the server reveals what the prompt actually
             # costs. Measuring is arithmetic about the prompt, not a failed attempt, so it gets
             # its own small allowance: spending real attempts on it left question 213 with three
             # corrections, zero completions and nothing to show for the question.
+            soft_reject: dict[str, object] | None = None
             budget = _TokenBudget(args.max_tokens, args.context_limit)
             budget_corrections_left = 3
             attempt = 0
@@ -759,50 +843,20 @@ def main() -> None:
                     program = json.loads(content)
                     if not isinstance(program, dict):
                         raise ValueError("Model output must be an object")
-                    expression = expression_from_dict(program.get("program"))
-                    # The tree is the authority on which evidence is read. Taking the model's
-                    # separate declaration at face value only loses questions to bookkeeping.
-                    selected = sorted(referenced_variables(expression))
-                    unknown = [variable for variable in selected if variable not in frames]
-                    if unknown:
-                        raise ValueError(f"Program references unknown variables: {unknown}")
-                    selected_frames = {variable: frames[variable] for variable in selected}
-                    prepared, inferred_dimension = prepare_program(
-                        expression,
-                        selected_variables=selected,
-                        frames=selected_frames,
+                    grounded = _ground(
+                        program,
+                        frames=frames,
+                        table_refs=table_refs,
+                        question=str(row["question"]),
                         target_unit=str(spec["target_unit"]),
                         target_divisor=float(spec["target_divisor"]),
-                    )
-                    validate_query_coverage(
-                        expression,
-                        frames=selected_frames,
                         required_tickers=required_tickers,
                         required_years=required_years,
-                    )
-                    query = compile_expression(prepared)
-                    answer = execute_expression_isolated(
-                        query,
-                        selected_frames,
-                        timeout_seconds=args.execution_timeout,
+                        execution_timeout=args.execution_timeout,
                         memory_limit_mb=args.memory_limit_mb,
                     )
-                    validate_answer_plausibility(answer, expression)
-                    query, answer, semantic_adjusted = normalize_absolute_difference(
-                        question=str(row["question"]),
-                        pandas_query=query,
-                        answer=answer,
-                    )
-                    selected_refs = [table_refs[variable] for variable in selected]
                     attempt_latency = round(time.monotonic() - attempt_started, 2)
-                    successful = (
-                        program,
-                        selected,
-                        inferred_dimension,
-                        query,
-                        answer,
-                        selected_refs,
-                    )
+                    successful = grounded
                     break
                 except Exception as attempt_exc:  # noqa: BLE001 - bounded model retry
                     # Latency and emitted tokens are the only way to tell a question that is
@@ -831,11 +885,21 @@ def main() -> None:
                         attempt_failures.pop()
                         attempt -= 1
                         continue
+                    # Refused only for something we doubted, not something that will not run.
+                    # Keep it: if no later attempt does better, it still beats the fallback.
+                    if isinstance(attempt_exc, SoftGroundingError | RankMismatchError):
+                        soft_reject = program
                     if isinstance(attempt_exc, BadRequestError) or attempt == args.max_attempts:
                         raise
             if successful is None:
                 raise RuntimeError("Generation retry loop ended without a result")
-            program, selected, inferred_dimension, query, answer, selected_refs = successful
+            program = successful.program
+            expression = successful.expression
+            selected = successful.selected
+            inferred_dimension = successful.dimension
+            query, answer = successful.query, successful.answer
+            selected_refs = successful.selected_refs
+            semantic_adjusted = successful.semantic_adjusted
             prediction: dict[str, object] = {
                 "id": question_id,
                 "question": str(row["question"]),
@@ -885,11 +949,37 @@ def main() -> None:
             }
             unresolved_errors[question_id] = error_row
             _append_jsonl(error_attempts, error_row)
-            fallback = _fallback_program(
-                frames=frames,
-                target_divisor=fallback_divisor,
-                question=str(row["question"]),
-                years=fallback_years,
+            # Before reaching for a keyword-matched cell, take another look at any program that
+            # was refused only for something we doubted. The fallback meets none of those
+            # standards, so preferring it over the model's own reading has nothing to recommend
+            # it: 125 of the 534 fallbacks in the full run were refused exactly this way.
+            rescued = None
+            if soft_reject is not None:
+                try:
+                    rescued = _ground(
+                        soft_reject,
+                        frames=frames,
+                        table_refs=table_refs,
+                        question=str(row["question"]),
+                        target_unit=str(fallback_target_unit),
+                        target_divisor=fallback_divisor,
+                        required_tickers=[],
+                        required_years=[],
+                        execution_timeout=args.execution_timeout,
+                        memory_limit_mb=args.memory_limit_mb,
+                        lenient=True,
+                    )
+                except Exception:  # noqa: BLE001 - the fallback is still there
+                    rescued = None
+            fallback = (
+                (rescued.query, rescued.selected, rescued.answer)
+                if rescued is not None
+                else _fallback_program(
+                    frames=frames,
+                    target_divisor=fallback_divisor,
+                    question=str(row["question"]),
+                    years=fallback_years,
+                )
             )
             if fallback is not None:
                 query, selected, answer = fallback

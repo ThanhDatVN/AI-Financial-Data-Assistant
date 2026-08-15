@@ -9,6 +9,7 @@ from vifinqa.programs.compiler import MAX_QUERY_CHARS, compile_expression
 from vifinqa.programs.dimensions import infer_dimension
 from vifinqa.programs.executor import execute_expression, execute_expression_isolated
 from vifinqa.programs.grounding import (
+    SoftGroundingError,
     normalize_cells,
     prepare_program,
     validate_answer_plausibility,
@@ -24,7 +25,11 @@ from vifinqa.programs.ir import (
     LiteralExpr,
     SelectExpr,
 )
-from vifinqa.programs.serde import expression_from_dict, expression_to_dict
+from vifinqa.programs.serde import (
+    RankMismatchError,
+    expression_from_dict,
+    expression_to_dict,
+)
 
 
 def test_compiled_ir_executes_against_long_evidence() -> None:
@@ -289,6 +294,79 @@ def test_ranking_without_keys_ranks_the_members_themselves() -> None:
     # A key list that does not line up with the members is still a real contradiction.
     with pytest.raises(ValueError, match="one key per member"):
         compile_expression(SelectExpr("argmax", members, keys=members[:2]))
+
+
+def test_a_doubted_program_gives_way_only_when_nothing_better_is_left() -> None:
+    """125 of the 534 fallbacks in the full run were refused by a standard their replacement
+    never had to meet.
+
+    The fallback reads a keyword-matched cell out of the same undeclared tables, without a unit
+    check, a coverage check or a ranking. So refusing the model's program does not avoid the
+    risk it was refused for -- it keeps the risk and discards the reasoning. These checks stay
+    strict while the model can still be told to fix them, and give way at the end.
+    """
+    unlabelled = pd.DataFrame(
+        {
+            "row_index": [0],
+            "column_index": [1],
+            "ticker": ["AAA"],
+            "report_year": [2024],
+            "column_label": ["2024"],
+            "source_unit": ["UNKNOWN"],
+            "numeric_value": [5.0],
+            "base_value": [5.0],
+        }
+    )
+    claimed = CellExpr("df1", 0, 1, dimension="VND")
+    strict = {
+        "selected_variables": ["df1"],
+        "frames": {"df1": unlabelled},
+        "target_unit": "VND",
+        "target_divisor": 1.0,
+    }
+    with pytest.raises(SoftGroundingError, match="explicit source-unit lineage"):
+        prepare_program(claimed, **strict)  # type: ignore[arg-type]
+    prepared, dimension = prepare_program(claimed, **strict, lenient=True)  # type: ignore[arg-type]
+    assert dimension == "VND"
+    assert execute_expression(compile_expression(prepared), {"df1": unlabelled}) == 5.0
+
+    # A year the program never reads is a doubt about the program, not proof it will not run.
+    with pytest.raises(SoftGroundingError, match="required years"):
+        validate_query_coverage(
+            claimed, frames={"df1": unlabelled}, required_tickers=[], required_years=[2023]
+        )
+    validate_query_coverage(
+        claimed,
+        frames={"df1": unlabelled},
+        required_tickers=[],
+        required_years=[2023],
+        lenient=True,
+    )
+
+    # A key list that does not line up has a reading that runs: rank the members themselves,
+    # which is already what a missing key list means.
+    members = [
+        {"kind": "cell", "variable": f"df{index}", "row_index": 0, "column_index": 1}
+        for index in range(1, 4)
+    ]
+    ranked = {"kind": "select", "operator": "argmax", "members": members, "keys": members[:2]}
+    with pytest.raises(RankMismatchError, match="3 members but 2 keys"):
+        expression_from_dict(ranked)
+    relaxed = expression_from_dict(ranked, lenient=True)
+    assert isinstance(relaxed, SelectExpr)
+    assert relaxed.keys is None
+
+    # What must never give way: a program that cannot produce a number at all.
+    empty = unlabelled.assign(base_value=[None], numeric_value=[None])
+    with pytest.raises(ValueError, match="no numeric value"):
+        prepare_program(
+            CellExpr("df1", 0, 1),
+            selected_variables=["df1"],
+            frames={"df1": empty},
+            target_unit="VND",
+            target_divisor=1.0,
+            lenient=True,
+        )
 
 
 def test_program_round_trips_through_serde() -> None:

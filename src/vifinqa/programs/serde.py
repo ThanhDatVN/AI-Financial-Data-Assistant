@@ -30,6 +30,17 @@ DIMENSIONS: tuple[Dimension, ...] = (
     "DIMENSIONLESS",
     "UNKNOWN",
 )
+
+
+class RankMismatchError(ValueError):
+    """A ranked selection whose key list does not line up with its members.
+
+    Separate from the other refusals because it has a reading that runs: rank the members
+    themselves, which is already what a missing key list means. Worth telling the model about
+    while it can still answer, and not worth losing the question over once it cannot.
+    """
+
+
 _VARIABLE_RE = re.compile(r"^df[1-9][0-9]*$")
 # Grounding derives both from the cell's source unit, so a program need not state them.
 CELL_LINEAGE_FIELDS = frozenset({"value_column", "dimension"})
@@ -338,7 +349,9 @@ def _conditions(value: object) -> list[object]:
     return value
 
 
-def _condition_from_dict(raw: object, *, member_count: int, depth: int) -> Condition:
+def _condition_from_dict(
+    raw: object, *, member_count: int, depth: int, lenient: bool = False
+) -> Condition:
     node = _object(
         raw,
         required={"left", "comparator"},
@@ -346,7 +359,8 @@ def _condition_from_dict(raw: object, *, member_count: int, depth: int) -> Condi
         depth=depth,
     )
     left = tuple(
-        expression_from_dict(item, _depth=depth) for item in _items(node["left"], field="left")
+        expression_from_dict(item, lenient=lenient, _depth=depth)
+        for item in _items(node["left"], field="left")
     )
     if len(left) != member_count:
         # The message goes straight back to the model as retry feedback, so it has to say what
@@ -364,18 +378,26 @@ def _condition_from_dict(raw: object, *, member_count: int, depth: int) -> Condi
     right: ScalarExpr | tuple[ScalarExpr, ...]
     if per_member is not None:
         thresholds = tuple(
-            expression_from_dict(item, _depth=depth)
+            expression_from_dict(item, lenient=lenient, _depth=depth)
             for item in _items(per_member, field="right_per_member")
         )
         if len(thresholds) != member_count:
             raise ValueError("Per-member thresholds must align with the cohort members")
         right = thresholds
     else:
-        right = expression_from_dict(shared, _depth=depth)
+        right = expression_from_dict(shared, lenient=lenient, _depth=depth)
     return Condition(left, cast(Comparator, comparator), right)
 
 
-def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
+def expression_from_dict(raw: object, *, lenient: bool = False, _depth: int = 0) -> ScalarExpr:
+    """Read a program off the wire.
+
+    `lenient` is for the last attempt only. It reads a key list whose length disagrees with the
+    members as no key list at all -- the reading a missing one already gets, and the one thing
+    the model plainly did not mean is for the question to go unanswered. 31 questions in the
+    full run ended on this and were then handed to a keyword-matched single cell, which ranks
+    nothing at all.
+    """
     if not isinstance(raw, dict):
         raise TypeError("Program node must be an object")
     kind = raw.get("kind")
@@ -427,8 +449,8 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
         operator = _enum(node["operator"], {"+", "-", "*", "/"}, field="operator")
         return BinaryExpr(
             cast(Literal["+", "-", "*", "/"], operator),
-            expression_from_dict(node["left"], _depth=_depth + 1),
-            expression_from_dict(node["right"], _depth=_depth + 1),
+            expression_from_dict(node["left"], lenient=lenient, _depth=_depth + 1),
+            expression_from_dict(node["right"], lenient=lenient, _depth=_depth + 1),
         )
     if kind == "aggregate":
         node = _object(
@@ -440,7 +462,7 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
         return AggregateExpr(
             cast(Literal["sum", "mean", "min", "max"], operator),
             tuple(
-                expression_from_dict(item, _depth=_depth + 1)
+                expression_from_dict(item, lenient=lenient, _depth=_depth + 1)
                 for item in _items(node["operands"], field="operands")
             ),
         )
@@ -455,11 +477,11 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
         )
         return CountIfExpr(
             tuple(
-                expression_from_dict(item, _depth=_depth + 1)
+                expression_from_dict(item, lenient=lenient, _depth=_depth + 1)
                 for item in _items(node["operands"], field="operands")
             ),
             cast(Literal["<", "<=", ">", ">=", "==", "!="], comparator),
-            expression_from_dict(node["threshold"], _depth=_depth + 1),
+            expression_from_dict(node["threshold"], lenient=lenient, _depth=_depth + 1),
         )
     if kind == "select":
         node = _object(
@@ -474,7 +496,7 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
             field="operator",
         )
         members = tuple(
-            expression_from_dict(item, _depth=_depth + 1)
+            expression_from_dict(item, lenient=lenient, _depth=_depth + 1)
             for item in _items(node["members"], field="members")
         )
         raw_keys = node.get("keys")
@@ -482,7 +504,7 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
             None
             if raw_keys is None
             else tuple(
-                expression_from_dict(item, _depth=_depth + 1)
+                expression_from_dict(item, lenient=lenient, _depth=_depth + 1)
                 for item in _items(raw_keys, field="keys")
             )
         )
@@ -492,11 +514,16 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
         # list whose length disagrees with the members is still a real contradiction.
         if operator in {"argmin", "argmax"}:
             if keys is not None and len(keys) != len(members):
-                raise ValueError("Ranked selection needs one key per member")
+                if not lenient:
+                    raise RankMismatchError(
+                        f"Ranked selection needs one key per member: {len(members)} members "
+                        f"but {len(keys)} keys."
+                    )
+                keys = None
         elif keys is not None:
             keys = None
         conditions = tuple(
-            _condition_from_dict(item, member_count=len(members), depth=_depth + 1)
+            _condition_from_dict(item, member_count=len(members), depth=_depth + 1, lenient=lenient)
             for item in _conditions(node.get("conditions"))
         )
         if operator == "median" and conditions:
@@ -518,11 +545,11 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
         )
         mode = _enum(node["mode"], {"argmin", "argmax"}, field="mode")
         keys = tuple(
-            expression_from_dict(item, _depth=_depth + 1)
+            expression_from_dict(item, lenient=lenient, _depth=_depth + 1)
             for item in _items(node["keys"], field="keys")
         )
         values = tuple(
-            expression_from_dict(item, _depth=_depth + 1)
+            expression_from_dict(item, lenient=lenient, _depth=_depth + 1)
             for item in _items(node["values"], field="values")
         )
         if len(keys) != len(values):

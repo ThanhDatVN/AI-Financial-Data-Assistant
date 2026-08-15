@@ -21,6 +21,18 @@ from vifinqa.programs.ir import (
     SelectExpr,
 )
 
+
+class SoftGroundingError(ValueError):
+    """A program this layer doubts, rather than one it knows will not run.
+
+    The distinction decides where a question goes when the model runs out of attempts. A cell
+    with no value would crash and a cancelled sum answers zero, so those must stay refusals. But
+    a missing year or an undeclared unit only means the program disagrees with what we expected
+    of it, and the alternative -- a keyword-matched cell from the same tables -- meets none of
+    these standards either. Refusing is not the safe option there, only the tidier-looking one.
+    """
+
+
 _UNIT_DIMENSIONS: dict[str, Dimension] = {
     "VND": "VND",
     "THOUSAND_VND": "VND",
@@ -191,7 +203,9 @@ def normalize_cells(expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]) 
     raise TypeError(f"Unsupported expression: {type(expression).__name__}")
 
 
-def _validate_cells(expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]) -> None:
+def _validate_cells(
+    expression: ScalarExpr, frames: Mapping[str, pd.DataFrame], *, lenient: bool = False
+) -> None:
     for cell in _cells(expression):
         if cell.variable not in frames:
             raise ValueError(f"Program references unselected variable: {cell.variable}")
@@ -220,8 +234,20 @@ def _validate_cells(expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]) 
             raise ValueError("Scaled currency/share cells must use base_value")
         if actual_dimension == "PERCENT" and cell.value_column != "numeric_value":
             raise ValueError("Percentage cells must use numeric_value")
-        if actual_dimension == "UNKNOWN" and cell.dimension in {"VND", "USD", "SHARES"}:
-            raise ValueError("Currency/share dimension requires explicit source-unit lineage")
+        if (
+            not lenient
+            and actual_dimension == "UNKNOWN"
+            and cell.dimension in {"VND", "USD", "SHARES"}
+        ):
+            # 52 questions in the full run ended here, and every one of them was then answered
+            # by the fallback -- which reads a keyword-matched cell out of the same undeclared
+            # table, taking the identical scale risk with a worse choice of cell. Refusing the
+            # model's program does not avoid the risk, it only discards the reasoning. So the
+            # check stays strict while the model can still be told to fix it, and gives way on
+            # the last attempt rather than handing the question to a guess.
+            raise SoftGroundingError(
+                "Currency/share dimension requires explicit source-unit lineage"
+            )
         value = matches.iloc[0][cell.value_column]
         if pd.isna(value):
             # The retry loop only sees this message, so it has to say where the numbers are.
@@ -264,6 +290,7 @@ def validate_query_coverage(
     frames: Mapping[str, pd.DataFrame],
     required_tickers: list[str],
     required_years: list[int],
+    lenient: bool = False,
 ) -> None:
     covered_tickers: set[str] = set()
     cell_evidence: list[tuple[int, str]] = []
@@ -282,8 +309,8 @@ def validate_query_coverage(
         cell_evidence.append((int(row["report_year"]), ascii_words(str(row["column_label"]))))
 
     missing_tickers = sorted(set(required_tickers) - covered_tickers)
-    if missing_tickers:
-        raise ValueError(f"Program does not cover required tickers: {missing_tickers}")
+    if missing_tickers and not lenient:
+        raise SoftGroundingError(f"Program does not cover required tickers: {missing_tickers}")
 
     prior_markers = ("dau nam", "dau ky", "nam truoc", "ky truoc", "so dau")
     missing_years: list[int] = []
@@ -297,8 +324,8 @@ def validate_query_coverage(
             )
         if not covered:
             missing_years.append(year)
-    if missing_years:
-        raise ValueError(f"Program does not cover required years: {missing_years}")
+    if missing_years and not lenient:
+        raise SoftGroundingError(f"Program does not cover required years: {missing_years}")
 
 
 def prepare_program(
@@ -308,6 +335,7 @@ def prepare_program(
     frames: Mapping[str, pd.DataFrame],
     target_unit: str,
     target_divisor: float,
+    lenient: bool = False,
 ) -> tuple[ScalarExpr, Dimension]:
     if not selected_variables or len(selected_variables) != len(set(selected_variables)):
         raise ValueError("selected_variables must be non-empty and unique")
@@ -320,7 +348,7 @@ def prepare_program(
     if set(frames) != referenced:
         raise ValueError("Loaded frames must exactly match referenced variables")
     expression = normalize_cells(expression, frames)
-    _validate_cells(expression, frames)
+    _validate_cells(expression, frames, lenient=lenient)
     inferred = infer_dimension(expression)
     try:
         expected = TARGET_DIMENSIONS[target_unit]
