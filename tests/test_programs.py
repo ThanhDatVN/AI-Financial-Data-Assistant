@@ -289,6 +289,43 @@ def test_ranking_without_keys_ranks_the_members_themselves() -> None:
         compile_expression(SelectExpr("argmax", members, keys=members[:2]))
 
 
+def test_misaligned_conditions_report_both_counts_so_a_retry_can_fix_them() -> None:
+    """A retry is only worth an attempt if the error tells the model what to change.
+
+    Question 473 spent all three of its attempts on the wordless form of this message and came
+    back with the same mismatch every time. Both gates have to say it: serde rejects before the
+    compiler ever sees the program, so a message improved in one place alone is never read.
+    """
+    members = [
+        {"kind": "cell", "variable": f"df{index}", "row_index": 0, "column_index": 1}
+        for index in range(1, 5)
+    ]
+    node = {
+        "kind": "select",
+        "operator": "argmax",
+        "members": members,
+        "keys": members,
+        "conditions": [
+            {"left": members[:2], "comparator": ">", "right": {"kind": "literal", "value": 0}}
+        ],
+    }
+    with pytest.raises(ValueError, match=r"has 4 members but this condition lists 2 entries"):
+        expression_from_dict(node)
+
+    cells = tuple(CellExpr(f"df{index}", 0, 1) for index in range(1, 5))
+    program = SelectExpr("argmax", cells, conditions=(Condition(cells[:2], ">", LiteralExpr(0.0)),))
+    with pytest.raises(ValueError, match=r"has 4 members but this condition lists 2 entries"):
+        compile_expression(program)
+
+    per_member = SelectExpr(
+        "argmax",
+        cells,
+        conditions=(Condition(cells, ">", (LiteralExpr(0.0), LiteralExpr(1.0))),),
+    )
+    with pytest.raises(ValueError, match=r"4 members but 2 thresholds"):
+        compile_expression(per_member)
+
+
 def test_selection_refuses_an_empty_subset_rather_than_inventing_an_extreme() -> None:
     frames = _cohort([[10.0, 1.0], [20.0, 2.0]])
     impossible = Condition(

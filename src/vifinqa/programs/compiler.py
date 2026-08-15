@@ -76,10 +76,17 @@ def _compile_conditions(expression: SelectExpr, size: int, bindings: _Bindings) 
     per_member: list[list[str]] = [[] for _ in range(size)]
     for condition in expression.conditions:
         if len(condition.left) != size:
-            raise ValueError("Condition operands must align with the cohort members")
+            raise ValueError(
+                f"Condition operands must align with the cohort members: the select node has "
+                f"{size} members but this condition lists {len(condition.left)} entries in "
+                f"'left'. Give 'left' exactly {size} entries, one per member, in the same order."
+            )
         if isinstance(condition.right, tuple):
             if len(condition.right) != size:
-                raise ValueError("Per-member thresholds must align with the cohort members")
+                raise ValueError(
+                    f"Per-member thresholds must align with the cohort members: {size} members "
+                    f"but {len(condition.right)} thresholds in 'right_per_member'."
+                )
             thresholds = [_compile(item, bindings) for item in condition.right]
         else:
             thresholds = [bindings.bind(_compile(condition.right, bindings))] * size

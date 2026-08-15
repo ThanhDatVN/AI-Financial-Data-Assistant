@@ -349,7 +349,14 @@ def _condition_from_dict(raw: object, *, member_count: int, depth: int) -> Condi
         expression_from_dict(item, _depth=depth) for item in _items(node["left"], field="left")
     )
     if len(left) != member_count:
-        raise ValueError("Condition operands must align with the cohort members")
+        # The message goes straight back to the model as retry feedback, so it has to say what
+        # to change. Question 473 spent all three attempts on the wordless version of this and
+        # returned the same mismatch every time.
+        raise ValueError(
+            f"Condition operands must align with the cohort members: the select node has "
+            f"{member_count} members but this condition lists {len(left)} entries in 'left'. "
+            f"Give 'left' exactly {member_count} entries, one per member, in the same order."
+        )
     comparator = _enum(node["comparator"], {"<", "<=", ">", ">=", "==", "!="}, field="comparator")
     shared, per_member = node.get("right"), node.get("right_per_member")
     if (shared is None) == (per_member is None):
