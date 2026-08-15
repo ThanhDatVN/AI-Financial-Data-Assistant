@@ -411,6 +411,34 @@ def test_a_truncated_program_is_unfinished_rather_than_wrong() -> None:
     assert widened.current == 16384 - 6000 - 64
 
 
+def test_the_prompt_is_measured_rather_than_inferred_from_a_refusal() -> None:
+    """Two unrelated questions died asking 5,245 tokens of an 11,140-token prompt in a 16,384
+    context -- identical figures, which no reading of the correction arithmetic explained.
+
+    The prompt grows between attempts because each retry carries the previous failure's feedback,
+    so a budget derived from the refusal is already stale when it is used. Measuring the exact
+    messages before every attempt is the only version of this that cannot drift.
+    """
+    assert runner._tokenize_url("http://127.0.0.1:8000/v1") == "http://127.0.0.1:8000/tokenize"
+    assert runner._tokenize_url("http://127.0.0.1:8000/v1/") == "http://127.0.0.1:8000/tokenize"
+    assert runner._tokenize_url("http://host:9/") == "http://host:9/tokenize"
+
+    # A server without the route must not take the run down with it; the refusal path still
+    # catches the overflow, just one request later.
+    assert runner._measure_prompt("http://127.0.0.1:1/tokenize", "m", [], 1.0) == 0
+
+    # Feedback lengthens the prompt, and the budget has to follow it down rather than hold the
+    # figure it read before the feedback existed.
+    budget = runner._TokenBudget(6144, 16384)
+    budget.observe(11140)
+    first = budget.current
+    assert first == 16384 - 11140 - 64
+    budget.observe(11270)  # the same prompt plus a retry's feedback
+    assert budget.current == 16384 - 11270 - 64
+    assert budget.current < first
+    assert budget.current + 11270 < 16384
+
+
 def test_the_budget_never_asks_for_more_than_the_timeout_can_decode() -> None:
     """Context is not the only ceiling, and widening into the other one only buys a timeout.
 

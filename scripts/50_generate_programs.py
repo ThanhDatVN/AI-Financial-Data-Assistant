@@ -9,6 +9,7 @@ import sys
 import time
 from pathlib import Path
 
+import httpx
 import pandas as pd
 from openai import BadRequestError, OpenAI
 
@@ -123,6 +124,33 @@ def _context_numbers(message: str) -> tuple[int, int] | None:
 def _room_for_output(context_limit: int, prompt_tokens: int, *, margin: int) -> int:
     """How many output tokens this prompt can still afford, with room to spare."""
     return context_limit - prompt_tokens - margin
+
+
+def _tokenize_url(base_url: str) -> str:
+    """vLLM serves /tokenize beside the OpenAI-compatible routes, not inside them."""
+    return base_url.rstrip("/").removesuffix("/v1") + "/tokenize"
+
+
+def _measure_prompt(url: str, model: str, messages: list[dict[str, str]], timeout: float) -> int:
+    """Ask the server how long this prompt is, before spending a request finding out.
+
+    Recovering from a context refusal never converged. The refusal reports the prompt as "at
+    least" so many tokens, the corrected retry came back over the limit again, and questions 213
+    and 442 both died having asked 5,245 tokens of an 11,140-token prompt in a 16,384 context --
+    identical figures for two unrelated questions, which no reading of the arithmetic explained.
+
+    Guessing was the mistake. The tokenizer is right there, it costs a round trip with no decoding
+    behind it, and it answers exactly the question the retry loop was trying to infer. A server
+    without the route leaves this at zero and the refusal path still catches it.
+    """
+    try:
+        response = httpx.post(
+            url, json={"model": model, "messages": messages}, timeout=min(timeout, 30.0)
+        )
+        response.raise_for_status()
+        return int(response.json()["count"])
+    except Exception:  # noqa: BLE001 - measuring is an optimisation, not a requirement
+        return 0
 
 
 class _TokenBudget:
@@ -583,6 +611,7 @@ def main() -> None:
         if errors.exists()
         else {}
     )
+    tokenize_url = _tokenize_url(args.base_url)
     client = OpenAI(
         base_url=args.base_url,
         api_key=os.environ.get(args.api_key_env, "local-vllm"),
@@ -673,6 +702,17 @@ def main() -> None:
                 attempt_started = time.monotonic()
                 completion_tokens: int | None = None
                 prompt_tokens: int | None = None
+                messages = [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": attempt_user},
+                ]
+                # Measured per attempt rather than once per question: appending the previous
+                # failure's feedback lengthens the prompt, and that growth is exactly what made
+                # the correction arithmetic chase a number that had already moved.
+                budget.observe(
+                    _measure_prompt(tokenize_url, args.model, messages, args.request_timeout)
+                    or None
+                )
                 attempt_max_tokens = budget.current
                 try:
                     extra_body: dict[str, object] = {"top_k": 20}
@@ -680,10 +720,7 @@ def main() -> None:
                         extra_body["chat_template_kwargs"] = {"enable_thinking": False}
                     response = client.chat.completions.create(
                         model=args.model,
-                        messages=[
-                            {"role": "system", "content": system},
-                            {"role": "user", "content": attempt_user},
-                        ],
+                        messages=messages,
                         temperature=0.0 if attempt == 1 else 0.7,
                         top_p=1.0 if attempt == 1 else 0.8,
                         seed=SEED + attempt - 1,
