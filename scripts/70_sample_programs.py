@@ -42,8 +42,10 @@ from vifinqa.programs.ir import (  # noqa: E402
     ArgExtremumExpr,
     BinaryExpr,
     CellExpr,
+    Condition,
     LiteralExpr,
     ScalarExpr,
+    SelectExpr,
 )
 
 # The question asks for a unit, and the program has to land in it. These are the divisors seen
@@ -320,6 +322,45 @@ def _sample_extremum(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Dr
     return expression, "năm", str(anchor["row_label"]), str(anchor["column_label"])
 
 
+def _sample_conditional(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw | None:
+    """F6 -- the Hard tier: a condition decides which years count, then a second figure is read.
+
+    This is what the organisers call multi-hop dependent, and it is 21.3% of the paper: "among
+    the years revenue grew, the one with the highest asset turnover". A program that answers it
+    has to carry one member per year, one condition entry per year, and pick from the survivors --
+    which is exactly the shape the model keeps getting wrong, and exactly what the sampler could
+    not produce a single example of.
+    """
+    found = _shared_label_rows(frames, rng)
+    if found is None:
+        return None
+    _, rows = found
+    ordered = sorted(rows)
+    if len(ordered) < 3:
+        return None
+
+    def cell_of(name: str) -> CellExpr:
+        row = rows[name]
+        return CellExpr(
+            variable=str(row["variable"]),
+            row_index=int(row["row_index"]),
+            column_index=int(row["column_index"]),
+        )
+
+    members = tuple(cell_of(name) for name in ordered)
+    # The condition compares each year against a shared threshold, so it carries one entry per
+    # member -- the arity the model keeps breaking.
+    values = [float(rows[name]["base_value"]) for name in ordered]
+    threshold = sorted(values)[len(values) // 2]
+    if threshold == 0:
+        return None
+    condition = Condition(left=members, comparator=">", right=LiteralExpr(value=threshold))
+    mode: Literal["argmin", "argmax"] = "argmax" if rng.random() < 0.5 else "argmin"
+    expression = SelectExpr(operator=mode, members=members, conditions=(condition,), keys=members)
+    anchor = rows[ordered[-1]]
+    return expression, "đồng", str(anchor["row_label"]), str(anchor["column_label"])
+
+
 def _frames_for(
     store: TableStore, refs: list[str]
 ) -> tuple[dict[str, pd.DataFrame], list[ManifestRecord]] | None:
@@ -404,7 +445,17 @@ def main() -> None:
         parser.error("no usable tables after filtering")
 
     # Questions about one report far outnumber the rest, so single-table families dominate.
-    families = (("lookup", 0.46), ("ratio", 0.22), ("change", 0.18), ("extremum", 0.14))
+    # The organisers publish the real mix (docs/17): Easy 35.7%, Medium 23.2%, Intermediate
+    # 19.8%, Hard 21.3%. The previous weights were inferred from fan-out and had no Hard tier at
+    # all, so a fifth of the paper -- and the fifth every model scores worst on -- was missing
+    # from a set meant to stand in for it.
+    families = (
+        ("lookup", 0.357),  # Easy
+        ("ratio", 0.116),  # Medium, split with change
+        ("change", 0.116),  # Medium
+        ("extremum", 0.198),  # Intermediate
+        ("conditional", 0.213),  # Hard: multi-hop dependent
+    )
     by_document: dict[str, list[str]] = defaultdict(list)
     for ref, doc in zip(manifest["table_ref"], manifest["doc_id"], strict=True):
         by_document[doc].append(ref)
@@ -487,8 +538,10 @@ def main() -> None:
             drawn = _sample_ratio(frames["df1"], records[0], rng)
         elif family == "change":
             drawn = _sample_change(frames, rng)
-        else:
+        elif family == "extremum":
             drawn = _sample_extremum(frames, rng)
+        else:
+            drawn = _sample_conditional(frames, rng)
         if drawn is None:
             continue
         expression, unit_name, row_label, column_label = drawn
