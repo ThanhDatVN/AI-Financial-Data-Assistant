@@ -1008,7 +1008,11 @@ def main() -> None:
                         },
                         "trace": {
                             "id": question_id,
-                            "fallback": True,
+                            # A rescued program is the model's own reading, admitted after the
+                            # doubts gave way. Recording it as a fallback would count it with
+                            # the keyword guesses and hide whether the policy is doing anything.
+                            "fallback": rescued is None,
+                            "rescued": rescued is not None,
                             "fallback_reason": f"{type(exc).__name__}: {exc}"[:400],
                             "selected_variables": selected,
                             "compiled_pandas_query": query,
