@@ -116,20 +116,6 @@ def _expression_to_dict(expression: ScalarExpr) -> dict[str, object]:
     return payload
 
 
-def _section_key(title: str) -> str:
-    """Fold a section heading to something that survives a change of report year.
-
-    Notes are numbered, and the numbering moves: the same disclosure is "16 TIEN GUI VA VAY CAC
-    TCTD KHAC" one year and "18 ..." the next. Matching the raw heading across years therefore
-    almost always misses, which is what left the two multi-year families with no samples at all.
-    """
-    folded = _normalise(title)
-    parts = folded.split()
-    while parts and parts[0].isdigit():
-        parts.pop(0)
-    return " ".join(parts)
-
-
 def _is_askable(label: str) -> bool:
     """Can a question name this row on its own and mean exactly one figure?"""
     stripped = label.strip()
@@ -271,6 +257,24 @@ def _shared_label_rows(
     return chosen, by_label[chosen]
 
 
+def _shared_label_pairs(
+    frames: dict[str, pd.DataFrame], rng: random.Random
+) -> tuple[dict[str, pd.Series], dict[str, pd.Series]] | None:
+    """Two different line items that every year reports, for a filter and a separate answer."""
+    by_label: dict[str, dict[str, pd.Series]] = defaultdict(dict)
+    for variable, frame in frames.items():
+        year = int(frame["report_year"].iloc[0]) if not frame.empty else None
+        for _, row in _numeric_cells(frame, report_year=year).iterrows():
+            key = _normalise(str(row["row_label"]))
+            if key and variable not in by_label[key]:
+                by_label[key][variable] = row
+    shared = [key for key, found in by_label.items() if len(found) == len(frames)]
+    if len(shared) < 2:
+        return None
+    first, second = rng.sample(shared, 2)
+    return by_label[first], by_label[second]
+
+
 def _sample_change(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw | None:
     """F3 -- percentage change of one line item between two report years."""
     found = _shared_label_rows(frames, rng)
@@ -323,23 +327,24 @@ def _sample_extremum(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Dr
 
 
 def _sample_conditional(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw | None:
-    """F6 -- the Hard tier: a condition decides which years count, then a second figure is read.
+    """F6 -- the Hard tier: one line item decides which years count, another supplies the answer.
 
     This is what the organisers call multi-hop dependent, and it is 21.3% of the paper: "among
-    the years revenue grew, the one with the highest asset turnover". A program that answers it
-    has to carry one member per year, one condition entry per year, and pick from the survivors --
-    which is exactly the shape the model keeps getting wrong, and exactly what the sampler could
-    not produce a single example of.
+    the years revenue grew, the one with the highest asset turnover". The dependency is the whole
+    point, so the filter and the answer must read *different* line items. Filtering and ranking
+    the same one is not multi-hop at all -- picking the largest of the members above their own
+    median returns the same value as picking the largest outright, and a set built that way would
+    look like it covered the tier while testing nothing.
     """
-    found = _shared_label_rows(frames, rng)
-    if found is None:
+    paired = _shared_label_pairs(frames, rng)
+    if paired is None:
         return None
-    _, rows = found
-    ordered = sorted(rows)
+    gate_rows, answer_rows = paired
+    ordered = sorted(gate_rows)
     if len(ordered) < 3:
         return None
 
-    def cell_of(name: str) -> CellExpr:
+    def cell_of(rows: dict[str, pd.Series], name: str) -> CellExpr:
         row = rows[name]
         return CellExpr(
             variable=str(row["variable"]),
@@ -347,18 +352,70 @@ def _sample_conditional(frames: dict[str, pd.DataFrame], rng: random.Random) -> 
             column_index=int(row["column_index"]),
         )
 
-    members = tuple(cell_of(name) for name in ordered)
-    # The condition compares each year against a shared threshold, so it carries one entry per
-    # member -- the arity the model keeps breaking.
-    values = [float(rows[name]["base_value"]) for name in ordered]
-    threshold = sorted(values)[len(values) // 2]
-    if threshold == 0:
+    gates = tuple(cell_of(gate_rows, name) for name in ordered)
+    answers = tuple(cell_of(answer_rows, name) for name in ordered)
+    gate_values = [float(gate_rows[name]["base_value"]) for name in ordered]
+    answer_values = [float(answer_rows[name]["base_value"]) for name in ordered]
+
+    # The median leaves only one year above it for spans of three or four, and a lone survivor
+    # makes the ranking vacuous -- so every sample that survived was a five-year one and two
+    # thirds of the draws were wasted. One rank lower always leaves at least two.
+    threshold = sorted(gate_values)[max(0, len(gate_values) // 2 - 1)]
+    survivors = [index for index, value in enumerate(gate_values) if value > threshold]
+    # One survivor makes the ranking vacuous, and the answer must actually depend on the filter,
+    # otherwise the sample is a plain extremum wearing a condition.
+    if len(survivors) < 2:
         return None
-    condition = Condition(left=members, comparator=">", right=LiteralExpr(value=threshold))
-    mode: Literal["argmin", "argmax"] = "argmax" if rng.random() < 0.5 else "argmin"
-    expression = SelectExpr(operator=mode, members=members, conditions=(condition,), keys=members)
-    anchor = rows[ordered[-1]]
-    return expression, "đồng", str(anchor["row_label"]), str(anchor["column_label"])
+    picked = max(survivors, key=lambda index: answer_values[index])
+    if picked == max(range(len(answer_values)), key=lambda index: answer_values[index]):
+        return None
+
+    condition = Condition(left=gates, comparator=">", right=LiteralExpr(value=threshold))
+    expression: ScalarExpr = SelectExpr(
+        operator="argmax", members=answers, conditions=(condition,), keys=answers
+    )
+    unit_name, divisor = TARGET_UNITS[rng.randrange(len(TARGET_UNITS))]
+    if divisor != 1.0:
+        expression = BinaryExpr(operator="/", left=expression, right=LiteralExpr(value=divisor))
+    anchor = answer_rows[ordered[-1]]
+    return expression, unit_name, str(anchor["row_label"]), str(anchor["column_label"])
+
+
+def _label_index(manifest: pd.DataFrame, key: tuple[str, str]) -> dict[int, dict[str, list[str]]]:
+    """Which tables in each year carry which line item, read straight off the manifest.
+
+    Matching multi-year draws by section heading throws most of them away: headings carry note
+    numbers that move between years and "(tiếp theo)" continuations, so 31 of 50 sampled draws
+    failed to assemble a year set at all. What the families actually need is a line item present
+    in every year, and the manifest already lists every table's row labels, so the years can be
+    matched on the thing being asked for instead of on the heading above it.
+    """
+    ticker, scope = key
+    subset = manifest[(manifest["ticker"] == ticker) & (manifest["scope"] == scope)]
+    index: dict[int, dict[str, list[str]]] = defaultdict(lambda: defaultdict(list))
+    for ref, year, labels in zip(
+        subset["table_ref"], subset["report_year"], subset["row_labels"], strict=True
+    ):
+        for label in labels:
+            folded = _normalise(str(label))
+            if folded and _is_askable(str(label)):
+                index[int(year)][folded].append(str(ref))
+    return index
+
+
+def _years_sharing_a_label(
+    index: dict[int, dict[str, list[str]]], years: list[int], rng: random.Random
+) -> list[str] | None:
+    """One table per year, all carrying the same line item."""
+    if not years or any(year not in index for year in years):
+        return None
+    common = set(index[years[0]])
+    for year in years[1:]:
+        common &= set(index[year])
+        if not common:
+            return None
+    label = sorted(common)[rng.randrange(len(common))]
+    return [index[year][label][rng.randrange(len(index[year][label]))] for year in years]
 
 
 def _frames_for(
@@ -471,10 +528,7 @@ def main() -> None:
     ):
         by_ticker_year[(ticker, scope)][int(year)].append(ref)
 
-    section_of = {
-        str(ref): _section_key(str(title or ""))
-        for ref, title in zip(manifest["table_ref"], manifest["section_title"], strict=True)
-    }
+    label_indexes: dict[tuple[str, str], dict[int, dict[str, list[str]]]] = {}
     documents = sorted(by_document)
     multi_year = [key for key, years in by_ticker_year.items() if len(years) >= 2]
     # One store for the whole run: rebuilding it per draw re-reads the manifest every time.
@@ -509,25 +563,13 @@ def main() -> None:
                 continue
             start = rng.randrange(len(years) - span + 1)
             chosen_years = years[start : start + span]
-            # Drawing a table at random from each year almost never lands on the same statement
-            # twice, so no line item is shared and the family yields nothing. Anchor on one year
-            # and match the others by section title, which is what names the statement.
-            anchor_year = chosen_years[0]
-            anchor_pool = by_ticker_year[key][anchor_year]
-            anchor = anchor_pool[rng.randrange(len(anchor_pool))]
-            section = section_of.get(anchor)
-            if not section:
+            # Years are matched on a line item they all carry, not on the heading above it.
+            if key not in label_indexes:
+                label_indexes[key] = _label_index(manifest, key)
+            found_refs = _years_sharing_a_label(label_indexes[key], chosen_years, rng)
+            if found_refs is None:
                 continue
-            refs = [anchor]
-            for year in chosen_years[1:]:
-                matched = [
-                    ref for ref in by_ticker_year[key][year] if section_of.get(ref) == section
-                ]
-                if not matched:
-                    break
-                refs.append(matched[rng.randrange(len(matched))])
-            if len(refs) != span:
-                continue
+            refs = found_refs
         loaded = _frames_for(store, refs)
         if loaded is None:
             continue
