@@ -24,7 +24,7 @@ import unicodedata
 from collections import defaultdict
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Literal
+from typing import Literal, cast
 
 import pandas as pd
 
@@ -37,25 +37,65 @@ from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame  # noq
 from vifinqa.indexing.manifest import ManifestRecord  # noqa: E402
 from vifinqa.programs.compiler import compile_expression  # noqa: E402
 from vifinqa.programs.executor import execute_expression  # noqa: E402
-from vifinqa.programs.grounding import validate_answer_plausibility  # noqa: E402
+from vifinqa.programs.grounding import (  # noqa: E402
+    TARGET_DIMENSIONS,
+    prepare_program,
+    referenced_variables,
+    validate_answer_plausibility,
+)
 from vifinqa.programs.ir import (  # noqa: E402
     ArgExtremumExpr,
     BinaryExpr,
     CellExpr,
     Condition,
+    Dimension,
     LiteralExpr,
     ScalarExpr,
     SelectExpr,
 )
+from vifinqa.programs.serde import expression_to_dict  # noqa: E402
 
-# The question asks for a unit, and the program has to land in it. These are the divisors seen
-# across the 1.012 real questions, with the phrasing the renderer will need later.
-TARGET_UNITS: tuple[tuple[str, float], ...] = (
-    ("đồng", 1.0),
-    ("triệu đồng", 1e6),
-    ("tỷ đồng", 1e9),
-    ("trăm tỷ đồng", 1e11),
+# The question asks for a unit, and the program has to land in it. Two names are needed, not one:
+# the renderer writes the Vietnamese phrase into the question, while grounding and the solver
+# prompt speak the enum production uses. Recording only the phrase left every sample unusable by
+# `prepare_program`, which knows BILLION_VND and has never heard of "tỷ đồng".
+TARGET_UNITS: tuple[tuple[str, str, float], ...] = (
+    ("đồng", "VND", 1.0),
+    ("triệu đồng", "MILLION_VND", 1e6),
+    ("tỷ đồng", "BILLION_VND", 1e9),
+    ("trăm tỷ đồng", "HUNDRED_BILLION_VND", 1e11),
 )
+PERCENT_UNIT = ("phần trăm", "PERCENT", 1.0)
+YEAR_UNIT = ("năm", "YEAR", 1.0)
+
+# A cell's source unit fixes what it measures, and grounding will overwrite any other claim with
+# it. Asking for a figure in "tỷ đồng" when the table counts shares is not a hard question, it is
+# an impossible one: `prepare_program` rejected every such draw, and the sampler was picking a
+# money unit for every cell regardless of what its table held.
+_UNITS_BY_DIMENSION: dict[str, tuple[tuple[str, str, float], ...]] = {
+    "VND": TARGET_UNITS,
+    "SHARES": (("cổ phiếu", "SHARES", 1.0), ("triệu cổ phiếu", "MILLION_SHARES", 1e6)),
+    "USD": (("triệu USD", "MILLION_USD", 1e6),),
+    "PERCENT": (PERCENT_UNIT,),
+}
+# What the store writes into `source_unit`, mapped the way grounding maps it.
+_SOURCE_DIMENSIONS = {
+    "VND": "VND",
+    "THOUSAND_VND": "VND",
+    "MILLION_VND": "VND",
+    "BILLION_VND": "VND",
+    "USD": "USD",
+    "MILLION_USD": "USD",
+    "PERCENT": "PERCENT",
+    "SHARES": "SHARES",
+}
+
+# A unit the grounding layer does not recognise fails every sample that draws it, and it fails at
+# filter time -- long after this run is over and on a machine with a GPU attached.
+for _dimension, _units in (*_UNITS_BY_DIMENSION.items(), ("YEAR", (YEAR_UNIT,))):
+    for _phrase, _enum, _divisor in _units:
+        if TARGET_DIMENSIONS.get(_enum) != _dimension:
+            raise SystemExit(f"target unit {_enum!r} does not measure {_dimension} to grounding")
 
 # A label that names no line item cannot anchor a question.
 MIN_LABEL_CHARS = 12
@@ -86,9 +126,14 @@ def _normalise(label: str) -> str:
     return " ".join("".join(c for c in folded if c.isalnum() or c.isspace()).split())
 
 
-# What one draw yields: the program, the unit its answer lands in, and the row and column it
-# anchors on. Labels travel as plain strings because that is all the renderer ever needs.
-type _Draw = tuple[ScalarExpr, str, str, str]
+# What one draw yields, in order: the program, the target unit's enum name, its Vietnamese
+# phrase, its divisor, and the row and column the question anchors on. Labels travel as plain
+# strings because that is all the renderer ever needs.
+#
+# The divisor rides alongside the tree rather than inside it. Production forbids the model from
+# writing target-unit scaling into a program -- the compiler applies it afterwards -- so a gold
+# program carrying its own division would teach the opposite of the convention it exists to show.
+type _Draw = tuple[ScalarExpr, str, str, float, str, str]
 
 
 @dataclass(frozen=True, slots=True)
@@ -105,15 +150,11 @@ class Sample:
     column_label: str
     section_title: str | None
     target_unit: str
+    target_unit_text: str
+    target_divisor: float
     answer: float
     pandas_query: str
     program: dict[str, object]
-
-
-def _expression_to_dict(expression: ScalarExpr) -> dict[str, object]:
-    payload = asdict(expression)
-    payload["node"] = type(expression).__name__
-    return payload
 
 
 def _is_askable(label: str) -> bool:
@@ -163,17 +204,36 @@ def _numeric_cells(frame: pd.DataFrame, *, report_year: int | None = None) -> pd
 
 
 def _execute(
-    expression: ScalarExpr, frames: dict[str, pd.DataFrame], unit_name: str
+    expression: ScalarExpr, frames: dict[str, pd.DataFrame], unit_name: str, divisor: float
 ) -> tuple[str, float] | None:
-    """Compile and run, returning None for anything the project's own gates reject."""
-    query = compile_expression(expression)
+    """Run the program down production's own path, or reject the sample.
+
+    Not a re-implementation of that path: `prepare_program` is the function the solver's output
+    goes through, and it is what settles each cell's unit, checks the program's dimension against
+    the unit asked for, and applies the divisor. Anything it refuses is a sample no solver could
+    ever be scored right on, so refusing it here is the whole point.
+
+    Running the two separately let three faults through unseen at once -- year literals with no
+    dimension, thresholds that did not measure what they were compared against, and money units
+    asked of tables counting shares. Taking the same path leaves nowhere for a fourth to hide:
+    a hand-written check of these samples went from 36% reproducible to 100%.
+    """
+    selected = sorted(referenced_variables(expression))
     try:
+        prepared, _ = prepare_program(
+            expression,
+            selected_variables=selected,
+            frames={name: frames[name] for name in selected},
+            target_unit=unit_name,
+            target_divisor=divisor,
+        )
+        query = compile_expression(prepared)
         answer = execute_expression(query, frames)
     except Exception:  # noqa: BLE001 - a sample that will not run is simply not a sample
         return None
     if not math.isfinite(answer):
         return None
-    if unit_name == "phần trăm" and abs(answer) > MAX_ABS_PERCENT:
+    if unit_name == "PERCENT" and abs(answer) > MAX_ABS_PERCENT:
         return None
     try:
         validate_answer_plausibility(answer, expression)
@@ -182,22 +242,41 @@ def _execute(
     return query, answer
 
 
+def _cell_dimension(cell: pd.Series) -> str | None:
+    """What this cell measures, read the way grounding reads it, or None when nothing says."""
+    return _SOURCE_DIMENSIONS.get(str(cell.get("source_unit") or ""))
+
+
+def _askable_unit(cell: pd.Series, rng: random.Random) -> tuple[str, str, float] | None:
+    """A target unit the cell can actually be reported in, or None if there is none.
+
+    Grounding settles a cell's dimension from its source unit and then insists the target agrees.
+    A cell with no declared unit keeps whatever the program claims, and a bare currency claim with
+    no lineage behind it is refused later -- so an unlabelled cell is not a lookup worth drawing.
+    """
+    dimension = _cell_dimension(cell)
+    if dimension is None:
+        return None
+    choices = _UNITS_BY_DIMENSION[dimension]
+    return choices[rng.randrange(len(choices))]
+
+
 def _sample_lookup(frame: pd.DataFrame, record: ManifestRecord, rng: random.Random) -> _Draw | None:
     """F1 -- read one cell and convert it into the unit the question will ask for."""
     usable = _numeric_cells(frame, report_year=int(record.report_year))
     if usable.empty:
         return None
     cell = usable.iloc[rng.randrange(len(usable))]
-    unit_name, divisor = TARGET_UNITS[rng.randrange(len(TARGET_UNITS))]
+    chosen = _askable_unit(cell, rng)
+    if chosen is None:
+        return None
+    unit_text, unit_name, divisor = chosen
     read = CellExpr(
         variable="df1",
         row_index=int(cell["row_index"]),
         column_index=int(cell["column_index"]),
     )
-    expression: ScalarExpr = read
-    if divisor != 1.0:
-        expression = BinaryExpr(operator="/", left=read, right=LiteralExpr(value=divisor))
-    return expression, unit_name, str(cell["row_label"]), str(cell["column_label"])
+    return read, unit_name, unit_text, divisor, str(cell["row_label"]), str(cell["column_label"])
 
 
 def _sample_ratio(frame: pd.DataFrame, record: ManifestRecord, rng: random.Random) -> _Draw | None:
@@ -217,6 +296,10 @@ def _sample_ratio(frame: pd.DataFrame, record: ManifestRecord, rng: random.Rando
         return None
     if _normalise(str(numerator["row_label"])) == _normalise(str(denominator["row_label"])):
         return None
+    # A quotient of two cells whose unit nothing declares infers UNKNOWN, and no percentage
+    # target accepts that. The ratio needs lineage on both halves, not just a number on each.
+    if _cell_dimension(numerator) is None or _cell_dimension(denominator) is None:
+        return None
     expression = BinaryExpr(
         operator="*",
         left=BinaryExpr(
@@ -234,7 +317,15 @@ def _sample_ratio(frame: pd.DataFrame, record: ManifestRecord, rng: random.Rando
         ),
         right=LiteralExpr(value=100.0),
     )
-    return expression, "phần trăm", str(numerator["row_label"]), str(numerator["column_label"])
+    text, name, divisor = PERCENT_UNIT
+    return (
+        expression,
+        name,
+        text,
+        divisor,
+        str(numerator["row_label"]),
+        str(numerator["column_label"]),
+    )
 
 
 def _shared_label_rows(
@@ -284,6 +375,10 @@ def _sample_change(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw
     earlier, later = (rows[name] for name in sorted(rows))
     if abs(float(earlier["base_value"])) < MIN_DENOMINATOR:
         return None
+    # Same reason as the ratio family: a change is a quotient, and an undeclared unit makes it
+    # incomparable with the percentage it is supposed to be reported as.
+    if _cell_dimension(earlier) is None or _cell_dimension(later) is None:
+        return None
     first = CellExpr(
         variable=str(earlier["variable"]),
         row_index=int(earlier["row_index"]),
@@ -301,7 +396,8 @@ def _sample_change(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw
         ),
         right=LiteralExpr(value=100.0),
     )
-    return expression, "phần trăm", str(later["row_label"]), str(later["column_label"])
+    text, name, divisor = PERCENT_UNIT
+    return expression, name, text, divisor, str(later["row_label"]), str(later["column_label"])
 
 
 def _sample_extremum(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw | None:
@@ -319,11 +415,14 @@ def _sample_extremum(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Dr
         )
         for name in ordered
     )
-    years = tuple(LiteralExpr(value=float(rows[name]["report_year"])) for name in ordered)
+    years = tuple(
+        LiteralExpr(value=float(rows[name]["report_year"]), dimension="YEAR") for name in ordered
+    )
     mode: Literal["argmin", "argmax"] = "argmax" if rng.random() < 0.5 else "argmin"
     expression = ArgExtremumExpr(mode=mode, keys=values, values=years)
     anchor = rows[ordered[-1]]
-    return expression, "năm", str(anchor["row_label"]), str(anchor["column_label"])
+    text, name, divisor = YEAR_UNIT
+    return expression, name, text, divisor, str(anchor["row_label"]), str(anchor["column_label"])
 
 
 def _sample_conditional(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw | None:
@@ -370,15 +469,34 @@ def _sample_conditional(frames: dict[str, pd.DataFrame], rng: random.Random) -> 
     if picked == max(range(len(answer_values)), key=lambda index: answer_values[index]):
         return None
 
-    condition = Condition(left=gates, comparator=">", right=LiteralExpr(value=threshold))
+    gate_dimension = _cell_dimension(gate_rows[ordered[0]])
+    if gate_dimension is None or any(
+        _cell_dimension(gate_rows[name]) != gate_dimension for name in ordered
+    ):
+        return None
+    condition = Condition(
+        left=gates,
+        comparator=">",
+        # A threshold compared against VND cells is itself in VND. Left dimensionless it made
+        # every Hard sample incomparable with its own filter.
+        right=LiteralExpr(value=threshold, dimension=cast(Dimension, gate_dimension)),
+    )
     expression: ScalarExpr = SelectExpr(
         operator="argmax", members=answers, conditions=(condition,), keys=answers
     )
-    unit_name, divisor = TARGET_UNITS[rng.randrange(len(TARGET_UNITS))]
-    if divisor != 1.0:
-        expression = BinaryExpr(operator="/", left=expression, right=LiteralExpr(value=divisor))
     anchor = answer_rows[ordered[-1]]
-    return expression, unit_name, str(anchor["row_label"]), str(anchor["column_label"])
+    chosen = _askable_unit(anchor, rng)
+    if chosen is None:
+        return None
+    unit_text, unit_name, divisor = chosen
+    return (
+        expression,
+        unit_name,
+        unit_text,
+        divisor,
+        str(anchor["row_label"]),
+        str(anchor["column_label"]),
+    )
 
 
 def _label_index(manifest: pd.DataFrame, key: tuple[str, str]) -> dict[int, dict[str, list[str]]]:
@@ -403,19 +521,40 @@ def _label_index(manifest: pd.DataFrame, key: tuple[str, str]) -> dict[int, dict
     return index
 
 
-def _years_sharing_a_label(
-    index: dict[int, dict[str, list[str]]], years: list[int], rng: random.Random
+def _years_sharing_labels(
+    index: dict[int, dict[str, list[str]]],
+    years: list[int],
+    rng: random.Random,
+    *,
+    minimum: int = 1,
 ) -> list[str] | None:
-    """One table per year, all carrying the same line item."""
+    """One table per year, all carrying the same `minimum` line items.
+
+    The Hard family needs two: one line item to filter on and a different one to answer with.
+    Assembling the year set on a single shared label and hoping a second turned up left it
+    hunting for a pair it had never asked for -- 78% of its draws died there, and each had
+    already paid to load and parse every table in the set.
+    """
     if not years or any(year not in index for year in years):
         return None
     common = set(index[years[0]])
     for year in years[1:]:
         common &= set(index[year])
-        if not common:
+        if len(common) < minimum:
             return None
-    label = sorted(common)[rng.randrange(len(common))]
-    return [index[year][label][rng.randrange(len(index[year][label]))] for year in years]
+    labels = rng.sample(sorted(common), minimum)
+    refs: list[str] = []
+    for year in years:
+        # One table per year has to carry all of them: the frames are what the sampler compares,
+        # and a label sitting in a table nobody loaded is not shared with anything.
+        carriers = set(index[year][labels[0]])
+        for label in labels[1:]:
+            carriers &= set(index[year][label])
+        if not carriers:
+            return None
+        ordered = sorted(carriers)
+        refs.append(ordered[rng.randrange(len(ordered))])
+    return refs
 
 
 def _frames_for(
@@ -566,7 +705,12 @@ def main() -> None:
             # Years are matched on a line item they all carry, not on the heading above it.
             if key not in label_indexes:
                 label_indexes[key] = _label_index(manifest, key)
-            found_refs = _years_sharing_a_label(label_indexes[key], chosen_years, rng)
+            found_refs = _years_sharing_labels(
+                label_indexes[key],
+                chosen_years,
+                rng,
+                minimum=2 if family == "conditional" else 1,
+            )
             if found_refs is None:
                 continue
             refs = found_refs
@@ -586,8 +730,8 @@ def main() -> None:
             drawn = _sample_conditional(frames, rng)
         if drawn is None:
             continue
-        expression, unit_name, row_label, column_label = drawn
-        executed = _execute(expression, frames, unit_name)
+        expression, unit_name, unit_text, divisor, row_label, column_label = drawn
+        executed = _execute(expression, frames, unit_name, divisor)
         if executed is None:
             continue
         query, answer = executed
@@ -611,9 +755,11 @@ def main() -> None:
                 column_label=column_label,
                 section_title=first.section_title,
                 target_unit=unit_name,
+                target_unit_text=unit_text,
+                target_divisor=divisor,
                 answer=answer,
                 pandas_query=query,
-                program=_expression_to_dict(expression),
+                program=expression_to_dict(expression),
             )
         )
 

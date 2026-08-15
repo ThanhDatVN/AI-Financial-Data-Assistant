@@ -116,7 +116,8 @@ def _prompt(sample: dict[str, object], names: dict[str, str], rng: random.Random
         f"Kỳ báo cáo: {period}",
         f"Khoản mục trong bảng: {sample['row_label']}",
         f"Nhãn cột: {sample['column_label']}",
-        f"Đơn vị câu trả lời phải dùng: {sample['target_unit']}",
+        # The phrase, not the enum: a question that asks for "BILLION_VND" is not Vietnamese.
+        f"Đơn vị câu trả lời phải dùng: {sample['target_unit_text']}",
         f"Loại câu hỏi: {_FAMILY_BRIEF.get(str(sample['family']), '')}",
     ]
     if section:

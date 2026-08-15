@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 import pandas as pd
 import pytest
 
@@ -22,7 +24,7 @@ from vifinqa.programs.ir import (
     LiteralExpr,
     SelectExpr,
 )
-from vifinqa.programs.serde import expression_from_dict
+from vifinqa.programs.serde import expression_from_dict, expression_to_dict
 
 
 def test_compiled_ir_executes_against_long_evidence() -> None:
@@ -287,6 +289,45 @@ def test_ranking_without_keys_ranks_the_members_themselves() -> None:
     # A key list that does not line up with the members is still a real contradiction.
     with pytest.raises(ValueError, match="one key per member"):
         compile_expression(SelectExpr("argmax", members, keys=members[:2]))
+
+
+def test_program_round_trips_through_serde() -> None:
+    """Every node the reader accepts, the writer must produce, and back again unchanged.
+
+    `dataclasses.asdict` was standing in for the writer and looks like it works: it returns a
+    nested dict of the right shape with the type of every child silently dropped. Only a
+    single-node program survived, which is why the synthetic sampler's four multi-node families
+    all wrote a `program` field nothing could read back.
+    """
+    cells = tuple(CellExpr(f"df{index}", index, 1, dimension="VND") for index in range(1, 4))
+    programs: list[object] = [
+        cells[0],
+        LiteralExpr(2021.0, "YEAR"),
+        BinaryExpr("*", BinaryExpr("/", cells[0], cells[1]), LiteralExpr(100.0)),
+        AggregateExpr("mean", cells),
+        CountIfExpr(cells, ">", LiteralExpr(0.0)),
+        ArgExtremumExpr("argmax", keys=cells, values=(LiteralExpr(2021.0, "YEAR"),) * 3),
+        SelectExpr("median", cells),
+        SelectExpr(
+            "argmax",
+            cells,
+            conditions=(Condition(cells, ">", LiteralExpr(0.0)),),
+            keys=cells,
+        ),
+        SelectExpr(
+            "sum",
+            cells,
+            conditions=(Condition(cells, "<", tuple(LiteralExpr(float(n)) for n in (1, 2, 3))),),
+        ),
+    ]
+    for program in programs:
+        payload = expression_to_dict(program)  # type: ignore[arg-type]
+        # Through JSON as well: this is written to a file and read back in another process.
+        restored = expression_from_dict(json.loads(json.dumps(payload)))
+        assert restored == program, payload
+
+    with pytest.raises(TypeError, match="Unsupported expression"):
+        expression_to_dict("not a program")  # type: ignore[arg-type]
 
 
 def test_misaligned_conditions_report_both_counts_so_a_retry_can_fix_them() -> None:

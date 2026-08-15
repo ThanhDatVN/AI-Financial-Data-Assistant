@@ -529,3 +529,80 @@ def expression_from_dict(raw: object, *, _depth: int = 0) -> ScalarExpr:
             raise ValueError("arg_extremum keys and values must have equal length")
         return ArgExtremumExpr(cast(Literal["argmin", "argmax"], mode), keys, values)
     raise ValueError(f"Unknown program node kind: {kind!r}")
+
+
+def expression_to_dict(expression: ScalarExpr) -> dict[str, object]:
+    """Write a program back out in the wire shape `expression_from_dict` reads.
+
+    `dataclasses.asdict` looks like it does this and does not: it recurses into children as plain
+    dicts and drops the type of every one of them, so only a single-node program survives the
+    trip. The synthetic sampler used it, and four of its five families wrote a `program` field
+    that could never be read back -- unnoticed, because nothing had tried to read one yet.
+
+    Kept beside the reader so the two stay in step; `test_program_round_trips_through_serde`
+    fails if either side learns a node the other does not.
+    """
+    if isinstance(expression, CellExpr):
+        return {
+            "kind": "cell",
+            "variable": expression.variable,
+            "row_index": expression.row_index,
+            "column_index": expression.column_index,
+            "value_column": expression.value_column,
+            "dimension": expression.dimension,
+        }
+    if isinstance(expression, LiteralExpr):
+        return {"kind": "literal", "value": expression.value, "dimension": expression.dimension}
+    if isinstance(expression, BinaryExpr):
+        return {
+            "kind": "binary",
+            "operator": expression.operator,
+            "left": expression_to_dict(expression.left),
+            "right": expression_to_dict(expression.right),
+        }
+    if isinstance(expression, AggregateExpr):
+        return {
+            "kind": "aggregate",
+            "operator": expression.operator,
+            "operands": [expression_to_dict(item) for item in expression.operands],
+        }
+    if isinstance(expression, CountIfExpr):
+        return {
+            "kind": "count_if",
+            "operands": [expression_to_dict(item) for item in expression.operands],
+            "comparator": expression.comparator,
+            "threshold": expression_to_dict(expression.threshold),
+        }
+    if isinstance(expression, SelectExpr):
+        node: dict[str, object] = {
+            "kind": "select",
+            "operator": expression.operator,
+            "members": [expression_to_dict(item) for item in expression.members],
+        }
+        if expression.conditions:
+            node["conditions"] = [
+                _condition_to_dict(condition) for condition in expression.conditions
+            ]
+        if expression.keys is not None:
+            node["keys"] = [expression_to_dict(item) for item in expression.keys]
+        return node
+    if isinstance(expression, ArgExtremumExpr):
+        return {
+            "kind": "arg_extremum",
+            "mode": expression.mode,
+            "keys": [expression_to_dict(item) for item in expression.keys],
+            "values": [expression_to_dict(item) for item in expression.values],
+        }
+    raise TypeError(f"Unsupported expression: {type(expression).__name__}")
+
+
+def _condition_to_dict(condition: Condition) -> dict[str, object]:
+    node: dict[str, object] = {
+        "left": [expression_to_dict(item) for item in condition.left],
+        "comparator": condition.comparator,
+    }
+    if isinstance(condition.right, tuple):
+        node["right_per_member"] = [expression_to_dict(item) for item in condition.right]
+    else:
+        node["right"] = expression_to_dict(condition.right)
+    return node
