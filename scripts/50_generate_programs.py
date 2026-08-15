@@ -104,10 +104,22 @@ def _candidate_limit(row: dict[str, object], *, minimum: int) -> int:
     return max(minimum, max(1, len(tickers)) * max(1, len(years)))
 
 
-# Below this a program has no room to be written, so the prompt is what has to give. A single
-# cell node costs about 60 tokens and the widest cohort in the release needs 18 of them plus
-# their conditions, which lands near 1,500 with the JSON envelope.
+# Below this a program has no room to be written, so the prompt is what has to give.
+#
+# A flat constant was wrong: question 442 was left 4,207 tokens, cleared the 1,536 bar and was
+# truncated on all three attempts anyway, because its cohort spans 18 ticker-year routes and a
+# cohort program writes each member three times over -- once in `members`, once in `keys`, once
+# in each condition's `left`. Measured against that run, one member costs about 150 tokens across
+# the three arrays, and the JSON envelope another 512.
 MIN_ANSWER_TOKENS = 1536
+TOKENS_PER_COHORT_MEMBER = 150
+PROGRAM_ENVELOPE_TOKENS = 512
+
+
+def _answer_tokens_needed(cohort_size: int) -> int:
+    """How much room this question's program needs, from the routes it has to cover."""
+    return max(MIN_ANSWER_TOKENS, PROGRAM_ENVELOPE_TOKENS + TOKENS_PER_COHORT_MEMBER * cohort_size)
+
 
 _CONTEXT_LIMIT_RE = re.compile(r"maximum context length is (\d+) tokens")
 _INPUT_TOKENS_RE = re.compile(r"value=(\d+)")
@@ -379,6 +391,7 @@ def _fit_prompt(
     context_limit: int,
     max_tokens: int,
     request_timeout: float,
+    cohort_size: int = 1,
     # Injected so the loop can be tested without a server; nothing else should pass it.
     _measure: Callable[[str, str, list[dict[str, str]], float], int] = _measure_prompt,
 ) -> tuple[str, str, list[CandidateSchema]]:
@@ -403,7 +416,7 @@ def _fit_prompt(
         )
 
     system, user = render(schemas)
-    needed = min(max_tokens, MIN_ANSWER_TOKENS)
+    needed = min(max_tokens, _answer_tokens_needed(cohort_size))
     while len(schemas) > 1:
         measured = _measure(
             tokenize_url,
@@ -823,6 +836,7 @@ def main() -> None:
                 required_tickers=required_tickers,
                 required_years=required_years,
                 row_hierarchy=args.row_hierarchy,
+                cohort_size=max(1, len(required_tickers) * len(required_years)),
                 tokenize_url=tokenize_url,
                 model=args.model,
                 context_limit=args.context_limit,

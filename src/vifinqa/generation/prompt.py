@@ -155,6 +155,21 @@ Return only JSON matching the supplied schema; never emit Python/Pandas code or 
             "It must also cover every one of these report years: "
             f"{', '.join(str(year) for year in required_years)}.\n"
         )
+    # The group's size follows from the routes, and the resolver already knows both halves. Left
+    # unsaid, question 442 built a 32-member cohort where the routing fans out to 18, then ran out
+    # of budget mid-program on all three attempts; question 399 built 32 against 10 and gave its
+    # conditions one operand instead of 32. Neither is a reasoning failure -- the model simply had
+    # no idea how many members it was supposed to end up with.
+    cohort_size = len(required_tickers or []) * len(required_years or [])
+    if cohort_size > 1:
+        coverage += (
+            f"This question routes to {len(required_tickers or [])} tickers across "
+            f"{len(required_years or [])} report years, so a select node here has "
+            f"{cohort_size} members: one per ticker-year. Every condition's `left` must list "
+            f"exactly those same {cohort_size} entries in the same order, and so must `keys`. "
+            "Do not enumerate more members than routes; a longer cohort costs the budget the "
+            "program needs to finish.\n"
+        )
     hierarchy_note = (
         " Explicit accounting outlines also show `parents:` to disambiguate repeated child "
         "labels; parents are context, not extra rows."
