@@ -116,7 +116,10 @@ def _budget_from_context_error(message: str, *, floor: int = 256) -> int | None:
     used = _INPUT_TOKENS_RE.search(message)
     if not limit or not used:
         return None
-    remaining = int(limit.group(1)) - int(used.group(1)) - 1
+    # The server reports the prompt as "at least" this many tokens, so shave a little more
+    # than the arithmetic demands: a correction that lands one token short only buys another
+    # refusal.
+    remaining = int(limit.group(1)) - int(used.group(1)) - 64
     return remaining if remaining >= floor else None
 
 
@@ -337,7 +340,11 @@ def main() -> None:
         # decoding at 22 tokens per second, 4,096 takes 186 seconds against a 360-second request
         # timeout, and the longest prompt measured over thirty questions is 9,337 tokens, so
         # prompt plus budget stays under the 16,384 context with room to spare.
-        default=4096,
+        # 4,096 stopped truncating question 399 but not 442, whose prompt is short enough to
+        # afford more. At 22 tokens per second 6,144 costs 278 seconds inside a 360-second
+        # timeout, while 8,192 would cost 371 and time out on its own; the context correction
+        # above trims this back for questions whose prompts leave less room.
+        default=6144,
     )
     parser.add_argument(
         "--max-attempts",
@@ -546,9 +553,15 @@ def main() -> None:
             successful: (
                 tuple[dict[str, object], list[str], Dimension, str, float, list[str]] | None
             ) = None
-            # Shrinks once for this question if the server says the prompt leaves less room.
+            # Shrinks for this question if the server says the prompt leaves less room. Trimming
+            # the budget is arithmetic about the prompt, not a failed attempt, so it gets its own
+            # small allowance: spending real attempts on it left question 213 with three
+            # corrections, zero completions and nothing to show for the question.
             question_max_tokens = args.max_tokens
-            for attempt in range(1, args.max_attempts + 1):
+            budget_corrections_left = 2
+            attempt = 0
+            while attempt < args.max_attempts:
+                attempt += 1
                 attempt_user = user
                 if attempt_failures:
                     previous = attempt_failures[-1]
@@ -656,9 +669,15 @@ def main() -> None:
                         # server's own figures, shrink the budget for this question, and let the
                         # loop try again rather than spending the question on a fallback.
                         corrected = _budget_from_context_error(str(attempt_exc))
-                        if corrected is not None and corrected < question_max_tokens:
+                        if (
+                            corrected is not None
+                            and corrected < question_max_tokens
+                            and budget_corrections_left > 0
+                        ):
                             question_max_tokens = corrected
+                            budget_corrections_left -= 1
                             attempt_failures.pop()
+                            attempt -= 1
                             continue
                         raise
                     if attempt == args.max_attempts:

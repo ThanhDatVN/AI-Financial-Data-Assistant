@@ -345,7 +345,10 @@ def test_a_context_refusal_is_arithmetic_not_a_bad_program() -> None:
         "12289 input tokens, for a total of at least 16385 tokens. "
         '(parameter=input_tokens, value=12289)"}}'
     )
-    assert runner._budget_from_context_error(refusal) == 4094
+    # The margin is wider than the arithmetic demands because the server reports the prompt as
+    # "at least" that long. Shaving a single token landed one short and bought another refusal,
+    # three times over, until the question ran out of attempts without one completed call.
+    assert runner._budget_from_context_error(refusal) == 16384 - 12289 - 64
 
     # Anything else is a real bad request and must keep propagating.
     assert runner._budget_from_context_error("Error code: 400 - malformed schema") is None
