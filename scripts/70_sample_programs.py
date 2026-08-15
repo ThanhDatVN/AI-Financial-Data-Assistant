@@ -623,6 +623,19 @@ def main() -> None:
         help="Comma-separated tickers to draw from, so a split stays disjoint by company",
     )
     parser.add_argument(
+        "--split",
+        choices=["dev", "train"],
+        # Naming the role beats pasting eighty tickers, and pasting eighty tickers beats what
+        # actually happened: a dev set generated with neither, drawing from all hundred, which
+        # belongs to neither side of the split and cannot be used by either.
+        help="Draw only from this side of --ticker-split, so train and dev stay disjoint",
+    )
+    parser.add_argument(
+        "--ticker-split",
+        type=Path,
+        default=ROOT / "outputs/synthetic/ticker_split.json",
+    )
+    parser.add_argument(
         "--attempts-per-sample",
         type=int,
         default=12,
@@ -634,9 +647,18 @@ def main() -> None:
 
     rng = random.Random(args.seed)
     manifest = _usable_manifest(args.manifest, args.min_rows, args.min_cols)
-    if args.tickers:
-        wanted = {item.strip().upper() for item in args.tickers.split(",") if item.strip()}
-        manifest = manifest[manifest["ticker"].isin(wanted)].reset_index(drop=True)
+    if args.split and args.tickers:
+        parser.error("--split and --tickers both choose the companies; pass one")
+    split_used: list[str] | None = None
+    if args.split:
+        split = json.loads(args.ticker_split.read_text(encoding="utf-8"))
+        split_used = sorted(str(ticker).upper() for ticker in split[args.split])
+    elif args.tickers:
+        split_used = sorted(
+            item.strip().upper() for item in args.tickers.split(",") if item.strip()
+        )
+    if split_used is not None:
+        manifest = manifest[manifest["ticker"].isin(set(split_used))].reset_index(drop=True)
     if manifest.empty:
         parser.error("no usable tables after filtering")
 
@@ -766,7 +788,27 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     _write(args.output, kept)
 
+    args.output.with_suffix(".split.json").write_text(
+        json.dumps(
+            {
+                "split": args.split,
+                "tickers": split_used,
+                "seed": args.seed,
+                "count": len(kept),
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
     print(f"kept {len(kept)} samples from {attempts} attempts -> {args.output}")
+    if args.split:
+        drawn_from = f"the {args.split} split, {len(split_used or [])} tickers"
+    elif split_used:
+        drawn_from = f"{len(split_used)} named tickers"
+    else:
+        drawn_from = "every ticker -- this set belongs to neither side of the split"
+    print(f"  drawn from: {drawn_from}")
     print("  by family: " + ", ".join(f"{name} {counts[name]}" for name in sorted(counts)))
     if len(kept) < args.count:
         print(f"  short of --count {args.count}: raise --attempts-per-sample or widen --tickers")
