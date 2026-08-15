@@ -6,6 +6,11 @@ from pathlib import Path
 
 import pandas as pd
 
+from vifinqa.evidence.store import parsed_table_to_long_frame
+from vifinqa.generation.prompt import CandidateSchema, numeric_cells_of
+from vifinqa.indexing.manifest import ManifestRecord
+from vifinqa.parsing.models import RawTable
+from vifinqa.parsing.table_parser import parse_table
 from vifinqa.programs.grounding import cells_in_program, referenced_variables
 from vifinqa.programs.serde import expression_from_dict
 
@@ -437,6 +442,95 @@ def test_the_prompt_is_measured_rather_than_inferred_from_a_refusal() -> None:
     assert budget.current == 16384 - 11270 - 64
     assert budget.current < first
     assert budget.current + 11270 < 16384
+
+
+def _schema(variable: str) -> CandidateSchema:
+    raw = RawTable(
+        1,
+        1,
+        1,
+        0,
+        (
+            "<table><tr><td>Chỉ tiêu</td><td>2024</td></tr>"
+            "<tr><td>Doanh thu</td><td>12</td></tr></table>"
+        ),
+        ("Đơn vị: VND",),
+        None,
+    )
+    table = parse_table(raw)
+    record = ManifestRecord(
+        f"DOC_{variable}|table_1",
+        f"DOC_{variable}",
+        "AAA",
+        2024,
+        "consolidated",
+        1,
+        1,
+        1,
+        0,
+        None,
+        "VND",
+        1,
+        2,
+        2,
+        table.headers,
+        ("Doanh thu",),
+        "",
+        Path("report.txt").as_posix(),
+        "0" * 64,
+    )
+    frame = parsed_table_to_long_frame(record, table)
+    return CandidateSchema(variable, record, table, numeric_cells_of(frame))
+
+
+def test_a_prompt_with_no_room_behind_it_gives_up_candidates_not_the_question() -> None:
+    """Measuring a prompt exactly does not help when no budget fits behind it either way.
+
+    The tables at the bottom of the ranking are the least likely to hold the answer, so they are
+    what gives. Without a tokenizer to measure against, nothing is dropped -- guessing is what
+    the measurement replaced, and it must not come back through this door.
+    """
+    schemas = [_schema(f"df{index}") for index in range(1, 21)]
+    lengths = {20: 15_500, 19: 14_800, 18: 14_100, 17: 13_000}
+
+    def fake_measure(url: str, model: str, messages: list[dict[str, str]], timeout: float) -> int:
+        rendered = messages[1]["content"]
+        shown = sum(1 for schema in schemas if f'variable="{schema.variable}"' in rendered)
+        return lengths.get(shown, 9_000)
+
+    fitted = runner._fit_prompt(
+        question="q",
+        schemas=schemas,
+        target_unit="VND",
+        target_divisor=1.0,
+        required_tickers=[],
+        required_years=[],
+        row_hierarchy=False,
+        tokenize_url="http://unused/tokenize",
+        model="m",
+        context_limit=16_384,
+        max_tokens=6_144,
+        request_timeout=60.0,
+        _measure=fake_measure,
+    )
+    # 16,384 - 14,100 - 64 = 2,220, the first that clears the 1,536 a cohort program needs.
+    assert len(fitted[2]) == 18
+
+    unmeasurable = runner._fit_prompt(
+        question="q",
+        schemas=schemas,
+        target_unit="VND",
+        target_divisor=1.0,
+        required_tickers=[],
+        required_years=[],
+        row_hierarchy=False,
+        tokenize_url="http://127.0.0.1:1/tokenize",
+        model="m",
+        context_limit=16_384,
+        max_tokens=6_144,
+        request_timeout=1.0,
+    )
+    assert len(unmeasurable[2]) == 20
 
 
 def test_the_budget_never_asks_for_more_than_the_timeout_can_decode() -> None:

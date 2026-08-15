@@ -7,6 +7,7 @@ import os
 import re
 import sys
 import time
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -102,6 +103,11 @@ def _candidate_limit(row: dict[str, object], *, minimum: int) -> int:
     years = _as_int_list(spec.get("years"), field="query_spec.years")
     return max(minimum, max(1, len(tickers)) * max(1, len(years)))
 
+
+# Below this a program has no room to be written, so the prompt is what has to give. A single
+# cell node costs about 60 tokens and the widest cohort in the release needs 18 of them plus
+# their conditions, which lands near 1,500 with the JSON envelope.
+MIN_ANSWER_TOKENS = 1536
 
 _CONTEXT_LIMIT_RE = re.compile(r"maximum context length is (\d+) tokens")
 _INPUT_TOKENS_RE = re.compile(r"value=(\d+)")
@@ -357,6 +363,60 @@ class _Grounded:
     answer: float
     selected_refs: list[str]
     semantic_adjusted: bool
+
+
+def _fit_prompt(
+    *,
+    question: str,
+    schemas: list[CandidateSchema],
+    target_unit: str,
+    target_divisor: float,
+    required_tickers: list[str],
+    required_years: list[int],
+    row_hierarchy: bool,
+    tokenize_url: str,
+    model: str,
+    context_limit: int,
+    max_tokens: int,
+    request_timeout: float,
+    # Injected so the loop can be tested without a server; nothing else should pass it.
+    _measure: Callable[[str, str, list[dict[str, str]], float], int] = _measure_prompt,
+) -> tuple[str, str, list[CandidateSchema]]:
+    """Build the prompt, dropping candidates until the answer has somewhere to go.
+
+    A prompt can be long enough that no budget fits behind it, and then measuring it exactly only
+    confirms the question is lost. Twenty candidates reach 11k tokens of a 16k context on
+    questions 213 and 442. The tables at the bottom of the ranking are the least likely to hold
+    the answer, so they are what gives: a question the model can only half-write is worth less
+    than the same question with three fewer distractors.
+    """
+
+    def render(candidates: list[CandidateSchema]) -> tuple[str, str]:
+        return build_program_prompt(
+            question,
+            candidates,
+            target_unit=target_unit,
+            target_divisor=target_divisor,
+            required_tickers=required_tickers,
+            required_years=required_years,
+            include_row_hierarchy=row_hierarchy,
+        )
+
+    system, user = render(schemas)
+    needed = min(max_tokens, MIN_ANSWER_TOKENS)
+    while len(schemas) > 1:
+        measured = _measure(
+            tokenize_url,
+            model,
+            [{"role": "system", "content": system}, {"role": "user", "content": user}],
+            request_timeout,
+        )
+        # No tokenizer route means no measurement, and guessing is what this replaced.
+        if not measured or _room_for_output(context_limit, measured, margin=64) >= needed:
+            break
+        schemas = schemas[:-1]
+        system, user = render(schemas)
+    return system, user, schemas
 
 
 def _ground(
@@ -755,15 +815,24 @@ def main() -> None:
             fallback_years = _as_int_list(spec.get("years"), field="query_spec.years")
             required_tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
             required_years = _as_int_list(spec.get("years"), field="query_spec.years")
-            system, user = build_program_prompt(
-                str(row["question"]),
-                schemas,
+            system, user, schemas = _fit_prompt(
+                question=str(row["question"]),
+                schemas=schemas,
                 target_unit=str(spec["target_unit"]),
                 target_divisor=float(spec["target_divisor"]),
                 required_tickers=required_tickers,
                 required_years=required_years,
-                include_row_hierarchy=args.row_hierarchy,
+                row_hierarchy=args.row_hierarchy,
+                tokenize_url=tokenize_url,
+                model=args.model,
+                context_limit=args.context_limit,
+                max_tokens=args.max_tokens,
+                request_timeout=args.request_timeout,
             )
+            for variable in sorted(set(frames) - {schema.variable for schema in schemas}):
+                frames.pop(variable, None)
+                csv_paths.pop(variable, None)
+                table_refs.pop(variable, None)
             successful: _Grounded | None = None
             # Resized for this question whenever the server reveals what the prompt actually
             # costs. Measuring is arithmetic about the prompt, not a failed attempt, so it gets
