@@ -12,6 +12,7 @@ from vifinqa.programs.grounding import (
     SoftGroundingError,
     normalize_cells,
     prepare_program,
+    snap_cells,
     validate_answer_plausibility,
     validate_query_coverage,
 )
@@ -294,6 +295,72 @@ def test_ranking_without_keys_ranks_the_members_themselves() -> None:
     # A key list that does not line up with the members is still a real contradiction.
     with pytest.raises(ValueError, match="one key per member"):
         compile_expression(SelectExpr("argmax", members, keys=members[:2]))
+
+
+def test_a_coordinate_with_one_repair_is_repaired_and_an_ambiguous_one_is_not() -> None:
+    """13 of the 21 failures on the widest questions were coordinate errors.
+
+    Some of them name a row that holds exactly one number, which leaves nothing to guess: the
+    column index is simply wrong and there is one value it can mean. Others name a row with three
+    populated columns, where picking one would be inventing an answer -- worse than refusing, and
+    the refusal is what the model still gets told about while it can still act on it.
+    """
+    frame = pd.DataFrame(
+        {
+            "row_index": [0, 0, 0, 1, 1, 1, 2, 2],
+            "column_index": [0, 1, 2, 0, 1, 2, 0, 1],
+            "source_unit": ["VND"] * 8,
+            "numeric_value": [None, 5.0, None, None, 7.0, 9.0, None, None],
+            "base_value": [None, 5.0, None, None, 7.0, 9.0, None, None],
+        }
+    )
+    frames = {"df1": frame}
+
+    # One populated column in the row: the only reading that runs.
+    snapped = snap_cells(CellExpr("df1", 0, 2), frames)
+    assert isinstance(snapped, CellExpr)
+    assert snapped.column_index == 1
+
+    # Two populated columns: no basis to choose, so leave it and let validation refuse.
+    assert snap_cells(CellExpr("df1", 1, 0), frames) == CellExpr("df1", 1, 0)
+
+    # A row with no numbers at all cannot be repaired into one that has them.
+    assert snap_cells(CellExpr("df1", 2, 0), frames) == CellExpr("df1", 2, 0)
+
+    # A cell that is already valid is never moved.
+    assert snap_cells(CellExpr("df1", 1, 1), frames) == CellExpr("df1", 1, 1)
+
+    # It reaches inside a cohort, which is where the coordinate errors actually live.
+    cohort = SelectExpr(
+        "argmax",
+        members=(CellExpr("df1", 0, 2), CellExpr("df1", 1, 1)),
+        conditions=(
+            Condition((CellExpr("df1", 0, 2), CellExpr("df1", 1, 1)), ">", LiteralExpr(0)),
+        ),
+    )
+    repaired = snap_cells(cohort, frames)
+    assert isinstance(repaired, SelectExpr)
+    assert repaired.members[0] == CellExpr("df1", 0, 1)
+    assert repaired.conditions[0].left[0] == CellExpr("df1", 0, 1)
+
+    # And it only runs as a last resort: the strict path still tells the model where to look.
+    with pytest.raises(ValueError, match="Row r0 holds numbers at c1"):
+        prepare_program(
+            CellExpr("df1", 0, 2),
+            selected_variables=["df1"],
+            frames=frames,
+            target_unit="VND",
+            target_divisor=1.0,
+        )
+    prepared, _ = prepare_program(
+        CellExpr("df1", 0, 2),
+        selected_variables=["df1"],
+        frames=frames,
+        target_unit="VND",
+        target_divisor=1.0,
+        lenient=True,
+    )
+    assert execute_expression(compile_expression(prepared), frames) == 5.0
 
 
 def test_a_doubted_program_gives_way_only_when_nothing_better_is_left() -> None:

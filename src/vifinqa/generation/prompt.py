@@ -28,10 +28,19 @@ def numeric_cells_of(frame: pd.DataFrame) -> frozenset[tuple[int, int]]:
 
 
 def _numeric_columns(candidate: CandidateSchema, row_index: int) -> str:
+    """Where this row holds numbers, and -- said out loud -- when it holds none.
+
+    Rendering an empty row as an empty string leaves the model unable to tell "this row has no
+    numbers" from "nothing was said about this row". Five of the 21 failures on the widest
+    questions pointed at a heading or a label-only row, which is exactly the mistake the silence
+    invites.
+    """
     if candidate.numeric_cells is None:
         return ""
     columns = sorted(column for row, column in candidate.numeric_cells if row == row_index)
-    return "  -> values at " + ",".join(f"c{column}" for column in columns) if columns else ""
+    if not columns:
+        return "  -> NO VALUES; this row is a label, never a cell node"
+    return "  -> values at " + ",".join(f"c{column}" for column in columns)
 
 
 _LETTERED_ROW_RE = re.compile(r"^\s*([A-ZĐ]+)\s*[.)]\s+", flags=re.IGNORECASE)

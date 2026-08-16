@@ -251,3 +251,65 @@ def test_program_prompt_uses_repeated_colspan_label_as_bullet_parent() -> None:
     )
 
     assert "r2: ▪ Công ty A [parents: Đầu tư vào công ty liên kết]" in user
+
+
+def test_a_row_with_no_numbers_says_so_instead_of_saying_nothing() -> None:
+    """Silence about an empty row reads the same as silence about an unannotated one.
+
+    Five of the 21 failures on the widest questions pointed a cell node at a heading or a
+    label-only row. The prompt rendered those rows with no marker at all, so the model had no way
+    to tell "this row holds no numbers" from "nothing was said about this row".
+    """
+    raw = RawTable(
+        1,
+        1,
+        1,
+        0,
+        (
+            "<table><tr><td>Chỉ tiêu</td><td>2024</td></tr>"
+            "<tr><td>Tiền và tương đương tiền</td><td>123456789</td></tr>"
+            "<tr><td>TÀI SẢN NGẮN HẠN</td><td></td></tr></table>"
+        ),
+        ("Đơn vị: VND",),
+        None,
+    )
+    table = parse_table(raw)
+    record = ManifestRecord(
+        "DOC|table_1",
+        "DOC",
+        "AAA",
+        2024,
+        "consolidated",
+        1,
+        1,
+        1,
+        0,
+        None,
+        "VND",
+        1,
+        3,
+        2,
+        table.headers,
+        tuple(row[0] for row in table.rows),
+        "",
+        Path("report.txt").as_posix(),
+        "0" * 64,
+    )
+    frame = parsed_table_to_long_frame(record, table)
+    _, user = build_program_prompt(
+        "Tiền và tương đương tiền năm 2024?",
+        [CandidateSchema("df1", record, table, numeric_cells_of(frame))],
+        target_unit="VND",
+        target_divisor=1.0,
+    )
+    rows = [line for line in user.splitlines() if line.lstrip().startswith("r")]
+    heading = next(line for line in rows if "TÀI SẢN NGẮN HẠN" in line)
+    assert "NO VALUES" in heading
+    assert "never a cell node" in heading
+
+    populated = next(line for line in rows if "Tiền và tương đương" in line)
+    assert "-> values at c1" in populated
+    assert "NO VALUES" not in populated
+
+    # The marker states structure, never a source value.
+    assert "123456789" not in user

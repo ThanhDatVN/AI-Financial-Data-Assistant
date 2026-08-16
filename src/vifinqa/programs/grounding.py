@@ -328,6 +328,79 @@ def validate_query_coverage(
         raise SoftGroundingError(f"Program does not cover required years: {missing_years}")
 
 
+def snap_cells(expression: ScalarExpr, frames: Mapping[str, pd.DataFrame]) -> ScalarExpr:
+    """Move a cell that holds no number onto its row's only numeric column.
+
+    Last-resort only, for the same reason the other relaxations are: the alternative is a
+    keyword-matched cell from a table nobody chose. 13 of the 21 failures on the widest questions
+    were coordinate errors, and in some of them the row the model named holds exactly one number
+    -- there is no guessing left to do, only a column index to correct.
+
+    Ambiguity is left alone. A row with three populated columns needs a decision this function has
+    no basis to make, and inventing one would be worse than refusing.
+    """
+    if isinstance(expression, CellExpr):
+        frame = frames.get(expression.variable)
+        if frame is None or "numeric_value" not in frame.columns:
+            return expression
+        here = frame.loc[
+            (frame["row_index"] == expression.row_index)
+            & (frame["column_index"] == expression.column_index)
+        ]
+        if len(here) == 1 and not pd.isna(here.iloc[0][expression.value_column]):
+            return expression
+        populated = frame.loc[
+            (frame["row_index"] == expression.row_index) & frame["numeric_value"].notna(),
+            "column_index",
+        ].unique()
+        if len(populated) != 1:
+            return expression
+        return replace(expression, column_index=int(populated[0]))
+    if isinstance(expression, LiteralExpr):
+        return expression
+    if isinstance(expression, BinaryExpr):
+        return replace(
+            expression,
+            left=snap_cells(expression.left, frames),
+            right=snap_cells(expression.right, frames),
+        )
+    if isinstance(expression, AggregateExpr):
+        return replace(
+            expression, operands=tuple(snap_cells(item, frames) for item in expression.operands)
+        )
+    if isinstance(expression, CountIfExpr):
+        return replace(
+            expression,
+            operands=tuple(snap_cells(item, frames) for item in expression.operands),
+            threshold=snap_cells(expression.threshold, frames),
+        )
+    if isinstance(expression, ArgExtremumExpr):
+        return replace(
+            expression,
+            keys=tuple(snap_cells(item, frames) for item in expression.keys),
+            values=tuple(snap_cells(item, frames) for item in expression.values),
+        )
+    if isinstance(expression, SelectExpr):
+        return replace(
+            expression,
+            members=tuple(snap_cells(item, frames) for item in expression.members),
+            keys=None
+            if expression.keys is None
+            else tuple(snap_cells(item, frames) for item in expression.keys),
+            conditions=tuple(
+                replace(
+                    condition,
+                    left=tuple(snap_cells(item, frames) for item in condition.left),
+                    right=tuple(snap_cells(item, frames) for item in condition.right)
+                    if isinstance(condition.right, tuple)
+                    else snap_cells(condition.right, frames),
+                )
+                for condition in expression.conditions
+            ),
+        )
+    return expression
+
+
 def prepare_program(
     expression: ScalarExpr,
     *,
@@ -348,6 +421,8 @@ def prepare_program(
     if set(frames) != referenced:
         raise ValueError("Loaded frames must exactly match referenced variables")
     expression = normalize_cells(expression, frames)
+    if lenient:
+        expression = snap_cells(expression, frames)
     _validate_cells(expression, frames, lenient=lenient)
     inferred = infer_dimension(expression)
     try:
