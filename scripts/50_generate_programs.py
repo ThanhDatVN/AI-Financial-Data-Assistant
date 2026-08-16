@@ -853,6 +853,7 @@ def main() -> None:
             # its own small allowance: spending real attempts on it left question 213 with three
             # corrections, zero completions and nothing to show for the question.
             soft_reject: dict[str, object] | None = None
+            soft_reject_class = ""
             budget = _TokenBudget(args.max_tokens, args.context_limit)
             budget_corrections_left = 3
             attempt = 0
@@ -972,6 +973,21 @@ def main() -> None:
                     # Keep it: if no later attempt does better, it still beats the fallback.
                     if isinstance(attempt_exc, SoftGroundingError | RankMismatchError):
                         soft_reject = program
+                        # Which doubt gave way matters more than how many did. The three classes
+                        # are not equally sound: question 478 was admitted past a ticker-coverage
+                        # refusal and reads twenty cells out of one table for a three-company
+                        # question, while 568 was admitted past a unit-lineage refusal and reads
+                        # sixteen tables like a cohort program should. Recorded separately so the
+                        # next run can score them apart instead of averaging them together.
+                        soft_reject_class = type(attempt_exc).__name__
+                        if isinstance(attempt_exc, SoftGroundingError):
+                            message = str(attempt_exc)
+                            if "required tickers" in message:
+                                soft_reject_class = "MissingTickers"
+                            elif "required years" in message:
+                                soft_reject_class = "MissingYears"
+                            elif "source-unit lineage" in message:
+                                soft_reject_class = "NoUnitLineage"
                     if isinstance(attempt_exc, BadRequestError) or attempt == args.max_attempts:
                         raise
             if successful is None:
@@ -1096,6 +1112,7 @@ def main() -> None:
                             # the keyword guesses and hide whether the policy is doing anything.
                             "fallback": rescued is None,
                             "rescued": rescued is not None,
+                            "rescued_from": soft_reject_class if rescued is not None else "",
                             "fallback_reason": f"{type(exc).__name__}: {exc}"[:400],
                             "selected_variables": selected,
                             "compiled_pandas_query": query,
