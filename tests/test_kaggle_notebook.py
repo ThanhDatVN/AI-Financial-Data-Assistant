@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import json
 from pathlib import Path
 
@@ -321,3 +322,79 @@ def test_packaging_notebook_needs_no_accelerator_and_downloads_one_file() -> Non
     assert code.count('"--allow-partial-docs"') == 2
     assert "assert answers == 1012" in code
     assert "Download only this ZIP." in code
+
+
+def test_a_default_full_run_is_not_stopped_by_a_cell_it_does_not_use() -> None:
+    """RUN_MODE="full" must reach the run without a hand edit.
+
+    Twice now a 12-hour session halted between the smoke and the run it was preparing for: once
+    on the opt-in 200-question ablation, which a full run has no business entering, and once on a
+    hand-pasted commit SHA that cells 2 and 3 already establish by fetching the ref. Both were
+    guards on things the run does not use.
+
+    So evaluate every assert whose condition is made only of the run flags and literals, under
+    exactly what cell 1 sets for a full run and what a fresh session leaves alone. Anything that
+    fails here would stop the session there.
+    """
+    flags = {
+        "RUN_FULL": True,
+        "FINAL_RUN": True,
+        "RUN_SUBSET_200": False,
+        "RUN_DIAGNOSTICS": False,
+        # The pinned profile, so the 14B eligibility branch is evaluated rather than assumed.
+        "MODEL_TOTAL_PARAMS_B": 8.2,
+        "THINKING_MODE": "disabled",
+    }
+    environment = {
+        "VIFINQA_RUN_FULL": "1",
+        "VIFINQA_FINAL_RUN": "1",
+        "VIFINQA_RUN_SUBSET_200": "0",
+        "VIFINQA_RUN_DIAGNOSTICS": "0",
+        "VIFINQA_ALLOW_LONG_SUBSET": "0",
+        "VIFINQA_EXPECTED_PROJECT_SHA": "",
+        "VIFINQA_QUESTION_LIMIT": "600",
+        "VIFINQA_ORGANIZER_CONFIRMED_14B": "1",
+        "VIFINQA_THINKING_MODE": "disabled",
+    }
+
+    class _Environ(dict[str, str]):
+        def get(self, key: str, default: str = "") -> str:  # type: ignore[override]
+            return environment.get(key, default)
+
+    namespace: dict[str, object] = {**flags, "os": type("os", (), {"environ": _Environ()})()}
+
+    notebook = json.loads(GENERATION_NOTEBOOK.read_text(encoding="utf-8"))
+    stopped: list[tuple[int, str]] = []
+    for index, cell in enumerate(notebook["cells"]):
+        if cell["cell_type"] != "code":
+            continue
+        source = "".join(cell["source"])
+        tree = ast.parse(source)
+        skipped = _skipped_statements(tree, namespace)
+        for statement in ast.walk(tree):
+            if not isinstance(statement, ast.Assert) or statement in skipped:
+                continue
+            try:
+                holds = bool(
+                    eval(compile(ast.Expression(statement.test), "<test>", "eval"), namespace)
+                )  # noqa: S307
+            except NameError:
+                continue  # depends on the machine, not on the configuration
+            if not holds:
+                stopped.append((index, (ast.get_source_segment(source, statement) or "")[:90]))
+    assert not stopped, f"a default full run would stop here: {stopped}"
+
+
+def _skipped_statements(tree: ast.AST, namespace: dict[str, object]) -> set[ast.stmt]:
+    """Statements inside a branch the default configuration never enters."""
+    skipped: set[ast.stmt] = set()
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.If):
+            continue
+        try:
+            taken = bool(eval(compile(ast.Expression(node.test), "<test>", "eval"), namespace))  # noqa: S307
+        except (NameError, AttributeError, TypeError):
+            continue
+        for statement in node.orelse if taken else node.body:
+            skipped.update(inner for inner in ast.walk(statement) if isinstance(inner, ast.stmt))
+    return skipped
