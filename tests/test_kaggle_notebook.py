@@ -398,3 +398,22 @@ def _skipped_statements(tree: ast.AST, namespace: dict[str, object]) -> set[ast.
         for statement in node.orelse if taken else node.body:
             skipped.update(inner for inner in ast.walk(statement) if isinstance(inner, ast.stmt))
     return skipped
+
+
+def test_two_attached_sessions_can_be_told_apart_instead_of_detached() -> None:
+    """A finished run and the one before it are both legitimately attached at once.
+
+    The earlier session holds the hybrid ranking and the diagnostics the later one no longer
+    writes, so refusing outright forces the user to detach an input they still need. Naming the
+    one you mean is the way through; the guard still refuses when nothing is named and more than
+    one is present, because resuming the wrong run silently is worse than stopping.
+    """
+    for notebook in (RESUME_NOTEBOOK, PACKAGE_NOTEBOOK):
+        code = _compiled_code(notebook)
+        assert 'os.environ.get("VIFINQA_CHECKPOINT_SOURCE", "").strip()' in code
+        assert "if WANTED_CHECKPOINT:" in code
+        assert "WANTED_CHECKPOINT in str(candidate[1])" in code
+        # The guard survives: naming nothing with two attached still stops the run.
+        assert "assert len(checkpoint_candidates) == 1" in code
+        # And the message says how to get past it, which is the half that was missing.
+        assert "or name one with VIFINQA_CHECKPOINT_SOURCE" in code
