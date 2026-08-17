@@ -29,6 +29,7 @@ import os
 import random
 import sys
 from collections import defaultdict
+from collections.abc import Callable
 from pathlib import Path
 
 import pandas as pd
@@ -41,6 +42,11 @@ if str(SRC) not in sys.path:
 
 from vifinqa.eval.metrics import answer_is_correct  # noqa: E402
 from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame  # noqa: E402
+from vifinqa.generation.budget import (  # noqa: E402
+    measure_prompt,
+    room_for_output,
+    tokenize_url,
+)
 from vifinqa.generation.prompt import (  # noqa: E402
     CandidateSchema,
     build_program_prompt,
@@ -87,13 +93,15 @@ def _distractor_refs(
 
 def _candidates(
     store: TableStore, refs: list[str], unit_source: str, distractors: list[str], rng: random.Random
-) -> tuple[list[CandidateSchema], dict[str, pd.DataFrame]]:
+) -> tuple[list[CandidateSchema], dict[str, pd.DataFrame], set[str]]:
     """Load the gold tables under the variable names the sampler used: df1, df2, ... in order.
 
     With distractors, the order is drawn instead and the names follow the drawn positions. Both
     halves matter: leaving gold first would let the model read position instead of the question,
     and leaving gold named df1..dfk would let it read the name. Renaming is safe because nothing
     here re-executes the recorded program -- only the answer it produced is compared.
+
+    The third return value names the gold variables, because `_fit` may only drop the others.
     """
     ordered = list(refs)
     if distractors:
@@ -101,6 +109,7 @@ def _candidates(
         rng.shuffle(ordered)
     schemas: list[CandidateSchema] = []
     frames: dict[str, pd.DataFrame] = {}
+    gold: set[str] = set()
     for ref in ordered:
         record, table = store.load(str(ref), unit_source=unit_source)
         frame = parsed_table_to_long_frame(record, table)
@@ -112,7 +121,45 @@ def _candidates(
         variable = f"df{len(schemas) + 1}"
         schemas.append(CandidateSchema(variable, record, table, numeric_cells))
         frames[variable] = frame
-    return schemas, frames
+        if ref in refs:
+            gold.add(variable)
+    return schemas, frames, gold
+
+
+def _fit(
+    schemas: list[CandidateSchema],
+    gold: set[str],
+    *,
+    render: Callable[[list[CandidateSchema]], tuple[str, str]],
+    measure: Callable[[list[dict[str, str]]], int],
+    context_limit: int,
+    max_tokens: int,
+) -> tuple[str, str, list[CandidateSchema]]:
+    """Drop distractors -- never gold -- until the answer has somewhere to go.
+
+    Production does this too, and without it a distractor measurement is not the one it claims to
+    be. Measured over the 499 dev samples at 19 distractors, the median prompt reaches about 6,900
+    tokens while the longest reaches 77,000: 23 leave no room for a 6,144-token answer and the
+    worst are refused outright by a 16,384 context. Counting those as wrong answers would push X
+    down by several points, and that number decides whether to rent a GPU.
+
+    Gold stays because the answer depends on it: a sample whose gold table was dropped is not a
+    harder question, it is a different one.
+    """
+    system, user = render(schemas)
+    while True:
+        measured = measure(
+            [{"role": "system", "content": system}, {"role": "user", "content": user}]
+        )
+        # No tokenizer route means no measurement, and guessing is what this replaced.
+        if not measured or room_for_output(context_limit, measured) >= max_tokens:
+            return system, user, schemas
+        droppable = [index for index, schema in enumerate(schemas) if schema.variable not in gold]
+        if not droppable:
+            return system, user, schemas
+        # The order was already drawn, so the last droppable one is an unbiased choice.
+        schemas = [schema for index, schema in enumerate(schemas) if index != droppable[-1]]
+        system, user = render(schemas)
 
 
 def _solve(
@@ -196,6 +243,12 @@ def main() -> None:
     parser.add_argument("--table-unit-source", default="latest")
     parser.add_argument("--thinking-mode", default="disabled", choices=["disabled", "enabled"])
     parser.add_argument("--max-tokens", type=int, default=6144)
+    parser.add_argument(
+        "--context-limit",
+        type=int,
+        default=16384,
+        help="The served model's context window, so a padded prompt can be cut back to fit",
+    )
     parser.add_argument("--request-timeout", type=float, default=600.0)
     parser.add_argument("--execution-timeout", type=float, default=20.0)
     parser.add_argument("--memory-limit-mb", type=int, default=2048)
@@ -251,6 +304,7 @@ def main() -> None:
             for line in path.read_text(encoding="utf-8").splitlines():
                 if line.strip():
                     done.add(int(json.loads(line)["id"]))
+    tokenize = tokenize_url(args.base_url)
     print(f"filtering {len(rows)} questions, {len(done)} already judged", flush=True)
 
     misses: dict[str, int] = defaultdict(int)
@@ -275,21 +329,44 @@ def main() -> None:
                     # Seeded per question, so the drawn distractors and their order are the same
                     # on a resumed session as on the one that started it.
                     rng = random.Random(args.seed + int(row["id"]))
-                    schemas, frames = _candidates(
+                    schemas, frames, gold = _candidates(
                         store,
                         refs,
                         args.table_unit_source,
                         _distractor_refs(store, refs, args.distractors, rng),
                         rng,
                     )
-                    system, user = build_program_prompt(
-                        str(row["question"]),
+
+                    def render(
+                        candidates: list[CandidateSchema],
+                        _row: dict[str, object] = row,
+                        _unit: str = target_unit,
+                        _divisor: float = target_divisor,
+                    ) -> tuple[str, str]:
+                        return build_program_prompt(
+                            str(_row["question"]),
+                            candidates,
+                            target_unit=_unit,
+                            target_divisor=_divisor,
+                            required_tickers=[str(_row["ticker"])],
+                            required_years=[int(year) for year in _row["report_years"]],
+                        )
+
+                    system, user, schemas = _fit(
                         schemas,
-                        target_unit=target_unit,
-                        target_divisor=target_divisor,
-                        required_tickers=[str(row["ticker"])],
-                        required_years=[int(year) for year in row["report_years"]],
+                        gold,
+                        render=render,
+                        measure=lambda messages: measure_prompt(
+                            tokenize, args.model, messages, args.request_timeout
+                        ),
+                        context_limit=args.context_limit,
+                        max_tokens=args.max_tokens,
                     )
+                    frames = {
+                        schema.variable: frames[schema.variable]
+                        for schema in schemas
+                        if schema.variable in frames
+                    }
                 except Exception as error:  # noqa: BLE001 - one lost sample, not a lost run
                     misses[f"setup:{type(error).__name__}"] += 1
                     continue

@@ -11,7 +11,6 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 
-import httpx
 import pandas as pd
 from openai import BadRequestError, OpenAI
 
@@ -26,6 +25,11 @@ from vifinqa.checkpoints.jsonl import (  # noqa: E402
     write_jsonl_atomic,
 )
 from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame  # noqa: E402
+from vifinqa.generation.budget import (  # noqa: E402
+    measure_prompt,
+    room_for_output,
+    tokenize_url,
+)
 from vifinqa.generation.prompt import (  # noqa: E402
     CandidateSchema,
     build_program_prompt,
@@ -160,36 +164,14 @@ def _context_numbers(message: str) -> tuple[int, int] | None:
     return int(limit.group(1)), int(used.group(1))
 
 
-def _room_for_output(context_limit: int, prompt_tokens: int, *, margin: int) -> int:
-    """How many output tokens this prompt can still afford, with room to spare."""
-    return context_limit - prompt_tokens - margin
+_room_for_output = room_for_output
 
 
-def _tokenize_url(base_url: str) -> str:
-    """vLLM serves /tokenize beside the OpenAI-compatible routes, not inside them."""
-    return base_url.rstrip("/").removesuffix("/v1") + "/tokenize"
-
-
-def _measure_prompt(url: str, model: str, messages: list[dict[str, str]], timeout: float) -> int:
-    """Ask the server how long this prompt is, before spending a request finding out.
-
-    Recovering from a context refusal never converged. The refusal reports the prompt as "at
-    least" so many tokens, the corrected retry came back over the limit again, and questions 213
-    and 442 both died having asked 5,245 tokens of an 11,140-token prompt in a 16,384 context --
-    identical figures for two unrelated questions, which no reading of the arithmetic explained.
-
-    Guessing was the mistake. The tokenizer is right there, it costs a round trip with no decoding
-    behind it, and it answers exactly the question the retry loop was trying to infer. A server
-    without the route leaves this at zero and the refusal path still catches it.
-    """
-    try:
-        response = httpx.post(
-            url, json={"model": model, "messages": messages}, timeout=min(timeout, 30.0)
-        )
-        response.raise_for_status()
-        return int(response.json()["count"])
-    except Exception:  # noqa: BLE001 - measuring is an optimisation, not a requirement
-        return 0
+# Kept as module-level names because the retry loop injects `_measure` for tests, but the bodies
+# now live in `vifinqa.generation.budget`: the synthetic filter needs the same measurement, and a
+# second copy would measure a different prompt than production does.
+_tokenize_url = tokenize_url
+_measure_prompt = measure_prompt
 
 
 class _TokenBudget:

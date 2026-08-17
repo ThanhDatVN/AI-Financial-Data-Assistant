@@ -153,3 +153,65 @@ def test_a_vacuous_filter_is_refused_because_the_sampler_never_emitted_one() -> 
     frames = _gate_frame("x", [10.0, 30.0, 20.0])
     with pytest.raises(backfill.Unrecoverable):
         backfill.recover(_row(["x"] * 3, threshold=25.0), frames)
+
+
+def _schema(variable: str) -> object:
+    """A stand-in: `_fit` only ever reads `.variable` and hands the list back to `render`."""
+
+    class _Stub:
+        def __init__(self, name: str) -> None:
+            self.variable = name
+
+    return _Stub(variable)
+
+
+def test_padding_is_cut_back_until_the_answer_fits_and_gold_is_never_cut() -> None:
+    """At 19 distractors the longest dev prompt reaches 77,000 tokens in a 16,384 context.
+
+    Counting those as wrong answers would push X down by several points, and X decides whether to
+    rent a GPU. Gold cannot be among what is dropped: a sample missing its gold table is not a
+    harder question, it is a different one.
+    """
+    filterer = import_module("scripts.73_filter_synthetic")
+    schemas = [_schema(f"df{index}") for index in range(1, 6)]
+    gold = {"df2"}
+
+    # 4,000 tokens per candidate: only one can fit beside a 6,144-token answer in 16,384.
+    def measure(_messages: list[dict[str, str]], counter: list[int] = []) -> int:  # noqa: B006
+        return 4000 * measure.width
+
+    def render(candidates: list[object]) -> tuple[str, str]:
+        measure.width = len(candidates)
+        return "system", f"{len(candidates)} candidates"
+
+    measure.width = len(schemas)
+    _, _, kept = filterer._fit(
+        schemas, gold, render=render, measure=measure, context_limit=16384, max_tokens=6144
+    )
+    assert [schema.variable for schema in kept] == ["df1", "df2"]
+
+    # Gold alone still over budget: return it rather than drop the table the answer needs.
+    _, _, only_gold = filterer._fit(
+        [_schema("df1")],
+        {"df1"},
+        render=render,
+        measure=measure,
+        context_limit=4096,
+        max_tokens=6144,
+    )
+    assert [schema.variable for schema in only_gold] == ["df1"]
+
+
+def test_an_unmeasurable_prompt_is_left_alone_rather_than_guessed_at() -> None:
+    """A server with no tokenizer route returns 0, and guessing is what the route replaced."""
+    filterer = import_module("scripts.73_filter_synthetic")
+    schemas = [_schema(f"df{index}") for index in range(1, 4)]
+    _, _, kept = filterer._fit(
+        schemas,
+        {"df1"},
+        render=lambda candidates: ("system", "user"),
+        measure=lambda messages: 0,
+        context_limit=16384,
+        max_tokens=6144,
+    )
+    assert len(kept) == 3
