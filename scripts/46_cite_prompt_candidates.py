@@ -65,6 +65,16 @@ def main() -> None:
     )
     parser.add_argument("--table-unit-source", default="latest")
     parser.add_argument(
+        "--ranking-field",
+        default="fused",
+        help=(
+            "Which ranking to read. `fused` is what the generator consumes, so it is the set the "
+            "model saw. A reranked file also carries `hybrid`, the order before reranking, which "
+            "makes the second experiment -- did reranking help or hurt -- a rerun of this "
+            "command rather than another artefact to fetch."
+        ),
+    )
+    parser.add_argument(
         "--docs-from-tables",
         action="store_true",
         help=(
@@ -122,7 +132,7 @@ def main() -> None:
         spec = row["query_spec"]
         limit = _candidate_limit(spec, minimum=args.candidate_tables)
         shown: list[str] = []
-        for table_ref in row["fused"]:
+        for table_ref in row[args.ranking_field]:
             if len(shown) >= limit:
                 break
             # The generator fills the slot from further down rather than spending prompt budget
@@ -141,7 +151,10 @@ def main() -> None:
     if args.limit:
         print("  --limit was set: this file is a check, not a submission.")
     widths.sort()
-    print(f"cited the shown candidate set for {len(predictions)} questions -> {args.output}")
+    print(
+        f"cited the {args.ranking_field} candidate set for {len(predictions)} questions "
+        f"-> {args.output}"
+    )
     print(
         f"  tables per question: min {widths[0]}, median {widths[len(widths) // 2]}, "
         f"max {widths[-1]}"
