@@ -158,8 +158,8 @@ def _prompt(sample: dict[str, object], names: dict[str, str], rng: random.Random
         "\nYêu cầu bắt buộc:\n"
         "- Viết đúng MỘT câu hỏi, kết thúc bằng dấu hỏi.\n"
         "- Nêu rõ doanh nghiệp, kỳ báo cáo và đơn vị của đáp án.\n"
-        "- KHÔNG chép nguyên văn cụm từ ở dòng 'Khoản mục trong bảng'. Hãy diễn đạt lại bằng "
-        "thuật ngữ tài chính thông dụng mà người đọc báo cáo sẽ dùng.\n"
+        "- Gọi tên khoản mục theo cách người đọc báo cáo tài chính thường gọi; dùng đúng "
+        "thuật ngữ của bảng cũng được, đề thi thật làm vậy ở 58% số câu.\n"
         "- KHÔNG nêu con số đáp án.\n"
         "- Dùng lối viết tự nhiên của đề thi tiếng Việt."
     )
@@ -177,13 +177,21 @@ def _is_proper_noun(row_label: str) -> bool:
 
 
 def _quotes_label(question: str, row_label: str) -> bool:
-    """Reject a question that lifted the row label instead of paraphrasing it.
+    """Does this question use the row label's own words?
 
-    Mapping everyday financial wording onto a statement's own line label is the hardest part of
-    the real task. A question that copies the label teaches the easy half and hides the hard one.
+    It was a rejection rule, on the reasoning that mapping everyday wording onto a statement's own
+    line label is the hardest part of the real task, so a question that copies the label teaches
+    the easy half and hides the hard one.
 
-    Names are the exception, and the real paper agrees: question 75 asks about the "Quỹ Đầu tư
-    Giá trị Bảo Việt" by name, because there is no other way to say it.
+    The reasoning was never checked against the paper, and the paper disagrees. Applying this test
+    to the 1,012 real questions against the row labels of their own retrieved tables flags
+    **590 of them -- 58.3%**, starting with question 1, which is the project's regression anchor:
+    "Lãi tiền gửi năm 2018 của công ty mẹ ..." over a row labelled "Lãi tiền gửi".
+
+    So it does not measure "a bad question". It measures "a question phrased the way the exam
+    phrases it", and rejecting those built a dev set that mirrors the paper less, not more -- it
+    would have kept the hard half only and made X read worse than production. Now off by default;
+    `--require-paraphrase` restores the old behaviour for anyone who wants the harder subset.
     """
     folded_label = _normalise(row_label)
     if len(folded_label.split()) < 3 or _is_proper_noun(row_label):
@@ -202,6 +210,25 @@ def main() -> None:
     parser.add_argument("--max-tokens", type=int, default=256)
     parser.add_argument("--request-timeout", type=float, default=120.0)
     parser.add_argument("--attempts", type=int, default=2)
+    parser.add_argument(
+        "--require-paraphrase",
+        action="store_true",
+        help=(
+            "Refuse a question that uses the row label's own words. Off by default: the same "
+            "test flags 58.3 percent of the real questions, so it selects against the paper "
+            "rather than against bad questions"
+        ),
+    )
+    parser.add_argument(
+        "--rejected",
+        type=Path,
+        help=(
+            "Where to write the refused generations, with the reason. Counting them says a gate "
+            "fired; only the text says why. Without it the first render came back at 50 percent "
+            "and the diagnosis had to be reconstructed from a laptop while two GPU sessions "
+            "sat idle"
+        ),
+    )
     parser.add_argument("--limit", type=int)
     parser.add_argument("--seed", type=int, default=SEED)
     args = parser.parse_args()
@@ -232,6 +259,31 @@ def main() -> None:
 
     rejected: dict[str, int] = defaultdict(int)
     args.output.parent.mkdir(parents=True, exist_ok=True)
+    rejected_handle = (
+        args.rejected.open("a", encoding="utf-8") if args.rejected else None  # noqa: SIM115
+    )
+
+    def refuse(sample: dict[str, object], attempt: int, reason: str, candidate: str) -> None:
+        """Count it, and keep the text. The count says a gate fired; the text says why."""
+        rejected[reason] += 1
+        if rejected_handle is None:
+            return
+        rejected_handle.write(
+            json.dumps(
+                {
+                    "id": sample.get("id"),
+                    "family": sample.get("family"),
+                    "attempt": attempt,
+                    "reason": reason,
+                    "row_label": sample.get("row_label"),
+                    "candidate": candidate,
+                },
+                ensure_ascii=False,
+            )
+            + "\n"
+        )
+        rejected_handle.flush()
+
     with args.output.open("a", encoding="utf-8") as handle:
         for position, sample in enumerate(samples, start=1):
             sample_id = int(sample["id"])
@@ -276,10 +328,10 @@ def main() -> None:
                     rejected[type(error).__name__] += 1
                     continue
                 if not candidate.endswith("?"):
-                    rejected["no_question_mark"] += 1
+                    refuse(sample, attempt, "no_question_mark", candidate)
                     continue
-                if _quotes_label(candidate, str(sample["row_label"])):
-                    rejected["copied_row_label"] += 1
+                if args.require_paraphrase and _quotes_label(candidate, str(sample["row_label"])):
+                    refuse(sample, attempt, "copied_row_label", candidate)
                     continue
                 question = candidate
                 break
@@ -289,11 +341,15 @@ def main() -> None:
             handle.flush()
             if position % 100 == 0:
                 print(f"  {position}/{len(samples)}", flush=True)
+    if rejected_handle is not None:
+        rejected_handle.close()
 
     total = sum(1 for line in args.output.read_text(encoding="utf-8").splitlines() if line.strip())
     print(f"rendered {total} questions -> {args.output}")
     if rejected:
         print("  rejected: " + ", ".join(f"{k} {v}" for k, v in sorted(rejected.items())))
+    if args.rejected:
+        print(f"  refused generations written to {args.rejected}")
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import random
 from importlib import import_module
+from pathlib import Path
 
 import pandas as pd
 import pytest
@@ -215,3 +216,47 @@ def test_an_unmeasurable_prompt_is_left_alone_rather_than_guessed_at() -> None:
         max_tokens=6144,
     )
     assert len(kept) == 3
+
+
+def test_the_paraphrase_rule_selects_against_the_paper_so_it_is_off_by_default() -> None:
+    """It rejected the way the exam actually asks, and that cost half a render session.
+
+    Applied to the 1,012 real questions against the row labels of their own retrieved tables, the
+    same test flags 590 -- 58.3% -- starting with question 1, the project's regression anchor:
+    "Lãi tiền gửi năm 2018 của công ty mẹ ..." over a row labelled "Lãi tiền gửi". So it does not
+    measure a bad question, it measures a question phrased the way the paper phrases it.
+
+    Enforcing it built a dev set that mirrors the paper less, not more: it kept only the harder
+    half and would have made X read worse than production.
+    """
+    # The rule still works; what changed is that nothing calls it unless asked. Question 1
+    # is itself a flagged case, which is the whole point.
+    assert renderer._quotes_label(
+        "Lãi tiền gửi năm 2018 của công ty mẹ CTCP Hàng không Vietjet (VJC) là bao nhiêu?",
+        "Lãi tiền gửi",
+    )
+    assert renderer._quotes_label(
+        "Lợi nhuận sau thuế của CTCP Chứng khoán FPT năm 2023 là bao nhiêu tỷ đồng?",
+        "Lợi nhuận sau thuế",
+    )
+    # A label of one or two words is too generic to be evidence either way.
+    assert not renderer._quotes_label("Tiền mặt cuối kỳ là bao nhiêu?", "Tiền mặt")
+
+    body = Path(renderer.__file__).read_text(encoding="utf-8")
+    assert "args.require_paraphrase and _quotes_label(" in body
+    assert '"--require-paraphrase"' in body
+    # And the prompt must stop forbidding it, or the model keeps paying for a rule nobody applies.
+    assert "KHÔNG chép nguyên văn" not in body
+
+
+def test_a_refused_generation_is_kept_not_just_counted() -> None:
+    """A count says a gate fired; only the text says why.
+
+    The first render came back at 50%, and with counts alone the diagnosis had to be rebuilt on a
+    laptop while two GPU sessions sat idle.
+    """
+    body = Path(renderer.__file__).read_text(encoding="utf-8")
+    assert '"--rejected"' in body
+    assert "def refuse(" in body
+    assert 'refuse(sample, attempt, "no_question_mark", candidate)' in body
+    assert '"candidate": candidate,' in body
