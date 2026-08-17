@@ -138,6 +138,12 @@ whose margin stayed positive or the half of a group below the median, use a sele
 member expression per company, one condition per test with one entry per company, and an
 operator among sum, mean, min, max, count, argmin and argmax. A median is a select node with no
 conditions at all.
+A select node returns one of its `members`, so each member must be the quantity the question asks
+you to REPORT, while `keys` is the separate quantity you RANK by. When the question asks for a
+percentage or a ratio -- "tỷ lệ ... là bao nhiêu %", "chiếm bao nhiêu phần trăm" -- every member
+must itself be that ratio, a binary division of two cells, never the raw amount the ratio is
+computed from. Ranking by one quantity and reporting another is the whole point of `keys`: put the
+figure you compare in `keys` and the figure you answer with in `members`.
 When the question asks for one reported figure, answer with exactly one cell node. A statement
 repeats the same figure across schedules, often with the opposite sign in a cash-flow adjustment, so
 adding those restatements cancels them to zero instead of confirming the figure. Combine cells only

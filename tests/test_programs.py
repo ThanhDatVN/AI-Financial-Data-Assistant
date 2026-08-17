@@ -593,3 +593,62 @@ def test_keys_are_relaxed_where_the_model_output_is_parsed_not_only_where_it_com
         expression_from_dict(
             {"kind": "select", "operator": "argmax", "members": members, "keys": members[:2]}
         )
+
+
+def test_a_ratio_question_is_told_where_the_division_goes() -> None:
+    """78 questions in one run returned an amount where the question asked for a percentage.
+
+    Every one was a select node whose members were raw cells. A select answers with one of its
+    members, so telling the model to "divide" is not enough: the division has to go into the
+    members, and the figure being compared moves to keys. Saying only that the dimensions
+    disagree left the model to fail the same way on all three attempts.
+    """
+    frames = {
+        f"df{index}": pd.DataFrame(
+            {
+                "row_index": [0],
+                "column_index": [1],
+                "ticker": ["AAA"],
+                "report_year": [2024],
+                "column_label": ["2024"],
+                "source_unit": ["VND"],
+                "numeric_value": [10.0],
+                "base_value": [10.0],
+            }
+        )
+        for index in (1, 2)
+    }
+    amounts = tuple(CellExpr(f"df{index}", 0, 1) for index in (1, 2))
+    reporting_an_amount = SelectExpr("argmax", amounts, keys=amounts)
+    with pytest.raises(ValueError, match=r"select node.*`members`.*move the figure you rank by"):
+        prepare_program(
+            reporting_an_amount,
+            selected_variables=["df1", "df2"],
+            frames=frames,
+            target_unit="PERCENT",
+            target_divisor=1.0,
+        )
+
+    # Outside a select the advice would be wrong, so it is not given.
+    with pytest.raises(ValueError, match="wants a proportion") as raised:
+        prepare_program(
+            amounts[0],
+            selected_variables=["df1"],
+            frames={"df1": frames["df1"]},
+            target_unit="PERCENT",
+            target_divisor=1.0,
+        )
+    assert "select node" not in str(raised.value)
+
+    # And the shape the advice asks for is accepted: members are the ratio, keys the comparison.
+    ratios = tuple(BinaryExpr("/", amounts[0], amounts[1]) for _ in range(2))
+    reporting_a_ratio = SelectExpr("argmax", ratios, keys=amounts)
+    prepared, dimension = prepare_program(
+        reporting_a_ratio,
+        selected_variables=["df1", "df2"],
+        frames=frames,
+        target_unit="PERCENT",
+        target_divisor=1.0,
+    )
+    assert dimension == "RATIO"
+    assert execute_expression(compile_expression(prepared), frames) == 1.0

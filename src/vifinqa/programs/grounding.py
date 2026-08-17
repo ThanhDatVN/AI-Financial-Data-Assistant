@@ -439,6 +439,15 @@ def prepare_program(
                 f" The question wants a proportion, so divide one {inferred} cell by another "
                 "instead of returning an amount."
             )
+            # 78 questions failed here in one run, and every one was a select node whose members
+            # were raw cells. Saying "divide" is not enough when the division has to go in a
+            # particular place: a select returns a member, so the members are what must become
+            # ratios, and the figure being compared belongs in `keys`.
+            if isinstance(expression, SelectExpr):
+                remedy += (
+                    " This is a select node, which answers with one of its `members`: make every "
+                    "member that ratio, and move the figure you rank by into `keys`."
+                )
         raise ValueError(
             f"Program dimension {inferred} is incompatible with target {expected}.{remedy}"
         )
