@@ -19,6 +19,14 @@ understate the very quantity being measured.
 they scored on the run this repackages, and `relevant_docs` is left alone too unless asked for.
 Only the table citations change, which is the whole point: one number moves, and it is the one
 being measured.
+
+The references this writes are the manifest's own -- `{doc}|table_N` -- and the grader does not
+read those. It wants `{doc}|{line_no}`, settled over five submissions and recorded in
+[docs/12 section 1.1](../docs/12-kinh-nghiem.md). Submissions 3132 and 3133 were spent finding
+that out again: every table metric came back 0.0 while EXECUTION and ANSWER were untouched, which
+is what an unreadable citation list looks like rather than a low-recall one.
+
+**Always follow this with `42_retarget_table_refs.py --grammar line` before packaging.**
 """
 
 from __future__ import annotations

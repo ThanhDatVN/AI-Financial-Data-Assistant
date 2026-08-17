@@ -603,3 +603,20 @@ def test_the_citation_probe_leaves_the_answer_alone(tmp_path: Path) -> None:
     # question's own metadata and scores 0.9537 doing it; moving two numbers at once would
     # trade a known-good one for a second unknown, and only one of them is being measured.
     assert "if args.docs_from_tables:" in body
+
+
+def test_the_citation_probe_says_its_output_needs_retargeting() -> None:
+    """Submissions 3132 and 3133 were spent on a conclusion the project already held.
+
+    The probe writes the manifest's own references, `{doc}|table_N`. The grader reads
+    `{doc}|{line_no}` -- settled over five submissions and recorded with "do not re-derive this".
+    Both packages came back with every table metric at 0.0 while EXECUTION and ANSWER were
+    untouched, which is what an unreadable citation list looks like rather than a low-recall one.
+
+    The note belongs here rather than only in a document read at the start of a session, because
+    this is where the references are made.
+    """
+    probe = import_module("scripts.46_cite_prompt_candidates")
+    doc = probe.__doc__ or ""
+    assert "42_retarget_table_refs.py --grammar line" in doc
+    assert "{doc}|{line_no}" in doc
