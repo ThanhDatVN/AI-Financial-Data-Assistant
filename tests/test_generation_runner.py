@@ -564,3 +564,39 @@ def test_the_budget_never_asks_for_more_than_the_timeout_can_decode() -> None:
     unmeasured.observe_rate(4096, 0.0, 360.0)
     assert unmeasured.affordable is None
     assert unmeasured.current == 6144
+
+
+def test_the_citation_probe_shares_the_generator_s_candidate_rule() -> None:
+    """The probe measures the set the generator built, so it must count it the same way.
+
+    Citing the top 20 of the ranking would be a different set: the generator skips candidates
+    whose table parses to no number, and allows a cohort question one candidate per route. Both
+    make the real set wider, and understating it would understate the very quantity the
+    submission is spent to measure.
+    """
+    probe = import_module("scripts.46_cite_prompt_candidates")
+    for tickers, years in (([], []), (["AAA"], [2024]), (["A", "B", "C"], [2023, 2024])):
+        spec = {"tickers": tickers, "years": years}
+        row = {"query_spec": spec}
+        assert probe._candidate_limit(spec, minimum=20) == runner._candidate_limit(row, minimum=20)
+    # A cohort question is allowed one candidate per route once that exceeds the floor.
+    assert probe._candidate_limit({"tickers": ["A"] * 6, "years": [1, 2, 3]}, minimum=10) == 18
+    assert probe._candidate_limit({"tickers": ["A"] * 6, "years": [1, 2, 3]}, minimum=20) == 20
+
+
+def test_the_citation_probe_leaves_the_answer_alone(tmp_path: Path) -> None:
+    """Only the two citation lists may change, or the experiment costs a submission and a run.
+
+    EXECUTION and ANSWER have to come back exactly as they scored, because the point is to read
+    one number off the same run rather than to test a new one.
+    """
+    probe = import_module("scripts.46_cite_prompt_candidates")
+    source = (tmp_path / "46_cite_prompt_candidates.py").write_text(
+        Path(probe.__file__).read_text(encoding="utf-8"), encoding="utf-8"
+    )
+    assert source
+    body = Path(probe.__file__).read_text(encoding="utf-8")
+    for field in ("answer", "pandas_query", "evidence"):
+        assert f'prediction["{field}"] =' not in body, f"the probe must not rewrite {field}"
+    assert 'prediction["relevant_tables"] =' in body
+    assert 'prediction["relevant_docs"] =' in body
