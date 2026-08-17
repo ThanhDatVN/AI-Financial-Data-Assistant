@@ -16,7 +16,9 @@ than N, and a cohort question is allowed more than N to begin with. Approximatin
 understate the very quantity being measured.
 
 `answer`, `pandas_query` and `evidence` are untouched, so EXECUTION and ANSWER stay exactly as
-they scored on the run this repackages. Only the two citation lists change.
+they scored on the run this repackages, and `relevant_docs` is left alone too unless asked for.
+Only the table citations change, which is the whole point: one number moves, and it is the one
+being measured.
 """
 
 from __future__ import annotations
@@ -62,6 +64,24 @@ def main() -> None:
         help="The generator's --candidate-tables for the run being repackaged",
     )
     parser.add_argument("--table-unit-source", default="latest")
+    parser.add_argument(
+        "--docs-from-tables",
+        action="store_true",
+        help=(
+            "Also rewrite relevant_docs to the documents the cited tables sit in. Off by "
+            "default: the run being repackaged names its documents from the question's own "
+            "metadata and scores 0.9537 doing it, and changing two things at once would trade "
+            "a known-good number for a second unknown. The point here is to read TABLES RECALL."
+        ),
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        help=(
+            "Stop after this many questions. For checking the script only -- the organiser "
+            "discards a submission that is missing any question, so a limited run is never one."
+        ),
+    )
     args = parser.parse_args()
 
     manifest = pd.read_parquet(args.manifest)
@@ -77,6 +97,24 @@ def main() -> None:
         )
     }
     predictions = json.loads(args.submission.read_text(encoding="utf-8"))
+    if args.limit:
+        predictions = predictions[: args.limit]
+
+    # Candidate lists overlap heavily between questions about the same company and year, so
+    # parsing each table once instead of once per appearance is the difference between minutes
+    # and an hour. The verdict per table is a single bit and never changes within a run.
+    has_numbers: dict[str, bool] = {}
+
+    def usable(table_ref: str) -> str | None:
+        if table_ref not in has_numbers:
+            try:
+                record, table = store.load(table_ref, unit_source=args.table_unit_source)
+                frame = parsed_table_to_long_frame(record, table)
+            except Exception:  # noqa: BLE001 - a table that will not load is one nobody saw
+                has_numbers[table_ref] = False
+            else:
+                has_numbers[table_ref] = bool(numeric_cells_of(frame))
+        return table_ref if has_numbers[table_ref] else None
 
     widths: list[int] = []
     for position, prediction in enumerate(predictions, start=1):
@@ -87,23 +125,21 @@ def main() -> None:
         for table_ref in row["fused"]:
             if len(shown) >= limit:
                 break
-            try:
-                record, table = store.load(str(table_ref), unit_source=args.table_unit_source)
-                frame = parsed_table_to_long_frame(record, table)
-            except Exception:  # noqa: BLE001 - an unreadable table is one the model never saw
-                continue
             # The generator fills the slot from further down rather than spending prompt budget
             # on a table with nothing to read, so the set reaches past `limit` in the ranking.
-            if not numeric_cells_of(frame):
-                continue
-            shown.append(str(record.table_ref))
+            kept = usable(str(table_ref))
+            if kept is not None:
+                shown.append(kept)
         prediction["relevant_tables"] = shown
-        prediction["relevant_docs"] = list(dict.fromkeys(ref.split("|", 1)[0] for ref in shown))
+        if args.docs_from_tables:
+            prediction["relevant_docs"] = list(dict.fromkeys(ref.split("|", 1)[0] for ref in shown))
         widths.append(len(shown))
         if position % 100 == 0:
             print(f"  {position}/{len(predictions)}", flush=True)
 
     write_json_atomic(args.output, predictions)
+    if args.limit:
+        print("  --limit was set: this file is a check, not a submission.")
     widths.sort()
     print(f"cited the shown candidate set for {len(predictions)} questions -> {args.output}")
     print(

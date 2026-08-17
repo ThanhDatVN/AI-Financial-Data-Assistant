@@ -599,4 +599,7 @@ def test_the_citation_probe_leaves_the_answer_alone(tmp_path: Path) -> None:
     for field in ("answer", "pandas_query", "evidence"):
         assert f'prediction["{field}"] =' not in body, f"the probe must not rewrite {field}"
     assert 'prediction["relevant_tables"] =' in body
-    assert 'prediction["relevant_docs"] =' in body
+    # Documents are left alone by default. The run being repackaged names them from the
+    # question's own metadata and scores 0.9537 doing it; moving two numbers at once would
+    # trade a known-good one for a second unknown, and only one of them is being measured.
+    assert "if args.docs_from_tables:" in body
