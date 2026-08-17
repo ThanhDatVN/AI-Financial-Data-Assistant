@@ -584,6 +584,93 @@ def test_the_citation_probe_shares_the_generator_s_candidate_rule() -> None:
     assert probe._candidate_limit({"tickers": ["A"] * 6, "years": [1, 2, 3]}, minimum=20) == 20
 
 
+def test_the_scope_router_changes_the_prompt_and_the_fingerprint(tmp_path: Path) -> None:
+    """Two policies show two different prompts, so a resume must not join them silently."""
+
+    class _Store:
+        def __init__(self, records: dict[str, ManifestRecord]) -> None:
+            self.records = records
+
+    def _record(scope: str, table: int) -> ManifestRecord:
+        doc = f"AAA_financial_statements_2024_{scope}"
+        return ManifestRecord(
+            table_ref=f"{doc}|table_{table}",
+            doc_id=doc,
+            ticker="AAA",
+            report_year=2024,
+            scope=scope,
+            table_id=table,
+            page_no=1,
+            line_no=table * 10,
+            char_offset=0,
+            section_title=None,
+            unit="VND",
+            header_rows=1,
+            n_rows=2,
+            n_cols=2,
+            headers=("Chỉ tiêu", "2024"),
+            row_labels=("Doanh thu thuần",),
+            retrieval_text="Doanh thu thuần",
+            source_path="report.txt",
+            html_sha256="0" * 64,
+        )
+
+    separate = _record("separate", 1)
+    consolidated = _record("consolidated", 2)
+    store = _Store({record.table_ref: record for record in (separate, consolidated)})
+    row = {
+        "id": 1,
+        "fused": [separate.table_ref, consolidated.table_ref],
+        "query_spec": {"tickers": ["AAA"], "years": [2024], "scope": None},
+    }
+    assert runner._routed_refs(row, store=store, policy="both") == [
+        separate.table_ref,
+        consolidated.table_ref,
+    ]
+    assert runner._routed_refs(row, store=store, policy="consolidated") == [consolidated.table_ref]
+    # The failure path cites the candidates a lost question was shown, so it has to survive a row
+    # that never got far enough to be well formed.
+    assert runner._routed_refs({"id": 1}, store=store, policy="consolidated") == []
+
+    retrieval = tmp_path / "retrieval.jsonl"
+    manifest = tmp_path / "manifest.parquet"
+    retrieval.write_text(json.dumps(row) + "\n", encoding="utf-8")
+    manifest.write_bytes(b"manifest-v1")
+    fingerprints = [
+        runner._fingerprint(
+            retrieval=retrieval,
+            manifest=manifest,
+            model="open/model",
+            model_revision="abc123",
+            candidate_tables=20,
+            max_tokens=1024,
+            context_limit=16384,
+            execution_timeout=10.0,
+            request_timeout=180.0,
+            memory_limit_mb=None,
+            thinking_mode="disabled",
+            max_attempts=3,
+            scope_router=policy,
+        )
+        for policy in ("both", "consolidated")
+    ]
+    assert fingerprints[0] != fingerprints[1]
+    assert fingerprints[0]["scope_router"] == "both"
+
+
+def test_the_citation_probe_routes_scope_the_way_the_generator_does() -> None:
+    """One rule, imported by both, because a probe that measures a different set measures nothing.
+
+    The probe's whole job is to report the recall of the set the generator will build. If it
+    routed scope by its own copy of the rule, a submission spent on the question would answer
+    about a list nothing ever showed the model.
+    """
+    probe = import_module("scripts.46_cite_prompt_candidates")
+    assert probe.scope_routed is runner.scope_routed
+    body = Path(probe.__file__).read_text(encoding="utf-8")
+    assert "policy=args.scope_router" in body
+
+
 def test_the_citation_probe_leaves_the_answer_alone(tmp_path: Path) -> None:
     """Only the two citation lists may change, or the experiment costs a submission and a run.
 

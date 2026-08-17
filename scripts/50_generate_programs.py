@@ -57,6 +57,7 @@ from vifinqa.programs.serde import (  # noqa: E402
     RankMismatchError,
     expression_from_dict,
 )
+from vifinqa.retrieval.routing import NO_ROUTING, scope_routed  # noqa: E402
 from vifinqa.submission.semantics import (  # noqa: E402
     SEMANTIC_CONVENTION_VERSION,
     normalize_absolute_difference,
@@ -102,6 +103,23 @@ def _candidate_limit(row: dict[str, object], *, minimum: int) -> int:
     tickers = _as_str_list(spec.get("tickers"), field="query_spec.tickers")
     years = _as_int_list(spec.get("years"), field="query_spec.years")
     return max(minimum, max(1, len(tickers)) * max(1, len(years)))
+
+
+def _routed_refs(row: dict[str, object], *, store: TableStore, policy: str) -> list[str]:
+    """The ranking this question's prompt draws from, after the scope policy has had its say.
+
+    Total on purpose. The failure path records the candidates a lost question was shown, and a
+    row malformed enough to reach it must not take the run down from inside the handler.
+    """
+    ranking = _as_str_list(row.get("fused", []), field="fused")
+    spec = row.get("query_spec")
+    stated = spec.get("scope") if isinstance(spec, dict) else None
+    return scope_routed(
+        ranking,
+        records=store.records,
+        scope=str(stated) if stated else None,
+        policy=policy,
+    )
 
 
 # Below this a program has no room to be written, so the prompt is what has to give.
@@ -523,6 +541,7 @@ def _fingerprint(
     selected_question_ids: list[int] | None = None,
     table_unit_source: str = "latest",
     row_hierarchy: bool = False,
+    scope_router: str = NO_ROUTING,
     project_revision: str | None = None,
     shard_count: int = 1,
     shard_index: int = 0,
@@ -549,6 +568,9 @@ def _fingerprint(
         "thinking_mode": thinking_mode,
         "max_attempts": max_attempts,
         "row_hierarchy": row_hierarchy,
+        # In the fingerprint because two policies show the model two different prompts. Resuming
+        # across a change here would mix both into one submission without saying so.
+        "scope_router": scope_router,
         "project_revision": project_revision,
         "shard_count": shard_count,
         "shard_index": shard_index,
@@ -595,6 +617,17 @@ def main() -> None:
         "--row-hierarchy",
         action="store_true",
         help="Show conservative accounting parent paths in row labels (experimental ablation)",
+    )
+    parser.add_argument(
+        "--scope-router",
+        choices=("both", "consolidated", "separate"),
+        default=NO_ROUTING,
+        help=(
+            "Assume this statement scope when the question does not say, and drop candidates "
+            "from the other one. `both` shows the ranking untouched, which is what every scored "
+            "run so far did; `consolidated` is the default measured at roughly 0.93 accuracy, "
+            "and it frees a quarter of the top-20 for candidates from deeper in the ranking"
+        ),
     )
     parser.add_argument(
         "--table-unit-source",
@@ -726,6 +759,7 @@ def main() -> None:
         selected_question_ids=[_as_int(row["id"], field="id") for row in run_scope],
         table_unit_source=args.table_unit_source,
         row_hierarchy=args.row_hierarchy,
+        scope_router=args.scope_router,
         project_revision=args.project_revision,
         shard_count=args.shard_count,
         shard_index=args.shard_index,
@@ -799,7 +833,7 @@ def main() -> None:
         fallback_years: list[int] = []
         try:
             candidate_limit = _candidate_limit(row, minimum=args.candidate_tables)
-            for table_ref in _as_str_list(row["fused"], field="fused"):
+            for table_ref in _routed_refs(row, store=store, policy=args.scope_router):
                 if len(schemas) >= candidate_limit:
                     break
                 record, table = store.load(str(table_ref), unit_source=args.table_unit_source)
@@ -1037,7 +1071,7 @@ def main() -> None:
                 "stage": "generation_or_execution",
                 "error_type": type(exc).__name__,
                 "error": str(exc),
-                "candidate_refs": _as_str_list(row.get("fused", []), field="fused")[
+                "candidate_refs": _routed_refs(row, store=store, policy=args.scope_router)[
                     :candidate_limit
                 ],
                 "model": args.model,

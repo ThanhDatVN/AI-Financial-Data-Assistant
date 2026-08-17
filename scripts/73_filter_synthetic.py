@@ -26,6 +26,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import random
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -58,17 +59,58 @@ from vifinqa.programs.serde import PROGRAM_GRAMMAR_SCHEMA, expression_from_dict 
 SEED = 20260811
 
 
+def _distractor_refs(
+    store: TableStore, refs: list[str], count: int, rng: random.Random
+) -> list[str]:
+    """Other tables from the same reports, to measure at the width production actually shows.
+
+    With gold tables alone, this script measures X with the retrieval difficulty taken out: a
+    solver that only has to read the right table is not the solver that has to find it among
+    twenty. That number is the honest one for comparing two prompts, and an upper bound on the
+    one the scoreboard sees. Padding the list closes the gap at the cost of a longer prefill.
+
+    The same reports rather than the whole corpus, because that is what routing already narrows
+    the candidates to before ranking ever runs.
+    """
+    if count <= 0:
+        return []
+    gold = set(refs)
+    documents = {ref.split("|", 1)[0] for ref in refs}
+    pool = sorted(
+        ref
+        for ref, record in store.records.items()
+        if record.doc_id in documents and ref not in gold
+    )
+    rng.shuffle(pool)
+    return pool[:count]
+
+
 def _candidates(
-    store: TableStore, refs: list[str], unit_source: str
+    store: TableStore, refs: list[str], unit_source: str, distractors: list[str], rng: random.Random
 ) -> tuple[list[CandidateSchema], dict[str, pd.DataFrame]]:
-    """Load the gold tables under the variable names the sampler used: df1, df2, ... in order."""
+    """Load the gold tables under the variable names the sampler used: df1, df2, ... in order.
+
+    With distractors, the order is drawn instead and the names follow the drawn positions. Both
+    halves matter: leaving gold first would let the model read position instead of the question,
+    and leaving gold named df1..dfk would let it read the name. Renaming is safe because nothing
+    here re-executes the recorded program -- only the answer it produced is compared.
+    """
+    ordered = list(refs)
+    if distractors:
+        ordered = [*refs, *distractors]
+        rng.shuffle(ordered)
     schemas: list[CandidateSchema] = []
     frames: dict[str, pd.DataFrame] = {}
-    for ref in refs:
+    for ref in ordered:
         record, table = store.load(str(ref), unit_source=unit_source)
         frame = parsed_table_to_long_frame(record, table)
+        numeric_cells = numeric_cells_of(frame)
+        # Production skips a candidate that parses to no number rather than spend prompt budget
+        # on it, and a distractor that behaves differently would not be measuring production.
+        if ref not in refs and not numeric_cells:
+            continue
         variable = f"df{len(schemas) + 1}"
-        schemas.append(CandidateSchema(variable, record, table, numeric_cells_of(frame)))
+        schemas.append(CandidateSchema(variable, record, table, numeric_cells))
         frames[variable] = frame
     return schemas, frames
 
@@ -163,11 +205,24 @@ def main() -> None:
         default=3,
         help="Independent tries per question; one hit keeps the sample",
     )
+    parser.add_argument(
+        "--distractors",
+        type=int,
+        default=0,
+        help=(
+            "Pad the prompt with this many non-gold tables from the same reports. 0 measures the "
+            "solver with the retrieval difficulty removed, which is an upper bound on the "
+            "scoreboard's X; about 19 measures it at the width production shows, for a longer "
+            "prefill per question"
+        ),
+    )
     parser.add_argument("--limit", type=int)
     parser.add_argument("--seed", type=int, default=SEED)
     args = parser.parse_args()
     if args.attempts < 1:
         parser.error("--attempts must be at least 1")
+    if args.distractors < 0:
+        parser.error("--distractors cannot be negative")
 
     rows = [
         json.loads(line)
@@ -217,7 +272,16 @@ def main() -> None:
                 # drift.
                 target_divisor = float(row["target_divisor"])
                 try:
-                    schemas, frames = _candidates(store, refs, args.table_unit_source)
+                    # Seeded per question, so the drawn distractors and their order are the same
+                    # on a resumed session as on the one that started it.
+                    rng = random.Random(args.seed + int(row["id"]))
+                    schemas, frames = _candidates(
+                        store,
+                        refs,
+                        args.table_unit_source,
+                        _distractor_refs(store, refs, args.distractors, rng),
+                        rng,
+                    )
                     system, user = build_program_prompt(
                         str(row["question"]),
                         schemas,

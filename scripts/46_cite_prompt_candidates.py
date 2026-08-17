@@ -27,12 +27,17 @@ that out again: every table metric came back 0.0 while EXECUTION and ANSWER were
 is what an unreadable citation list looks like rather than a low-recall one.
 
 **Always follow this with `42_retarget_table_refs.py --grammar line` before packaging.**
+
+`--candidate-tables` and `--scope-router` turn the same command into the rest of the experiment.
+Depth says what a two-stage table selection could reach at best; the scope router says what
+assuming the consolidated statement is worth, and both cost a submission and no GPU.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -47,13 +52,63 @@ from vifinqa.checkpoints.jsonl import write_json_atomic  # noqa: E402
 from vifinqa.evidence.store import TableStore, parsed_table_to_long_frame  # noqa: E402
 from vifinqa.generation.prompt import numeric_cells_of  # noqa: E402
 from vifinqa.indexing.manifest import ManifestRecord  # noqa: E402
+from vifinqa.retrieval.routing import NO_ROUTING, scope_routed  # noqa: E402
+
+
+def _routes(value: object) -> int:
+    return len(value) if isinstance(value, list) else 0
+
+
+_VARIABLE_RE = re.compile(r"^df(\d+)$")
+
+
+def _rebuild_evidence(
+    prediction: dict[str, object],
+    *,
+    shown: list[str],
+    store: TableStore,
+    root: Path,
+    unit_source: str,
+) -> int:
+    """Write the CSVs this answer read, found by the position their variable names encode.
+
+    The generator names its candidates df1, df2, ... in the order it built them, so `df8` is the
+    eighth entry of `shown`. That is the same list this script just computed, which is why the
+    mapping is sound here and nowhere else.
+    """
+    evidence = prediction.get("evidence")
+    if not isinstance(evidence, list):
+        return 0
+    written = 0
+    for item in evidence:
+        if not isinstance(item, dict):
+            continue
+        match = _VARIABLE_RE.match(str(item.get("variable", "")))
+        relative = str(item.get("csv_path", ""))
+        if not match or not relative:
+            raise ValueError(f"q{prediction.get('id')}: unreadable evidence entry {item}")
+        index = int(match.group(1)) - 1
+        if not 0 <= index < len(shown):
+            raise ValueError(
+                f"q{prediction.get('id')}: {item['variable']} is outside the {len(shown)} "
+                "candidates this ranking and depth produce. The run being repackaged used a "
+                "different --ranking-field or --candidate-tables."
+            )
+        destination = root / relative
+        if destination.exists():
+            continue
+        record, table = store.load(shown[index], unit_source=unit_source)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        parsed_table_to_long_frame(record, table).to_csv(destination, index=False, encoding="utf-8")
+        written += 1
+    return written
 
 
 def _candidate_limit(spec: dict[str, object], *, minimum: int) -> int:
     """The generator's own rule: a cohort question is allowed one candidate per route."""
-    tickers = spec.get("tickers") or []
-    years = spec.get("years") or []
-    return max(minimum, max(1, len(tickers)) * max(1, len(years)))
+    tickers = max(1, _routes(spec.get("tickers")))
+    years = max(1, _routes(spec.get("years")))
+    return max(minimum, tickers * years)
 
 
 def main() -> None:
@@ -80,6 +135,38 @@ def main() -> None:
             "model saw. A reranked file also carries `hybrid`, the order before reranking, which "
             "makes the second experiment -- did reranking help or hurt -- a rerun of this "
             "command rather than another artefact to fetch."
+        ),
+    )
+    parser.add_argument(
+        "--scope-router",
+        choices=("both", "consolidated", "separate"),
+        default=NO_ROUTING,
+        help=(
+            "Assume this statement scope when the question does not say, and drop candidates "
+            "from the other one, exactly as `50_generate_programs.py --scope-router` would. "
+            "`both` reproduces the ranking every scored run has used"
+        ),
+    )
+    parser.add_argument(
+        "--usable-cache",
+        type=Path,
+        help=(
+            "Remember which tables parse to a number. The verdict is a function of the corpus "
+            "and the frozen manifest, so it is the same for every variant, and it is the whole "
+            "cost of this script: an hour of parsing the first time, seconds afterwards"
+        ),
+    )
+    parser.add_argument(
+        "--write-evidence",
+        type=Path,
+        help=(
+            "Also rebuild the evidence CSVs the submission cites, under this directory. The "
+            "packager has to put each one in the ZIP, and an archived run drops them because "
+            "they are a deterministic function of the corpus. `52_restore_evidence_csv.py` "
+            "cannot rebuild them from a finalised submission -- it pairs evidence with "
+            "`relevant_tables`, and finalising rewrote that list to the citation set. The "
+            "mapping that still works is `dfN` -> the Nth candidate, and this script is the one "
+            "that knows how the candidate list was built, so it is the one that can do it"
         ),
     )
     parser.add_argument(
@@ -122,6 +209,10 @@ def main() -> None:
     # parsing each table once instead of once per appearance is the difference between minutes
     # and an hour. The verdict per table is a single bit and never changes within a run.
     has_numbers: dict[str, bool] = {}
+    if args.usable_cache and args.usable_cache.exists():
+        cached = json.loads(args.usable_cache.read_text(encoding="utf-8"))
+        has_numbers = {str(ref): bool(value) for ref, value in cached.items()}
+        print(f"loaded {len(has_numbers)} cached table verdicts from {args.usable_cache}")
 
     def usable(table_ref: str) -> str | None:
         if table_ref not in has_numbers:
@@ -135,12 +226,20 @@ def main() -> None:
         return table_ref if has_numbers[table_ref] else None
 
     widths: list[int] = []
+    rebuilt = 0
     for position, prediction in enumerate(predictions, start=1):
         row = rows[int(prediction["id"])]
         spec = row["query_spec"]
         limit = _candidate_limit(spec, minimum=args.candidate_tables)
+        stated = spec.get("scope")
+        ranking = scope_routed(
+            row[args.ranking_field],
+            records=store.records,
+            scope=str(stated) if stated else None,
+            policy=args.scope_router,
+        )
         shown: list[str] = []
-        for table_ref in row[args.ranking_field]:
+        for table_ref in ranking:
             if len(shown) >= limit:
                 break
             # The generator fills the slot from further down rather than spending prompt budget
@@ -148,14 +247,29 @@ def main() -> None:
             kept = usable(str(table_ref))
             if kept is not None:
                 shown.append(kept)
+        if args.write_evidence:
+            rebuilt += _rebuild_evidence(
+                prediction,
+                shown=shown,
+                store=store,
+                root=args.write_evidence,
+                unit_source=args.table_unit_source,
+            )
         prediction["relevant_tables"] = shown
         if args.docs_from_tables:
             prediction["relevant_docs"] = list(dict.fromkeys(ref.split("|", 1)[0] for ref in shown))
         widths.append(len(shown))
         if position % 100 == 0:
             print(f"  {position}/{len(predictions)}", flush=True)
+            # The cold pass costs hours and the cache is the whole point of paying it once.
+            # Written only at the end, a crash four hours in leaves nothing behind.
+            if args.usable_cache:
+                write_json_atomic(args.usable_cache, has_numbers)
 
     write_json_atomic(args.output, predictions)
+    if args.usable_cache:
+        write_json_atomic(args.usable_cache, has_numbers)
+        print(f"  wrote {len(has_numbers)} table verdicts to {args.usable_cache}")
     if args.limit:
         print("  --limit was set: this file is a check, not a submission.")
     widths.sort()
@@ -163,6 +277,9 @@ def main() -> None:
         f"cited the {args.ranking_field} candidate set for {len(predictions)} questions "
         f"-> {args.output}"
     )
+    print(f"  scope router: {args.scope_router}")
+    if args.write_evidence:
+        print(f"  rebuilt {rebuilt} evidence CSVs under {args.write_evidence}")
     print(
         f"  tables per question: min {widths[0]}, median {widths[len(widths) // 2]}, "
         f"max {widths[-1]}"

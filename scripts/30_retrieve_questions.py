@@ -12,11 +12,14 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from vifinqa.checkpoints.jsonl import JsonlRowCheckpoint, write_jsonl_atomic  # noqa: E402
+from vifinqa.checkpoints.jsonl import (  # noqa: E402
+    JsonlRowCheckpoint,
+    write_json_atomic,
+    write_jsonl_atomic,
+)
 from vifinqa.nlu.company import CompanyResolver  # noqa: E402
 from vifinqa.nlu.query_spec import parse_query_spec  # noqa: E402
 from vifinqa.retrieval.bm25 import BM25Index  # noqa: E402
-from vifinqa.retrieval.dense import DenseIndex  # noqa: E402
 from vifinqa.retrieval.fusion import (  # noqa: E402
     balanced_round_robin,
     coverage_budget,
@@ -80,24 +83,32 @@ def main() -> None:
         questions = questions[: args.limit]
     resolver = CompanyResolver.from_csv(args.companies)
     bm25 = BM25Index.load(args.bm25)
-    dense = DenseIndex.load(args.dense, device=args.dense_device) if args.dense else None
+    # Imported here rather than at the top because a BM25-only ranking scored better than both
+    # rankings built on the dense index (submissions 3135/3136/3137), and a run that does not
+    # want the dense stage should not need faiss and sentence-transformers installed to skip it.
+    dense = None
+    if args.dense:
+        from vifinqa.retrieval.dense import DenseIndex
+
+        dense = DenseIndex.load(args.dense, device=args.dense_device)
     args.output.parent.mkdir(parents=True, exist_ok=True)
+    fingerprint: dict[str, object] = {
+        "format_version": 1,
+        "questions_sha256": _sha256(args.questions),
+        "companies_sha256": _sha256(args.companies),
+        "bm25_records_sha256": _sha256(args.bm25 / "records.jsonl"),
+        "bm25_index_sha256": _sha256(args.bm25 / "data.csc.index.npy"),
+        "dense_records_sha256": (_sha256(args.dense / "records.jsonl") if args.dense else None),
+        "dense_index_sha256": (_sha256(args.dense / "index.faiss") if args.dense else None),
+        "project_revision": args.project_revision,
+        "top_k": args.top_k,
+        "candidate_k": args.candidate_k,
+        "question_ids": args.question_ids,
+        "limit": args.limit,
+    }
     checkpoint = JsonlRowCheckpoint(
         args.checkpoint_dir or args.output.with_name(args.output.name + ".checkpoint"),
-        fingerprint={
-            "format_version": 1,
-            "questions_sha256": _sha256(args.questions),
-            "companies_sha256": _sha256(args.companies),
-            "bm25_records_sha256": _sha256(args.bm25 / "records.jsonl"),
-            "bm25_index_sha256": _sha256(args.bm25 / "data.csc.index.npy"),
-            "dense_records_sha256": (_sha256(args.dense / "records.jsonl") if args.dense else None),
-            "dense_index_sha256": (_sha256(args.dense / "index.faiss") if args.dense else None),
-            "project_revision": args.project_revision,
-            "top_k": args.top_k,
-            "candidate_k": args.candidate_k,
-            "question_ids": args.question_ids,
-            "limit": args.limit,
-        },
+        fingerprint=fingerprint,
     )
     completed = checkpoint.completed_ids()
 
@@ -186,6 +197,19 @@ def main() -> None:
         )
     if len(output_rows) != len(rows):
         write_jsonl_atomic(args.output, output_rows)
+    # A ranking beside its own provenance, the way `34_merge_retrieval_shards.py` writes one.
+    # A final run asserts this file exists before it starts, and nothing produced it here: the
+    # only rankings that ever had one came through the reranker's merge step, so choosing the
+    # cheaper and better-scoring BM25 ranking would have failed that assertion twelve hours in.
+    write_json_atomic(
+        args.output.with_suffix(args.output.suffix + ".metadata.json"),
+        {
+            **fingerprint,
+            "rows": len(output_rows),
+            "retrieval_sha256": _sha256(args.output),
+            "ranking": "bm25" if dense is None else "hybrid",
+        },
+    )
     print(f"wrote {len(output_rows)} retrieval rows to {args.output}")
 
 

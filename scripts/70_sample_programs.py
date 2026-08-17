@@ -24,7 +24,7 @@ import unicodedata
 from collections import defaultdict
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Literal, cast
+from typing import Literal, NamedTuple, cast
 
 import pandas as pd
 
@@ -97,6 +97,23 @@ for _dimension, _units in (*_UNITS_BY_DIMENSION.items(), ("YEAR", (YEAR_UNIT,)))
         if TARGET_DIMENSIONS.get(_enum) != _dimension:
             raise SystemExit(f"target unit {_enum!r} does not measure {_dimension} to grounding")
 
+# Questions about one report far outnumber the rest, so single-table families dominate. The
+# organisers publish the real mix (docs/17): Easy 35.7%, Medium 23.2%, Intermediate 19.8%, Hard
+# 21.3%. The previous weights were inferred from fan-out and had no Hard tier at all, so a fifth
+# of the paper -- and the fifth every model scores worst on -- was missing from a set meant to
+# stand in for it.
+#
+# Module level rather than inside `main` so a test can check that every family this can draw is
+# one `71_render_questions.py` knows how to phrase. `conditional` was drawn for months without a
+# brief there, which would have written all 106 Hard dev samples as plain extremums.
+FAMILY_WEIGHTS: tuple[tuple[str, float], ...] = (
+    ("lookup", 0.357),  # Easy
+    ("ratio", 0.116),  # Medium, split with change
+    ("change", 0.116),  # Medium
+    ("extremum", 0.198),  # Intermediate
+    ("conditional", 0.213),  # Hard: multi-hop dependent
+)
+
 # A label that names no line item cannot anchor a question.
 MIN_LABEL_CHARS = 12
 # Base values are in dong. A denominator under a billion makes any ratio an artefact of rounding:
@@ -126,14 +143,28 @@ def _normalise(label: str) -> str:
     return " ".join("".join(c for c in folded if c.isalnum() or c.isspace()).split())
 
 
-# What one draw yields, in order: the program, the target unit's enum name, its Vietnamese
-# phrase, its divisor, and the row and column the question anchors on. Labels travel as plain
-# strings because that is all the renderer ever needs.
-#
-# The divisor rides alongside the tree rather than inside it. Production forbids the model from
-# writing target-unit scaling into a program -- the compiler applies it afterwards -- so a gold
-# program carrying its own division would teach the opposite of the convention it exists to show.
-type _Draw = tuple[ScalarExpr, str, str, float, str, str]
+class _Draw(NamedTuple):
+    """What one draw yields.
+
+    The divisor rides alongside the tree rather than inside it. Production forbids the model from
+    writing target-unit scaling into a program -- the compiler applies it afterwards -- so a gold
+    program carrying its own division would teach the opposite of the convention it exists to show.
+
+    `condition` is what makes a Hard sample answerable. Its program reads one line item to decide
+    which years count and a different one for the answer, and the sampler throws away any draw
+    where the two agree. So a question written from `row_label` alone asks a plainer question with
+    a provably different answer, and every Hard sample would be rendered unanswerable and then
+    filtered out for being unanswered -- losing the 21.3% tier the set exists to cover, while
+    looking like the model merely found it hard.
+    """
+
+    expression: ScalarExpr
+    target_unit: str
+    target_unit_text: str
+    target_divisor: float
+    row_label: str
+    column_label: str
+    condition: dict[str, object] | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -155,6 +186,8 @@ class Sample:
     answer: float
     pandas_query: str
     program: dict[str, object]
+    # Only the Hard family has one, and without it that family cannot be phrased. See `_Draw`.
+    condition: dict[str, object] | None = None
 
 
 def _is_askable(label: str) -> bool:
@@ -276,7 +309,9 @@ def _sample_lookup(frame: pd.DataFrame, record: ManifestRecord, rng: random.Rand
         row_index=int(cell["row_index"]),
         column_index=int(cell["column_index"]),
     )
-    return read, unit_name, unit_text, divisor, str(cell["row_label"]), str(cell["column_label"])
+    return _Draw(
+        read, unit_name, unit_text, divisor, str(cell["row_label"]), str(cell["column_label"])
+    )
 
 
 def _sample_ratio(frame: pd.DataFrame, record: ManifestRecord, rng: random.Random) -> _Draw | None:
@@ -318,7 +353,7 @@ def _sample_ratio(frame: pd.DataFrame, record: ManifestRecord, rng: random.Rando
         right=LiteralExpr(value=100.0),
     )
     text, name, divisor = PERCENT_UNIT
-    return (
+    return _Draw(
         expression,
         name,
         text,
@@ -397,7 +432,9 @@ def _sample_change(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw
         right=LiteralExpr(value=100.0),
     )
     text, name, divisor = PERCENT_UNIT
-    return expression, name, text, divisor, str(later["row_label"]), str(later["column_label"])
+    return _Draw(
+        expression, name, text, divisor, str(later["row_label"]), str(later["column_label"])
+    )
 
 
 def _sample_extremum(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw | None:
@@ -422,7 +459,9 @@ def _sample_extremum(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Dr
     expression = ArgExtremumExpr(mode=mode, keys=values, values=years)
     anchor = rows[ordered[-1]]
     text, name, divisor = YEAR_UNIT
-    return expression, name, text, divisor, str(anchor["row_label"]), str(anchor["column_label"])
+    return _Draw(
+        expression, name, text, divisor, str(anchor["row_label"]), str(anchor["column_label"])
+    )
 
 
 def _sample_conditional(frames: dict[str, pd.DataFrame], rng: random.Random) -> _Draw | None:
@@ -489,13 +528,23 @@ def _sample_conditional(frames: dict[str, pd.DataFrame], rng: random.Random) -> 
     if chosen is None:
         return None
     unit_text, unit_name, divisor = chosen
-    return (
+    return _Draw(
         expression,
         unit_name,
         unit_text,
         divisor,
         str(anchor["row_label"]),
         str(anchor["column_label"]),
+        # Survivors are exactly the years whose gate value beats a threshold taken from the gate
+        # series itself, and every non-survivor sits at or below it -- so "the N years where this
+        # item was highest" describes the same set exactly, and says it the way a question would.
+        condition={
+            "row_label": str(gate_rows[ordered[0]]["row_label"]),
+            "top_n": len(survivors),
+            "of_years": len(ordered),
+            "comparator": ">",
+            "threshold": threshold,
+        },
     )
 
 
@@ -662,18 +711,7 @@ def main() -> None:
     if manifest.empty:
         parser.error("no usable tables after filtering")
 
-    # Questions about one report far outnumber the rest, so single-table families dominate.
-    # The organisers publish the real mix (docs/17): Easy 35.7%, Medium 23.2%, Intermediate
-    # 19.8%, Hard 21.3%. The previous weights were inferred from fan-out and had no Hard tier at
-    # all, so a fifth of the paper -- and the fifth every model scores worst on -- was missing
-    # from a set meant to stand in for it.
-    families = (
-        ("lookup", 0.357),  # Easy
-        ("ratio", 0.116),  # Medium, split with change
-        ("change", 0.116),  # Medium
-        ("extremum", 0.198),  # Intermediate
-        ("conditional", 0.213),  # Hard: multi-hop dependent
-    )
+    families = FAMILY_WEIGHTS
     by_document: dict[str, list[str]] = defaultdict(list)
     for ref, doc in zip(manifest["table_ref"], manifest["doc_id"], strict=True):
         by_document[doc].append(ref)
@@ -752,7 +790,7 @@ def main() -> None:
             drawn = _sample_conditional(frames, rng)
         if drawn is None:
             continue
-        expression, unit_name, unit_text, divisor, row_label, column_label = drawn
+        expression, unit_name, unit_text, divisor, row_label, column_label, condition = drawn
         executed = _execute(expression, frames, unit_name, divisor)
         if executed is None:
             continue
@@ -782,6 +820,7 @@ def main() -> None:
                 answer=answer,
                 pandas_query=query,
                 program=expression_to_dict(expression),
+                condition=condition,
             )
         )
 

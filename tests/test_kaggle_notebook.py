@@ -9,6 +9,7 @@ BUILDER_NOTEBOOK = ROOT / "notebooks/01_kaggle_build_dense_artifact.ipynb"
 GENERATION_NOTEBOOK = ROOT / "notebooks/02_kaggle_dense_and_generate.ipynb"
 RESUME_NOTEBOOK = ROOT / "notebooks/03_kaggle_resume_and_submit.ipynb"
 PACKAGE_NOTEBOOK = ROOT / "notebooks/04_kaggle_package_submission.ipynb"
+SYNTHETIC_NOTEBOOK = ROOT / "notebooks/05_kaggle_render_and_filter_synthetic.ipynb"
 KAGGLE_INPUTS = ROOT / "src/vifinqa/kaggle_inputs.py"
 
 
@@ -122,10 +123,25 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e" in code
     assert '"scripts/33_rerank_retrieval.py"' in code
     assert '"scripts/34_merge_retrieval_shards.py"' in code
-    # Reranking is hours of cross-encoding whose value against labels is unmeasured, so the
-    # hybrid ranking has to be usable on its own.
-    assert "retrieval_hybrid_qc.json" in code
-    assert "RETRIEVAL = HYBRID" in code
+    # Three rankings, one scored run, one submission each: BM25 alone put a gold table in the
+    # prompt for 0.6168 of questions, BM25 plus dense fusion for 0.5997, and both plus the
+    # cross-encoder for 0.5642 (3135/3136/3137). Every stage on top of BM25 made it worse and
+    # cost GPU hours, so the default has to be the one that measured best, and the two losing
+    # stages have to be skippable rather than required.
+    assert 'RANKING = os.environ.get("VIFINQA_RANKING", "bm25")' in code
+    assert 'os.environ["VIFINQA_RANKING"] = "bm25"' in code
+    assert "RETRIEVAL = SPARSE" in code
+    assert 'if RANKING == "hybrid":' in code
+    # `RERANK` carries the whole answer, because the run manifest reads it at the end of a
+    # twelve-hour run to decide whether a reranker revision exists to record. Asking for the
+    # reranker on a ranking it cannot reorder left the name true and its revision undefined.
+    assert 'RERANK = os.environ.get("VIFINQA_RERANK") == "1" and RANKING == "hybrid"' in code
+    assert "if not RERANK:" in code
+    # Assume the consolidated statement when the question is silent: the candidates it frees are
+    # a quarter of the prompt, and the same flag has to reach every generation call site or a
+    # resume is refused for a setting nobody chose.
+    assert code.count('"--scope-router",') == 5
+    assert 'os.environ["VIFINQA_SCOPE_ROUTER"] = "both"' in code
     rerank_cell = next(
         "".join(cell["source"])
         for cell in json.loads(GENERATION_NOTEBOOK.read_text(encoding="utf-8"))["cells"]
@@ -137,15 +153,21 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert '"--max-batch-tokens"' in code and '"8192"' in code
     assert "retrieval_rerank_shards/shard_0/run_metadata.json" in code
     assert "checkpoint_project_revision" in code
-    assert '"hybrid_project_revision": HYBRID_PROJECT_SHA' in code
-    assert '"reranker_project_revision": RERANK_PROJECT_SHA' in code
-    # A final run may legitimately use the hybrid ranking, but never an unrecorded one.
-    assert "if RETRIEVAL != HYBRID:" in code
+    # Kaggle mounts inputs read-only and copytree preserves that, so an imported checkpoint is
+    # imported successfully and then fails on its first write. Both call sites need the fix.
+    assert "def make_writable(" in code
+    assert code.count("make_writable(") == 3
+    assert '"bm25_project_revision": SPARSE_PROJECT_SHA' in code
+    assert '"hybrid_project_revision": (HYBRID_PROJECT_SHA if HYBRID is not None else None)' in code
+    assert '"reranker_project_revision": (RERANK_PROJECT_SHA if RERANK else None)' in code
+    # A final run may legitimately use any of the three rankings, but never an unrecorded one.
+    assert "if RETRIEVAL not in (SPARSE, HYBRID):" in code
     assert "The retrieval used by a final run must be recorded." in code
     assert '"--data-parallel-size"' in code
     assert '"--shard-count"' in code
-    # hybrid retrieval, reranking, D1, smoke, widest-route, sample, unit ablation, full run
-    assert code.count('"--project-revision"') == 8
+    # BM25 retrieval, hybrid retrieval, reranking, D1, smoke, widest-route, sample, unit
+    # ablation, full run
+    assert code.count('"--project-revision"') == 9
     assert '"scripts/51_merge_generation_shards.py"' in code
     assert 'iter_input_paths(f"{GENERATION_NAME}_shards/shard_0/run_metadata.json")' in code
     assert "expected_smoke_answers = {1: 208253.201298, 213: 6.15569834}" in code
@@ -173,10 +195,63 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     assert "Qwen2.5" not in code
 
 
+def test_synthetic_notebook_measures_x_and_refuses_a_set_it_cannot_phrase() -> None:
+    """The first measurement of the third factor, and the two ways it can quietly be wrong.
+
+    A Hard sample carries a second line item that decides which years count. Rendered without it,
+    the question asks the plainer thing, whose answer the sampler had already proved differs -- so
+    the whole 21.3% tier would read as "the model finds Hard hard" when it was never asked.
+
+    And gold-only prompts measure the solver with the retrieval difficulty removed. That is the
+    right number for comparing two prompts and the wrong one for deciding what a GPU is worth, so
+    the notebook has to say which one it just printed.
+    """
+    code = _compiled_code(SYNTHETIC_NOTEBOOK)
+
+    assert '"scripts/71_render_questions.py"' in code
+    assert '"scripts/73_filter_synthetic.py"' in code
+    # Both stages run against the served model, and neither needs the dense index or a submission.
+    assert "22_build_dense.py" not in code
+    assert "33_rerank_retrieval.py" not in code
+    assert "41_package_submission.py" not in code
+
+    assert 'unphrasable = [row for row in hard if not row.get("condition")]' in code
+    assert "assert not unphrasable" in code
+    # And it has to point at the backfill, not the sampler: `--split dev --count 499` now returns
+    # 416 samples with 23 Hard ones against the 106 on disk, so re-sampling to add a field would
+    # swap the set that mirrors the paper for one that does not.
+    assert "scripts/74_backfill_condition.py" in code
+    assert "Do NOT " in code and "re-run 70_sample_programs.py" in code
+
+    # pass@1 is the like-for-like number; pass@k is what the filter keeps and it is higher.
+    assert "pass_at_1 = hits / tries if tries else 0.0" in code
+    assert "upper bounds on production X" in code
+    assert '"--distractors",' in code
+
+    # `outputs/` is outside git, so the programs arrive as a Dataset and the results have to be
+    # downloaded. A session that loses either has nothing to show for its hours.
+    assert "Upload `outputs/synthetic/` as a Kaggle Dataset" in code
+    assert "outputs/ is outside git, so this is the only copy." in code
+    # Twelve-hour cap: both stages append and skip what they judged, so a second session finishes.
+    assert "resuming from" in code
+
+    # The filter costs 8-9 hours, so a mangled render has to stop the session before it starts
+    # rather than after. The floor is overridable, because a deliberate --limit run trips it.
+    assert 'RENDER_FLOOR = float(os.environ.get("VIFINQA_RENDER_FLOOR", "0.85"))' in code
+    assert "assert rendered_share >= RENDER_FLOOR" in code
+    assert "VIFINQA_RENDER_FLOOR=0" in code
+
+
 def test_notebooks_discover_inputs_through_symlinked_kaggle_mounts() -> None:
     module_source = KAGGLE_INPUTS.read_text(encoding="utf-8")
     helpers = module_source[module_source.index("def iter_input_paths") :].rstrip("\n")
-    for notebook in (BUILDER_NOTEBOOK, GENERATION_NOTEBOOK, RESUME_NOTEBOOK, PACKAGE_NOTEBOOK):
+    for notebook in (
+        BUILDER_NOTEBOOK,
+        GENERATION_NOTEBOOK,
+        RESUME_NOTEBOOK,
+        PACKAGE_NOTEBOOK,
+        SYNTHETIC_NOTEBOOK,
+    ):
         code = _compiled_code(notebook)
         # The bootstrap cell runs before the project is installed, so it carries a verbatim
         # copy of the module instead of importing it.
@@ -225,7 +300,11 @@ def test_resume_notebook_finishes_a_run_without_rebuilding_its_retrieval() -> No
     # wrote it, so both are taken from the checkpoint rather than recomputed or assumed.
     assert 'iter_input_paths("retrieval_reranked.jsonl")' in code
     assert 'iter_input_paths("retrieval_hybrid.jsonl")' in code
+    # A BM25-only run leaves a differently named file, and a resume that cannot find the
+    # retrieval its checkpoint was built against cannot resume anything.
+    assert 'iter_input_paths("retrieval_bm25.jsonl")' in code
     assert 'sha256(path) == prior_metadata.get("retrieval_sha256")' in code
+    assert 'SCOPE_ROUTER = str(prior_metadata.get("scope_router", "both"))' in code
     assert 'PROJECT_SHA = prior_metadata["project_revision"]' in code
     assert 'TABLE_UNIT_SOURCE = str(prior_metadata.get("table_unit_source", "latest"))' in code
     assert '"--table-unit-source",\n    TABLE_UNIT_SOURCE,' in code
@@ -273,6 +352,7 @@ def test_both_generation_notebooks_pass_every_flag_the_fingerprint_reads() -> No
         "--thinking-mode",
         "--table-unit-source",
         "--candidate-tables",
+        "--scope-router",
         "--max-tokens",
         "--context-limit",
         "--max-attempts",

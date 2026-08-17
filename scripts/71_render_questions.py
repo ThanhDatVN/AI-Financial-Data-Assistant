@@ -64,7 +64,31 @@ _FAMILY_BRIEF = {
     "ratio": "Hỏi tỷ trọng của khoản mục đó trên khoản mục lớn nhất cùng cột, tính bằng phần trăm.",
     "change": "Hỏi khoản mục đó thay đổi bao nhiêu phần trăm giữa hai năm.",
     "extremum": "Hỏi năm nào khoản mục đó đạt giá trị lớn nhất (hoặc nhỏ nhất) trong các năm nêu.",
+    # The Hard tier, and the one family whose question is not a function of `row_label` alone: a
+    # different line item decides which years are eligible, and the sampler discards any draw
+    # whose filtered answer matches the unfiltered one. Phrased without the filter, the question
+    # has a provably different answer, so the whole 21.3% tier would be rendered wrong and then
+    # dropped by the solver filter for being unanswerable.
+    "conditional": (
+        "Hỏi giá trị của khoản mục đó, nhưng CHỈ xét trong nhóm năm thoả điều kiện nêu bên dưới. "
+        "Câu hỏi bắt buộc phải nêu cả điều kiện lọc lẫn khoản mục cần trả lời."
+    ),
 }
+
+
+def _condition_clause(condition: dict[str, object] | None) -> str:
+    """Say the filter the way a question would: a rank among the years, not a raw threshold."""
+    if not condition:
+        return ""
+    label = str(condition.get("row_label") or "").strip()
+    top_n = condition.get("top_n")
+    if not label or not isinstance(top_n, int):
+        return ""
+    return (
+        f"Điều kiện lọc: chỉ xét những năm mà '{label}' nằm trong nhóm {top_n} năm cao nhất "
+        "(so với chính các năm nêu trong câu hỏi). "
+        "Diễn đạt điều kiện này bằng lời, đừng nêu con số ngưỡng."
+    )
 
 
 def _normalise(text: str) -> str:
@@ -120,6 +144,10 @@ def _prompt(sample: dict[str, object], names: dict[str, str], rng: random.Random
         f"Đơn vị câu trả lời phải dùng: {sample['target_unit_text']}",
         f"Loại câu hỏi: {_FAMILY_BRIEF.get(str(sample['family']), '')}",
     ]
+    condition_raw = sample.get("condition")
+    condition = _condition_clause(condition_raw if isinstance(condition_raw, dict) else None)
+    if condition:
+        lines.append(condition)
     if section:
         lines.insert(3, f"Mục của báo cáo: {section}")
     if scope:
@@ -208,6 +236,14 @@ def main() -> None:
         for position, sample in enumerate(samples, start=1):
             sample_id = int(sample["id"])
             if sample_id in done:
+                continue
+            # A Hard sample without its filter recorded cannot be phrased: the question would ask
+            # the plainer thing, whose answer the sampler guarantees is different. Refusing here
+            # is loud; rendering it would look like a fluent question and fail at the solver.
+            if str(sample.get("family")) == "conditional" and not _condition_clause(
+                sample.get("condition") if isinstance(sample.get("condition"), dict) else None
+            ):
+                rejected["conditional_without_condition"] += 1
                 continue
             question = None
             for attempt in range(1, args.attempts + 1):
