@@ -144,6 +144,11 @@ percentage or a ratio -- "tỷ lệ ... là bao nhiêu %", "chiếm bao nhiêu p
 must itself be that ratio, a binary division of two cells, never the raw amount the ratio is
 computed from. Ranking by one quantity and reporting another is the whole point of `keys`: put the
 figure you compare in `keys` and the figure you answer with in `members`.
+The same rule decides "which year" questions -- "năm nào ... cao nhất", "vào năm nào" -- and it is
+the one they get wrong. The answer is a YEAR, so `members` must be the year literals and `keys` the
+amounts you rank them by; `arg_extremum` says the same thing in one node. Returning the amount
+answers a question nobody asked, and grounding rejects it for reporting VND where a year was
+wanted.
 When the question asks for one reported figure, answer with exactly one cell node. A statement
 repeats the same figure across schedules, often with the opposite sign in a cash-flow adjustment, so
 adding those restatements cancels them to zero instead of confirming the figure. Combine cells only

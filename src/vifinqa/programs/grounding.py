@@ -448,6 +448,19 @@ def prepare_program(
                     " This is a select node, which answers with one of its `members`: make every "
                     "member that ratio, and move the figure you rank by into `keys`."
                 )
+        elif expected == "YEAR":
+            # The same shape of mistake as the ratio one, at a different target, and it was left
+            # without a remedy: 21 questions ended on a bare "incompatible with target YEAR" in
+            # one run. The model is asked which year, finds the right extreme, and then reports
+            # the amount it ranked by -- which is what a select node returns unless its members
+            # are the years. It has never once emitted `arg_extremum` (0 of 519 clean programs),
+            # so naming the node it does use is what makes the remedy actionable.
+            remedy = (
+                " The question asks WHICH YEAR, so the answer is a year, not an amount. In a "
+                "select node the answer is one of its `members`, so make the members the year "
+                "literals and put the amounts you rank them by into `keys`; `arg_extremum` "
+                "expresses the same thing in one node."
+            )
         raise ValueError(
             f"Program dimension {inferred} is incompatible with target {expected}.{remedy}"
         )

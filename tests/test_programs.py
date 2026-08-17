@@ -652,3 +652,55 @@ def test_a_ratio_question_is_told_where_the_division_goes() -> None:
     )
     assert dimension == "RATIO"
     assert execute_expression(compile_expression(prepared), frames) == 1.0
+
+
+def test_a_year_question_is_told_where_the_year_goes_not_just_that_it_is_wrong() -> None:
+    """21 questions ended on a bare "incompatible with target YEAR" in one scored run.
+
+    It is the ratio mistake at a different target: the model is asked which year, finds the right
+    extreme, and reports the amount it ranked by -- which is what a select node returns unless its
+    members are the years. The ratio branch had already learned that saying "incompatible" three
+    times teaches nothing; the YEAR branch had no remedy at all.
+
+    `arg_extremum` gets named because the model has never emitted one -- 0 of 519 clean programs
+    (RUN-035) -- so a remedy phrased only in terms of that node would describe a shape it does not
+    write.
+    """
+    frame = pd.DataFrame(
+        {
+            "row_index": [0, 0],
+            "column_index": [1, 2],
+            "row_label": ["Doanh thu thuần"] * 2,
+            "column_label": ["2022", "2023"],
+            "source_unit": ["VND"] * 2,
+            "numeric_value": [10.0, 20.0],
+            "base_value": [10.0, 20.0],
+        }
+    )
+    program = {
+        "kind": "select",
+        "operator": "argmax",
+        "members": [
+            {"kind": "cell", "variable": "df1", "row_index": 0, "column_index": 1},
+            {"kind": "cell", "variable": "df1", "row_index": 0, "column_index": 2},
+        ],
+        "keys": [
+            {"kind": "cell", "variable": "df1", "row_index": 0, "column_index": 1},
+            {"kind": "cell", "variable": "df1", "row_index": 0, "column_index": 2},
+        ],
+        "conditions": [],
+    }
+    expression = expression_from_dict(program)
+    with pytest.raises(ValueError) as raised:
+        prepare_program(
+            expression,
+            selected_variables=["df1"],
+            frames={"df1": frame},
+            target_unit="YEAR",
+            target_divisor=1.0,
+        )
+    message = str(raised.value)
+    assert "WHICH YEAR" in message
+    assert "`members` the year literals" in message or "members the year" in message
+    assert "keys" in message
+    assert "arg_extremum" in message
