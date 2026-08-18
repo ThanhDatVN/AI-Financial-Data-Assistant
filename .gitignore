@@ -50,3 +50,7 @@ desktop.ini
 .DS_Store
 .vscode/
 .idea/
+
+# Kaggle run outputs downloaded per account. Same reason as outputs/: they are run
+# artefacts, they are large, and the archive under outputs/runs/ is where they belong.
+TK[0-9]*/

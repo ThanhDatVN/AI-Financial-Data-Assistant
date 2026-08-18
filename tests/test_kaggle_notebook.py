@@ -141,7 +141,14 @@ def test_kaggle_generation_notebook_is_valid_and_pinned() -> None:
     # a quarter of the prompt, and the same flag has to reach every generation call site or a
     # resume is refused for a setting nobody chose.
     assert code.count('"--scope-router",') == 5
-    assert 'os.environ["VIFINQA_SCOPE_ROUTER"] = "both"' in code
+    # Measured on 18/08: citing the candidate set under this policy scored table recall 0.6922
+    # against 0.6168 without it, and MRR@5 0.4195 against 0.3476 (3165 vs 3137). It is on by
+    # default because it costs no context -- it drops the other statement's tables and refills
+    # the slots from further down the same ranking.
+    assert 'os.environ["VIFINQA_SCOPE_ROUTER"] = "consolidated"' in code
+    # And the run finishes in one session. A non-empty limit -- "1012" included -- takes the
+    # partial-run branch, which stops without packaging.
+    assert 'os.environ["VIFINQA_QUESTION_LIMIT"] = ""' in code
     rerank_cell = next(
         "".join(cell["source"])
         for cell in json.loads(GENERATION_NOTEBOOK.read_text(encoding="utf-8"))["cells"]

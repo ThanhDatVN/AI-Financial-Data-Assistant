@@ -168,6 +168,32 @@ def _usable_section(section: str) -> str:
     return stripped
 
 
+_CORRECTION = {
+    "no_question_mark": (
+        "Câu vừa rồi bị loại vì KHÔNG kết thúc bằng dấu hỏi -- nó là câu trần thuật hoặc câu "
+        "mệnh lệnh kết thúc bằng dấu chấm. Giữ nguyên nội dung, viết lại thành MỘT câu hỏi kết "
+        "thúc bằng `?`."
+    ),
+    "copied_row_label": (
+        "Câu vừa rồi bị loại vì chép nguyên văn nhãn dòng. Diễn đạt lại khoản mục bằng thuật ngữ "
+        "khác, giữ nguyên phần còn lại."
+    ),
+}
+
+
+def _retry_prompt(base: str, reason: str, candidate: str) -> str:
+    """Say what was wrong with the last try, instead of drawing again at a warmer temperature.
+
+    Attempt two used to differ only by temperature, and the model duly repeated itself: 85 of the
+    217 refusals in one split were second attempts. The generator has fed its validator's message
+    back into the retry since the start; this loop had no reason not to.
+    """
+    note = _CORRECTION.get(reason)
+    if not note:
+        return base
+    return f'{base}\n\nLần trước bạn trả lời: "{candidate[:300]}"\n{note}'
+
+
 def _prompt(sample: dict[str, object], names: dict[str, str], rng: random.Random) -> str:
     ticker = str(sample["ticker"])
     raw_years = sample["report_years"]
@@ -363,13 +389,21 @@ def main() -> None:
                 rejected["conditional_without_condition"] += 1
                 continue
             question = None
+            # The prompt is drawn once: `_name_form` and `_scope_clause` consume the rng, so
+            # rebuilding it per attempt would silently rename the company between tries.
+            base_prompt = _prompt(sample, names, rng)
+            last_reason = ""
+            last_candidate = ""
             for attempt in range(1, args.attempts + 1):
                 try:
                     response = client.chat.completions.create(
                         model=args.model,
                         messages=[
                             {"role": "system", "content": SYSTEM},
-                            {"role": "user", "content": _prompt(sample, names, rng)},
+                            {
+                                "role": "user",
+                                "content": _retry_prompt(base_prompt, last_reason, last_candidate),
+                            },
                         ],
                         temperature=0.3 if attempt == 1 else 0.8,
                         seed=args.seed + attempt,
@@ -395,9 +429,11 @@ def main() -> None:
                 candidate = _trim_to_question(candidate)
                 if not candidate.endswith("?"):
                     refuse(sample, attempt, "no_question_mark", candidate)
+                    last_reason, last_candidate = "no_question_mark", candidate
                     continue
                 if args.require_paraphrase and _quotes_label(candidate, str(sample["row_label"])):
                     refuse(sample, attempt, "copied_row_label", candidate)
+                    last_reason, last_candidate = "copied_row_label", candidate
                     continue
                 question = candidate
                 break
