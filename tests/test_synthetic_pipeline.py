@@ -260,3 +260,45 @@ def test_a_refused_generation_is_kept_not_just_counted() -> None:
     assert "def refuse(" in body
     assert 'refuse(sample, attempt, "no_question_mark", candidate)' in body
     assert '"candidate": candidate,' in body
+
+
+def test_a_question_buried_under_trailing_prose_is_salvaged_not_discarded() -> None:
+    """7% of the 544 refused generations held a good question with commentary bolted on."""
+    assert (
+        renderer._trim_to_question(
+            "Doanh thu thuần của CTCP ABC năm 2022 là bao nhiêu tỷ đồng? Hãy giải thích thêm."
+        )
+        == "Doanh thu thuần của CTCP ABC năm 2022 là bao nhiêu tỷ đồng?"
+    )
+    # The mark has to be far enough in to be the end of a question rather than part of one.
+    assert renderer._trim_to_question("Năm 2020? Hãy") == "Năm 2020? Hãy"
+    assert renderer._trim_to_question("Không có dấu hỏi nào ở đây cả.").endswith(".")
+
+
+def test_a_postal_address_is_not_a_report_section() -> None:
+    """16% of section titles are addresses, digit runs or LaTeX, and they went into the question.
+
+    One rendered question asked about cash equivalents "được trình bày tại mục 10 $^{th}$ Floor,
+    Sun Wah Tower, 115 Nguyen Hue Street, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam".
+    The section was always optional context, so dropping a bad one costs nothing.
+    """
+    assert (
+        renderer._usable_section("02. CÁC KHOẢN ĐẦU TƯ TÀI CHÍNH")
+        == "02. CÁC KHOẢN ĐẦU TƯ TÀI CHÍNH"
+    )
+    assert renderer._usable_section("10 $^{th}$ Floor, Sun Wah Tower, 115 Nguyen Hue Street") == ""
+    assert renderer._usable_section("1121 2231 1411") == ""
+    assert renderer._usable_section("") == ""
+
+
+def test_every_family_shows_the_model_a_question_shaped_example() -> None:
+    """89% of refusals ended in a full stop -- a fluent instruction, not what the paper writes.
+
+    Measured on the 1,012 real questions: 965 end in a question mark, 44 in a full stop. So the
+    rule is right and the model was wrong, which is the opposite of the paraphrase rule. Asking
+    for the shape had not worked twice; every family now gets shown one.
+    """
+    families = {name for name, _weight in sampler.FAMILY_WEIGHTS}
+    assert families <= set(renderer._EXAMPLE), families - set(renderer._EXAMPLE)
+    for family, example in renderer._EXAMPLE.items():
+        assert example.endswith("?"), family

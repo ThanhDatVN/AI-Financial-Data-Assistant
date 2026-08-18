@@ -17,6 +17,7 @@ import argparse
 import json
 import os
 import random
+import re
 import sys
 import unicodedata
 from collections import defaultdict
@@ -45,9 +46,13 @@ _SCOPE_PHRASES = {
     "consolidated": ("hợp nhất", "báo cáo hợp nhất"),
 }
 
+# The ceiling is a safety valve, not a style rule. At 400 it became a quality filter by accident:
+# a Hard question names the filter line item, the answer line item, the company and four or five
+# years, which measures about 292 characters against 132-166 for every other family, and 24 of the
+# 544 refused generations were cut off at exactly 400 with the sentence unfinished.
 QUESTION_SCHEMA: dict[str, object] = {
     "type": "object",
-    "properties": {"question": {"type": "string", "minLength": 20, "maxLength": 400}},
+    "properties": {"question": {"type": "string", "minLength": 20, "maxLength": 700}},
     "required": ["question"],
     "additionalProperties": False,
 }
@@ -123,6 +128,46 @@ def _scope_clause(scope: str, rng: random.Random) -> str:
     return phrases[rng.randrange(len(phrases))] if phrases else ""
 
 
+_EXAMPLE = {
+    "lookup": "Doanh thu thuần của CTCP ABC năm 2022 là bao nhiêu tỷ đồng?",
+    "ratio": "Hàng tồn kho của CTCP ABC chiếm bao nhiêu phần trăm tổng tài sản năm 2022?",
+    "change": "Doanh thu thuần của CTCP ABC thay đổi bao nhiêu phần trăm từ năm 2021 sang 2022?",
+    "extremum": "Trong các năm 2020, 2021 và 2022, năm nào CTCP ABC có doanh thu thuần cao nhất?",
+    # The Hard form is the one the model keeps writing as an instruction, so its example carries
+    # both clauses and still lands on a question mark.
+    "conditional": (
+        "Trong các năm 2020, 2021 và 2022, chỉ xét những năm mà tiền và tương đương tiền của "
+        "CTCP ABC nằm trong nhóm 2 năm cao nhất, năm nào công ty có hàng tồn kho lớn nhất và "
+        "giá trị là bao nhiêu tỷ đồng?"
+    ),
+}
+
+
+_ADDRESS_RE = re.compile(
+    r"(Street|Floor|Tower|District|Ward|City|Vietnam|Chi Minh|Hanoi|Ha Noi)", re.IGNORECASE
+)
+_DIGITS_ONLY_RE = re.compile(r"^[0-9 .,/-]+$")
+
+
+def _usable_section(section: str) -> str:
+    """Keep a report section only when it names one, which 84% of them do.
+
+    The other 16% are the company's postal address, a bare run of digits off a page header, or a
+    LaTeX fragment the parser kept. Passing those through put "được trình bày tại mục 10 $^{th}$
+    Floor, Sun Wah Tower, 115 Nguyen Hue Street, Ben Nghe Ward, District 1, Ho Chi Minh City,
+    Vietnam" inside a question about cash equivalents -- longer, stranger, and no help to anyone.
+    An omitted section costs nothing: it was always optional context.
+    """
+    stripped = section.strip()
+    if not stripped or len(stripped) > 90:
+        return ""
+    if _ADDRESS_RE.search(stripped) or _DIGITS_ONLY_RE.match(stripped):
+        return ""
+    if chr(92) in stripped or "$" in stripped or "^{" in stripped:
+        return ""
+    return stripped
+
+
 def _prompt(sample: dict[str, object], names: dict[str, str], rng: random.Random) -> str:
     ticker = str(sample["ticker"])
     raw_years = sample["report_years"]
@@ -134,7 +179,7 @@ def _prompt(sample: dict[str, object], names: dict[str, str], rng: random.Random
         if len(years) == 1
         else f"các năm {', '.join(str(year) for year in years)}"
     )
-    section = str(sample.get("section_title") or "").strip()
+    section = _usable_section(str(sample.get("section_title") or ""))
     lines = [
         f"Doanh nghiệp: {company}",
         f"Kỳ báo cáo: {period}",
@@ -156,7 +201,9 @@ def _prompt(sample: dict[str, object], names: dict[str, str], rng: random.Random
         lines.insert(1, "Phạm vi báo cáo: KHÔNG được nhắc tới trong câu hỏi.")
     lines.append(
         "\nYêu cầu bắt buộc:\n"
-        "- Viết đúng MỘT câu hỏi, kết thúc bằng dấu hỏi.\n"
+        "- Kết thúc bằng dấu hỏi `?`. Đây là điều kiện cứng: một câu trần thuật kết thúc bằng "
+        "dấu chấm sẽ bị loại, dù nội dung đúng.\n"
+        f"- Viết đúng MỘT câu hỏi. Ví dụ đúng dạng: \"{_EXAMPLE.get(str(sample['family']), '')}\"\n"
         "- Nêu rõ doanh nghiệp, kỳ báo cáo và đơn vị của đáp án.\n"
         "- Gọi tên khoản mục theo cách người đọc báo cáo tài chính thường gọi; dùng đúng "
         "thuật ngữ của bảng cũng được, đề thi thật làm vậy ở 58% số câu.\n"
@@ -164,6 +211,17 @@ def _prompt(sample: dict[str, object], names: dict[str, str], rng: random.Random
         "- Dùng lối viết tự nhiên của đề thi tiếng Việt."
     )
     return "\n".join(lines)
+
+
+def _trim_to_question(candidate: str) -> str:
+    """Drop anything the model added after its question mark.
+
+    7% of refused generations held a perfectly good question with commentary bolted on. Throwing
+    those away spends a generation to punish a suffix. The mark has to be far enough in to be the
+    end of a question rather than part of one.
+    """
+    cut = candidate.rfind("?")
+    return candidate[: cut + 1].strip() if cut >= 30 else candidate
 
 
 def _is_proper_noun(row_label: str) -> bool:
@@ -207,7 +265,14 @@ def main() -> None:
     parser.add_argument("--base-url", default="http://127.0.0.1:8000/v1")
     parser.add_argument("--api-key-env", default="VIFINQA_API_KEY")
     parser.add_argument("--model", required=True)
-    parser.add_argument("--max-tokens", type=int, default=256)
+    parser.add_argument(
+        "--max-tokens",
+        type=int,
+        # Raised alongside the schema ceiling so neither bound is the one that decides what a
+        # Hard question may say. Vietnamese with diacritics costs roughly one token per 1.2-1.8
+        # characters, so a 700-character allowance needs well over 256 tokens behind it.
+        default=640,
+    )
     parser.add_argument("--request-timeout", type=float, default=120.0)
     parser.add_argument("--attempts", type=int, default=2)
     parser.add_argument(
@@ -327,6 +392,7 @@ def main() -> None:
                 except Exception as error:  # noqa: BLE001 - one lost sample, not a lost run
                     rejected[type(error).__name__] += 1
                     continue
+                candidate = _trim_to_question(candidate)
                 if not candidate.endswith("?"):
                     refuse(sample, attempt, "no_question_mark", candidate)
                     continue
