@@ -651,3 +651,20 @@ def test_the_filter_is_sharded_and_carries_both_measured_switches() -> None:
     assert '"worked_example": WORKED_EXAMPLE' in code
     # The miss taxonomy used to exist only in one process's stdout.
     assert '"misses": miss_totals' in code
+
+
+def test_a_second_setting_writes_its_own_files_instead_of_finding_them_done() -> None:
+    """`73` skips any id its output already holds -- right for resuming, wrong for comparing.
+
+    The dev bench exists to run one setting against another. With the verdict files named after
+    the split alone, running "off" and then "year" would leave the second pass with every id
+    already judged: it would write nothing, print the first pass's numbers, and look like a
+    result. The questions stay named after the split, because they are the half worth reusing.
+    """
+    code = _compiled_code(SYNTHETIC_NOTEBOOK)
+    assert 'RUN_TAG = f"{SPLIT}_{ROOT_GRAMMAR}" + ("_ex" if WORKED_EXAMPLE else "")' in code
+    for artefact in ("_solved.s{index}.jsonl", "_rejected.s{index}.jsonl", "_x_measurement.json"):
+        assert f"{{RUN_TAG}}{artefact}" in code, artefact
+    # The rendered questions are the reusable asset and must NOT be keyed to the solver setting.
+    assert 'f"{SPLIT}_questions.jsonl"' in code
+    assert 'f"{RUN_TAG}_questions.jsonl"' not in code
