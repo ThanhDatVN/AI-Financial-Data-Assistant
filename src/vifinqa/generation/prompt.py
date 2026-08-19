@@ -114,6 +114,54 @@ def _render_candidate(candidate: CandidateSchema, *, include_row_hierarchy: bool
     )
 
 
+# One worked example of the shape a target expects, chosen by that target and nothing else.
+#
+# Not a style guide -- a measurement. On 499 dev samples with the gold tables already in the
+# prompt, every family whose answer is a currency amount scored 0.84 or 0.13, while PERCENT scored
+# 0.03 and 0.00 and YEAR scored 0.00. Across three scored runs the model emitted `arg_extremum` 0
+# times in 519, 640 and 631 clean programs: the one node that returns a label rather than a value
+# has never appeared, and the only place the prompt mentions it describes it as "the same thing in
+# one node" without ever showing its fields. `keys` and `values`, not `keys` and `members`.
+#
+# The project has already paid for this lesson once at the other end of the pipeline: the question
+# renderer was told the rule twice and kept writing statements, and only a worked example ending
+# in a question mark moved it -- 83% to 100%. Saying the rule is not showing the shape.
+#
+# Scoped to the asked-for target rather than showing all three, because prompt budget is the
+# scarce thing here and the coverage that matters is coverage of the structure THIS answer needs.
+# Coordinates are illustrative; value_column and dimension are omitted on cells exactly as the
+# system prompt instructs, so the example cannot teach a habit the rest of the prompt forbids.
+_WORKED_EXAMPLES: dict[str, str] = {
+    "YEAR": (
+        "The answer is a year, so it is one of `values`, and `keys` holds the amounts you rank "
+        "by. One node does it:\n"
+        '{"kind":"arg_extremum","mode":"argmax",'
+        '"keys":[{"kind":"cell","variable":"df1","row_index":4,"column_index":2},'
+        '{"kind":"cell","variable":"df2","row_index":4,"column_index":2}],'
+        '"values":[{"kind":"literal","value":2022,"dimension":"YEAR"},'
+        '{"kind":"literal","value":2023,"dimension":"YEAR"}]}'
+    ),
+    "PERCENT": (
+        "A proportion is a division, then times one hundred. Returning either amount on its own "
+        "answers a question nobody asked:\n"
+        '{"kind":"binary","operator":"*","left":{"kind":"binary","operator":"/",'
+        '"left":{"kind":"cell","variable":"df1","row_index":14,"column_index":1},'
+        '"right":{"kind":"cell","variable":"df1","row_index":1,"column_index":1}},'
+        '"right":{"kind":"literal","value":100,"dimension":"DIMENSIONLESS"}}\n'
+        "For a change between two years the numerator is the difference: "
+        '{"kind":"binary","operator":"-","left":{"kind":"cell","variable":"df2",'
+        '"row_index":4,"column_index":2},"right":{"kind":"cell","variable":"df1",'
+        '"row_index":4,"column_index":2}} in place of the single cell above.'
+    ),
+}
+_WORKED_EXAMPLES["RATIO"] = _WORKED_EXAMPLES["PERCENT"]
+
+
+def worked_example_for(target_unit: str) -> str:
+    """The example block for a target, or empty for the amounts that already work."""
+    return _WORKED_EXAMPLES.get(target_unit.upper(), "")
+
+
 def build_program_prompt(
     question: str,
     candidates: list[CandidateSchema],
@@ -123,6 +171,7 @@ def build_program_prompt(
     required_tickers: list[str] | None = None,
     required_years: list[int] | None = None,
     include_row_hierarchy: bool = False,
+    worked_example: bool = False,
 ) -> tuple[str, str]:
     system = """You translate a Vietnamese financial question into a typed arithmetic IR tree.
 Each variable is a normalized long pandas DataFrame with columns row_index, column_index,
@@ -157,6 +206,9 @@ selected_variables must list exactly the variables your program reads, and nothi
 consulted. Omit value_column and dimension on a cell whose table declares a source unit; grounding
 fills both from that unit, and leaving them out keeps a wide cohort program short enough to finish.
 Return only JSON matching the supplied schema; never emit Python/Pandas code or source values."""
+    example = worked_example_for(target_unit) if worked_example else ""
+    if example:
+        system += f"\nWorked example for target_unit={target_unit}. {example}"
     rendered = "\n\n".join(
         _render_candidate(candidate, include_row_hierarchy=include_row_hierarchy)
         for candidate in candidates

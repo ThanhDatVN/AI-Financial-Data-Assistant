@@ -56,10 +56,11 @@ from vifinqa.programs.ir import (  # noqa: E402
     ScalarExpr,
 )
 from vifinqa.programs.serde import (  # noqa: E402
-    PROGRAM_GRAMMAR_SCHEMA,
     PROGRAM_JSON_SCHEMA,
+    ROOT_GRAMMAR_POLICIES,
     RankMismatchError,
     expression_from_dict,
+    program_grammar_for_target,
 )
 from vifinqa.retrieval.routing import NO_ROUTING, scope_routed  # noqa: E402
 from vifinqa.submission.semantics import (  # noqa: E402
@@ -386,6 +387,7 @@ def _fit_prompt(
     required_tickers: list[str],
     required_years: list[int],
     row_hierarchy: bool,
+    worked_example: bool,
     tokenize_url: str,
     model: str,
     context_limit: int,
@@ -413,6 +415,7 @@ def _fit_prompt(
             required_tickers=required_tickers,
             required_years=required_years,
             include_row_hierarchy=row_hierarchy,
+            worked_example=worked_example,
         )
 
     system, user = render(schemas)
@@ -524,6 +527,8 @@ def _fingerprint(
     table_unit_source: str = "latest",
     row_hierarchy: bool = False,
     scope_router: str = NO_ROUTING,
+    root_grammar: str = "off",
+    worked_example: bool = False,
     project_revision: str | None = None,
     shard_count: int = 1,
     shard_index: int = 0,
@@ -553,6 +558,11 @@ def _fingerprint(
         # In the fingerprint because two policies show the model two different prompts. Resuming
         # across a change here would mix both into one submission without saying so.
         "scope_router": scope_router,
+        # Both decide what the model is shown and what it is allowed to emit, so a
+        # checkpoint written under one must not be continued under the other -- the scope
+        # router is in here for exactly the same reason.
+        "root_grammar": root_grammar,
+        "worked_example": worked_example,
         "project_revision": project_revision,
         "shard_count": shard_count,
         "shard_index": shard_index,
@@ -609,6 +619,26 @@ def main() -> None:
             "from the other one. `both` shows the ranking untouched, which is what every scored "
             "run so far did; `consolidated` is the default measured at roughly 0.93 accuracy, "
             "and it frees a quarter of the top-20 for candidates from deeper in the ranking"
+        ),
+    )
+    parser.add_argument(
+        "--root-grammar",
+        default="off",
+        choices=sorted(ROOT_GRAMMAR_POLICIES),
+        help=(
+            "Narrow the program's ROOT node to the shapes the target unit admits. 'off' "
+            "is what every scored run so far did. Measured 19/08 on 499 dev samples with "
+            "the gold tables already in the prompt: families answering in a currency scored "
+            "0.84 and 0.13, PERCENT scored 0.03 and 0.00, YEAR scored 0.00"
+        ),
+    )
+    parser.add_argument(
+        "--worked-example",
+        action="store_true",
+        help=(
+            "Show one worked program of the shape the target expects. Across three scored "
+            "runs the model emitted `arg_extremum` 0 times in 519, 640 and 631 clean "
+            "programs, and the prompt never showed it one"
         ),
     )
     parser.add_argument(
@@ -742,6 +772,8 @@ def main() -> None:
         table_unit_source=args.table_unit_source,
         row_hierarchy=args.row_hierarchy,
         scope_router=args.scope_router,
+        root_grammar=args.root_grammar,
+        worked_example=args.worked_example,
         project_revision=args.project_revision,
         shard_count=args.shard_count,
         shard_index=args.shard_index,
@@ -852,6 +884,7 @@ def main() -> None:
                 required_tickers=required_tickers,
                 required_years=required_years,
                 row_hierarchy=args.row_hierarchy,
+                worked_example=args.worked_example,
                 cohort_size=max(1, len(required_tickers) * len(required_years)),
                 tokenize_url=tokenize_url,
                 model=args.model,
@@ -914,7 +947,10 @@ def main() -> None:
                             "json_schema": {
                                 "name": "pandas_program",
                                 "strict": True,
-                                "schema": PROGRAM_GRAMMAR_SCHEMA,
+                                # Narrowed by the unit the answer must be in, when asked.
+                                "schema": program_grammar_for_target(
+                                    fallback_target_unit, policy=args.root_grammar
+                                ),
                             },
                         },
                         extra_body=extra_body,

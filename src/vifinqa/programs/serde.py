@@ -294,6 +294,88 @@ def _build_program_grammar_schema() -> dict[str, object]:
 PROGRAM_GRAMMAR_SCHEMA = _build_program_grammar_schema()
 
 
+# Which root nodes can possibly answer a question, given the unit the answer is in.
+#
+# Measured 19/08/2026 on 499 dev samples with the gold tables already in the prompt and no
+# distractors -- retrieval difficulty removed entirely. The boundary was not difficulty, it was
+# the dimension of the answer:
+#
+#     lookup       target currency   root cell           pass@1 0.8371
+#     conditional  target currency   root select         pass@1 0.1274
+#     ratio        target PERCENT    root binary         pass@1 0.0345
+#     change       target PERCENT    root binary         pass@1 0.0000
+#     extremum     target YEAR       root arg_extremum   pass@1 0.0000
+#
+# Two exact zeros, from a model that answers 84% of plain lookups. Replaying the gold programs
+# through this module and the compiler reproduced all 499 recorded answers exactly, so neither the
+# unit convention nor the tolerance is at fault. Across three scored runs the model emitted
+# `arg_extremum` 0 times in 519, 640 and 631 clean programs.
+#
+# Only YEAR is narrowed by default, and the restraint is the point:
+#
+#  * YEAR earns it. 65 failed attempts in run 3226 died on "Program dimension VND is incompatible
+#    with target YEAR", which says the program returned an amount. A year is a label, never a
+#    stored value, so no legitimate answer is a bare cell -- checked against all 99 gold extremum
+#    samples, every one an `arg_extremum`.
+#  * PERCENT does not, on this evidence. Six gold `lookup` samples have target PERCENT and a plain
+#    `cell` root, because their source column already holds a percentage -- forbidding cell there
+#    would make correct answers unreachable. And `select` is permissive enough to return a VND
+#    amount anyway, so narrowing to (binary, select, cell) removes almost nothing. `percent` is
+#    kept selectable so it can be measured as its own variable rather than assumed.
+#
+# Narrowing the ROOT alone is also deliberate. Sub-expressions keep the whole grammar, so a binary
+# root still holds cells and a select root still holds whatever it needs; only the single decision
+# the measurement indicts is taken away.
+ROOT_GRAMMAR_POLICIES: dict[str, dict[str, tuple[str, ...]]] = {
+    # Today's behaviour: the model picks any root for any target.
+    "off": {},
+    # The answer is a label, so it has to come from picking among candidates.
+    "year": {"YEAR": ("arg_extremum", "select")},
+    # Pushes the one node three scored runs never produced. Competing hypothesis to "year": if the
+    # model cannot write `arg_extremum` at all, this reads worse than "year" rather than better.
+    "year-strict": {"YEAR": ("arg_extremum",)},
+    # Adds the weak PERCENT constraint, kept measurable rather than assumed. `cell` stays legal
+    # because six gold lookups need it.
+    "year+percent": {
+        "YEAR": ("arg_extremum", "select"),
+        "PERCENT": ("binary", "select", "cell"),
+        "RATIO": ("binary", "select", "cell"),
+    },
+}
+DEFAULT_ROOT_GRAMMAR_POLICY = "off"
+
+
+def program_grammar_for_target(
+    target_unit: str, *, policy: str = DEFAULT_ROOT_GRAMMAR_POLICY
+) -> dict[str, object]:
+    """The decoding grammar with the root narrowed to the shapes this target admits.
+
+    Returns the unrestricted grammar for `policy="off"` and for any target the policy does not
+    name, so currency, share and count questions decode exactly as they do today -- the 84% case
+    is never touched by this.
+    """
+    if policy not in ROOT_GRAMMAR_POLICIES:
+        raise ValueError(
+            f"Unknown root grammar policy {policy!r}; "
+            f"expected one of {sorted(ROOT_GRAMMAR_POLICIES)}"
+        )
+    kinds = ROOT_GRAMMAR_POLICIES[policy].get(target_unit.upper())
+    if not kinds:
+        return PROGRAM_GRAMMAR_SCHEMA
+    schema = copy.deepcopy(PROGRAM_GRAMMAR_SCHEMA)
+    properties = cast(dict[str, object], schema["properties"])
+    defined = cast(dict[str, object], schema["$defs"])
+    names = [
+        f"{kind}_{GRAMMAR_MAX_DEPTH}" if kind not in {"cell", "literal"} else kind for kind in kinds
+    ]
+    missing = [name for name in names if name not in defined]
+    if missing:  # pragma: no cover - guards a future rename of the unrolled definitions
+        raise ValueError(f"Root grammar references undefined nodes: {missing}")
+    variants = [_grammar_ref(name) for name in names]
+    properties["program"] = variants[0] if len(variants) == 1 else {"oneOf": variants}
+    return schema
+
+
 def _object(
     raw: object,
     *,

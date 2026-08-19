@@ -60,7 +60,11 @@ from vifinqa.programs.grounding import (  # noqa: E402
     referenced_variables,
     validate_answer_plausibility,
 )
-from vifinqa.programs.serde import PROGRAM_GRAMMAR_SCHEMA, expression_from_dict  # noqa: E402
+from vifinqa.programs.serde import (  # noqa: E402
+    ROOT_GRAMMAR_POLICIES,
+    expression_from_dict,
+    program_grammar_for_target,
+)
 
 SEED = 20260811
 
@@ -171,11 +175,16 @@ def _solve(
     target_unit: str,
     target_divisor: float,
     attempt: int,
+    record: dict[str, object],
 ) -> float | None:
     """One independent try.
 
     Any failure counts as a miss rather than an error: the sample is what is on trial here, and
     a question whose program will not compile is exactly what this script exists to find.
+
+    `record` is filled in as the attempt proceeds rather than returned, so a raised exception
+    still leaves behind the program that caused it. Without that the rejection file said only
+    `solved_attempts: 0` and the next diagnosis had to start from a rerun.
     """
     extra_body: dict[str, object] = {"top_k": 20}
     if args.thinking_mode == "disabled":
@@ -194,7 +203,8 @@ def _solve(
             "json_schema": {
                 "name": "pandas_program",
                 "strict": True,
-                "schema": PROGRAM_GRAMMAR_SCHEMA,
+                # Narrowed by the unit the answer has to be in, when the policy asks for it.
+                "schema": program_grammar_for_target(target_unit, policy=args.root_grammar),
             },
         },
         extra_body=extra_body,
@@ -205,6 +215,7 @@ def _solve(
     program = json.loads(content)
     if not isinstance(program, dict):
         raise ValueError("Model output must be an object")
+    record["program"] = program.get("program")
     expression = expression_from_dict(program.get("program"))
     selected = sorted(referenced_variables(expression))
     unknown = [variable for variable in selected if variable not in frames]
@@ -269,6 +280,28 @@ def main() -> None:
             "prefill per question"
         ),
     )
+    parser.add_argument(
+        "--root-grammar",
+        default="off",
+        choices=sorted(ROOT_GRAMMAR_POLICIES),
+        help=(
+            "Narrow the program's ROOT node to the shapes the target unit admits. 'off' is "
+            "today's behaviour. Measured 19/08: with gold tables in the prompt, every family "
+            "whose answer is a currency amount scored 0.84 or 0.13 while PERCENT scored 0.03 "
+            "and 0.00 and YEAR scored 0.00, and `arg_extremum` was never emitted at all"
+        ),
+    )
+    parser.add_argument(
+        "--worked-example",
+        action="store_true",
+        help=(
+            "Show one worked program of the shape this target expects. The renderer needed the "
+            "same thing at the other end of the pipeline: told the rule twice it kept writing "
+            "statements, and only a worked example moved it from 83 to 100 percent"
+        ),
+    )
+    parser.add_argument("--shard-count", type=int, default=1)
+    parser.add_argument("--shard-index", type=int, default=0)
     parser.add_argument("--limit", type=int)
     parser.add_argument("--seed", type=int, default=SEED)
     args = parser.parse_args()
@@ -276,6 +309,8 @@ def main() -> None:
         parser.error("--attempts must be at least 1")
     if args.distractors < 0:
         parser.error("--distractors cannot be negative")
+    if args.shard_count < 1 or not 0 <= args.shard_index < args.shard_count:
+        parser.error("--shard-index must be in [0, --shard-count)")
 
     rows = [
         json.loads(line)
@@ -284,6 +319,13 @@ def main() -> None:
     ]
     if args.limit:
         rows = rows[: args.limit]
+    # Limit first, then shard, exactly as 50_generate_programs.py orders them: `--limit` says how
+    # far this experiment reaches, sharding only says who does which part of it. One client at a
+    # time left a two-GPU server running eight sequences wide at one, which is why a 499-sample
+    # measurement cost 9.4 hours instead of about one.
+    rows = [
+        row for position, row in enumerate(rows) if position % args.shard_count == args.shard_index
+    ]
 
     manifest = pd.read_parquet(args.manifest)
     store = TableStore(
@@ -310,6 +352,8 @@ def main() -> None:
     misses: dict[str, int] = defaultdict(int)
     solved_by_family: dict[str, list[int]] = defaultdict(list)
     kept = 0
+    greedy_hits = 0
+    greedy_judged = 0
     args.output.parent.mkdir(parents=True, exist_ok=True)
     rejected_handle = (
         args.rejected.open("a", encoding="utf-8") if args.rejected else None  # noqa: SIM115
@@ -350,6 +394,7 @@ def main() -> None:
                             target_divisor=_divisor,
                             required_tickers=[str(_row["ticker"])],
                             required_years=[int(year) for year in _row["report_years"]],
+                            worked_example=args.worked_example,
                         )
 
                     system, user, schemas = _fit(
@@ -373,20 +418,61 @@ def main() -> None:
 
                 expected = float(row["answer"])
                 hits = 0
+                # One entry per attempt, in order. Attempt 1 is greedy at temperature 0 and
+                # mirrors production exactly; every later one samples at 0.7. Summing them into
+                # a single count made `solved / attempts` a blend of two decoding regimes, and
+                # the production-comparable figure -- how often the first, greedy try was right
+                # -- could not be recovered once the session was over. That figure is what
+                # decides whether renting a GPU buys anything, and re-measuring it costs a
+                # whole session, so it is kept per attempt rather than added up.
+                attempt_hits: list[int] = []
+                attempts_log: list[dict[str, object]] = []
                 for attempt in range(1, args.attempts + 1):
+                    record: dict[str, object] = {"attempt": attempt}
                     try:
                         actual = _solve(
-                            client, args, system, user, frames, target_unit, target_divisor, attempt
+                            client,
+                            args,
+                            system,
+                            user,
+                            frames,
+                            target_unit,
+                            target_divisor,
+                            attempt,
+                            record,
                         )
                     except Exception as error:  # noqa: BLE001 - a miss is the measurement
                         misses[type(error).__name__] += 1
+                        attempt_hits.append(0)
+                        record["error"] = f"{type(error).__name__}: {error}"[:400]
+                        attempts_log.append(record)
                         continue
+                    record["answer"] = actual
                     if actual is not None and answer_is_correct(expected, actual):
                         hits += 1
+                        attempt_hits.append(1)
                     else:
                         misses["wrong_answer"] += 1
+                        attempt_hits.append(0)
+                        record["error"] = "wrong_answer"
+                    attempts_log.append(record)
 
-                verdict = {**row, "solved_attempts": hits, "of_attempts": args.attempts}
+                # Added beside `solved_attempts` rather than replacing it, so a session resumed
+                # against rows an older revision wrote still reads and appends to the same file.
+                verdict = {
+                    **row,
+                    "solved_attempts": hits,
+                    "of_attempts": args.attempts,
+                    "attempt_hits": attempt_hits,
+                }
+                # Only on the rejects, and only there: counting a gate is not the same as
+                # knowing why it fired, and a solved row needs no post-mortem. Keeping the
+                # program the model actually wrote is what turns "change scored 0/116" from a
+                # number into something readable.
+                if not hits:
+                    verdict["attempts_log"] = attempts_log
+                greedy_judged += 1
+                greedy_hits += attempt_hits[0]
                 if hits:
                     handle.write(json.dumps(verdict, ensure_ascii=False) + "\n")
                     handle.flush()
@@ -402,12 +488,43 @@ def main() -> None:
             rejected_handle.close()
 
     print(f"kept {kept} of {len(rows) - len(done)} judged -> {args.output}")
+    if greedy_judged:
+        # The figure to carry to the scoreboard comparison: one try, greedy, as production does
+        # it. pass@k is what this filter keeps, and it is always the higher number.
+        print(
+            "  X pass@1 (attempt 1 only, greedy, mirrors production): "
+            f"{greedy_hits / greedy_judged:.4f} over {greedy_judged} questions"
+        )
     for family in sorted(solved_by_family):
         scores = solved_by_family[family]
         once = sum(1 for score in scores if score == 1)
         print(f"  {family:12s} kept {len(scores):4d}, solved exactly once {once:4d}")
     if misses:
         print("  misses: " + ", ".join(f"{name} {count}" for name, count in sorted(misses.items())))
+    # The only breakdown of *how* X is lost, and it used to exist solely in this process's stdout.
+    # A session whose notebook version was not saved took it to the grave.
+    summary_path = args.output.with_name(args.output.stem + "_misses.json")
+    summary_path.write_text(
+        json.dumps(
+            {
+                "root_grammar": args.root_grammar,
+                "worked_example": args.worked_example,
+                "distractors": args.distractors,
+                "attempts": args.attempts,
+                "shard_index": args.shard_index,
+                "shard_count": args.shard_count,
+                "judged": greedy_judged,
+                "kept": kept,
+                "greedy_hits": greedy_hits,
+                "misses": dict(sorted(misses.items())),
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    print("  miss taxonomy ->", summary_path)
 
 
 if __name__ == "__main__":
