@@ -20,12 +20,14 @@ import json
 import re
 
 from vifinqa.generation.prompt import worked_example_for
+from vifinqa.programs.ir import ArgExtremumExpr, BinaryExpr, CellExpr, LiteralExpr, SelectExpr
 from vifinqa.programs.serde import (
     PROGRAM_GRAMMAR_SCHEMA,
     ROOT_GRAMMAR_POLICIES,
     expression_from_dict,
     program_grammar_for_target,
 )
+from vifinqa.programs.year_answer import retarget_year_answer
 
 # One gold root per family, in the shape `70_sample_programs.py` actually recorded.
 GOLD_ROOTS: dict[str, tuple[str, str]] = {
@@ -136,3 +138,111 @@ def test_sharding_partitions_the_questions_without_loss_or_overlap() -> None:
         assert sorted(row for shard in shards for row in shard) == rows
         assert sum(len(shard) for shard in shards) == len(rows)
         assert max(len(shard) for shard in shards) - min(len(shard) for shard in shards) <= 1
+
+
+def _cell(variable: str, row: int = 4) -> CellExpr:
+    return CellExpr(variable=variable, row_index=row, column_index=1)
+
+
+def test_a_ranked_selection_answers_with_the_year_its_winner_sits_in() -> None:
+    """The model finds the extreme and then hands back the amount. 198 times out of 198.
+
+    Every recorded attempt was a `select` with the right operator and `keys` the same length as
+    `members`, ranking the right cells. The only thing wrong was what it returned. Replaying those
+    198 with this repair applied answers 47 of the 99 questions correctly, from a family that had
+    scored exactly zero on two separate splits.
+    """
+    ranked = SelectExpr(
+        operator="argmax",
+        members=(_cell("df1"), _cell("df2"), _cell("df3")),
+        keys=(_cell("df1"), _cell("df2"), _cell("df3")),
+    )
+    years = {"df1": 2021, "df2": 2022, "df3": 2023}
+    repaired, fired = retarget_year_answer(ranked, target_unit="YEAR", variable_years=years)
+    assert fired
+    assert isinstance(repaired, SelectExpr)
+    assert [member.value for member in repaired.members] == [2021.0, 2022.0, 2023.0]
+    assert all(member.dimension == "YEAR" for member in repaired.members)
+    # The ranking is untouched: it still compares the same amounts in the same order.
+    assert repaired.keys == ranked.keys
+    assert repaired.operator == "argmax"
+
+
+def test_a_select_with_no_keys_moves_its_members_into_keys_before_they_become_years() -> None:
+    """Without an explicit key list a select ranks its members, so the order of the two steps
+    matters: swap the members first and it would rank the years themselves."""
+    ranked = SelectExpr(operator="argmin", members=(_cell("df1"), _cell("df2")))
+    repaired, fired = retarget_year_answer(
+        ranked, target_unit="YEAR", variable_years={"df1": 2019, "df2": 2020}
+    )
+    assert fired
+    assert repaired.keys == ranked.members
+    assert [member.value for member in repaired.members] == [2019.0, 2020.0]
+
+
+def test_the_repair_stays_out_of_every_family_that_already_works() -> None:
+    """Replaying the run, it fired on 0 of the 338 recorded failures outside the YEAR target.
+
+    That is the property worth locking. 48.8% of the exam is answering at 0.84 and no repair aimed
+    at 5.2% of it is worth a single point of risk there.
+    """
+    ranked = SelectExpr(
+        operator="argmax", members=(_cell("df1"), _cell("df2")), keys=(_cell("df1"), _cell("df2"))
+    )
+    years = {"df1": 2021, "df2": 2022}
+    for unit in ("VND", "MILLION_VND", "PERCENT", "RATIO", "SHARES", "COUNT"):
+        _, fired = retarget_year_answer(ranked, target_unit=unit, variable_years=years)
+        assert not fired, unit
+
+
+def test_it_refuses_every_case_where_the_year_would_be_a_guess() -> None:
+    years = {"df1": 2021, "df2": 2022}
+    cases = {
+        # An operator that answers with a value, not with one of the members.
+        "returns a value": SelectExpr(
+            operator="max", members=(_cell("df1"), _cell("df2")), keys=(_cell("df1"), _cell("df2"))
+        ),
+        # Two members from the same year cannot be told apart by the year.
+        "ambiguous years": SelectExpr(
+            operator="argmax",
+            members=(_cell("df1"), _cell("df1")),
+            keys=(_cell("df1"), _cell("df1")),
+        ),
+        # A key list that does not line up is a different fault with its own error.
+        "mismatched keys": SelectExpr(
+            operator="argmax", members=(_cell("df1"), _cell("df2")), keys=(_cell("df1"),)
+        ),
+        # A member that is an expression may span years; which one is then a guess.
+        "member is not a cell": SelectExpr(
+            operator="argmax",
+            members=(BinaryExpr(operator="+", left=_cell("df1"), right=_cell("df2")), _cell("df2")),
+            keys=(_cell("df1"), _cell("df2")),
+        ),
+        # A variable with no known year.
+        "unknown variable": SelectExpr(
+            operator="argmax",
+            members=(_cell("df1"), _cell("df9")),
+            keys=(_cell("df1"), _cell("df9")),
+        ),
+    }
+    for label, expression in cases.items():
+        result, fired = retarget_year_answer(expression, target_unit="YEAR", variable_years=years)
+        assert not fired, label
+        assert result is expression, label
+
+
+def test_a_program_already_answering_in_years_is_left_alone() -> None:
+    """Safe by construction: literal members are not cells, so there is nothing to resolve."""
+    correct = ArgExtremumExpr(
+        mode="argmax",
+        keys=(_cell("df1"), _cell("df2")),
+        values=(
+            LiteralExpr(value=2021.0, dimension="YEAR"),
+            LiteralExpr(value=2022.0, dimension="YEAR"),
+        ),
+    )
+    result, fired = retarget_year_answer(
+        correct, target_unit="YEAR", variable_years={"df1": 2021, "df2": 2022}
+    )
+    assert not fired
+    assert result is correct

@@ -662,9 +662,27 @@ def test_a_second_setting_writes_its_own_files_instead_of_finding_them_done() ->
     result. The questions stay named after the split, because they are the half worth reusing.
     """
     code = _compiled_code(SYNTHETIC_NOTEBOOK)
-    assert 'RUN_TAG = f"{SPLIT}_{ROOT_GRAMMAR}" + ("_ex" if WORKED_EXAMPLE else "")' in code
+    assert "RUN_TAG = (" in code
+    assert 'f"{SPLIT}_{ROOT_GRAMMAR}"' in code
+    # Every switch that changes the verdict has to reach the name, or two runs collide.
+    assert '("_ex" if WORKED_EXAMPLE else "")' in code
+    assert '("_yr" if REPAIR_YEAR_ANSWER else "")' in code
     for artefact in ("_solved.s{index}.jsonl", "_rejected.s{index}.jsonl", "_x_measurement.json"):
         assert f"{{RUN_TAG}}{artefact}" in code, artefact
     # The rendered questions are the reusable asset and must NOT be keyed to the solver setting.
     assert 'f"{SPLIT}_questions.jsonl"' in code
     assert 'f"{RUN_TAG}_questions.jsonl"' not in code
+
+
+def test_the_year_repair_is_a_switch_named_in_the_run_tag_and_the_summary() -> None:
+    """A compiler-side repair changes the answer, so a result has to say whether it was on.
+
+    Replaying run dev_year's own 198 extremum attempts through it answers 47 of the 99 questions,
+    from a family that scored exactly zero on two splits. That is a large enough swing that two
+    result files must never be confusable.
+    """
+    code = _compiled_code(SYNTHETIC_NOTEBOOK)
+    assert "REPAIR_YEAR_ANSWER = False" in code
+    assert 'filter_cmd += ["--repair-year-answer"]' in code
+    assert '("_yr" if REPAIR_YEAR_ANSWER else "")' in code
+    assert '"repair_year_answer": REPAIR_YEAR_ANSWER' in code

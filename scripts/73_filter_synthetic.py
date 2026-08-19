@@ -65,6 +65,7 @@ from vifinqa.programs.serde import (  # noqa: E402
     expression_from_dict,
     program_grammar_for_target,
 )
+from vifinqa.programs.year_answer import retarget_year_answer  # noqa: E402
 
 SEED = 20260811
 
@@ -176,6 +177,7 @@ def _solve(
     target_divisor: float,
     attempt: int,
     record: dict[str, object],
+    variable_years: dict[str, int],
 ) -> float | None:
     """One independent try.
 
@@ -217,6 +219,12 @@ def _solve(
         raise ValueError("Model output must be an object")
     record["program"] = program.get("program")
     expression = expression_from_dict(program.get("program"))
+    if args.repair_year_answer:
+        expression, repaired = retarget_year_answer(
+            expression, target_unit=target_unit, variable_years=variable_years
+        )
+        if repaired:
+            record["year_answer_repaired"] = True
     selected = sorted(referenced_variables(expression))
     unknown = [variable for variable in selected if variable not in frames]
     if unknown:
@@ -298,6 +306,16 @@ def main() -> None:
             "Show one worked program of the shape this target expects. The renderer needed the "
             "same thing at the other end of the pipeline: told the rule twice it kept writing "
             "statements, and only a worked example moved it from 83 to 100 percent"
+        ),
+    )
+    parser.add_argument(
+        "--repair-year-answer",
+        action="store_true",
+        help=(
+            "When the target is a YEAR and the program ranks the right cells but answers "
+            "with one of them, hand back the year that cell belongs to. Measured 19/08: all "
+            "198 extremum attempts were a select with the right operator and matching keys, "
+            "and all 198 answered with the amount; 190 died saying exactly that"
         ),
     )
     parser.add_argument("--shard-count", type=int, default=1)
@@ -412,6 +430,12 @@ def main() -> None:
                         for schema in schemas
                         if schema.variable in frames
                     }
+                    # Which report year sits behind each variable. Only the repair needs it,
+                    # so it is built here rather than threaded through prepare_program, which
+                    # has no business knowing about manifests.
+                    variable_years = {
+                        schema.variable: int(schema.record.report_year) for schema in schemas
+                    }
                 except Exception as error:  # noqa: BLE001 - one lost sample, not a lost run
                     misses[f"setup:{type(error).__name__}"] += 1
                     continue
@@ -440,6 +464,7 @@ def main() -> None:
                             target_divisor,
                             attempt,
                             record,
+                            variable_years,
                         )
                     except Exception as error:  # noqa: BLE001 - a miss is the measurement
                         misses[type(error).__name__] += 1

@@ -529,6 +529,7 @@ def _fingerprint(
     scope_router: str = NO_ROUTING,
     root_grammar: str = "off",
     worked_example: bool = False,
+    repair_year_answer: bool = False,
     project_revision: str | None = None,
     shard_count: int = 1,
     shard_index: int = 0,
@@ -563,6 +564,7 @@ def _fingerprint(
         # router is in here for exactly the same reason.
         "root_grammar": root_grammar,
         "worked_example": worked_example,
+        "repair_year_answer": repair_year_answer,
         "project_revision": project_revision,
         "shard_count": shard_count,
         "shard_index": shard_index,
@@ -619,6 +621,15 @@ def main() -> None:
             "from the other one. `both` shows the ranking untouched, which is what every scored "
             "run so far did; `consolidated` is the default measured at roughly 0.93 accuracy, "
             "and it frees a quarter of the top-20 for candidates from deeper in the ranking"
+        ),
+    )
+    parser.add_argument(
+        "--repair-year-answer",
+        action="store_true",
+        help=(
+            "When the target is a YEAR and the program ranks the right cells but answers "
+            "with one of them, hand back the year that cell belongs to. The model found the "
+            "extreme correctly in all 198 measured attempts and reported the amount in all 198"
         ),
     )
     parser.add_argument(
@@ -774,6 +785,7 @@ def main() -> None:
         scope_router=args.scope_router,
         root_grammar=args.root_grammar,
         worked_example=args.worked_example,
+        repair_year_answer=args.repair_year_answer,
         project_revision=args.project_revision,
         shard_count=args.shard_count,
         shard_index=args.shard_index,
