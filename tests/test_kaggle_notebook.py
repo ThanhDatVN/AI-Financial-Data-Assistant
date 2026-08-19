@@ -1,10 +1,15 @@
 from __future__ import annotations
 
 import ast
+import inspect
 import json
+import sys
+from importlib import import_module
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "scripts") not in sys.path:
+    sys.path.insert(0, str(ROOT / "scripts"))
 BUILDER_NOTEBOOK = ROOT / "notebooks/01_kaggle_build_dense_artifact.ipynb"
 GENERATION_NOTEBOOK = ROOT / "notebooks/02_kaggle_dense_and_generate.ipynb"
 RESUME_NOTEBOOK = ROOT / "notebooks/03_kaggle_resume_and_submit.ipynb"
@@ -360,24 +365,50 @@ def test_both_generation_notebooks_pass_every_flag_the_fingerprint_reads() -> No
     notebook passed 4096 and the second left it to the script's default, so the checkpoint could
     never be picked up. Comparing the two call sites catches the next one without naming it.
     """
-    fingerprinted = {
-        "--model",
-        "--model-revision",
-        "--thinking-mode",
-        "--table-unit-source",
-        "--candidate-tables",
-        "--scope-router",
-        "--max-tokens",
-        "--context-limit",
-        "--max-attempts",
-        "--project-revision",
+    # Derived from `_fingerprint` itself rather than listed here. A hand-written list is how
+    # `root_grammar`, `worked_example` and `repair_year_answer` all reached the fingerprint while
+    # neither notebook passed any of them: the list did not know they existed, so it stayed green.
+    # Both notebooks agreed on the defaults, so nothing broke until the first run that turned one
+    # on -- and it would have broken in the finishing session, after the model was loaded.
+    runner = import_module("50_generate_programs")
+    ignored = {
+        # Not flags: derived from the inputs, or set by the sharding arguments the notebooks
+        # already pass, or constants of the code itself.
+        "retrieval_sha256",
+        "manifest_sha256",
+        "program_schema_sha256",
+        "question_ids_sha256",
+        "semantic_convention_version",
+        "table_unit_inference_version",
+        "question_count",
+        "shard_count",
+        "shard_index",
+        "seed",
+        # Recorded from `--id`, which narrows the run rather than configuring the generator.
+        "selected_question_ids",
+        # Flags with a default both notebooks are content to inherit.
+        "execution_timeout",
+        "request_timeout",
+        "memory_limit_mb",
+        "row_hierarchy",
     }
+    fingerprinted = {
+        "--" + name.replace("_", "-")
+        for name in inspect.signature(runner._fingerprint).parameters
+        if name not in ignored
+    }
+    assert "--repair-year-answer" in fingerprinted, "the derivation stopped seeing new fields"
     generation = _compiled_code(GENERATION_NOTEBOOK)
     resume = _compiled_code(RESUME_NOTEBOOK)
-    missing = sorted(flag for flag in fingerprinted if f'"{flag}",' not in resume)
-    assert not missing, f"resume notebook never passes {missing}"
-    unpassed = sorted(flag for flag in fingerprinted if f'"{flag}",' not in generation)
-    assert not unpassed, f"generation notebook never passes {unpassed}"
+
+    def unpassed(code: str) -> list[str]:
+        # A value flag is written `"--x",` and a store_true one `["--x"]`; accept either.
+        return sorted(
+            flag for flag in fingerprinted if f'"{flag}",' not in code and f'"{flag}"]' not in code
+        )
+
+    assert not unpassed(resume), f"resume notebook never passes {unpassed(resume)}"
+    assert not unpassed(generation), f"generation notebook never passes {unpassed(generation)}"
 
     # And the two budget figures must agree with the server they are sized against, which is why
     # one constant feeds both rather than two literals that can drift apart.
