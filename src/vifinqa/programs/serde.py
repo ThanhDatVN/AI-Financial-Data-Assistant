@@ -334,12 +334,24 @@ ROOT_GRAMMAR_POLICIES: dict[str, dict[str, tuple[str, ...]]] = {
     # Pushes the one node three scored runs never produced. Competing hypothesis to "year": if the
     # model cannot write `arg_extremum` at all, this reads worse than "year" rather than better.
     "year-strict": {"YEAR": ("arg_extremum",)},
-    # Adds the weak PERCENT constraint, kept measurable rather than assumed. `cell` stays legal
-    # because six gold lookups need it.
+    # PERCENT loses `select`, on evidence rather than on the guess the first draft made.
+    # Run dev_year measured what the model writes for a percentage change: `select` 116 times out
+    # of 116, where the gold program is a binary division times one hundred. And of the 122 gold
+    # PERCENT/RATIO samples, 116 have a binary root and 6 a cell root -- not one is a select. So
+    # forbidding it here costs no reachable answer and forbids exactly the mistake.
     "year+percent": {
         "YEAR": ("arg_extremum", "select"),
-        "PERCENT": ("binary", "select", "cell"),
-        "RATIO": ("binary", "select", "cell"),
+        "PERCENT": ("binary", "cell"),
+        "RATIO": ("binary", "cell"),
+    },
+    # Everything the evidence supports at once. `select` is gone from both targets: for YEAR
+    # because the model took it 198 times out of 198 even when `arg_extremum` was the only other
+    # option, and filled its members with cells every time (765 of 765), which returns an amount
+    # where a year was asked for -- 190 of those 198 attempts died saying exactly that.
+    "strict": {
+        "YEAR": ("arg_extremum",),
+        "PERCENT": ("binary", "cell"),
+        "RATIO": ("binary", "cell"),
     },
 }
 DEFAULT_ROOT_GRAMMAR_POLICY = "off"
