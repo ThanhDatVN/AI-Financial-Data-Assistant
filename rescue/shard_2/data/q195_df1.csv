@@ -1,4 +1,0 @@
-table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
-VCB_financial_statements_2025_separate|table_41,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,0,0,Số dư cuối năm,Số dư đầu năm(Hoàn nhập)/trích lập dự phòng trong năm(Thuyết minh 32) | Xử lý các khoản cho vay khó thu hồi bằng nguồn dự phòngChênh lệch tỷ giá hối đoái,Số dư cuối năm,,,False,False
-VCB_financial_statements_2025_separate|table_41,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,0,1,Số dư cuối năm,2025Triệu VND | 20.458.555(793.883) | (7.194.745)1.996,12.471.923,12471923.0,12471923000000.0,False,False
-VCB_financial_statements_2025_separate|table_41,VCB_financial_statements_2025_separate,VCB,2025,separate,MILLION_VND,0,2,Số dư cuối năm,2024Triệu VND | 19.221.2436.471.037(5.236.506) | (5.236.506)2.781,20.458.555,20458555.0,20458555000000.0,False,False

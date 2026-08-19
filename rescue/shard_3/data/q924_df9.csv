@@ -1,7 +1,0 @@
-table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
-DXG_financial_statements_2021_separate|table_44,DXG_financial_statements_2021_separate,DXG,2021,separate,VND,0,0,Chi phí đi vay và phát hành trái phiếu(Hoàn nhập) dự phòng đầu tư tài chínhKhác,column_1,Chi phí đi vay và phát hành trái phiếu(Hoàn nhập) dự phòng đầu tư tài chínhKhác,,,False,False
-DXG_financial_statements_2021_separate|table_44,DXG_financial_statements_2021_separate,DXG,2021,separate,VND,0,1,Chi phí đi vay và phát hành trái phiếu(Hoàn nhập) dự phòng đầu tư tài chínhKhác,Năm nay,220.135.529.952(121.165.433.162)63.048.908.248,,,False,False
-DXG_financial_statements_2021_separate|table_44,DXG_financial_statements_2021_separate,DXG,2021,separate,VND,0,2,Chi phí đi vay và phát hành trái phiếu(Hoàn nhập) dự phòng đầu tư tài chínhKhác,VNDNăm trước,128.116.504.721139.242.640.229305.775.700,1.2811650472113924e+32,1.2811650472113924e+32,False,False
-DXG_financial_statements_2021_separate|table_44,DXG_financial_statements_2021_separate,DXG,2021,separate,VND,1,0,TỔNG CỘNG,column_1,TỔNG CỘNG,,,False,False
-DXG_financial_statements_2021_separate|table_44,DXG_financial_statements_2021_separate,DXG,2021,separate,VND,1,1,TỔNG CỘNG,Năm nay,162.019.005.038,162019005038.0,162019005038.0,False,False
-DXG_financial_statements_2021_separate|table_44,DXG_financial_statements_2021_separate,DXG,2021,separate,VND,1,2,TỔNG CỘNG,VNDNăm trước,267.664.920.650,267664920650.0,267664920650.0,False,False

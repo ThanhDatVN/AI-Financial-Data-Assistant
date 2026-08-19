@@ -1,7 +1,0 @@
-table_ref,doc_id,ticker,report_year,scope,source_unit,row_index,column_index,row_label,column_label,raw_value,numeric_value,base_value,is_dash,is_missing
-EIB_financial_statements_2015_consolidated|table_19,EIB_financial_statements_2015_consolidated,EIB,2015,consolidated,MILLION_VND,0,0,1.607.784,31/12/2015Triệu VND,1.607.784,1607784.0,1607784000000.0,False,False
-EIB_financial_statements_2015_consolidated|table_19,EIB_financial_statements_2015_consolidated,EIB,2015,consolidated,MILLION_VND,0,1,1.607.784,31/12/2014Triệu VND,2.106.702,2106702.0,2106702000000.0,False,False
-EIB_financial_statements_2015_consolidated|table_19,EIB_financial_statements_2015_consolidated,EIB,2015,consolidated,MILLION_VND,1,0,1.108.480,31/12/2015Triệu VND,1.108.480,1108480.0,1108480000000.0,False,False
-EIB_financial_statements_2015_consolidated|table_19,EIB_financial_statements_2015_consolidated,EIB,2015,consolidated,MILLION_VND,1,1,1.108.480,31/12/2014Triệu VND,1.108.265,1108265.0,1108265000000.0,False,False
-EIB_financial_statements_2015_consolidated|table_19,EIB_financial_statements_2015_consolidated,EIB,2015,consolidated,MILLION_VND,2,0,2.716.264,31/12/2015Triệu VND,2.716.264,2716264.0,2716264000000.0,False,False
-EIB_financial_statements_2015_consolidated|table_19,EIB_financial_statements_2015_consolidated,EIB,2015,consolidated,MILLION_VND,2,1,2.716.264,31/12/2014Triệu VND,3.214.967,3214967.0,3214967000000.0,False,False

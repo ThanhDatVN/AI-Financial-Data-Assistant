@@ -54,3 +54,7 @@ desktop.ini
 # Kaggle run outputs downloaded per account. Same reason as outputs/: they are run
 # artefacts, they are large, and the archive under outputs/runs/ is where they belong.
 TK[0-9]*/
+# Same category, and both were tracked by accident until 19/08: 1,237 files and 25 MB of
+# downloaded Kaggle run output from 10/08, cloned onto every Kaggle session ever since.
+rescue/
+result/
