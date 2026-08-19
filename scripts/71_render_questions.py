@@ -420,11 +420,15 @@ def main() -> None:
                     )
                     content = response.choices[0].message.content
                     if not content:
-                        rejected["empty"] += 1
+                        # Keep the empty one too. Every other refusal path here writes its text,
+                        # and these two are exactly the paths a generation truncated by the token
+                        # budget takes -- so a diagnosis would have been back to reading counts,
+                        # which is the mistake that cost a session on 18/08.
+                        refuse(sample, attempt, "empty", "")
                         continue
                     candidate = str(json.loads(content)["question"]).strip()
                 except Exception as error:  # noqa: BLE001 - one lost sample, not a lost run
-                    rejected[type(error).__name__] += 1
+                    refuse(sample, attempt, type(error).__name__, str(error)[:400])
                     continue
                 candidate = _trim_to_question(candidate)
                 if not candidate.endswith("?"):

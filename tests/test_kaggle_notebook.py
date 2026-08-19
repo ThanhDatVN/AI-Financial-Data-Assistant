@@ -230,8 +230,15 @@ def test_synthetic_notebook_measures_x_and_refuses_a_set_it_cannot_phrase() -> N
     assert "scripts/74_backfill_condition.py" in code
     assert "Do NOT " in code and "re-run 70_sample_programs.py" in code
 
-    # pass@1 is the like-for-like number; pass@k is what the filter keeps and it is higher.
-    assert "pass_at_1 = hits / tries if tries else 0.0" in code
+    # Attempt 1 is greedy and mirrors production; later attempts sample at 0.7. Dividing total
+    # hits by total attempts averaged two decoding regimes and called the result the
+    # production-comparable one. The greedy figure is the one to carry to the scoreboard.
+    assert 'int(row["attempt_hits"][0])' in code
+    assert "greedy = sum(first_try) / len(first_try) if first_try else None" in code
+    assert '"x_greedy_attempt_1": greedy' in code
+    # And the per-family denominator, without which the total cannot be re-weighted afterwards.
+    assert '"attempts": sum(' in code
+    assert "pass_at_1 = hits / tries" not in code
     assert "upper bounds on production X" in code
     assert '"--distractors",' in code
 
@@ -504,3 +511,143 @@ def test_two_attached_sessions_can_be_told_apart_instead_of_detached() -> None:
         assert "assert len(checkpoint_candidates) == 1" in code
         # And the message says how to get past it, which is the half that was missing.
         assert "or name one with VIFINQA_CHECKPOINT_SOURCE" in code
+
+
+def _branch_only_bindings(path: Path) -> dict[str, int]:
+    """Names a later cell reads that an earlier cell only ever bound inside a branch.
+
+    `test_a_default_full_run_is_not_stopped_by_a_cell_it_does_not_use` walks the same notebook
+    but swallows `NameError`, on the reasoning that an unbound name there depends on the machine
+    rather than on the configuration. That exemption is exactly how `KERNEL_DIAGNOSTIC` reached
+    the final manifest: cell 8 bound it only under `VIFINQA_RUN_DIAGNOSTICS=1`, and the manifest
+    read it in the condition of its own `.exists()` guard, so no guard could save it. It fires
+    only when this notebook packages its own submission, which nothing did until the run was
+    uncapped -- so it would have raised after nine hours, with `submission.zip` already written.
+    """
+    notebook = json.loads(path.read_text(encoding="utf-8"))
+    top_level: set[str] = set()
+    branch_only: dict[str, int] = {}
+    found: dict[str, int] = {}
+    for index, cell in enumerate(notebook["cells"]):
+        if cell["cell_type"] != "code":
+            continue
+        tree = ast.parse("".join(cell["source"]))
+        for node in ast.walk(tree):
+            read = isinstance(node, ast.Name) and isinstance(node.ctx, ast.Load)
+            if read and node.id in branch_only and node.id not in top_level:
+                found.setdefault(node.id, branch_only[node.id])
+        for statement in tree.body:
+            unconditional = isinstance(
+                statement, ast.Assign | ast.AnnAssign | ast.AugAssign | ast.For | ast.With
+            )
+            for node in ast.walk(statement):
+                if isinstance(node, ast.Name) and isinstance(node.ctx, ast.Store):
+                    if unconditional:
+                        top_level.add(node.id)
+                    else:
+                        branch_only.setdefault(node.id, index)
+            if isinstance(statement, ast.FunctionDef | ast.ClassDef):
+                top_level.add(statement.name)
+    return found
+
+
+def test_the_final_manifest_reads_no_name_a_skipped_diagnostic_would_have_left_unbound() -> None:
+    tracked = {"PERF_DIAGNOSTIC", "KERNEL_DIAGNOSTIC", "SMOKE_GATE"}
+    for notebook in (GENERATION_NOTEBOOK, SYNTHETIC_NOTEBOOK):
+        leaked = _branch_only_bindings(notebook)
+        assert not (tracked & leaked.keys()), (
+            f"{notebook.name} reads {sorted(tracked & leaked.keys())} in a later cell, "
+            "but an earlier cell binds it only inside a branch the default run skips"
+        )
+
+
+def test_the_render_call_leaves_the_token_budget_to_the_script() -> None:
+    """Both ceilings were raised together; only one of them reached this call site.
+
+    `71_render_questions.py` defaults to 640 tokens because its schema now allows a 700-character
+    question, and a Hard question carries a filter clause and an answer clause in one sentence.
+    The notebook went on passing 256 -- roughly 400 Vietnamese characters, which is exactly where
+    round two's refused generations piled up against the old ceiling. A budget that runs out
+    mid-string returns unterminated JSON, and that path counts the refusal without keeping its
+    text, so the next diagnosis would have been back to reading counts.
+    """
+    notebook = json.loads(SYNTHETIC_NOTEBOOK.read_text(encoding="utf-8"))
+    render_cells = [
+        "".join(cell["source"])
+        for cell in notebook["cells"]
+        if cell["cell_type"] == "code" and "71_render_questions.py" in "".join(cell["source"])
+    ]
+    assert len(render_cells) == 1
+    code = "\n".join(
+        line for line in render_cells[0].splitlines() if not line.strip().startswith("#")
+    )
+    assert '"--max-tokens"' not in code, "let 71's own 640-token default stand"
+    # The retry carries the reason now, so a third attempt buys a corrected draw rather than a
+    # warmer redraw of the same mistake.
+    assert '"--attempts",\n    "3",' in code
+    assert '"--rejected",' in code
+
+
+def test_the_greedy_figure_skips_rows_written_before_the_field_existed() -> None:
+    """A session resumed across this change holds both kinds of row in one file.
+
+    `73` gained `attempt_hits` while a split was already being filtered, so the output a second
+    session appends to can hold rows that predate it. Averaging the two together would quietly
+    mix a greedy-only figure with rows that have no greedy figure at all, so the reader has to
+    drop the older rows and say how many it dropped. The comprehension is lifted out of the
+    notebook rather than restated here, so the two cannot drift apart.
+    """
+    notebook = json.loads(SYNTHETIC_NOTEBOOK.read_text(encoding="utf-8"))
+    cell = next(
+        "".join(cell["source"])
+        for cell in notebook["cells"]
+        if cell["cell_type"] == "code" and "first_try = [" in "".join(cell["source"])
+    )
+    lines = cell.splitlines()
+    start = next(i for i, line in enumerate(lines) if line.startswith("first_try = ["))
+    end = next(i for i, line in enumerate(lines[start:], start) if line == "]")
+    block = chr(10).join(lines[start : end + 1])
+
+    judged = [
+        {"attempt_hits": [1, 0]},  # right on the greedy try
+        {"attempt_hits": [0, 1]},  # only the sampled retry got it
+        {"attempt_hits": [0, 0]},
+        {"solved_attempts": 1, "of_attempts": 2},  # written before the field existed
+        {"attempt_hits": []},  # setup failed before any attempt ran
+    ]
+    namespace: dict[str, object] = {"judged": judged}
+    exec(block, namespace)  # noqa: S102 - the notebook's own line, run on fixture rows
+    first_try = namespace["first_try"]
+    assert first_try == [1, 0, 0], "index 0 is the greedy attempt, and only rows that have one"
+    assert len(first_try) < len(judged), "the legacy row has to be excluded, not defaulted to 0"
+
+
+def test_the_filter_is_sharded_and_carries_both_measured_switches() -> None:
+    """One client against an eight-wide server is what made a 499-sample measurement cost 9.4h.
+
+    Notebook 02 has driven the generator with `--shard-count`/`--shard-index` since the first full
+    run; the dev bench never got the same treatment, and every experiment about X paid for it. The
+    two switches are here for the same reason `--scope-router` is in notebook 02: measured, off by
+    default, and named in the summary so a result can say which setting produced it.
+    """
+    code = _compiled_code(SYNTHETIC_NOTEBOOK)
+
+    assert "FILTER_SHARDS = 8" in code
+    assert '"--shard-count",' in code and '"--shard-index",' in code
+    assert "subprocess.Popen(shard_cmd)" in code
+    # A shard that dies has to stop the notebook, not leave a hole in the denominator.
+    assert "assert not failed" in code
+    # Per-shard files: one handle shared across processes would interleave half-written lines.
+    assert "SOLVED_SHARDS = [" in code and "REJECTED_SHARDS = [" in code
+    assert "read_rows(path) for" not in code  # the union is built explicitly, not by glob luck
+    assert "for path in SOLVED_SHARDS" in code
+
+    assert 'ROOT_GRAMMAR = "off"' in code
+    assert "WORKED_EXAMPLE = False" in code
+    assert '"--root-grammar",' in code
+    assert 'filter_cmd += ["--worked-example"]' in code
+    # Recorded with the result, or the number cannot say what produced it.
+    assert '"root_grammar": ROOT_GRAMMAR' in code
+    assert '"worked_example": WORKED_EXAMPLE' in code
+    # The miss taxonomy used to exist only in one process's stdout.
+    assert '"misses": miss_totals' in code

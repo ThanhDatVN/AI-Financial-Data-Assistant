@@ -125,6 +125,7 @@ def test_generation_fingerprint_detects_model_and_input_changes(tmp_path: Path) 
         thinking_mode="disabled",
         max_attempts=3,
         row_hierarchy=True,
+        worked_example=False,
     )
     assert hierarchy != third
     assert hierarchy["row_hierarchy"] is True
@@ -506,6 +507,7 @@ def test_a_prompt_with_no_room_behind_it_gives_up_candidates_not_the_question() 
         required_tickers=[],
         required_years=[],
         row_hierarchy=False,
+        worked_example=False,
         tokenize_url="http://unused/tokenize",
         model="m",
         context_limit=16_384,
@@ -524,6 +526,7 @@ def test_a_prompt_with_no_room_behind_it_gives_up_candidates_not_the_question() 
         required_tickers=[],
         required_years=[],
         row_hierarchy=False,
+        worked_example=False,
         tokenize_url="http://127.0.0.1:1/tokenize",
         model="m",
         context_limit=16_384,
